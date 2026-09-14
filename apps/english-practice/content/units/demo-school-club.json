@@ -1,0 +1,25 @@
+{
+  "id": "demo-school-club",
+  "titleZh": "校园社团：协议演示",
+  "familyIds": [
+    "join-context",
+    "want-to-join",
+    "present-simple-agreement",
+    "reading-location",
+    "reading-learning-plan",
+    "cloze-help-context",
+    "application-invitation",
+    "continuation-club"
+  ],
+  "itemIds": [
+    "vocab-join-a",
+    "order-join-a",
+    "grammar-meet-a",
+    "reading-location-a",
+    "gap-reading-plan-a",
+    "cloze-help-a",
+    "writing-invitation-a",
+    "writing-continuation-a"
+  ],
+  "prerequisiteSkillIds": []
+}

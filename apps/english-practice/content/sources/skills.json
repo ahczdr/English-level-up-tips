@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "descriptionZh": "T15 固定 skillIds 目录：26 个技能，与 03-implementation-plan T15 清单一一对应。新增技能必须先改计划再改此处。",
+  "skills": [
+    {
+      "id": "vocab.context",
+      "groupZh": "词汇",
+      "nameZh": "语境词汇"
+    },
+    {
+      "id": "vocab.collocation",
+      "groupZh": "词汇",
+      "nameZh": "词块搭配"
+    },
+    {
+      "id": "vocab.polysemy",
+      "groupZh": "词汇",
+      "nameZh": "一词多义"
+    },
+    {
+      "id": "sentence.core",
+      "groupZh": "句子",
+      "nameZh": "核心句型与组句"
+    },
+    {
+      "id": "grammar.tense",
+      "groupZh": "语法",
+      "nameZh": "时态"
+    },
+    {
+      "id": "grammar.agreement",
+      "groupZh": "语法",
+      "nameZh": "主谓一致"
+    },
+    {
+      "id": "grammar.article",
+      "groupZh": "语法",
+      "nameZh": "冠词"
+    },
+    {
+      "id": "grammar.preposition",
+      "groupZh": "语法",
+      "nameZh": "介词"
+    },
+    {
+      "id": "grammar.pronoun",
+      "groupZh": "语法",
+      "nameZh": "代词"
+    },
+    {
+      "id": "grammar.word-form",
+      "groupZh": "语法",
+      "nameZh": "词形转换"
+    },
+    {
+      "id": "grammar.infinitive",
+      "groupZh": "语法",
+      "nameZh": "非谓语"
+    },
+    {
+      "id": "grammar.clause",
+      "groupZh": "语法",
+      "nameZh": "从句"
+    },
+    {
+      "id": "grammar.comparison",
+      "groupZh": "语法",
+      "nameZh": "比较等级"
+    },
+    {
+      "id": "reading.detail",
+      "groupZh": "阅读",
+      "nameZh": "细节定位"
+    },
+    {
+      "id": "reading.main-idea",
+      "groupZh": "阅读",
+      "nameZh": "主旨大意"
+    },
+    {
+      "id": "reading.inference",
+      "groupZh": "阅读",
+      "nameZh": "推断"
+    },
+    {
+      "id": "reading.word-meaning",
+      "groupZh": "阅读",
+      "nameZh": "词义猜测"
+    },
+    {
+      "id": "reading.cohesion",
+      "groupZh": "阅读",
+      "nameZh": "连接与指代"
+    },
+    {
+      "id": "cloze.context",
+      "groupZh": "完形",
+      "nameZh": "语境选词"
+    },
+    {
+      "id": "cloze.logic",
+      "groupZh": "完形",
+      "nameZh": "逻辑衔接"
+    },
+    {
+      "id": "listening.detail",
+      "groupZh": "听力",
+      "nameZh": "听辨细节"
+    },
+    {
+      "id": "listening.inference",
+      "groupZh": "听力",
+      "nameZh": "听后推断"
+    },
+    {
+      "id": "writing.task",
+      "groupZh": "写作",
+      "nameZh": "任务审题"
+    },
+    {
+      "id": "writing.organization",
+      "groupZh": "写作",
+      "nameZh": "结构组织"
+    },
+    {
+      "id": "writing.coherence",
+      "groupZh": "写作",
+      "nameZh": "衔接连贯"
+    },
+    {
+      "id": "writing.accuracy",
+      "groupZh": "写作",
+      "nameZh": "语言准确"
+    }
+  ]
+}

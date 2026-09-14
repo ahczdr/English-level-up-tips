@@ -1,0 +1,56 @@
+{
+  "id": "grammar-meet-a",
+  "familyId": "present-simple-agreement",
+  "skillIds": [
+    "grammar.agreement"
+  ],
+  "level": "G0",
+  "section": "grammar",
+  "reviewMode": "recall",
+  "promptZh": "用提示词的适当形式填空。",
+  "resourceId": null,
+  "estimatedSeconds": 60,
+  "sourceIds": [
+    "original-demo"
+  ],
+  "explanation": {
+    "summaryZh": "主语 The club 为第三人称单数，用 meets。",
+    "ruleZh": "一般现在时表示规律活动，第三人称单数谓语需变化。",
+    "evidence": [],
+    "distractors": []
+  },
+  "kind": "gaps",
+  "inputMode": "text",
+  "sharedOptions": [],
+  "uniqueOptions": false,
+  "segments": [
+    {
+      "type": "text",
+      "text": "The club "
+    },
+    {
+      "type": "gap",
+      "gapId": "g1"
+    },
+    {
+      "type": "text",
+      "text": " every Friday."
+    }
+  ],
+  "gaps": [
+    {
+      "id": "g1",
+      "label": "1",
+      "clue": "meet",
+      "options": [],
+      "accepted": [
+        "meets"
+      ],
+      "explanationZh": "The club 是单数主语，every Friday 表示规律活动，用 meets。"
+    }
+  ],
+  "policy": {
+    "caseSensitive": false,
+    "allowTerminalPunctuation": false
+  }
+}

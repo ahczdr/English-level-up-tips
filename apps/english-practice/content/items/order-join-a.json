@@ -1,0 +1,55 @@
+{
+  "id": "order-join-a",
+  "familyId": "want-to-join",
+  "skillIds": [
+    "sentence.core",
+    "grammar.infinitive"
+  ],
+  "level": "G0",
+  "section": "sentence",
+  "reviewMode": "recognition",
+  "promptZh": "点词组句：我想加入这个俱乐部。",
+  "resourceId": null,
+  "estimatedSeconds": 60,
+  "sourceIds": [
+    "original-demo"
+  ],
+  "explanation": {
+    "summaryZh": "I want to join the club.",
+    "ruleZh": "want to do 表示想做某事。",
+    "evidence": [],
+    "distractors": []
+  },
+  "kind": "order",
+  "tokens": [
+    {
+      "id": "t1",
+      "text": "I"
+    },
+    {
+      "id": "t2",
+      "text": "want"
+    },
+    {
+      "id": "t3",
+      "text": "to"
+    },
+    {
+      "id": "t4",
+      "text": "join"
+    },
+    {
+      "id": "t5",
+      "text": "the club"
+    }
+  ],
+  "acceptedOrders": [
+    [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5"
+    ]
+  ]
+}

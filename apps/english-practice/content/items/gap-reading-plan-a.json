@@ -1,0 +1,166 @@
+{
+  "id": "gap-reading-plan-a",
+  "familyId": "reading-learning-plan",
+  "skillIds": [
+    "reading.cohesion"
+  ],
+  "level": "G1",
+  "section": "gap-reading",
+  "reviewMode": "transfer",
+  "promptZh": "为五个空位选择合适的句子，每个选项最多使用一次。此篇为教学样例。",
+  "resourceId": null,
+  "estimatedSeconds": 360,
+  "sourceIds": [
+    "original-demo"
+  ],
+  "explanation": {
+    "summaryZh": "依次为 A、B、C、D、E。",
+    "ruleZh": "结合后句线索：任务规模、噪声、停顿、求助、复盘。",
+    "evidence": [],
+    "distractors": [
+      {
+        "optionId": "f",
+        "reasonZh": "完全忽略错误与文中复习和求助的建议不一致。"
+      },
+      {
+        "optionId": "g",
+        "reasonZh": "熬夜不符合合理计划的上下文。"
+      }
+    ]
+  },
+  "kind": "gaps",
+  "inputMode": "options",
+  "uniqueOptions": true,
+  "sharedOptions": [
+    {
+      "id": "a",
+      "text": "Start with a small task."
+    },
+    {
+      "id": "b",
+      "text": "Find a quiet place."
+    },
+    {
+      "id": "c",
+      "text": "Take a short break."
+    },
+    {
+      "id": "d",
+      "text": "Ask for help when needed."
+    },
+    {
+      "id": "e",
+      "text": "Review what you have learned."
+    },
+    {
+      "id": "f",
+      "text": "Ignore all your mistakes."
+    },
+    {
+      "id": "g",
+      "text": "Stay awake all night."
+    }
+  ],
+  "segments": [
+    {
+      "type": "text",
+      "text": "A good study plan can make learning easier. "
+    },
+    {
+      "type": "gap",
+      "gapId": "g1"
+    },
+    {
+      "type": "text",
+      "text": " For example, learn five useful phrases instead of fifty at once. "
+    },
+    {
+      "type": "gap",
+      "gapId": "g2"
+    },
+    {
+      "type": "text",
+      "text": " Noise can make it hard to focus. "
+    },
+    {
+      "type": "gap",
+      "gapId": "g3"
+    },
+    {
+      "type": "text",
+      "text": " Stand up and walk for a minute before continuing. "
+    },
+    {
+      "type": "gap",
+      "gapId": "g4"
+    },
+    {
+      "type": "text",
+      "text": " Your teacher may explain a difficult sentence. "
+    },
+    {
+      "type": "gap",
+      "gapId": "g5"
+    },
+    {
+      "type": "text",
+      "text": " Try to recall yesterday's phrases before learning new ones."
+    }
+  ],
+  "gaps": [
+    {
+      "id": "g1",
+      "label": "1",
+      "clue": null,
+      "options": [],
+      "accepted": [
+        "a"
+      ],
+      "explanationZh": "后句用五个而不是五十个词块举例，承接小任务。"
+    },
+    {
+      "id": "g2",
+      "label": "2",
+      "clue": null,
+      "options": [],
+      "accepted": [
+        "b"
+      ],
+      "explanationZh": "后句讲噪声影响专注，对应安静地点。"
+    },
+    {
+      "id": "g3",
+      "label": "3",
+      "clue": null,
+      "options": [],
+      "accepted": [
+        "c"
+      ],
+      "explanationZh": "后句站起走动一分钟，是短暂休息。"
+    },
+    {
+      "id": "g4",
+      "label": "4",
+      "clue": null,
+      "options": [],
+      "accepted": [
+        "d"
+      ],
+      "explanationZh": "后句老师解释难句，是寻求帮助的具体方式。"
+    },
+    {
+      "id": "g5",
+      "label": "5",
+      "clue": null,
+      "options": [],
+      "accepted": [
+        "e"
+      ],
+      "explanationZh": "后句回忆昨天的词块，对应复习。"
+    }
+  ],
+  "policy": {
+    "caseSensitive": true,
+    "allowTerminalPunctuation": false
+  }
+}

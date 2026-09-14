@@ -1,0 +1,441 @@
+{
+  "schemaVersion": 1,
+  "descriptionZh": "T15/P07：30 次学习推荐（24 次新课每次 5 个词句目标 + 6 次复测复盘）。长文专项（reading/gap-reading/cloze/grammar/listening/writing 整段材料）不进 10 分钟以下任务；缺勤续原进度，不补发双倍任务。",
+  "sessions": [
+    {
+      "index": 1,
+      "kind": "new",
+      "timeBudgetMinutes": 5,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "grammar.tense",
+        "vocab.context"
+      ],
+      "sectionsAllowed": [
+        "vocabulary",
+        "sentence"
+      ]
+    },
+    {
+      "index": 2,
+      "kind": "new",
+      "timeBudgetMinutes": 5,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "sentence.core",
+        "vocab.context"
+      ],
+      "sectionsAllowed": [
+        "vocabulary",
+        "sentence"
+      ]
+    },
+    {
+      "index": 3,
+      "kind": "new",
+      "timeBudgetMinutes": 5,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "vocab.context",
+        "grammar.tense"
+      ],
+      "sectionsAllowed": [
+        "vocabulary",
+        "sentence"
+      ]
+    },
+    {
+      "index": 4,
+      "kind": "new",
+      "timeBudgetMinutes": 10,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "listening.detail",
+        "vocab.context"
+      ],
+      "sectionsAllowed": [
+        "vocabulary",
+        "listening"
+      ]
+    },
+    {
+      "index": 5,
+      "kind": "recheck",
+      "timeBudgetMinutes": 10,
+      "goalTargetCount": 0,
+      "skillIds": [
+        "grammar.tense",
+        "sentence.core",
+        "vocab.context",
+        "listening.detail"
+      ],
+      "sectionsAllowed": [
+        "vocabulary",
+        "sentence",
+        "listening"
+      ]
+    },
+    {
+      "index": 6,
+      "kind": "new",
+      "timeBudgetMinutes": 5,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "vocab.collocation",
+        "vocab.context"
+      ],
+      "sectionsAllowed": [
+        "vocabulary",
+        "sentence"
+      ]
+    },
+    {
+      "index": 7,
+      "kind": "new",
+      "timeBudgetMinutes": 5,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "vocab.collocation",
+        "grammar.preposition"
+      ],
+      "sectionsAllowed": [
+        "vocabulary",
+        "sentence"
+      ]
+    },
+    {
+      "index": 8,
+      "kind": "new",
+      "timeBudgetMinutes": 15,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "reading.detail",
+        "vocab.context"
+      ],
+      "sectionsAllowed": [
+        "reading"
+      ]
+    },
+    {
+      "index": 9,
+      "kind": "new",
+      "timeBudgetMinutes": 10,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "writing.task",
+        "vocab.collocation"
+      ],
+      "sectionsAllowed": [
+        "application-writing",
+        "vocabulary"
+      ]
+    },
+    {
+      "index": 10,
+      "kind": "recheck",
+      "timeBudgetMinutes": 10,
+      "goalTargetCount": 0,
+      "skillIds": [
+        "vocab.collocation",
+        "reading.detail",
+        "writing.task",
+        "grammar.preposition"
+      ],
+      "sectionsAllowed": [
+        "vocabulary",
+        "reading",
+        "application-writing"
+      ]
+    },
+    {
+      "index": 11,
+      "kind": "new",
+      "timeBudgetMinutes": 5,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "reading.cohesion",
+        "vocab.context"
+      ],
+      "sectionsAllowed": [
+        "vocabulary",
+        "sentence"
+      ]
+    },
+    {
+      "index": 12,
+      "kind": "new",
+      "timeBudgetMinutes": 5,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "reading.cohesion",
+        "vocab.polysemy"
+      ],
+      "sectionsAllowed": [
+        "vocabulary",
+        "sentence"
+      ]
+    },
+    {
+      "index": 13,
+      "kind": "new",
+      "timeBudgetMinutes": 15,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "cloze.logic",
+        "reading.cohesion"
+      ],
+      "sectionsAllowed": [
+        "gap-reading"
+      ]
+    },
+    {
+      "index": 14,
+      "kind": "new",
+      "timeBudgetMinutes": 10,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "writing.task",
+        "writing.organization"
+      ],
+      "sectionsAllowed": [
+        "application-writing",
+        "vocabulary"
+      ]
+    },
+    {
+      "index": 15,
+      "kind": "recheck",
+      "timeBudgetMinutes": 10,
+      "goalTargetCount": 0,
+      "skillIds": [
+        "reading.cohesion",
+        "cloze.logic",
+        "writing.task",
+        "vocab.polysemy"
+      ],
+      "sectionsAllowed": [
+        "vocabulary",
+        "gap-reading",
+        "application-writing"
+      ]
+    },
+    {
+      "index": 16,
+      "kind": "new",
+      "timeBudgetMinutes": 10,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "grammar.infinitive",
+        "vocab.context"
+      ],
+      "sectionsAllowed": [
+        "grammar",
+        "vocabulary"
+      ]
+    },
+    {
+      "index": 17,
+      "kind": "new",
+      "timeBudgetMinutes": 10,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "grammar.clause",
+        "vocab.context"
+      ],
+      "sectionsAllowed": [
+        "grammar",
+        "vocabulary"
+      ]
+    },
+    {
+      "index": 18,
+      "kind": "new",
+      "timeBudgetMinutes": 15,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "cloze.logic",
+        "cloze.context"
+      ],
+      "sectionsAllowed": [
+        "cloze"
+      ]
+    },
+    {
+      "index": 19,
+      "kind": "new",
+      "timeBudgetMinutes": 10,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "writing.organization",
+        "writing.coherence"
+      ],
+      "sectionsAllowed": [
+        "continuation",
+        "vocabulary"
+      ]
+    },
+    {
+      "index": 20,
+      "kind": "recheck",
+      "timeBudgetMinutes": 15,
+      "goalTargetCount": 0,
+      "skillIds": [
+        "grammar.infinitive",
+        "grammar.clause",
+        "cloze.logic",
+        "writing.organization"
+      ],
+      "sectionsAllowed": [
+        "grammar",
+        "cloze",
+        "continuation"
+      ]
+    },
+    {
+      "index": 21,
+      "kind": "new",
+      "timeBudgetMinutes": 15,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "grammar.word-form",
+        "cloze.context"
+      ],
+      "sectionsAllowed": [
+        "grammar",
+        "cloze"
+      ]
+    },
+    {
+      "index": 22,
+      "kind": "new",
+      "timeBudgetMinutes": 15,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "reading.main-idea",
+        "reading.inference",
+        "reading.word-meaning"
+      ],
+      "sectionsAllowed": [
+        "reading"
+      ]
+    },
+    {
+      "index": 23,
+      "kind": "new",
+      "timeBudgetMinutes": 10,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "writing.coherence",
+        "vocab.collocation"
+      ],
+      "sectionsAllowed": [
+        "application-writing",
+        "vocabulary"
+      ]
+    },
+    {
+      "index": 24,
+      "kind": "new",
+      "timeBudgetMinutes": 10,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "listening.inference",
+        "grammar.word-form"
+      ],
+      "sectionsAllowed": [
+        "listening",
+        "grammar"
+      ]
+    },
+    {
+      "index": 25,
+      "kind": "recheck",
+      "timeBudgetMinutes": 15,
+      "goalTargetCount": 0,
+      "skillIds": [
+        "grammar.word-form",
+        "reading.inference",
+        "writing.coherence",
+        "listening.inference"
+      ],
+      "sectionsAllowed": [
+        "grammar",
+        "reading",
+        "application-writing",
+        "listening"
+      ]
+    },
+    {
+      "index": 26,
+      "kind": "new",
+      "timeBudgetMinutes": 10,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "grammar.agreement",
+        "grammar.article"
+      ],
+      "sectionsAllowed": [
+        "grammar",
+        "vocabulary"
+      ]
+    },
+    {
+      "index": 27,
+      "kind": "new",
+      "timeBudgetMinutes": 10,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "grammar.comparison",
+        "grammar.pronoun"
+      ],
+      "sectionsAllowed": [
+        "grammar",
+        "vocabulary"
+      ]
+    },
+    {
+      "index": 28,
+      "kind": "new",
+      "timeBudgetMinutes": 15,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "writing.accuracy",
+        "writing.coherence"
+      ],
+      "sectionsAllowed": [
+        "continuation"
+      ]
+    },
+    {
+      "index": 29,
+      "kind": "new",
+      "timeBudgetMinutes": 10,
+      "goalTargetCount": 5,
+      "skillIds": [
+        "vocab.polysemy",
+        "reading.word-meaning"
+      ],
+      "sectionsAllowed": [
+        "vocabulary",
+        "sentence"
+      ]
+    },
+    {
+      "index": 30,
+      "kind": "recheck",
+      "timeBudgetMinutes": 15,
+      "goalTargetCount": 0,
+      "skillIds": [
+        "grammar.agreement",
+        "grammar.comparison",
+        "writing.accuracy",
+        "vocab.polysemy"
+      ],
+      "sectionsAllowed": [
+        "grammar",
+        "continuation",
+        "vocabulary"
+      ]
+    }
+  ]
+}

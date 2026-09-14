@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "id": "gaokao-listening",
+  "version": "1.0.0",
+  "titleZh": "听力起步样例包",
+  "status": "draft",
+  "author": "GLM 开发样例",
+  "reviewer": null,
+  "reviewedAt": null,
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sources": [
+    {
+      "id": "original-demo",
+      "kind": "original",
+      "title": "原创开发样例",
+      "url": null,
+      "rightsNote": "为本计划编写的虚构情境，尚未完成独立内容审核。"
+    }
+  ],
+  "assets": [
+    {
+      "id": "listening-preview",
+      "path": "assets/listening-preview.m4a",
+      "mime": "audio/mp4",
+      "bytes": 154190,
+      "sha256": "03a80e5e5e1062697f43ab4a97211636d076c641c649cf8a2b159b719a92af61"
+    }
+  ],
+  "resources": [
+    {
+      "id": "listening-club-audio",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Hey, I heard you joined the reading club. Is it fun? Yes! We meet in Room 203 every Friday after class. What do you do there? We read short stories and talk about them. You should come with me next Friday. Great idea! Should I bring anything? Just yourself, and a book you like."
+        }
+      ],
+      "audioAssetId": "listening-preview",
+      "transcript": "— Hey, I heard you joined the reading club. Is it fun?\n— Yes! We meet in Room 203 every Friday after class.\n— What do you do there?\n— We read short stories and talk about them. You should come with me next Friday.\n— Great idea! Should I bring anything?\n— Just yourself, and a book you like."
+    }
+  ],
+  "items": [
+    {
+      "id": "listening-meeting-a",
+      "familyId": "listening-meeting",
+      "skillIds": [
+        "listening.gist"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recall",
+      "promptZh": "听短对话：读书俱乐部在哪里活动？",
+      "resourceId": "listening-club-audio",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "original-demo"
+      ],
+      "explanation": {
+        "summaryZh": "Samantha 说俱乐部每周五放学后在一间教室活动。",
+        "ruleZh": "先抓住 meet 与 Room 203 的地点信息，再排除对话中没出现的地点。",
+        "evidence": [
+          {
+            "resourceId": "listening-club-audio",
+            "paragraphId": "p1",
+            "quote": "We meet in Room 203 every Friday after class."
+          }
+        ],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "对话没有提到图书馆。"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "对话没有提到操场。"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "In Room 203."
+        },
+        {
+          "id": "b",
+          "text": "In the library."
+        },
+        {
+          "id": "c",
+          "text": "In the playground."
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "listening-bring-b",
+      "familyId": "listening-bring",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recall",
+      "promptZh": "听短对话：Daniel 下周五需要带什么？",
+      "resourceId": "listening-club-audio",
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "original-demo"
+      ],
+      "explanation": {
+        "summaryZh": "Samantha 说带一本自己喜欢的书就可以。",
+        "ruleZh": "抓住 Should I bring anything? 之后的回答，排除对话未提及的物品。",
+        "evidence": [
+          {
+            "resourceId": "listening-club-audio",
+            "paragraphId": "p1",
+            "quote": "Just yourself, and a book you like."
+          }
+        ],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "对话没有说自己写的小说。"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "对话没有提到作业。"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "A book he likes."
+        },
+        {
+          "id": "b",
+          "text": "A short story he wrote."
+        },
+        {
+          "id": "c",
+          "text": "His homework."
+        }
+      ],
+      "answerOptionId": "a"
+    }
+  ],
+  "units": [
+    {
+      "id": "unit-listening",
+      "titleZh": "听力起步：社团对话",
+      "familyIds": [
+        "listening-meeting",
+        "listening-bring"
+      ],
+      "itemIds": [
+        "listening-meeting-a",
+        "listening-bring-b"
+      ],
+      "prerequisiteSkillIds": []
+    }
+  ]
+}

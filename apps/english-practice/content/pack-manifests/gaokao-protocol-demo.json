@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "gaokao-protocol-demo",
+  "version": "0.1.1",
+  "titleZh": "高考补弱协议样例：校园活动",
+  "status": "draft",
+  "author": "开发计划样例",
+  "reviewer": null,
+  "reviewedAt": null,
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sourceIds": [
+    "original-demo"
+  ],
+  "assetIds": [],
+  "resourceIds": [
+    "reading-club",
+    "continuation-club"
+  ],
+  "itemIds": [
+    "vocab-join-a",
+    "vocab-join-b",
+    "order-join-a",
+    "grammar-meet-a",
+    "reading-location-a",
+    "gap-reading-plan-a",
+    "cloze-help-a",
+    "writing-invitation-a",
+    "writing-continuation-a"
+  ],
+  "unitIds": [
+    "demo-school-club"
+  ]
+}

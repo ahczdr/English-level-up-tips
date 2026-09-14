@@ -1,0 +1,101 @@
+{
+  "id": "cloze-help-a",
+  "familyId": "cloze-help-context",
+  "skillIds": [
+    "cloze.context"
+  ],
+  "level": "G0",
+  "section": "cloze",
+  "reviewMode": "transfer",
+  "promptZh": "根据上下文选择正确选项。此题为两空交互样例。",
+  "resourceId": null,
+  "estimatedSeconds": 100,
+  "sourceIds": [
+    "original-demo"
+  ],
+  "explanation": {
+    "summaryZh": "第一空选 help，第二空选 thanked。",
+    "ruleZh": "从帮助找房间到表达感谢，注意情境与过去时。",
+    "evidence": [],
+    "distractors": [
+      {
+        "optionId": "b",
+        "reasonZh": "迷路学生需要帮助，不是离开。"
+      },
+      {
+        "optionId": "d",
+        "reasonZh": "获得帮助后忽视对方不符合这里的逻辑。"
+      }
+    ]
+  },
+  "kind": "gaps",
+  "inputMode": "options",
+  "sharedOptions": [],
+  "uniqueOptions": false,
+  "segments": [
+    {
+      "type": "text",
+      "text": "A new student could not find Room 203. Lily stopped to "
+    },
+    {
+      "type": "gap",
+      "gapId": "g1"
+    },
+    {
+      "type": "text",
+      "text": " him. He "
+    },
+    {
+      "type": "gap",
+      "gapId": "g2"
+    },
+    {
+      "type": "text",
+      "text": " her with a smile."
+    }
+  ],
+  "gaps": [
+    {
+      "id": "g1",
+      "label": "1",
+      "clue": null,
+      "options": [
+        {
+          "id": "a",
+          "text": "help"
+        },
+        {
+          "id": "b",
+          "text": "leave"
+        }
+      ],
+      "accepted": [
+        "a"
+      ],
+      "explanationZh": "学生找不到教室，Lily 停下来帮助他。"
+    },
+    {
+      "id": "g2",
+      "label": "2",
+      "clue": null,
+      "options": [
+        {
+          "id": "c",
+          "text": "thanked"
+        },
+        {
+          "id": "d",
+          "text": "ignored"
+        }
+      ],
+      "accepted": [
+        "c"
+      ],
+      "explanationZh": "得到帮助后微笑表示感谢，thanked 符合叙事情境。"
+    }
+  ],
+  "policy": {
+    "caseSensitive": true,
+    "allowTerminalPunctuation": false
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "writing-continuation-a",
+  "familyId": "continuation-club",
+  "skillIds": [
+    "writing.coherence",
+    "writing.organization"
+  ],
+  "level": "G0",
+  "section": "continuation",
+  "reviewMode": "transfer",
+  "promptZh": "阅读原文，先写提纲，再根据两个段首句完成简短续写。此为降难训练，不是高考原题。",
+  "resourceId": "continuation-club",
+  "estimatedSeconds": 720,
+  "sourceIds": [
+    "original-demo"
+  ],
+  "explanation": {
+    "summaryZh": "延续 Lily 害怕发言到得到支持的变化，不改变原有人物和地点。",
+    "ruleZh": "两段情节承接，人物行动需要有原因。",
+    "evidence": [],
+    "distractors": []
+  },
+  "kind": "writing",
+  "wordRange": [
+    70,
+    100
+  ],
+  "requirementsZh": [
+    "保留原文人物",
+    "衔接两个段首句",
+    "交代 Lily 的变化"
+  ],
+  "openingSentences": [
+    "Tom invited Lily to sit beside him.",
+    "When the meeting ended, Lily stayed for a moment."
+  ],
+  "checklistZh": [
+    "人物和时间一致",
+    "第一段连接第二段",
+    "有具体行动",
+    "结尾与原文有关"
+  ],
+  "modelAnswer": "Tom invited Lily to sit beside him. He asked about her book and listened carefully. With his help, she read a short part to the group. The other students smiled and asked friendly questions. When the meeting ended, Lily stayed for a moment. She thanked Tom for helping her feel welcome. Then she looked at her book and said she would bring another story next Friday. This time, she was looking forward to speaking."
+}

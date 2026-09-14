@@ -1,0 +1,12 @@
+{
+  "id": "gaokao-common-training-v1",
+  "nameZh": "高考通用补弱训练",
+  "region": null,
+  "examYear": null,
+  "verified": false,
+  "sourceUrls": [],
+  "checkedAt": null,
+  "enabledSections": ["vocabulary", "sentence", "reading", "gap-reading", "cloze", "grammar", "listening", "application-writing", "continuation"],
+  "allowMockExam": false,
+  "scoring": null
+}

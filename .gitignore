@@ -31,3 +31,11 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+# english-practice app build output
+apps/english-practice/dist/
+
+# Local agent tool state (never commit)
+.mimosa/
+.v2c/
+.video_agent/

@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "gaokao-demo",
+  "version": "1.0.1",
+  "titleZh": "高考英语示例课程包",
+  "status": "draft",
+  "author": "author-demo",
+  "reviewer": null,
+  "reviewedAt": null,
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sources": [
+    {
+      "id": "src-demo",
+      "kind": "original",
+      "title": "自编示例来源",
+      "url": null,
+      "rightsNote": "原创教学示例"
+    }
+  ],
+  "assets": [],
+  "resources": [
+    {
+      "id": "res-demo",
+      "paragraphs": [
+        {
+          "id": "para-1",
+          "text": "Students learn through short daily practice."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    }
+  ],
+  "items": [
+    {
+      "id": "item-demo",
+      "familyId": "family-demo",
+      "skillIds": [
+        "skill-vocabulary"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recognition",
+      "promptZh": "以下哪个选项表示每日练习？",
+      "resourceId": null,
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "src-demo"
+      ],
+      "explanation": {
+        "summaryZh": "daily practice 表示每日练习。",
+        "ruleZh": "用 daily 表示每日的。",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "daily practice"
+        },
+        {
+          "id": "opt-b",
+          "text": "long vacation"
+        }
+      ],
+      "answerOptionId": "opt-a"
+    }
+  ],
+  "units": [
+    {
+      "id": "unit-demo",
+      "titleZh": "示例单元",
+      "familyIds": [
+        "family-demo"
+      ],
+      "itemIds": [
+        "item-demo"
+      ],
+      "prerequisiteSkillIds": []
+    }
+  ]
+}

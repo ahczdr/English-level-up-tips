@@ -1,0 +1,52 @@
+{
+  "name": "gaokao-english-practice",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5174 --strictPort",
+    "preview": "vite preview --host 127.0.0.1 --port 4174 --strictPort",
+    "typecheck": "vue-tsc --noEmit",
+    "lint": "eslint src scripts tests",
+    "test:unit": "vitest run",
+    "test:e2e": "npm run build:e2e && playwright test && playwright test --config playwright.offline.config.ts",
+    "content:check": "tsx scripts/check-content.ts --mode preview",
+    "content:release": "tsx scripts/check-content.ts --mode release",
+    "content:build": "tsx scripts/build-packs.ts",
+    "build": "npm run typecheck && npm run content:check && npm run content:build && npm run build:vite",
+    "build:vite": "vite build",
+    "build:e2e": "npm run typecheck && npm run content:check && npm run content:build && node scripts/sync-e2e-fixtures.mjs && VITE_E2E=true npm run build:vite",
+    "check": "npm run content:check && npm run typecheck && npm run lint && npm run test:unit",
+    "test:smoke": "npm run build:release && node scripts/smoke-release.mjs",
+    "build:release": "npm run build && node scripts/collect-release-info.mjs",
+    "pilot:day7": "tsx scripts/pilot-day7.ts"
+  },
+  "dependencies": {
+    "dexie": "4.4.5",
+    "vue": "3.5.42",
+    "vue-router": "4.6.4",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.63.0",
+    "@types/node": "24.13.3",
+    "@vitejs/plugin-vue": "6.0.8",
+    "@vue/test-utils": "2.5.0",
+    "eslint": "10.10.0",
+    "eslint-plugin-vue": "10.11.0",
+    "fake-indexeddb": "6.2.5",
+    "jsdom": "26.1.0",
+    "tsx": "4.23.13",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.70.0",
+    "vite": "7.3.6",
+    "vite-plugin-pwa": "1.3.0",
+    "vitest": "4.1.11",
+    "vue-tsc": "3.3.11",
+    "workbox-precaching": "7.4.1"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "gaokao-listening",
+  "version": "1.0.1",
+  "titleZh": "听力起步样例包",
+  "status": "draft",
+  "author": "GLM 开发样例",
+  "reviewer": null,
+  "reviewedAt": null,
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sourceIds": [
+    "original-demo"
+  ],
+  "assetIds": [
+    "listening-preview"
+  ],
+  "resourceIds": [
+    "listening-club-audio"
+  ],
+  "itemIds": [
+    "listening-meeting-a",
+    "listening-bring-b"
+  ],
+  "unitIds": [
+    "unit-listening"
+  ]
+}

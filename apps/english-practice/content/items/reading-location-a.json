@@ -1,0 +1,53 @@
+{
+  "id": "reading-location-a",
+  "familyId": "reading-location",
+  "skillIds": [
+    "reading.detail"
+  ],
+  "level": "G0",
+  "section": "reading",
+  "reviewMode": "transfer",
+  "promptZh": "Where does the club meet?",
+  "resourceId": "reading-club",
+  "estimatedSeconds": 90,
+  "sourceIds": [
+    "original-demo"
+  ],
+  "explanation": {
+    "summaryZh": "地点是 Room 203。",
+    "ruleZh": "定位 meet 后的地点表达，不把时间误当地点。",
+    "evidence": [
+      {
+        "resourceId": "reading-club",
+        "paragraphId": "p1",
+        "quote": "meets in Room 203"
+      }
+    ],
+    "distractors": [
+      {
+        "optionId": "b",
+        "reasonZh": "材料没有提到图书馆。"
+      },
+      {
+        "optionId": "c",
+        "reasonZh": "材料没有提到操场。"
+      }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    {
+      "id": "a",
+      "text": "In Room 203."
+    },
+    {
+      "id": "b",
+      "text": "In the library."
+    },
+    {
+      "id": "c",
+      "text": "On the playground."
+    }
+  ],
+  "answerOptionId": "a"
+}

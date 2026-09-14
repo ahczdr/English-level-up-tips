@@ -1,0 +1,41 @@
+{
+  "id": "writing-invitation-a",
+  "familyId": "application-invitation",
+  "skillIds": [
+    "writing.task",
+    "writing.organization"
+  ],
+  "level": "G0",
+  "section": "application-writing",
+  "reviewMode": "transfer",
+  "promptZh": "邀请朋友参加阅读社团：说明时间、地点和需要带一本书。当前是短文入门任务。",
+  "resourceId": null,
+  "estimatedSeconds": 480,
+  "sourceIds": [
+    "original-demo"
+  ],
+  "explanation": {
+    "summaryZh": "先说明邀请目的，再写活动信息，最后表达期待。",
+    "ruleZh": "确保读者知道何时、何地、做什么。",
+    "evidence": [],
+    "distractors": []
+  },
+  "kind": "writing",
+  "wordRange": [
+    35,
+    60
+  ],
+  "requirementsZh": [
+    "邀请朋友",
+    "周五放学后，203室",
+    "带一本书"
+  ],
+  "openingSentences": [],
+  "checklistZh": [
+    "写明邀请目的",
+    "时间地点准确",
+    "说明带书",
+    "句子完整"
+  ],
+  "modelAnswer": "Dear Alex, I would like to invite you to our school reading club. We meet in Room 203 after school on Friday. Please bring a book you like. We can share stories together. I hope you can join us. Yours, Li Hua"
+}

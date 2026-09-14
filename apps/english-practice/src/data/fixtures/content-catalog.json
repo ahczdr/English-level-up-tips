@@ -1,0 +1,52 @@
+{
+  "packs": [
+    {
+      "id": "gaokao-demo",
+      "version": "1.0.0",
+      "status": "draft",
+      "bytes": 1746,
+      "sha256": "f7d8754b981634af007bc2ae853b6f4319df29359b6e25c207b7e8869c071654",
+      "path": "content-packs/gaokao-demo/1.0.0/pack.json"
+    },
+    {
+      "id": "gaokao-demo",
+      "version": "1.0.1",
+      "status": "draft",
+      "bytes": 1762,
+      "sha256": "8c7410b0b366be4c76f70620101bd55b4fe6954b419c3f28a9fbbcc84e5ea96b",
+      "path": "content-packs/gaokao-demo/1.0.1/pack.json"
+    },
+    {
+      "id": "gaokao-protocol-demo",
+      "version": "0.1.0",
+      "status": "draft",
+      "bytes": 16666,
+      "sha256": "212ae1c691fc4087791d74b895c7badc8a443f0bfa79a4837bcf88f28c511b20",
+      "path": "content-packs/gaokao-protocol-demo/0.1.0/pack.json"
+    },
+    {
+      "id": "gaokao-listening",
+      "version": "1.0.0",
+      "status": "draft",
+      "bytes": 4718,
+      "sha256": "8916e8796db85ab625df453777a066be1da80776b998f321008ca60e49674344",
+      "path": "content-packs/gaokao-listening/1.0.0/pack.json"
+    },
+    {
+      "id": "gaokao-listening",
+      "version": "1.0.1",
+      "status": "draft",
+      "bytes": 4720,
+      "sha256": "c78961985501c134e85ed6d965b14b186c92fd39610ab390b4c00b4b0042e100",
+      "path": "content-packs/gaokao-listening/1.0.1/pack.json"
+    },
+    {
+      "id": "gaokao-protocol-demo",
+      "version": "0.1.1",
+      "status": "draft",
+      "bytes": 17867,
+      "sha256": "bf7679a0639e7ce255fd3bae142de9111551cae69eab2d7b3704d98eb32ea2bd",
+      "path": "content-packs/gaokao-protocol-demo/0.1.1/pack.json"
+    }
+  ]
+}

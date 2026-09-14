@@ -1,0 +1,47 @@
+{
+  "id": "vocab-join-b",
+  "familyId": "join-context",
+  "skillIds": [
+    "vocab.context"
+  ],
+  "level": "G0",
+  "section": "vocabulary",
+  "reviewMode": "recognition",
+  "promptZh": "在 Please join us for the English corner this Friday. 中，join 的意思是什么？",
+  "resourceId": null,
+  "estimatedSeconds": 40,
+  "sourceIds": [
+    "original-demo"
+  ],
+  "explanation": {
+    "summaryZh": "join us 在邀请语境中表示\"加入我们\"。",
+    "ruleZh": "join + 人/团体表示参与到对方的活动或组织中。",
+    "evidence": [],
+    "distractors": [
+      {
+        "optionId": "b",
+        "reasonZh": "邀请语境是加入而不是离开。"
+      },
+      {
+        "optionId": "c",
+        "reasonZh": "句子没有观察的含义。"
+      }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    {
+      "id": "a",
+      "text": "加入"
+    },
+    {
+      "id": "b",
+      "text": "离开"
+    },
+    {
+      "id": "c",
+      "text": "观察"
+    }
+  ],
+  "answerOptionId": "a"
+}

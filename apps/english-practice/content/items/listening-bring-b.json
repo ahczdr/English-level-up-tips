@@ -1,0 +1,53 @@
+{
+  "id": "listening-bring-b",
+  "familyId": "listening-bring",
+  "skillIds": [
+    "listening.detail"
+  ],
+  "level": "G0",
+  "section": "listening",
+  "reviewMode": "recall",
+  "promptZh": "听短对话：Daniel 下周五需要带什么？",
+  "resourceId": "listening-club-audio",
+  "estimatedSeconds": 45,
+  "sourceIds": [
+    "original-demo"
+  ],
+  "explanation": {
+    "summaryZh": "Samantha 说带一本自己喜欢的书就可以。",
+    "ruleZh": "抓住 Should I bring anything? 之后的回答，排除对话未提及的物品。",
+    "evidence": [
+      {
+        "resourceId": "listening-club-audio",
+        "paragraphId": "p1",
+        "quote": "Just yourself, and a book you like."
+      }
+    ],
+    "distractors": [
+      {
+        "optionId": "b",
+        "reasonZh": "对话没有说自己写的小说。"
+      },
+      {
+        "optionId": "c",
+        "reasonZh": "对话没有提到作业。"
+      }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    {
+      "id": "a",
+      "text": "A book he likes."
+    },
+    {
+      "id": "b",
+      "text": "A short story he wrote."
+    },
+    {
+      "id": "c",
+      "text": "His homework."
+    }
+  ],
+  "answerOptionId": "a"
+}

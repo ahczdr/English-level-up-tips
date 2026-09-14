@@ -28,6 +28,29 @@ IPA_FALLBACK_CHARACTERS = set("ɪʌː")
 REQUIRED_SPACING_CHARACTERS = set(" \u00a0")
 
 
+MAX_CHAPTER_BYTES = 8 * 1024 * 1024
+
+
+def parse_chapter(data: bytes) -> "ET.Element":
+    # EPUB 章节由本仓 build-epub.mjs 生成，但仍按不可信输入防御：
+    # 标准库 ElementTree 会处理内部 DTD 实体，实体扩展（billion laughs /
+    # 外部实体）以此为由。因此：限制章节大小；拒绝自定义 <!ENTITY>；
+    # 仅允许本仓生成器的简单 <!DOCTYPE html> 序言并在解析前整体剥离，
+    # 使 expat 完全不接触 DTD（合法章节只使用 XML 预定义实体，如 &amp;）。
+    if len(data) > MAX_CHAPTER_BYTES:
+        raise ValueError("epub chapter exceeds size limit")
+    lowered = data.lower()
+    if b"<!entity" in lowered:
+        raise ValueError("unexpected <!ENTITY> declaration in epub chapter")
+    root_start = lowered.find(b"<html")
+    if root_start < 0:
+        raise ValueError("epub chapter missing <html> root")
+    prolog = lowered[:root_start]
+    if b"<!doctype" in prolog and b"<!doctypehtml>" not in prolog.replace(b" ", b""):
+        raise ValueError("unexpected DOCTYPE in epub chapter")
+    return ET.fromstring(data[root_start:])
+
+
 def publication_characters(epub_path: Path) -> set[str]:
     characters = set(EXTRA_TEXT)
     with zipfile.ZipFile(epub_path) as archive:
@@ -39,7 +62,7 @@ def publication_characters(epub_path: Path) -> set[str]:
         if not chapters:
             raise ValueError(f"{epub_path}: no publication chapters found")
         for name in chapters:
-            root = ET.fromstring(archive.read(name))
+            root = parse_chapter(archive.read(name))
             for value in root.itertext():
                 characters.update(value)
     return {

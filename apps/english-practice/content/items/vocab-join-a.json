@@ -1,0 +1,47 @@
+{
+  "id": "vocab-join-a",
+  "familyId": "join-context",
+  "skillIds": [
+    "vocab.context"
+  ],
+  "level": "G0",
+  "section": "vocabulary",
+  "reviewMode": "recognition",
+  "promptZh": "在 Join the school reading club. 中，join 的意思是什么？",
+  "resourceId": null,
+  "estimatedSeconds": 40,
+  "sourceIds": [
+    "original-demo"
+  ],
+  "explanation": {
+    "summaryZh": "join 在这里表示加入团体。",
+    "ruleZh": "join + 团体表示成为其中的一员。",
+    "evidence": [],
+    "distractors": [
+      {
+        "optionId": "b",
+        "reasonZh": "离开与此处加入的意思相反。"
+      },
+      {
+        "optionId": "c",
+        "reasonZh": "句子没有关闭社团的意思。"
+      }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    {
+      "id": "a",
+      "text": "加入"
+    },
+    {
+      "id": "b",
+      "text": "离开"
+    },
+    {
+      "id": "c",
+      "text": "关闭"
+    }
+  ],
+  "answerOptionId": "a"
+}

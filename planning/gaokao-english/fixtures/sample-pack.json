@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "id": "gaokao-protocol-demo",
+  "version": "0.1.0",
+  "titleZh": "高考补弱协议样例：校园活动",
+  "status": "draft",
+  "author": "开发计划样例",
+  "reviewer": null,
+  "reviewedAt": null,
+  "profileIds": ["gaokao-common-training-v1"],
+  "sources": [{"id":"original-demo","kind":"original","title":"原创开发样例","url":null,"rightsNote":"为本计划编写的虚构情境，尚未完成独立内容审核。"}],
+  "assets": [],
+  "resources": [
+    {"id":"reading-club","paragraphs":[{"id":"p1","text":"The school reading club meets in Room 203 every Friday after school. Students bring one book and share a short story. New members can join without paying."}],"audioAssetId":null,"transcript":null},
+    {"id":"continuation-club","paragraphs":[{"id":"p1","text":"Lily wanted to join the school reading club, but she was afraid to speak in front of others. On Friday, she stood outside Room 203 with a book in her hands. Tom noticed her and opened the door."}],"audioAssetId":null,"transcript":null}
+  ],
+  "items": [
+    {
+      "id":"vocab-join-a","familyId":"join-context","skillIds":["vocab.context"],"level":"G0","section":"vocabulary","reviewMode":"recognition",
+      "promptZh":"在 Join the school reading club. 中，join 的意思是什么？","resourceId":null,"estimatedSeconds":40,"sourceIds":["original-demo"],
+      "explanation":{"summaryZh":"join 在这里表示加入团体。","ruleZh":"join + 团体表示成为其中的一员。","evidence":[],"distractors":[{"optionId":"b","reasonZh":"离开与此处加入的意思相反。"},{"optionId":"c","reasonZh":"句子没有关闭社团的意思。"}]},
+      "kind":"choice","options":[{"id":"a","text":"加入"},{"id":"b","text":"离开"},{"id":"c","text":"关闭"}],"answerOptionId":"a"
+    },
+    {
+      "id":"order-join-a","familyId":"want-to-join","skillIds":["sentence.core","grammar.infinitive"],"level":"G0","section":"sentence","reviewMode":"recognition",
+      "promptZh":"点词组句：我想加入这个俱乐部。","resourceId":null,"estimatedSeconds":60,"sourceIds":["original-demo"],
+      "explanation":{"summaryZh":"I want to join the club.","ruleZh":"want to do 表示想做某事。","evidence":[],"distractors":[]},
+      "kind":"order","tokens":[{"id":"t1","text":"I"},{"id":"t2","text":"want"},{"id":"t3","text":"to"},{"id":"t4","text":"join"},{"id":"t5","text":"the club"}],"acceptedOrders":[["t1","t2","t3","t4","t5"]]
+    },
+    {
+      "id":"grammar-meet-a","familyId":"present-simple-agreement","skillIds":["grammar.agreement"],"level":"G0","section":"grammar","reviewMode":"recall",
+      "promptZh":"用提示词的适当形式填空。","resourceId":null,"estimatedSeconds":60,"sourceIds":["original-demo"],
+      "explanation":{"summaryZh":"主语 The club 为第三人称单数，用 meets。","ruleZh":"一般现在时表示规律活动，第三人称单数谓语需变化。","evidence":[],"distractors":[]},
+      "kind":"gaps","inputMode":"text","sharedOptions":[],"uniqueOptions":false,
+      "segments":[{"type":"text","text":"The club "},{"type":"gap","gapId":"g1"},{"type":"text","text":" every Friday."}],
+      "gaps":[{"id":"g1","label":"1","clue":"meet","options":[],"accepted":["meets"],"explanationZh":"The club 是单数主语，every Friday 表示规律活动，用 meets。"}],"policy":{"caseSensitive":false,"allowTerminalPunctuation":false}
+    },
+    {
+      "id":"reading-location-a","familyId":"reading-location","skillIds":["reading.detail"],"level":"G0","section":"reading","reviewMode":"transfer",
+      "promptZh":"Where does the club meet?","resourceId":"reading-club","estimatedSeconds":90,"sourceIds":["original-demo"],
+      "explanation":{"summaryZh":"地点是 Room 203。","ruleZh":"定位 meet 后的地点表达，不把时间误当地点。","evidence":[{"resourceId":"reading-club","paragraphId":"p1","quote":"meets in Room 203"}],"distractors":[{"optionId":"b","reasonZh":"材料没有提到图书馆。"},{"optionId":"c","reasonZh":"材料没有提到操场。"}]},
+      "kind":"choice","options":[{"id":"a","text":"In Room 203."},{"id":"b","text":"In the library."},{"id":"c","text":"On the playground."}],"answerOptionId":"a"
+    },
+    {
+      "id":"gap-reading-plan-a","familyId":"reading-learning-plan","skillIds":["reading.cohesion"],"level":"G1","section":"gap-reading","reviewMode":"transfer",
+      "promptZh":"为五个空位选择合适的句子，每个选项最多使用一次。此篇为教学样例。","resourceId":null,"estimatedSeconds":360,"sourceIds":["original-demo"],
+      "explanation":{"summaryZh":"依次为 A、B、C、D、E。","ruleZh":"结合后句线索：任务规模、噪声、停顿、求助、复盘。","evidence":[],"distractors":[{"optionId":"f","reasonZh":"完全忽略错误与文中复习和求助的建议不一致。"},{"optionId":"g","reasonZh":"熬夜不符合合理计划的上下文。"}]},
+      "kind":"gaps","inputMode":"options","uniqueOptions":true,
+      "sharedOptions":[{"id":"a","text":"Start with a small task."},{"id":"b","text":"Find a quiet place."},{"id":"c","text":"Take a short break."},{"id":"d","text":"Ask for help when needed."},{"id":"e","text":"Review what you have learned."},{"id":"f","text":"Ignore all your mistakes."},{"id":"g","text":"Stay awake all night."}],
+      "segments":[{"type":"text","text":"A good study plan can make learning easier. "},{"type":"gap","gapId":"g1"},{"type":"text","text":" For example, learn five useful phrases instead of fifty at once. "},{"type":"gap","gapId":"g2"},{"type":"text","text":" Noise can make it hard to focus. "},{"type":"gap","gapId":"g3"},{"type":"text","text":" Stand up and walk for a minute before continuing. "},{"type":"gap","gapId":"g4"},{"type":"text","text":" Your teacher may explain a difficult sentence. "},{"type":"gap","gapId":"g5"},{"type":"text","text":" Try to recall yesterday's phrases before learning new ones."}],
+      "gaps":[{"id":"g1","label":"1","clue":null,"options":[],"accepted":["a"],"explanationZh":"后句用五个而不是五十个词块举例，承接小任务。"},{"id":"g2","label":"2","clue":null,"options":[],"accepted":["b"],"explanationZh":"后句讲噪声影响专注，对应安静地点。"},{"id":"g3","label":"3","clue":null,"options":[],"accepted":["c"],"explanationZh":"后句站起走动一分钟，是短暂休息。"},{"id":"g4","label":"4","clue":null,"options":[],"accepted":["d"],"explanationZh":"后句老师解释难句，是寻求帮助的具体方式。"},{"id":"g5","label":"5","clue":null,"options":[],"accepted":["e"],"explanationZh":"后句回忆昨天的词块，对应复习。"}],
+      "policy":{"caseSensitive":true,"allowTerminalPunctuation":false}
+    },
+    {
+      "id":"cloze-help-a","familyId":"cloze-help-context","skillIds":["cloze.context"],"level":"G0","section":"cloze","reviewMode":"transfer",
+      "promptZh":"根据上下文选择正确选项。此题为两空交互样例。","resourceId":null,"estimatedSeconds":100,"sourceIds":["original-demo"],
+      "explanation":{"summaryZh":"第一空选 help，第二空选 thanked。","ruleZh":"从帮助找房间到表达感谢，注意情境与过去时。","evidence":[],"distractors":[{"optionId":"b","reasonZh":"迷路学生需要帮助，不是离开。"},{"optionId":"d","reasonZh":"获得帮助后忽视对方不符合这里的逻辑。"}]},
+      "kind":"gaps","inputMode":"options","sharedOptions":[],"uniqueOptions":false,
+      "segments":[{"type":"text","text":"A new student could not find Room 203. Lily stopped to "},{"type":"gap","gapId":"g1"},{"type":"text","text":" him. He "},{"type":"gap","gapId":"g2"},{"type":"text","text":" her with a smile."}],
+      "gaps":[{"id":"g1","label":"1","clue":null,"options":[{"id":"a","text":"help"},{"id":"b","text":"leave"}],"accepted":["a"],"explanationZh":"学生找不到教室，Lily 停下来帮助他。"},{"id":"g2","label":"2","clue":null,"options":[{"id":"c","text":"thanked"},{"id":"d","text":"ignored"}],"accepted":["c"],"explanationZh":"得到帮助后微笑表示感谢，thanked 符合叙事情境。"}],
+      "policy":{"caseSensitive":true,"allowTerminalPunctuation":false}
+    },
+    {
+      "id":"writing-invitation-a","familyId":"application-invitation","skillIds":["writing.task","writing.organization"],"level":"G0","section":"application-writing","reviewMode":"transfer",
+      "promptZh":"邀请朋友参加阅读社团：说明时间、地点和需要带一本书。当前是短文入门任务。","resourceId":null,"estimatedSeconds":480,"sourceIds":["original-demo"],
+      "explanation":{"summaryZh":"先说明邀请目的，再写活动信息，最后表达期待。","ruleZh":"确保读者知道何时、何地、做什么。","evidence":[],"distractors":[]},
+      "kind":"writing","wordRange":[35,60],"requirementsZh":["邀请朋友","周五放学后，203室","带一本书"],"openingSentences":[],"checklistZh":["写明邀请目的","时间地点准确","说明带书","句子完整"],
+      "modelAnswer":"Dear Alex, I would like to invite you to our school reading club. We meet in Room 203 after school on Friday. Please bring a book you like. We can share stories together. I hope you can join us. Yours, Li Hua"
+    },
+    {
+      "id":"writing-continuation-a","familyId":"continuation-club","skillIds":["writing.coherence","writing.organization"],"level":"G0","section":"continuation","reviewMode":"transfer",
+      "promptZh":"阅读原文，先写提纲，再根据两个段首句完成简短续写。此为降难训练，不是高考原题。","resourceId":"continuation-club","estimatedSeconds":720,"sourceIds":["original-demo"],
+      "explanation":{"summaryZh":"延续 Lily 害怕发言到得到支持的变化，不改变原有人物和地点。","ruleZh":"两段情节承接，人物行动需要有原因。","evidence":[],"distractors":[]},
+      "kind":"writing","wordRange":[70,100],"requirementsZh":["保留原文人物","衔接两个段首句","交代 Lily 的变化"],"openingSentences":["Tom invited Lily to sit beside him.","When the meeting ended, Lily stayed for a moment."],"checklistZh":["人物和时间一致","第一段连接第二段","有具体行动","结尾与原文有关"],
+      "modelAnswer":"Tom invited Lily to sit beside him. He asked about her book and listened carefully. With his help, she read a short part to the group. The other students smiled and asked friendly questions. When the meeting ended, Lily stayed for a moment. She thanked Tom for helping her feel welcome. Then she looked at her book and said she would bring another story next Friday. This time, she was looking forward to speaking."
+    }
+  ],
+  "units": [{"id":"demo-school-club","titleZh":"校园社团：协议演示","familyIds":["join-context","want-to-join","present-simple-agreement","reading-location","reading-learning-plan","cloze-help-context","application-invitation","continuation-club"],"itemIds":["vocab-join-a","order-join-a","grammar-meet-a","reading-location-a","gap-reading-plan-a","cloze-help-a","writing-invitation-a","writing-continuation-a"],"prerequisiteSkillIds":[]}]
+}

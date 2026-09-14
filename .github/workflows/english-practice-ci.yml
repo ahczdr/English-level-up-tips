@@ -1,0 +1,80 @@
+# T14：english-practice CI（仓库级）。
+# 门禁：content 校验 + typecheck + lint + 单元测试 + 生产构建 + 双配置 E2E（Chromium/Firefox/WebKit 基础流程）。
+# 失败保留 Playwright trace 与截图（仅存于 Actions artifacts，不对外发布；报告不含学习正文外发）。
+# E2E 使用 VITE_E2E=true 构建提供固定 fixtures 与测试时钟桥；发布冒烟（smoke job）另跑不含 VITE_E2E 的构建。
+name: english-practice-ci
+
+on:
+  push:
+    paths:
+      - 'apps/english-practice/**'
+      - '.github/workflows/english-practice-ci.yml'
+  pull_request:
+    paths:
+      - 'apps/english-practice/**'
+      - '.github/workflows/english-practice-ci.yml'
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/english-practice
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: apps/english-practice/package-lock.json
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium firefox webkit
+      - name: Check (content + typecheck + lint + unit)
+        run: npm run check
+      - name: Production build (no VITE_E2E)
+        run: npm run build:release
+        env:
+          BUILD_SHA: \${{ github.sha }}
+      - name: E2E (E2E build + preview 4174 + offline suite)
+        run: npm run test:e2e
+      - name: Collect failure artifacts
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-failures
+          path: |
+            apps/english-practice/test-results/
+            apps/english-practice/playwright-report/
+          retention-days: 7
+
+  release-smoke:
+    runs-on: ubuntu-latest
+    needs: quality
+    defaults:
+      run:
+        working-directory: apps/english-practice
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: apps/english-practice/package-lock.json
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Playwright Chromium (smoke only)
+        run: npx playwright install --with-deps chromium
+      - name: Release build (no VITE_E2E)
+        run: npm run build:release
+        env:
+          BUILD_SHA: \${{ github.sha }}
+      # T15/B4：发布内容门禁。当前因独立审核未完成而 exit 1（预期）；continue-on-error 仅放行 CI 流水，
+      # 部署（T16）前必须让本步转绿——正式 catalog 不得在审核门禁未过时生成。
+      - name: Release content gate (T15)
+        continue-on-error: true
+        run: npm run content:release
+      # R3：release 已由上一步构建，smoke 脚本内不再重复 build（脚本检测 dist 存在即用）
+      - name: Release smoke (shell + no test entry + SW)
+        run: node scripts/smoke-release.mjs

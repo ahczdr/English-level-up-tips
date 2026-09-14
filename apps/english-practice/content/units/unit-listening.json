@@ -1,0 +1,13 @@
+{
+  "id": "unit-listening",
+  "titleZh": "听力起步：社团对话",
+  "familyIds": [
+    "listening-meeting",
+    "listening-bring"
+  ],
+  "itemIds": [
+    "listening-meeting-a",
+    "listening-bring-b"
+  ],
+  "prerequisiteSkillIds": []
+}
