@@ -1,6 +1,6 @@
 # 合并与收尾测试报告（english-practice v0.1）
 
-日期：2026-09-13。执行：GLM-5.3-Flash（ZCode 会话）。范围：应用合入主仓库、评审遗留收尾修复、全量回归门禁。详细过程记录见 `verification-log.md` §22（合并收尾）、§21（CR1–CR5 修复）、§19/§20（T16/T17）。
+日期：2026-09-13（提交与安全收尾补记于 2026-09-14）。执行：GLM-5.3-Flash（ZCode 会话）。范围：应用合入主仓库、评审遗留收尾修复、全量回归门禁。详细过程记录见 `verification-log.md` §22（合并收尾）、§21（CR1–CR5 修复）、§19/§20（T16/T17）。
 
 ## 1. 本轮交付内容
 
@@ -11,6 +11,7 @@
 | 设置页偏好字段 | SettingsPage 补年级/目标/默认时长（经设置服务读写，消除绕过服务的直写） | ✅ |
 | onboarding 可达性 | TodayPage 首启（无 personal 记录）显示引导卡，打通 /onboarding 孤儿路由；保存/跳过后消失 | ✅ |
 | 新增测试 | tests/unit/onboarding-setup.spec.ts 3 项 + db.spec 1 项 | ✅ |
+| 安全收尾与提交 | Mimosa 阻断的 2 项 high 修复（subset-pdf-fonts.py 实体扩展加固、e2e 临时文件 mkdtemp 化，详见 verification-log §22.4）；`.gitignore` 排除工具状态目录；提交 `2104105` 落地 master（196 文件；push 未执行） | ✅ |
 
 ## 2. 门禁结果（合并后终态代码）
 
@@ -40,6 +41,7 @@
 4. **发布**：HTTPS 托管入口与发布授权待定；回滚演练未执行。v0.1 不标注完成。
 5. **代码待办池**：评审清单 CR6–CR12（暂停/退出草稿保护一致性、复习列表可用性、卸载包统计口径、恢复后音频提示、重复实现抽取、STALE 自动恢复、备份体积治理）；112 条 lint warnings 可 `--fix` 消化。
 6. **文档**：根 README/CHANGELOG 尚未向读者介绍应用。
+7. **审计**：提交时 Mimosa 扫描因基础设施部分不可用未取得完整结论（library_source/callgraph 缺失），按兼容策略放行——不据此宣称项目安全，完整深度审计待补跑。
 
 ## 5. 结论
 

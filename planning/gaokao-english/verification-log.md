@@ -972,3 +972,14 @@ T17 期间（13 日 08:42）工作树再次出现非本会话修改：packs 读�
 2. 四类真机验收（device-matrix 全部 ⬜）、七天真人试用、第 7 天平行题实际抽取、HTTPS 托管与发布授权——沿用 §20.5/§19.3 移交。
 3. 评审清单 CR6–CR12（除 12.5/12.6 已顺带处理）保持待办池。
 4. 根 README/CHANGELOG 尚未向读者介绍应用（本次不含营销性内容，待产品定名后补充）。
+
+### 22.4 提交落地与安全收尾（2026-09-14）
+
+- 首次提交被 Mimosa 阻断（2 项 high）：`scripts/subset-pdf-fonts.py` XML 内部实体扩展（XXE/billion-laughs 面）；`apps/english-practice/tests/e2e/backup.spec.ts` 临时文件落 `/private/tmp` 固定前缀路径（符号链接/抢注风险）。
+- 修复与验证：
+  - subset-pdf-fonts.py 新增 `parse_chapter`——章节 ≤ 8 MiB、拒绝自定义 `<!ENTITY>`、仅放行生成器简单 DOCTYPE 序言并在解析前整体剥离；真实 epub 62 章全部解析通过、3 类攻击载荷（自定义实体/复杂 DOCTYPE/超长章节）全部拒绝、`&amp;` 预定义实体正常。修正了实施中一度写出的「带空格 needle 查无空格 haystack」比较 bug（`<!doctypehtml>`）。
+  - backup.spec.ts 临时文件改 `fs.mkdtempSync(os.tmpdir())`（主仓库与隔离工作树两份同改，diff 字节一致）；typecheck 通过、该文件 E2E 复跑 **2/2**。
+- 根 `.gitignore` 增加 `.mimosa/`/`.v2c/`/`.video_agent/`（本轮 `git add apps/` 曾把 `.mimosa` hook 状态文件带入暂存区，已移出并忽略）。
+- 提交 `2104105`「Land english-practice app with review fixes」落地 master：196 文件、+32326 行。push 未执行（未授权）。
+- 如实记录：该次提交 Mimosa 未取得完整扫描结论（library_source 不可用、callgraph 部分缺失），按兼容策略放行——不据此宣称项目安全，完整深度审计待补跑。
+- 提交者身份为 git 自动配置（`吴 <wu@wudeMacBook-Air.local>`），与仓库既往作者 `Leap 离谱 <pg98@vip.qq.com>` 不一致；如需统一，配置身份后于 push 前 `git commit --amend --reset-author`。
