@@ -81,18 +81,26 @@ const waitForServer = async () => {
 try {
   await waitForServer()
   const browser = await chromium.launch()
-  const page = await browser.newPage()
-  await page.goto(URL, { waitUntil: 'networkidle' })
-  await page.locator('.app-shell').waitFor()
-  const title = await page.locator('.app-shell h1').textContent()
-  if (title !== '高考英语练习') fail('unexpected title: ' + title)
-  const bridge = await page.evaluate(() => window.__GAOKAO_E2E__)
-  if (bridge !== undefined) fail('__GAOKAO_E2E__ present in release build')
-  const swRegistered = await page.evaluate(async () => ('serviceWorker' in navigator ? Boolean(navigator.serviceWorker.controller) || Boolean(await navigator.serviceWorker.getRegistration()) : false))
-  if (!swRegistered) fail('service worker not registered in release build')
-  await browser.close()
+  try {
+    const page = await browser.newPage()
+    await page.goto(URL, { waitUntil: 'networkidle' })
+    await page.locator('.app-shell').waitFor()
+    const title = await page.locator('.app-shell h1').textContent()
+    if (title !== '高考英语练习') throw new Error('unexpected title: ' + title)
+    const bridge = await page.evaluate(() => window.__GAOKAO_E2E__)
+    if (bridge !== undefined) throw new Error('__GAOKAO_E2E__ present in release build')
+    const swRegistered = await page.evaluate(async () => ('serviceWorker' in navigator ? Boolean(navigator.serviceWorker.controller) || Boolean(await navigator.serviceWorker.getRegistration()) : false))
+    if (!swRegistered) throw new Error('service worker not registered in release build')
+  } finally {
+    // CR58：断言失败也要关闭浏览器，不留孤儿 Chromium
+    await browser.close().catch(() => undefined)
+  }
 } catch (error) {
   cleanup()
   fail(error && error.message ? error.message : String(error))
 }
 console.log('SMOKE OK: dist clean, shell OK, no E2E bridge, SW registered')
+// CR58：vite preview 子进程的管道会让事件循环一直存活，成功路径必须收尾并显式退出，
+// 否则脚本打印 SMOKE OK 后永不结束（CI release-smoke 卡死即此因）
+cleanup()
+process.exit(0)
