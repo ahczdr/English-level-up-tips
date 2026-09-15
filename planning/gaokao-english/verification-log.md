@@ -983,3 +983,20 @@ T17 期间（13 日 08:42）工作树再次出现非本会话修改：packs 读�
 - 提交 `2104105`「Land english-practice app with review fixes」落地 master：196 文件、+32326 行。push 未执行（未授权）。
 - 如实记录：该次提交 Mimosa 未取得完整扫描结论（library_source 不可用、callgraph 部分缺失），按兼容策略放行——不据此宣称项目安全，完整深度审计待补跑。
 - 提交者身份为 git 自动配置（`吴 <wu@wudeMacBook-Air.local>`），与仓库既往作者 `Leap 离谱 <pg98@vip.qq.com>` 不一致；如需统一，配置身份后于 push 前 `git commit --amend --reset-author`。
+
+## 二十三、第二轮全量代码评审与 CI 实测（T18）
+
+### 23.1 推送与 CI 实测（2026-09-14）
+
+- 推送 fork（`ceed862`，快进）后 GitHub Actions 三条工作流全红，逐条诊断：
+  - english-practice-ci：quality job **全绿**（279 单测 + typecheck + lint + 生产构建 + 主配置 E2E 29 + 离线 3，2m07s）——合并基线在真实 CI 的最强验证；release-smoke 失败根因为 workflow 两处叠加缺陷：第 39/72 行 `BUILD_SHA: \${{ github.sha }}` 带字面反斜杠（CI 日志确认 env 值 `\ceed862…`，污染 release-info 与设置页展示），且 smoke 步骤未定义 BUILD_SHA env（`?? 'unversioned'` 恒不匹配）。本地当时全绿为 build/smoke 两侧均 unversioned 的巧合；冒烟门禁正确拦截，校验链有效。修法（CR13/CR14，见 T18 文档）：去反斜杠 + smoke 步骤补 env + smoke 增加格式断言。
+  - 根 CI：validate 失败于 `npm audit --audit-level=high`（根 lockfile 本轮未触碰，上游既有审计项）。
+  - Deploy Pages：`configure-pages` 404——fork 未启用 GitHub Pages（环境配置）。
+- 身份统一：filter-branch 重写两个未推提交的 author/committer 为 `Leap 离谱 <pg98@vip.qq.com>`（tree diff 为零），仓库级 git config 已设；推送至 fork `ahczdr/English-level-up-tips`（快进，覆盖其 6 月以来的落后）。用户确认 GitHub 账号为 ahczdr，上游 byoungd 不管。
+
+### 23.2 第二轮全量评审落盘（2026-09-15）
+
+- 三路并行独立通读（服务/数据/领域、UI、构建/发布/CI + 仓库集成）+ 关键发现人工复核，落盘 `dispatch/T18-code-review.md`：CR13–CR65 共 53 项（P1×2、P2×14、P3×24、P4×13），编号自 CR13 顺延，不重复 T14 的 CR1–CR12；含已确认无问题清单与四批建议处理顺序。
+- 重点新发现：CR17 未到期已曝光题以「新内容」反复入计划且做对被判 needs-help 打回 stage 0（调度核心口径缺口）；CR18/CR19 学习日时区口径分裂与写作 UTC 日期；CR20 本轮 onboarding 修复的三处缺口（跳过不落标记/保存默认覆盖写/文案错位，已复核源码属实）；CR21 备份 `__proto__` 深度绕过；CR25 大面积页面零 CSS。
+- 更正记录（如实）：评审过程中「app 未推送、CI 从未生效」为过时结论（评审与推送并发），「smoke 与 env 自洽、发现不了污染」的推断与实测相反，均以 CI 实测为准。
+- 本轮未修改产品代码；修复待派发。
