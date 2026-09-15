@@ -26,6 +26,10 @@ const infoPath = join(process.cwd(), 'dist', 'release-info.json')
 if (!existsSync(infoPath)) fail('dist/release-info.json missing; run collect-release-info.mjs after build')
 const info = JSON.parse(readFileSync(infoPath, 'utf8'))
 const expectedSha = process.env.BUILD_SHA ?? 'unversioned'
+// CR13：拒绝带反斜杠等格式污染的 SHA（40 位十六进制或显式 unversioned 之外一律失败）
+if (expectedSha !== 'unversioned' && !/^[0-9a-f]{40}$/.test(expectedSha)) {
+  fail('BUILD_SHA must be a 40-char lowercase hex sha or unset; got: ' + JSON.stringify(expectedSha))
+}
 if (info.buildSha !== expectedSha) fail('release-info buildSha ' + info.buildSha + ' != BUILD_SHA ' + expectedSha)
 const fixtureMarkers = ['gaokao-protocol-demo', 'gaokao-listening/1.0.0/pack.json', 'gaokao-demo/1.0.0/pack.json']
 for (const file of readdirSync(assetsDir)) {

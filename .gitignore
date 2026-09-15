@@ -34,6 +34,7 @@ yarn-error.log*
 
 # english-practice app build output
 apps/english-practice/dist/
+apps/english-practice/public/.content-stage-*
 
 # Local agent tool state (never commit)
 .mimosa/

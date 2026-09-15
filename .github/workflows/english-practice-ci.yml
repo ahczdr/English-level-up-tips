@@ -36,7 +36,7 @@ jobs:
       - name: Production build (no VITE_E2E)
         run: npm run build:release
         env:
-          BUILD_SHA: \${{ github.sha }}
+          BUILD_SHA: "${{ github.sha }}"
       - name: E2E (E2E build + preview 4174 + offline suite)
         run: npm run test:e2e
       - name: Collect failure artifacts
@@ -69,7 +69,7 @@ jobs:
       - name: Release build (no VITE_E2E)
         run: npm run build:release
         env:
-          BUILD_SHA: \${{ github.sha }}
+          BUILD_SHA: "${{ github.sha }}"
       # T15/B4：发布内容门禁。当前因独立审核未完成而 exit 1（预期）；continue-on-error 仅放行 CI 流水，
       # 部署（T16）前必须让本步转绿——正式 catalog 不得在审核门禁未过时生成。
       - name: Release content gate (T15)
@@ -78,3 +78,5 @@ jobs:
       # R3：release 已由上一步构建，smoke 脚本内不再重复 build（脚本检测 dist 存在即用）
       - name: Release smoke (shell + no test entry + SW)
         run: node scripts/smoke-release.mjs
+        env:
+          BUILD_SHA: "${{ github.sha }}"
