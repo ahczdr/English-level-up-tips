@@ -182,3 +182,30 @@ P1=CI 阻断/ provenance 污染；P2=真实缺陷或用户可即刻感知；P3=�
 - 评审过程中一条中间结论「app 合入 commit 未推送、CI 从未生效」为**过时**判断（评审与推送并发进行）——实际推送已完成且 CI 已实测三条。本文件按实测结果记录。
 - 另一条推断「smoke 与 env 自洽、校验链发现不了 BUILD_SHA 污染」与实测**相反**：smoke 正确拦截了 CR14（配置缺陷）与 CR13 的脏值。校验链有效，本文件以 CI 日志为准。
 - 三路并行评审的全部 P1/P2 发现与关键 P3 已由主会话二次核实（源码/CI 日志/git 状态）；P4 杂项组维持各路核实结论未二次复核，引用时以实际代码为准。
+
+## H. 修复记录（2026-09-15，两批 + 一个 CI 实测新发现）
+
+### H.1 已修复
+
+| 提交 | 内容 |
+| --- | --- |
+| `ed377d2` 第一批 | **CR13**（两处 BUILD_SHA 去反斜杠并加引号）、**CR14**（release-smoke 步骤补 `BUILD_SHA` env）、CR13 配套（smoke-release.mjs 增 40 位十六进制格式断言，已用脏值/不一致两种输入实测触发）、**CR60** 的 .gitignore 部分（`apps/english-practice/public/.content-stage-*`）、**CR64** 的 git 部分（`git worktree prune` + 删除已合并分支 `codex/gaokao-english-glm`） |
+| `90e05ef` 第二批 | **CR17**（planToday 排除整组已曝光且无到期的组；全排除时返回真实空态 needsLongerSession=false；createTodaySession 区分「今日已完成」空态与 INSUFFICIENT_SPACE；TodayPage 按 kind='empty' 提示）、**CR20**（skip 落 personal 记录；save 改读-合并-写；引导卡文案与「学习设置」去向统一）、**CR22**（LearnPage startPractice 加 starting 闸）、**CR24**（TodayPage/LearnPage 加载态：主按钮 disabled、加载/失败/空态三分、失败给重试入口；TodayPage 点击时若在加载先等加载完成再判断）、**CR25**（补齐 writing/progress/review/today 卡片与 onboarding-error、audio-missing 全部缺失样式；删除死样式 .writing-unsupported）、**CR26**（FeedbackPanel 仅承载奖励动效时不渲染「已保存」行）、**CR27**（SettingsPage savePrefs try/catch，失败提示且不残留旧提示）、**CR28**（settings-row 控件触控目标 ≥44px）、**CR18 文案部分**（「04:00 划分」改为如实描述）、**CR42**（继续上次练习附日期与进度）、**CR45**（计划组 key 加 packId+packVersion） |
+| `067d54b` CI 实测新发现 | **CR58 完整修复**：smoke-release.mjs 成功路径从不退出——vite preview 子进程管道使事件循环永续，脚本打印 SMOKE OK 后挂死。此 bug 在 CI 上首次暴露（SHA 检查通过后脚本首次走到浏览器段）；此前本地「沙箱挂起」实为同一 bug 被 `tail` 缓冲掩盖（见 24.1 更正）。修复：成功路径 cleanup + process.exit(0)；失败路径 finally 关浏览器 |
+
+### H.2 测试与门禁
+
+- 红灯：先写 6 个新用例——CR17×3（整组排除/部分曝光保留/到期转复习）、CR20×2（skip 落标记、合并保存不重置）、CR27×1（保存失败反馈）——4 红 2 绿（后两者为行为守卫），实现后全绿。
+- app.spec 2 用例适配 CR24：新增 settleToday 助手等加载完成后再点击（与真实用户一致；disabled 按钮 VTU 不触发）。
+- `npm run check`：**285/285**（29 文件，含新增 6 用例）；typecheck、lint 0 错误。
+- `npm run build:release`：通过（precache 420.02 KiB）；`node scripts/smoke-release.mjs` **SMOKE OK 且 exit=0**。
+- CI 终验（fork run `34965565933`）：**quality ✓ 2m09s + release-smoke ✓ 38s，整条 success 2m54s**——english-practice-ci 自落地以来首次全绿。
+
+### H.3 过程更正（不伪造）
+
+- 本轮两次取消 CI run：`34961339949`（release-smoke 无进展 38 分钟后取消，事后证实为 CR58 挂死）、`34964709335`（smoke 修复推送前被其取代而取消）。
+- 更正旧记录：verification-log §22.2 所记「smoke-release.mjs 本地沙箱挂起」根因实为 CR58 退出 bug；本轮修复后本地前台直跑正常退出。主仓库 vitest 本轮前台直跑亦正常（285/285），此前「主仓库 vitest 挂起」的记录同样可能与命令自动转后台机制有关，待下次遇到再核实。
+
+### H.4 仍开放
+
+CR15/CR16（根 CI audit 与 fork Pages，环境决策）、CR18/CR19/CR38/CR54（时区口径统一批次）、CR21（备份加固）、CR23（音频竞态）、CR29–CR36（CI 工程）、CR46–CR52（服务口径收尾）、CR53–CR57/CR59–CR65（P4 池）、CR6–CR12（T14 遗留待办池）。

@@ -1000,3 +1000,28 @@ T17 期间（13 日 08:42）工作树再次出现非本会话修改：packs 读�
 - 重点新发现：CR17 未到期已曝光题以「新内容」反复入计划且做对被判 needs-help 打回 stage 0（调度核心口径缺口）；CR18/CR19 学习日时区口径分裂与写作 UTC 日期；CR20 本轮 onboarding 修复的三处缺口（跳过不落标记/保存默认覆盖写/文案错位，已复核源码属实）；CR21 备份 `__proto__` 深度绕过；CR25 大面积页面零 CSS。
 - 更正记录（如实）：评审过程中「app 未推送、CI 从未生效」为过时结论（评审与推送并发），「smoke 与 env 自洽、发现不了污染」的推断与实测相反，均以 CI 实测为准。
 - 本轮未修改产品代码；修复待派发。
+
+## 二十四、T18 修复轮：CR13–CR28 批次落地与 CI 首次全绿（2026-09-15）
+
+### 24.1 修复内容（三个提交，均推送 fork）
+
+1. `ed377d2`：CR13/CR14——workflow 两处 `BUILD_SHA` 去字面反斜杠、release-smoke 步骤补 `BUILD_SHA` env；smoke-release.mjs 增加「40 位十六进制或 unset」格式断言（脏值 `\ceed…` 与「env≠release-info」两种输入实测按预期 exit 1）；.gitignore 增 `.content-stage-*`；worktree prune + 删除 `codex/gaokao-english-glm` 分支（CR60 部分/CR64 git 部分）。
+2. `90e05ef`：CR17/CR20/CR22/CR24/CR25/CR26/CR27/CR28 + CR18 文案部分 + CR42/CR45，详见 T18 §H.1。CR17 语义：整组已曝光且无到期复习的组不再作为新内容重排；候选全排除时 planToday 返回真实空态（needsLongerSession=false），createTodaySession 返回 kind='empty'（「今日计划已全部完成」），与 INSUFFICIENT_SPACE（预算不足）区分。
+3. `067d54b`：**CI 实测新发现并修复**——smoke-release.mjs 成功路径从不退出（vite preview 子进程管道使事件循环永续），SHA 检查通过后脚本打印 SMOKE OK 即挂死；这正是 CI release-smoke 两次长时间无进展的根因（此前 CI 总在 SHA 比对处先失败，浏览器段从未到达）。修复：成功路径 cleanup + process.exit(0)，失败路径 finally 关浏览器（CR58 完整版）。
+
+### 24.2 验证记录
+
+- 红灯先行：CR17×3 + CR20×2 + CR27×1 共 6 个新用例先写（4 红 2 绿守卫），实现后全绿；app.spec 2 用例为 CR24 适配（新增 settleToday：等加载完成再点击，disabled 按钮 VTU 不触发）。
+- `npm run check`：**285/285**（29 文件；279 + 6）；typecheck、lint 0 错误。
+- `npm run build:release`：通过；`node scripts/smoke-release.mjs` **SMOKE OK 且 exit=0**。
+- **CI 终验全绿**（fork run `34965565933`）：quality ✓ 2m09s（含 285 单测 + 生产构建 + 主配置 E2E 29 + 离线 3）+ release-smoke ✓ 38s，整条 success 2m54s——english-practice-ci 自落地以来首次整条通过。
+
+### 24.3 更正与环境说明（不伪造）
+
+- **更正 §22.2**：所谓「smoke-release.mjs 本地沙箱挂起」根因是 24.1 第 3 条的退出 bug，输出被管道 `tail` 缓冲掩盖造成「0 字节挂起」假象；修复后本地前台直跑正常退出。主仓库 vitest 本轮前台直跑正常，此前「主仓库 vitest 挂起」的记录很可能同样与命令自动转后台机制有关，非产品或环境缺陷；下次复现时再核实。
+- 本轮 CI 共取消 2 个 run：`34961339949`（release-smoke 38 分钟无进展，事后证实为退出 bug）、`34964709335`（被修复提交取代）。
+- 根 CI（npm audit）与 fork Pages 未动，维持 T18 CR15/CR16 的环境决策建议。
+
+### 24.4 仍开放
+
+CR18/CR19/CR38/CR54（时区口径统一）、CR21、CR23、CR29–CR36、CR46–CR52、CR53–CR57、CR59–CR65；T14 遗留 CR6–CR12。
