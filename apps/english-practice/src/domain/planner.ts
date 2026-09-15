@@ -81,6 +81,10 @@ export function planToday(input: PlanTodayInput): PlanTodayResult {
     if (matchedDueDays.length > 0) {
       const familiarRetry = candidate.items.every((item) => seen.has(item.id));
       reviewGroups.push({ ...candidate, kind: 'review', dueDay: matchedDueDays.reduce((left, right) => (left < right ? left : right)), familiarRetry });
+    } else if (candidate.items.every((item) => seen.has(item.id))) {
+      // CR17：整组已曝光且无到期复习——熟题未到期不作为新内容重排，
+      // 否则再次做对会被判 needs-help 并把间隔复习打回调度起点
+      continue;
     } else {
       newGroups.push({ ...candidate, kind: 'new', familiarRetry: false });
     }
@@ -92,6 +96,10 @@ export function planToday(input: PlanTodayInput): PlanTodayResult {
     return seedHash(`${input.seed}:${left.unitId}`) - seedHash(`${input.seed}:${right.unitId}`);
   });
   const ordered = [...reviewGroups, ...newGroups];
+  // CR17：候选全部被排除（内容已学完且无到期复习）时是真实空态，不是预算不足
+  if (ordered.length === 0) {
+    return { groups: [], totalSeconds: 0, newCount: 0, reviewCount: 0, needsLongerSession: false };
+  }
 
   const selected: PlanGroup[] = [];
   let remaining = input.budgetSeconds;

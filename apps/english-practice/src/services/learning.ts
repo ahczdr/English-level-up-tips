@@ -228,7 +228,11 @@ export async function createTodaySession(input: CreateTodaySessionInput): Promis
     const sessionId = (input.idGenerator ?? defaultId)()
     const bundle = await collectTodayPlanBundle(input.db, { minutes: input.minutes, profileId: input.profileId, clock: input.clock, seed: sessionId })
     if (bundle.candidateGroups === 0) return error('CONTENT_MISSING', '暂无可用课程内容，请先准备学习内容')
-    if (bundle.plan.groups.length === 0) return error('INSUFFICIENT_SPACE', '当前时长装不下完整学习材料组，请选择更长时间')
+    if (bundle.plan.groups.length === 0) {
+      // CR17：无到期复习且候选全为熟题时是「今日已完成」的正常空态，不是预算不足
+      if (bundle.plan.needsLongerSession) return error('INSUFFICIENT_SPACE', '当前时长装不下完整学习材料组，请选择更长时间')
+      return { ok: true, value: { kind: 'empty', messageZh: '今日计划已全部完成，等待复习到期或补充新内容。' } }
+    }
     const moment = (input.clock ?? systemClock).now()
     const slots: Slot[] = bundle.plan.groups.flatMap((group) =>
       group.items.map((item) => ({

@@ -104,7 +104,9 @@ const gapResults = (): Array<{ label: string; correct: boolean }> => {
       {{ message ?? '保存失败，请重试' }}
     </p>
     <template v-else-if="status === 'saved'">
+      <!-- CR26：仅承载奖励动效时（attempt/item/message 均空）不渲染「已保存」行 -->
       <p
+        v-if="attempt || item || message !== null"
         role="status"
         class="feedback-state"
       >

@@ -1,7 +1,15 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
-import { mount, type VueWrapper } from '@vue/test-utils'
+import { flushPromises, mount, type VueWrapper } from '@vue/test-utils'
 import App from '../../src/app/App.vue'
 import { createAppRouter } from '../../src/app/router'
+
+// CR24：主按钮在加载完成前处于 disabled；与真实用户一致，先等 loadState 结束再点击
+const settleToday = async (): Promise<void> => {
+  for (let i = 0; i < 6; i += 1) {
+    await flushPromises()
+    await new Promise((resolve) => setTimeout(resolve, 5))
+  }
+}
 
 describe('App UI', () => {
   let router: ReturnType<typeof createAppRouter>
@@ -44,7 +52,9 @@ describe('App UI', () => {
     await router.isReady()
 
     const button = wrapper.get('button')
+    await settleToday()
     await button.trigger('click')
+    await flushPromises()
 
     const status = wrapper.get('[role="status"]')
     expect(status.text()).toContain('暂无可用课程')
@@ -64,9 +74,11 @@ describe('App UI', () => {
     await router.isReady()
 
     const button = wrapper.get('button')
+    await settleToday()
     await button.trigger('click')
     await button.trigger('click')
     await button.trigger('click')
+    await flushPromises()
 
     expect(wrapper.findAll('[role="status"]')).toHaveLength(1)
     expect(wrapper.findAll('button')).toHaveLength(1)

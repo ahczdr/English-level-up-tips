@@ -33,6 +33,8 @@ const db = computed<GaokaoDatabase>(() => {
 
 const units = ref<UnitOption[]>([]);
 const loading = ref(true);
+const loadFailed = ref(false);
+const starting = ref(false);
 const status = ref('');
 const preparing = ref(false);
 const downloadingAudio = ref(false);
@@ -68,8 +70,11 @@ const loadUnits = async (): Promise<void> => {
       }
     }
     units.value = options;
+    loadFailed.value = false;
   } catch {
     units.value = [];
+    // CR24：加载失败与空态分开呈现，不给「暂无可用课程」误导
+    loadFailed.value = true;
   } finally {
     loading.value = false;
   }
@@ -84,10 +89,19 @@ onMounted(async () => {
     minutes.value = 10;
   }
   await loadUnits();
-  if (units.value.length === 0) {
+  if (!loadFailed.value && units.value.length === 0) {
     status.value = '暂无可用课程，完整课程下载将在后续版本提供。';
   }
 });
+
+// CR24：失败态的重试入口
+const retryLoad = async (): Promise<void> => {
+  status.value = '';
+  await loadUnits();
+  if (!loadFailed.value && units.value.length === 0) {
+    status.value = '暂无可用课程，完整课程下载将在后续版本提供。';
+  }
+};
 
 const prepareContent = async (): Promise<void> => {
   if (preparing.value) return;
@@ -131,26 +145,32 @@ const downloadUnitAudio = async (): Promise<void> => {
 
 const startPractice = async (): Promise<void> => {
   const unit = selectedUnit.value;
-  if (!unit || preparing.value) return;
-  if (unit.needsDownload) {
-    status.value = '请先下载本课程的音频素材。';
-    return;
+  if (!unit || preparing.value || starting.value) return;
+  // CR22：createSession 无同日复用，双击会创建两个会话，需 in-flight 闸
+  starting.value = true;
+  try {
+    if (unit.needsDownload) {
+      status.value = '请先下载本课程的音频素材。';
+      return;
+    }
+    const result = await createSession({
+      db: db.value,
+      unitId: unit.unit.id,
+      minutes: minutes.value,
+      profileId: profileId.value,
+    });
+    if (!result.ok) {
+      status.value = result.error.messageZh;
+      return;
+    }
+    if (result.value.kind === 'empty') {
+      status.value = result.value.messageZh;
+      return;
+    }
+    await router.push(`/session/${result.value.session.id}`);
+  } finally {
+    starting.value = false;
   }
-  const result = await createSession({
-    db: db.value,
-    unitId: unit.unit.id,
-    minutes: minutes.value,
-    profileId: profileId.value,
-  });
-  if (!result.ok) {
-    status.value = result.error.messageZh;
-    return;
-  }
-  if (result.value.kind === 'empty') {
-    status.value = result.value.messageZh;
-    return;
-  }
-  await router.push(`/session/${result.value.session.id}`);
 };
 </script>
 
@@ -162,6 +182,24 @@ const startPractice = async (): Promise<void> => {
     <h2 id="learn-title">
       课程
     </h2>
+    <p
+      v-if="loading"
+      role="status"
+      class="learn-status"
+    >
+      正在加载课程…
+    </p>
+    <template v-else-if="loadFailed">
+      <p
+        role="alert"
+        class="learn-status"
+      >
+        课程读取失败，请重试。
+      </p>
+      <div class="learn-actions">
+        <AppButton @click="retryLoad">重新加载</AppButton>
+      </div>
+    </template>
     <p
       v-if="status !== ''"
       role="status"
@@ -215,14 +253,14 @@ const startPractice = async (): Promise<void> => {
         {{ downloadingAudio ? '下载中…' : '下载音频' }}
       </AppButton>
       <AppButton
-        :disabled="selectedUnit === null || selectedUnit.needsDownload"
+        :disabled="selectedUnit === null || selectedUnit.needsDownload || starting"
         @click="startPractice"
       >
         开始练习
       </AppButton>
     </div>
     <div
-      v-else
+      v-else-if="!loading && !loadFailed"
       class="learn-actions"
     >
       <AppButton

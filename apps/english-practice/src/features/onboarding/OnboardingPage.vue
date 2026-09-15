@@ -41,22 +41,31 @@ onMounted(async () => {
 });
 
 const save = async (): Promise<void> => {
-  const settings: PersonalSettings = {
-    ...DEFAULT_PERSONAL_SETTINGS,
-    grade: grade.value === '' ? null : grade.value,
-    goal: goal.value.trim() === '' ? null : goal.value.trim(),
-    defaultMinutes: minutes.value,
-  };
   try {
-    await savePersonalSettings(db.value, settings);
+    // CR20：读-合并-写，只覆盖本页字段，不重置用户在设置页改过的音效/时区等
+    const current = await loadPersonalSettings(db.value);
+    await savePersonalSettings(db.value, {
+      ...current,
+      grade: grade.value === '' ? null : grade.value,
+      goal: goal.value.trim() === '' ? null : goal.value.trim(),
+      defaultMinutes: minutes.value,
+    });
     saved.value = true;
     saveFailed.value = '';
   } catch {
+    saved.value = false;
     saveFailed.value = '设置保存失败，请重试';
   }
 };
 
 const skip = async (): Promise<void> => {
+  // CR20：跳过也要落 personal 记录（保留已有值），否则今日页引导卡会立刻重现
+  try {
+    const current = await loadPersonalSettings(db.value);
+    await savePersonalSettings(db.value, current);
+  } catch {
+    // 保存失败仍返回今日页；引导卡保留，用户可再次进入完成设置
+  }
   await router.push('/today');
 };
 </script>

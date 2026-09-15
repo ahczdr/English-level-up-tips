@@ -398,3 +398,34 @@ describe('createTodaySession 同日冻结与 unitId', () => {
     expect(unitAchievements[0]?.id).toBe('unit:first:demo-school-club')
   })
 })
+
+describe('CR17 熟题未到期不作为新内容重排', () => {
+  it('整组已曝光且无到期复习：整组排除，且为真实空态而非预算不足', () => {
+    const result = planToday(planInput({
+      groups: [group({ id: 'seen-unit', seconds: 60 })],
+      exposedItemIds: ['seen-unit-item-0'],
+    }))
+    expect(result.groups).toEqual([])
+    expect(result.needsLongerSession).toBe(false)
+  })
+
+  it('部分曝光的共享材料组仍按新内容安排（不拆组）', () => {
+    const result = planToday(planInput({
+      groups: [group({ id: 'mixed-unit', seconds: 60, count: 2 })],
+      exposedItemIds: ['mixed-unit-item-0'],
+    }))
+    expect(result.groups).toHaveLength(1)
+    expect(result.groups[0]?.kind).toBe('new')
+  })
+
+  it('整组已曝光但有条目到期：按复习安排并标记熟题', () => {
+    const result = planToday(planInput({
+      groups: [group({ id: 'due-unit', seconds: 60 })],
+      exposedItemIds: ['due-unit-item-0'],
+      dueReviews: [{ familyId: 'family-due-unit', reviewMode: 'recognition', dueDay: '2026-09-10' }],
+    }))
+    expect(result.groups).toHaveLength(1)
+    expect(result.groups[0]?.kind).toBe('review')
+    expect(result.groups[0]?.familiarRetry).toBe(true)
+  })
+})

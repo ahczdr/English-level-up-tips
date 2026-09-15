@@ -22,6 +22,8 @@ const db = computed<GaokaoDatabase>(() => {
 const message = ref<string | null>(null);
 const resumable = ref<Session[]>([]);
 const hasContent = ref(false);
+// CR24：加载完成前禁用主操作，避免把「加载中」误当「空态」
+const loading = ref(true);
 // 首次使用（settings 表还没有 personal 记录）时引导到学习设置页；「跳过」保存后不再出现
 const needsSetup = ref(false);
 const plan = ref<PlanTodayResult | null>(null);
@@ -41,7 +43,7 @@ const describeGroup = (group: PlanGroup): string => {
   return kindLabel + ' · ' + group.unitTitleZh + ' · ' + group.items.length + ' 题' + familiarLabel;
 };
 
-const loadState = async (): Promise<void> => {
+const refreshState = async (): Promise<void> => {
   try {
     const sessions = await db.value.sessions.toArray();
     resumable.value = sessions
@@ -117,9 +119,20 @@ const loadState = async (): Promise<void> => {
   }
 };
 
+const loadState = async (): Promise<void> => {
+  loading.value = true;
+  try {
+    await refreshState();
+  } finally {
+    loading.value = false;
+  }
+};
+
 onMounted(loadState);
 
 const startTodayPractice = async (): Promise<void> => {
+  // CR24：加载未完成时先等加载结束，再按真实内容状态反馈，不误报「暂无课程」
+  if (loading.value) await loadState();
   if (!hasContent.value) {
     message.value = '暂无可用课程，请先准备学习内容。';
     return;
@@ -133,6 +146,11 @@ const startTodayPlan = async (): Promise<void> => {
   starting.value = true;
   try {
     const created = await createTodaySession({ db: db.value, minutes: planMinutes.value, profileId: planProfileId.value });
+    if (created.ok && created.value.kind === 'empty') {
+      // CR17：今日计划全部完成是正常空态，按提示处理而非错误
+      message.value = created.value.messageZh;
+      return;
+    }
     if (!created.ok || created.value.kind !== 'session') {
       message.value = created.ok ? '未能创建今日会话' : created.error.messageZh;
       return;
@@ -166,6 +184,14 @@ const resumePractice = async (session: Session): Promise<void> => {
       今日练习
     </h2>
 
+    <p
+      v-if="loading"
+      role="status"
+      class="today-loading"
+    >
+      正在加载今日概览…
+    </p>
+
     <div
       v-if="needsSetup"
       class="today-setup-card"
@@ -173,7 +199,7 @@ const resumePractice = async (session: Session): Promise<void> => {
       aria-label="学习设置提醒"
     >
       <h3>完成学习设置</h3>
-      <p>选择年级、目标与默认练习时长，今日计划会更贴合你的节奏。也可以先跳过，随时在设置中完成。</p>
+      <p>选择年级、目标与默认练习时长，今日计划会更贴合你的节奏。也可以先跳过，之后随时可在「学习设置」中补充完成。</p>
       <router-link
         to="/onboarding"
         class="today-setup-link"
@@ -206,7 +232,7 @@ const resumePractice = async (session: Session): Promise<void> => {
           <ul class="today-plan-groups">
             <li
               v-for="group in planGroups"
-              :key="group.unitId + group.kind"
+              :key="group.packId + group.packVersion + group.unitId + group.kind"
             >
               {{ describeGroup(group) }}
             </li>
@@ -264,6 +290,7 @@ const resumePractice = async (session: Session): Promise<void> => {
         >
           继续上次练习
         </AppButton>
+        <span class="resume-meta">{{ session.updatedAt.slice(0, 10) }} · 第 {{ session.slots.filter((slot) => slot.state !== 'unseen').length }}/{{ session.slots.length }} 题</span>
       </li>
     </ul>
 
@@ -275,7 +302,10 @@ const resumePractice = async (session: Session): Promise<void> => {
     </p>
 
     <div class="today-actions">
-      <AppButton @click="startTodayPractice">
+      <AppButton
+        :disabled="loading"
+        @click="startTodayPractice"
+      >
         开始今日练习
       </AppButton>
       <router-link

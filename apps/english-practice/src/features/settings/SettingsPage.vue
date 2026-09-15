@@ -44,7 +44,7 @@
           <option value="UTC">UTC</option>
         </select>
       </label>
-      <p class="settings-note">学习日按所选时区从本地 04:00 划分（P03）。</p>
+      <p class="settings-note">学习日按北京时间零点划分（时区设置当前仅影响成长页显示，口径统一将在后续版本完成）。</p>
     </div>
 
     <div class="settings-block">
@@ -138,16 +138,21 @@ const setMinutes = (option: PersonalSettings['defaultMinutes']): void => {
 
 const savePrefs = async (): Promise<void> => {
   const db = resolveDb();
-  const current = await loadPersonalSettings(db);
-  await savePersonalSettings(db, {
-    ...current,
-    grade: grade.value === '' ? null : grade.value,
-    goal: goal.value.trim() === '' ? null : goal.value.trim(),
-    defaultMinutes: minutes.value,
-    sound: soundEnabled.value,
-    timeZone: timeZone.value,
-  });
-  message.value = '偏好已保存';
+  // CR27：IndexedDB 写失败（配额满、隐私模式）必须给出反馈，不能静默丢失
+  try {
+    const current = await loadPersonalSettings(db);
+    await savePersonalSettings(db, {
+      ...current,
+      grade: grade.value === '' ? null : grade.value,
+      goal: goal.value.trim() === '' ? null : goal.value.trim(),
+      defaultMinutes: minutes.value,
+      sound: soundEnabled.value,
+      timeZone: timeZone.value,
+    });
+    message.value = '偏好已保存';
+  } catch {
+    message.value = '保存失败，请稍后重试；表单内容未丢失。';
+  }
 };
 
 const clearLearning = async (): Promise<void> => {
