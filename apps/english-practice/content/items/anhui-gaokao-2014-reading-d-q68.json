@@ -1,16 +1,1 @@
-{
-  "id": "anhui-gaokao-2014-reading-d-q68",
-  "familyId": "anhui-2014-reading-d",
-  "skillIds": ["reading.detail", "reading.argument"],
-  "level": "G1",
-  "section": "reading",
-  "reviewMode": "recognition",
-  "promptZh": "根据文章 D 回答第 68 题。",
-  "resourceId": "anhui-gaokao-2014-reading-d",
-  "estimatedSeconds": 60,
-  "sourceIds": ["anhui-gaokao-2014-official"],
-  "explanation": { "summaryZh": "作者指出并非所有历史建筑都具有吸引力。", "ruleZh": "首段细节题可直接根据 not all 的限定判断。", "evidence": [{ "resourceId": "anhui-gaokao-2014-reading-d", "paragraphId": "p1", "quote": "Not all historical buildings are attractive" }], "distractors": [] },
-  "kind": "choice",
-  "options": [{ "id": "a", "text": "Some of them are not attractive." }, { "id": "b", "text": "Most of them are too expensive to preserve." }, { "id": "c", "text": "They are more pleasing than modern buildings." }, { "id": "d", "text": "They have nothing to do with the historical feel of an area." }],
-  "answerOptionId": "a"
-}
+{"id":"anhui-gaokao-2014-reading-d-q68","familyId":"anhui-2014-reading-d","skillIds":["reading.detail","reading.inference"],"level":"G1","section":"reading","reviewMode":"recognition","promptZh":"根据文章 D 回答第 68 题。","resourceId":"anhui-gaokao-2014-reading-d","estimatedSeconds":60,"sourceIds":["anhui-gaokao-2014-official"],"explanation":{"summaryZh":"作者指出并非所有历史建筑都具有吸引力。","ruleZh":"首段细节题可直接根据 not all 的限定判断。","evidence":[{"resourceId":"anhui-gaokao-2014-reading-d","paragraphId":"p1","quote":"Not all historical buildings are attractive"}],"distractors":[]},"kind":"choice","options":[{"id":"a","text":"Some of them are not attractive."},{"id":"b","text":"Most of them are too expensive to preserve."},{"id":"c","text":"They are more pleasing than modern buildings."},{"id":"d","text":"They have nothing to do with the historical feel of an area."}],"answerOptionId":"a"}

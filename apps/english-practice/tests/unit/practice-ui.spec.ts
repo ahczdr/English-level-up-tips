@@ -153,17 +153,19 @@ describe('ChoiceTask 单选题组件', () => {
     expect(after[after.length - 1][0]).toEqual({ kind: 'choice', optionId: 'b' })
   })
 
-  it('键盘 Enter 与 Space 可选择选项', async () => {
+  it('选项按钮可被激活选择（原生 button：Enter/Space 由浏览器合成 click，CR57.a 不再叠加 keydown 双触发）', async () => {
     const item = itemById<ChoiceItem>('vocab-join-a')
     const wrapper = mountTask(ChoiceTask, { item })
     wrappers.push(wrapper)
-    await buttons(wrapper)[0].trigger('keydown', { key: 'Enter' })
+    await buttons(wrapper)[0].trigger('click')
     const emitted = wrapper.emitted('update:modelValue') as Array<[Answer | null]> | undefined
     expect(emitted).toBeTruthy()
     expect(emitted![0][0]).toEqual({ kind: 'choice', optionId: 'a' })
-    await buttons(wrapper)[1].trigger('keydown', { key: ' ' })
+    await buttons(wrapper)[1].trigger('click')
     const after = wrapper.emitted('update:modelValue') as Array<[Answer | null]>
     expect(after[after.length - 1][0]).toEqual({ kind: 'choice', optionId: 'b' })
+    // 单次点击只产生一次选择事件（无双触发）
+    expect(wrapper.emitted('update:modelValue')).toHaveLength(2)
   })
 
   it('禁用时不响应任何选择', async () => {
@@ -404,7 +406,9 @@ describe('LearnPage 课程页', () => {
   })
 
   it('列出已安装单元并标注未审核内容', async () => {
-    const db = await openDb()
+    const draft = structuredClone(pack)
+    draft.status = 'draft'
+    const db = await openDb(draft)
     const router = makeRouter()
     await router.push('/learn')
     await router.isReady()
@@ -459,7 +463,9 @@ describe('LearnPage 课程页', () => {
 
 describe('SessionPage 练习页', () => {
   it('渲染当前题目并记录首次呈现，未提交前不显示成绩', async () => {
-    const db = await openDb()
+    const draft = structuredClone(pack)
+    draft.status = 'draft'
+    const db = await openDb(draft)
     await makeSession(db, 'ui-1', 2)
     const wrapper = await mountSession(db, 'ui-1')
     expect(wrapper.text()).toContain('在 Join the school reading club. 中，join 的意思是什么？')
@@ -674,7 +680,7 @@ describe('SessionPage 练习页', () => {
 })
 
 describe('TodayPage 今日页', () => {
-  it('无课程时保留空态提示并引导前往课程列表', async () => {
+  it('无课程时保留空态提示', async () => {
     const db = createDatabase(`gaokao-ui-today-${crypto.randomUUID()}`)
     databases.push(db)
     const router = makeRouter()
@@ -683,14 +689,13 @@ describe('TodayPage 今日页', () => {
     const wrapper = mount(TodayPage, { props: { db }, global: { plugins: [router] } })
     wrappers.push(wrapper)
     await settle()
-    await clickButton(wrapper, '开始今日练习')
+    await clickButton(wrapper, '选择今日练习内容')
     await settle()
-    expect(wrapper.text()).toContain('暂无可用课程，请先准备学习内容。')
-    const link = wrapper.get('.learn-link')
-    expect(link.text()).toContain('前往课程列表')
+    // CR12.1：单一入口总是进入课程页，空态由课程页的「准备课程内容」承接
+    expect(router.currentRoute.value.path).toBe('/learn')
   })
 
-  it('有课程时开始今日练习进入课程页', async () => {
+  it('有课程时选择今日练习内容进入课程页', async () => {
     const db = await openDb()
     const router = makeRouter()
     await router.push('/today')
@@ -698,7 +703,7 @@ describe('TodayPage 今日页', () => {
     const wrapper = mount(TodayPage, { props: { db }, global: { plugins: [router] } })
     wrappers.push(wrapper)
     await settle()
-    await clickButton(wrapper, '开始今日练习')
+    await clickButton(wrapper, '选择今日练习内容')
     await settle()
     expect(router.currentRoute.value.path).toBe('/learn')
   })

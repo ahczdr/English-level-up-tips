@@ -1,6 +1,6 @@
 <template>
   <section class="settings-page">
-    <h1>设置</h1>
+    <h2>设置</h2>
     <p class="settings-hint">
       浏览器存储可能因清理缓存或系统策略被清除，本应用不承诺数据永久保存；重要进度请定期在备份页导出。
     </p>

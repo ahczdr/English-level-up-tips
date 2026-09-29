@@ -4,6 +4,17 @@ All notable project-level changes are documented here. Content pages retain thei
 
 ## Unreleased
 
+### 2026-09-29 english-practice local release hardening
+
+#### Changed
+
+- Published the Anhui gaokao content packs (0.2.0 / listening 1.1.0): maintainer-approved licensing note replaces the draft-only boundary; the download path now installs `published` packs only and reports skipped drafts.
+- Pack artifacts are rebuilt from current manifests only — one immutable version per pack (35 MB → 21 MB), stale historical versions and retired packs no longer accumulate in `public/content-packs/`.
+- Per-profile learning ledger (DB v3): new `exposureLog` table backs plan/evidence/summary reads with `profileId` indexes; independent-first judging, achievements, and review scheduling no longer leak across profiles or pack versions.
+- Session service guards: submitted/skipped slots reject hint/replay/speed/skip; `completeSession` refuses open slots; stale objective submissions auto-resync like the writing path; pause flushes all pending drafts before leaving.
+- CI/engineering: app CI gets branch filter, concurrency, and Playwright browser caches; root `deploy.yml` ignores app-only paths; root `npm audit` gate is green again (sharp 0.35.5, markdownlint-cli2 0.23.3); scripts are typechecked; smoke runs the precache-only-shell assertions against the real release build and spawns vite portably.
+- Review/Today/Progress pages gained human-readable labels, a single honest entry point, unknown-item stats that no longer silently shrink, and clearer error states.
+
 ### 2026-09-07 link-audit hardening
 
 #### Changed

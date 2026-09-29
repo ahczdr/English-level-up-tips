@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import type { Evidence, Item } from '../content/types';
 import type { Attempt } from '../services/learning';
 
@@ -29,7 +29,7 @@ const gradeText = (): string => {
   return '回答有误';
 };
 
-const gapResults = (): Array<{ label: string; correct: boolean }> => {
+const gapResults = computed<Array<{ label: string; correct: boolean }>>(() => {
   const attempt = props.attempt;
   const item = props.item;
   if (!attempt || !item || item.kind !== 'gaps') return [];
@@ -37,7 +37,7 @@ const gapResults = (): Array<{ label: string; correct: boolean }> => {
     label: `第 ${gap.label} 空`,
     correct: attempt.grade.perGap[gap.id] === true,
   }));
-};
+});
 </script>
 
 <style scoped>
@@ -119,11 +119,11 @@ const gapResults = (): Array<{ label: string; correct: boolean }> => {
         {{ gradeText() }}
       </p>
       <ul
-        v-if="gapResults().length > 0"
+        v-if="gapResults.length > 0"
         class="gap-results"
       >
         <li
-          v-for="result in gapResults()"
+          v-for="result in gapResults"
           :key="result.label"
           class="gap-result"
           :class="result.correct ? 'gap-result-correct' : 'gap-result-wrong'"

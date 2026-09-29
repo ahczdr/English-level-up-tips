@@ -4,8 +4,7 @@ import { expect, test } from '@playwright/test'
 // 提交初稿后版本冻结与流程推进。写作不产生客观成绩（无 Attempt）。
 const prepareAndOpenFullUnit = async (page: import('@playwright/test').Page) => {
   await page.goto('/')
-  await page.getByRole('button', { name: '开始今日练习', exact: true }).click()
-  await page.getByRole('link', { name: '前往课程列表' }).click()
+  await await page.getByRole('button', { name: '选择今日练习内容', exact: true }).click()
   await page.getByRole('button', { name: '准备课程内容' }).click()
   const card = page.locator('.unit-card', { hasText: '校园社团：协议演示' })
   await expect(card).toBeVisible()

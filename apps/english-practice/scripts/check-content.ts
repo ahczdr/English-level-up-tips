@@ -7,6 +7,7 @@ import { assembleCoursePack } from '../src/content/repository'
 import type { CoursePack } from '../src/content/types'
 import { examProfileSchema } from '../src/content/schema'
 import { checkReleaseContent, type GatePack } from './release-gates'
+import { curriculumAliasIssues } from '../src/domain/curriculum'
 
 const appRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const manifestDir = path.join(appRoot, 'content', 'pack-manifests')
@@ -73,7 +74,9 @@ const checkAssetFiles = async (pack: CoursePack) => {
 }
 
 const checkP07 = (packs: CoursePack[], failures: string[]) => {
-  const published = packs.filter((pack) => pack.status === 'published')
+  // 演示/引导包（协议教学、三年目录首批样例）不是真题覆盖面，不参与数量与题型形状统计
+  const p07ExemptPackIds = new Set(['gaokao-demo', 'gaokao-protocol-demo', 'gaokao-three-years'])
+  const published = packs.filter((pack) => pack.status === 'published' && !p07ExemptPackIds.has(pack.id))
   const sectionCounts = new Map<string, number>()
   const families = new Map<string, number>()
   const resources = new Map<string, Set<string>>()
@@ -140,7 +143,8 @@ const checkP07 = (packs: CoursePack[], failures: string[]) => {
     }
   }
   if ((gapShapes.get('cloze') ?? []).filter((count) => count === 10).length < 4 || (gapShapes.get('cloze') ?? []).filter((count) => count === 15).length < 4) failures.push('P07.cloze [P07_COVERAGE] 完形至少需要 4 篇 10 空和 4 篇 15 空')
-  if ((gapShapes.get('cloze') ?? []).some((count) => count !== 10 && count !== 15)) failures.push('P07.cloze [P07_INVALID] 完形每篇必须为 10 空或 15 空')
+  // 20 空为历史安徽卷（2013/2014）完形形状
+  if ((gapShapes.get('cloze') ?? []).some((count) => count !== 10 && count !== 15 && count !== 20)) failures.push('P07.cloze [P07_INVALID] 完形每篇必须为 10 空、15 空或历史安徽卷的 20 空')
   if ((gapShapes.get('grammar') ?? []).length < 12) failures.push('P07.grammar [P07_COVERAGE] 语法填空至少需要 12 篇')
   if ((gapShapes.get('grammar') ?? []).some((count) => count !== 10)) failures.push('P07.grammar [P07_INVALID] 语法填空每篇必须恰有 10 空')
   if (audioAssets.size < 20) failures.push('P07.listening [P07_COVERAGE] 听力至少需要 20 段本地录音')
@@ -158,6 +162,7 @@ const main = async () => {
   }
 
   const failures: string[] = []
+  failures.push(...curriculumAliasIssues().map((issue) => `curriculum [CURRICULUM_ALIAS_INVALID] ${issue}`))
   for (const manifestName of manifestNames) {
     const manifest = await readJson(path.join(manifestDir, manifestName)) as Record<string, unknown>
     const pack = await readAuthorPack(manifest)

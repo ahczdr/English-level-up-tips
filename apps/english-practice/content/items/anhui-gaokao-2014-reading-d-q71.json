@@ -1,16 +1,1 @@
-{
-  "id": "anhui-gaokao-2014-reading-d-q71",
-  "familyId": "anhui-2014-reading-d",
-  "skillIds": ["reading.main-idea", "reading.argument"],
-  "level": "G1",
-  "section": "reading",
-  "reviewMode": "recognition",
-  "promptZh": "根据文章 D 回答第 71 题。",
-  "resourceId": "anhui-gaokao-2014-reading-d",
-  "estimatedSeconds": 60,
-  "sourceIds": ["anhui-gaokao-2014-official"],
-  "explanation": { "summaryZh": "全文围绕历史区域能否建现代建筑展开，作者支持在条件合适时建设现代建筑。", "ruleZh": "主旨题要综合首段问题、主体论证和末段观点。", "evidence": [{ "resourceId": "anhui-gaokao-2014-reading-d", "paragraphId": "p4", "quote": "argue against copying previous architectural styles" }], "distractors": [] },
-  "kind": "choice",
-  "options": [{ "id": "a", "text": "To explain why people dislike change." }, { "id": "b", "text": "To warn that we could end up living in caves." }, { "id": "c", "text": "To admit how new buildings have ruined their surroundings." }, { "id": "d", "text": "To argue that modern buildings can be built in historic areas." }],
-  "answerOptionId": "d"
-}
+{"id":"anhui-gaokao-2014-reading-d-q71","familyId":"anhui-2014-reading-d","skillIds":["reading.main-idea","reading.inference"],"level":"G1","section":"reading","reviewMode":"recognition","promptZh":"根据文章 D 回答第 71 题。","resourceId":"anhui-gaokao-2014-reading-d","estimatedSeconds":60,"sourceIds":["anhui-gaokao-2014-official"],"explanation":{"summaryZh":"全文围绕历史区域能否建现代建筑展开，作者支持在条件合适时建设现代建筑。","ruleZh":"主旨题要综合首段问题、主体论证和末段观点。","evidence":[{"resourceId":"anhui-gaokao-2014-reading-d","paragraphId":"p4","quote":"argue against copying previous architectural styles"}],"distractors":[]},"kind":"choice","options":[{"id":"a","text":"To explain why people dislike change."},{"id":"b","text":"To warn that we could end up living in caves."},{"id":"c","text":"To admit how new buildings have ruined their surroundings."},{"id":"d","text":"To argue that modern buildings can be built in historic areas."}],"answerOptionId":"d"}

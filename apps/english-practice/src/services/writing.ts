@@ -1,5 +1,6 @@
 import type { GaokaoDatabase } from '../data/db';
 import type { WritingVersionRecord } from '../data/migrations';
+import { e2eNow } from '../data/e2e-clock';
 import { studyDayFor } from '../domain/calendar';
 
 export type WritingErrorCode =
@@ -7,6 +8,7 @@ export type WritingErrorCode =
   | 'STALE_SESSION'
   | 'NOT_FOUND'
   | 'CONTENT_MISSING'
+  | 'ALREADY_SUBMITTED'
   | 'STORAGE_FAILED';
 
 export type WritingResult<T> =
@@ -36,16 +38,18 @@ export function countEnglishWords(text: string): number {
   return matches ? matches.length : 0;
 }
 
-// 同一草稿键的写操作串行化：调用顺序即落盘顺序，杜绝并发交错覆盖
+// 同一草稿键的写操作串行化：调用顺序即落盘顺序，杜绝并发交错覆盖。
+// CR56.d：任务结算后删除仍是队尾的键，Map 不随草稿键数量线性增长。
 const queues = new Map<string, Promise<unknown>>();
 const enqueue = <T>(key: string, task: () => Promise<T>): Promise<T> => {
   const previous = queues.get(key) ?? Promise.resolve();
-  const next = previous.then(task, task);
-  queues.set(
-    key,
-    next.catch(() => undefined),
-  );
-  return next;
+  const settled = previous.then(task, task);
+  const entry = settled.catch(() => undefined);
+  queues.set(key, entry);
+  void entry.then(() => {
+    if (queues.get(key) === entry) queues.delete(key);
+  });
+  return settled;
 };
 
 const draftKey = (sessionId: string, itemId: string): string => `${sessionId}::${itemId}`;
@@ -109,7 +113,7 @@ export async function saveWritingDraft(input: SaveWritingDraftInput): Promise<Wr
       await input.db.drafts.put({
         sessionId: input.sessionId,
         itemId: input.itemId,
-        updatedAt: new Date().toISOString(),
+        updatedAt: e2eNow().toISOString(),
         content: JSON.stringify(next),
       });
       return { ok: true, value: { revision: next.revision } };
@@ -138,6 +142,8 @@ export async function finalizeWriting(input: FinalizeWritingInput): Promise<Writ
       if (session.revision !== input.expectedRevision) {
         return { ok: false as const, error: { code: 'STALE_SESSION' as const, messageZh: '学习记录已在其他页面更新，请刷新后再提交' } };
       }
+      // T18/CR53 记录：写作允许对同一 slot 追加版本（初稿→修改稿是 P09 明确设计，
+      // writing.spec 钉住两版本并存），不套用客观题 ALREADY_SUBMITTED 语义。
       const row = await input.db.drafts.get([input.sessionId, slot.ref.itemId]);
       const body = parseBody(row?.content) ?? { content: '', outline: '', checklist: [], revision: 0 };
       const existing = await input.db.writingVersions.where('[sessionId+itemId]').equals([input.sessionId, slot.ref.itemId]).toArray();
@@ -146,14 +152,14 @@ export async function finalizeWriting(input: FinalizeWritingInput): Promise<Writ
         id: `${input.sessionId}:${slot.ref.itemId}:v${version}`,
         sessionId: input.sessionId,
         itemId: slot.ref.itemId,
-        createdAt: new Date().toISOString(),
-        studyDay: studyDayFor(new Date(), session.timeZone ?? 'Asia/Shanghai'),
+        createdAt: e2eNow().toISOString(),
+        studyDay: studyDayFor(e2eNow(), session.timeZone ?? 'Asia/Shanghai'),
         content: JSON.stringify({ content: body.content, outline: body.outline, checklist: body.checklist, version } satisfies WritingVersionBody),
       };
       await input.db.writingVersions.put(record);
       slot.state = 'submitted';
       session.revision += 1;
-      session.updatedAt = new Date().toISOString();
+      session.updatedAt = e2eNow().toISOString();
       await input.db.sessions.put(session);
       return { ok: true as const, value: { version, versions: version } };
     });

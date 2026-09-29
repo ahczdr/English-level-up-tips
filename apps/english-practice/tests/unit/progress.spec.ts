@@ -37,6 +37,7 @@ const attempt = (overrides: Partial<ProgressAttempt>): ProgressAttempt => ({
 
 const baseInput = (overrides: Partial<ProgressInput> = {}): ProgressInput => ({
   today: '2026-09-09',
+  profileId: 'gaokao-common-training-v1',
   attempts: [],
   totalItems: 8,
   exposedItemIds: [],
@@ -139,7 +140,7 @@ describe('summarizeProgress 成长记录（P06）', () => {
     }))
     expect(summary.mapNodes).toHaveLength(2)
     const node = summary.mapNodes.find((candidate) => candidate.unitId === 'demo-school-club')
-    expect(node?.achievementId).toBe('unit:first:demo-school-club')
+    expect(node?.achievementId).toBe('unit:first:gaokao-common-training-v1:demo-school-club')
     expect(node?.unlocked).toBe(true)
     expect(node?.unlockedAt).toBe('2026-09-08T00:00:00.000Z')
     expect(summary.mapNodes.find((candidate) => candidate.unitId === 'unit-writing')?.unlocked).toBe(false)
@@ -340,13 +341,15 @@ describe('T11 评审修复回归', () => {
     console.log('FIRST RESULT', JSON.stringify(first))
     expect(first).toMatchObject({ ok: true })
     const achievements = await db.achievements.toArray()
-    expect(achievements.filter((row) => row.id === 'unit:first:demo-school-club')).toHaveLength(1)
-    const unlockedAt = achievements.find((row) => row.id === 'unit:first:demo-school-club')?.unlockedAt
+    expect(achievements.filter((row) => row.id === 'unit:first:p-first:demo-school-club')).toHaveLength(1)
+    const unlockedAt = achievements.find((row) => row.id === 'unit:first:p-first:demo-school-club')?.unlockedAt
     // 第二个条目独立通过：同单元成就不重复、首次时间不被覆盖
     const second = await passSlot('t11-2', 3, 'p-second')
     expect(second).toMatchObject({ ok: true })
     const after = await db.achievements.toArray()
-    expect(after.filter((row) => row.id === 'unit:first:demo-school-club')).toHaveLength(1)
-    expect(after.find((row) => row.id === 'unit:first:demo-school-club')?.unlockedAt).toBe(unlockedAt)
+    expect(after.filter((row) => row.id === 'unit:first:p-first:demo-school-club')).toHaveLength(1)
+    expect(after.find((row) => row.id === 'unit:first:p-first:demo-school-club')?.unlockedAt).toBe(unlockedAt)
+    // CR49：第二个 profile 独立通过同单元时写自己的成就行，不与 p-first 互相覆盖
+    expect(after.some((row) => row.id === 'unit:first:p-second:demo-school-club')).toBe(true)
   })
 })

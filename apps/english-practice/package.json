@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 5174 --strictPort",
     "preview": "vite preview --host 127.0.0.1 --port 4174 --strictPort",
-    "typecheck": "vue-tsc --noEmit",
+    "typecheck": "vue-tsc --noEmit && tsc -p tsconfig.node.json",
     "lint": "eslint src scripts tests",
     "test:unit": "vitest run",
     "test:e2e": "npm run build:e2e && playwright test && playwright test --config playwright.offline.config.ts",
@@ -18,7 +18,7 @@
     "content:build": "tsx scripts/build-packs.ts",
     "build": "npm run typecheck && npm run content:check && npm run content:build && npm run build:vite",
     "build:vite": "vite build",
-    "build:e2e": "npm run typecheck && npm run content:check && npm run content:build && node scripts/sync-e2e-fixtures.mjs && VITE_E2E=true npm run build:vite",
+    "build:e2e": "node scripts/build-e2e.mjs",
     "check": "npm run content:check && npm run typecheck && npm run lint && npm run test:unit",
     "test:smoke": "npm run build:release && node scripts/smoke-release.mjs",
     "build:release": "npm run build && node scripts/collect-release-info.mjs",

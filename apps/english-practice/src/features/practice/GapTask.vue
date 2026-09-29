@@ -173,6 +173,7 @@ const inputGapValue = (gapId: string, event: unknown): void => {
     <div
       v-if="item.inputMode === 'options' && activeGap"
       class="gap-options"
+      role="group"
       aria-label="当前空位选项"
     >
       <button

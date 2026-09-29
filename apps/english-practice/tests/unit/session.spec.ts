@@ -120,6 +120,12 @@ describe('T03 learning sessions', () => {
   })
 })
 
+const finishAllSlots = async (db: Awaited<ReturnType<typeof openDbWithPack>>, sessionId: string): Promise<void> => {
+  const session = await db.sessions.get(sessionId)
+  if (!session) return
+  await db.sessions.update(sessionId, { slots: session.slots.map((slot) => ({ ...slot, state: 'submitted' as const })) })
+}
+
 describe('CR1 会话完成态与草稿清理', () => {
   it('completeSession 置 completed、幂等并清除该会话残留草稿', async () => {
     const db = await openDbWithPack()
@@ -127,6 +133,10 @@ describe('CR1 会话完成态与草稿清理', () => {
     if (!created.ok || created.value.kind !== 'session') throw new Error('expected session')
     await enterCurrentSlot(db, 'session-done', clock)
     await db.drafts.put({ sessionId: 'session-done', itemId: 'vocab-join-a', updatedAt: clock.now().toISOString(), content: '{"kind":"gaps","values":{}}' })
+    // CR53：存在 unseen/answering 槽位时 completeSession 被拒绝
+    const blocked = await completeSession(db, 'session-done', clock)
+    expect(blocked.ok).toBe(false)
+    await finishAllSlots(db, 'session-done')
     const done = await completeSession(db, 'session-done', clock)
     expect(done.ok).toBe(true)
     if (!done.ok) return
@@ -145,6 +155,7 @@ describe('CR1 会话完成态与草稿清理', () => {
     const created = await createSession({ db, unitId: 'demo-school-club', minutes: 2, profileId: 'gaokao-common-training-v1', clock, idGenerator: () => 'session-keep' })
     if (!created.ok || created.value.kind !== 'session') throw new Error('expected session')
     await db.drafts.put({ sessionId: 'other-session', itemId: 'vocab-join-a', updatedAt: clock.now().toISOString(), content: '{}' })
+    await finishAllSlots(db, 'session-keep')
     const done = await completeSession(db, 'session-keep', clock)
     expect(done.ok).toBe(true)
     expect(await db.drafts.count()).toBe(1)

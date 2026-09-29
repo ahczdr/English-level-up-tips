@@ -1,16 +1,1 @@
-{
-  "id": "anhui-gaokao-2014-reading-e-q72",
-  "familyId": "anhui-2014-reading-e",
-  "skillIds": ["reading.main-idea", "reading.title"],
-  "level": "G1",
-  "section": "reading",
-  "reviewMode": "recognition",
-  "promptZh": "根据文章 E 回答第 72 题。",
-  "resourceId": "anhui-gaokao-2014-reading-e",
-  "estimatedSeconds": 60,
-  "sourceIds": ["anhui-gaokao-2014-official"],
-  "explanation": { "summaryZh": "文章介绍 Ashoka 支持改变社会的行动者及其项目，changemakers 最能概括全文。", "ruleZh": "标题题要覆盖机构理念、案例和结尾观点，不能只概括一个案例。", "evidence": [{ "resourceId": "anhui-gaokao-2014-reading-e", "paragraphId": "p1", "quote": "world's most promising changemakers" }], "distractors": [] },
-  "kind": "choice",
-  "options": [{ "id": "a", "text": "Changemakers" }, { "id": "b", "text": "Businessmen" }, { "id": "c", "text": "Social Conditions" }, { "id": "d", "text": "Rubbish Problem" }],
-  "answerOptionId": "a"
-}
+{"id":"anhui-gaokao-2014-reading-e-q72","familyId":"anhui-2014-reading-e","skillIds":["reading.main-idea"],"level":"G1","section":"reading","reviewMode":"recognition","promptZh":"根据文章 E 回答第 72 题。","resourceId":"anhui-gaokao-2014-reading-e","estimatedSeconds":60,"sourceIds":["anhui-gaokao-2014-official"],"explanation":{"summaryZh":"文章介绍 Ashoka 支持改变社会的行动者及其项目，changemakers 最能概括全文。","ruleZh":"标题题要覆盖机构理念、案例和结尾观点，不能只概括一个案例。","evidence":[{"resourceId":"anhui-gaokao-2014-reading-e","paragraphId":"p1","quote":"world's most promising changemakers"}],"distractors":[]},"kind":"choice","options":[{"id":"a","text":"Changemakers"},{"id":"b","text":"Businessmen"},{"id":"c","text":"Social Conditions"},{"id":"d","text":"Rubbish Problem"}],"answerOptionId":"a"}

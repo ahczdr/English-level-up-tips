@@ -75,6 +75,10 @@ const checkAssetFiles = async (pack: CoursePack) => {
 }
 
 const main = async () => {
+  // CR60：清理历史 SIGKILL 残留的全部 staging 目录（此前只清自己 pid，残留会被拷进 dist 并出现在 git status）
+  for (const entry of await fs.readdir(publicRoot).catch(() => [] as string[])) {
+    if (entry.startsWith('.content-stage-')) await fs.rm(path.join(publicRoot, entry), { recursive: true, force: true })
+  }
   const manifestNames = (await fs.readdir(manifestDir)).filter((name) => name.endsWith('.json')).sort()
   const packs: CoursePack[] = []
   for (const manifestName of manifestNames) {
@@ -86,15 +90,12 @@ const main = async () => {
     packs.push(pack as CoursePack)
   }
 
+  // 每次全新构建：目录与产物只包含当前 manifest 的最新版本，历史版本不保留
+  // （不可变保障仍由下方同版本内容比对提供——同 (id, version) 内容变化会被拒绝）。
   const staging = path.join(publicRoot, `.content-stage-${process.pid}`)
   await fs.rm(staging, { recursive: true, force: true })
   await fs.mkdir(staging, { recursive: true })
-  if (await fs.stat(outputRoot).catch(() => null)) {
-    await fs.cp(outputRoot, path.join(staging, 'content-packs'), { recursive: true })
-  }
-  const existingCatalogPath = path.join(publicRoot, 'content-catalog.json')
-  const existingCatalog = await fs.readFile(existingCatalogPath, 'utf8').then((value) => JSON.parse(value) as { packs?: Array<{ id: string; version: string; status: string; bytes: number; sha256: string; path: string }> }).catch(() => ({ packs: [] }))
-  const catalog = existingCatalog.packs ?? []
+  const catalog: Array<{ id: string; version: string; status: string; bytes: number; sha256: string; path: string }> = []
 
   try {
     for (const pack of packs) {
@@ -121,10 +122,7 @@ const main = async () => {
         await fs.mkdir(path.dirname(targetAsset), { recursive: true })
         await fs.copyFile(sourceAsset, targetAsset)
       }
-      const entry = { id: pack.id, version: pack.version, status: pack.status, bytes, sha256, path: relativePath }
-      const existingIndex = catalog.findIndex((item) => item.id === pack.id && item.version === pack.version)
-      if (existingIndex >= 0) catalog[existingIndex] = entry
-      else catalog.push(entry)
+      catalog.push({ id: pack.id, version: pack.version, status: pack.status, bytes, sha256, path: relativePath })
     }
     await fs.writeFile(path.join(staging, 'content-catalog.json'), json({ packs: catalog }), 'utf8')
     await fs.mkdir(path.dirname(outputRoot), { recursive: true })
@@ -136,7 +134,7 @@ const main = async () => {
     await fs.rm(staging, { recursive: true, force: true })
   }
 
-  console.log(`内容打包完成：${catalog.length} 个包`)
+  console.log(`内容打包完成：${catalog.length} 个包（仅保留当前 manifest 版本）`)
 }
 
 main().catch((error: unknown) => {

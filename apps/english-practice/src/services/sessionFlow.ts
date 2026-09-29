@@ -1,5 +1,6 @@
 import type { GaokaoDatabase } from '../data/db'
 import type { Session } from '../data/migrations'
+import { e2eNow } from '../data/e2e-clock'
 import type { AppErrorCode, Result } from './learning'
 
 export interface SessionSummary {
@@ -16,7 +17,8 @@ interface FlowClock {
   now(): Date
 }
 
-const systemClock: FlowClock = { now: () => new Date() }
+// CR54：与服务层默认时钟同源（E2E 构建可被测试时钟桥推移，跨日推进时口径一致）
+const systemClock: FlowClock = { now: () => e2eNow() }
 
 const error = (code: AppErrorCode, messageZh: string): Result<never> => ({
   ok: false,
@@ -72,7 +74,8 @@ export async function getSessionSummary(db: GaokaoDatabase, sessionId: string): 
       const payload = record.payload as FirstAttemptPayload | undefined
       if (payload && attemptBySlot.get(record.slotId) === undefined) attemptBySlot.set(record.slotId, payload)
     }
-    const exposureRows = await db.exposures.toArray()
+    // CR48/CR51：外会话曝光只统计本 profile 的行（per-profile 账本），跨 profile 不影响独立判定
+    const exposureRows = await db.exposureLog.where('profileId').equals(session.profileId).toArray()
     const foreignSessionByRef = new Set(
       exposureRows
         .filter((exposure) => exposure.firstSeenSessionId !== sessionId)

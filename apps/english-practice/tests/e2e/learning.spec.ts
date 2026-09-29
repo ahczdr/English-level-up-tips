@@ -7,8 +7,7 @@ import { expect, test, type Page } from '@playwright/test'
 
 const prepareContent = async (page: Page): Promise<void> => {
   await page.goto('/')
-  await page.getByRole('button', { name: '开始今日练习', exact: true }).click()
-  await page.getByRole('link', { name: '前往课程列表' }).click()
+  await page.getByRole('button', { name: '选择今日练习内容', exact: true }).click()
   await page.getByRole('button', { name: '准备课程内容' }).click()
   await page.locator('.unit-card').first().waitFor()
 }
@@ -62,16 +61,22 @@ test('缓存损坏：作业记录缺失 → 启动对账标待重新下载', asy
   await row.locator('.download-start').click()
   await expect(page.locator('.downloads-message')).toHaveText('音频下载完成，可以离线练习。', { timeout: 15000 })
 
-  // 破坏：删除 downloadJobs 作业记录（模拟缓存丢失）
+  // 破坏：删除 downloadJobs 作业记录（模拟缓存丢失；键随版本号变化，清空全表而非硬编码版本）
   await page.evaluate(async () => {
     const request = indexedDB.open('gaokao-english-v1')
     const db = await new Promise<IDBDatabase>((resolve, reject) => {
       request.onsuccess = () => resolve(request.result)
       request.onerror = () => reject(request.error)
     })
+    const allKeys = await new Promise<IDBValidKey[]>((resolve, reject) => {
+      const read = db.transaction('downloadJobs', 'readonly').objectStore('downloadJobs').getAllKeys()
+      read.onsuccess = () => resolve(read.result)
+      read.onerror = () => reject(read.error)
+    })
     await new Promise<void>((resolve, reject) => {
       const tx = db.transaction('downloadJobs', 'readwrite')
-      tx.objectStore('downloadJobs').delete(['gaokao-listening', '1.0.1'])
+      const store = tx.objectStore('downloadJobs')
+      for (const key of allKeys) store.delete(key)
       tx.oncomplete = () => resolve()
       tx.onerror = () => reject(tx.error)
     })

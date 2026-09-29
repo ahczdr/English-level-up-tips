@@ -221,7 +221,7 @@ const toggleChecklist = (label: string): void => {
 <template>
   <div class="writing-page">
     <div class="writing-brief">
-      <h4>审题要求</h4>
+      <h3>审题要求</h3>
       <ul>
         <li
           v-for="requirement in item.requirementsZh"
@@ -349,7 +349,7 @@ const toggleChecklist = (label: string): void => {
     >
       <p role="status">已提交 {{ versions.length }} 个版本（首稿不可覆盖，修改会生成新版本）。</p>
       <div class="writing-compare">
-        <h4>版本句段对比</h4>
+        <h3>版本句段对比</h3>
         <div
           v-for="version in versions"
           :key="version.version"
@@ -367,7 +367,7 @@ const toggleChecklist = (label: string): void => {
       v-if="modelAnswerVisible"
       class="writing-model"
     >
-      <h4>范文（显式请求后展示）</h4>
+      <h3>范文（显式请求后展示）</h3>
       <pre class="writing-model-body">{{ item.modelAnswer }}</pre>
     </div>
   </div>

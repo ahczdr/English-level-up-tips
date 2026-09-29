@@ -6,6 +6,9 @@ export interface Slot { id: string; ref: ItemRef; state: SlotState; assistance: 
 export type SessionState = 'active' | 'paused' | 'completed'
 export interface Session { id: string; profileId: string; unitId: string | null; slots: Slot[]; currentIndex: number; revision: number; state: SessionState; createdAt: string; updatedAt: string; studyDay: string; timeZone?: string }
 export interface Exposure { packId: string; packVersion: string; itemId: string; familyId: string; profileId: string; firstSeenAt: string; studyDay: string; firstSeenSessionId: string }
+// CR46/CR50：per-profile 曝光账本。legacy exposures 主键 [packId+packVersion+itemId] 不含 profileId，
+// 跨 profile 互相覆盖、跨版本互不命中；exposureLog 主键含 profileId，独立判定/计划/证据全部改读此表
+export interface ExposureLogRecord { profileId: string; packId: string; packVersion: string; itemId: string; familyId: string; firstSeenAt: string; studyDay: string; firstSeenSessionId: string }
 export interface InstalledPack { id: string; version: string; status: string; pack: unknown; installedAt: string; resourcesReady: boolean }
 export interface SettingRecord { id: string; value: unknown }
 export interface AttemptRecord { id: string; sessionId: string; slotId: string; phase: string; familyId: string; profileId: string; studyDay: string; createdAt: string; payload: unknown }
@@ -21,6 +24,7 @@ export interface GaokaoDatabaseSchema {
   sessions: Table<Session, string>
   attempts: Table<AttemptRecord, string>
   exposures: Table<Exposure, [string, string, string]>
+  exposureLog: Table<ExposureLogRecord, [string, string, string, string]>
   reviewStates: Table<ReviewStateRecord, [string, string, string]>
   drafts: Table<DraftRecord, [string, string]>
   writingVersions: Table<WritingVersionRecord, string>
@@ -63,7 +67,27 @@ export function configureSchema(db: Dexie) {
     })
   })
   // T16/R2 口径注记：Dexie 不支持跨版本改主键（"Not yet support for changing primary key"），
-  // exposures 保持三元组主键（每题一行）。多 profile 场景的独立判定由 submitAnswer 按
-  // row.profileId !== session.profileId 放行，与规划/证据侧 per-profile 过滤口径一致；
-  // per-profile 曝光行需在多用户版本以新表重建（记入后续范围）。
+  // exposures 保持三元组主键（每题一行）。v3 起 per-profile 口径由 exposureLog 承担。
+  // CR51：v3 为 reviewStates/exposures 补 profileId/itemId 二级索引，供 .where() 查询替代全表扫描。
+  db.version(3).stores({
+    reviewStates: '[profileId+familyId+reviewMode],dueDay,profileId',
+    exposures: '[packId+packVersion+itemId],familyId,profileId,itemId',
+    exposureLog: '[profileId+packId+packVersion+itemId],profileId,itemId',
+  }).upgrade(async (tx) => {
+    // CR46/CR50：legacy exposures 回填 per-profile 账本（v2 已为旧行回填 profileId）
+    const rows = await tx.table('exposures').toArray()
+    if (rows.length === 0) return
+    await tx.table('exposureLog').bulkAdd(
+      (rows as Array<Record<string, unknown>>).map((row) => ({
+        profileId: typeof row.profileId === 'string' ? row.profileId : FALLBACK_PROFILE_ID,
+        packId: String(row.packId),
+        packVersion: String(row.packVersion),
+        itemId: String(row.itemId),
+        familyId: String(row.familyId),
+        firstSeenAt: String(row.firstSeenAt),
+        studyDay: String(row.studyDay),
+        firstSeenSessionId: String(row.firstSeenSessionId),
+      })),
+    )
+  })
 }

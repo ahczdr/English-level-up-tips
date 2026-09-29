@@ -35,8 +35,6 @@ const select = (optionId: string): void => {
       :aria-pressed="isSelected(option.id)"
       :disabled="disabled"
       @click="select(option.id)"
-      @keydown.enter="select(option.id)"
-      @keydown.space="select(option.id)"
     >
       {{ option.text }}
     </button>

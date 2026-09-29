@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "id": "gaokao-protocol-demo",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "titleZh": "高考补弱协议样例：校园活动",
-  "status": "draft",
+  "status": "published",
   "author": "开发计划样例",
-  "reviewer": null,
-  "reviewedAt": null,
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-29T00:00:00.000Z",
   "profileIds": [
     "gaokao-common-training-v1"
   ],

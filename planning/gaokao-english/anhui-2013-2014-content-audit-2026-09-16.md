@@ -53,3 +53,10 @@
 3. 原题内容的再分发授权确认。
 
 因此，当前结果已经可以作为个人本地练习和审核工作包使用，但不能宣称为已授权、已发布的“高中三年正式题库”。
+
+## 4. 发布记录（2026-09-29）
+
+- 项目维护者确认本批公开附件纳入个人学习用途的正式内容包；`content/inbox/anhui-gaokao/README.md` 与 `content/sources/catalog.json` 的权利说明同步更新，保留来源出处。
+- 全部 15 个 manifest 转为 `published`（作者与审核人分离：导入作者 + 维护者复核），版本号 minor 提升（anhui 包 0.2.0、listening 1.1.0）。
+- 真题条目引入的 38 个细粒度 skillIds 已映射回 T15 钉死的 26 技能目录（粗粒度训练抓手，见下表要点）：`vocabulary.*→vocab.*/grammar.*`、`sentence.*→sentence.core/grammar.tense`、`grammar.细类→grammar.tense/clause/word-form/infinitive`、`reading.*→reading.detail/main-idea/inference/cohesion/word-meaning`、`writing.*→writing.task`。映射只影响训练归类，不影响判分。
+- `content:release` 现仅剩 REVIEW_MISSING / P07 数量与覆盖缺口（exit 78 暂缓，符合 CR31 设计）；UNKNOWN_SKILL 与 CATALOG_DRIFT 清零。

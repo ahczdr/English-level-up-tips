@@ -133,13 +133,8 @@ const loadState = async (): Promise<void> => {
 onMounted(loadState);
 
 const startTodayPractice = async (): Promise<void> => {
-  // CR24：加载未完成时先等加载结束，再按真实内容状态反馈，不误报「暂无课程」
+  // CR24：加载未完成时先等加载结束再跳转；课程空态由课程页的「准备课程内容」承接（CR12.1 单一入口）
   if (loading.value) await loadState();
-  if (!hasContent.value) {
-    message.value = '暂无可用课程，请先准备学习内容。';
-    return;
-  }
-  await loadState();
   await router.push('/learn');
 };
 
@@ -308,12 +303,8 @@ const resumePractice = async (session: Session): Promise<void> => {
         :disabled="loading"
         @click="startTodayPractice"
       >
-        开始今日练习
+        选择今日练习内容
       </AppButton>
-      <router-link
-        to="/learn"
-        class="learn-link"
-      >前往课程列表</router-link>
       <router-link
         to="/downloads"
         class="downloads-link"

@@ -6,7 +6,11 @@ export default defineConfig({
   testDir: 'tests/e2e',
   testMatch: /offline\.spec\.ts/,
   outputDir: 'test-results/prod-offline',
-  reporter: [['html', { open: 'never' }], ['list']],
+  // CR62：与主配置分离报告目录，test:e2e 串行后两份报告都保留
+  reporter: [['html', { open: 'never', outputFolder: 'playwright-report-offline' }], ['list']],
+  // CR36：与主配置一致——CI 禁 .only、失败重试一次
+  forbidOnly: Boolean(process.env.CI),
+  retries: process.env.CI ? 1 : 0,
   use: {
     baseURL: 'http://127.0.0.1:4174',
     trace: 'retain-on-failure',

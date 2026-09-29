@@ -999,7 +999,7 @@ body {
   position: fixed;
   left: 12px;
   right: 12px;
-  bottom: 12px;
+  bottom: calc(12px + env(safe-area-inset-bottom));
   display: flex;
   flex-wrap: wrap;
   align-items: center;

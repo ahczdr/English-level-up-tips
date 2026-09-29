@@ -2,6 +2,7 @@ import type { GaokaoDatabase } from '../data/db'
 import { e2eFixtureFor } from '../data/e2e-fixtures'
 import type { CoursePack } from '../content/types'
 import { validatePack } from '../content/validate'
+import { compareSemver } from '../domain/semver'
 
 export type ContentErrorCode = 'DOWNLOAD_FAILED' | 'INVALID_CONTENT' | 'STORAGE_FAILED' | 'ASSET_HASH_MISMATCH' | 'ASSET_MIME_MISMATCH' | 'ASSET_MISSING'
 export type ContentResult<T> = { ok: true; value: T } | { ok: false; error: { code: ContentErrorCode; messageZh: string } }
@@ -30,21 +31,12 @@ export interface InstallPreviewPacksReport {
   installed: number
   skippedExisting: number
   skippedOldVersion: number
+  skippedDraft: number
   rejected: number
   messagesZh: string[]
 }
 
 const DEFAULT_CATALOG_URL = '/content-catalog.json'
-
-const compareSemver = (left: string, right: string): number => {
-  const leftParts = left.split('.').map(Number)
-  const rightParts = right.split('.').map(Number)
-  for (let index = 0; index < 3; index += 1) {
-    const difference = (leftParts[index] ?? 0) - (rightParts[index] ?? 0)
-    if (difference !== 0) return difference
-  }
-  return 0
-}
 
 const sha256Hex = async (text: string): Promise<string> => {
   const bytes = new TextEncoder().encode(text)
@@ -80,6 +72,7 @@ export async function installPreviewPacks(input: InstallPreviewPacksInput): Prom
     installed: 0,
     skippedExisting: 0,
     skippedOldVersion: 0,
+    skippedDraft: 0,
     rejected: 0,
     messagesZh: [],
   }
@@ -92,13 +85,16 @@ export async function installPreviewPacks(input: InstallPreviewPacksInput): Prom
     return { ok: false, error: { code: 'DOWNLOAD_FAILED', messageZh: '课程目录读取失败，请检查网络或内容配置' } }
   }
 
+  // 发布门禁（应用侧）：目录中仅 published 条目可装载；draft 属未审核内容，不进入学习入口。
+  const published = catalog.packs.filter((entry) => entry.status === 'published')
+  report.skippedDraft = catalog.packs.length - published.length
   const latest = new Map<string, ContentCatalogEntry>()
-  for (const entry of catalog.packs) {
+  for (const entry of published) {
     if (typeof entry?.id !== 'string' || typeof entry?.version !== 'string') continue
     const current = latest.get(entry.id)
     if (!current || compareSemver(entry.version, current.version) > 0) latest.set(entry.id, entry)
   }
-  for (const entry of catalog.packs) {
+  for (const entry of published) {
     if (latest.get(entry.id) !== entry) report.skippedOldVersion += 1
   }
 
@@ -294,11 +290,7 @@ export async function getPackAssetBytes(input: GetPackAssetBytesInput): Promise<
     if (!asset) {
       return { ok: false, error: { code: 'ASSET_MISSING', messageZh: '音频资产不存在' } }
     }
-    const stored = storedBytes
-    if (!stored) {
-      return { ok: false, error: { code: 'ASSET_MISSING', messageZh: '音频未下载' } }
-    }
-    return { ok: true, value: { data: stored.data, mime: asset.mime } }
+    return { ok: true, value: { data: storedBytes.data, mime: asset.mime } }
   } catch {
     return { ok: false, error: { code: 'STORAGE_FAILED', messageZh: '音频读取失败' } }
   }

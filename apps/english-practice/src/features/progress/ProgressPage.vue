@@ -71,16 +71,36 @@ const loadState = async (): Promise<void> => {
       }
     }
     const totalItems = countedItems.size;
-    // CR2：作答与曝光按当前 profile 过滤，跨 profile 不混算（旧数据无 profileId 字段视为同 profile）
-    const exposures = (await db.value.exposures.toArray()).filter((exposure) => exposure.profileId === undefined || exposure.profileId === settings.profileId);
+    // CR2/CR51：作答与曝光按当前 profile 过滤并走索引查询，跨 profile 不混算
+    const exposures = await db.value.exposureLog.where('profileId').equals(settings.profileId).toArray();
     const exposedItemIds = exposures.map((exposure) => exposure.itemId);
-    // 与 submitAnswer 的曝光键同源：packId|packVersion|itemId（多包同 itemId 不互混）
+    // 与 enterCurrentSlot 的 per-profile 账本同源：packId|packVersion|itemId（多包同 itemId 不互混）
     const firstSeen = new Map(exposures.map((exposure) => [exposure.packId + '|' + exposure.packVersion + '|' + exposure.itemId, exposure.firstSeenSessionId]));
-    const achievementRows = (await db.value.achievements.toArray()).map((record) => ({ id: record.id, unlockedAt: record.unlockedAt }));
-    const attemptRows = (await db.value.attempts.toArray()).filter((record) => record.profileId === undefined || record.profileId === settings.profileId).map((record): ProgressAttempt | null => {
+    const achievementRows = (await db.value.achievements.toArray())
+      .filter((record) => record.profileId === undefined || record.profileId === settings.profileId)
+      .map((record) => ({ id: record.id, unlockedAt: record.unlockedAt }));
+    const attemptRows = (await db.value.attempts.where('profileId').equals(settings.profileId).toArray()).map((record): ProgressAttempt | null => {
       const payload = record.payload as { grade?: { earned: number; possible: number }; assistance?: string[]; ref?: { packId: string; packVersion: string; itemId: string }; phase?: string };
       const item = payload.ref ? itemIndex.get(payload.ref.itemId) : undefined;
-      if (!payload.grade || !payload.ref || !item) return null;
+      if (!payload.grade || !payload.ref) return null;
+      if (!item) {
+        // CR8：课程包已卸载的历史作答保留进统计（不参与题型分组），不再静默缩水
+        return {
+          id: record.id,
+          itemId: payload.ref.itemId,
+          familyId: record.familyId,
+          kind: 'choice',
+          level: 'G0',
+          phase: record.phase === 'correction' ? 'correction' : 'first',
+          studyDay: record.studyDay,
+          createdAt: record.createdAt,
+          gradeEarned: payload.grade.earned,
+          gradePossible: payload.grade.possible,
+          assisted: (payload.assistance ?? []).length > 0,
+          firstSeenSelf: firstSeen.get(payload.ref.packId + '|' + payload.ref.packVersion + '|' + payload.ref.itemId) === record.sessionId,
+          unknownItem: true,
+        };
+      }
       return {
         id: record.id,
         itemId: payload.ref.itemId,
@@ -124,6 +144,7 @@ const loadState = async (): Promise<void> => {
     }));
     const summary = summarizeProgress({
       today: props.today ?? pageToday(e2eNow(), settings.timeZone),
+      profileId: settings.profileId,
       attempts: validAttempts,
       totalItems,
       exposedItemIds,

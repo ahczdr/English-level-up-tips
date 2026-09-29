@@ -1,16 +1,1 @@
-{
-  "id": "anhui-gaokao-2014-reading-c-q66",
-  "familyId": "anhui-2014-reading-c",
-  "skillIds": ["reading.main-idea", "reading.purpose"],
-  "level": "G1",
-  "section": "reading",
-  "reviewMode": "recognition",
-  "promptZh": "根据文章 C 回答第 66 题。",
-  "resourceId": "anhui-gaokao-2014-reading-c",
-  "estimatedSeconds": 60,
-  "sourceIds": ["anhui-gaokao-2014-official"],
-  "explanation": { "summaryZh": "新博物馆的策划者想探索人们收藏的原因及其意义。", "ruleZh": "目的题要定位作者对项目目标的明确说明。", "evidence": [{ "resourceId": "anhui-gaokao-2014-reading-c", "paragraphId": "p2", "quote": "explore why people collect" }], "distractors": [] },
-  "kind": "choice",
-  "options": [{ "id": "a", "text": "To help people sell their collections." }, { "id": "b", "text": "To encourage more people to collect." }, { "id": "c", "text": "To study the significance of collecting." }, { "id": "d", "text": "To find out why people visit museums." }],
-  "answerOptionId": "c"
-}
+{"id":"anhui-gaokao-2014-reading-c-q66","familyId":"anhui-2014-reading-c","skillIds":["reading.main-idea","reading.inference"],"level":"G1","section":"reading","reviewMode":"recognition","promptZh":"根据文章 C 回答第 66 题。","resourceId":"anhui-gaokao-2014-reading-c","estimatedSeconds":60,"sourceIds":["anhui-gaokao-2014-official"],"explanation":{"summaryZh":"新博物馆的策划者想探索人们收藏的原因及其意义。","ruleZh":"目的题要定位作者对项目目标的明确说明。","evidence":[{"resourceId":"anhui-gaokao-2014-reading-c","paragraphId":"p2","quote":"explore why people collect"}],"distractors":[]},"kind":"choice","options":[{"id":"a","text":"To help people sell their collections."},{"id":"b","text":"To encourage more people to collect."},{"id":"c","text":"To study the significance of collecting."},{"id":"d","text":"To find out why people visit museums."}],"answerOptionId":"c"}

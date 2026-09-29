@@ -2,7 +2,7 @@
   "name": "life-level-up-guide",
   "version": "1.0.0",
   "private": true,
-  "description": "AI 时代终身学习指南：学习、真实项目、低谷复原与成长证据的开放内容项目",
+  "description": "AI \u65f6\u4ee3\u7ec8\u8eab\u5b66\u4e60\u6307\u5357\uff1a\u5b66\u4e60\u3001\u771f\u5b9e\u9879\u76ee\u3001\u4f4e\u8c37\u590d\u539f\u4e0e\u6210\u957f\u8bc1\u636e\u7684\u5f00\u653e\u5185\u5bb9\u9879\u76ee",
   "type": "module",
   "engines": {
     "node": ">=24 <25"
@@ -29,8 +29,8 @@
   },
   "devDependencies": {
     "@playwright/test": "1.62.1",
-    "markdownlint-cli2": "0.23.2",
-    "sharp": "0.35.3",
+    "markdownlint-cli2": "0.23.3",
+    "sharp": "0.35.5",
     "vitepress": "1.6.4"
   },
   "overrides": {

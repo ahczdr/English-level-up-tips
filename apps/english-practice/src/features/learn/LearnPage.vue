@@ -8,6 +8,7 @@ import { createSession } from '../../services/learning';
 import { loadPersonalSettings, type PersonalSettings } from '../../services/settings';
 import { downloadPackAssets, installPreviewPacks } from '../../services/content';
 import { curriculumForUnit, threeYearCurriculum } from '../../domain/curriculum';
+import { compareSemver } from '../../domain/semver';
 import AppButton from '../../components/AppButton.vue';
 
 interface UnitOption {
@@ -47,15 +48,6 @@ const minuteOptions: Array<PersonalSettings['defaultMinutes']> = [5, 10, 15, 25]
 
 const selectedUnit = computed(() => units.value.find((unit) => unit.key === selectedKey.value) ?? null);
 
-const compareVersions = (left: string, right: string): number => {
-  const a = left.split('.').map((part) => Number.parseInt(part, 10) || 0);
-  const b = right.split('.').map((part) => Number.parseInt(part, 10) || 0);
-  for (let index = 0; index < Math.max(a.length, b.length); index += 1) {
-    if ((a[index] ?? 0) !== (b[index] ?? 0)) return (a[index] ?? 0) - (b[index] ?? 0);
-  }
-  return 0;
-};
-
 const loadUnits = async (): Promise<void> => {
   loading.value = true;
   try {
@@ -65,7 +57,7 @@ const loadUnits = async (): Promise<void> => {
     for (const record of installedRecords) {
       const pack = record.pack as CoursePack;
       const previous = latestRecords.get(pack.id);
-      if (!previous || compareVersions(pack.version, (previous.pack as CoursePack).version) > 0) latestRecords.set(pack.id, record);
+      if (!previous || compareSemver(pack.version, (previous.pack as CoursePack).version) > 0) latestRecords.set(pack.id, record);
     }
     const records = [...latestRecords.values()];
     const options: UnitOption[] = [];
@@ -130,10 +122,12 @@ const prepareContent = async (): Promise<void> => {
   const result = await installPreviewPacks({ db: db.value });
   if (result.ok) {
     await loadUnits();
+    const counts = `新增安装 ${result.value.installed} 个，已安装 ${result.value.skippedExisting} 个，未通过校验 ${result.value.rejected} 个` +
+      (result.value.skippedDraft > 0 ? `，跳过未审核草稿 ${result.value.skippedDraft} 个` : '');
     if (units.value.length === 0) {
-      status.value = `暂无可用课程：新增安装 ${result.value.installed} 个，已安装 ${result.value.skippedExisting} 个，未通过校验 ${result.value.rejected} 个。`;
+      status.value = `暂无可用课程：${counts}。`;
     } else {
-      status.value = `内容准备完成：新增安装 ${result.value.installed} 个课程包，已安装 ${result.value.skippedExisting} 个，未通过校验 ${result.value.rejected} 个。`;
+      status.value = `内容准备完成：${counts}。`;
     }
   } else {
     status.value = `内容准备失败：${result.error.messageZh}`;

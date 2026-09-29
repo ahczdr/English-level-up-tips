@@ -1,16 +1,1 @@
-{
-  "id": "anhui-gaokao-2014-reading-a-q58",
-  "familyId": "anhui-2014-reading-a",
-  "skillIds": ["reading.detail", "vocabulary.number"],
-  "level": "G1",
-  "section": "reading",
-  "reviewMode": "recognition",
-  "promptZh": "根据文章 A 回答第 58 题。",
-  "resourceId": "anhui-gaokao-2014-reading-a",
-  "estimatedSeconds": 45,
-  "sourceIds": ["anhui-gaokao-2014-official"],
-  "explanation": { "summaryZh": "Mr. H 的促销价格是 299 美元。", "ruleZh": "数字细节题要区分原价和促销价。", "evidence": [{ "resourceId": "anhui-gaokao-2014-reading-a", "paragraphId": "p1", "quote": "NOW ONLY $299" }], "distractors": [] },
-  "kind": "choice",
-  "options": [{ "id": "a", "text": "$499" }, { "id": "b", "text": "$299" }, { "id": "c", "text": "$199" }, { "id": "d", "text": "$99" }],
-  "answerOptionId": "b"
-}
+{"id":"anhui-gaokao-2014-reading-a-q58","familyId":"anhui-2014-reading-a","skillIds":["reading.detail","grammar.agreement"],"level":"G1","section":"reading","reviewMode":"recognition","promptZh":"根据文章 A 回答第 58 题。","resourceId":"anhui-gaokao-2014-reading-a","estimatedSeconds":45,"sourceIds":["anhui-gaokao-2014-official"],"explanation":{"summaryZh":"Mr. H 的促销价格是 299 美元。","ruleZh":"数字细节题要区分原价和促销价。","evidence":[{"resourceId":"anhui-gaokao-2014-reading-a","paragraphId":"p1","quote":"NOW ONLY $299"}],"distractors":[]},"kind":"choice","options":[{"id":"a","text":"$499"},{"id":"b","text":"$299"},{"id":"c","text":"$199"},{"id":"d","text":"$99"}],"answerOptionId":"b"}

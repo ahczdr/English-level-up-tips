@@ -26,6 +26,7 @@ describe('T03 database schema', () => {
       'attempts',
       'downloadJobs',
       'drafts',
+      'exposureLog',
       'exposures',
       'packs',
       'reviewStates',
@@ -35,10 +36,10 @@ describe('T03 database schema', () => {
     ])
     const indexNames = new Map(db.tables.map((table) => [table.name, table.schema.indexes.map((index) => index.name).join(',')]))
     expect(indexNames.get('attempts')).toBe('[sessionId+slotId+phase],sessionId,familyId,studyDay,profileId')
-    expect(indexNames.get('exposures')).toBe('familyId,profileId')
+    expect(indexNames.get('exposures')).toBe('familyId,profileId,itemId')
     expect(indexNames.get('sessions')).toBe('state,studyDay')
     expect(indexNames.get('packs')).toBe('status')
-    expect(indexNames.get('reviewStates')).toBe('dueDay')
+    expect(indexNames.get('reviewStates')).toBe('dueDay,profileId')
     expect(indexNames.get('writingVersions')).toBe('[sessionId+itemId]')
     expect(indexNames.get('settings')).toBe('')
     expect(indexNames.get('downloadJobs')).toBe('')
@@ -115,7 +116,7 @@ describe('后续版本迁移失败韧性', () => {
     initial.close()
 
     const broken = createDatabase(name)
-    broken.version(3).stores({ migrationProbe: 'id' }).upgrade(() => {
+    broken.version(4).stores({ migrationProbe: 'id' }).upgrade(() => {
       throw new Error('simulated migration failure')
     })
     await expect(broken.open()).rejects.toThrow('simulated migration failure')

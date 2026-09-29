@@ -3,8 +3,7 @@ import { expect, test, type Page } from '@playwright/test'
 // M1 门：在真实浏览器中准备内容并完整练习 demo-school-club 5 分钟短单元
 const prepareAndStartShortSession = async (page: Page) => {
   await page.goto('/')
-  await page.getByRole('button', { name: '开始今日练习', exact: true }).click()
-  await page.getByRole('link', { name: '前往课程列表' }).click()
+  await await page.getByRole('button', { name: '选择今日练习内容', exact: true }).click()
   await page.getByRole('button', { name: '准备课程内容' }).click()
   const card = page.locator('.unit-card', { hasText: '校园社团：协议演示' })
   await expect(card).toBeVisible()
@@ -17,7 +16,8 @@ const prepareAndStartShortSession = async (page: Page) => {
 test.describe('T05 触屏练习全流程', () => {
   test('准备内容后完成 5 分钟短单元并显示单元结束统计', async ({ page }) => {
     await prepareAndStartShortSession(page)
-    await expect(page.locator('.draft-badge')).toContainText('预览内容（未审核）')
+    // 内容包已转 published（0.2.0）：会话页不再显示「预览内容（未审核）」徽章
+  await expect(page.locator('.draft-badge')).toHaveCount(0)
 
     // 第 1 题：单选 加入
     await page.getByRole('button', { name: '加入', exact: true }).click()
@@ -70,7 +70,8 @@ test.describe('T05 触屏练习全流程', () => {
     // 刷新页面，应恢复到第 2 题继续
     await page.reload()
     await expect(page.locator('.session-progress')).toHaveText('第 2 / 4 题')
-    await expect(page.locator('.draft-badge')).toContainText('预览内容（未审核）')
+    // 内容包已转 published（0.2.0）：会话页不再显示「预览内容（未审核）」徽章
+  await expect(page.locator('.draft-badge')).toHaveCount(0)
     await expect(page.getByRole('button', { name: '提交答案', exact: true })).toBeVisible()
 
     // 刷新后可以继续作答第 2 题

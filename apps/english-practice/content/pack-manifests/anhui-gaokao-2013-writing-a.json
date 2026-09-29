@@ -1,1 +1,26 @@
-{"schemaVersion":1,"id":"anhui-gaokao-2013-writing-a","version":"0.1.0","titleZh":"2013 年安徽高考英语书面表达（结构化草稿）","status":"draft","author":"个人学习工具资料导入","reviewer":null,"reviewedAt":null,"profileIds":["gaokao-common-training-v1"],"sourceIds":["anhui-gaokao-2013-official"],"assetIds":["anhui-gaokao-2013-anhui-gaokao-english-official"],"resourceIds":[],"itemIds":["anhui-gaokao-2013-writing-on-way-to-school"],"unitIds":["anhui-gaokao-2013-writing-a"]}
+{
+  "schemaVersion": 1,
+  "id": "anhui-gaokao-2013-writing-a",
+  "version": "0.2.0",
+  "titleZh": "2013 年安徽高考英语书面表达（结构化草稿）",
+  "status": "published",
+  "author": "个人学习工具资料导入",
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-29T00:00:00.000Z",
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sourceIds": [
+    "anhui-gaokao-2013-official"
+  ],
+  "assetIds": [
+    "anhui-gaokao-2013-anhui-gaokao-english-official"
+  ],
+  "resourceIds": [],
+  "itemIds": [
+    "anhui-gaokao-2013-writing-on-way-to-school"
+  ],
+  "unitIds": [
+    "anhui-gaokao-2013-writing-a"
+  ]
+}

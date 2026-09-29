@@ -1,13 +1,15 @@
 {
   "schemaVersion": 1,
   "id": "anhui-gaokao-official-archive",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "titleZh": "安徽高考英语原题资料（待结构化审核）",
-  "status": "draft",
+  "status": "published",
   "author": "个人学习工具资料导入",
-  "reviewer": null,
-  "reviewedAt": null,
-  "profileIds": ["gaokao-common-training-v1"],
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-29T00:00:00.000Z",
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
   "sourceIds": [
     "anhui-gaokao-2013-official",
     "anhui-gaokao-2014-official",

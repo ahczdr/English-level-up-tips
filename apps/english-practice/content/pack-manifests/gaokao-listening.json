@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "id": "gaokao-listening",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "titleZh": "听力起步样例包",
-  "status": "draft",
+  "status": "published",
   "author": "GLM 开发样例",
-  "reviewer": null,
-  "reviewedAt": null,
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-29T00:00:00.000Z",
   "profileIds": [
     "gaokao-common-training-v1"
   ],

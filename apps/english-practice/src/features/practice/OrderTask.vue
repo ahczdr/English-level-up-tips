@@ -47,6 +47,12 @@ const move = (from: number, to: number): void => {
   ids.splice(to, 0, tokenId);
   emitIds(ids);
 };
+
+// CR57.h：一键清空重排，不必逐个点回词块
+const clearAll = (): void => {
+  if (props.disabled || selectedIds.value.length === 0) return;
+  emit('update:modelValue', null);
+};
 </script>
 
 <template>
@@ -101,5 +107,13 @@ const move = (from: number, to: number): void => {
         {{ token.text }}
       </button>
     </div>
+    <button
+      type="button"
+      class="token-clear"
+      :disabled="disabled || selectedIds.length === 0"
+      @click="clearAll"
+    >
+      清空重排
+    </button>
   </div>
 </template>

@@ -4,7 +4,7 @@
 // 用法：先 npm run build:release，再 npm run test:smoke（test:smoke 已串联 build:release）。
 import { spawn } from 'node:child_process'
 import { readdirSync, readFileSync, existsSync } from 'node:fs'
-import { join } from 'node:path'
+import { dirname, join } from 'node:path'
 import { chromium } from '@playwright/test'
 
 const PORT = 4174
@@ -21,6 +21,9 @@ if (!existsSync(assetsDir)) fail('dist/ missing; run npm run build:release first
 // T16/B1：sw.js 必须含 SKIP_WAITING 监听（prompt 更新确认路径）
 const swContent = readFileSync(join(process.cwd(), 'dist', 'sw.js'), 'utf8')
 if (!swContent.includes('SKIP_WAITING')) fail('dist/sw.js missing SKIP_WAITING listener')
+// CR61：precache 仅 shell 断言对发布产物执行（此前只在高 E2E 配置里，实际读到的是 E2E 构建的 dist）
+if (swContent.includes('content-packs')) fail('dist/sw.js precaches content packs; only the app shell may be precached')
+if (!swContent.includes('content-catalog.json')) fail('dist/sw.js missing content-catalog.json network-first handler')
 // T16/B2：release-info.json 存在且 BUILD_SHA 一致
 const infoPath = join(process.cwd(), 'dist', 'release-info.json')
 if (!existsSync(infoPath)) fail('dist/release-info.json missing; run collect-release-info.mjs after build')
@@ -50,9 +53,14 @@ try {
 }
 if (external) fail('port ' + PORT + ' is already serving something else; refusing to smoke against it')
 
-// R2：直启 vite 二进制，避免 npm 孙进程清理问题
-const viteBin = join(process.cwd(), 'node_modules', '.bin', 'vite')
-const server = spawn(viteBin, ['preview', '--host', '127.0.0.1', '--port', String(PORT), '--strictPort'], { cwd: process.cwd(), stdio: 'pipe' })
+// R2/CR65：用当前 node 直启 vite 入口脚本（不依赖 POSIX 的 node_modules/.bin，Windows 可跑）
+const vitePkgPath = join(process.cwd(), 'node_modules', 'vite', 'package.json')
+if (!existsSync(vitePkgPath)) fail('vite package not found; run npm ci first')
+const vitePkg = JSON.parse(readFileSync(vitePkgPath, 'utf8'))
+const viteBinRelative = typeof vitePkg.bin === 'string' ? vitePkg.bin : vitePkg.bin?.vite
+if (!viteBinRelative) fail('vite package.json has no bin entry')
+const viteEntry = join(dirname(vitePkgPath), viteBinRelative)
+const server = spawn(process.execPath, [viteEntry, 'preview', '--host', '127.0.0.1', '--port', String(PORT), '--strictPort'], { cwd: process.cwd(), stdio: 'pipe' })
 let serverOut = ''
 server.stdout.on('data', (chunk) => { serverOut += String(chunk) })
 server.stderr.on('data', (chunk) => { serverOut += String(chunk) })

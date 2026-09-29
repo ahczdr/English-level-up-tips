@@ -6,12 +6,12 @@ import { reconcileInstalledPacks } from '../services/downloads';
 import { db as defaultDb } from '../data/db';
 
 // T12（D09）：SW 有新版本先提示；用户点击才激活，活动会话不自动重载。
+const updateReady = ref(false);
 const { applyUpdate } = setupPwa({
   onNeedRefresh: () => {
     updateReady.value = true;
   },
 });
-const updateReady = ref(false);
 const updateHint = ref('');
 // R2（D09）：应用启动即对账一次，避免仅访问下载页时才校准 resourcesReady
 onMounted(() => {

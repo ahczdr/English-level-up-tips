@@ -1,16 +1,40 @@
 {
   "schemaVersion": 1,
   "id": "anhui-gaokao-2013-grammar-a",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "titleZh": "2013 年安徽高考英语单项填空（结构化草稿）",
-  "status": "draft",
+  "status": "published",
   "author": "个人学习工具资料导入",
-  "reviewer": null,
-  "reviewedAt": null,
-  "profileIds": ["gaokao-common-training-v1"],
-  "sourceIds": ["anhui-gaokao-2013-official"],
-  "assetIds": ["anhui-gaokao-2013-anhui-gaokao-english-official"],
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-29T00:00:00.000Z",
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sourceIds": [
+    "anhui-gaokao-2013-official"
+  ],
+  "assetIds": [
+    "anhui-gaokao-2013-anhui-gaokao-english-official"
+  ],
   "resourceIds": [],
-  "itemIds": ["anhui-gaokao-2013-q21", "anhui-gaokao-2013-q22", "anhui-gaokao-2013-q23", "anhui-gaokao-2013-q24", "anhui-gaokao-2013-q25", "anhui-gaokao-2013-q26", "anhui-gaokao-2013-q27", "anhui-gaokao-2013-q28", "anhui-gaokao-2013-q29", "anhui-gaokao-2013-q30", "anhui-gaokao-2013-q31", "anhui-gaokao-2013-q32", "anhui-gaokao-2013-q33", "anhui-gaokao-2013-q34", "anhui-gaokao-2013-q35"],
-  "unitIds": ["anhui-gaokao-2013-grammar-a"]
+  "itemIds": [
+    "anhui-gaokao-2013-q21",
+    "anhui-gaokao-2013-q22",
+    "anhui-gaokao-2013-q23",
+    "anhui-gaokao-2013-q24",
+    "anhui-gaokao-2013-q25",
+    "anhui-gaokao-2013-q26",
+    "anhui-gaokao-2013-q27",
+    "anhui-gaokao-2013-q28",
+    "anhui-gaokao-2013-q29",
+    "anhui-gaokao-2013-q30",
+    "anhui-gaokao-2013-q31",
+    "anhui-gaokao-2013-q32",
+    "anhui-gaokao-2013-q33",
+    "anhui-gaokao-2013-q34",
+    "anhui-gaokao-2013-q35"
+  ],
+  "unitIds": [
+    "anhui-gaokao-2013-grammar-a"
+  ]
 }

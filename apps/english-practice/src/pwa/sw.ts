@@ -3,7 +3,7 @@
 // catalog.json 网络优先 + 4s 超时回退缓存；SW 更新采用 prompt 策略，
 // 不自动 skipWaiting，由用户在提示后手动激活。
 /// <reference lib="webworker" />
-import { cleanupOutdatedCaches, createHandlerBoundToURL, precacheAndRoute } from 'workbox-precaching'
+import { cleanupOutdatedCaches, precacheAndRoute } from 'workbox-precaching'
 
 declare const self: ServiceWorkerGlobalScope & {
   __WB_MANIFEST: Array<{ url: string; revision?: string }>
@@ -61,12 +61,7 @@ self.addEventListener('fetch', (event) => {
   if (url.origin !== self.location.origin) return
   if (isCatalogRequest(url)) {
     event.respondWith(catalogNetworkFirst(request))
-    return
   }
-  if (request.mode === 'navigate') {
-    // 离线时导航回退到 precache 的 index.html（hash 路由统一入口）
-    event.respondWith(
-      caches.match(request).then((cached) => cached ?? createHandlerBoundToURL('index.html')({ event, request, url })),
-    )
-  }
+  // CR59：导航请求由 precacheAndRoute 统一响应（hash 路由导航恒为 precache 的 '/'，
+  // 自定义 navigate 分支会与 workbox 双 respondWith 竞态抛 InvalidStateError）
 })

@@ -6,6 +6,7 @@ name: english-practice-ci
 
 on:
   push:
+    branches: [master]
     paths:
       - 'apps/english-practice/**'
       - '.github/workflows/english-practice-ci.yml'
@@ -13,6 +14,11 @@ on:
     paths:
       - 'apps/english-practice/**'
       - '.github/workflows/english-practice-ci.yml'
+
+# CR32：同分支 push + pull_request 双事件会各跑一遍；连跑 commit 直接取消在途 run
+concurrency:
+  group: english-practice-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   quality:
@@ -29,6 +35,12 @@ jobs:
           cache-dependency-path: apps/english-practice/package-lock.json
       - name: Install dependencies
         run: npm ci
+      # CR33：Playwright 浏览器二进制缓存（key 含版本解析后的 lockfile 与浏览器集合）
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ms-playwright-${{ runner.os }}-full-${{ hashFiles('apps/english-practice/package-lock.json') }}
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium firefox webkit
       - name: Check (content + typecheck + lint + unit)
@@ -37,8 +49,9 @@ jobs:
         run: npm run build:release
         env:
           BUILD_SHA: "${{ github.sha }}"
+      # CR29：CI 已单独跑过 check，E2E 构建跳过重复的 typecheck/content 前置门禁
       - name: E2E (E2E build + preview 4174 + offline suite)
-        run: npm run test:e2e
+        run: SKIP_GATE=1 npm run test:e2e
       - name: Collect failure artifacts
         if: failure()
         uses: actions/upload-artifact@v4
@@ -47,6 +60,7 @@ jobs:
           path: |
             apps/english-practice/test-results/
             apps/english-practice/playwright-report/
+            apps/english-practice/playwright-report-offline/
           retention-days: 7
 
   release-smoke:
@@ -64,6 +78,11 @@ jobs:
           cache-dependency-path: apps/english-practice/package-lock.json
       - name: Install dependencies
         run: npm ci
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ms-playwright-${{ runner.os }}-chromium-${{ hashFiles('apps/english-practice/package-lock.json') }}
       - name: Install Playwright Chromium (smoke only)
         run: npx playwright install --with-deps chromium
       - name: Release build (no VITE_E2E)

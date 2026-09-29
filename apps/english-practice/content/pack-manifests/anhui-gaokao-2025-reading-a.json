@@ -1,14 +1,18 @@
 {
   "schemaVersion": 1,
   "id": "anhui-gaokao-2025-reading-a",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "titleZh": "2025 年高考英语非听力部分（原题结构化草稿）",
-  "status": "draft",
+  "status": "published",
   "author": "个人学习工具资料导入",
-  "reviewer": null,
-  "reviewedAt": null,
-  "profileIds": ["gaokao-common-training-v1"],
-  "sourceIds": ["anhui-gaokao-2025-eol"],
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-29T00:00:00.000Z",
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sourceIds": [
+    "anhui-gaokao-2025-eol"
+  ],
   "assetIds": [
     "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p00",
     "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p01",
@@ -53,5 +57,7 @@
     "anhui-gaokao-2025-writing-email",
     "anhui-gaokao-2025-writing-continuation"
   ],
-  "unitIds": ["anhui-gaokao-2025-core"]
+  "unitIds": [
+    "anhui-gaokao-2025-core"
+  ]
 }

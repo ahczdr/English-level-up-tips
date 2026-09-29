@@ -21,7 +21,7 @@ import {
   type Attempt,
 } from '../../services/learning';
 import { allPackRecords } from '../../data/pack-reader';
-import { getSessionSummary, setCurrentIndex, type SessionSummary } from '../../services/sessionFlow';
+import { firstUnfinished, getSessionSummary, setCurrentIndex, type SessionSummary } from '../../services/sessionFlow';
 import { clearDraft, loadDraft, saveDraft } from '../../services/drafts';
 import { getPackAssetBytes } from '../../services/content';
 import { startPackDownload } from '../../services/downloads';
@@ -123,9 +123,6 @@ const canCorrect = computed(
     feedback.value.grade.earned < feedback.value.grade.possible,
 );
 
-const firstUnfinishedIndex = (target: Session): number =>
-  target.slots.findIndex((slot) => slot.state === 'unseen' || slot.state === 'answering');
-
 const showError = (messageZh: string): void => {
   errorMessage.value = messageZh;
   phase.value = 'error';
@@ -215,20 +212,19 @@ const jumpToEvidence = async (evidence: Evidence): Promise<void> => {
   passagePanelRef.value?.scrollToParagraph(evidence.paragraphId);
 };
 
-const refreshSummary = async (): Promise<void> => {
-  const target = session.value;
-  if (!target) return;
-  const result = await getSessionSummary(db.value, target.id);
-  if (result.ok) summary.value = result.value;
-};
-
 // CR1：全部题目完成进入总结前，把会话置为 completed 并清理残留草稿；
 // 失败不阻塞总结展示（状态推进非关键路径）
 const finishSession = async (target: Session): Promise<void> => {
   const completed = await completeSession(db.value, target.id);
   if (completed.ok) session.value = completed.value;
+  const result = await getSessionSummary(db.value, target.id);
+  if (!result.ok) {
+    // CR57.d：总结读取失败给明确错误态，不回落到最后一题视图（否则「下一题」循环）
+    showError('总结读取失败，作答已保存；可从「今日」回看进度');
+    return;
+  }
+  summary.value = result.value;
   phase.value = 'summary';
-  await refreshSummary();
 };
 
 // T08：听力音频状态——bytes 只经 downloadJobs（原始 ArrayBuffer），离开题组由 AudioPlayer 卸载停止
@@ -383,7 +379,7 @@ const loadSlotContent = async (target: Session): Promise<void> => {
 
 const enterSlot = async (target: Session): Promise<void> => {
   let working = target;
-  const next = firstUnfinishedIndex(working);
+  const next = firstUnfinished(working);
   if (next === -1) {
     await finishSession(working);
     return;
@@ -478,6 +474,17 @@ const submit = async (): Promise<void> => {
   };
   const result = mode.value === 'first' ? await submitAnswer(db.value, command) : await correctAnswer(db.value, command);
   if (!result.ok) {
+    // CR11：客观题遇 STALE 自动重取最新会话（与写作路径 resync 一致），不要求用户手动刷新
+    if (result.error.code === 'STALE_SESSION') {
+      const reloaded = await loadSession(db.value, target.id);
+      if (reloaded.ok) {
+        session.value = reloaded.value;
+        commandId.value = null;
+        saveState.value = 'error';
+        saveMessage.value = '页面进度已过期，已同步最新状态，请重新提交';
+        return;
+      }
+    }
     saveState.value = 'error';
     saveMessage.value = result.error.messageZh;
     return;
@@ -531,7 +538,7 @@ const requestHint = async (): Promise<void> => {
 const advanceToNext = async (): Promise<void> => {
   const target = session.value;
   if (!target) return;
-  const next = firstUnfinishedIndex(target);
+  const next = firstUnfinished(target);
   if (next === -1) {
     await finishSession(target);
     return;
@@ -596,13 +603,21 @@ const skipCurrent = async (): Promise<void> => {
 const pause = async (): Promise<void> => {
   const target = session.value;
   if (!target || saveState.value === 'saving') return;
+  // CR6：暂停与离开同口径——先落盘全部在途草稿（客观题防抖增量 + 写作最后写入），
+  // 写作落盘失败则留在本页（WritingPage 会显示重试），不带伤离开
+  const flushed = (await writingRef.value?.flushPending()) ?? true;
+  if (!flushed) {
+    saveState.value = 'error';
+    saveMessage.value = '写作草稿尚未保存成功，请重试后再暂停';
+    return;
+  }
+  await flushPendingDraftSave();
   const result = await pauseSession(db.value, target.id);
   if (!result.ok) {
     saveState.value = 'error';
     saveMessage.value = result.error.messageZh;
     return;
   }
-  await writingRef.value?.flushPending();
   await router.push('/today');
 };
 

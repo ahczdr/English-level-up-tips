@@ -34,8 +34,7 @@ for (const viewport of viewports) {
 test('手机最窄档：练习会话页无横向溢出（点词组句最易溢出）', async ({ page }) => {
   await page.setViewportSize({ width: 360, height: 640 })
   await page.goto('/')
-  await page.getByRole('button', { name: '开始今日练习', exact: true }).click()
-  await page.getByRole('link', { name: '前往课程列表' }).click()
+  await await page.getByRole('button', { name: '选择今日练习内容', exact: true }).click()
   await page.getByRole('button', { name: '准备课程内容' }).click()
   const card = page.locator('.unit-card', { hasText: '校园社团：协议演示' })
   await expect(card).toBeVisible()
@@ -54,7 +53,7 @@ test('200% 文字缩放：CTA 可见且无横向溢出', async ({ page }) => {
   await page.evaluate(() => {
     document.documentElement.style.fontSize = '200%'
   })
-  await expect(page.getByRole('button', { name: '开始今日练习', exact: true })).toBeVisible()
+  await expect(page.getByRole('button', { name: '选择今日练习内容', exact: true })).toBeVisible()
   await assertNoHorizontalOverflow(page)
 })
 
