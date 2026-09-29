@@ -12,9 +12,10 @@
 
 ---
 
-### Task 1: 客观题草稿恢复
+## Task 1: 客观题草稿恢复
 
 **Files:**
+
 - Modify: `apps/english-practice/src/features/practice/SessionPage.vue`
 - Test: `apps/english-practice/tests/unit/writing.spec.ts` or new `apps/english-practice/tests/unit/session-drafts.spec.ts`
 
@@ -24,9 +25,10 @@
 - [ ] **Step 4: Run the focused file and existing session-flow tests**; confirm all pass.
 - [ ] **Step 5: Add Playwright coverage** for choice and order exit/re-entry, then run the focused E2E file.
 
-### Task 2: 实际学习日与复习调度
+## Task 2: 实际学习日与复习调度
 
 **Files:**
+
 - Modify: `apps/english-practice/src/data/migrations.ts`, `apps/english-practice/src/services/settings.ts`, `apps/english-practice/src/services/learning.ts`
 - Test: `apps/english-practice/tests/unit/submit.spec.ts`, `apps/english-practice/tests/unit/session-flow.spec.ts`
 
@@ -35,9 +37,10 @@
 - [ ] **Step 3: Persist the session timeZone at creation with a backward-compatible default, and use `studyDayFor(clock.now(), session.timeZone)` for Attempt and scheduler input.**
 - [ ] **Step 4: Run focused tests plus migrations/settings tests.**
 
-### Task 3: 课程目录与首批高中三年内容
+## Task 3: 课程目录与首批高中三年内容
 
 **Files:**
+
 - Create: `apps/english-practice/content/curriculum/gaokao-three-years.json`
 - Create: `apps/english-practice/src/domain/curriculum.ts`
 - Modify: `apps/english-practice/src/content/types.ts`, `apps/english-practice/src/features/learn/LearnPage.vue`
@@ -49,9 +52,10 @@
 - [ ] **Step 4: Implement domain parsing and render year/stage/topic labels in the course list.**
 - [ ] **Step 5: Run content preview check and curriculum tests.**
 
-### Task 4: 空库开始与课程更新
+## Task 4: 空库开始与课程更新
 
 **Files:**
+
 - Modify: `apps/english-practice/src/services/content.ts`, `apps/english-practice/src/features/learn/LearnPage.vue`, `apps/english-practice/src/features/settings/DownloadsPage.vue`
 - Test: `apps/english-practice/tests/unit/content-install.spec.ts`, new E2E course-update scenario
 
@@ -60,9 +64,10 @@
 - [ ] **Step 3: Make the empty download state route directly to `/learn`.**
 - [ ] **Step 4: Run content/download tests and the update E2E scenario.**
 
-### Task 5: 高中生移动端 UI
+## Task 5: 高中生移动端 UI
 
 **Files:**
+
 - Modify: `apps/english-practice/src/styles.css`, `apps/english-practice/src/features/today/TodayPage.vue`, `apps/english-practice/src/features/learn/LearnPage.vue`, `apps/english-practice/src/features/progress/ProgressPage.vue`, `apps/english-practice/src/app/App.vue`
 - Test: `apps/english-practice/tests/e2e/mobile-layout.spec.ts` and focused page tests
 
@@ -72,9 +77,10 @@
 - [ ] **Step 4: Improve course and progress cards** for touch, selected state, loading/empty/error/success feedback, and large text.
 - [ ] **Step 5: Run mobile E2E and inspect screenshots at 360x640, 390x844, and 768x1024.**
 
-### Task 6: Full validation and delivery notes
+## Task 6: Full validation and delivery notes
 
 **Files:**
+
 - Modify: `planning/gaokao-english/verification-log.md`, `planning/gaokao-english/device-matrix.md` only with verified automated evidence
 
 - [ ] **Step 1: Run `npm run check`.**

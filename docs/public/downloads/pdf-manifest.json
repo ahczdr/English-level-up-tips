@@ -5,7 +5,7 @@
   "scope": "Main manuscript, glossary, and toolkit; archive and word lists remain online-only.",
   "inspector": {
     "name": "pypdf",
-    "version": "6.16.2"
+    "version": "6.10.0"
   },
   "outputs": {
     "zh-CN": {
@@ -13,10 +13,10 @@
       "language": "zh-CN",
       "pages": 339,
       "chapters": 62,
-      "bytes": 4701109,
-      "sha256": "238235821e2e29fe79f78204661a25a26272d2a4cf63ece04cc50af396b4e8d1",
+      "bytes": 4701205,
+      "sha256": "88794d828594257301f6adcee2f8c240a83da9e7947403e1139e245738b1b53b",
       "sourceEpubSha256": "0be770bfe1dbdb1635b6d23d32c958e0931a2047aed9b9856767f741318341cb",
-      "semanticSha256": "71161ff6e2f5b2eac0fa587ebb3b8d944a4ccc090ac0fe7565c747061f0d0323",
+      "semanticSha256": "bcb34c7ef7f338ddd1a580db638b062dae68c371de9731adeca5bf54aed8aa08",
       "outlineEntries": 779,
       "linkAnnotations": 792,
       "images": 21,
@@ -48,10 +48,10 @@
       "language": "en-US",
       "pages": 381,
       "chapters": 62,
-      "bytes": 3895358,
-      "sha256": "212e89dd801b340387cfb0084b739a8bf67d27d87b2c2e3711dcb3cf92dda822",
+      "bytes": 3895430,
+      "sha256": "727464c05a96956cd293961e1af360d6f4bb9d6ea2998b6746b66bb67ae77fc7",
       "sourceEpubSha256": "db2dd190d6de53442ed8c1aca8c9c37ea3b593a6433d3b7b6cfd2bb152b5aa23",
-      "semanticSha256": "f814de3aaedb337b90bef6baa8947da8eeeb12c321e48755c3047481768f09a1",
+      "semanticSha256": "678854ea18a2d70aa8260eca333bf4a411d67c2f8142c2a637399a2597749940",
       "outlineEntries": 779,
       "linkAnnotations": 810,
       "images": 21,

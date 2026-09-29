@@ -14,7 +14,7 @@
     "check:content": "node scripts/check-content.mjs",
     "check:navigation": "node scripts/sync-navigation.mjs --check && node scripts/sync-word-lists.mjs --check && node scripts/sync-public-assets.mjs --check",
     "check:readme": "node scripts/sync-readme.mjs --check",
-    "check:format": "markdownlint-cli2 \"**/*.md\" \"#node_modules\" \"#docs/.vitepress/dist\"",
+    "check:format": "markdownlint-cli2 \"**/*.md\" \"#**/node_modules\" \"#docs/.vitepress/dist\"",
     "check:bundle": "node scripts/check-build-size.mjs",
     "book:build": "node scripts/build-epub.mjs",
     "book:check": "node scripts/build-epub.mjs --check",

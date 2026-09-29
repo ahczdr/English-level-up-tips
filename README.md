@@ -180,10 +180,6 @@ AI 可以降低探索、学习和创造的门槛，却不能替你建立信誉�
 - 贡献前请阅读 [贡献指南](https://github.com/byoungd/up/blob/master/CONTRIBUTING.md) 和 [行为准则](https://github.com/byoungd/up/blob/master/CODE_OF_CONDUCT.md)。
 - 产品与服务条目的核验日期以各自页面和 [第三方素材与引用](https://github.com/byoungd/up/blob/master/ATTRIBUTIONS.md) 中的记录为准；产品能力、可用性与合规范围仍以官方页面、正式协议和实际验收为准，过期内容欢迎提交 issue。
 
-## 仓库结构
-
-本仓库包含两部分：书稿站点（根目录，VitePress 构建）与独立的练习应用 `apps/english-practice/`（高考英语练习 PWA，自带依赖与 CI，见 `apps/english-practice/` 内文档）。
-
 ## 在线阅读
 
 - [GitHub Pages](https://byoungd.github.io/up/)

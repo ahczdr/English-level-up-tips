@@ -267,14 +267,14 @@ export function scheduleReview(
 
 | 服务函数 | 输入 | 输出 | 关键约束 |
 | --- | --- | --- | --- |
-| createSession | `{unitId: string|null, minutes:5|10|15|25, profileId:string}` | `Promise<Result<Session>>` | 固定计划后持久化，重开不重新抽题 |
+| createSession | `{unitId: string\|null, minutes:5\|10\|15\|25, profileId:string}` | `Promise<Result<Session>>` | 固定计划后持久化，重开不重新抽题 |
 | loadSession | `sessionId:string` | `Promise<Result<Session>>` | 检查绑定包版本可用 |
 | revealHint | `{sessionId,slotId,hint,expectedRevision}` | `Promise<Result<Session>>` | 保存 assistance 后才显示提示 |
 | submitAnswer | `SubmitCommand` | `Promise<Result<Attempt>>` | D05 原子提交与幂等 |
 | correctAnswer | `SubmitCommand` | `Promise<Result<Attempt>>` | first 已存在，写 correction，不改首次成绩 |
 | skipSlot | `{sessionId,slotId,expectedRevision}` | `Promise<Result<Session>>` | 跳过不是答错 |
 | saveDraft | `{sessionId,itemId,text,expectedRevision}` | `Promise<Result<{revision:number}>>` | 乐观并发保存，禁止旧请求覆盖新文本 |
-| finalizeWriting | `{id,sessionId,itemId,phase:'first'|'revision',selfCheck:boolean[]}` | `Promise<Result<{versionId:string}>>` | id 幂等，先保存最后正文再冻结版本 |
+| finalizeWriting | `{id,sessionId,itemId,phase:'first'\|'revision',selfCheck:boolean[]}` | `Promise<Result<{versionId:string}>>` | id 幂等，先保存最后正文再冻结版本 |
 | downloadPack | `{id,version}` | `Promise<Result<{ready:boolean}>>` | 完整校验后才 ready |
 | exportBackup | 无 | `Promise<Result<Blob>>` | 可移植记录包，排除缓存音频 |
 | validateBackup | `file:File` | `Promise<Result<{records:number,packRefs:string[]}>>` | 不改库，仅校验和预览 |
