@@ -1,0 +1,30 @@
+{
+  "id": "anhui-gaokao-2014-q27",
+  "familyId": "anhui-2014-adjective-choice",
+  "skillIds": ["vocabulary.adjective", "sentence.collocation"],
+  "level": "G1",
+  "section": "vocabulary",
+  "reviewMode": "recognition",
+  "promptZh": "选择最合适的形容词完成句子（2014 年安徽卷第 27 题）。",
+  "resourceId": null,
+  "estimatedSeconds": 45,
+  "sourceIds": ["anhui-gaokao-2014-official"],
+  "explanation": {
+    "summaryZh": "良好的面试表现使说话者对未来和自己能做的事情感到乐观，应用 optimistic。",
+    "ruleZh": "形容词要同时符合句法搭配和上下文语义。",
+    "evidence": [],
+    "distractors": [
+      { "optionId": "a", "reasonZh": "puzzled 表示困惑的，与 good performance 的结果不符。" },
+      { "optionId": "b", "reasonZh": "sensitive 表示敏感的，不表示对未来的积极态度。" },
+      { "optionId": "d", "reasonZh": "embarrassed 表示尴尬的，与语境相反。" }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    { "id": "a", "text": "puzzled" },
+    { "id": "b", "text": "sensitive" },
+    { "id": "c", "text": "optimistic" },
+    { "id": "d", "text": "embarrassed" }
+  ],
+  "answerOptionId": "c"
+}

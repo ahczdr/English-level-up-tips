@@ -27,6 +27,7 @@ export interface ProgressAchievement { id: string; unlockedAt: string }
 export interface ProgressWritingVersion {
   itemId: string
   createdAt: string
+  studyDay?: string
   versionCount: number
   checklistCount: number
   firstText: string
@@ -127,7 +128,7 @@ export function summarizeProgress(input: ProgressInput): ProgressSummary {
   // 学习日：有效任务覆盖的学习日（客观/辅助首次作答与写作成品都算完成当日）；漏学不清零，累计保留
   const daySources = [
     ...input.attempts.filter((row) => row.phase === 'first' && row.kind !== 'writing' && row.gradePossible > 0).map((row) => row.studyDay),
-    ...input.writingVersions.map((version) => version.createdAt.slice(0, 10)),
+    ...input.writingVersions.map((version) => version.studyDay ?? version.createdAt.slice(0, 10)),
   ]
   const studyDays = [...new Set(daySources)].sort()
   const todayMarked = studyDays.includes(input.today)

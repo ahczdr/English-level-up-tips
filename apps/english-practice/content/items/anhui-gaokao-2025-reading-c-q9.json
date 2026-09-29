@@ -1,0 +1,30 @@
+{
+  "id": "anhui-gaokao-2025-reading-c-q9",
+  "familyId": "anhui-gaokao-2025-reading-c",
+  "skillIds": ["reading.inference"],
+  "level": "G2",
+  "section": "reading",
+  "reviewMode": "transfer",
+  "promptZh": "What were the Canadian journalist and other campaigners trying to do?",
+  "resourceId": "anhui-gaokao-2025-reading-c",
+  "estimatedSeconds": 50,
+  "sourceIds": ["anhui-gaokao-2025-eol"],
+  "explanation": {
+    "summaryZh": "他们反对为了道路建设破坏社区空间，目标是让城市适合生活，而不只是方便汽车快速通过。",
+    "ruleZh": "推断题要把人物行动与引用中的价值判断合并理解。",
+    "evidence": [{ "resourceId": "anhui-gaokao-2025-reading-c", "paragraphId": "p2", "quote": "New York as a decent place to live, and not just rush through" }],
+    "distractors": [
+      { "optionId": "b", "reasonZh": "文章没有把活动目标归结为文化多样性。" },
+      { "optionId": "c", "reasonZh": "活动并非为帮助贫困家庭。" },
+      { "optionId": "d", "reasonZh": "他们反对用高速路替代公园，而不是推动高速路建设。" }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    { "id": "a", "text": "Keep their cities livable." },
+    { "id": "b", "text": "Promote cultural diversity." },
+    { "id": "c", "text": "Help the needy families." },
+    { "id": "d", "text": "Make expressways accessible." }
+  ],
+  "answerOptionId": "a"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "anhui-gaokao-2025-reading-a-q1",
+  "familyId": "anhui-gaokao-2025-reading-a",
+  "skillIds": ["reading.detail"],
+  "level": "G2",
+  "section": "reading",
+  "reviewMode": "transfer",
+  "promptZh": "2018 年全球交通排放中，道路交通工具占多少？",
+  "resourceId": "anhui-gaokao-2025-reading-a",
+  "estimatedSeconds": 55,
+  "sourceIds": ["anhui-gaokao-2025-eol"],
+  "explanation": {
+    "summaryZh": "道路客运占 45.1%，道路货运占 29.4%，合计为 74.5%。",
+    "ruleZh": "图表题先识别题干对象，再合并同一大类下的分项数据。",
+    "evidence": [{ "resourceId": "anhui-gaokao-2025-reading-a", "paragraphId": "p2", "quote": "ROAD (PASSENGER) 45.1%" }],
+    "distractors": [
+      { "optionId": "a", "reasonZh": "11.6% 是飞机排放占比。" },
+      { "optionId": "b", "reasonZh": "45.1% 只是道路客运这一分项。" },
+      { "optionId": "d", "reasonZh": "86.1% 不是图表中道路交通工具的合计值。" }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    { "id": "a", "text": "11.6%." },
+    { "id": "b", "text": "45.1%." },
+    { "id": "c", "text": "74.5%." },
+    { "id": "d", "text": "86.1%." }
+  ],
+  "answerOptionId": "c"
+}

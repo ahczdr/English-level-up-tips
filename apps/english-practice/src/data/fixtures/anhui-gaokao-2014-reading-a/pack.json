@@ -1,0 +1,1154 @@
+{
+  "schemaVersion": 1,
+  "id": "anhui-gaokao-2014-reading-a",
+  "version": "0.1.0",
+  "titleZh": "2014 年安徽高考英语阅读理解（结构化草稿）",
+  "status": "draft",
+  "author": "个人学习工具资料导入",
+  "reviewer": null,
+  "reviewedAt": null,
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sources": [
+    {
+      "id": "anhui-gaokao-2014-official",
+      "kind": "official-reference",
+      "title": "安徽省教育招生考试院：2014年安徽高考英语试题及参考答案",
+      "url": "https://apps.eol.cn/2633/article/54443/10",
+      "rightsNote": "公开历史附件，仅作为个人学习资料来源留档；未确认再分发授权，不进入公开发布题库。"
+    }
+  ],
+  "assets": [
+    {
+      "id": "anhui-gaokao-2014-anhui-gaokao-english-official",
+      "path": "assets/anhui-gaokao/2014-anhui-gaokao-english-official.jpg",
+      "mime": "image/jpeg",
+      "bytes": 790608,
+      "sha256": "51e35e2142e42572d877a0720ba0a4f0055ee1800dd891a262fa606b7760eff0"
+    }
+  ],
+  "resources": [
+    {
+      "id": "anhui-gaokao-2014-reading-a",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Make your parents and teachers happy! Are you having problems finishing your homework on time? Do you avoid tidying your room until your mum shouts at you? You don't need to worry if you buy a Mr. Helping Hand personal robot. Mr. H can be programmed to organize your homework. Your own personal robot will follow you around, putting away books and objects that you have left on the floor or bed. Mr. H also has these features: weighs only 500 grams; includes long-lasting batteries; comes with a 5-year guarantee. Originally sold for $499. NOW ONLY $299."
+        },
+        {
+          "id": "p2",
+          "text": "This is a watch that James Bond would be proud to wear! This is NOT a watch for ordinary people! Your electronic PENGO WATCH CONTROL acts as a remote control for TVs and videos, gives you a daily weather forecast, reminds you when to hand in your homework, sets off a silent warning alarm when parents or teachers are near. Besides, your PENGO WATCH CONTROL will always tell you the time accurately! Originally sold for $199. NOW ONLY $99. For further information, click here."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-b",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Recordings of angry bees are enough to send big, tough African elephants running away, a new study says. Beehives—either recorded or real—may even prevent elephants from damaging farmers' crops. In 2002, scientist Lucy King and her team found that elephants avoid certain trees with bees living in them. Today, Lucy wants to see if African honeybees might discourage elephants from eating crops. But before she asked farmers to go to the trouble of setting up beehives on their farms, she needed to find out if the bees would scare elephants away."
+        },
+        {
+          "id": "p2",
+          "text": "Lucy found a wild beehive inside a tree in northern Kenya and set up a recorder. Then she threw a stone into the beehive, which burst into life. Lucy and her assistant hid in their car until the angry bees had calmed down. Next, Lucy searched out elephant families in Samburu National Reserve in northern Kenya and put a speaker in a tree close to each family."
+        },
+        {
+          "id": "p3",
+          "text": "From a distance, Lucy switched on the pre-recorded sound of angry bees while at the same time recording elephants with a video camera. Half the elephant groups fled the area within ten seconds. Out of a total of 17 groups, only one group ignored the sound of the angry bees. Lucy reported that all the young elephants immediately ran to their mothers to hide under them. When she played the sound of a real swarm of the angry bees to many of the same elephant families, the animals were undisturbed. Even after four minutes, most of the groups stayed in one place."
+        },
+        {
+          "id": "p4",
+          "text": "Lucy is now studying whether the elephants will continue to avoid the sound of angry bees after hearing it several times. She hasn't tested enough groups yet to know, but her initial results were promising enough to begin trials with farmers. She has now begun placing speakers in the fields so if elephants are frightened away."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-c",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "You are the collector in the gallery of your life. You collect. You might not mean to but you do. One out of three people collects tangible things such as cats, photos and noisy toys. There are among some 40 collections that are being shown at The Museum Of—the first of several new museums which, over the next two years, will exhibit the objects accumulated by unknown collectors. In doing so, they will promote a popular culture of museums, not what museums normally represent."
+        },
+        {
+          "id": "p2",
+          "text": "Some of the collections are fairly common—records, model houses. Others are strangely beautiful—branches that have fallen from trees, for example. But they all reveal a lot of things: ask someone what they collect and their answers will tell you who they are. Others on the way include The Museum of Collectors and The Museum of Me. These new ones, it is hoped, will build on the success of The Museum Of. The thinkers behind the project want to explore why people collect, and what it means to do so. They hope that visitors who may not have considered themselves collectors will begin to see they, too, collect."
+        },
+        {
+          "id": "p3",
+          "text": "Some collectors say they started or stopped making collections at important points: the beginning or end of adolescence; \"it's a growing-up thing; you stop when you grow up,\" says one. Other painful times are mentioned, such as the end of a relationship. For some life can seem so uncontrollable that a steady, serial collection is comforting."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-d",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Should we allow modern buildings to be built next to older buildings in a historic area of a city? In order to answer this question, we must first examine whether people really want to preserve the historical feel of an area. Not all historical buildings are attractive. However, there may be other reasons—for example, economic reasons—why they should be preserved. So, let us assume that historical buildings are both attractive and important to the majority of people. What should we do then if a new building is needed?"
+        },
+        {
+          "id": "p2",
+          "text": "In my view, new architectural styles can exist perfectly well alongside an older style. Indeed, there are many examples in my own home town of Tours where modern designs have been placed very successfully next to old buildings. As long as the building in question is pleasing and does not dominate its surroundings too much, it often improves the attractiveness of the area."
+        },
+        {
+          "id": "p3",
+          "text": "It is true that there are examples of new buildings which have spoilt the area they are in, but the same can be said of some old buildings too. Yet people still speak against new buildings in historic areas. I think this is simply because people are naturally conservative and do not like change."
+        },
+        {
+          "id": "p4",
+          "text": "Although we have to respect people's feelings as well as old buildings, I believe that it is the duty of the architect and planner to move things forward. If we always reproduced what was before, we would still be living in caves. Thus, I would argue against copying previous architectural styles and choose something fresh and different, even though that might be the more risky choice."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-e",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "You may not have heard of Ashoka, but for the past 27 years, this association, founded by Bill Drayton, has provided money and encouragement and encouraged small businesses. To support worthy causes, Ashoka provides money for the world's most promising changemakers, seeking to solve urgent problems and create a real world in which every citizen is a changemaker."
+        },
+        {
+          "id": "p2",
+          "text": "Drayton believes that anyone can become an agent for change. The important thing is to simply give yourself permission. If you see a problem that you care about, you can help solve it. The young in particular are willing to accept this concept because at heart every child wants to grow into a happy, healthy, contributing adult. In fact, it is many young people's ambition to set up programmes or businesses that improve social conditions. An excellent example is an Ashoka project started in 1995 in Dhaka, which handled the rubbish problem facing the city, helped local farmers and provided an income for poor people there."
+        },
+        {
+          "id": "p3",
+          "text": "When Masqood and Iftikhar began to study the problem of all the uncollected rubbish that filled Dhaka's streets, attracting rats and disease, they discovered that 80% of it was natural waste. So they educated the poor people in the city to compost the natural waste. They knew that they would have a market for the end product because local farmers were struggling with chemical fertilizers which were expensive and had reduced the natural minerals in soil over the years. At first, they were refused, but once the farmers were educated that there was money to be made, the project took off. In 2009 sales were $14,000."
+        },
+        {
+          "id": "p4",
+          "text": "Drayton is optimistic that in years to come Ashoka will be making really serious, practical progress in bringing about social change by changing the way we look at economic development."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    }
+  ],
+  "items": [
+    {
+      "id": "anhui-gaokao-2014-reading-a-q56",
+      "familyId": "anhui-2014-reading-a",
+      "skillIds": [
+        "reading.detail",
+        "vocabulary.context"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 A 回答第 56 题。",
+      "resourceId": "anhui-gaokao-2014-reading-a",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "Mr. H 能帮助学生整理作业，因此可以按时完成作业。",
+        "ruleZh": "细节题要回到广告原文定位功能描述。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-a",
+            "paragraphId": "p1",
+            "quote": "organize your homework"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "stop using batteries"
+        },
+        {
+          "id": "b",
+          "text": "finish your homework on time"
+        },
+        {
+          "id": "c",
+          "text": "remember your teachers' instructions"
+        },
+        {
+          "id": "d",
+          "text": "get your room tidied on your own"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-a-q57",
+      "familyId": "anhui-2014-reading-a",
+      "skillIds": [
+        "reading.detail",
+        "vocabulary.context"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 A 回答第 57 题。",
+      "resourceId": "anhui-gaokao-2014-reading-a",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "PENGO 手表能提供每日天气预报，所以可以帮助使用者了解天气。",
+        "ruleZh": "广告细节题应将选项与产品功能逐项匹配。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-a",
+            "paragraphId": "p2",
+            "quote": "gives you a daily weather forecast"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "repair your TV"
+        },
+        {
+          "id": "b",
+          "text": "organize your homework"
+        },
+        {
+          "id": "c",
+          "text": "be a James Bond"
+        },
+        {
+          "id": "d",
+          "text": "know what the weather is like"
+        }
+      ],
+      "answerOptionId": "d"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-a-q58",
+      "familyId": "anhui-2014-reading-a",
+      "skillIds": [
+        "reading.detail",
+        "vocabulary.number"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 A 回答第 58 题。",
+      "resourceId": "anhui-gaokao-2014-reading-a",
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "Mr. H 的促销价格是 299 美元。",
+        "ruleZh": "数字细节题要区分原价和促销价。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-a",
+            "paragraphId": "p1",
+            "quote": "NOW ONLY $299"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "$499"
+        },
+        {
+          "id": "b",
+          "text": "$299"
+        },
+        {
+          "id": "c",
+          "text": "$199"
+        },
+        {
+          "id": "d",
+          "text": "$99"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-a-q59",
+      "familyId": "anhui-2014-reading-a",
+      "skillIds": [
+        "reading.text-type",
+        "reading.source"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 A 回答第 59 题。",
+      "resourceId": "anhui-gaokao-2014-reading-a",
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "两段文字都是面向年轻人的产品广告，最可能发布在青少年网站。",
+        "ruleZh": "推断文本出处时，结合受众、文体和广告语言判断。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-a",
+            "paragraphId": "p1",
+            "quote": "Make your parents and teachers happy"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "On a notice board"
+        },
+        {
+          "id": "b",
+          "text": "In a company brochure"
+        },
+        {
+          "id": "c",
+          "text": "On a teenage website"
+        },
+        {
+          "id": "d",
+          "text": "In a college newspaper"
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-b-q60",
+      "familyId": "anhui-2014-reading-b",
+      "skillIds": [
+        "reading.detail",
+        "vocabulary.context"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 B 回答第 60 题。",
+      "resourceId": "anhui-gaokao-2014-reading-b",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "文章多次说明大象会躲避愤怒的蜜蜂，因此它们可能害怕愤怒的蜜蜂。",
+        "ruleZh": "概括细节时要结合文章开头、实验结果和结尾的共同信息。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-b",
+            "paragraphId": "p1",
+            "quote": "angry bees"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "loud noises"
+        },
+        {
+          "id": "b",
+          "text": "some crops"
+        },
+        {
+          "id": "c",
+          "text": "video cameras"
+        },
+        {
+          "id": "d",
+          "text": "angry bees"
+        }
+      ],
+      "answerOptionId": "d"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-b-q61",
+      "familyId": "anhui-2014-reading-b",
+      "skillIds": [
+        "reading.detail",
+        "reading.inference"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 B 回答第 61 题。",
+      "resourceId": "anhui-gaokao-2014-reading-b",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "Lucy 说明还没有测试足够多的象群，因此需要继续测试。",
+        "ruleZh": "人物信息题要定位人物的直接陈述和研究进展。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-b",
+            "paragraphId": "p4",
+            "quote": "She hasn't tested enough groups yet"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "works by herself in Africa"
+        },
+        {
+          "id": "b",
+          "text": "needs to test more elephant groups"
+        },
+        {
+          "id": "c",
+          "text": "has stopped elephants eating crops"
+        },
+        {
+          "id": "d",
+          "text": "has got farmers to set up beehives on their farms"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-b-q62",
+      "familyId": "anhui-2014-reading-b",
+      "skillIds": [
+        "reading.purpose",
+        "reading.detail"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 B 回答第 62 题。",
+      "resourceId": "anhui-gaokao-2014-reading-b",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "Lucy 把石头扔进蜂巢，使蜜蜂活跃起来，以便录下蜜蜂的声音。",
+        "ruleZh": "目的题要关注动作前后的实验步骤和研究目标。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-b",
+            "paragraphId": "p2",
+            "quote": "set up a recorder"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "To record the sound of bees."
+        },
+        {
+          "id": "b",
+          "text": "To make a video of elephants."
+        },
+        {
+          "id": "c",
+          "text": "To see if elephants would run away."
+        },
+        {
+          "id": "d",
+          "text": "To find out more about the behavior of bees."
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-b-q63",
+      "familyId": "anhui-2014-reading-b",
+      "skillIds": [
+        "reading.detail",
+        "reading.inference"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 B 回答第 63 题。",
+      "resourceId": "anhui-gaokao-2014-reading-b",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "研究团队发现大象会避开有蜜蜂生活的树。",
+        "ruleZh": "判断正误题要回到文章中的明确事实，避免把实验条件扩大。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-b",
+            "paragraphId": "p1",
+            "quote": "elephants avoid certain trees with bees living in them"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Young elephants ignore African honeybees."
+        },
+        {
+          "id": "b",
+          "text": "Waterfalls can make elephants stay in one place."
+        },
+        {
+          "id": "c",
+          "text": "Elephants do not go near trees with bees living in them."
+        },
+        {
+          "id": "d",
+          "text": "Farmers do not allow Lucy to conduct tests in their fields."
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-c-q64",
+      "familyId": "anhui-2014-reading-c",
+      "skillIds": [
+        "reading.detail",
+        "reading.inference"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 C 回答第 64 题。",
+      "resourceId": "anhui-gaokao-2014-reading-c",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "新博物馆展示不知名收藏家的收藏品，体现普通人的收藏。",
+        "ruleZh": "推断博物馆作用时要抓住 exhibit unknown collectors' objects 的信息。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-c",
+            "paragraphId": "p1",
+            "quote": "objects accumulated by unknown collectors"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "By collecting more tangible things."
+        },
+        {
+          "id": "b",
+          "text": "By showing what ordinary people have collected."
+        },
+        {
+          "id": "c",
+          "text": "By correcting what museums normally represent."
+        },
+        {
+          "id": "d",
+          "text": "By accumulating 40 collections two years from now."
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-c-q65",
+      "familyId": "anhui-2014-reading-c",
+      "skillIds": [
+        "reading.detail",
+        "reading.inference"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 C 回答第 65 题。",
+      "resourceId": "anhui-gaokao-2014-reading-c",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "收藏品和收藏者的回答可以揭示收藏者是谁。",
+        "ruleZh": "细节题要结合 reveal 和 tell you who they are 的直接表述。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-c",
+            "paragraphId": "p2",
+            "quote": "tell you who they are"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Who they are."
+        },
+        {
+          "id": "b",
+          "text": "How old they are."
+        },
+        {
+          "id": "c",
+          "text": "Where they were born."
+        },
+        {
+          "id": "d",
+          "text": "Why they might mean to collect."
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-c-q66",
+      "familyId": "anhui-2014-reading-c",
+      "skillIds": [
+        "reading.main-idea",
+        "reading.purpose"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 C 回答第 66 题。",
+      "resourceId": "anhui-gaokao-2014-reading-c",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "新博物馆的策划者想探索人们收藏的原因及其意义。",
+        "ruleZh": "目的题要定位作者对项目目标的明确说明。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-c",
+            "paragraphId": "p2",
+            "quote": "explore why people collect"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "To help people sell their collections."
+        },
+        {
+          "id": "b",
+          "text": "To encourage more people to collect."
+        },
+        {
+          "id": "c",
+          "text": "To study the significance of collecting."
+        },
+        {
+          "id": "d",
+          "text": "To find out why people visit museums."
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-c-q67",
+      "familyId": "anhui-2014-reading-c",
+      "skillIds": [
+        "reading.detail",
+        "reading.inference"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 C 回答第 67 题。",
+      "resourceId": "anhui-gaokao-2014-reading-c",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "文中收藏者说长大后会停止收藏，因此可能在成年时停止。",
+        "ruleZh": "根据最后一段的 growing-up 线索进行同义转换。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-c",
+            "paragraphId": "p3",
+            "quote": "you stop when you grow up"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "become adults"
+        },
+        {
+          "id": "b",
+          "text": "feel happy with life"
+        },
+        {
+          "id": "c",
+          "text": "are ready for a relationship"
+        },
+        {
+          "id": "d",
+          "text": "feel life to be uncontrollable"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-d-q68",
+      "familyId": "anhui-2014-reading-d",
+      "skillIds": [
+        "reading.detail",
+        "reading.argument"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 D 回答第 68 题。",
+      "resourceId": "anhui-gaokao-2014-reading-d",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "作者指出并非所有历史建筑都具有吸引力。",
+        "ruleZh": "首段细节题可直接根据 not all 的限定判断。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-d",
+            "paragraphId": "p1",
+            "quote": "Not all historical buildings are attractive"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Some of them are not attractive."
+        },
+        {
+          "id": "b",
+          "text": "Most of them are too expensive to preserve."
+        },
+        {
+          "id": "c",
+          "text": "They are more pleasing than modern buildings."
+        },
+        {
+          "id": "d",
+          "text": "They have nothing to do with the historical feel of an area."
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-d-q69",
+      "familyId": "anhui-2014-reading-d",
+      "skillIds": [
+        "reading.detail",
+        "reading.argument"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 D 回答第 69 题。",
+      "resourceId": "anhui-gaokao-2014-reading-d",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "作者承认有些旧建筑也破坏了所在区域，因此选项 C 符合原文。",
+        "ruleZh": "判断题要区分作者提出的普遍结论和带条件的建议。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-d",
+            "paragraphId": "p3",
+            "quote": "some old buildings too"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "We should reproduce the same old buildings."
+        },
+        {
+          "id": "b",
+          "text": "Buildings should not dominate their surroundings."
+        },
+        {
+          "id": "c",
+          "text": "Some old buildings have spoilt the area they are in."
+        },
+        {
+          "id": "d",
+          "text": "No one understands why people speak against new buildings."
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-d-q70",
+      "familyId": "anhui-2014-reading-d",
+      "skillIds": [
+        "reading.vocabulary-in-context",
+        "reading.inference"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 D 回答第 70 题。",
+      "resourceId": "anhui-gaokao-2014-reading-d",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "move things forward 指推动建筑发展，选择新的建筑风格。",
+        "ruleZh": "词义猜测题要结合后一句反对复制过去风格的解释。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-d",
+            "paragraphId": "p4",
+            "quote": "choose something fresh and different"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "destroy old buildings"
+        },
+        {
+          "id": "b",
+          "text": "put things in a different place"
+        },
+        {
+          "id": "c",
+          "text": "choose new architectural styles"
+        },
+        {
+          "id": "d",
+          "text": "respect people's feelings for historical buildings"
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-d-q71",
+      "familyId": "anhui-2014-reading-d",
+      "skillIds": [
+        "reading.main-idea",
+        "reading.argument"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 D 回答第 71 题。",
+      "resourceId": "anhui-gaokao-2014-reading-d",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "全文围绕历史区域能否建现代建筑展开，作者支持在条件合适时建设现代建筑。",
+        "ruleZh": "主旨题要综合首段问题、主体论证和末段观点。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-d",
+            "paragraphId": "p4",
+            "quote": "argue against copying previous architectural styles"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "To explain why people dislike change."
+        },
+        {
+          "id": "b",
+          "text": "To warn that we could end up living in caves."
+        },
+        {
+          "id": "c",
+          "text": "To admit how new buildings have ruined their surroundings."
+        },
+        {
+          "id": "d",
+          "text": "To argue that modern buildings can be built in historic areas."
+        }
+      ],
+      "answerOptionId": "d"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-e-q72",
+      "familyId": "anhui-2014-reading-e",
+      "skillIds": [
+        "reading.main-idea",
+        "reading.title"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 E 回答第 72 题。",
+      "resourceId": "anhui-gaokao-2014-reading-e",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "文章介绍 Ashoka 支持改变社会的行动者及其项目，changemakers 最能概括全文。",
+        "ruleZh": "标题题要覆盖机构理念、案例和结尾观点，不能只概括一个案例。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-e",
+            "paragraphId": "p1",
+            "quote": "world's most promising changemakers"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Changemakers"
+        },
+        {
+          "id": "b",
+          "text": "Businessmen"
+        },
+        {
+          "id": "c",
+          "text": "Social Conditions"
+        },
+        {
+          "id": "d",
+          "text": "Rubbish Problem"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-e-q73",
+      "familyId": "anhui-2014-reading-e",
+      "skillIds": [
+        "reading.reference",
+        "reading.detail"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 E 回答第 73 题。",
+      "resourceId": "anhui-gaokao-2014-reading-e",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "第三段中的 them 指前文提到的 Dhaka 的贫困人口。",
+        "ruleZh": "代词指代题要根据最近的语法位置和上下文意义确定先行词。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-e",
+            "paragraphId": "p3",
+            "quote": "the poor people in the city"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "the local farmers"
+        },
+        {
+          "id": "b",
+          "text": "Masqood and Iftikhar"
+        },
+        {
+          "id": "c",
+          "text": "Drayton and his team"
+        },
+        {
+          "id": "d",
+          "text": "the poor people in Dhaka"
+        }
+      ],
+      "answerOptionId": "d"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-e-q74",
+      "familyId": "anhui-2014-reading-e",
+      "skillIds": [
+        "reading.inference",
+        "reading.main-idea"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 E 回答第 74 题。",
+      "resourceId": "anhui-gaokao-2014-reading-e",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "Ashoka 的理念是普通人都可以通过解决关心的问题来成为改变者，改善社会状况符合这一点。",
+        "ruleZh": "推断题要把抽象理念与文中 Dhaka 案例联系起来。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-e",
+            "paragraphId": "p2",
+            "quote": "improve social conditions"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "considers Drayton's concept"
+        },
+        {
+          "id": "b",
+          "text": "gets permission from Ashoka"
+        },
+        {
+          "id": "c",
+          "text": "tries to improve social conditions"
+        },
+        {
+          "id": "d",
+          "text": "is a young, happy and healthy adult"
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-e-q75",
+      "familyId": "anhui-2014-reading-e",
+      "skillIds": [
+        "reading.attitude",
+        "reading.main-idea"
+      ],
+      "level": "G1",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "根据文章 E 回答第 75 题。",
+      "resourceId": "anhui-gaokao-2014-reading-e",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "作者使用 promising、excellent 和 optimistic 等积极词语，说明其对 Ashoka 项目持积极态度。",
+        "ruleZh": "态度题要综合作者的评价词和结尾判断。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2014-reading-e",
+            "paragraphId": "p4",
+            "quote": "Drayton is optimistic"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "changing"
+        },
+        {
+          "id": "b",
+          "text": "forgiving"
+        },
+        {
+          "id": "c",
+          "text": "cautious"
+        },
+        {
+          "id": "d",
+          "text": "positive"
+        }
+      ],
+      "answerOptionId": "d"
+    }
+  ],
+  "units": [
+    {
+      "id": "anhui-gaokao-2014-reading-a",
+      "titleZh": "2014 年安徽高考英语：阅读理解",
+      "familyIds": [
+        "anhui-2014-reading-a",
+        "anhui-2014-reading-b",
+        "anhui-2014-reading-c",
+        "anhui-2014-reading-d",
+        "anhui-2014-reading-e"
+      ],
+      "itemIds": [
+        "anhui-gaokao-2014-reading-a-q56",
+        "anhui-gaokao-2014-reading-a-q57",
+        "anhui-gaokao-2014-reading-a-q58",
+        "anhui-gaokao-2014-reading-a-q59",
+        "anhui-gaokao-2014-reading-b-q60",
+        "anhui-gaokao-2014-reading-b-q61",
+        "anhui-gaokao-2014-reading-b-q62",
+        "anhui-gaokao-2014-reading-b-q63",
+        "anhui-gaokao-2014-reading-c-q64",
+        "anhui-gaokao-2014-reading-c-q65",
+        "anhui-gaokao-2014-reading-c-q66",
+        "anhui-gaokao-2014-reading-c-q67",
+        "anhui-gaokao-2014-reading-d-q68",
+        "anhui-gaokao-2014-reading-d-q69",
+        "anhui-gaokao-2014-reading-d-q70",
+        "anhui-gaokao-2014-reading-d-q71",
+        "anhui-gaokao-2014-reading-e-q72",
+        "anhui-gaokao-2014-reading-e-q73",
+        "anhui-gaokao-2014-reading-e-q74",
+        "anhui-gaokao-2014-reading-e-q75"
+      ],
+      "prerequisiteSkillIds": []
+    }
+  ]
+}

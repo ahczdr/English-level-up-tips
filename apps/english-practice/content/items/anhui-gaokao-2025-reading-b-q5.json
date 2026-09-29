@@ -1,0 +1,30 @@
+{
+  "id": "anhui-gaokao-2025-reading-b-q5",
+  "familyId": "anhui-gaokao-2025-reading-b",
+  "skillIds": ["reading.inference"],
+  "level": "G2",
+  "section": "reading",
+  "reviewMode": "transfer",
+  "promptZh": "Why did the students perform poorly in writing their first essay?",
+  "resourceId": "anhui-gaokao-2025-reading-b",
+  "estimatedSeconds": 55,
+  "sourceIds": ["anhui-gaokao-2025-eol"],
+  "explanation": {
+    "summaryZh": "教师后来意识到，学生表现差是因为“为什么写作重要”这个题目本身没有激发他们的兴趣。",
+    "ruleZh": "因果题要把结果句与后文的转折、解释句连起来，不能只根据前文猜测。",
+    "evidence": [{ "resourceId": "anhui-gaokao-2025-reading-b", "paragraphId": "p2", "quote": "the problem was the question itself" }],
+    "distractors": [
+      { "optionId": "a", "reasonZh": "原文没有说时间不够。" },
+      { "optionId": "b", "reasonZh": "原文没有把问题归因于词汇量。" },
+      { "optionId": "c", "reasonZh": "学生并非误解题目，而是认为写作本身不重要。" }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    { "id": "a", "text": "They were not given enough time." },
+    { "id": "b", "text": "They had a very limited vocabulary." },
+    { "id": "c", "text": "They misunderstood the question." },
+    { "id": "d", "text": "They had little interest in the topic." }
+  ],
+  "answerOptionId": "d"
+}

@@ -78,6 +78,319 @@ body {
   }
 }
 
+/* 高中生个人学习界面：信息先于装饰，主操作保持短、清楚、可触达。 */
+:root {
+  --ink: #18233f;
+  --muted: #68738c;
+  --primary: #5b5ce2;
+  --primary-deep: #3f43b8;
+  --primary-soft: #eeefff;
+  --accent: #ffb454;
+  --success: #16856a;
+  --surface: #ffffff;
+  --surface-soft: #f5f6fb;
+  --line: #e4e7f0;
+  --radius-lg: 1.1rem;
+  --shadow-card: 0 8px 24px rgba(38, 47, 92, 0.08);
+}
+
+body {
+  color: var(--ink);
+  background: linear-gradient(180deg, #f4f5ff 0, #fbfbfd 15rem, #fbfbfd 100%);
+}
+
+.app-header {
+  padding: 1rem max(1rem, calc((100% - 58rem) / 2));
+  border-bottom: 1px solid rgba(228, 231, 240, 0.8);
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(14px);
+}
+
+.app-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  max-width: 58rem;
+  margin: 0 auto;
+}
+
+.app-brand-mark {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, #7778f3, #4d50c8);
+  color: white;
+  font-weight: 800;
+  box-shadow: 0 6px 14px rgba(91, 92, 226, 0.28);
+}
+
+.app-header h1 {
+  color: var(--ink);
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+.app-header p {
+  margin: 0.05rem 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.2;
+}
+
+.app-main {
+  width: min(100%, 58rem);
+  margin: 0 auto;
+  padding: 1.5rem max(1rem, 3vw) 5rem;
+}
+
+.today-page,
+.learn-page,
+.progress-page,
+.settings-page,
+.downloads-page,
+.review-page,
+.onboarding-page {
+  gap: 1rem;
+}
+
+.today-page > h2,
+.learn-page > h2,
+.progress-page > h2,
+.settings-page > h1,
+.downloads-page > h2,
+.review-page > h2,
+.onboarding-page > h1 {
+  margin: 0.25rem 0 0;
+  color: var(--ink);
+  font-size: clamp(1.55rem, 4vw, 2rem);
+  letter-spacing: -0.03em;
+}
+
+.today-plan-card,
+.today-setup-card,
+.levelup-card,
+.curriculum-roadmap,
+.progress-summary,
+.progress-map,
+.progress-series,
+.writing-card,
+.download-row,
+.settings-block {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+
+.today-plan-card,
+.today-setup-card,
+.levelup-card,
+.curriculum-roadmap,
+.settings-block {
+  padding: 1.1rem;
+}
+
+.today-plan-card h3,
+.today-setup-card h3,
+.levelup-card h3,
+.settings-block h2,
+.curriculum-roadmap h3 {
+  margin: 0;
+  color: var(--ink);
+}
+
+.today-plan-card > p:first-of-type,
+.today-setup-card p,
+.levelup-card p {
+  color: var(--muted);
+}
+
+.today-plan-summary {
+  padding: 0.65rem 0.8rem;
+  border-radius: 0.7rem;
+  background: var(--primary-soft);
+  color: var(--primary-deep) !important;
+  font-weight: 700;
+}
+
+.today-plan-groups {
+  margin: 0.7rem 0 1rem;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.today-plan-card > p:last-child,
+.today-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1rem;
+  align-items: center;
+}
+
+.today-actions {
+  width: 100%;
+  padding-top: 0.25rem;
+}
+
+.app-button {
+  min-height: 48px;
+  border: 0;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #6b6ced, #4c4fc4);
+  box-shadow: 0 6px 14px rgba(91, 92, 226, 0.2);
+  font-weight: 700;
+}
+
+.app-button-secondary {
+  border: 1px solid #b9baf0;
+  background: #fff;
+  color: var(--primary-deep);
+  box-shadow: none;
+}
+
+.app-button-ghost {
+  border-color: var(--line);
+  color: var(--muted);
+  box-shadow: none;
+}
+
+.learn-link,
+.downloads-link,
+.today-plan-card a,
+.today-setup-link,
+.downloads-empty-link,
+.settings-backup-link {
+  color: var(--primary-deep);
+  font-weight: 650;
+}
+
+.curriculum-heading,
+.curriculum-year-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.25rem;
+  color: var(--primary);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.curriculum-note,
+.curriculum-level {
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  background: #fff4df;
+  color: #a96200;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.curriculum-years {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-top: 0.9rem;
+}
+
+.curriculum-year-card {
+  min-width: 0;
+  padding: 0.85rem;
+  border-radius: 0.8rem;
+  background: var(--surface-soft);
+}
+
+.curriculum-year-card p {
+  min-height: 3.2rem;
+  margin: 0.45rem 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.curriculum-year-title {
+  font-weight: 800;
+}
+
+.curriculum-unit-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.curriculum-chip {
+  padding: 0.18rem 0.4rem;
+  border-radius: 0.35rem;
+  background: #fff;
+  color: var(--primary-deep);
+  font-size: 0.72rem;
+}
+
+.learn-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  width: 100%;
+}
+
+.unit-card {
+  min-height: 74px;
+  border-color: var(--line);
+  border-radius: 0.9rem;
+  box-shadow: 0 4px 12px rgba(38, 47, 92, 0.04);
+}
+
+.unit-card[aria-pressed='true'] {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+  box-shadow: 0 0 0 3px rgba(91, 92, 226, 0.14);
+}
+
+.unit-meta {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.download-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.35rem 0.7rem;
+  padding: 0.9rem 1rem;
+}
+
+.download-title { font-weight: 750; }
+.download-status,
+.download-size,
+.download-version { color: var(--muted); font-size: 0.86rem; }
+.download-start { grid-column: 1 / -1; justify-self: start; min-height: 44px; }
+.downloads-empty-state { width: 100%; padding: 1.2rem; border: 1px dashed #bfc4dc; border-radius: 1rem; background: #fff; }
+.downloads-empty-state p { margin: 0 0 0.45rem; }
+
+@media (max-width: 680px) {
+  .curriculum-years { grid-template-columns: 1fr; }
+  .curriculum-year-card p { min-height: 0; }
+}
+
+@media (max-width: 480px) {
+  .app-main { padding: 1.15rem 1rem 4rem; }
+  .today-plan-card,
+  .today-setup-card,
+  .levelup-card,
+  .curriculum-roadmap,
+  .settings-block { padding: 0.9rem; }
+  .today-plan-card .app-button,
+  .today-actions .app-button { width: 100%; }
+  .today-plan-card > p:last-child { align-items: flex-start; }
+}
+
 /* T05 基础触屏练习界面 */
 
 .app-button {

@@ -1,0 +1,24 @@
+{
+  "id": "anhui-gaokao-2025-writing-continuation",
+  "familyId": "anhui-gaokao-2025-writing-continuation",
+  "skillIds": ["writing.coherence", "writing.organization"],
+  "level": "G2",
+  "section": "continuation",
+  "reviewMode": "transfer",
+  "promptZh": "阅读下面材料，根据其内容和所给段落开头语续写两段，使之构成一篇完整的短文。续写词数为 150 个左右。",
+  "resourceId": null,
+  "estimatedSeconds": 720,
+  "sourceIds": ["anhui-gaokao-2025-eol"],
+  "explanation": {
+    "summaryZh": "续写围绕兄弟因 Toby 产生矛盾后的和解展开，需要承接愧疚、道歉、见面和重新建立联系的情节。",
+    "ruleZh": "读后续写要承接原文冲突，围绕两个段首句推进动作、对话和情感变化，并保持人物与时态一致。",
+    "evidence": [],
+    "distractors": []
+  },
+  "kind": "writing",
+  "wordRange": [140, 170],
+  "requirementsZh": ["续写两段", "围绕兄弟和解推进情节", "衔接两个段首句", "词数 150 个左右"],
+  "openingSentences": ["I realized it was me who was at fault.", "With the biscuits my wife had made, I arrived at my brother’s door."],
+  "checklistZh": ["承接原文冲突", "人物行为有因果", "两段衔接自然", "结尾完成情感转变", "词数符合要求"],
+  "modelAnswer": "I realized it was me who was at fault. I had been so focused on keeping the party under control that I failed to consider how important Toby was to my brother during this difficult time. My pride had kept me from reaching out, and now months had passed without a proper conversation. One evening, I picked up the phone and left him a voice message, apologizing for my behavior and asking if we could meet. To my relief, he called back the next day, and we agreed to get together soon.\n\nWith the biscuits my wife had made, I arrived at my brother’s door. He opened it with a surprised smile, and for a moment, neither of us spoke. Then we hugged — something we hadn’t done since before his wife passed away. We sat on the porch with Toby resting beside us, and I handed him the box of biscuits. “Thank you,” he said quietly. We talked for hours, laughing, remembering old times, and slowly rebuilding what had been lost. As I watched Toby gently rest his head on my brother’s leg, I knew we were finally on the path to healing."
+}

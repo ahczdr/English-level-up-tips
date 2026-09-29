@@ -7,6 +7,7 @@ import type { WritingVersionBody } from '../../services/writing';
 import { loadPersonalSettings, savePersonalSettings } from '../../services/settings';
 import { summarizeProgress, SELF_EVAL_MIN, type ProgressAttempt, type ProgressInput, type ProgressWritingVersion } from '../../domain/progress';
 import { pageToday } from '../../domain/progress';
+import { studyDayFor } from '../../domain/calendar';
 import FeedbackPanel from '../../components/FeedbackPanel.vue';
 
 const props = defineProps<{
@@ -97,7 +98,7 @@ const loadState = async (): Promise<void> => {
     });
     const validAttempts = attemptRows.filter((row): row is ProgressAttempt => row !== null);
     // 跨会话合并：版本号按 (sessionId,itemId) 重置，故按 createdAt 排序取初稿/最新，版本数=记录数
-    const grouped = new Map<string, { createdAt: string; versionCount: number; checklistCount: number; firstText: string; latestText: string }>();
+    const grouped = new Map<string, { createdAt: string; studyDay?: string; versionCount: number; checklistCount: number; firstText: string; latestText: string }>();
     for (const record of await db.value.writingVersions.toArray()) {
       const body = parseVersionBody(record.content);
       const existing = grouped.get(record.itemId);
@@ -105,6 +106,7 @@ const loadState = async (): Promise<void> => {
       const isLatest = existing === undefined || record.createdAt >= existing.createdAt;
       grouped.set(record.itemId, {
         createdAt: isFirst ? record.createdAt : existing!.createdAt,
+        studyDay: isFirst ? record.studyDay : existing!.studyDay,
         versionCount: (existing?.versionCount ?? 0) + 1,
         checklistCount: (existing?.checklistCount ?? 0) + (body?.checklist?.length ?? 0),
         firstText: isFirst ? body?.content ?? '' : existing!.firstText,
@@ -114,6 +116,7 @@ const loadState = async (): Promise<void> => {
     const writingVersions: ProgressWritingVersion[] = [...grouped.entries()].map(([itemId, group]) => ({
       itemId,
       createdAt: group.createdAt,
+      studyDay: group.studyDay ?? studyDayFor(new Date(group.createdAt), settings.timeZone),
       versionCount: group.versionCount,
       checklistCount: group.checklistCount,
       firstText: group.firstText,

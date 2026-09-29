@@ -1,0 +1,30 @@
+{
+  "id": "anhui-gaokao-2025-reading-d-q14",
+  "familyId": "anhui-gaokao-2025-reading-d",
+  "skillIds": ["reading.inference"],
+  "level": "G2",
+  "section": "reading",
+  "reviewMode": "transfer",
+  "promptZh": "What does the author try to illustrate by mentioning bottled water in paragraph 4?",
+  "resourceId": "anhui-gaokao-2025-reading-d",
+  "estimatedSeconds": 50,
+  "sourceIds": ["anhui-gaokao-2025-eol"],
+  "explanation": {
+    "summaryZh": "瓶装水中的微塑料含量也远高于原先估计，进一步说明微塑料污染问题的严重性。",
+    "ruleZh": "例证作用题要看例子支持了哪一个上位观点。",
+    "evidence": [{ "resourceId": "anhui-gaokao-2025-reading-d", "paragraphId": "p4", "quote": "contains 10 to 1,000 times more microplastics than originally thought" }],
+    "distractors": [
+      { "optionId": "a", "reasonZh": "段落没有讨论塑料回收。" },
+      { "optionId": "c", "reasonZh": "文章没有说过度饮用纯净水是危险。" },
+      { "optionId": "d", "reasonZh": "例子强调污染范围和严重程度，而非具体处理难度。" }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    { "id": "a", "text": "The importance of plastic recycling." },
+    { "id": "b", "text": "The severity of the microplastic problem." },
+    { "id": "c", "text": "The danger in overusing pure water." },
+    { "id": "d", "text": "The difficulty in treating polluted water." }
+  ],
+  "answerOptionId": "b"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "anhui-gaokao-2014-reading-a-q59",
+  "familyId": "anhui-2014-reading-a",
+  "skillIds": ["reading.text-type", "reading.source"],
+  "level": "G1",
+  "section": "reading",
+  "reviewMode": "recognition",
+  "promptZh": "根据文章 A 回答第 59 题。",
+  "resourceId": "anhui-gaokao-2014-reading-a",
+  "estimatedSeconds": 45,
+  "sourceIds": ["anhui-gaokao-2014-official"],
+  "explanation": { "summaryZh": "两段文字都是面向年轻人的产品广告，最可能发布在青少年网站。", "ruleZh": "推断文本出处时，结合受众、文体和广告语言判断。", "evidence": [{ "resourceId": "anhui-gaokao-2014-reading-a", "paragraphId": "p1", "quote": "Make your parents and teachers happy" }], "distractors": [] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "On a notice board" }, { "id": "b", "text": "In a company brochure" }, { "id": "c", "text": "On a teenage website" }, { "id": "d", "text": "In a college newspaper" }],
+  "answerOptionId": "c"
+}

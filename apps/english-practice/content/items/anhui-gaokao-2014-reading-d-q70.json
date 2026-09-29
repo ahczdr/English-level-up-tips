@@ -1,0 +1,16 @@
+{
+  "id": "anhui-gaokao-2014-reading-d-q70",
+  "familyId": "anhui-2014-reading-d",
+  "skillIds": ["reading.vocabulary-in-context", "reading.inference"],
+  "level": "G1",
+  "section": "reading",
+  "reviewMode": "recognition",
+  "promptZh": "根据文章 D 回答第 70 题。",
+  "resourceId": "anhui-gaokao-2014-reading-d",
+  "estimatedSeconds": 60,
+  "sourceIds": ["anhui-gaokao-2014-official"],
+  "explanation": { "summaryZh": "move things forward 指推动建筑发展，选择新的建筑风格。", "ruleZh": "词义猜测题要结合后一句反对复制过去风格的解释。", "evidence": [{ "resourceId": "anhui-gaokao-2014-reading-d", "paragraphId": "p4", "quote": "choose something fresh and different" }], "distractors": [] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "destroy old buildings" }, { "id": "b", "text": "put things in a different place" }, { "id": "c", "text": "choose new architectural styles" }, { "id": "d", "text": "respect people's feelings for historical buildings" }],
+  "answerOptionId": "c"
+}

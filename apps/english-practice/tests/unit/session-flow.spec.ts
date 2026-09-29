@@ -67,6 +67,31 @@ describe('T05 会话推进服务', () => {
     expect(missing).toMatchObject({ ok: false, error: { code: 'NOT_FOUND' } })
   })
 
+  it('跨学习日恢复会话后，提交按实际提交日记录并调度复习', async () => {
+    const db = await openDb()
+    const created = await createSession({
+      db,
+      unitId: 'demo-school-club',
+      minutes: 2,
+      profileId: 'gaokao-common-training-v1',
+      timeZone: 'Asia/Shanghai',
+      clock: { now: () => new Date('2026-09-14T12:00:00.000Z') },
+      idGenerator: () => 'flow-cross-day',
+    })
+    if (!created.ok || created.value.kind !== 'session') throw new Error('expected session')
+    const entered = await enterCurrentSlot(db, created.value.session.id, { now: () => new Date('2026-09-15T12:00:00.000Z') })
+    if (!entered.ok) throw new Error(entered.error.messageZh)
+    const submitted = await submitAnswer(db, {
+      id: 'flow-cross-day-command',
+      sessionId: created.value.session.id,
+      slotId: entered.value.slots[0]!.id,
+      expectedRevision: entered.value.revision,
+      answer: { kind: 'choice', optionId: 'a' },
+    }, { now: () => new Date('2026-09-15T12:00:00.000Z') })
+    expect(submitted).toMatchObject({ ok: true, value: { studyDay: '2026-09-15' } })
+    expect((await db.reviewStates.toArray())[0]?.dueDay).toBe('2026-09-16')
+  })
+
   it('越界索引被拒绝且不写入', async () => {
     const db = await openDb()
     const session = await makeSession(db, 'flow-4', 2)

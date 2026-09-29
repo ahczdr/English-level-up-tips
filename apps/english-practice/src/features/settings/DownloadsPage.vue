@@ -121,7 +121,10 @@ onMounted(async () => {
       <router-link to="/backup">备份与恢复（导入备份）</router-link>
     </p>
     <p v-if="message !== ''" class="downloads-message" role="status">{{ message }}</p>
-    <p v-if="!loading && rows.length === 0" class="downloads-empty" role="status">还没有已安装的课程，请先在课程列表准备内容。</p>
+    <div v-if="!loading && rows.length === 0" class="downloads-empty-state" role="status">
+      <p class="downloads-empty">还没有已安装的课程。</p>
+      <router-link class="downloads-empty-link" to="/learn">前往课程列表，准备第一套练习</router-link>
+    </div>
     <ul class="download-list">
       <li v-for="row in rows" :key="row.packId + '@' + row.version" class="download-row">
         <span class="download-title">{{ row.titleZh }}</span>

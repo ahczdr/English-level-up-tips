@@ -418,6 +418,28 @@ describe('LearnPage 课程页', () => {
     expect(cards[0].text()).toContain('共 8 题')
   })
 
+  it('课程更新后只展示最新版本，旧版本仍保留给历史会话', async () => {
+    const older = structuredClone(pack)
+    older.version = '0.1.0'
+    const newer = structuredClone(pack)
+    newer.version = '0.2.0'
+    const db = createDatabase(`gaokao-ui-updated-${crypto.randomUUID()}`)
+    await db.open()
+    await db.packs.bulkAdd([
+      { id: older.id, version: older.version, status: 'installed', pack: older, installedAt: new Date().toISOString(), resourcesReady: true },
+      { id: newer.id, version: newer.version, status: 'installed', pack: newer, installedAt: new Date().toISOString(), resourcesReady: true },
+    ])
+    databases.push(db)
+    const router = makeRouter()
+    await router.push('/learn')
+    await router.isReady()
+    const wrapper = mount(LearnPage, { props: { db }, global: { plugins: [router] } })
+    wrappers.push(wrapper)
+    await settle()
+    expect(wrapper.findAll('.unit-card')).toHaveLength(1)
+    expect(await db.packs.count()).toBe(2)
+  })
+
   it('选择单元和时长后创建练习并进入练习页', async () => {
     const db = await openDb()
     const router = makeRouter()
@@ -461,6 +483,22 @@ describe('SessionPage 练习页', () => {
     expect(wrapper.text()).toContain('已保存')
     expect(wrapper.text()).toContain('回答正确')
     expect(await db.attempts.count()).toBe(1)
+  })
+
+  it('退出后恢复选择题草稿且不产生首次作答记录', async () => {
+    const custom = customPackWithUnit(['vocab-join-a'], ['join-context'])
+    const db = await openDb(custom)
+    await makeSession(db, 'ui-choice-draft', 2, 'unit-custom')
+    const first = await mountSession(db, 'ui-choice-draft')
+    await clickButton(first, '加入')
+    await clickButton(first, '返回')
+    await clickButton(first, '确认离开')
+    await settle()
+    first.unmount()
+
+    const second = await mountSession(db, 'ui-choice-draft')
+    expect(second.findAll('.choice-option').some((button) => button.attributes('aria-pressed') === 'true')).toBe(true)
+    expect(await db.attempts.count()).toBe(0)
   })
 
   it('答错后可订正且首次成绩不被覆盖', async () => {

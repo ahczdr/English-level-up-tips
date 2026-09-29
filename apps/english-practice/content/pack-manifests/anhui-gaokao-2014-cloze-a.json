@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "anhui-gaokao-2014-cloze-a",
+  "version": "0.1.0",
+  "titleZh": "2014 年安徽高考英语完形填空（结构化草稿）",
+  "status": "draft",
+  "author": "个人学习工具资料导入",
+  "reviewer": null,
+  "reviewedAt": null,
+  "profileIds": ["gaokao-common-training-v1"],
+  "sourceIds": ["anhui-gaokao-2014-official"],
+  "assetIds": ["anhui-gaokao-2014-anhui-gaokao-english-official"],
+  "resourceIds": ["anhui-gaokao-2014-cloze-orlando"],
+  "itemIds": ["anhui-gaokao-2014-cloze-orlando"],
+  "unitIds": ["anhui-gaokao-2014-cloze-a"]
+}

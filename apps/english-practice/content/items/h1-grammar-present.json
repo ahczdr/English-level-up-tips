@@ -1,0 +1,16 @@
+{
+  "id": "h1-grammar-present",
+  "familyId": "h1-present",
+  "skillIds": ["grammar.tense", "grammar.agreement"],
+  "level": "G0",
+  "section": "grammar",
+  "reviewMode": "recall",
+  "promptZh": "选择正确的谓语形式：She ___ to school by bus every day.",
+  "resourceId": null,
+  "estimatedSeconds": 50,
+  "sourceIds": ["original-demo"],
+  "explanation": { "summaryZh": "主语 She 是第三人称单数，且 every day 表示习惯，用 goes。", "ruleZh": "一般现在时中，第三人称单数主语后的动词通常加 s 或 es。", "evidence": [], "distractors": [{ "optionId": "b", "reasonZh": "go 用于 I、you 或复数主语。" }, { "optionId": "c", "reasonZh": "went 是一般过去时。" }] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "goes" }, { "id": "b", "text": "go" }, { "id": "c", "text": "went" }],
+  "answerOptionId": "a"
+}

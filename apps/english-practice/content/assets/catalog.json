@@ -5,5 +5,180 @@
     "mime": "audio/mp4",
     "bytes": 154190,
     "sha256": "03a80e5e5e1062697f43ab4a97211636d076c641c649cf8a2b159b719a92af61"
+  },
+  {
+    "id": "anhui-gaokao-2013-anhui-gaokao-english-official",
+    "path": "assets/anhui-gaokao/2013-anhui-gaokao-english-official.jpg",
+    "mime": "image/jpeg",
+    "bytes": 790913,
+    "sha256": "2042de51f8d277c569b0524f25c2eca543f7cf165f350707b6aa259d4fe18193"
+  },
+  {
+    "id": "anhui-gaokao-2014-anhui-gaokao-english-official",
+    "path": "assets/anhui-gaokao/2014-anhui-gaokao-english-official.jpg",
+    "mime": "image/jpeg",
+    "bytes": 790608,
+    "sha256": "51e35e2142e42572d877a0720ba0a4f0055ee1800dd891a262fa606b7760eff0"
+  },
+  {
+    "id": "anhui-gaokao-2024-anhui-gaokao-english-new-curriculum-i-official-p00",
+    "path": "assets/anhui-gaokao/2024-anhui-gaokao-english-new-curriculum-i-official-p00.png",
+    "mime": "image/png",
+    "bytes": 616344,
+    "sha256": "c80d79d5eee2793573191b20d4083e65f2a8da267c1e86a1b908bd8833e38dc5"
+  },
+  {
+    "id": "anhui-gaokao-2024-anhui-gaokao-english-new-curriculum-i-official-p01",
+    "path": "assets/anhui-gaokao/2024-anhui-gaokao-english-new-curriculum-i-official-p01.png",
+    "mime": "image/png",
+    "bytes": 632764,
+    "sha256": "899b0809ab2715e85a47aee3e229fd6e28ecd990ed65fa29ffe71f84c41b0130"
+  },
+  {
+    "id": "anhui-gaokao-2024-anhui-gaokao-english-new-curriculum-i-official-p02",
+    "path": "assets/anhui-gaokao/2024-anhui-gaokao-english-new-curriculum-i-official-p02.png",
+    "mime": "image/png",
+    "bytes": 566236,
+    "sha256": "ffc43f8fb35bff91f2dbdd0b3a7b0b987e691767f9a774e5f8536e22777afa18"
+  },
+  {
+    "id": "anhui-gaokao-2024-anhui-gaokao-english-new-curriculum-i-official-p03",
+    "path": "assets/anhui-gaokao/2024-anhui-gaokao-english-new-curriculum-i-official-p03.png",
+    "mime": "image/png",
+    "bytes": 541017,
+    "sha256": "48f3bd3feaf05382f18e07914fe65cd9a9a1cd8d68daf7627e63761bdc537299"
+  },
+  {
+    "id": "anhui-gaokao-2024-anhui-gaokao-english-new-curriculum-i-official-p04",
+    "path": "assets/anhui-gaokao/2024-anhui-gaokao-english-new-curriculum-i-official-p04.png",
+    "mime": "image/png",
+    "bytes": 616916,
+    "sha256": "a6479d9a0dfc10c05e72e7600ae525e03b070b7a6c8fd29bff04bcccf22cc68e"
+  },
+  {
+    "id": "anhui-gaokao-2024-anhui-gaokao-english-new-curriculum-i-official-p05",
+    "path": "assets/anhui-gaokao/2024-anhui-gaokao-english-new-curriculum-i-official-p05.png",
+    "mime": "image/png",
+    "bytes": 425265,
+    "sha256": "439d065c747346b7c7cd7bb93735a3f7cf6e0b29c50d34ff20ea1dc2eca1be3f"
+  },
+  {
+    "id": "anhui-gaokao-2024-anhui-gaokao-english-new-curriculum-i-official-p06",
+    "path": "assets/anhui-gaokao/2024-anhui-gaokao-english-new-curriculum-i-official-p06.png",
+    "mime": "image/png",
+    "bytes": 69710,
+    "sha256": "1fdc942dbf84b7fb02916d294ee552422e7c16dedfc560344290b5143e4a1657"
+  },
+  {
+    "id": "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p00",
+    "path": "assets/anhui-gaokao/2025-anhui-gaokao-english-new-curriculum-i-official-p00.png",
+    "mime": "image/png",
+    "bytes": 352224,
+    "sha256": "dab924462b524bcd0e714d32aba97e4460ef9ab9e9b2cb31a672b40882275cd6"
+  },
+  {
+    "id": "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p01",
+    "path": "assets/anhui-gaokao/2025-anhui-gaokao-english-new-curriculum-i-official-p01.png",
+    "mime": "image/png",
+    "bytes": 235752,
+    "sha256": "c62ef1a0d15465ba950ad06a184d0d9290270d5d8494fb0e09709fe237690727"
+  },
+  {
+    "id": "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p02",
+    "path": "assets/anhui-gaokao/2025-anhui-gaokao-english-new-curriculum-i-official-p02.png",
+    "mime": "image/png",
+    "bytes": 217406,
+    "sha256": "3808005310f8e14bda1c44c6a1290beed627ea2e988093f540dd01a18fe5af04"
+  },
+  {
+    "id": "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p03",
+    "path": "assets/anhui-gaokao/2025-anhui-gaokao-english-new-curriculum-i-official-p03.png",
+    "mime": "image/png",
+    "bytes": 226523,
+    "sha256": "98d959dbbafaaf2ca856f6dbec9fce6e85581907677f0ea02439636551e011f7"
+  },
+  {
+    "id": "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p04",
+    "path": "assets/anhui-gaokao/2025-anhui-gaokao-english-new-curriculum-i-official-p04.png",
+    "mime": "image/png",
+    "bytes": 260846,
+    "sha256": "21e06891d9635a2ae2e36e649d870c666805bf19302d1c9187fec1d6a3c9b7dc"
+  },
+  {
+    "id": "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p05",
+    "path": "assets/anhui-gaokao/2025-anhui-gaokao-english-new-curriculum-i-official-p05.png",
+    "mime": "image/png",
+    "bytes": 249179,
+    "sha256": "de9025209ce3f82358a5569f0090d04d758a001191f0c0319a5018c2169af6c6"
+  },
+  {
+    "id": "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p06",
+    "path": "assets/anhui-gaokao/2025-anhui-gaokao-english-new-curriculum-i-official-p06.png",
+    "mime": "image/png",
+    "bytes": 239387,
+    "sha256": "e343b9d15f575474d2a97d071f8964862c320942534376ddcb082c779e334ea1"
+  },
+  {
+    "id": "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p07",
+    "path": "assets/anhui-gaokao/2025-anhui-gaokao-english-new-curriculum-i-official-p07.png",
+    "mime": "image/png",
+    "bytes": 201401,
+    "sha256": "0cf811b057a624d9d995d1dedc68c74cd21d2cbd08e5bef832f581a38f2f2f60"
+  },
+  {
+    "id": "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p08",
+    "path": "assets/anhui-gaokao/2025-anhui-gaokao-english-new-curriculum-i-official-p08.png",
+    "mime": "image/png",
+    "bytes": 200457,
+    "sha256": "4e184cc2103d850eeea1493caf433dca97d0bb04ca3e6ac18abfe89a0c7f0809"
+  },
+  {
+    "id": "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p09",
+    "path": "assets/anhui-gaokao/2025-anhui-gaokao-english-new-curriculum-i-official-p09.png",
+    "mime": "image/png",
+    "bytes": 22195,
+    "sha256": "d2b3a61a8285cd4c147ab181dae5e564926603561d76191a6f227f8d0127d026"
+  },
+  {
+    "id": "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p10",
+    "path": "assets/anhui-gaokao/2025-anhui-gaokao-english-new-curriculum-i-official-p10.png",
+    "mime": "image/png",
+    "bytes": 254469,
+    "sha256": "05e278dc31c5d83f9040d62077066f5f88f26f13deabae92b5cf0257da1884d6"
+  },
+  {
+    "id": "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p11",
+    "path": "assets/anhui-gaokao/2025-anhui-gaokao-english-new-curriculum-i-official-p11.png",
+    "mime": "image/png",
+    "bytes": 189580,
+    "sha256": "5a3ed4c087eee4b7e82560b983b35c179da45e834b257084cf30ee7b8100f536"
+  },
+  {
+    "id": "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p12",
+    "path": "assets/anhui-gaokao/2025-anhui-gaokao-english-new-curriculum-i-official-p12.png",
+    "mime": "image/png",
+    "bytes": 66292,
+    "sha256": "8c55444b2a2cf09d43325cb1b51ec369f0445d6f7a54dcf73f1fe28984a22d91"
+  },
+  {
+    "id": "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p13",
+    "path": "assets/anhui-gaokao/2025-anhui-gaokao-english-new-curriculum-i-official-p13.png",
+    "mime": "image/png",
+    "bytes": 239514,
+    "sha256": "48434c20b5fce9707eeef8594929888d336d20ce87e0abc0722fbe86922e9c69"
+  },
+  {
+    "id": "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p14",
+    "path": "assets/anhui-gaokao/2025-anhui-gaokao-english-new-curriculum-i-official-p14.png",
+    "mime": "image/png",
+    "bytes": 178315,
+    "sha256": "dfb4ff6b9013347aa2a2e4f173c87e7a036f8d26a3c047dd8cd81e62c7d9b8a5"
+  },
+  {
+    "id": "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p15",
+    "path": "assets/anhui-gaokao/2025-anhui-gaokao-english-new-curriculum-i-official-p15.png",
+    "mime": "image/png",
+    "bytes": 46354,
+    "sha256": "b496b799d3bfd820d95cd3385605eb4c2fb682856f3ad5e6dc3905e8e75bb2af"
   }
 ]

@@ -305,6 +305,23 @@ describe('T11 评审修复回归', () => {
     expect(page.text()).toContain('修改稿：第二会话初稿')
   })
 
+  it('成长页使用写作版本保存的学习日，不因当前时区改变历史归属', async () => {
+    const db = createDatabase('gaokao-progress-' + crypto.randomUUID())
+    await db.open()
+    await db.settings.put({ id: 'personal', value: { profileId: 'gaokao-common-training-v1', grade: null, goal: null, defaultMinutes: 10, timeZone: 'UTC', sound: true, animation: false } })
+    await db.writingVersions.add({
+      id: 's-tz:w1:v1',
+      sessionId: 's-tz',
+      itemId: 'w1',
+      createdAt: '2026-09-11T16:30:00.000Z',
+      studyDay: '2026-09-12',
+      content: JSON.stringify({ content: 'saved', outline: '', checklist: ['完成'], version: 1 }),
+    })
+    databases.push(db)
+    const page = await mountPageWithToday(db, '2026-09-12')
+    expect(page.text()).toContain('今日已标记')
+  })
+
   it('今日会话独立通过解锁条目所属单元成就，且首次时间不被覆盖', async () => {
     const db = createDatabase('gaokao-progress-' + crypto.randomUUID())
     await db.open()

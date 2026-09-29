@@ -1,0 +1,16 @@
+{
+  "id": "h2-grammar-passive",
+  "familyId": "h2-passive",
+  "skillIds": ["grammar.word-form"],
+  "level": "G1",
+  "section": "grammar",
+  "reviewMode": "recall",
+  "promptZh": "选择正确形式：The school library ___ by students every afternoon.",
+  "resourceId": null,
+  "estimatedSeconds": 55,
+  "sourceIds": ["original-demo"],
+  "explanation": { "summaryZh": "图书馆是被学生使用，且是现在的习惯，使用一般现在时被动语态 is used。", "ruleZh": "被动语态的基本结构是 be + 过去分词。", "evidence": [], "distractors": [{ "optionId": "b", "reasonZh": "uses 是主动语态，主语应是使用者。" }, { "optionId": "c", "reasonZh": "was used 是过去时，不符合 every afternoon 的习惯。" }] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "is used" }, { "id": "b", "text": "uses" }, { "id": "c", "text": "was used" }],
+  "answerOptionId": "a"
+}

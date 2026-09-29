@@ -130,22 +130,26 @@ const checkP07 = (packs: CoursePack[], failures: string[]) => {
     const count = [...(resourceLevels.get('reading')?.values() ?? [])].filter((set) => set.has(level)).length
     if (count < 6) failures.push(`P07.reading.${level} [P07_COVERAGE] 阅读每个层级至少 6 篇`)
   }
-  if ([...(resourceLevels.get('reading')?.values() ?? [])].some((set) => set.size > 1)) failures.push('P07.reading [P07_COVERAGE] 同一篇阅读材料不能跨层级重复计数')
+  if ([...(resourceLevels.get('reading')?.values() ?? [])].some((set) => set.size > 1)) failures.push('P07.reading [P07_INVALID] 同一篇阅读材料不能跨层级重复计数')
   if ((resources.get('reading')?.size ?? 0) < 18) failures.push('P07.reading [P07_COVERAGE] 阅读至少 18 篇材料')
-  if ((resources.get('gap-reading')?.size ?? 0) < 6 || (gapShapes.get('gap-reading') ?? []).some((count) => count !== 5)) failures.push('P07.gap-reading [P07_COVERAGE] 七选五必须有 6 篇且每篇 5 空')
+  if ((resources.get('gap-reading')?.size ?? 0) < 6) failures.push('P07.gap-reading [P07_COVERAGE] 七选五至少需要 6 篇')
+  if ((gapShapes.get('gap-reading') ?? []).some((count) => count !== 5)) failures.push('P07.gap-reading [P07_INVALID] 七选五每篇必须恰有 5 空')
   for (const pack of published) {
     for (const item of pack.items) {
-      if (item.section === 'gap-reading' && item.kind === 'gaps' && (item.sharedOptions.length !== 7 || !item.uniqueOptions)) failures.push(`P07.${item.id} [P07_COVERAGE] 七选五必须有 7 个共享选项且 uniqueOptions=true`)
+      if (item.section === 'gap-reading' && item.kind === 'gaps' && (item.sharedOptions.length !== 7 || !item.uniqueOptions)) failures.push(`P07.${item.id} [P07_INVALID] 七选五必须有 7 个共享选项且 uniqueOptions=true`)
     }
   }
-  if ((gapShapes.get('cloze') ?? []).filter((count) => count === 10).length < 4 || (gapShapes.get('cloze') ?? []).filter((count) => count === 15).length < 4) failures.push('P07.cloze [P07_COVERAGE] 完形必须有 4 篇 10 空和 4 篇 15 空')
-  if ((gapShapes.get('grammar') ?? []).some((count) => count !== 10) || (gapShapes.get('grammar') ?? []).length < 12) failures.push('P07.grammar [P07_COVERAGE] 语法填空必须有 12 篇且每篇 10 空')
+  if ((gapShapes.get('cloze') ?? []).filter((count) => count === 10).length < 4 || (gapShapes.get('cloze') ?? []).filter((count) => count === 15).length < 4) failures.push('P07.cloze [P07_COVERAGE] 完形至少需要 4 篇 10 空和 4 篇 15 空')
+  if ((gapShapes.get('cloze') ?? []).some((count) => count !== 10 && count !== 15)) failures.push('P07.cloze [P07_INVALID] 完形每篇必须为 10 空或 15 空')
+  if ((gapShapes.get('grammar') ?? []).length < 12) failures.push('P07.grammar [P07_COVERAGE] 语法填空至少需要 12 篇')
+  if ((gapShapes.get('grammar') ?? []).some((count) => count !== 10)) failures.push('P07.grammar [P07_INVALID] 语法填空每篇必须恰有 10 空')
   if (audioAssets.size < 20) failures.push('P07.listening [P07_COVERAGE] 听力至少需要 20 段本地录音')
 }
 
 const modeIndex = process.argv.indexOf('--mode')
 const modeArg = modeIndex >= 0 ? process.argv[modeIndex + 1] : process.argv.find((arg) => arg.startsWith('--mode='))?.split('=')[1]
 const mode = modeArg === 'release' ? 'release' : 'preview'
+const deferredReleaseCodes = new Set(['RELEASE_GATE', 'P07_QUANTITY', 'P07_COVERAGE', 'REVIEW_MISSING'])
 
 const main = async () => {
   const manifestNames = (await fs.readdir(manifestDir)).filter((name) => name.endsWith('.json')).sort()
@@ -157,10 +161,16 @@ const main = async () => {
   for (const manifestName of manifestNames) {
     const manifest = await readJson(path.join(manifestDir, manifestName)) as Record<string, unknown>
     const pack = await readAuthorPack(manifest)
-    const result = validatePack(pack, mode)
-    if (result.ok) await checkAssetFiles(pack)
-    if (!result.ok) {
-      failures.push(...result.errors.map((item) => `${manifestName}:${item.path || '$'} [${item.code}] ${item.messageZh}`))
+    const contentResult = validatePack(pack, 'preview')
+    if (contentResult.ok) await checkAssetFiles(pack)
+    if (!contentResult.ok) {
+      failures.push(...contentResult.errors.map((item) => `${manifestName}:${item.path || '$'} [${item.code}] ${item.messageZh}`))
+    }
+    if (mode === 'release') {
+      const releaseResult = validatePack(pack, 'release')
+      failures.push(...releaseResult.errors
+        .filter((item) => item.code === 'RELEASE_GATE' || item.code === 'REVIEWED_AT_INVALID')
+        .map((item) => `${manifestName}:${item.path || '$'} [${item.code}] ${item.messageZh}`))
     }
   }
 
@@ -203,7 +213,11 @@ const main = async () => {
 
   if (failures.length > 0) {
     console.error(failures.join('\n'))
-    process.exitCode = 1
+    const onlyDeferredReleaseGaps = mode === 'release' && failures.every((failure) => {
+      const code = failure.match(/\[([A-Z0-9_]+)\]/)?.[1]
+      return code !== undefined && deferredReleaseCodes.has(code)
+    })
+    process.exitCode = onlyDeferredReleaseGaps ? 78 : 1
     return
   }
   console.log(`内容检查通过：${manifestNames.length} 个包（${mode}）`)

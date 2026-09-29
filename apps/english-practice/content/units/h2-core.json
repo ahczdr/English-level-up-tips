@@ -1,0 +1,7 @@
+{
+  "id": "h2-core",
+  "titleZh": "高二强化：语境与长句",
+  "familyIds": ["h2-participate", "h2-passive", "h2-although", "h2-gap-club"],
+  "itemIds": ["h2-vocab-participate", "h2-grammar-passive", "h2-sentence-although", "h2-gap-club"],
+  "prerequisiteSkillIds": []
+}

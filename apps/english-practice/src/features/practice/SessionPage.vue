@@ -173,11 +173,11 @@ const flushPendingDraftSave = async (): Promise<void> => {
 watch(draft, (value) => {
   const target = session.value;
   const currentItem = item.value;
-  if (!target || !currentItem || currentItem.kind !== 'gaps') return;
+  if (!target || !currentItem || currentItem.kind === 'writing') return;
   if (feedback.value !== null) return;
   const slot = target.slots[target.currentIndex];
   if (!slot || slot.state !== 'answering') return;
-  if (!value || value.kind !== 'gaps') return;
+  if (!value || value.kind !== currentItem.kind) return;
   pendingDraftSave = { sessionId: target.id, itemId: currentItem.id, answer: value };
   if (draftSaveTimer !== null) globalThis.clearTimeout(draftSaveTimer);
   draftSaveTimer = globalThis.setTimeout(() => {
@@ -195,11 +195,11 @@ onBeforeUnmount(() => {
 const restoreDraft = async (target: Session): Promise<void> => {
   const slot = target.slots[target.currentIndex];
   const currentItem = item.value;
-  if (!slot || !currentItem || currentItem.kind !== 'gaps') return;
+  if (!slot || !currentItem || currentItem.kind === 'writing') return;
   if (slot.state !== 'answering') return;
   if (feedback.value !== null) return;
   const result = await loadDraft(db.value, { sessionId: target.id, itemId: currentItem.id });
-  if (!result.ok || !result.value || result.value.kind !== 'gaps') return;
+  if (!result.ok || !result.value || result.value.kind !== currentItem.kind) return;
   draft.value = result.value;
 };
 
@@ -237,6 +237,7 @@ const audioMime = ref('audio/mp4');
 const audioState = ref<'idle' | 'loading' | 'ready' | 'missing'>('idle');
 const downloading = ref(false);
 const transcriptVisible = ref(false);
+let audioRequestGeneration = 0;
 
 const currentSlot = computed<Session['slots'][number] | null>(
   () => session.value?.slots[session.value.currentIndex] ?? null,
@@ -245,6 +246,7 @@ const currentSlot = computed<Session['slots'][number] | null>(
 const isListening = computed(() => item.value !== null && item.value.section === 'listening');
 
 const loadAudio = async (target: Session, packRecord: CoursePack | null): Promise<void> => {
+  const requestGeneration = ++audioRequestGeneration;
   const slot = target.slots[target.currentIndex];
   const currentItem = item.value;
   if (!slot || !currentItem || currentItem.section !== 'listening' || !packRecord) {
@@ -264,6 +266,7 @@ const loadAudio = async (target: Session, packRecord: CoursePack | null): Promis
   }
   audioState.value = 'loading';
   const result = await getPackAssetBytes({ db: db.value, packId: slot.ref.packId, version: slot.ref.packVersion, assetId });
+  if (requestGeneration !== audioRequestGeneration) return;
   if (!result.ok) {
     audioState.value = 'missing';
     audioBytes.value = null;

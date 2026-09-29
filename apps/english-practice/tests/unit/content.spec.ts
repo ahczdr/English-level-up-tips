@@ -158,12 +158,14 @@ it('assembles the manifest author files into the demo pack semantics', () => {
     reviewer: string | null
     reviewedAt: string | null
     profileIds: string[]
+    sourceIds: string[]
     resourceIds: string[]
     itemIds: string[]
     unitIds: string[]
     assetIds?: string[]
   }
   const load = (directory: string, id: string) => JSON.parse(readFileSync(path.join(contentRoot, directory, `${id}.json`), 'utf8')) as unknown
+  const sourceCatalog = JSON.parse(readFileSync(path.join(contentRoot, 'sources/catalog.json'), 'utf8')) as CoursePack['sources']
   const pack = assembleCoursePack({
     pack: {
       schemaVersion: 1,
@@ -176,7 +178,9 @@ it('assembles the manifest author files into the demo pack semantics', () => {
       reviewedAt: manifest.reviewedAt,
       profileIds: manifest.profileIds,
     },
-    sources: JSON.parse(readFileSync(path.join(contentRoot, 'sources/catalog.json'), 'utf8')) as CoursePack['sources'],
+    sources: manifest.sourceIds
+      .map((sourceId) => sourceCatalog.find((candidate) => candidate.id === sourceId))
+      .filter((source): source is CoursePack['sources'][number] => source !== undefined),
     // T08 起资产目录含听力样例：与门禁一致按 manifest.assetIds 选取，而不是整目录注入
     assets: (manifest.assetIds ?? [])
       .map((assetId) =>

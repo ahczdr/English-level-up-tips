@@ -1,0 +1,7 @@
+{
+  "id": "h3-core",
+  "titleZh": "高三冲刺：稳定表达",
+  "familyIds": ["h3-contribute", "h3-participle", "h3-invite", "h3-listening-club"],
+  "itemIds": ["h3-vocab-contribute", "h3-grammar-participle", "h3-writing-invite", "h3-listening-club"],
+  "prerequisiteSkillIds": []
+}

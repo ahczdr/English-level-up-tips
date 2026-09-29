@@ -1,0 +1,30 @@
+{
+  "id": "anhui-gaokao-2025-reading-c-q11",
+  "familyId": "anhui-gaokao-2025-reading-c",
+  "skillIds": ["reading.main-idea"],
+  "level": "G2",
+  "section": "reading",
+  "reviewMode": "transfer",
+  "promptZh": "What can be a suitable title for the text?",
+  "resourceId": "anhui-gaokao-2025-reading-c",
+  "estimatedSeconds": 55,
+  "sourceIds": ["anhui-gaokao-2025-eol"],
+  "explanation": {
+    "summaryZh": "文章批评城市一味追求快速通行，呼吁重新思考街道和城市生活，因此标题是“为什么如此匆忙”。",
+    "ruleZh": "标题题要概括全文问题和作者态度，而不是只对应某个例子。",
+    "evidence": [{ "resourceId": "anhui-gaokao-2025-reading-c", "paragraphId": "p4", "quote": "it’s time to think differently about that street outside your front door" }],
+    "distractors": [
+      { "optionId": "b", "reasonZh": "文章不是在预测未来安排。" },
+      { "optionId": "c", "reasonZh": "文章没有讨论居住地点选择。" },
+      { "optionId": "d", "reasonZh": "文章重点是城市规划和生活方式，不是在追责。" }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    { "id": "a", "text": "Why the Rush?" },
+    { "id": "b", "text": "What’s Next?" },
+    { "id": "c", "text": "Where to Stay?" },
+    { "id": "d", "text": "Who to Blame?" }
+  ],
+  "answerOptionId": "a"
+}

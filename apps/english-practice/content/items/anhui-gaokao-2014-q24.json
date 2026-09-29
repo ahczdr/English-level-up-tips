@@ -1,0 +1,30 @@
+{
+  "id": "anhui-gaokao-2014-q24",
+  "familyId": "anhui-2014-indefinite-pronoun",
+  "skillIds": ["grammar.pronoun", "vocabulary.agreement"],
+  "level": "G1",
+  "section": "grammar",
+  "reviewMode": "recognition",
+  "promptZh": "选择正确的不定代词完成句子（2014 年安徽卷第 24 题）。",
+  "resourceId": null,
+  "estimatedSeconds": 45,
+  "sourceIds": ["anhui-gaokao-2014-official"],
+  "explanation": {
+    "summaryZh": "前句说可以向任何人求助，后句说明这里每个人都愿意帮助，因此用 Everyone。",
+    "ruleZh": "everyone 表示每个人，作主语时谓语通常用单数。",
+    "evidence": [],
+    "distractors": [
+      { "optionId": "a", "reasonZh": "One 不能独立表达这里每个人的意思。" },
+      { "optionId": "b", "reasonZh": "No one 表示没有人，与 willing to lend you a hand 的积极语义相反。" },
+      { "optionId": "d", "reasonZh": "Someone 表示某个人，范围不等于这里每个人。" }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    { "id": "a", "text": "One" },
+    { "id": "b", "text": "No one" },
+    { "id": "c", "text": "Everyone" },
+    { "id": "d", "text": "Someone" }
+  ],
+  "answerOptionId": "c"
+}

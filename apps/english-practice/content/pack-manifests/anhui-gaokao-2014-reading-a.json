@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "anhui-gaokao-2014-reading-a",
+  "version": "0.1.0",
+  "titleZh": "2014 年安徽高考英语阅读理解（结构化草稿）",
+  "status": "draft",
+  "author": "个人学习工具资料导入",
+  "reviewer": null,
+  "reviewedAt": null,
+  "profileIds": ["gaokao-common-training-v1"],
+  "sourceIds": ["anhui-gaokao-2014-official"],
+  "assetIds": ["anhui-gaokao-2014-anhui-gaokao-english-official"],
+  "resourceIds": [
+    "anhui-gaokao-2014-reading-a",
+    "anhui-gaokao-2014-reading-b",
+    "anhui-gaokao-2014-reading-c",
+    "anhui-gaokao-2014-reading-d",
+    "anhui-gaokao-2014-reading-e"
+  ],
+  "itemIds": [
+    "anhui-gaokao-2014-reading-a-q56",
+    "anhui-gaokao-2014-reading-a-q57",
+    "anhui-gaokao-2014-reading-a-q58",
+    "anhui-gaokao-2014-reading-a-q59",
+    "anhui-gaokao-2014-reading-b-q60",
+    "anhui-gaokao-2014-reading-b-q61",
+    "anhui-gaokao-2014-reading-b-q62",
+    "anhui-gaokao-2014-reading-b-q63",
+    "anhui-gaokao-2014-reading-c-q64",
+    "anhui-gaokao-2014-reading-c-q65",
+    "anhui-gaokao-2014-reading-c-q66",
+    "anhui-gaokao-2014-reading-c-q67",
+    "anhui-gaokao-2014-reading-d-q68",
+    "anhui-gaokao-2014-reading-d-q69",
+    "anhui-gaokao-2014-reading-d-q70",
+    "anhui-gaokao-2014-reading-d-q71",
+    "anhui-gaokao-2014-reading-e-q72",
+    "anhui-gaokao-2014-reading-e-q73",
+    "anhui-gaokao-2014-reading-e-q74",
+    "anhui-gaokao-2014-reading-e-q75"
+  ],
+  "unitIds": ["anhui-gaokao-2014-reading-a"]
+}

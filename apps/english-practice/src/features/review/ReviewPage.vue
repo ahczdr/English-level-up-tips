@@ -30,9 +30,9 @@ const loading = ref(true);
 const loadState = async (): Promise<void> => {
   loading.value = true;
   try {
-    // T14/B1：走 E2E 时钟桥默认实现（生产构建 e2eNow ≡ new Date()），复习到期判定与计划链路一致
-    const today = studyDayFor(e2eNow());
     const settings = await loadPersonalSettings(db.value);
+    // T14/B1：走 E2E 时钟桥默认实现，并沿用个人设置时区，和计划/成长记录保持一致
+    const today = studyDayFor(e2eNow(), settings.timeZone);
     const records = await db.value.reviewStates.toArray();
     rows.value = records
       .filter((record) => record.profileId === settings.profileId)

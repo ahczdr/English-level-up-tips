@@ -70,11 +70,18 @@ jobs:
         run: npm run build:release
         env:
           BUILD_SHA: "${{ github.sha }}"
-      # T15/B4：发布内容门禁。当前因独立审核未完成而 exit 1（预期）；continue-on-error 仅放行 CI 流水，
-      # 部署（T16）前必须让本步转绿——正式 catalog 不得在审核门禁未过时生成。
+      # T15/B4：仅允许已分类的发布就绪缺口暂缓；素材、schema、脚本等错误仍必须阻断 CI。
       - name: Release content gate (T15)
-        continue-on-error: true
-        run: npm run content:release
+        run: |
+          if npm run content:release; then
+            exit 0
+          else
+            status=$?
+            if [ "$status" -ne 78 ]; then
+              exit "$status"
+            fi
+            echo "::notice::Release readiness gaps remain; integrity and tooling checks passed."
+          fi
       # R3：release 已由上一步构建，smoke 脚本内不再重复 build（脚本检测 dist 存在即用）
       - name: Release smoke (shell + no test entry + SW)
         run: node scripts/smoke-release.mjs

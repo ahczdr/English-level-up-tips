@@ -1,0 +1,16 @@
+{
+  "id": "h2-vocab-participate",
+  "familyId": "h2-participate",
+  "skillIds": ["vocab.collocation"],
+  "level": "G1",
+  "section": "vocabulary",
+  "reviewMode": "transfer",
+  "promptZh": "The students took part in the science project. take part in 的意思是：",
+  "resourceId": null,
+  "estimatedSeconds": 50,
+  "sourceIds": ["original-demo"],
+  "explanation": { "summaryZh": "take part in 表示参加、参与。", "ruleZh": "把短语放回句子，判断学生和项目之间的关系。", "evidence": [], "distractors": [{ "optionId": "b", "reasonZh": "take care of 表示照顾。" }, { "optionId": "c", "reasonZh": "take place 表示发生。" }] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "参加" }, { "id": "b", "text": "照顾" }, { "id": "c", "text": "发生" }],
+  "answerOptionId": "a"
+}

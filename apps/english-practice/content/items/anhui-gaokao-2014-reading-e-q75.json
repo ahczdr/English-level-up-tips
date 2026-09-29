@@ -1,0 +1,16 @@
+{
+  "id": "anhui-gaokao-2014-reading-e-q75",
+  "familyId": "anhui-2014-reading-e",
+  "skillIds": ["reading.attitude", "reading.main-idea"],
+  "level": "G1",
+  "section": "reading",
+  "reviewMode": "recognition",
+  "promptZh": "根据文章 E 回答第 75 题。",
+  "resourceId": "anhui-gaokao-2014-reading-e",
+  "estimatedSeconds": 60,
+  "sourceIds": ["anhui-gaokao-2014-official"],
+  "explanation": { "summaryZh": "作者使用 promising、excellent 和 optimistic 等积极词语，说明其对 Ashoka 项目持积极态度。", "ruleZh": "态度题要综合作者的评价词和结尾判断。", "evidence": [{ "resourceId": "anhui-gaokao-2014-reading-e", "paragraphId": "p4", "quote": "Drayton is optimistic" }], "distractors": [] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "changing" }, { "id": "b", "text": "forgiving" }, { "id": "c", "text": "cautious" }, { "id": "d", "text": "positive" }],
+  "answerOptionId": "d"
+}

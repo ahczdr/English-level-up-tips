@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "anhui-gaokao-2014-grammar-a",
+  "version": "0.1.1",
+  "titleZh": "2014 年安徽高考英语单项填空（结构化草稿）",
+  "status": "draft",
+  "author": "个人学习工具资料导入",
+  "reviewer": null,
+  "reviewedAt": null,
+  "profileIds": ["gaokao-common-training-v1"],
+  "sourceIds": ["anhui-gaokao-2014-official"],
+  "assetIds": ["anhui-gaokao-2014-anhui-gaokao-english-official"],
+  "resourceIds": [],
+  "itemIds": [
+    "anhui-gaokao-2014-q21",
+    "anhui-gaokao-2014-q22",
+    "anhui-gaokao-2014-q23",
+    "anhui-gaokao-2014-q24",
+    "anhui-gaokao-2014-q25",
+    "anhui-gaokao-2014-q26",
+    "anhui-gaokao-2014-q27",
+    "anhui-gaokao-2014-q28",
+    "anhui-gaokao-2014-q29",
+    "anhui-gaokao-2014-q30",
+    "anhui-gaokao-2014-q31",
+    "anhui-gaokao-2014-q32",
+    "anhui-gaokao-2014-q33",
+    "anhui-gaokao-2014-q34",
+    "anhui-gaokao-2014-q35"
+  ],
+  "unitIds": ["anhui-gaokao-2014-grammar-a"]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "anhui-gaokao-2025-reading-d-q12",
+  "familyId": "anhui-gaokao-2025-reading-d",
+  "skillIds": ["reading.detail"],
+  "level": "G2",
+  "section": "reading",
+  "reviewMode": "transfer",
+  "promptZh": "How does the author present the issue in the first paragraph?",
+  "resourceId": "anhui-gaokao-2025-reading-d",
+  "estimatedSeconds": 50,
+  "sourceIds": ["anhui-gaokao-2025-eol"],
+  "explanation": {
+    "summaryZh": "第一段列举微塑料出现在深海、喜鸟胃部和南极雪等多个地点的事实，以统计和事实数据呈现问题。",
+    "ruleZh": "篇章手法题要看段落如何组织信息，多个地点和范围数据体现的是事实列举与数据呈现。",
+    "evidence": [{ "resourceId": "anhui-gaokao-2025-reading-d", "paragraphId": "p1", "quote": "settled in the deep sea and on the Himalayas" }],
+    "distractors": [
+      { "optionId": "a", "reasonZh": "第一段没有引用专家观点。" },
+      { "optionId": "b", "reasonZh": "第一段没有给出概念定义。" },
+      { "optionId": "c", "reasonZh": "列举的是微塑料出现的位置和事实，不是具体案例故事。" }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    { "id": "a", "text": "By quoting an expert." },
+    { "id": "b", "text": "By defining a concept." },
+    { "id": "c", "text": "By giving examples." },
+    { "id": "d", "text": "By providing statistics." }
+  ],
+  "answerOptionId": "d"
+}

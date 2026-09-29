@@ -1,0 +1,16 @@
+{
+  "id": "anhui-gaokao-2014-reading-d-q69",
+  "familyId": "anhui-2014-reading-d",
+  "skillIds": ["reading.detail", "reading.argument"],
+  "level": "G1",
+  "section": "reading",
+  "reviewMode": "recognition",
+  "promptZh": "根据文章 D 回答第 69 题。",
+  "resourceId": "anhui-gaokao-2014-reading-d",
+  "estimatedSeconds": 60,
+  "sourceIds": ["anhui-gaokao-2014-official"],
+  "explanation": { "summaryZh": "作者承认有些旧建筑也破坏了所在区域，因此选项 C 符合原文。", "ruleZh": "判断题要区分作者提出的普遍结论和带条件的建议。", "evidence": [{ "resourceId": "anhui-gaokao-2014-reading-d", "paragraphId": "p3", "quote": "some old buildings too" }], "distractors": [] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "We should reproduce the same old buildings." }, { "id": "b", "text": "Buildings should not dominate their surroundings." }, { "id": "c", "text": "Some old buildings have spoilt the area they are in." }, { "id": "d", "text": "No one understands why people speak against new buildings." }],
+  "answerOptionId": "c"
+}

@@ -33,7 +33,13 @@ const confirmUpdate = (): void => {
 <template>
   <div class="app-shell">
     <header class="app-header">
-      <h1>高考英语练习</h1>
+      <div class="app-brand">
+        <span class="app-brand-mark" aria-hidden="true">英</span>
+        <div>
+          <h1>高考英语练习</h1>
+          <p>每天一点，稳稳提分</p>
+        </div>
+      </div>
     </header>
     <main class="app-main">
       <RouterView />

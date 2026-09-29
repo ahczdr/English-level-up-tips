@@ -1,0 +1,16 @@
+{
+  "id": "h1-sentence-predicate",
+  "familyId": "h1-predicate",
+  "skillIds": ["sentence.core"],
+  "level": "G0",
+  "section": "sentence",
+  "reviewMode": "recognition",
+  "promptZh": "找出句子的谓语动词：The club meets every Friday.",
+  "resourceId": null,
+  "estimatedSeconds": 45,
+  "sourceIds": ["original-demo"],
+  "explanation": { "summaryZh": "meets 是句子的谓语，表示俱乐部每周五见面。", "ruleZh": "先找主语，再找主语发出的动作。", "evidence": [], "distractors": [{ "optionId": "b", "reasonZh": "club 是主语，不是谓语。" }, { "optionId": "c", "reasonZh": "Friday 是时间名词。" }] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "meets" }, { "id": "b", "text": "club" }, { "id": "c", "text": "Friday" }],
+  "answerOptionId": "a"
+}

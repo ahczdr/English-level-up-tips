@@ -1,5 +1,6 @@
 import type { GaokaoDatabase } from '../data/db';
 import type { WritingVersionRecord } from '../data/migrations';
+import { studyDayFor } from '../domain/calendar';
 
 export type WritingErrorCode =
   | 'INVALID_ANSWER'
@@ -146,6 +147,7 @@ export async function finalizeWriting(input: FinalizeWritingInput): Promise<Writ
         sessionId: input.sessionId,
         itemId: slot.ref.itemId,
         createdAt: new Date().toISOString(),
+        studyDay: studyDayFor(new Date(), session.timeZone ?? 'Asia/Shanghai'),
         content: JSON.stringify({ content: body.content, outline: body.outline, checklist: body.checklist, version } satisfies WritingVersionBody),
       };
       await input.db.writingVersions.put(record);

@@ -71,6 +71,7 @@ export interface CreateSessionInput {
   unitId: string | null
   minutes: number
   profileId: string
+  timeZone?: string
   clock?: LearningClock
   idGenerator?: () => string
 }
@@ -82,8 +83,8 @@ export type CreateSessionValue =
 const systemClock: LearningClock = { now: () => e2eNow() }
 const defaultId = () => globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(16).slice(2)}`
 
-const studyDay = (date: Date) => {
-  return studyDayFor(date)
+const studyDay = (date: Date, timeZone = 'Asia/Shanghai') => {
+  return studyDayFor(date, timeZone)
 }
 
 const error = (code: AppErrorCode, messageZh: string): Result<never> => ({ ok: false, error: { code, messageZh } })
@@ -135,13 +136,14 @@ export interface TodayPlanBundle {
 export interface TodayPlanOptions {
   minutes: number
   profileId: string
+  timeZone?: string
   clock?: LearningClock
   seed?: string
 }
 
 const collectTodayPlanBundle = async (db: GaokaoDatabase, options: TodayPlanOptions): Promise<TodayPlanBundle & { input: PlanTodayInput }> => {
   const moment = (options.clock ?? systemClock).now()
-  const today = studyDay(moment)
+  const today = studyDay(moment, options.timeZone)
   const budgetSeconds = Math.max(0, options.minutes) * 60
   const records = (await allPackRecords(db)).filter((record) => installed(record))
   const groups: PlanGroup[] = []
@@ -189,7 +191,7 @@ export interface PreviewTodayPlanInput extends TodayPlanOptions {
 
 export async function previewTodayPlan(options: PreviewTodayPlanInput): Promise<Result<TodayPlanBundle>> {
   try {
-    const today = studyDay((options.clock ?? systemClock).now())
+    const today = studyDay((options.clock ?? systemClock).now(), options.timeZone)
     // 摘要与实际会话同源：已有今日会话时以其 sessionId 为 seed，紧预算下组成一致
     const marker = await options.db.settings.get(`today-session:${options.profileId}:${today}`)
     const seed = marker !== undefined && typeof marker.value === 'string' ? marker.value : (options.seed ?? `preview:${options.profileId}:${today}`)
@@ -204,6 +206,7 @@ export interface CreateTodaySessionInput {
   db: GaokaoDatabase
   minutes: number
   profileId: string
+  timeZone?: string
   clock?: LearningClock
   idGenerator?: () => string
 }
@@ -211,7 +214,7 @@ export interface CreateTodaySessionInput {
 // 今日计划会话：seed=sessionId 冻结抽题；生成后持久化，刷新/重开不重新抽题
 export async function createTodaySession(input: CreateTodaySessionInput): Promise<Result<CreateSessionValue>> {
   try {
-    const probeToday = studyDay((input.clock ?? systemClock).now())
+    const probeToday = studyDay((input.clock ?? systemClock).now(), input.timeZone)
     // 同日冻结：已有进行中/暂停的今日会话则直接复用（刷新或重复点击不重新抽题）
     const markerId = `today-session:${input.profileId}:${probeToday}`
     // CR4：marker 检查 → 建会话 → 写 marker 整体放进同一读写事务，
@@ -226,7 +229,7 @@ export async function createTodaySession(input: CreateTodaySessionInput): Promis
     const early = await reusable()
     if (early !== null) return { ok: true, value: { kind: 'session', session: early } }
     const sessionId = (input.idGenerator ?? defaultId)()
-    const bundle = await collectTodayPlanBundle(input.db, { minutes: input.minutes, profileId: input.profileId, clock: input.clock, seed: sessionId })
+    const bundle = await collectTodayPlanBundle(input.db, { minutes: input.minutes, profileId: input.profileId, timeZone: input.timeZone, clock: input.clock, seed: sessionId })
     if (bundle.candidateGroups === 0) return error('CONTENT_MISSING', '暂无可用课程内容，请先准备学习内容')
     if (bundle.plan.groups.length === 0) {
       // CR17：无到期复习且候选全为熟题时是「今日已完成」的正常空态，不是预算不足
@@ -256,6 +259,7 @@ export async function createTodaySession(input: CreateTodaySessionInput): Promis
       createdAt: moment.toISOString(),
       updatedAt: moment.toISOString(),
       studyDay: bundle.today,
+      timeZone: input.timeZone ?? 'Asia/Shanghai',
     }
     const value = await input.db.transaction('rw', input.db.sessions, input.db.settings, async (): Promise<CreateSessionValue> => {
       const again = await reusable()
@@ -383,7 +387,8 @@ export async function createSession(input: CreateSessionInput): Promise<Result<C
       state: 'active',
       createdAt: now.toISOString(),
       updatedAt: now.toISOString(),
-      studyDay: studyDay(now),
+      studyDay: studyDay(now, input.timeZone),
+      timeZone: input.timeZone ?? 'Asia/Shanghai',
     }
     await input.db.sessions.add(session)
     return { ok: true, value: { kind: 'session', session } }
@@ -427,7 +432,7 @@ export async function enterCurrentSlot(db: GaokaoDatabase, sessionId: string, cl
           familyId: item.familyId,
           profileId: session.profileId,
           firstSeenAt: now.toISOString(),
-          studyDay: studyDay(now),
+          studyDay: studyDay(now, session.timeZone),
           firstSeenSessionId: session.id,
         } satisfies Exposure)
       }
@@ -563,7 +568,8 @@ export async function submitAnswer(db: GaokaoDatabase, command: SubmitCommand, c
       const independent = (!exposure || exposure.profileId !== session.profileId || exposure.firstSeenSessionId === session.id) && slot.assistance.length === 0
       const result = grade.earned === grade.possible && grade.possible > 0 && independent ? 'independent-pass' : 'needs-help'
       const previous = await db.reviewStates.get([session.profileId, item.familyId, item.reviewMode])
-      const review = scheduleReview(asReviewState(previous?.data), result, session.studyDay)
+      const actualStudyDay = studyDay(now, session.timeZone)
+      const review = scheduleReview(asReviewState(previous?.data), result, actualStudyDay)
       const attempt: Attempt = {
         id: command.id,
         sessionId: session.id,
@@ -578,7 +584,7 @@ export async function submitAnswer(db: GaokaoDatabase, command: SubmitCommand, c
         replayCount: slot.replayCount,
         audioSpeed: slot.audioSpeed,
         createdAt: now.toISOString(),
-        studyDay: session.studyDay,
+        studyDay: studyDay(now, session.timeZone),
         revision: session.revision + 1,
       }
       slot.state = 'submitted'
@@ -646,7 +652,7 @@ export async function correctAnswer(db: GaokaoDatabase, command: SubmitCommand, 
         replayCount: slot.replayCount,
         audioSpeed: slot.audioSpeed,
         createdAt: now.toISOString(),
-        studyDay: session.studyDay,
+        studyDay: studyDay(now, session.timeZone),
         revision: session.revision + 1,
       }
       slot.state = 'submitted'

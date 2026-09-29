@@ -4,14 +4,14 @@ export interface ItemRef { packId: string; packVersion: string; itemId: string }
 export type SlotState = 'unseen' | 'answering' | 'submitted' | 'skipped'
 export interface Slot { id: string; ref: ItemRef; state: SlotState; assistance: string[]; replayCount: number; audioSpeed: number }
 export type SessionState = 'active' | 'paused' | 'completed'
-export interface Session { id: string; profileId: string; unitId: string | null; slots: Slot[]; currentIndex: number; revision: number; state: SessionState; createdAt: string; updatedAt: string; studyDay: string }
+export interface Session { id: string; profileId: string; unitId: string | null; slots: Slot[]; currentIndex: number; revision: number; state: SessionState; createdAt: string; updatedAt: string; studyDay: string; timeZone?: string }
 export interface Exposure { packId: string; packVersion: string; itemId: string; familyId: string; profileId: string; firstSeenAt: string; studyDay: string; firstSeenSessionId: string }
 export interface InstalledPack { id: string; version: string; status: string; pack: unknown; installedAt: string; resourcesReady: boolean }
 export interface SettingRecord { id: string; value: unknown }
 export interface AttemptRecord { id: string; sessionId: string; slotId: string; phase: string; familyId: string; profileId: string; studyDay: string; createdAt: string; payload: unknown }
 export interface ReviewStateRecord { profileId: string; familyId: string; reviewMode: string; dueDay: string; updatedAt: string; data: unknown }
 export interface DraftRecord { sessionId: string; itemId: string; updatedAt: string; content: string }
-export interface WritingVersionRecord { id: string; sessionId: string; itemId: string; createdAt: string; content: string }
+export interface WritingVersionRecord { id: string; sessionId: string; itemId: string; createdAt: string; studyDay?: string; content: string }
 export interface AchievementRecord { id: string; profileId: string; unlockedAt: string; data: unknown }
 export interface DownloadJobRecord { packId: string; version: string; status: string; createdAt: string; updatedAt: string; data: unknown }
 

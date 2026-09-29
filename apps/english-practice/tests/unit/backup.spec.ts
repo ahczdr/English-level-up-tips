@@ -111,6 +111,26 @@ describe('exportBackup envelope 与确定性摘要', () => {
 })
 
 describe('validateBackupJson 校验矩阵', () => {
+  it('深层危险原型键仍被拒绝，不受固定深度上限影响', async () => {
+    const db = await openDb()
+    await seedDb(db)
+    const exported = await exportBackup({ db, appVersion: '0.1.0' })
+    if (!exported.ok) throw new Error('export failed')
+    const parsed = JSON.parse(exported.value.json) as { payload: { settings: Array<Record<string, unknown>> } }
+    let nested: unknown = JSON.parse('{"__proto__":{"polluted":true}}')
+    for (let depth = 0; depth < 40; depth += 1) nested = { nested }
+    parsed.payload.settings = [{ id: 'deep-danger', value: nested }, ...parsed.payload.settings]
+    const check = await validateBackupJson({ text: await reseal(parsed) })
+    expect(check).toMatchObject({ ok: false, error: { code: 'INVALID_PAYLOAD' } })
+  })
+
+  it('规范化危险键时不触发原型 setter，且保留 own key 供校验拒绝', () => {
+    const raw = JSON.parse('{"__proto__":{"polluted":true},"safe":1}') as Record<string, unknown>
+    const normalized = canonicalJsonString(raw)
+    expect(normalized).toContain('__proto__')
+    expect(Object.prototype.hasOwnProperty.call(Object.prototype, 'polluted')).toBe(false)
+  })
+
   it('合法备份通过并返回 envelope', async () => {
     const db = await openDb()
     await seedDb(db)

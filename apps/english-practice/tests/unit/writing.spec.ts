@@ -186,6 +186,26 @@ describe('finalizeWriting 版本冻结', () => {
     expect(versions[0]?.content).toBe('Dear Alex, please come.')
   })
 
+  it('按会话时区保存写作版本的学习日', async () => {
+    vi.useFakeTimers({ now: new Date('2026-09-11T16:30:00.000Z'), toFake: ['Date'] })
+    const db = await openDb(writingOnlyPack())
+    const created = await createSession({
+      db,
+      unitId: 'unit-writing',
+      minutes: 10,
+      profileId: 'gaokao-common-training-v1',
+      timeZone: 'Asia/Shanghai',
+      clock: { now: () => new Date('2026-09-11T16:30:00.000Z') },
+      idGenerator: () => 'w-tz',
+    })
+    if (!created.ok || created.value.kind !== 'session') throw new Error('expected session')
+    const session = created.value.session
+    const result = await finalizeWriting({ db, sessionId: session.id, slotId: session.slots[0]!.id, expectedRevision: session.revision })
+    expect(result.ok).toBe(true)
+    const version = await db.writingVersions.get('w-tz:' + invitation.id + ':v1')
+    expect(version?.studyDay).toBe('2026-09-12')
+  })
+
   it('修改稿追加 v2，首稿内容原样保留；重开后两版本都在', async () => {
     const db = await openDb(writingOnlyPack())
     const session = await makeSession(db, 'w-5')

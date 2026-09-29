@@ -1,0 +1,7 @@
+{
+  "id": "anhui-gaokao-2013-grammar-a",
+  "titleZh": "2013 年安徽高考英语：单项填空首批",
+  "familyIds": ["anhui-2013-grammar-cause", "anhui-2013-phrasal-verb", "anhui-2013-time-clause", "anhui-2013-relative-clause", "anhui-2013-dialogue-service", "anhui-2013-phrasal-verb-departure", "anhui-2013-indefinite-pronoun", "anhui-2013-subjunctive-perfect", "anhui-2013-adjective-collocation", "anhui-2013-discourse-addition", "anhui-2013-participle-intro", "anhui-2013-comparison", "anhui-2013-modal-inference", "anhui-2013-dialogue-uncertainty"],
+  "itemIds": ["anhui-gaokao-2013-q21", "anhui-gaokao-2013-q22", "anhui-gaokao-2013-q23", "anhui-gaokao-2013-q24", "anhui-gaokao-2013-q25", "anhui-gaokao-2013-q26", "anhui-gaokao-2013-q27", "anhui-gaokao-2013-q28", "anhui-gaokao-2013-q29", "anhui-gaokao-2013-q30", "anhui-gaokao-2013-q31", "anhui-gaokao-2013-q32", "anhui-gaokao-2013-q33", "anhui-gaokao-2013-q34", "anhui-gaokao-2013-q35"],
+  "prerequisiteSkillIds": []
+}

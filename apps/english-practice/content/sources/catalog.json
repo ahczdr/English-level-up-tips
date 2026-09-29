@@ -5,5 +5,61 @@
     "title": "原创开发样例",
     "url": null,
     "rightsNote": "为本计划编写的虚构情境，尚未完成独立内容审核。"
+  },
+  {
+    "id": "gaokao-neea-2021-analysis",
+    "kind": "official-reference",
+    "title": "中国教育考试网：2021年高考英语全国卷试题评析",
+    "url": "https://gaokao.neea.edu.cn/html1/report/22012/3104-1.htm",
+    "rightsNote": "仅用于研究考试能力结构、语篇取向和题型设计；不转载原题、答案或解析正文。"
+  },
+  {
+    "id": "gaokao-neea-2020-analysis",
+    "kind": "official-reference",
+    "title": "中国教育考试网：2020年高考英语全国卷试题评析",
+    "url": "https://gaokao.neea.edu.cn/html1/report/22011/448-1.htm",
+    "rightsNote": "仅用于研究考试能力结构、语篇取向和题型设计；不转载原题、答案或解析正文。"
+  },
+  {
+    "id": "gaokao-neea-2019-analysis",
+    "kind": "official-reference",
+    "title": "中国教育考试网：2019年高考英语试题评析",
+    "url": "https://gaokao.neea.edu.cn/xhtml1/report/21123/6676-1.htm",
+    "rightsNote": "仅用于研究考试能力结构、语篇取向和题型设计；不转载原题、答案或解析正文。"
+  },
+  {
+    "id": "gaokao-analysis-2024-notice",
+    "kind": "official-reference",
+    "title": "广东省教育考试院：教育部教育考试院发布《高考试题分析（2024年版）》",
+    "url": "https://www.zhanjiang.gov.cn/zjsfw/bmdh/jyj/zwgk/gzdt/content/post_1809271.html",
+    "rightsNote": "仅用于确认官方试题分析出版物及适用范围；原题和解析需取得授权后才能转载。"
+  },
+  {
+    "id": "anhui-gaokao-2013-official",
+    "kind": "official-reference",
+    "title": "安徽省教育招生考试院：2013年安徽高考英语试题及参考答案",
+    "url": "https://apps.eol.cn/2633/article/248282.html",
+    "rightsNote": "公开历史附件，仅作为个人学习资料来源留档；未确认再分发授权，不进入公开发布题库。"
+  },
+  {
+    "id": "anhui-gaokao-2014-official",
+    "kind": "official-reference",
+    "title": "安徽省教育招生考试院：2014年安徽高考英语试题及参考答案",
+    "url": "https://apps.eol.cn/2633/article/54443/10",
+    "rightsNote": "公开历史附件，仅作为个人学习资料来源留档；未确认再分发授权，不进入公开发布题库。"
+  },
+  {
+    "id": "anhui-gaokao-2024-eol",
+    "kind": "official-reference",
+    "title": "中国教育在线：2024年高考新课标一卷英语真题及答案",
+    "url": "https://gaokao.eol.cn/shiti/yy/202406/t20240612_2616032.shtml",
+    "rightsNote": "公开页面图版为听力原文、答案解析及网络收集内容，非完整原卷；仅作来源核对，不进入已发布题库。"
+  },
+  {
+    "id": "anhui-gaokao-2025-eol",
+    "kind": "official-reference",
+    "title": "中国教育在线：2025年高考全国一卷英语试题及答案（安徽适用）",
+    "url": "https://gaokao.eol.cn/shiti/yy/202506/t20250612_2674296.shtml",
+    "rightsNote": "安徽2025年语数外适用新课标I卷；附件为公开图版，未确认再分发授权，结构化和独立审核完成前保持草稿。"
   }
 ]

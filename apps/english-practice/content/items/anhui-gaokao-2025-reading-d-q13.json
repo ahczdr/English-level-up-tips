@@ -1,0 +1,30 @@
+{
+  "id": "anhui-gaokao-2025-reading-d-q13",
+  "familyId": "anhui-gaokao-2025-reading-d",
+  "skillIds": ["reading.detail"],
+  "level": "G2",
+  "section": "reading",
+  "reviewMode": "transfer",
+  "promptZh": "What determines the effectiveness of trapping microplastics in water?",
+  "resourceId": "anhui-gaokao-2025-reading-d",
+  "estimatedSeconds": 50,
+  "sourceIds": ["anhui-gaokao-2025-eol"],
+  "explanation": {
+    "summaryZh": "研究结果显示，水的硬度及其中碳酸钙含量会影响煮沸捕获微塑料的效果。",
+    "ruleZh": "细节题要根据实验条件和结果寻找决定效果的变量。",
+    "evidence": [{ "resourceId": "anhui-gaokao-2025-reading-d", "paragraphId": "p3", "quote": "boiling hard water containing 300 milligrams of calcium carbonate" }],
+    "distractors": [
+      { "optionId": "b", "reasonZh": "原文没有把冷却时间作为决定因素。" },
+      { "optionId": "c", "reasonZh": "过滤次数没有在研究中作为变量讨论。" },
+      { "optionId": "d", "reasonZh": "研究限定了部分塑料类型，但题目问的是捕获效果的决定因素。" }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    { "id": "a", "text": "The hardness of water." },
+    { "id": "b", "text": "The length of cooling time." },
+    { "id": "c", "text": "The frequency of filtering." },
+    { "id": "d", "text": "The type of plastic in water." }
+  ],
+  "answerOptionId": "a"
+}

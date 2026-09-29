@@ -31,6 +31,7 @@ const planGroups = ref<PlanGroup[]>([]);
 const planToday = ref('');
 const planMinutes = ref(10);
 const planProfileId = ref('gaokao-common-training-v1');
+const planTimeZone = ref('Asia/Shanghai');
 const starting = ref(false);
 const suggestion = ref<{ kind: 'up' | 'support' | 'hold'; headline: string; detail: string } | null>(null);
 const suggestionDismissed = ref(false);
@@ -63,6 +64,7 @@ const refreshState = async (): Promise<void> => {
     const settings = await loadPersonalSettings(db.value);
     planMinutes.value = settings.defaultMinutes;
     planProfileId.value = settings.profileId;
+    planTimeZone.value = settings.timeZone;
   } catch {
     planMinutes.value = 10;
   }
@@ -76,7 +78,7 @@ const refreshState = async (): Promise<void> => {
   suggestion.value = null;
   if (!hasContent.value) return;
   try {
-    const preview = await previewTodayPlan({ db: db.value, minutes: planMinutes.value, profileId: planProfileId.value });
+    const preview = await previewTodayPlan({ db: db.value, minutes: planMinutes.value, profileId: planProfileId.value, timeZone: planTimeZone.value });
     if (preview.ok) {
       plan.value = preview.value.plan;
       planGroups.value = preview.value.plan.groups;
@@ -145,7 +147,7 @@ const startTodayPlan = async (): Promise<void> => {
   if (starting.value) return;
   starting.value = true;
   try {
-    const created = await createTodaySession({ db: db.value, minutes: planMinutes.value, profileId: planProfileId.value });
+    const created = await createTodaySession({ db: db.value, minutes: planMinutes.value, profileId: planProfileId.value, timeZone: planTimeZone.value });
     if (created.ok && created.value.kind === 'empty') {
       // CR17：今日计划全部完成是正常空态，按提示处理而非错误
       message.value = created.value.messageZh;

@@ -40,7 +40,7 @@ export const resourceSchema = z.strictObject({
 export const assetSchema = z.strictObject({
   id: idSchema,
   path: z.string().min(1),
-  mime: z.enum(['audio/mpeg', 'audio/mp4', 'image/webp']),
+  mime: z.enum(['audio/mpeg', 'audio/mp4', 'image/webp', 'image/png', 'image/jpeg']),
   bytes: z.number().int().positive(),
   sha256: z.string().regex(/^[0-9a-f]{64}$/),
 })

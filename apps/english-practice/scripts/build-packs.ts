@@ -1,6 +1,5 @@
 import crypto from 'node:crypto'
 import fs from 'node:fs/promises'
-import { statSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { validatePack } from '../src/content/validate'
@@ -9,15 +8,6 @@ import type { CoursePack } from '../src/content/types'
 import { examProfileSchema } from '../src/content/schema'
 
 const appRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
-const fsAvailable = (filePath: string): boolean => {
-  try {
-    statSync(filePath)
-    return true
-  } catch {
-    return false
-  }
-}
-
 const manifestDir = path.join(appRoot, 'content', 'pack-manifests')
 
 
@@ -142,21 +132,6 @@ const main = async () => {
     await fs.rename(path.join(staging, 'content-packs'), outputRoot)
     await fs.rename(path.join(staging, 'content-catalog.json'), path.join(publicRoot, 'content-catalog.json'))
 
-    // T15：同步生成 src/data/fixtures（E2E 构建静态 ?raw 导入用；版本无关的扁平 pack.json）。
-    // 不含音频字节；catalog 原样内联，下载链路校验在 fixtures 模式下依旧全量生效。
-    const fixturesRoot = path.join(appRoot, 'src', 'data', 'fixtures')
-    await fs.mkdir(fixturesRoot, { recursive: true })
-    await fs.copyFile(path.join(publicRoot, 'content-catalog.json'), path.join(fixturesRoot, 'content-catalog.json'))
-    const outputPacks = path.join(appRoot, 'public', 'content-packs')
-    for (const packId of await fs.readdir(outputPacks)) {
-      const versions = await fs.readdir(path.join(outputPacks, packId))
-      const latest = versions.sort().at(-1)
-      if (!latest) continue
-      const packFile = path.join(outputPacks, packId, latest, 'pack.json')
-      if (!fsAvailable(packFile)) continue
-      await fs.mkdir(path.join(fixturesRoot, packId), { recursive: true })
-      await fs.copyFile(packFile, path.join(fixturesRoot, packId, 'pack.json'))
-    }
   } finally {
     await fs.rm(staging, { recursive: true, force: true })
   }

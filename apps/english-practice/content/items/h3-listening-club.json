@@ -1,0 +1,16 @@
+{
+  "id": "h3-listening-club",
+  "familyId": "h3-listening-club",
+  "skillIds": ["listening.detail"],
+  "level": "G2",
+  "section": "listening",
+  "reviewMode": "transfer",
+  "promptZh": "What should the new member bring?",
+  "resourceId": "listening-club-audio",
+  "estimatedSeconds": 80,
+  "sourceIds": ["original-demo"],
+  "explanation": { "summaryZh": "对话最后说只需带自己和一本喜欢的书。", "ruleZh": "听力细节题注意 should bring 后面的具体物品。", "evidence": [{ "resourceId": "listening-club-audio", "paragraphId": "p1", "quote": "Just yourself, and a book you like" }], "distractors": [{ "optionId": "b", "reasonZh": "对话没有要求带笔记本电脑。" }, { "optionId": "c", "reasonZh": "对话没有要求带运动器材。" }] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "A book they like." }, { "id": "b", "text": "A laptop." }, { "id": "c", "text": "Sports equipment." }],
+  "answerOptionId": "a"
+}

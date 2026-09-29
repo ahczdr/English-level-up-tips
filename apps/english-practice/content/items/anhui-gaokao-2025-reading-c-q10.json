@@ -1,0 +1,30 @@
+{
+  "id": "anhui-gaokao-2025-reading-c-q10",
+  "familyId": "anhui-gaokao-2025-reading-c",
+  "skillIds": ["reading.inference"],
+  "level": "G2",
+  "section": "reading",
+  "reviewMode": "transfer",
+  "promptZh": "What can be inferred about the campaigns in Australia in the late 1960s and 1970s?",
+  "resourceId": "anhui-gaokao-2025-reading-c",
+  "estimatedSeconds": 55,
+  "sourceIds": ["anhui-gaokao-2025-eol"],
+  "explanation": {
+    "summaryZh": "尽管澳大利亚也出现了类似活动，但城市后来仍围绕汽车重新设计，说明这些活动总体效果有限。",
+    "ruleZh": "推断题要结合 although 引出的让步关系和后文现实结果。",
+    "evidence": [{ "resourceId": "anhui-gaokao-2025-reading-c", "paragraphId": "p3", "quote": "the majority of the western cities were completely redesigned around the needs of the motor car" }],
+    "distractors": [
+      { "optionId": "a", "reasonZh": "活动并未促进汽车销售。" },
+      { "optionId": "c", "reasonZh": "文章没有说活动获得政府支持。" },
+      { "optionId": "d", "reasonZh": "活动目标是保护适宜生活的城市空间，而不是建设新公园。" }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    { "id": "a", "text": "They boosted the sales of cars." },
+    { "id": "b", "text": "They turned out largely ineffective." },
+    { "id": "c", "text": "They won government support." },
+    { "id": "d", "text": "They advocated building new parks." }
+  ],
+  "answerOptionId": "b"
+}

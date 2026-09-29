@@ -1,0 +1,16 @@
+{
+  "id": "anhui-gaokao-2014-reading-b-q63",
+  "familyId": "anhui-2014-reading-b",
+  "skillIds": ["reading.detail", "reading.inference"],
+  "level": "G1",
+  "section": "reading",
+  "reviewMode": "recognition",
+  "promptZh": "根据文章 B 回答第 63 题。",
+  "resourceId": "anhui-gaokao-2014-reading-b",
+  "estimatedSeconds": 60,
+  "sourceIds": ["anhui-gaokao-2014-official"],
+  "explanation": { "summaryZh": "研究团队发现大象会避开有蜜蜂生活的树。", "ruleZh": "判断正误题要回到文章中的明确事实，避免把实验条件扩大。", "evidence": [{ "resourceId": "anhui-gaokao-2014-reading-b", "paragraphId": "p1", "quote": "elephants avoid certain trees with bees living in them" }], "distractors": [] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "Young elephants ignore African honeybees." }, { "id": "b", "text": "Waterfalls can make elephants stay in one place." }, { "id": "c", "text": "Elephants do not go near trees with bees living in them." }, { "id": "d", "text": "Farmers do not allow Lucy to conduct tests in their fields." }],
+  "answerOptionId": "c"
+}

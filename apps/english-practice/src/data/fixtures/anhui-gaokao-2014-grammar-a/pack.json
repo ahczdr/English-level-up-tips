@@ -1,0 +1,914 @@
+{
+  "schemaVersion": 1,
+  "id": "anhui-gaokao-2014-grammar-a",
+  "version": "0.1.1",
+  "titleZh": "2014 年安徽高考英语单项填空（结构化草稿）",
+  "status": "draft",
+  "author": "个人学习工具资料导入",
+  "reviewer": null,
+  "reviewedAt": null,
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sources": [
+    {
+      "id": "anhui-gaokao-2014-official",
+      "kind": "official-reference",
+      "title": "安徽省教育招生考试院：2014年安徽高考英语试题及参考答案",
+      "url": "https://apps.eol.cn/2633/article/54443/10",
+      "rightsNote": "公开历史附件，仅作为个人学习资料来源留档；未确认再分发授权，不进入公开发布题库。"
+    }
+  ],
+  "assets": [
+    {
+      "id": "anhui-gaokao-2014-anhui-gaokao-english-official",
+      "path": "assets/anhui-gaokao/2014-anhui-gaokao-english-official.jpg",
+      "mime": "image/jpeg",
+      "bytes": 790608,
+      "sha256": "51e35e2142e42572d877a0720ba0a4f0055ee1800dd891a262fa606b7760eff0"
+    }
+  ],
+  "resources": [],
+  "items": [
+    {
+      "id": "anhui-gaokao-2014-q21",
+      "familyId": "anhui-2014-dialogue-confirmation",
+      "skillIds": [
+        "sentence.dialogue",
+        "vocabulary.agreement"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确选项完成对话（2014 年安徽卷第 21 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "后一句表示赞同前一句关于坐火车读书的看法，应使用 That's true。",
+        "ruleZh": "对他人陈述表示同意时，可用 That's true。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "a",
+            "reasonZh": "You are joking 表示你在开玩笑，与语境不符。"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "I don't think so 表示不同意。"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "It sounds like fun 表示听起来有趣，不能回应前句观点。"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "You are joking"
+        },
+        {
+          "id": "b",
+          "text": "That's true"
+        },
+        {
+          "id": "c",
+          "text": "I don't think so"
+        },
+        {
+          "id": "d",
+          "text": "It sounds like fun"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "anhui-gaokao-2014-q22",
+      "familyId": "anhui-2014-relative-clause",
+      "skillIds": [
+        "grammar.relative-clause"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的关系词完成句子（2014 年安徽卷第 22 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "先行词 year 在从句中作 spent 的宾语，关系代词 which 可以指物。",
+        "ruleZh": "定语从句中，关系代词 which 可指代物，并在从句中作主语或宾语。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "a",
+            "reasonZh": "when 在从句中作时间状语，不符合 spent 的宾语位置。"
+          },
+          {
+            "optionId": "b",
+            "reasonZh": "where 在从句中作地点状语。"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "why 通常修饰 reason，不能指代 year。"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "when"
+        },
+        {
+          "id": "b",
+          "text": "where"
+        },
+        {
+          "id": "c",
+          "text": "why"
+        },
+        {
+          "id": "d",
+          "text": "which"
+        }
+      ],
+      "answerOptionId": "d"
+    },
+    {
+      "id": "anhui-gaokao-2014-q23",
+      "familyId": "anhui-2014-past-perfect",
+      "skillIds": [
+        "grammar.tense",
+        "grammar.sequence-of-tenses"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的动词形式完成句子（2014 年安徽卷第 23 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "双胞胎先完成作业，之后才被允许去操场打球，因此用过去完成时 had finished。",
+        "ruleZh": "在过去时间背景下，先发生的动作可用过去完成时表示。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "a",
+            "reasonZh": "will finish 是一般将来时。"
+          },
+          {
+            "optionId": "b",
+            "reasonZh": "finish 是一般现在时，不能表示过去背景下已完成的动作。"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "have finished 是现在完成时，时态与 were allowed 不一致。"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "will finish"
+        },
+        {
+          "id": "b",
+          "text": "finish"
+        },
+        {
+          "id": "c",
+          "text": "have finished"
+        },
+        {
+          "id": "d",
+          "text": "had finished"
+        }
+      ],
+      "answerOptionId": "d"
+    },
+    {
+      "id": "anhui-gaokao-2014-q24",
+      "familyId": "anhui-2014-indefinite-pronoun",
+      "skillIds": [
+        "grammar.pronoun",
+        "vocabulary.agreement"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的不定代词完成句子（2014 年安徽卷第 24 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "前句说可以向任何人求助，后句说明这里每个人都愿意帮助，因此用 Everyone。",
+        "ruleZh": "everyone 表示每个人，作主语时谓语通常用单数。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "a",
+            "reasonZh": "One 不能独立表达这里每个人的意思。"
+          },
+          {
+            "optionId": "b",
+            "reasonZh": "No one 表示没有人，与 willing to lend you a hand 的积极语义相反。"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "Someone 表示某个人，范围不等于这里每个人。"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "One"
+        },
+        {
+          "id": "b",
+          "text": "No one"
+        },
+        {
+          "id": "c",
+          "text": "Everyone"
+        },
+        {
+          "id": "d",
+          "text": "Someone"
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "anhui-gaokao-2014-q25",
+      "familyId": "anhui-2014-conjunction-time",
+      "skillIds": [
+        "grammar.conjunction",
+        "grammar.time-clause"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的时间连词完成句子（2014 年安徽卷第 25 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "词义发生变化在最终包含 pleasant 这一含义之前，应用 before。",
+        "ruleZh": "before 引导时间状语从句，表示在某个动作或时间点之前。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "after 表示之后，时间关系相反。"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "since 表示自从或因为，不符合语境。"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "while 表示当……时或虽然，不能表达这里的先后关系。"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "before"
+        },
+        {
+          "id": "b",
+          "text": "after"
+        },
+        {
+          "id": "c",
+          "text": "since"
+        },
+        {
+          "id": "d",
+          "text": "while"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "anhui-gaokao-2014-q26",
+      "familyId": "anhui-2014-phrasal-verb",
+      "skillIds": [
+        "vocabulary.phrasal-verb",
+        "sentence.imperative"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的短语动词完成句子（2014 年安徽卷第 26 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "look up from 表示从某处抬头看起；句意是祖母和你说话时请从手机上抬起头。",
+        "ruleZh": "短语动词的含义需要结合搭配和语境判断。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "look into 表示调查或查看某事。"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "look back on 表示回顾过去。"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "look through 表示浏览或仔细检查。"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "look up from"
+        },
+        {
+          "id": "b",
+          "text": "look into"
+        },
+        {
+          "id": "c",
+          "text": "look back on"
+        },
+        {
+          "id": "d",
+          "text": "look through"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "anhui-gaokao-2014-q27",
+      "familyId": "anhui-2014-adjective-choice",
+      "skillIds": [
+        "vocabulary.adjective",
+        "sentence.collocation"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recognition",
+      "promptZh": "选择最合适的形容词完成句子（2014 年安徽卷第 27 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "良好的面试表现使说话者对未来和自己能做的事情感到乐观，应用 optimistic。",
+        "ruleZh": "形容词要同时符合句法搭配和上下文语义。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "a",
+            "reasonZh": "puzzled 表示困惑的，与 good performance 的结果不符。"
+          },
+          {
+            "optionId": "b",
+            "reasonZh": "sensitive 表示敏感的，不表示对未来的积极态度。"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "embarrassed 表示尴尬的，与语境相反。"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "puzzled"
+        },
+        {
+          "id": "b",
+          "text": "sensitive"
+        },
+        {
+          "id": "c",
+          "text": "optimistic"
+        },
+        {
+          "id": "d",
+          "text": "embarrassed"
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "anhui-gaokao-2014-q28",
+      "familyId": "anhui-2014-phrasal-verb-arrival",
+      "skillIds": [
+        "vocabulary.phrasal-verb",
+        "sentence.past-tense"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的短语动词完成句子（2014 年安徽卷第 28 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "体育英雄到达聚会时受到热烈欢迎，turned up 表示出现或到达。",
+        "ruleZh": "turn up 可表示到达、出现；句中 when 引导过去时间背景。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "left off 表示停止或遗漏。"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "moved on 表示继续前进或转移话题。"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "got away 表示逃脱或离开。"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "turned up"
+        },
+        {
+          "id": "b",
+          "text": "left off"
+        },
+        {
+          "id": "c",
+          "text": "moved on"
+        },
+        {
+          "id": "d",
+          "text": "got away"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "anhui-gaokao-2014-q29",
+      "familyId": "anhui-2014-noun-collocation",
+      "skillIds": [
+        "vocabulary.noun",
+        "sentence.collocation"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的名词完成对话（2014 年安徽卷第 29 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "对方提出先买二手车的主意，回应为 That's a good suggestion。",
+        "ruleZh": "suggestion 表示建议，常与 good 搭配。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "a",
+            "reasonZh": "saying 表示说法或谚语，不是这里的具体建议。"
+          },
+          {
+            "optionId": "b",
+            "reasonZh": "question 表示问题，和 Why not... 的功能不符。"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "account 表示账户或叙述，不符合语境。"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "saying"
+        },
+        {
+          "id": "b",
+          "text": "question"
+        },
+        {
+          "id": "c",
+          "text": "suggestion"
+        },
+        {
+          "id": "d",
+          "text": "account"
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "anhui-gaokao-2014-q30",
+      "familyId": "anhui-2014-relative-past-perfect",
+      "skillIds": [
+        "grammar.tense",
+        "grammar.relative-clause"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的动词形式完成句子（2014 年安徽卷第 30 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "如果没有回收，人们本来会把这些物品扔掉，would have thrown 表示对过去情况的假设结果。",
+        "ruleZh": "would have + 过去分词可表示与过去事实相反或未发生的假设结果。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "a",
+            "reasonZh": "had thrown 只表示过去某一时间点之前已经发生的动作，不能表达这里的假设结果。"
+          },
+          {
+            "optionId": "b",
+            "reasonZh": "will be throwing 是将来进行时。"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "were throwing 是过去进行时，不能表达与过去事实相反的假设结果。"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "had thrown"
+        },
+        {
+          "id": "b",
+          "text": "will be throwing"
+        },
+        {
+          "id": "c",
+          "text": "were throwing"
+        },
+        {
+          "id": "d",
+          "text": "would have thrown"
+        }
+      ],
+      "answerOptionId": "d"
+    },
+    {
+      "id": "anhui-gaokao-2014-q31",
+      "familyId": "anhui-2014-comparative-contrast",
+      "skillIds": [
+        "grammar.comparison",
+        "grammar.conjunction"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的比较结构完成句子（2014 年安徽卷第 31 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "句意是希望学生努力工作而不是几乎不工作，rather than 表示而不是。",
+        "ruleZh": "rather than 连接两个对比的成分，表示选择前者而非后者。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "a",
+            "reasonZh": "less than 表示少于，不构成这里的行为对比。"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "as well as 表示以及，语义相反。"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "as much as 表示和……一样多或尽管，不能表达取舍。"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "less than"
+        },
+        {
+          "id": "b",
+          "text": "rather than"
+        },
+        {
+          "id": "c",
+          "text": "as well as"
+        },
+        {
+          "id": "d",
+          "text": "as much as"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "anhui-gaokao-2014-q32",
+      "familyId": "anhui-2014-participle-complement",
+      "skillIds": [
+        "grammar.non-finite",
+        "grammar.past-participle"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的非谓语形式完成句子（2014 年安徽卷第 32 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "get promoted 表示获得晋升，过去分词 promoted 作 get 的补足语。",
+        "ruleZh": "get + 过去分词可表示经历或进入某种状态，promoted 在此表示被晋升。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "a",
+            "reasonZh": "promote 是动词原形，不能直接放在 get 后表达被晋升。"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "promoting 表示主动进行晋升，不符合 Henry 获得晋升的语义。"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "to promote 表示目的或将来动作，不符合固定搭配。"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "promote"
+        },
+        {
+          "id": "b",
+          "text": "promoted"
+        },
+        {
+          "id": "c",
+          "text": "promoting"
+        },
+        {
+          "id": "d",
+          "text": "to promote"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "anhui-gaokao-2014-q33",
+      "familyId": "anhui-2014-adverbial-connector",
+      "skillIds": [
+        "grammar.adverb",
+        "grammar.conjunction"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的副词完成句子（2014 年安徽卷第 33 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "在市场中发挥更大作用，因此能够提供更多工作，therefore 表示因此。",
+        "ruleZh": "therefore 表示因果结果，通常修饰整个分句。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "a",
+            "reasonZh": "however 表示转折。"
+          },
+          {
+            "optionId": "b",
+            "reasonZh": "anywhere 表示任何地方，不能表达因果。"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "otherwise 表示否则，语义不符。"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "however"
+        },
+        {
+          "id": "b",
+          "text": "anywhere"
+        },
+        {
+          "id": "c",
+          "text": "therefore"
+        },
+        {
+          "id": "d",
+          "text": "otherwise"
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "anhui-gaokao-2014-q34",
+      "familyId": "anhui-2014-verb-collocation",
+      "skillIds": [
+        "vocabulary.collocation",
+        "grammar.present-perfect"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的动词完成句子（2014 年安徽卷第 34 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "stand the test of time 表示经受住时间的考验，且与 has really 构成现在完成时。",
+        "ruleZh": "stand the test of time 是固定搭配，表示长期保持价值或影响力。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "a",
+            "reasonZh": "failed the test of time 表示未通过时间考验，与 still popular 相反。"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "taken 不能与 the test of time 构成这里的固定搭配。"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "conducted the test 表示进行测试，不是经受考验。"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "failed"
+        },
+        {
+          "id": "b",
+          "text": "stood"
+        },
+        {
+          "id": "c",
+          "text": "taken"
+        },
+        {
+          "id": "d",
+          "text": "conducted"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "anhui-gaokao-2014-q35",
+      "familyId": "anhui-2014-dialogue-encouragement",
+      "skillIds": [
+        "sentence.dialogue",
+        "vocabulary.expression"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recognition",
+      "promptZh": "选择恰当的交际表达完成对话（2014 年安徽卷第 35 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "对方说自己每天坚持锻炼，回应应是鼓励继续保持的 Keep it up。",
+        "ruleZh": "Keep it up 用于鼓励对方继续保持良好表现。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "a",
+            "reasonZh": "Good luck 用于祝愿成功，不适合回应已经在坚持的习惯。"
+          },
+          {
+            "optionId": "b",
+            "reasonZh": "Cheer up 用于鼓励振作或打起精神。"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "Same to you 用于回应对方对自己的祝愿。"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Good luck"
+        },
+        {
+          "id": "b",
+          "text": "Cheer up"
+        },
+        {
+          "id": "c",
+          "text": "Same to you"
+        },
+        {
+          "id": "d",
+          "text": "Keep it up"
+        }
+      ],
+      "answerOptionId": "d"
+    }
+  ],
+  "units": [
+    {
+      "id": "anhui-gaokao-2014-grammar-a",
+      "titleZh": "2014 年安徽高考英语：单项填空首批",
+      "familyIds": [
+        "anhui-2014-dialogue-confirmation",
+        "anhui-2014-relative-clause",
+        "anhui-2014-past-perfect",
+        "anhui-2014-indefinite-pronoun",
+        "anhui-2014-conjunction-time",
+        "anhui-2014-phrasal-verb",
+        "anhui-2014-adjective-choice",
+        "anhui-2014-phrasal-verb-arrival",
+        "anhui-2014-noun-collocation",
+        "anhui-2014-relative-past-perfect",
+        "anhui-2014-comparative-contrast",
+        "anhui-2014-participle-complement",
+        "anhui-2014-adverbial-connector",
+        "anhui-2014-verb-collocation",
+        "anhui-2014-dialogue-encouragement"
+      ],
+      "itemIds": [
+        "anhui-gaokao-2014-q21",
+        "anhui-gaokao-2014-q22",
+        "anhui-gaokao-2014-q23",
+        "anhui-gaokao-2014-q24",
+        "anhui-gaokao-2014-q25",
+        "anhui-gaokao-2014-q26",
+        "anhui-gaokao-2014-q27",
+        "anhui-gaokao-2014-q28",
+        "anhui-gaokao-2014-q29",
+        "anhui-gaokao-2014-q30",
+        "anhui-gaokao-2014-q31",
+        "anhui-gaokao-2014-q32",
+        "anhui-gaokao-2014-q33",
+        "anhui-gaokao-2014-q34",
+        "anhui-gaokao-2014-q35"
+      ],
+      "prerequisiteSkillIds": []
+    }
+  ]
+}

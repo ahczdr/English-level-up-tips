@@ -1,0 +1,30 @@
+{
+  "id": "anhui-gaokao-2025-reading-b-q6",
+  "familyId": "anhui-gaokao-2025-reading-b",
+  "skillIds": ["reading.detail"],
+  "level": "G2",
+  "section": "reading",
+  "reviewMode": "transfer",
+  "promptZh": "What does the underlined word “staggering” in paragraph 3 mean?",
+  "resourceId": "anhui-gaokao-2025-reading-b",
+  "estimatedSeconds": 45,
+  "sourceIds": ["anhui-gaokao-2025-eol"],
+  "explanation": {
+    "summaryZh": "后文列出学生写出 10 到 20 页、主题多样且打动人心的作品，因此 staggering 表示令人惊叹的。",
+    "ruleZh": "词义猜测题要用词语所在句的上下文结果和评价色彩判断。",
+    "evidence": [{ "resourceId": "anhui-gaokao-2025-reading-b", "paragraphId": "p3", "quote": "The results were staggering" }],
+    "distractors": [
+      { "optionId": "a", "reasonZh": "作品结果不是“混杂的”。" },
+      { "optionId": "c", "reasonZh": "学生作品并非相似，而是主题多样。" },
+      { "optionId": "d", "reasonZh": "上下文表达的是积极惊喜，不是令人不安。" }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    { "id": "a", "text": "Mixed." },
+    { "id": "b", "text": "Amazing." },
+    { "id": "c", "text": "Similar." },
+    { "id": "d", "text": "Disturbing." }
+  ],
+  "answerOptionId": "b"
+}

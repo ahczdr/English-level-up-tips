@@ -1,0 +1,16 @@
+{
+  "id": "h3-vocab-contribute",
+  "familyId": "h3-contribute",
+  "skillIds": ["vocab.collocation"],
+  "level": "G2",
+  "section": "vocabulary",
+  "reviewMode": "transfer",
+  "promptZh": "Regular reading contributes to better writing. contributes to 的意思是：",
+  "resourceId": null,
+  "estimatedSeconds": 55,
+  "sourceIds": ["original-demo"],
+  "explanation": { "summaryZh": "经常阅读有助于更好的写作，contribute to 表示促成、有助于。", "ruleZh": "to 在这里是介词，后接名词或动名词。", "evidence": [], "distractors": [{ "optionId": "b", "reasonZh": "depend on 表示依赖。" }, { "optionId": "c", "reasonZh": "break down 表示出故障或分解。" }] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "有助于、促成" }, { "id": "b", "text": "依赖于" }, { "id": "c", "text": "分解、出故障" }],
+  "answerOptionId": "a"
+}

@@ -218,7 +218,7 @@ export function validatePack(value: unknown, purpose: 'preview' | 'release'): Va
     if (pack.status !== 'published' || !pack.reviewer || pack.author.trim().length === 0 || !pack.reviewedAt || samePerson) {
       error(errors, 'status', 'RELEASE_GATE', '发布包必须已发布、具有审核人和审核时间，且作者与审核人不同（忽略空白与大小写）')
     } else if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?Z$/.test(pack.reviewedAt) || Number.isNaN(Date.parse(pack.reviewedAt))) {
-      error(errors, 'reviewedAt', 'RELEASE_GATE', '审核时间必须是有效 ISO 日期')
+      error(errors, 'reviewedAt', 'REVIEWED_AT_INVALID', '审核时间必须是有效 ISO 日期')
     }
   }
 

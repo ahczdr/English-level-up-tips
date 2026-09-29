@@ -1,0 +1,16 @@
+{
+  "id": "h3-writing-invite",
+  "familyId": "h3-invite",
+  "skillIds": ["writing.task"],
+  "level": "G2",
+  "section": "application-writing",
+  "reviewMode": "transfer",
+  "promptZh": "写邀请信时，哪一句最适合作为开头？",
+  "resourceId": null,
+  "estimatedSeconds": 60,
+  "sourceIds": ["original-demo"],
+  "explanation": { "summaryZh": "I am writing to invite you to... 直接说明写信目的，适合邀请信开头。", "ruleZh": "应用文开头先交代写信目的，再补充时间、地点和活动信息。", "evidence": [], "distractors": [{ "optionId": "b", "reasonZh": "该句表达感谢，不是邀请信的直接开场。" }, { "optionId": "c", "reasonZh": "该句表达道歉，不符合邀请目的。" }] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "I am writing to invite you to..." }, { "id": "b", "text": "Thank you for your kind help." }, { "id": "c", "text": "I am sorry to tell you that..." }],
+  "answerOptionId": "a"
+}

@@ -55,23 +55,34 @@ export const canonicalize = (value: unknown): unknown => {
   if (value !== null && typeof value === 'object') {
     const source = value as Record<string, unknown>
     const sorted: Record<string, unknown> = {}
-    for (const key of Object.keys(source).sort()) sorted[key] = canonicalize(source[key])
+    for (const key of Object.keys(source).sort()) {
+      Object.defineProperty(sorted, key, {
+        value: canonicalize(source[key]),
+        enumerable: true,
+        configurable: true,
+        writable: true,
+      })
+    }
     return sorted
   }
   return value
 }
 
-// R2：拒绝 own __proto__/constructor/prototype 键（JSON.parse 可产生 own __proto__，
-// canonicalize 赋值会丢键或改写原型，攻击者可按丢键形预计算摘要绕过校验）
-const hasDangerousKeys = (value: unknown, depth?: number): boolean => {
-  const maxDepth = depth ?? 32
-  if (maxDepth <= 0) return false
-  if (Array.isArray(value)) return value.some((item) => hasDangerousKeys(item, maxDepth - 1))
-  if (value !== null && typeof value === 'object') {
-    const source = value as Record<string, unknown>
+// R2：拒绝任意深度的 own __proto__/constructor/prototype 键。
+// 使用显式栈，避免固定递归深度让恶意 JSON 绕过检查或耗尽调用栈。
+const hasDangerousKeys = (value: unknown): boolean => {
+  const pending: unknown[] = [value]
+  while (pending.length > 0) {
+    const current = pending.pop()
+    if (Array.isArray(current)) {
+      pending.push(...current)
+      continue
+    }
+    if (current === null || typeof current !== 'object') continue
+    const source = current as Record<string, unknown>
     for (const key of Object.keys(source)) {
       if (key === '__proto__' || key === 'constructor' || key === 'prototype') return true
-      if (hasDangerousKeys(source[key], maxDepth - 1)) return true
+      pending.push(source[key])
     }
   }
   return false

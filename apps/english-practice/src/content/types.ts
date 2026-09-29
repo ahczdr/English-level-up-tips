@@ -42,7 +42,7 @@ export interface Resource {
   transcript: string | null
 }
 
-export type AssetMime = 'audio/mpeg' | 'audio/mp4' | 'image/webp'
+export type AssetMime = 'audio/mpeg' | 'audio/mp4' | 'image/webp' | 'image/png' | 'image/jpeg'
 
 export interface Asset {
   id: string

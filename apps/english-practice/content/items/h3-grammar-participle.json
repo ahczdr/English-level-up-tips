@@ -1,0 +1,16 @@
+{
+  "id": "h3-grammar-participle",
+  "familyId": "h3-participle",
+  "skillIds": ["grammar.infinitive"],
+  "level": "G2",
+  "section": "grammar",
+  "reviewMode": "transfer",
+  "promptZh": "Having finished her homework, Lily went for a walk. Having finished 表示：",
+  "resourceId": null,
+  "estimatedSeconds": 60,
+  "sourceIds": ["original-demo"],
+  "explanation": { "summaryZh": "Lily 先完成作业，再去散步，Having finished 表示动作先发生。", "ruleZh": "完成式分词 having + 过去分词常表示分词动作发生在主句动作之前。", "evidence": [], "distractors": [{ "optionId": "b", "reasonZh": "同时发生通常不需要完成式。" }, { "optionId": "c", "reasonZh": "被动关系应使用 having been + 过去分词。" }] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "完成作业之后" }, { "id": "b", "text": "正在完成作业时" }, { "id": "c", "text": "作业被完成时" }],
+  "answerOptionId": "a"
+}
