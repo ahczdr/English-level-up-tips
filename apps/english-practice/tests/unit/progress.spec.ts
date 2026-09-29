@@ -295,6 +295,11 @@ describe('T11 评审修复回归', () => {
     const db = createDatabase('gaokao-progress-' + crypto.randomUUID())
     await db.open()
     await db.settings.put({ id: 'personal', value: { profileId: 'gaokao-common-training-v1', grade: null, goal: null, defaultMinutes: 10, timeZone: 'Asia/Shanghai', sound: true, animation: true } })
+    // 写作版本经所属会话按 profile 过滤（P2 写作 per-profile 化）：先补会话行
+    await db.sessions.bulkAdd([
+      { id: 's1', profileId: 'gaokao-common-training-v1', unitId: null, slots: [], currentIndex: 0, revision: 0, state: 'completed', createdAt: '2026-09-08T00:00:00.000Z', updatedAt: '2026-09-08T00:00:00.000Z', studyDay: '2026-09-08' },
+      { id: 's2', profileId: 'gaokao-common-training-v1', unitId: null, slots: [], currentIndex: 0, revision: 0, state: 'completed', createdAt: '2026-09-09T00:00:00.000Z', updatedAt: '2026-09-09T00:00:00.000Z', studyDay: '2026-09-09' },
+    ])
     await db.writingVersions.bulkAdd([
       { id: 's2:w1:v1', sessionId: 's2', itemId: 'w1', createdAt: '2026-09-09T00:00:00.000Z', content: JSON.stringify({ content: '第二会话初稿', outline: '', checklist: [true], version: 1 }) },
       { id: 's1:w1:v1', sessionId: 's1', itemId: 'w1', createdAt: '2026-09-08T00:00:00.000Z', content: JSON.stringify({ content: '第一会话初稿', outline: '', checklist: [true, false], version: 1 }) },
@@ -310,6 +315,7 @@ describe('T11 评审修复回归', () => {
     const db = createDatabase('gaokao-progress-' + crypto.randomUUID())
     await db.open()
     await db.settings.put({ id: 'personal', value: { profileId: 'gaokao-common-training-v1', grade: null, goal: null, defaultMinutes: 10, timeZone: 'UTC', sound: true, animation: false } })
+    await db.sessions.add({ id: 's-tz', profileId: 'gaokao-common-training-v1', unitId: null, slots: [], currentIndex: 0, revision: 0, state: 'completed', createdAt: '2026-09-11T16:30:00.000Z', updatedAt: '2026-09-11T16:30:00.000Z', studyDay: '2026-09-12' })
     await db.writingVersions.add({
       id: 's-tz:w1:v1',
       sessionId: 's-tz',
@@ -351,5 +357,28 @@ describe('T11 评审修复回归', () => {
     expect(after.find((row) => row.id === 'unit:first:p-first:demo-school-club')?.unlockedAt).toBe(unlockedAt)
     // CR49：第二个 profile 独立通过同单元时写自己的成就行，不与 p-first 互相覆盖
     expect(after.some((row) => row.id === 'unit:first:p-second:demo-school-club')).toBe(true)
+  })
+})
+
+describe('CR8 回归：未知条目作答保留统计但不进题型分组', () => {
+  it('unknownItem 行计入正确率与学习日，不产生 series 分桶', () => {
+    const knownAttempt: ProgressAttempt = {
+      id: 'a-known', itemId: 'i-known', familyId: 'f-known', kind: 'choice', level: 'G0',
+      phase: 'first', studyDay: '2026-09-09', createdAt: '2026-09-09T00:00:00.000Z',
+      gradeEarned: 1, gradePossible: 1, assisted: false, firstSeenSelf: true,
+    }
+    const unknownAttempt: ProgressAttempt = {
+      ...knownAttempt,
+      id: 'a-unknown', itemId: 'i-gone', familyId: 'f-gone', studyDay: '2026-09-08',
+      createdAt: '2026-09-08T00:00:00.000Z', unknownItem: true,
+    }
+    const summary = summarizeProgress(baseInput({
+      attempts: [knownAttempt, unknownAttempt],
+    }))
+    expect(summary.objective).toEqual({ attempts: 2, correct: 2, rate: 1 })
+    expect(summary.studyDays).toEqual(['2026-09-08', '2026-09-09'])
+    // 已知条目仍产生自己的分桶；未知条目不进 series
+    expect(summary.series).toHaveLength(1)
+    expect(summary.series[0]).toMatchObject({ kind: 'choice', level: 'G0', thisWeek: { attempts: 1, correct: 1 } })
   })
 })

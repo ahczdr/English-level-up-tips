@@ -126,9 +126,24 @@ const main = async () => {
     }
     await fs.writeFile(path.join(staging, 'content-catalog.json'), json({ packs: catalog }), 'utf8')
     await fs.mkdir(path.dirname(outputRoot), { recursive: true })
-    await fs.rm(outputRoot, { recursive: true, force: true })
-    await fs.rename(path.join(staging, 'content-packs'), outputRoot)
-    await fs.rename(path.join(staging, 'content-catalog.json'), path.join(publicRoot, 'content-catalog.json'))
+    // 原子化换装：旧目录先改名让位（而非先删），packs 就位后再换 catalog，最后清理旧目录——
+    // 中途崩溃不会留下「旧 catalog 指向已删除版本」的坏状态
+    const retired = path.join(publicRoot, `.content-retired-${process.pid}`)
+    await fs.rm(retired, { recursive: true, force: true })
+    let retiredOld = false
+    if (await fs.stat(outputRoot).catch(() => null)) {
+      await fs.rename(outputRoot, retired)
+      retiredOld = true
+    }
+    try {
+      await fs.rename(path.join(staging, 'content-packs'), outputRoot)
+      await fs.rename(path.join(staging, 'content-catalog.json'), path.join(publicRoot, 'content-catalog.json'))
+    } catch (error: unknown) {
+      const targetGone = !await fs.stat(outputRoot).catch(() => null)
+      if (retiredOld && targetGone) await fs.rename(retired, outputRoot).catch(() => undefined)
+      throw error
+    }
+    await fs.rm(retired, { recursive: true, force: true })
 
   } finally {
     await fs.rm(staging, { recursive: true, force: true })

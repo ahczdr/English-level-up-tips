@@ -90,11 +90,11 @@
     },
     {
       "id": "anhui-gaokao-official-archive",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "status": "published",
-      "bytes": 10234,
-      "sha256": "6099f5f09ca976b7de5c06d8a32d0c3be2a3aa2288718bbe2de563534f02e5c6",
-      "path": "content-packs/anhui-gaokao-official-archive/0.2.0/pack.json"
+      "bytes": 10216,
+      "sha256": "f6db3f64a2df43782dcb0d4f38a4894ee48aabf31e66685cdfda374a725f3f1f",
+      "path": "content-packs/anhui-gaokao-official-archive/0.2.1/pack.json"
     },
     {
       "id": "gaokao-listening",

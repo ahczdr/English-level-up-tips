@@ -34,7 +34,8 @@ if (expectedSha !== 'unversioned' && !/^[0-9a-f]{40}$/.test(expectedSha)) {
   fail('BUILD_SHA must be a 40-char lowercase hex sha or unset; got: ' + JSON.stringify(expectedSha))
 }
 if (info.buildSha !== expectedSha) fail('release-info buildSha ' + info.buildSha + ' != BUILD_SHA ' + expectedSha)
-const fixtureMarkers = ['gaokao-protocol-demo', 'gaokao-listening/1.0.0/pack.json', 'gaokao-demo/1.0.0/pack.json']
+// 夹具数据内嵌 pack JSON：E2E 构建的 JS 才会含包 id 字符串（版本无关，避免版本提升让标记失效）
+const fixtureMarkers = ['"id":"gaokao-protocol-demo"', '"id":"gaokao-listening"']
 for (const file of readdirSync(assetsDir)) {
   if (!file.endsWith('.js')) continue
   const content = readFileSync(join(assetsDir, file), 'utf8')

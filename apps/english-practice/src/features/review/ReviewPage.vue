@@ -45,9 +45,10 @@ const buildFamilyLabels = async (): Promise<Map<string, { labelZh: string; secti
   for (const record of records) {
     const pack = record.pack as CoursePack;
     if (!Array.isArray(pack?.items) || !Array.isArray(pack?.units)) continue;
+    const itemById = new Map(pack.items.map((candidate) => [candidate.id, candidate]));
     for (const unit of pack.units) {
       for (const itemId of unit.itemIds) {
-        const item = pack.items.find((candidate) => candidate.id === itemId);
+        const item = itemById.get(itemId);
         if (!item || labels.has(item.familyId)) continue;
         labels.set(item.familyId, {
           labelZh: unit.titleZh,

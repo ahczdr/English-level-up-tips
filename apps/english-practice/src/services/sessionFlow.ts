@@ -74,12 +74,11 @@ export async function getSessionSummary(db: GaokaoDatabase, sessionId: string): 
       const payload = record.payload as FirstAttemptPayload | undefined
       if (payload && attemptBySlot.get(record.slotId) === undefined) attemptBySlot.set(record.slotId, payload)
     }
-    // CR48/CR51：外会话曝光只统计本 profile 的行（per-profile 账本），跨 profile 不影响独立判定
+    // CR48/CR51：外会话曝光只统计本 profile 的行（per-profile 账本），跨 profile 不影响独立判定。
+    // 熟题口径与 submitAnswer 一致（itemId 级）：本 profile 在任意版本下由其他会话首见即算辅助
     const exposureRows = await db.exposureLog.where('profileId').equals(session.profileId).toArray()
-    const foreignSessionByRef = new Set(
-      exposureRows
-        .filter((exposure) => exposure.firstSeenSessionId !== sessionId)
-        .map((exposure) => `${exposure.packId}|${exposure.packVersion}|${exposure.itemId}`),
+    const foreignItemIds = new Set(
+      exposureRows.filter((exposure) => exposure.firstSeenSessionId !== sessionId).map((exposure) => exposure.itemId),
     )
     const summary: SessionSummary = {
       totalSlots: session.slots.length,
@@ -94,8 +93,7 @@ export async function getSessionSummary(db: GaokaoDatabase, sessionId: string): 
       if (slot.state === 'submitted') summary.submittedSlots += 1
       const attempt = attemptBySlot.get(slot.id)
       if (attempt) {
-        const refKey = `${slot.ref.packId}|${slot.ref.packVersion}|${slot.ref.itemId}`
-        const assisted = attempt.assistance.length > 0 || foreignSessionByRef.has(refKey)
+        const assisted = attempt.assistance.length > 0 || foreignItemIds.has(slot.ref.itemId)
         const full = attempt.grade.possible > 0 && attempt.grade.earned === attempt.grade.possible
         if (full && !assisted) summary.independentFirst += 1
         else if (full) summary.assistedFirst += 1

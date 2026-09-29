@@ -1,6 +1,6 @@
 # Third-party Material and Citations
 
-Last reviewed: 2026-09-02.
+Last reviewed: 2026-09-29.
 
 This register distinguishes repository-owned material from third-party sources. A link is not a transfer of rights. Contributors must add or update an entry when adding external media, a substantial quotation, a dataset, or a product capability claim.
 
@@ -33,6 +33,7 @@ This register distinguishes repository-owned material from third-party sources. 
 | Author project screenshots and visit photos | `docs/projects.md`, `docs/en/projects.md` | Author-provided media | Used for disclosure and personal record; not evidence of third-party endorsement | 2026-08-16 |
 | WeChat profile and practice articles | `docs/projects.md`, `docs/threads/part-3/2-ai-development-and-resource-layer.md` and English counterparts | [TokenMany](https://mp.weixin.qq.com/s?src=11&timestamp=1787503349&ver=6922&signature=hsfWcee*q*Okq4gsJ5TpMaWV4vZTwLean6SKtOxCC-EyAf9jWD6l1LQYDny29FqXVImHZFNFDPt*EVH*hVMN2pa91kZtuYfzI81wtV7yahnqVBsKS*c7Ls1uf9QqiEIF&new=1), [Wanli Center](https://mp.weixin.qq.com/s?src=11&timestamp=1787503349&ver=6922&signature=k7g1j*QF9lLWMGUlkAu65EFOmvokb8FoM51LNr4hgn4Q4Cc7q3t3O8Mkac7YnWTJbIVdvX-PXYdZXVHEohJieTOPR*Q2-TVAHuIg2ljgp2BMn8m7STrvovnpW01j817Y&new=1) | Paraphrased with source and limitation; narrative material only, no capability, customer, or revenue claim inferred | 2026-08-24 |
 | Latest personal updates | `docs/assets/latest/` and both home pages | Author-provided media | Used with the author's permission for the stated personal updates; EXIF metadata removed before publication | 2026-08-20 |
+| Anhui gaokao English exam papers (2013, 2014) and new-curriculum-I scans (2024 answer/analysis pages, 2025 full paper) | `apps/english-practice/content/inbox/anhui-gaokao/`, `apps/english-practice/content/assets/anhui-gaokao/`, and the published packs under `apps/english-practice/public/content-packs/` | [Anhui Provincial Education Examination Authority historical pages](https://apps.eol.cn/2633/article/248282.html) via [China Education Online (eol.cn)](https://gaokao.eol.cn/shiti/yy/202506/t20250612_2674296.shtml) | Publicly released exam material, redistributed for personal learning use in the practice app per the maintainer's 2026-09-29 decision recorded in `planning/gaokao-english/anhui-2013-2014-content-audit-2026-09-16.md`; SHA256 checksums kept beside the scans; commercial use not covered by this project | 2026-09-15 |
 
 ## Contribution Requirements
 

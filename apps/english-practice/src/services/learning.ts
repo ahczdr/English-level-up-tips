@@ -266,9 +266,9 @@ export async function createTodaySession(input: CreateTodaySessionInput): Promis
       if (again !== null) return { kind: 'session', session: again }
       await input.db.sessions.add(session)
       await input.db.settings.put({ id: markerId, value: session.id })
-      // CR56.b：清理该 profile 既往学习日的 today-session marker（按日累积永不清理，年积 365 行）
-      const markerPrefix = `today-session:${input.profileId}:`
-      const staleMarkers = (await input.db.settings.where(':id').startsWith(markerPrefix).toArray()).filter((row) => row.id !== markerId)
+      // CR56.b：清理既往学习日的 today-session marker（含其他 profile 的旧行——
+      // marker 是按日复用指针，过期即无效；否则跨 profile 按日累积永不清理）
+      const staleMarkers = (await input.db.settings.where(':id').startsWith('today-session:').toArray()).filter((row) => row.id !== markerId)
       for (const row of staleMarkers) await input.db.settings.delete(row.id)
       return { kind: 'session', session }
     })
@@ -283,9 +283,15 @@ export async function collectLevelUpEvidence(db: GaokaoDatabase, profileId: stri
   try {
     // CR2：作答与曝光都按 profileId 过滤，跨 profile 不混算；CR51：走索引查询
     const rows = (await db.attempts.where('profileId').equals(profileId).toArray()).filter((record) => record.phase === 'first')
-    // P03：提示后的正确与熟题重试不参与有效独立首次统计（D06 独立首次三条件）
+    // P03：提示后的正确与熟题重试不参与有效独立首次统计（D06 独立首次三条件）。
+    // 熟题口径与 submitAnswer 一致（itemId 级）：本 profile 在任意版本下由其他会话首见即熟题
     const exposures = await db.exposureLog.where('profileId').equals(profileId).toArray()
-    const exposureSessions = new Map(exposures.map((exposure) => [`${exposure.packId}|${exposure.packVersion}|${exposure.itemId}`, exposure.firstSeenSessionId]))
+    const seenSessionsByItem = new Map<string, Set<string>>()
+    for (const exposure of exposures) {
+      const sessions = seenSessionsByItem.get(exposure.itemId) ?? new Set<string>()
+      sessions.add(exposure.firstSeenSessionId)
+      seenSessionsByItem.set(exposure.itemId, sessions)
+    }
     type FirstRow = { gradeEarned: number; gradePossible: number; studyDay: string; familyId: string; createdAt: string }
     const firsts: FirstRow[] = []
     for (const record of rows) {
@@ -293,9 +299,8 @@ export async function collectLevelUpEvidence(db: GaokaoDatabase, profileId: stri
       const grade = payload.grade ?? { earned: 0, possible: 0 }
       if (payload.assistance !== undefined && payload.assistance.length > 0) continue
       if (payload.ref !== undefined) {
-        const key = `${payload.ref.packId}|${payload.ref.packVersion}|${payload.ref.itemId}`
-        const firstSeenSessionId = exposureSessions.get(key)
-        if (firstSeenSessionId !== undefined && firstSeenSessionId !== record.sessionId) continue
+        const seenSessions = seenSessionsByItem.get(payload.ref.itemId)
+        if (seenSessions !== undefined && [...seenSessions].some((sessionId) => sessionId !== record.sessionId)) continue
       }
       firsts.push({ gradeEarned: grade.earned, gradePossible: grade.possible, studyDay: record.studyDay, familyId: record.familyId, createdAt: record.createdAt })
     }
@@ -563,11 +568,12 @@ export async function submitAnswer(db: GaokaoDatabase, command: SubmitCommand, c
       }
       const now = clock.now()
       // CR46/CR50：独立判定读 per-profile 账本（exposureLog，主键含 profileId）。
-      // 本 profile 在任意版本下见过（首见会话不是本会话）即不算独立首答；
-      // 其他 profile 的曝光不再影响本 profile，也不会再因主键冲突丢失本 profile 的曝光行。
+      // 口径（itemId 级，与 planner 一致）：本 profile 在**任意版本**下见过且首见会话不是
+      // 本会话，即不算独立首答——用 some() 而不是取任意一行，避免字典序版本号
+      //（如 1.10.0 < 1.9.0）让 find() 命中本会话行而误判独立。
       const selfExposures = await db.exposureLog.where('itemId').equals(slot.ref.itemId).toArray()
-      const selfExposure = selfExposures.find((row) => row.profileId === session.profileId)
-      const independent = (!selfExposure || selfExposure.firstSeenSessionId === session.id) && slot.assistance.length === 0
+      const seenBeforeBySelf = selfExposures.some((row) => row.profileId === session.profileId && row.firstSeenSessionId !== session.id)
+      const independent = !seenBeforeBySelf && slot.assistance.length === 0
       const result = grade.earned === grade.possible && grade.possible > 0 && independent ? 'independent-pass' : 'needs-help'
       const previous = await db.reviewStates.get([session.profileId, item.familyId, item.reviewMode])
       const actualStudyDay = studyDay(now, session.timeZone)

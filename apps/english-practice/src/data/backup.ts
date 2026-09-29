@@ -306,6 +306,7 @@ export async function restoreBackup(input: { db: GaokaoDatabase; envelope: Backu
       // 旧版备份没有 per-profile 曝光账本：从已回填 profileId 的 exposures 重建
       if (legacyExposureLog) {
         const rows = await input.db.exposures.toArray()
+        counts.exposureLog = rows.length
         if (rows.length > 0) {
           await input.db.exposureLog.bulkAdd(rows.map((row) => ({
             profileId: row.profileId,

@@ -134,15 +134,23 @@ export async function installPreviewPacks(input: InstallPreviewPacksInput): Prom
         continue
       }
       const pack = parsed as CoursePack
-      await input.db.packs.add({
-        id: pack.id,
-        version: pack.version,
-        status: 'installed',
-        pack,
-        installedAt: now().toISOString(),
-        resourcesReady: pack.assets.length === 0,
+      // get→add 放进同一写事务：并发双入口时后到者看到已存在记录计 skippedExisting，
+      // 而不是把 ConstraintError 误报成「安装失败」
+      const installedNew = await input.db.transaction('rw', input.db.packs, async (): Promise<boolean> => {
+        const existing = await input.db.packs.get([entry.id, entry.version])
+        if (existing) return false
+        await input.db.packs.add({
+          id: pack.id,
+          version: pack.version,
+          status: 'installed',
+          pack,
+          installedAt: now().toISOString(),
+          resourcesReady: pack.assets.length === 0,
+        })
+        return true
       })
-      report.installed += 1
+      if (installedNew) report.installed += 1
+      else report.skippedExisting += 1
     } catch {
       report.rejected += 1
       report.messagesZh.push(`课程包安装失败：${entry.id}@${entry.version}`)

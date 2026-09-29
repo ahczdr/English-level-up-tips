@@ -20,15 +20,19 @@ concurrency:
   group: english-practice-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   quality:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     defaults:
       run:
         working-directory: apps/english-practice
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: '24'
           cache: npm
@@ -54,7 +58,7 @@ jobs:
         run: SKIP_GATE=1 npm run test:e2e
       - name: Collect failure artifacts
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: playwright-failures
           path: |
@@ -65,13 +69,14 @@ jobs:
 
   release-smoke:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     needs: quality
     defaults:
       run:
         working-directory: apps/english-practice
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: '24'
           cache: npm

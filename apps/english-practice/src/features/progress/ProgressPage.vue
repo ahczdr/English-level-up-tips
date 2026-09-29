@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, toRaw } from 'vue';
 import { db as defaultDb } from '../../data/db';
+import { latestInstalledByPackId } from '../../data/pack-reader';
 import { e2eNow } from '../../data/e2e-clock';
 import type { GaokaoDatabase } from '../../data/db';
 import type { WritingVersionBody } from '../../services/writing';
@@ -57,7 +58,9 @@ const loadState = async (): Promise<void> => {
     } catch {
       reducedMotion.value = false;
     }
-    const packs = (await db.value.packs.toArray()).filter((record) => record.status === 'installed' && record.resourcesReady);
+    // 多版本并存时成长统计只按每个包的最新版本（与计划/组合入口同口径），
+    // 避免地图节点重复、未见题虚高与 itemIndex 旧版覆盖新版
+    const packs = latestInstalledByPackId(await db.value.packs.toArray());
     const units: ProgressInput['units'] = [];
     const itemIndex = new Map<string, { kind: ProgressAttempt['kind']; level: ProgressAttempt['level'] }>();
     const countedItems = new Set<string>();
@@ -117,9 +120,12 @@ const loadState = async (): Promise<void> => {
       };
     });
     const validAttempts = attemptRows.filter((row): row is ProgressAttempt => row !== null);
-    // 跨会话合并：版本号按 (sessionId,itemId) 重置，故按 createdAt 排序取初稿/最新，版本数=记录数
+    // 跨会话合并：版本号按 (sessionId,itemId) 重置，故按 createdAt 排序取初稿/最新，版本数=记录数。
+    // 写作版本表本身无 profileId：经所属会话 join 过滤，跨 profile 不混算（与 attempts/exposures 同口径）
+    const profileSessionIds = new Set((await db.value.sessions.toArray()).filter((row) => row.profileId === settings.profileId).map((row) => row.id));
     const grouped = new Map<string, { createdAt: string; studyDay?: string; versionCount: number; checklistCount: number; firstText: string; latestText: string }>();
     for (const record of await db.value.writingVersions.toArray()) {
+      if (!profileSessionIds.has(record.sessionId)) continue;
       const body = parseVersionBody(record.content);
       const existing = grouped.get(record.itemId);
       const isFirst = existing === undefined || record.createdAt < existing.createdAt;

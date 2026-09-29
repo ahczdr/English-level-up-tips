@@ -46,9 +46,12 @@ const describeGroup = (group: PlanGroup): string => {
 
 const refreshState = async (): Promise<void> => {
   try {
+    // 续练入口只列当前 profile 的会话（切换 profile 不串）
+    const settings = await loadPersonalSettings(db.value);
+    planProfileId.value = settings.profileId;
     const sessions = await db.value.sessions.toArray();
     resumable.value = sessions
-      .filter((session) => session.state === 'active' || session.state === 'paused')
+      .filter((session) => (session.state === 'active' || session.state === 'paused') && session.profileId === settings.profileId)
       .sort((left, right) => (left.updatedAt < right.updatedAt ? 1 : -1))
       .slice(0, 3);
   } catch {

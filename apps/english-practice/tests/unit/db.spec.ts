@@ -77,6 +77,10 @@ describe('v2 迁移：存量 attempt/exposure 回填 profileId', () => {
     // R5：断言精确化（孤儿/FALLBACK/归属）
     expect((await upgraded.attempts.get('a2'))?.profileId).toBe('gaokao-common-training-v1')
     expect((await upgraded.exposures.get(['p1', '1.0.0', 'i1']))?.profileId).toBe('profile-a')
+    // v3 回填：legacy exposures 必须 1:1 进入 per-profile 账本，否则计划/证据的 seen 集静默清空
+    const logRows = await upgraded.exposureLog.toArray()
+    expect(logRows).toHaveLength(1)
+    expect(logRows[0]).toMatchObject({ profileId: 'profile-a', packId: 'p1', packVersion: '1.0.0', itemId: 'i1', firstSeenSessionId: 's1' })
   })
 })
 

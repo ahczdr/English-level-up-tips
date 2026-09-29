@@ -505,3 +505,46 @@ describe('CR46/CR50 多版本与 per-profile 曝光', () => {
     expect(hint).toMatchObject({ ok: false, error: { code: 'ALREADY_SUBMITTED' } })
   })
 })
+
+describe('P1 回归：跨版本重做与未就绪最新版', () => {
+  it('同 profile 在旧版本见过、换版后重做不再判独立（版本字典序鲁棒）', async () => {
+    const db = await openDb()
+    const v9 = structuredClone(pack)
+    v9.version = '1.9.0'
+    await db.packs.add({ id: v9.id, version: v9.version, status: 'installed', pack: v9, installedAt: new Date().toISOString(), resourcesReady: true })
+    const firstSession = await createSession({ db, unitId: 'demo-school-club', minutes: 25, profileId, idGenerator: () => 'v9-first' })
+    if (!firstSession.ok || firstSession.value.kind !== 'session') throw new Error('expected session')
+    const firstEnter = await enterCurrentSlot(db, 'v9-first')
+    if (!firstEnter.ok) throw new Error(firstEnter.error.messageZh)
+    await submitAnswer(db, { id: 'v9-a1', sessionId: 'v9-first', slotId: firstEnter.value.slots[0].id, expectedRevision: firstEnter.value.revision, answer: { kind: 'choice', optionId: 'a' } })
+    // 换版：1.10.0（字典序 < 1.9.0），旧行保留给历史会话
+    const v10 = structuredClone(pack)
+    v10.version = '1.10.0'
+    await db.packs.add({ id: v10.id, version: v10.version, status: 'installed', pack: v10, installedAt: new Date().toISOString(), resourcesReady: true })
+    const redo = await createSession({ db, unitId: 'demo-school-club', minutes: 25, profileId, idGenerator: () => 'v10-redo' })
+    if (!redo.ok || redo.value.kind !== 'session') throw new Error('expected session')
+    const redoEnter = await enterCurrentSlot(db, 'v10-redo')
+    if (!redoEnter.ok) throw new Error(redoEnter.error.messageZh)
+    await submitAnswer(db, { id: 'v10-a1', sessionId: 'v10-redo', slotId: redoEnter.value.slots[0].id, expectedRevision: redoEnter.value.revision, answer: { kind: 'choice', optionId: 'a' } })
+    const summary = await getSessionSummary(db, 'v10-redo')
+    expect(summary.ok && summary.value.independentFirst).toBe(0)
+  })
+
+  it('最新版本资源未就绪时计划回落到就绪的旧版本，而不是丢掉整个包', async () => {
+    const db = await openDb({ withPack: false })
+    const older = structuredClone(pack)
+    older.version = '1.0.0'
+    const newer = structuredClone(pack)
+    newer.version = '2.0.0'
+    await db.packs.bulkAdd([
+      { id: older.id, version: older.version, status: 'installed', pack: older, installedAt: new Date().toISOString(), resourcesReady: true },
+      { id: newer.id, version: newer.version, status: 'installed', pack: newer, installedAt: new Date().toISOString(), resourcesReady: false },
+    ])
+    const preview = await previewTodayPlan({ db, minutes: 25, profileId })
+    expect(preview.ok).toBe(true)
+    if (!preview.ok) return
+    const versions = new Set(preview.value.plan.groups.map((candidate) => candidate.packVersion))
+    expect(versions.has('1.0.0')).toBe(true)
+    expect(versions.has('2.0.0')).toBe(false)
+  })
+})
