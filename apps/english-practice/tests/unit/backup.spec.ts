@@ -328,8 +328,9 @@ describe('CR46/CR9/CR55 恢复口径', () => {
   it('旧版备份缺 exposureLog 键时按空表接受，并从 exposures 重建 per-profile 账本', async () => {
     const source = await openDb()
     await source.settings.add({ id: 'personal', value: {} })
-    await source.sessions.add({ id: 's-legacy', profileId: 'p-a', unitId: null, slots: [], currentIndex: 0, revision: 0, state: 'completed', createdAt: '2026-09-12T00:00:00.000Z', updatedAt: '2026-09-12T00:00:00.000Z', studyDay: '2026-09-12' })
-    await source.exposures.add({ packId: 'pk', packVersion: '1.0.0', itemId: 'i1', familyId: 'f1', profileId: 'p-a', firstSeenAt: '2026-09-12T00:00:00.000Z', studyDay: '2026-09-12', firstSeenSessionId: 's-legacy' })
+    // v1 时代行：会话与曝光都没有 profileId，靠 restore 的回填路径归属
+    await source.sessions.add({ id: 's-legacy', unitId: null, slots: [], currentIndex: 0, revision: 0, state: 'completed', createdAt: '2026-09-12T00:00:00.000Z', updatedAt: '2026-09-12T00:00:00.000Z', studyDay: '2026-09-12' } as never)
+    await source.exposures.add({ packId: 'pk', packVersion: '1.0.0', itemId: 'i1', familyId: 'f1', firstSeenAt: '2026-09-12T00:00:00.000Z', studyDay: '2026-09-12', firstSeenSessionId: 's-legacy' } as never)
     const exported = await exportBackup({ db: source })
     if (!exported.ok) throw new Error(exported.error.messageZh)
     // 模拟旧版 payload：去掉 exposureLog 键并重封摘要
@@ -346,7 +347,8 @@ describe('CR46/CR9/CR55 恢复口径', () => {
     if (!restored.ok) return
     const logRows = await target.exposureLog.toArray()
     expect(logRows).toHaveLength(1)
-    expect(logRows[0]).toMatchObject({ profileId: 'p-a', packId: 'pk', itemId: 'i1', firstSeenSessionId: 's-legacy' })
+    // 无 profileId 的旧行按所属会话回填：会话也无 profileId → 落默认 profile
+    expect(logRows[0]).toMatchObject({ profileId: 'gaokao-common-training-v1', packId: 'pk', itemId: 'i1', firstSeenSessionId: 's-legacy' })
   })
 
   it('恢复后音频按本机保留字节如实标 ready（CR9），不再一律要求重下', async () => {

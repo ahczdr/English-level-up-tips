@@ -548,3 +548,18 @@ describe('P1 回归：跨版本重做与未就绪最新版', () => {
     expect(versions.has('2.0.0')).toBe(false)
   })
 })
+
+describe('CR7 复习页标签回退', () => {
+  it('家族在已安装包内显示单元名与题型，包外家族回退原始 id', async () => {
+    const db = await openDb()
+    await db.reviewStates.bulkAdd([
+      { profileId, familyId: 'join-context', reviewMode: 'recognition', dueDay: '2026-09-10', updatedAt: '2026-09-08T00:00:00.000Z', data: { stage: 0, dueDay: '2026-09-10', lapses: 0 } },
+      { profileId, familyId: 'ghost-family', reviewMode: 'recall', dueDay: '2026-09-10', updatedAt: '2026-09-08T00:00:00.000Z', data: { stage: 0, dueDay: '2026-09-10', lapses: 0 } },
+    ])
+    const page = await mountPage(db, '/review')
+    // 命中已安装包：单元名 · 题型 · 模式
+    expect(page.text()).toContain('词汇 · 再认')
+    // 未命中（课程包已卸载）：回退原始 familyId，不虚构标签
+    expect(page.text()).toContain('ghost-family')
+  })
+})
