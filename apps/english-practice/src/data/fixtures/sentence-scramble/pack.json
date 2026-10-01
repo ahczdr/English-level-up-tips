@@ -1,0 +1,1314 @@
+{
+  "schemaVersion": 1,
+  "id": "sentence-scramble",
+  "version": "0.1.0",
+  "titleZh": "组句基础训练（生成草稿）",
+  "status": "published",
+  "author": "内置生成器草稿",
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-30T00:00:00.000Z",
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sources": [
+    {
+      "id": "tool-generated-practice",
+      "kind": "original",
+      "title": "本工具生成的基础练习",
+      "url": null,
+      "rightsNote": "由项目内置生成器编写的原创练习句与题目，非真题转载；逐题独立审核进行中。"
+    }
+  ],
+  "assets": [],
+  "resources": [],
+  "items": [
+    {
+      "id": "sentence-scramble-s01",
+      "familyId": "scramble-s01",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G1",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：She has been studying English for six years.",
+        "ruleZh": "现在完成进行时 + for 时间段",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "She"
+        },
+        {
+          "id": "t1",
+          "text": "has been studying"
+        },
+        {
+          "id": "t2",
+          "text": "English"
+        },
+        {
+          "id": "t3",
+          "text": "for six years"
+        },
+        {
+          "id": "t4",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3",
+          "t4"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s02",
+      "familyId": "scramble-s02",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G2",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：The bridge was built more than a century ago.",
+        "ruleZh": "一般过去时被动语态",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "The bridge"
+        },
+        {
+          "id": "t1",
+          "text": "was built"
+        },
+        {
+          "id": "t2",
+          "text": "more than"
+        },
+        {
+          "id": "t3",
+          "text": "a century ago"
+        },
+        {
+          "id": "t4",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3",
+          "t4"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s03",
+      "familyId": "scramble-s03",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G0",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：I will call you as soon as I arrive.",
+        "ruleZh": "as soon as 引导时间状语从句",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "I will call you"
+        },
+        {
+          "id": "t1",
+          "text": "as soon as"
+        },
+        {
+          "id": "t2",
+          "text": "I arrive"
+        },
+        {
+          "id": "t3",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s04",
+      "familyId": "scramble-s04",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G1",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：He suggested that we take a short break.",
+        "ruleZh": "suggest 后接虚拟语气 that 从句",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "He suggested"
+        },
+        {
+          "id": "t1",
+          "text": "that we take"
+        },
+        {
+          "id": "t2",
+          "text": "a short break"
+        },
+        {
+          "id": "t3",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s05",
+      "familyId": "scramble-s05",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G2",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：The harder you practice, the better you become.",
+        "ruleZh": "the + 比较级 固定结构",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "The harder"
+        },
+        {
+          "id": "t1",
+          "text": "you practice,"
+        },
+        {
+          "id": "t2",
+          "text": "the better"
+        },
+        {
+          "id": "t3",
+          "text": "you become"
+        },
+        {
+          "id": "t4",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3",
+          "t4"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s06",
+      "familyId": "scramble-s06",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G0",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：Neither the students nor the teacher was ready.",
+        "ruleZh": "neither...nor 就近一致",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "Neither the students"
+        },
+        {
+          "id": "t1",
+          "text": "nor the teacher"
+        },
+        {
+          "id": "t2",
+          "text": "was ready"
+        },
+        {
+          "id": "t3",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s07",
+      "familyId": "scramble-s07",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G1",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：This is the hospital where my mother works.",
+        "ruleZh": "where 引导定语从句",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "This is the hospital"
+        },
+        {
+          "id": "t1",
+          "text": "where"
+        },
+        {
+          "id": "t2",
+          "text": "my mother works"
+        },
+        {
+          "id": "t3",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s08",
+      "familyId": "scramble-s08",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G2",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：By the time we arrived, the film had ended.",
+        "ruleZh": "过去完成时 + by the time",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "By the time we arrived,"
+        },
+        {
+          "id": "t1",
+          "text": "the film"
+        },
+        {
+          "id": "t2",
+          "text": "had already ended"
+        },
+        {
+          "id": "t3",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s09",
+      "familyId": "scramble-s09",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G0",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：You had better review your notes tonight.",
+        "ruleZh": "had better do 固定搭配",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "You"
+        },
+        {
+          "id": "t1",
+          "text": "had better"
+        },
+        {
+          "id": "t2",
+          "text": "review your notes"
+        },
+        {
+          "id": "t3",
+          "text": "tonight"
+        },
+        {
+          "id": "t4",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3",
+          "t4"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s10",
+      "familyId": "scramble-s10",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G1",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：Not only did he apologize, but he also helped.",
+        "ruleZh": "not only 句首倒装",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "Not only did he apologize,"
+        },
+        {
+          "id": "t1",
+          "text": "but he also"
+        },
+        {
+          "id": "t2",
+          "text": "offered to help"
+        },
+        {
+          "id": "t3",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s11",
+      "familyId": "scramble-s11",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G2",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：The problem is too difficult for me to solve.",
+        "ruleZh": "too...to 结构",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "The problem is"
+        },
+        {
+          "id": "t1",
+          "text": "too difficult"
+        },
+        {
+          "id": "t2",
+          "text": "for me"
+        },
+        {
+          "id": "t3",
+          "text": "to solve"
+        },
+        {
+          "id": "t4",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3",
+          "t4"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s12",
+      "familyId": "scramble-s12",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G0",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：If I were you, I would accept the offer.",
+        "ruleZh": "虚拟语气 if I were you",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "If I were you,"
+        },
+        {
+          "id": "t1",
+          "text": "I would accept"
+        },
+        {
+          "id": "t2",
+          "text": "the offer"
+        },
+        {
+          "id": "t3",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s13",
+      "familyId": "scramble-s13",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G1",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：She denied breaking the window yesterday.",
+        "ruleZh": "deny 后接动名词",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "She denied"
+        },
+        {
+          "id": "t1",
+          "text": "breaking the window"
+        },
+        {
+          "id": "t2",
+          "text": "yesterday"
+        },
+        {
+          "id": "t3",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s14",
+      "familyId": "scramble-s14",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G2",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：The more we get together, the happier we are.",
+        "ruleZh": "the + 比较级 重复巩固",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "The more we get together,"
+        },
+        {
+          "id": "t1",
+          "text": "the happier"
+        },
+        {
+          "id": "t2",
+          "text": "we are"
+        },
+        {
+          "id": "t3",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s15",
+      "familyId": "scramble-s15",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G0",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：Hardly had he sat down when the phone rang.",
+        "ruleZh": "hardly...when 倒装结构",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "Hardly had he sat down"
+        },
+        {
+          "id": "t1",
+          "text": "when"
+        },
+        {
+          "id": "t2",
+          "text": "the phone rang"
+        },
+        {
+          "id": "t3",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s16",
+      "familyId": "scramble-s16",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G1",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：It was not until midnight that he came back.",
+        "ruleZh": "强调句 not until 结构",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "It was not until midnight"
+        },
+        {
+          "id": "t1",
+          "text": "that"
+        },
+        {
+          "id": "t2",
+          "text": "he came back"
+        },
+        {
+          "id": "t3",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s17",
+      "familyId": "scramble-s17",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G2",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：The man standing at the gate is our new coach.",
+        "ruleZh": "现在分词作定语",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "The man"
+        },
+        {
+          "id": "t1",
+          "text": "standing at the gate"
+        },
+        {
+          "id": "t2",
+          "text": "is"
+        },
+        {
+          "id": "t3",
+          "text": "our new coach"
+        },
+        {
+          "id": "t4",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3",
+          "t4"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s18",
+      "familyId": "scramble-s18",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G0",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：I look forward to hearing from you soon.",
+        "ruleZh": "look forward to + 动名词",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "I look forward"
+        },
+        {
+          "id": "t1",
+          "text": "to hearing"
+        },
+        {
+          "id": "t2",
+          "text": "from you soon"
+        },
+        {
+          "id": "t3",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s19",
+      "familyId": "scramble-s19",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G1",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：There is no point arguing about it now.",
+        "ruleZh": "there is no point doing 固定句型",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "There is"
+        },
+        {
+          "id": "t1",
+          "text": "no point"
+        },
+        {
+          "id": "t2",
+          "text": "arguing about it"
+        },
+        {
+          "id": "t3",
+          "text": "now"
+        },
+        {
+          "id": "t4",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3",
+          "t4"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s20",
+      "familyId": "scramble-s20",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G2",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：The letter must have been sent last Friday.",
+        "ruleZh": "must have done 对过去的推测",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "The letter"
+        },
+        {
+          "id": "t1",
+          "text": "must have been sent"
+        },
+        {
+          "id": "t2",
+          "text": "last Friday"
+        },
+        {
+          "id": "t3",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s21",
+      "familyId": "scramble-s21",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G0",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：What surprised us was his honest answer.",
+        "ruleZh": "what 引导主语从句",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "What surprised us"
+        },
+        {
+          "id": "t1",
+          "text": "was"
+        },
+        {
+          "id": "t2",
+          "text": "his honest answer"
+        },
+        {
+          "id": "t3",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s22",
+      "familyId": "scramble-s22",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G1",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：She is used to getting up early every day.",
+        "ruleZh": "be used to doing 习惯表达",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "She is used to"
+        },
+        {
+          "id": "t1",
+          "text": "getting up early"
+        },
+        {
+          "id": "t2",
+          "text": "every day"
+        },
+        {
+          "id": "t3",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s23",
+      "familyId": "scramble-s23",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G2",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：Only in this way can we make real progress.",
+        "ruleZh": "only 状语句首部分倒装",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "Only in this way"
+        },
+        {
+          "id": "t1",
+          "text": "can we make"
+        },
+        {
+          "id": "t2",
+          "text": "real progress"
+        },
+        {
+          "id": "t3",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3"
+        ]
+      ]
+    },
+    {
+      "id": "sentence-scramble-s24",
+      "familyId": "scramble-s24",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G0",
+      "section": "sentence",
+      "reviewMode": "recall",
+      "promptZh": "将词块排列成正确、通顺的英语句子。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "正确句子：The novel which I borrowed is worth reading.",
+        "ruleZh": "which 引导定语从句 + be worth doing",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "order",
+      "tokens": [
+        {
+          "id": "t0",
+          "text": "The novel"
+        },
+        {
+          "id": "t1",
+          "text": "which I borrowed"
+        },
+        {
+          "id": "t2",
+          "text": "is worth reading"
+        },
+        {
+          "id": "t3",
+          "text": "."
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "t0",
+          "t1",
+          "t2",
+          "t3"
+        ]
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "sentence-scramble-u1",
+      "titleZh": "组句训练 第1组",
+      "familyIds": [
+        "scramble-s01",
+        "scramble-s02",
+        "scramble-s03",
+        "scramble-s04",
+        "scramble-s05",
+        "scramble-s06",
+        "scramble-s07",
+        "scramble-s08"
+      ],
+      "itemIds": [
+        "sentence-scramble-s01",
+        "sentence-scramble-s02",
+        "sentence-scramble-s03",
+        "sentence-scramble-s04",
+        "sentence-scramble-s05",
+        "sentence-scramble-s06",
+        "sentence-scramble-s07",
+        "sentence-scramble-s08"
+      ],
+      "prerequisiteSkillIds": []
+    },
+    {
+      "id": "sentence-scramble-u2",
+      "titleZh": "组句训练 第2组",
+      "familyIds": [
+        "scramble-s09",
+        "scramble-s10",
+        "scramble-s11",
+        "scramble-s12",
+        "scramble-s13",
+        "scramble-s14",
+        "scramble-s15",
+        "scramble-s16"
+      ],
+      "itemIds": [
+        "sentence-scramble-s09",
+        "sentence-scramble-s10",
+        "sentence-scramble-s11",
+        "sentence-scramble-s12",
+        "sentence-scramble-s13",
+        "sentence-scramble-s14",
+        "sentence-scramble-s15",
+        "sentence-scramble-s16"
+      ],
+      "prerequisiteSkillIds": []
+    },
+    {
+      "id": "sentence-scramble-u3",
+      "titleZh": "组句训练 第3组",
+      "familyIds": [
+        "scramble-s17",
+        "scramble-s18",
+        "scramble-s19",
+        "scramble-s20",
+        "scramble-s21",
+        "scramble-s22",
+        "scramble-s23",
+        "scramble-s24"
+      ],
+      "itemIds": [
+        "sentence-scramble-s17",
+        "sentence-scramble-s18",
+        "sentence-scramble-s19",
+        "sentence-scramble-s20",
+        "sentence-scramble-s21",
+        "sentence-scramble-s22",
+        "sentence-scramble-s23",
+        "sentence-scramble-s24"
+      ],
+      "prerequisiteSkillIds": []
+    }
+  ]
+}

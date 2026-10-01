@@ -119,6 +119,14 @@
       "bytes": 18976,
       "sha256": "8051e9e0ad07af90b42f6e86f1356a449907785a3893e0d5210107f96d7271da",
       "path": "content-packs/gaokao-three-years/0.2.0/pack.json"
+    },
+    {
+      "id": "sentence-scramble",
+      "version": "0.1.0",
+      "status": "published",
+      "bytes": 29255,
+      "sha256": "001b19f33936da89baf067d5a627c920911b15f0d4566d684efa4bf810dcade7",
+      "path": "content-packs/sentence-scramble/0.1.0/pack.json"
     }
   ]
 }
