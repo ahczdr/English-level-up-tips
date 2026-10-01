@@ -23,6 +23,7 @@ const swContent = readFileSync(join(process.cwd(), 'dist', 'sw.js'), 'utf8')
 if (!swContent.includes('SKIP_WAITING')) fail('dist/sw.js missing SKIP_WAITING listener')
 // CR61：precache 仅 shell 断言对发布产物执行（此前只在高 E2E 配置里，实际读到的是 E2E 构建的 dist）
 if (swContent.includes('content-packs')) fail('dist/sw.js precaches content packs; only the app shell may be precached')
+if (swContent.includes('content-assets')) fail('dist/sw.js precaches shared content assets; only the app shell may be precached')
 if (!swContent.includes('content-catalog.json')) fail('dist/sw.js missing content-catalog.json network-first handler')
 // T16/B2：release-info.json 存在且 BUILD_SHA 一致
 const infoPath = join(process.cwd(), 'dist', 'release-info.json')

@@ -10,9 +10,14 @@ import { examProfileSchema } from '../src/content/schema'
 const appRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const manifestDir = path.join(appRoot, 'content', 'pack-manifests')
 
+// 作者侧素材路径（content/<path>，惯例以 assets/ 开头）→ 共享 URL 相对路径（content-assets/<rel>）
+const sharedAssetRel = (assetPath: string): string =>
+  assetPath.startsWith('assets/') ? assetPath.slice('assets/'.length) : assetPath
+
 
 const publicRoot = path.join(appRoot, 'public')
 const outputRoot = path.join(publicRoot, 'content-packs')
+const assetsRoot = path.join(publicRoot, 'content-assets')
 const json = (value: unknown) => `${JSON.stringify(value, null, 2)}\n`
 
 const readJson = async (filePath: string): Promise<unknown> => JSON.parse(await fs.readFile(filePath, 'utf8')) as unknown
@@ -96,6 +101,7 @@ const main = async () => {
   await fs.rm(staging, { recursive: true, force: true })
   await fs.mkdir(staging, { recursive: true })
   const catalog: Array<{ id: string; version: string; status: string; bytes: number; sha256: string; path: string }> = []
+  const sharedAssets = new Map<string, CoursePack['assets'][number]>()
 
   try {
     for (const pack of packs) {
@@ -117,16 +123,24 @@ const main = async () => {
       await fs.mkdir(path.dirname(target), { recursive: true })
       await fs.writeFile(target, content, 'utf8')
       for (const asset of pack.assets) {
-        const sourceAsset = path.resolve(appRoot, 'content', asset.path)
-        const targetAsset = path.join(staging, `content-packs/${pack.id}/${pack.version}`, asset.path)
-        await fs.mkdir(path.dirname(targetAsset), { recursive: true })
-        await fs.copyFile(sourceAsset, targetAsset)
+        // 媒体共享化：同一素材只入共享目录一份（4-8 份冗余 → 1 份），包内不再复制
+        sharedAssets.set(asset.path, asset)
       }
       catalog.push({ id: pack.id, version: pack.version, status: pack.status, bytes, sha256, path: relativePath })
     }
+    for (const [assetPath, asset] of sharedAssets) {
+      const sourceAsset = path.resolve(appRoot, 'content', assetPath)
+      const targetAsset = path.join(staging, 'content-assets', sharedAssetRel(assetPath))
+      await fs.mkdir(path.dirname(targetAsset), { recursive: true })
+      await fs.copyFile(sourceAsset, targetAsset)
+      // 写入时复验：共享目录是唯一一份，摘要错不得落盘
+      const data = await fs.readFile(targetAsset)
+      const digest = crypto.createHash('sha256').update(data).digest('hex')
+      if (data.byteLength !== asset.bytes || digest !== asset.sha256) throw new Error(`共享素材摘要不匹配：${asset.id}`)
+    }
     await fs.writeFile(path.join(staging, 'content-catalog.json'), json({ packs: catalog }), 'utf8')
     await fs.mkdir(path.dirname(outputRoot), { recursive: true })
-    // 原子化换装：旧目录先改名让位（而非先删），packs 就位后再换 catalog，最后清理旧目录——
+    // 原子化换装：旧目录先改名让位（而非先删），packs/共享素材就位后再换 catalog，最后清理——
     // 中途崩溃不会留下「旧 catalog 指向已删除版本」的坏状态
     const retired = path.join(publicRoot, `.content-retired-${process.pid}`)
     await fs.rm(retired, { recursive: true, force: true })
@@ -135,8 +149,12 @@ const main = async () => {
       await fs.rename(outputRoot, retired)
       retiredOld = true
     }
+    if (await fs.stat(assetsRoot).catch(() => null)) {
+      await fs.rename(assetsRoot, path.join(retired, 'content-assets'))
+    }
     try {
       await fs.rename(path.join(staging, 'content-packs'), outputRoot)
+      await fs.rename(path.join(staging, 'content-assets'), assetsRoot)
       await fs.rename(path.join(staging, 'content-catalog.json'), path.join(publicRoot, 'content-catalog.json'))
     } catch (error: unknown) {
       const targetGone = !await fs.stat(outputRoot).catch(() => null)
@@ -149,7 +167,7 @@ const main = async () => {
     await fs.rm(staging, { recursive: true, force: true })
   }
 
-  console.log(`内容打包完成：${catalog.length} 个包（仅保留当前 manifest 版本）`)
+  console.log(`内容打包完成：${catalog.length} 个包、共享素材 ${sharedAssets.size} 份（仅保留当前 manifest 版本）`)
 }
 
 main().catch((error: unknown) => {

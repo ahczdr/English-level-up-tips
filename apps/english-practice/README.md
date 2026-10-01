@@ -16,7 +16,7 @@ npm run content:release# 发布门禁（exit 78 = 审核缺项/题量缺口暂�
 ## 结构速览
 
 - `content/`：作者内容源（inbox 留档 → items/resources/units 结构化 → pack-manifests 打包清单）
-- `public/content-packs/`：构建产物，只保留当前 manifest 版本；同版本内容不可变，改内容必须提升版本号
+- `public/content-packs/` 与 `public/content-assets/`：构建产物。packs 只保留当前 manifest 版本且仅含 pack.json；媒体素材去重后存共享目录一份，下载时经 sha256/bytes 校验。同版本内容不可变，改内容必须提升版本号
 - `src/services/`：学习/内容/下载/写作服务（统一 Result 错误协议）
 - `src/domain/`：计划器、调度、成长统计、判分（纯函数）
 - `src/data/`：Dexie schema 与迁移（v3 起 per-profile 曝光账本 exposureLog）

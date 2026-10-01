@@ -37,7 +37,7 @@ const APP_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../
 const LISTENING_VERSION = (JSON.parse(fs.readFileSync(path.join(APP_ROOT, 'content/pack-manifests/gaokao-listening.json'), 'utf8')) as { version: string }).version
 const LISTENING_BASE = `content-packs/gaokao-listening/${LISTENING_VERSION}`
 const PACK_JSON = fs.readFileSync(path.join(APP_ROOT, 'public', `${LISTENING_BASE}/pack.json`), 'utf8')
-const AUDIO_FILE = fs.readFileSync(path.join(APP_ROOT, 'public', `${LISTENING_BASE}/assets/listening-preview.m4a`))
+const AUDIO_FILE = fs.readFileSync(path.join(APP_ROOT, 'public', 'content-assets/listening-preview.m4a'))
 const audioArrayBuffer = (): ArrayBuffer => AUDIO_FILE.buffer.slice(AUDIO_FILE.byteOffset, AUDIO_FILE.byteOffset + AUDIO_FILE.byteLength) as ArrayBuffer
 const REAL_AUDIO_BYTES = async (): Promise<ArrayBuffer> => audioArrayBuffer()
 

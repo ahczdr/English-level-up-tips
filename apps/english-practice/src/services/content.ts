@@ -50,6 +50,12 @@ const resolvePackUrl = (catalogUrl: string, packPath: string): string => {
   return `${baseDir}${packPath}`
 }
 
+// 媒体共享化：素材不再随包携带，统一从共享目录取（URL 与 build-packs 的 sharedAssetRel 对应）
+export const sharedAssetUrlPath = (assetPath: string): string => {
+  const relative = assetPath.startsWith('assets/') ? assetPath.slice('assets/'.length) : assetPath
+  return `content-assets/${relative}`
+}
+
 export async function installPreviewPacks(input: InstallPreviewPacksInput): Promise<ContentResult<InstallPreviewPacksReport>> {
   const catalogUrl = input.catalogUrl ?? DEFAULT_CATALOG_URL
   // R10：默认网络读取 8s 超时（SW 未接管前的首次访问也有保护）；注入 fetchText 不受影响。
@@ -225,7 +231,7 @@ export async function downloadPackAssets(input: DownloadPackAssetsInput): Promis
     await input.onStateChange?.('downloading')
     const fetched: Array<{ asset: CoursePack['assets'][number]; data: ArrayBuffer; servedMime?: string }> = []
     for (const asset of pack.assets) {
-      const url = resolvePackUrl(catalogUrl, `content-packs/${input.packId}/${input.version}/${asset.path}`)
+      const url = resolvePackUrl(catalogUrl, sharedAssetUrlPath(asset.path))
       let data: ArrayBuffer
       try {
         data = await fetchBinary(url)
