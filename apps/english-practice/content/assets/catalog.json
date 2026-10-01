@@ -180,5 +180,145 @@
     "mime": "image/png",
     "bytes": 46354,
     "sha256": "b496b799d3bfd820d95cd3385605eb4c2fb682856f3ad5e6dc3905e8e75bb2af"
+  },
+  {
+    "id": "listening-gen-library-rules",
+    "path": "assets/listening/generated/library-rules.m4a",
+    "mime": "audio/mp4",
+    "bytes": 70435,
+    "sha256": "5a5336e07a9772784a845cd683fe16275c253860b77d66fe890cc7855c6057b0"
+  },
+  {
+    "id": "listening-gen-bus-change",
+    "path": "assets/listening/generated/bus-change.m4a",
+    "mime": "audio/mp4",
+    "bytes": 74023,
+    "sha256": "ba1d54f7458965087a9f880f89f54e701f4d95da6e32eae979ccae73dfa0ff85"
+  },
+  {
+    "id": "listening-gen-lab-safety",
+    "path": "assets/listening/generated/lab-safety.m4a",
+    "mime": "audio/mp4",
+    "bytes": 78988,
+    "sha256": "c543057fab98f0c694ebec83925e296e224ea81be52ad7a7ca3b7e0370e8ab46"
+  },
+  {
+    "id": "listening-gen-exam-week",
+    "path": "assets/listening/generated/exam-week.m4a",
+    "mime": "audio/mp4",
+    "bytes": 75237,
+    "sha256": "813e2478d1d505c5478ff3d0be653d4a65b2d9a585cfb45c567721a8109667a4"
+  },
+  {
+    "id": "listening-gen-job-interview",
+    "path": "assets/listening/generated/job-interview.m4a",
+    "mime": "audio/mp4",
+    "bytes": 77667,
+    "sha256": "ba6837b28ebd332840f13b0649765cb31f80ec216d3fa4ed470351a1a3370ab0"
+  },
+  {
+    "id": "listening-gen-rain-plan",
+    "path": "assets/listening/generated/rain-plan.m4a",
+    "mime": "audio/mp4",
+    "bytes": 71097,
+    "sha256": "0d70bcfd59c7f7043183e43ca9a88f1fc2a38dc3d2dd73317ee168c2c6a61535"
+  },
+  {
+    "id": "listening-gen-homework-tip",
+    "path": "assets/listening/generated/homework-tip.m4a",
+    "mime": "audio/mp4",
+    "bytes": 71834,
+    "sha256": "65744f424a11f6b6da0642e33e78946a1e7b2034924d349e99a9683d63a07e54"
+  },
+  {
+    "id": "listening-gen-museum-trip",
+    "path": "assets/listening/generated/museum-trip.m4a",
+    "mime": "audio/mp4",
+    "bytes": 72142,
+    "sha256": "0f96bd27411e09de22f027843aec479d5b2b81648ef65241babb1bea7119944b"
+  },
+  {
+    "id": "listening-gen-sleep-study",
+    "path": "assets/listening/generated/sleep-study.m4a",
+    "mime": "audio/mp4",
+    "bytes": 75455,
+    "sha256": "a7f3d19b236e9d43bc89e6abaf02f55f86c4599a28e04bf0971d2b5879cc5fe8"
+  },
+  {
+    "id": "listening-gen-speech-contest",
+    "path": "assets/listening/generated/speech-contest.m4a",
+    "mime": "audio/mp4",
+    "bytes": 74398,
+    "sha256": "608d591012de87214ece54f1bc97bf1266b19829512a52dd15c4626c633837ae"
+  },
+  {
+    "id": "listening-gen-lost-found",
+    "path": "assets/listening/generated/lost-found.m4a",
+    "mime": "audio/mp4",
+    "bytes": 72359,
+    "sha256": "adcbf95661a60b5a49b60012d601ad384939f55342165eb6db8ebc672bd50ed5"
+  },
+  {
+    "id": "listening-gen-volunteer-day",
+    "path": "assets/listening/generated/volunteer-day.m4a",
+    "mime": "audio/mp4",
+    "bytes": 74197,
+    "sha256": "54fdf92df9f20419725de0fed8739d4b8046552b9f4d1c50e0b50d6cc005d2ea"
+  },
+  {
+    "id": "listening-gen-computer-room",
+    "path": "assets/listening/generated/computer-room.m4a",
+    "mime": "audio/mp4",
+    "bytes": 71217,
+    "sha256": "2c28c79638abdbed2c2e6c4304906c224fc44015887e5cd334d88ea040bd1717"
+  },
+  {
+    "id": "listening-gen-cook-class",
+    "path": "assets/listening/generated/cook-class.m4a",
+    "mime": "audio/mp4",
+    "bytes": 78568,
+    "sha256": "2ea2829e51f911cb67ded567c49fdc845f582a441bc8951d24ef6abbf1d94394"
+  },
+  {
+    "id": "listening-gen-photo-show",
+    "path": "assets/listening/generated/photo-show.m4a",
+    "mime": "audio/mp4",
+    "bytes": 73086,
+    "sha256": "dd21c7aab7daa4fc4aae34c674ef514e3e38f587a06f1635f17c89f02264e033"
+  },
+  {
+    "id": "listening-gen-train-delay",
+    "path": "assets/listening/generated/train-delay.m4a",
+    "mime": "audio/mp4",
+    "bytes": 69530,
+    "sha256": "7ae567a2f41c5bb85dbdcca1284b77466e80065af57c32b1482d704a36ea2048"
+  },
+  {
+    "id": "listening-gen-reading-plan",
+    "path": "assets/listening/generated/reading-plan.m4a",
+    "mime": "audio/mp4",
+    "bytes": 73310,
+    "sha256": "206573c67151cdd8d65844d728fbbd474ca2add8836e6700efcad72913fb60fd"
+  },
+  {
+    "id": "listening-gen-weather-warn",
+    "path": "assets/listening/generated/weather-warn.m4a",
+    "mime": "audio/mp4",
+    "bytes": 75215,
+    "sha256": "a0bfece793a36c2cb0f530ab254fd07d58dd32e40435b29f4fe5f3f3be00661d"
+  },
+  {
+    "id": "listening-gen-music-club",
+    "path": "assets/listening/generated/music-club.m4a",
+    "mime": "audio/mp4",
+    "bytes": 76374,
+    "sha256": "3bcafbd2ff4195f0c64c6607dda3d46bcd3bdc981baef51306bcb89775818d87"
+  },
+  {
+    "id": "listening-gen-exchange-news",
+    "path": "assets/listening/generated/exchange-news.m4a",
+    "mime": "audio/mp4",
+    "bytes": 78737,
+    "sha256": "34adda0aab3db3f41f23b868996a23f2727dcbb1e43422591b7368f55ab79978"
   }
 ]

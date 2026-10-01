@@ -84,11 +84,15 @@ const checkP07 = (packs: CoursePack[], failures: string[]) => {
   const gapShapes = new Map<string, number[]>()
   const audioAssets = new Set<string>()
 
+  // 真题卷（anhui-*）的单项填空是固定题目，无法为门禁追加平行变体：
+  // 其条目计入数量统计，但不参与「词汇族 ≥3 平行题」的课程目标族口径
+  const examPaperPackIds = new Set(['anhui-gaokao-2013-cloze-a', 'anhui-gaokao-2013-grammar-a', 'anhui-gaokao-2013-grammar-b', 'anhui-gaokao-2013-reading-a', 'anhui-gaokao-2013-writing-a', 'anhui-gaokao-2014-cloze-a', 'anhui-gaokao-2014-grammar-a', 'anhui-gaokao-2014-grammar-b', 'anhui-gaokao-2014-reading-a', 'anhui-gaokao-2014-writing-a', 'anhui-gaokao-2025-reading-a'])
   for (const pack of published) {
+    const isExamPaper = examPaperPackIds.has(pack.id)
     for (const item of pack.items) {
       const amount = item.kind === 'gaps' ? item.gaps.length : item.kind === 'writing' ? 0 : 1
       sectionCounts.set(item.section, (sectionCounts.get(item.section) ?? 0) + amount)
-      if (item.section === 'vocabulary') families.set(item.familyId, (families.get(item.familyId) ?? 0) + 1)
+      if (item.section === 'vocabulary' && !isExamPaper) families.set(item.familyId, (families.get(item.familyId) ?? 0) + 1)
       const resourceSet = resources.get(item.section) ?? new Set<string>()
       if (item.resourceId) resourceSet.add(item.resourceId)
       resources.set(item.section, resourceSet)

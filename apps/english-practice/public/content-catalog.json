@@ -121,6 +121,14 @@
       "path": "content-packs/gaokao-three-years/0.2.0/pack.json"
     },
     {
+      "id": "listening-gen",
+      "version": "0.1.0",
+      "status": "published",
+      "bytes": 67350,
+      "sha256": "08d5898edaa72bc3bf33f522b53b56bd4043d8494fe12db68e8d50ee3188df91",
+      "path": "content-packs/listening-gen/0.1.0/pack.json"
+    },
+    {
       "id": "sentence-scramble",
       "version": "0.1.0",
       "status": "published",
