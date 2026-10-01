@@ -127,6 +127,22 @@
       "bytes": 29255,
       "sha256": "001b19f33936da89baf067d5a627c920911b15f0d4566d684efa4bf810dcade7",
       "path": "content-packs/sentence-scramble/0.1.0/pack.json"
+    },
+    {
+      "id": "vocab-core-1",
+      "version": "0.1.0",
+      "status": "published",
+      "bytes": 292889,
+      "sha256": "4f8f66a8c529828f4eb2f48ab24ec16f8d9dfdf5dcfb9862412e9ffe96223bec",
+      "path": "content-packs/vocab-core-1/0.1.0/pack.json"
+    },
+    {
+      "id": "vocab-core-2",
+      "version": "0.1.0",
+      "status": "published",
+      "bytes": 288066,
+      "sha256": "eeba7c4d8d38deba98cdfdcaa03e849ada8721a041a507090b5db9646bd5f822",
+      "path": "content-packs/vocab-core-2/0.1.0/pack.json"
     }
   ]
 }
