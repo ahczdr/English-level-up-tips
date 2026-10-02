@@ -71,3 +71,18 @@ v0.2.0 已由维护者确认发布（2026-09-29，个人学习用途）；后续
 ## 8. 本地真机验收入口（2026-10-01 增补）
 
 `npm run build:release` 后运行 `npm run serve:lan`，预览服务会监听本机所有网卡（0.0.0.0:4174）；同一 Wi-Fi 下的手机/平板访问 `http://<电脑局域网IP>:4174` 即可执行 device-matrix.md 的场景行。注意：这是明文 HTTP 局域网入口，仅用于验收，不替代 §3 的正式 HTTPS 发布。
+
+## 9. Cloudflare Pages 上线（2026-10-01 选定路线 A）
+
+仓库侧已就绪：`apps/english-practice/wrangler.toml`（项目名 gaokao-english-practice）、`public/_headers`（index/sw/catalog 不缓存，assets 与内容包长缓存 immutable，已随构建进入 dist）。
+
+面板操作（一次）：
+
+1. Cloudflare Dashboard → Workers & Pages → Create → Pages → Connect to Git → 选 fork 仓库 ahczdr/English-level-up-tips，分支 `codex/gaokao-english-local-release`（或合并后的 master）。
+2. 构建设置：
+   - Build command：`cd apps/english-practice && npm ci && npm run build:release`
+   - Build output directory：`apps/english-practice/dist`
+   - 环境变量：`NODE_VERSION=24`、`BUILD_SHA=${CF_COMMIT_SHA}`
+3. Save and Deploy。首次部署后按 device-matrix.md 在真机过八个场景。
+
+注意：仓库根 `.node-version=24` 会被 Cloudflare 识别；`CF_COMMIT_SHA` 是 Cloudflare 内置变量，符合 smoke 的 40 位十六进制要求。
