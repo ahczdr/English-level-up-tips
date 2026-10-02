@@ -235,13 +235,6 @@ const resumePractice = async (session: Session): Promise<void> => {
       <div v-if="planTotal > 0" class="today-progress" role="progressbar" :aria-valuenow="doneToday" aria-valuemin="0" :aria-valuemax="planTotal">
         <div class="today-progress-fill" :style="{ width: Math.min(100, Math.round((doneToday / Math.max(planTotal, doneToday)) * 100)) + '%' }"></div>
       </div>
-      <div class="today-encourage" aria-label="学习鼓励">
-        <span class="today-streak">🔥 连续学习 {{ streak }} 天</span>
-        <span v-if="planTotal > 0" class="today-progress-num">今日已完成 {{ doneToday }}/{{ Math.max(planTotal, doneToday) }} 题</span>
-      </div>
-      <div v-if="planTotal > 0" class="today-progress" role="progressbar" :aria-valuenow="doneToday" aria-valuemin="0" :aria-valuemax="planTotal">
-        <div class="today-progress-fill" :style="{ width: Math.min(100, Math.round((doneToday / Math.max(planTotal, doneToday)) * 100)) + '%' }"></div>
-      </div>
       <p
         v-if="plan === null"
         role="status"
