@@ -89,6 +89,27 @@ export interface ProgressSummary {
 // 页面「今天」：与 attempt.studyDay 同一学习日口径（设置时区），页面默认路径调用
 export const pageToday = (now: Date, timeZone: string): string => studyDayFor(now, timeZone)
 
+// 连续学习天数：从今天（或昨天，今天还没练时）往回数连续有学习记录的天数。
+// 纯函数供今日页鼓励卡使用；days 为去重后的学习日集合。
+export function computeStreak(days: string[], today: string): number {
+  const set = new Set(days)
+  const shift = (day: string, delta: number): string => {
+    const d = new Date(Date.UTC(Number(day.slice(0, 4)), Number(day.slice(5, 7)) - 1, Number(day.slice(8, 10))))
+    d.setUTCDate(d.getUTCDate() + delta)
+    return d.toISOString().slice(0, 10)
+  }
+  let cursor = set.has(today) ? today : shift(today, -1)
+  if (!set.has(cursor)) return 0
+  let streak = 0
+  while (set.has(cursor)) {
+    streak += 1
+    cursor = shift(cursor, -1)
+  }
+  return streak
+}
+
+// 连续学习天数：从今天（或昨天，今天还没练时）往回数连续有学习记录的天数。
+// 纯函数供今日页鼓励卡使用；days 为去重后的学习日集合。
 // 本周自周一起算（学习日为本地时区日字符串，按日历日推算，不做时区换算）
 export function weekStart(today: string): string {
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(today)

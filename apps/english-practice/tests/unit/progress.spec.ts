@@ -2,7 +2,7 @@ import 'fake-indexeddb/auto'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { flushPromises, mount } from '@vue/test-utils'
 import { createRouter, createWebHashHistory, type RouterHistory } from 'vue-router'
-import { pageToday, summarizeProgress, weekStart, type ProgressAttempt, type ProgressInput } from '../../src/domain/progress'
+import { computeStreak, pageToday, summarizeProgress, weekStart, type ProgressAttempt, type ProgressInput } from '../../src/domain/progress'
 import { createTodaySession, enterCurrentSlot, submitAnswer } from '../../src/services/learning'
 import ProgressPage from '../../src/features/progress/ProgressPage.vue'
 import FeedbackPanel from '../../src/components/FeedbackPanel.vue'
@@ -381,4 +381,23 @@ describe('CR8 回归：未知条目作答保留统计但不进题型分组', () 
     expect(summary.series).toHaveLength(1)
     expect(summary.series[0]).toMatchObject({ kind: 'choice', level: 'G0', thisWeek: { attempts: 1, correct: 1 } })
   })
+})
+
+describe('computeStreak 连续学习天数', () => {
+  const shift = (day: string, delta: number): string => {
+    const d = new Date(Date.UTC(Number(day.slice(0, 4)), Number(day.slice(5, 7)) - 1, Number(day.slice(8, 10))));
+    d.setUTCDate(d.getUTCDate() + delta);
+    return d.toISOString().slice(0, 10);
+  };
+  it('今天有记录：从今天往回连续计数', () => {
+    const today = '2026-10-02';
+    const days = [today, shift(today, -1), shift(today, -2), shift(today, -4)];
+    expect(computeStreak(days, today)).toBe(3);
+  });
+  it('今天还没练：从昨天起算，中断即断', () => {
+    const today = '2026-10-02';
+    const days = [shift(today, -1), shift(today, -2), shift(today, -4)];
+    expect(computeStreak(days, today)).toBe(2);
+    expect(computeStreak([shift(today, -3)], today)).toBe(0);
+  });
 })

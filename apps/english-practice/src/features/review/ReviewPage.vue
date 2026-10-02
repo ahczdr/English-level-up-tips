@@ -5,7 +5,9 @@ import { e2eNow } from '../../data/e2e-clock';
 import type { GaokaoDatabase } from '../../data/db';
 import type { CoursePack } from '../../content/types';
 import { studyDayFor } from '../../domain/calendar';
+import { useRouter } from 'vue-router';
 import { loadPersonalSettings } from '../../services/settings';
+import { createTodaySession } from '../../services/learning';
 
 const props = defineProps<{
   db?: GaokaoDatabase;
@@ -97,7 +99,37 @@ const loadState = async (): Promise<void> => {
   }
 };
 
+const router = useRouter();
 const dueCount = computed(() => rows.value.filter((row) => row.due).length);
+const startingReview = ref(false);
+const startMessage = ref('');
+
+// 错题重练：今日计划会把到期复习排在最前，直接创建并进入会话
+const startReviewPractice = async (): Promise<void> => {
+  if (startingReview.value) return;
+  startingReview.value = true;
+  startMessage.value = '';
+  try {
+    const settings = await loadPersonalSettings(db.value);
+    const created = await createTodaySession({ db: db.value, minutes: settings.defaultMinutes, profileId: settings.profileId, timeZone: settings.timeZone });
+    if (!created.ok) {
+      startMessage.value = created.error.messageZh;
+      return;
+    }
+    if (created.value.kind === 'empty') {
+      startMessage.value = created.value.messageZh;
+      return;
+    }
+    startMessage.value = '';
+    await router.push(`/session/${created.value.session.id}`);
+  } catch {
+    startMessage.value = '复习练习创建失败，请稍后再试';
+  } finally {
+    startingReview.value = false;
+  }
+};
+
+
 
 onMounted(loadState);
 </script>
@@ -144,10 +176,16 @@ onMounted(loadState);
         role="status"
       >
         有 {{ dueCount }} 个家族已到期——复习会自动排进今日计划的优先位置。
+        <button
+          type="button"
+          class="review-cta-start"
+          :disabled="startingReview"
+          @click="startReviewPractice"
+        >{{ startingReview ? '正在创建…' : '立即重练到期题' }}</button>
         <router-link
           class="review-cta-link"
           to="/today"
-        >开始今日计划</router-link>
+        >查看今日计划</router-link>
       </p>
       <ul
         v-else

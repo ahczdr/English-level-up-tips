@@ -263,7 +263,10 @@ const closeReward = (): void => {
         <li
           v-for="node in nodeLines"
           :key="node.achievementId"
+          class="map-node"
+          :class="node.unlocked ? 'map-node-unlocked' : 'map-node-locked'"
         >
+          <span aria-hidden="true">{{ node.unlocked ? '✅' : '🔒' }}</span>
           {{ node.titleZh }} · {{ node.unlocked ? '已解锁' : '未解锁' }}
         </li>
       </ul>

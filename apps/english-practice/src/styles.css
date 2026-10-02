@@ -567,6 +567,8 @@ body {
 
 .passage p {
   margin: 0 0 0.5rem;
+  font-size: 1.06rem;
+  line-height: 1.85;
 }
 
 .passage p:last-child {
@@ -1261,3 +1263,68 @@ body {
 /* CR28：设置页控件触控目标 ≥44px，与 onboarding 同字段一致 */
 .settings-row select, .settings-row input[type='text'] { min-height: 44px; padding: 6px 10px; font-size: 1rem; }
 .settings-row input[type='checkbox'] { width: 22px; height: 22px; accent-color: #2f6df6; }
+
+/* 学生向 UI：今日鼓励卡 + 进度条 */
+.today-encourage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  margin: 0 0 0.6rem;
+}
+
+.today-streak { font-weight: 700; color: #b4530a; }
+
+.today-progress-num { color: #5b6b81; }
+
+.today-progress {
+  height: 10px;
+  border-radius: 999px;
+  background: #e5ecf5;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.today-progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #3f83c9, #1f4e8c);
+  transition: width 0.3s ease;
+}
+
+/* 学习地图掌握度配色 */
+.progress-map .map-node {
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  margin-bottom: 0.35rem;
+  border: 1px solid transparent;
+  list-style: none;
+}
+
+.progress-map .map-node-unlocked {
+  background: #e8f6ec;
+  border-color: #9ad6ab;
+  color: #1c6b33;
+}
+
+.progress-map .map-node-locked {
+  background: #f1f4f8;
+  border-color: #dde3ec;
+  color: #5b6b81;
+}
+
+/* 复习页直接重练按钮 */
+.review-cta-start {
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.6rem;
+  background: #1f4e8c;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.review-cta-start:disabled { opacity: 0.6; }
+
+.review-start-message { color: #5b6b81; }

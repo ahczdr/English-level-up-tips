@@ -6,6 +6,7 @@ import type { GaokaoDatabase } from '../../data/db';
 import type { Session } from '../../data/migrations';
 import { loadPersonalSettings } from '../../services/settings';
 import { collectLevelUpEvidence, createTodaySession, previewTodayPlan } from '../../services/learning';
+import { computeStreak } from '../../domain/progress';
 import type { PlanGroup, PlanTodayResult } from '../../domain/planner';
 import AppButton from '../../components/AppButton.vue';
 
@@ -29,6 +30,9 @@ const needsSetup = ref(false);
 const plan = ref<PlanTodayResult | null>(null);
 const planGroups = ref<PlanGroup[]>([]);
 const planToday = ref('');
+const streak = ref(0);
+const doneToday = ref(0);
+const planTotal = ref(0);
 const planMinutes = ref(10);
 const planProfileId = ref('gaokao-common-training-v1');
 const planTimeZone = ref('Asia/Shanghai');
@@ -86,6 +90,18 @@ const refreshState = async (): Promise<void> => {
       plan.value = preview.value.plan;
       planGroups.value = preview.value.plan.groups;
       planToday.value = preview.value.today;
+      // 鼓励卡：连续学习天数 + 今日已完成题数（首次作答按学习日计）
+      const [attemptRows, writingRows] = await Promise.all([
+        db.value.attempts.where('studyDay').equals(preview.value.today).toArray(),
+        db.value.writingVersions.toArray(),
+      ]);
+      const todayDone = attemptRows.filter((row) => row.phase === 'first').length;
+      const allDays = new Set<string>();
+      (await db.value.attempts.toArray()).forEach((row) => allDays.add(row.studyDay));
+      writingRows.forEach((row) => allDays.add(row.studyDay ?? row.createdAt.slice(0, 10)));
+      streak.value = computeStreak([...allDays], preview.value.today);
+      doneToday.value = todayDone;
+      planTotal.value = planGroups.value.reduce((sum, group) => sum + group.items.length, 0);
     }
   } catch {
     plan.value = null;
@@ -212,6 +228,20 @@ const resumePractice = async (session: Session): Promise<void> => {
       aria-label="今日计划"
     >
       <h3>今日计划</h3>
+      <div class="today-encourage" aria-label="学习鼓励">
+        <span class="today-streak">🔥 连续学习 {{ streak }} 天</span>
+        <span v-if="planTotal > 0" class="today-progress-num">今日已完成 {{ doneToday }}/{{ Math.max(planTotal, doneToday) }} 题</span>
+      </div>
+      <div v-if="planTotal > 0" class="today-progress" role="progressbar" :aria-valuenow="doneToday" aria-valuemin="0" :aria-valuemax="planTotal">
+        <div class="today-progress-fill" :style="{ width: Math.min(100, Math.round((doneToday / Math.max(planTotal, doneToday)) * 100)) + '%' }"></div>
+      </div>
+      <div class="today-encourage" aria-label="学习鼓励">
+        <span class="today-streak">🔥 连续学习 {{ streak }} 天</span>
+        <span v-if="planTotal > 0" class="today-progress-num">今日已完成 {{ doneToday }}/{{ Math.max(planTotal, doneToday) }} 题</span>
+      </div>
+      <div v-if="planTotal > 0" class="today-progress" role="progressbar" :aria-valuenow="doneToday" aria-valuemin="0" :aria-valuemax="planTotal">
+        <div class="today-progress-fill" :style="{ width: Math.min(100, Math.round((doneToday / Math.max(planTotal, doneToday)) * 100)) + '%' }"></div>
+      </div>
       <p
         v-if="plan === null"
         role="status"
