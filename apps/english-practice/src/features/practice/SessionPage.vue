@@ -428,18 +428,21 @@ onMounted(async () => {
       working = resumed.value;
     }
     session.value = working;
-    // T14（learning.spec）：恢复会话时展示首轮作答结果（reload 持久化断言用）
+    await enterSlot(working);
+    // CR57.g：恢复时展示**当前槽位**的首轮结果（此前取全会话最早 attempt，恢复到中途的用户无从对应）
     try {
-      const attemptRows = await db.value.attempts.where('sessionId').equals(working.id).toArray();
-      const first = attemptRows.slice().sort((a, b) => a.createdAt.localeCompare(b.createdAt))[0];
-      if (first) {
-        const grade = (first.payload as { grade?: { earned?: number; possible?: number } }).grade;
-        firstAttemptLabel.value = grade && typeof grade.earned === 'number' && typeof grade.possible === 'number' && grade.possible > 0 && grade.earned === grade.possible ? '正确' : '需订正';
+      const current = session.value;
+      const slot = current?.slots[current.currentIndex];
+      if (current && slot) {
+        const first = await db.value.attempts.where('[sessionId+slotId+phase]').equals([current.id, slot.id, 'first']).first();
+        if (first) {
+          const grade = (first.payload as { grade?: { earned?: number; possible?: number } }).grade;
+          firstAttemptLabel.value = grade && typeof grade.earned === 'number' && typeof grade.possible === 'number' && grade.possible > 0 && grade.earned === grade.possible ? '正确' : '需订正';
+        }
       }
     } catch {
       firstAttemptLabel.value = '';
     }
-    await enterSlot(working);
   } catch {
     showError('加载学习记录失败，请稍后重试');
   }

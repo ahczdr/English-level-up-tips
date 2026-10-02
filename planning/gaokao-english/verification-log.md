@@ -1027,3 +1027,18 @@ CR18/CR19/CR38/CR54（时区口径统一）、CR21、CR23、CR29–CR36、CR46�
 
 - §22.3 交接清单第 1 条「content:release 仍 BLOCKED」已过时：0.2.0 已发布，门禁为 exit 78 暂缓态（详见 T18 H.6）。
 - §22.3 交接清单第 4 条「根 README/CHANGELOG 尚未向读者介绍应用」已完成：根 README 增设「仓库结构」，CHANGELOG 记录 2026-09-29 发布与修复批次。
+
+## 26. 生成内容批次（2026-09-30 / 10-01）
+
+为关闭 P07 数量与覆盖门禁，按「来源登记为 tool-generated-practice、作者=内置生成器草稿、审核人=维护者」的口径生成了以下原创练习内容（全部为草稿性质，逐题独立审核仍留待真人录入 review-log.csv，未代填）：
+
+- sentence-scramble@0.1.0：24 道组句（原创句，覆盖核心语法点）。
+- vocab-core-1/2@0.1.0：131 词族 × 3 方向 = 393 题词汇识记（词表存 scripts/vocab-core-words.json）。
+- listening-gen@0.1.0：20 段 macOS 语音合成本地 m4a（Samantha 声音，含 transcript）+ 40 题。
+- writing-gen@0.2.0：应用文 3 + 读后续写 3（含范文与自评清单）。
+- gapread-gen@0.2.0：七选五 6 篇（5 空 × 7 选项）。
+- cloze-gen@0.2.0：完形 8 篇（10/10/10/15/15 空，叠加既有安徽卷 20 空形状覆盖）。
+- grammar-gen@0.2.0：语法填空 10 篇 × 10 空 = 100 空。
+- reading-gen@0.2.0：分层阅读 12 篇（6×G0 + 6×G2）× 3 题，逐题原文证据。
+
+门禁结果：P07_QUANTITY 与 P07_COVERAGE 全部清零；`content:release` 唯一剩余 REVIEW_MISSING（642 条，exit 78 暂缓）。门禁语义修正一处：真题单项填空（anhui 2013/2014 q21-35）计入数量但排除出「词汇族 ≥3 平行题」课程目标族口径（固定考题无法追加平行变体，注释在 check-content.ts）。同步验证：check 310/310、E2E 三引擎 29+2、build+smoke OK；learning E2E 改为课程页固定选择题型单元入口（今日计划槽位构成随内容增长漂移，原假设失效）。

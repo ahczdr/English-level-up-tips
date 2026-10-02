@@ -67,3 +67,7 @@ BUILD_SHA=<同上> node scripts/collect-release-info.mjs   # 生成 dist/release
 ## 7. 发布授权
 
 v0.2.0 已由维护者确认发布（2026-09-29，个人学习用途）；后续公开发布前仍需按 §3 复核授权与门禁；允许的动作仅限：受控环境（内网/本地）部署用于真机验收（device-matrix.md）与七天试用（T17）。
+
+## 8. 本地真机验收入口（2026-10-01 增补）
+
+`npm run build:release` 后运行 `npm run serve:lan`，预览服务会监听本机所有网卡（0.0.0.0:4174）；同一 Wi-Fi 下的手机/平板访问 `http://<电脑局域网IP>:4174` 即可执行 device-matrix.md 的场景行。注意：这是明文 HTTP 局域网入口，仅用于验收，不替代 §3 的正式 HTTPS 发布。

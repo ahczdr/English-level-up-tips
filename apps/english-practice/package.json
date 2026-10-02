@@ -22,7 +22,8 @@
     "check": "npm run content:check && npm run typecheck && npm run lint && npm run test:unit",
     "test:smoke": "npm run build:release && node scripts/smoke-release.mjs",
     "build:release": "npm run build && node scripts/collect-release-info.mjs",
-    "pilot:day7": "tsx scripts/pilot-day7.ts"
+    "pilot:day7": "tsx scripts/pilot-day7.ts",
+    "serve:lan": "vite preview --host 0.0.0.0 --port 4174 --strictPort"
   },
   "dependencies": {
     "dexie": "4.4.5",

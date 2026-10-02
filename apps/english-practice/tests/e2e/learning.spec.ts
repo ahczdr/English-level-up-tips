@@ -26,7 +26,8 @@ test('touch-first task persists after reload', async ({ page }) => {
 
   await page.reload()
   await page.locator('.session-progress').waitFor()
-  await expect(page.getByTestId('first-attempt-result')).toContainText(/正确|需订正/)
+  // 持久化断言：重载后进度推进到第 2 题（首题作答已落库）；CR57.g 后标签仅对有作答的当前题显示
+  await expect(page.locator('.session-progress')).toContainText(/第 2 \//)
 })
 
 test('复习跨日：时钟推进后复习队列出现到期项（E2E 构建入口）', async ({ page }) => {
