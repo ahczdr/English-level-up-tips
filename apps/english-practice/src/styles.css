@@ -143,7 +143,7 @@ body {
 .app-main {
   width: min(100%, 58rem);
   margin: 0 auto;
-  padding: 1.5rem max(1rem, 3vw) 5rem;
+  padding: 1.5rem max(1rem, 3vw) calc(4.6rem + env(safe-area-inset-bottom));
 }
 
 .today-page,
@@ -994,12 +994,56 @@ body {
   color: #26313c;
   white-space: pre-line;
 }
+/* 学生端底部导航：单手可达的四个主入口，练习页隐藏（App.vue） */
+.bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  z-index: 25;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid #e2e8f2;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.bottom-nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 0.55rem 0 0.5rem;
+  text-decoration: none;
+  color: #5b6b81;
+  font-size: 0.78rem;
+  min-height: 44px;
+}
+
+.bottom-nav-icon { font-size: 1.25rem; line-height: 1; }
+
+.bottom-nav-item-active {
+  color: #1f4e8c;
+  font-weight: 700;
+}
+
+.bottom-nav-item-active .bottom-nav-icon {
+  transform: translateY(-1px) scale(1.12);
+}
+
+.bottom-nav-item:focus-visible {
+  outline: 3px solid #7aa7de;
+  outline-offset: -3px;
+  border-radius: 10px;
+}
+
 /* T12 PWA：SW 更新提示与下载页 */
 .sw-update-banner {
   position: fixed;
   left: 12px;
   right: 12px;
-  bottom: calc(12px + env(safe-area-inset-bottom));
+  bottom: calc(4.9rem + env(safe-area-inset-bottom));
   display: flex;
   flex-wrap: wrap;
   align-items: center;
