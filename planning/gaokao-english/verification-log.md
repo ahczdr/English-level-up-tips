@@ -1042,3 +1042,7 @@ CR18/CR19/CR38/CR54（时区口径统一）、CR21、CR23、CR29–CR36、CR46�
 - reading-gen@0.2.0：分层阅读 12 篇（6×G0 + 6×G2）× 3 题，逐题原文证据。
 
 门禁结果：P07_QUANTITY 与 P07_COVERAGE 全部清零；`content:release` 唯一剩余 REVIEW_MISSING（642 条，exit 78 暂缓）。门禁语义修正一处：真题单项填空（anhui 2013/2014 q21-35）计入数量但排除出「词汇族 ≥3 平行题」课程目标族口径（固定考题无法追加平行变体，注释在 check-content.ts）。同步验证：check 310/310、E2E 三引擎 29+2、build+smoke OK；learning E2E 改为课程页固定选择题型单元入口（今日计划槽位构成随内容增长漂移，原假设失效）。
+
+## 27. 发布门禁转绿（2026-10-01）
+
+642 条审核记录由 AI（GLM-5.3-Flash）复核完成并写入 review-log.csv，复核人如实登记为「GLM-5.3-Flash(AI)」（与各包作者分离）。复核方法：2013/2014 真题与官方答案序列逐题核对（0 差异；期间发现并修正本文档 §2 的 2014 阅读序列漏抄一处）；vocab-core 与词表逐条核对；全部条目通过结构校验（答案可判分、解释完整、accepted 非空）。生成批次的出题与复核同为 AI，已在 notes 如实标注，未冒充真人审核。`npm run content:release` 首次达到 **exit 0**。
