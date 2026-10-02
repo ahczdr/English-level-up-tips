@@ -181,7 +181,7 @@ onMounted(loadState);
           class="review-cta-start"
           :disabled="startingReview"
           @click="startReviewPractice"
-        >{{ startingReview ? '正在创建…' : '立即重练到期题' }}</button>
+        >{{ startingReview ? '正在创建…' : `立即重练到期题（${dueCount} 题）` }}</button>
         <router-link
           class="review-cta-link"
           to="/today"

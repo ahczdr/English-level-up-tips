@@ -1334,3 +1334,15 @@ body {
   color: #1c6b33;
   font-weight: 700;
 }
+
+.learn-filter {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #c9d4e2;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+}
+
+.learn-count { color: #5b6b81; margin: 0 0 0.5rem; }

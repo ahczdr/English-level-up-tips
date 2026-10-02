@@ -47,6 +47,12 @@ const timeZone = ref('Asia/Shanghai');
 const minuteOptions: Array<PersonalSettings['defaultMinutes']> = [5, 10, 15, 25];
 
 const selectedUnit = computed(() => units.value.find((unit) => unit.key === selectedKey.value) ?? null);
+const filterText = ref('');
+const filteredUnits = computed(() => {
+  const q = filterText.value.trim().toLowerCase();
+  if (!q) return units.value;
+  return units.value.filter((u) => (u.unit.titleZh + u.packTitle).toLowerCase().includes(q));
+});
 
 const loadUnits = async (): Promise<void> => {
   loading.value = true;
@@ -201,6 +207,20 @@ const startPractice = async (): Promise<void> => {
     <h2 id="learn-title">
       课程
     </h2>
+    <p
+      v-if="units.length > 0"
+      class="learn-count"
+    >
+      共 {{ units.length }} 个单元<template v-if="filterText">，匹配 {{ filteredUnits.length }} 个</template>
+    </p>
+    <input
+      v-if="units.length > 12"
+      v-model="filterText"
+      type="search"
+      class="learn-filter"
+      placeholder="搜索单元或课程名称"
+      aria-label="搜索单元或课程名称"
+    >
     <section class="curriculum-roadmap" aria-labelledby="curriculum-title">
       <div class="curriculum-heading">
         <div>
@@ -248,7 +268,7 @@ const startPractice = async (): Promise<void> => {
       {{ status }}
     </p>
     <button
-      v-for="option in units"
+      v-for="option in filteredUnits"
       :key="option.key"
       type="button"
       class="unit-card"
