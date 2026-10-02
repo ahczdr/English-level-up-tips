@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "writing-gen",
+  "version": "0.2.0",
+  "titleZh": "高考英语写作原创练习包（生成草稿）",
+  "status": "published",
+  "author": "内置生成器草稿",
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-30T00:00:00.000Z",
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sourceIds": [
+    "tool-generated-practice"
+  ],
+  "assetIds": [],
+  "resourceIds": [],
+  "itemIds": [
+    "writing-gen-app-1",
+    "writing-gen-app-2",
+    "writing-gen-app-3",
+    "writing-gen-cont-1",
+    "writing-gen-cont-2",
+    "writing-gen-cont-3"
+  ],
+  "unitIds": [
+    "writing-gen-a",
+    "writing-gen-b"
+  ]
+}

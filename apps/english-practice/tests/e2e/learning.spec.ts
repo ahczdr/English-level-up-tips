@@ -15,10 +15,11 @@ const prepareContent = async (page: Page): Promise<void> => {
 test('touch-first task persists after reload', async ({ page }) => {
   await prepareContent(page)
 
-  await page.goto('/#/today')
-  await page.getByRole('button', { name: '开始今日计划', exact: true }).click()
+  // 今日计划槽位构成随内容包增长而变化（可能是填空/听力题）；
+  // 本测试钉住「选择题型作答持久化」，改从课程页进入固定为选择题型的基础单元
+  await page.locator('.unit-card', { hasText: '校园社团' }).first().click()
+  await page.getByRole('button', { name: '开始练习', exact: true }).click()
   await page.locator('.session-progress').waitFor()
-  // 计划槽位构成随日期变化：点击选项组第一个选项（对错不限，持久化是断言点）
   await page.getByRole('group', { name: '答题选项' }).getByRole('button').first().click()
   await page.getByRole('button', { name: '提交答案', exact: true }).click()
   await expect(page.getByRole('status').first()).toContainText('已保存')
@@ -31,9 +32,9 @@ test('touch-first task persists after reload', async ({ page }) => {
 test('复习跨日：时钟推进后复习队列出现到期项（E2E 构建入口）', async ({ page }) => {
   await prepareContent(page)
 
-  // 完成今日首题（产生复习状态）
-  await page.goto('/#/today')
-  await page.getByRole('button', { name: '开始今日计划', exact: true }).click()
+  // 完成一道选择题型首题（产生复习状态）；入口同上——课程页固定单元，避免计划构成漂移
+  await page.locator('.unit-card', { hasText: '校园社团' }).first().click()
+  await page.getByRole('button', { name: '开始练习', exact: true }).click()
   await page.locator('.session-progress').waitFor()
   await page.getByRole('group', { name: '答题选项' }).getByRole('button').first().click()
   await page.getByRole('button', { name: '提交答案', exact: true }).click()

@@ -1,0 +1,2443 @@
+{
+  "schemaVersion": 1,
+  "id": "cloze-gen",
+  "version": "0.2.0",
+  "titleZh": "高考英语完形填空原创练习包（生成草稿）",
+  "status": "published",
+  "author": "内置生成器草稿",
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-30T00:00:00.000Z",
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sources": [
+    {
+      "id": "tool-generated-practice",
+      "kind": "original",
+      "title": "本工具生成的基础练习",
+      "url": null,
+      "rightsNote": "由项目内置生成器编写的原创练习句与题目，非真题转载；逐题独立审核进行中。"
+    }
+  ],
+  "assets": [],
+  "resources": [
+    {
+      "id": "cloze-gen-res-1",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "When Li Ming turned twelve, his grandfather gave him an old bicycle. The paint had faded, and one of the bells (1) ____ not work, but Li Ming loved it (2) ____ than any new bike in the shop."
+        },
+        {
+          "id": "p2",
+          "text": "\n\nEvery morning, he rode three kilometres to school with his best friend Yang Fan, who (3) ____ beside him on a shiny blue bike. On rainy days, the road (4) ____ muddy, and Li Ming often fell. (5) ____, he never thought of leaving the old bicycle at home."
+        },
+        {
+          "id": "p3",
+          "text": "\n\nOne afternoon, Yang Fan's blue bike broke down on the way home. Without (6) ____ twice, Li Ming let his friend (7) ____ on the back seat and pushed the heavy bicycle all the way home. It took them twice as (8) ____ as usual, and they arrived after dark."
+        },
+        {
+          "id": "p4",
+          "text": "\n\nThat evening, Grandpa asked (9) ____ he was so late. When he heard the story, he smiled and said, 'A bicycle is (10) ____ a tool. It carries friendship too.'"
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "cloze-gen-res-2",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Last term, our class entered the city's marathon relay. Each of (1) ____ had to complete four kilometres. I had never run (2) ____ far in my life, so I trained every evening around the playground."
+        },
+        {
+          "id": "p2",
+          "text": "\n\nOn the day of the race, the weather was perfect. Our first runner set off (3) ____ a shot, and the crowd cheered loudly. When the baton finally (4) ____ my hand, my legs felt like jelly. I told (5) ____ to start slowly and save some strength for the last kilometre."
+        },
+        {
+          "id": "p3",
+          "text": "\n\nHalfway through my leg, I was overtaken by a runner from Class Six. Instead of (6) ____ up, I fixed my eyes on her back and kept my steps steady. Little (7) ____ little, I caught up with her just before the exchange zone. The whole class was (8) ____ when I passed the baton on in second place."
+        },
+        {
+          "id": "p4",
+          "text": "\n\nWe ended the race third, (9) ____ everyone agreed it felt like a victory. On the bus home, we made a (10) ____: next year, we would come back for the gold medal."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "cloze-gen-res-3",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Our school organized a trip to the science museum last Friday. We (1) ____ the school bus at eight in the morning and arrived within an hour."
+        },
+        {
+          "id": "p2",
+          "text": "\n\nThe museum is much (2) ____ than it looks from outside. There are four floors, and each floor (3) ____ a different topic, from space to the human body. My favourite room was the Space Hall, (4) ____ visitors can touch a real piece of moon rock."
+        },
+        {
+          "id": "p3",
+          "text": "\n\nIn the afternoon, we watched a short film about robots. One robot could (5) ____ chess with visitors, and it (6) ____ most of the students. 'I want to build a robot like this (7) ____ I grow up,' said my classmate Wang Lei."
+        },
+        {
+          "id": "p4",
+          "text": "\n\nBefore leaving, our teacher asked us to (8) ____ what we had learned in our notebooks. On the way back, everyone was (9) ____ about the trip, and (10) ____ wanted to sleep on the bus."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "cloze-gen-res-4",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Every spring, our town holds a clean-up day for the river that runs (1) ____ the park. This year, our class decided to take part (2) ____ of staying at home."
+        },
+        {
+          "id": "p2",
+          "text": "\n\nWe met at the park gate at nine and (3) ____ into small groups. Each group was given gloves, rubbish bags and a map. My group was responsible for the (4) ____ near the old bridge, where litter usually collects."
+        },
+        {
+          "id": "p3",
+          "text": "\n\nAt first, the work seemed (5) ____. The sun was bright, and everyone was in high spirits. We picked up plastic bottles, food bags and even an old bicycle wheel. (6) ____, after two hours, our backs began to ache and the bags grew heavier."
+        },
+        {
+          "id": "p4",
+          "text": "\n\nJust then, two younger students from another school walked over and asked (7) ____ they could help. We handed them a pair of spare gloves, and (8) ____ of us worked together until the bank was clean. Looking at the water, we could (9) ____ see fish moving under the surface again."
+        },
+        {
+          "id": "p5",
+          "text": "\n\nAt noon, all the groups returned with bags (10) ____ of rubbish. The organizers weighed everything: more than three hundred kilograms in (11) ____. 'That is the (12) ____ of four hundred hands working together,' one of them said with a smile."
+        },
+        {
+          "id": "p6",
+          "text": "\n\nOn the way home, we felt tired (13) ____ proud. Many of us agreed that we would (14) ____ come back next spring, and that we would never (15) ____ rubbish into the river ourselves."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "cloze-gen-res-5",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "When Mr. Feng took over our physics class, most of us saw the subject as a list of formulas to memorize. Within a month, he had (1) ____ that idea on its head."
+        },
+        {
+          "id": "p2",
+          "text": "\n\nHe rarely began a lesson with definitions. (2) ____, he would drop an egg onto a pillow, ask why it did not break, and wait (3) ____ we argued ourselves into an answer. Wrong guesses were (4) ____; 'A wrong idea you can explain,' he liked to say, 'is worth more than a right one you cannot.'"
+        },
+        {
+          "id": "p3",
+          "text": "\n\nAt first this method (5) ____ many of us. We were used to teachers who handed us (6) ____ and asked for silence. Some classmates complained that we never finished the textbook on time. (7) ____, when the city exam results arrived, our class average was the (8) ____ in the grade."
+        },
+        {
+          "id": "p4",
+          "text": "\n\nMore importantly, we had learned to ask questions. In the weeks that (9) ____, my partner and I spent days testing whether the length of a string really (10) ____ the period of a pendulum. Our conclusion (11) ____ the textbook by half a page, and Mr. Feng could not have been (12) ____."
+        },
+        {
+          "id": "p5",
+          "text": "\n\nTwo years have passed, and many formulas have faded from memory. (13) ____ I still remember the feeling of testing an idea for myself. That, I now understand, was the (14) ____ lesson Mr. Feng taught us: not what to think, (15) ____ how to think."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "cloze-gen-res-6",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Last summer my father decided {} teach me to ride a bike. At first I could {} keep my balance, and I fell again and again. My knees {} , but I refused to give {} ."
+        },
+        {
+          "id": "p2",
+          "text": "He ran behind me, holding the seat, but one day he quietly let {} . Surprisingly, I rode on for nearly fifty metres before I realised I was {} . I shouted with joy, and my father waved at {} from the far end of the street."
+        },
+        {
+          "id": "p3",
+          "text": "That small success gave {} confidence. Now I ride to school every day. The road that once seemed {} has become my favourite part of the morning, when I pass the bakery and {} fresh bread."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "cloze-gen-res-7",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Our class entered the school relay race {} one problem: nobody could run the last leg fast enough."
+        },
+        {
+          "id": "p2",
+          "text": "Then Li Hua, who had {} his leg a month before, offered a plan. He could not run, {} he knew the race well. He trained the four runners on how to pass the baton {} , because a race is often {} at the exchanges rather than on speed alone."
+        },
+        {
+          "id": "p3",
+          "text": "On the day of the race, our first runner kept {} and stayed close to the leaders. The second and third runners {} their positions, and when the baton finally reached our slowest runner, he was already in second place."
+        },
+        {
+          "id": "p4",
+          "text": "He was slower than the boy beside him, but he held {} . In the end we finished second, yet the whole class cheered as {} we had won. We learned that a team is strongest when everyone is given a job that {} them."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "cloze-gen-res-8",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "The science museum opened a new hall last month, and our teacher took us there {} Friday. Unlike the old halls, the new one is built around a single idea: visitors should {} the exhibits, not just {} at them."
+        },
+        {
+          "id": "p2",
+          "text": "In the first area, we pushed levers and turned wheels to see {} simple machines change the {} of force. In the second, a computer followed our movements and showed how the human body {} balance while walking."
+        },
+        {
+          "id": "p3",
+          "text": "The most popular exhibit was a model bridge. Visitors {} invited to build it again and again, and {} time the screen shows {} the bridge would fall. Many students tried five {} six times before they found the strongest design."
+        },
+        {
+          "id": "p4",
+          "text": "On the bus back to school, we argued happily about {} bridge had stood longest. Our teacher said that this was exactly {} the museum wanted: not to teach us facts, but to make us {} questions. Science, she said, begins when you wonder {} something happens, not when you copy the answer {} a book."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    }
+  ],
+  "items": [
+    {
+      "id": "cloze-gen-1",
+      "familyId": "cloze-gen-1",
+      "skillIds": [
+        "cloze.context",
+        "cloze.logic"
+      ],
+      "level": "G0",
+      "section": "cloze",
+      "reviewMode": "recall",
+      "promptZh": "阅读下面短文，掌握其大意，根据每个空格给出的中文提示，在空格处填入恰当的单词或短语（同义表达均可）。",
+      "resourceId": "cloze-gen-res-1",
+      "estimatedSeconds": 480,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "短文讲述李明珍惜爷爷赠送的旧自行车，并在朋友车辆损坏时慷慨相助的故事。",
+        "ruleZh": "完形填空需结合上下文逻辑、固定搭配和语法结构综合判断，注意时态与语篇情感一致。",
+        "evidence": [
+          {
+            "resourceId": "cloze-gen-res-1",
+            "paragraphId": "p2",
+            "quote": "Every morning, he rode three kilometres to school with his best friend Yang Fan"
+          },
+          {
+            "resourceId": "cloze-gen-res-1",
+            "paragraphId": "p4",
+            "quote": "When he heard the story, he smiled and said"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "text",
+      "sharedOptions": [],
+      "uniqueOptions": false,
+      "segments": [
+        {
+          "type": "text",
+          "text": "When Li Ming turned twelve, his grandfather gave him an old bicycle. The paint had faded, and one of the bells "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": " not work, but Li Ming loved it "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": " than any new bike in the shop.\n\nEvery morning, he rode three kilometres to school with his best friend Yang Fan, who "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": " beside him on a shiny blue bike. On rainy days, the road "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": " muddy, and Li Ming often fell. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": ", he never thought of leaving the old bicycle at home.\n\nOne afternoon, Yang Fan's blue bike broke down on the way home. Without "
+        },
+        {
+          "type": "gap",
+          "gapId": "g6"
+        },
+        {
+          "type": "text",
+          "text": " twice, Li Ming let his friend "
+        },
+        {
+          "type": "gap",
+          "gapId": "g7"
+        },
+        {
+          "type": "text",
+          "text": " on the back seat and pushed the heavy bicycle all the way home. It took them twice as "
+        },
+        {
+          "type": "gap",
+          "gapId": "g8"
+        },
+        {
+          "type": "text",
+          "text": " as usual, and they arrived after dark.\n\nThat evening, Grandpa asked "
+        },
+        {
+          "type": "gap",
+          "gapId": "g9"
+        },
+        {
+          "type": "text",
+          "text": " he was so late. When he heard the story, he smiled and said, 'A bicycle is "
+        },
+        {
+          "type": "gap",
+          "gapId": "g10"
+        },
+        {
+          "type": "text",
+          "text": " a tool. It carries friendship too.'"
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "助动词过去式，与 not 连用（铃不响）",
+          "options": [],
+          "accepted": [
+            "did"
+          ],
+          "explanationZh": "主语 one of the bells 为单数且动作发生在过去，否定助动词用 did not。"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "loved 的比较级（更爱）",
+          "options": [],
+          "accepted": [
+            "more"
+          ],
+          "explanationZh": "与 any new bike in the shop 比较，loved it more than 表示更爱旧车。"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "骑车，动词过去式",
+          "options": [],
+          "accepted": [
+            "rode"
+          ],
+          "explanationZh": "who 引导定语从句修饰 Yang Fan，叙述过去每天同行，用 rode。"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "变得（系动词过去式）",
+          "options": [],
+          "accepted": [
+            "became",
+            "got",
+            "was",
+            "turned"
+          ],
+          "explanationZh": "雨天路面变得泥泞，became/got/was/turned 均可接形容词 muddy。"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "句首转折副词",
+          "options": [],
+          "accepted": [
+            "however"
+          ],
+          "explanationZh": "前句说常摔倒，后句说从不想把车留在家，语义转折用 However。"
+        },
+        {
+          "id": "g6",
+          "label": "第6空",
+          "clue": "without 后接动名词（考虑）",
+          "options": [],
+          "accepted": [
+            "thinking"
+          ],
+          "explanationZh": "without 是介词后接动名词，think twice 表示犹豫。"
+        },
+        {
+          "id": "g7",
+          "label": "第7空",
+          "clue": "let 后接动词原形（坐）",
+          "options": [],
+          "accepted": [
+            "sit",
+            "ride"
+          ],
+          "explanationZh": "let his friend sit/ride on the back seat，let 后接不带 to 的不定式。"
+        },
+        {
+          "id": "g8",
+          "label": "第8空",
+          "clue": "twice as ... as 结构（时间长）",
+          "options": [],
+          "accepted": [
+            "long"
+          ],
+          "explanationZh": "twice as long as usual 表示花费的时间是平时的两倍。"
+        },
+        {
+          "id": "g9",
+          "label": "第9空",
+          "clue": "引导宾语从句的连接副词（为什么）",
+          "options": [],
+          "accepted": [
+            "why"
+          ],
+          "explanationZh": "爷爷询问他晚归的原因，asked why he was so late。"
+        },
+        {
+          "id": "g10",
+          "label": "第10空",
+          "clue": "表示“不仅仅是”",
+          "options": [],
+          "accepted": [
+            "not just",
+            "more than",
+            "not only",
+            "beyond"
+          ],
+          "explanationZh": "后句说自行车也承载友谊，说明它不只是一个工具。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "cloze-gen-2",
+      "familyId": "cloze-gen-2",
+      "skillIds": [
+        "cloze.context",
+        "cloze.logic"
+      ],
+      "level": "G1",
+      "section": "cloze",
+      "reviewMode": "recall",
+      "promptZh": "阅读下面短文，掌握其大意，根据每个空格给出的中文提示，在空格处填入恰当的单词或短语（同义表达均可）。",
+      "resourceId": "cloze-gen-res-2",
+      "estimatedSeconds": 480,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "短文记叙班级马拉松接力赛中“我”从落后到反超的经历，展现坚持与集体荣誉感。",
+        "ruleZh": "完形填空要抓住叙事线与情感线，动作链（出发—交棒—反超—完赛）中的动词是命题重点。",
+        "evidence": [
+          {
+            "resourceId": "cloze-gen-res-2",
+            "paragraphId": "p2",
+            "quote": "On the day of the race, the weather was perfect."
+          },
+          {
+            "resourceId": "cloze-gen-res-2",
+            "paragraphId": "p3",
+            "quote": "I was overtaken by a runner from Class Six."
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "text",
+      "sharedOptions": [],
+      "uniqueOptions": false,
+      "segments": [
+        {
+          "type": "text",
+          "text": "Last term, our class entered the city's marathon relay. Each of "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": " had to complete four kilometres. I had never run "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": " far in my life, so I trained every evening around the playground.\n\nOn the day of the race, the weather was perfect. Our first runner set off "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": " a shot, and the crowd cheered loudly. When the baton finally "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": " my hand, my legs felt like jelly. I told "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": " to start slowly and save some strength for the last kilometre.\n\nHalfway through my leg, I was overtaken by a runner from Class Six. Instead of "
+        },
+        {
+          "type": "gap",
+          "gapId": "g6"
+        },
+        {
+          "type": "text",
+          "text": " up, I fixed my eyes on her back and kept my steps steady. Little "
+        },
+        {
+          "type": "gap",
+          "gapId": "g7"
+        },
+        {
+          "type": "text",
+          "text": " little, I caught up with her just before the exchange zone. The whole class was "
+        },
+        {
+          "type": "gap",
+          "gapId": "g8"
+        },
+        {
+          "type": "text",
+          "text": " when I passed the baton on in second place.\n\nWe ended the race third, "
+        },
+        {
+          "type": "gap",
+          "gapId": "g9"
+        },
+        {
+          "type": "text",
+          "text": " everyone agreed it felt like a victory. On the bus home, we made a "
+        },
+        {
+          "type": "gap",
+          "gapId": "g10"
+        },
+        {
+          "type": "text",
+          "text": ": next year, we would come back for the gold medal."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "介词 of 后的人称代词（我们）",
+          "options": [],
+          "accepted": [
+            "us"
+          ],
+          "explanationZh": "Each of us 表示我们中的每一个人，of 为介词后接宾格。"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "副词修饰 far（那么远）",
+          "options": [],
+          "accepted": [
+            "that",
+            "so"
+          ],
+          "explanationZh": "never run that far 表示从未跑过那么远，that 为指示副词，so 亦可。"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "介词（像）",
+          "options": [],
+          "accepted": [
+            "like"
+          ],
+          "explanationZh": "set off like a shot 表示像离弦之箭一样冲出去。"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "及物动词过去式（到达）",
+          "options": [],
+          "accepted": [
+            "reached",
+            "landed in"
+          ],
+          "explanationZh": "接力棒最终到达我手中，reach 为及物动词直接接宾语。"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "反身代词",
+          "options": [],
+          "accepted": [
+            "myself"
+          ],
+          "explanationZh": "主语是 I，告诫自己用 told myself。"
+        },
+        {
+          "id": "g6",
+          "label": "第6空",
+          "clue": "instead of 后接动名词（放弃）",
+          "options": [],
+          "accepted": [
+            "giving"
+          ],
+          "explanationZh": "Instead of 为介词短语后接动名词，give up 表示放弃。"
+        },
+        {
+          "id": "g7",
+          "label": "第7空",
+          "clue": "固定短语 little by little",
+          "options": [],
+          "accepted": [
+            "by"
+          ],
+          "explanationZh": "little by little 为固定短语，表示一点一点地。"
+        },
+        {
+          "id": "g8",
+          "label": "第8空",
+          "clue": "欢呼/兴奋",
+          "options": [],
+          "accepted": [
+            "cheering",
+            "shouting",
+            "excited"
+          ],
+          "explanationZh": "交接棒时全班为我欢呼，was cheering/shouting 或 was excited 均可。"
+        },
+        {
+          "id": "g9",
+          "label": "第9空",
+          "clue": "连词表转折",
+          "options": [],
+          "accepted": [
+            "but",
+            "yet"
+          ],
+          "explanationZh": "只获第三名与感觉像胜利之间是转折关系。"
+        },
+        {
+          "id": "g10",
+          "label": "第10空",
+          "clue": "名词（承诺）",
+          "options": [],
+          "accepted": [
+            "promise",
+            "deal"
+          ],
+          "explanationZh": "make a promise 表示许下承诺，与明年来夺金的决心呼应。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "cloze-gen-3",
+      "familyId": "cloze-gen-3",
+      "skillIds": [
+        "cloze.context",
+        "cloze.logic"
+      ],
+      "level": "G0",
+      "section": "cloze",
+      "reviewMode": "recall",
+      "promptZh": "阅读下面短文，掌握其大意，根据每个空格给出的中文提示，在空格处填入恰当的单词或短语（同义表达均可）。",
+      "resourceId": "cloze-gen-res-3",
+      "estimatedSeconds": 480,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "短文记录一次科技馆之行，从场馆布局到机器人互动，展现科技活动的吸引力。",
+        "ruleZh": "游记类完形按时间顺序展开，注意主谓一致、非谓语和从句引导词等语法线索。",
+        "evidence": [
+          {
+            "resourceId": "cloze-gen-res-3",
+            "paragraphId": "p2",
+            "quote": "My favourite room was the Space Hall"
+          },
+          {
+            "resourceId": "cloze-gen-res-3",
+            "paragraphId": "p3",
+            "quote": "we watched a short film about robots"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "text",
+      "sharedOptions": [],
+      "uniqueOptions": false,
+      "segments": [
+        {
+          "type": "text",
+          "text": "Our school organized a trip to the science museum last Friday. We "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": " the school bus at eight in the morning and arrived within an hour.\n\nThe museum is much "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": " than it looks from outside. There are four floors, and each floor "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": " a different topic, from space to the human body. My favourite room was the Space Hall, "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": " visitors can touch a real piece of moon rock.\n\nIn the afternoon, we watched a short film about robots. One robot could "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": " chess with visitors, and it "
+        },
+        {
+          "type": "gap",
+          "gapId": "g6"
+        },
+        {
+          "type": "text",
+          "text": " most of the students. 'I want to build a robot like this "
+        },
+        {
+          "type": "gap",
+          "gapId": "g7"
+        },
+        {
+          "type": "text",
+          "text": " I grow up,' said my classmate Wang Lei.\n\nBefore leaving, our teacher asked us to "
+        },
+        {
+          "type": "gap",
+          "gapId": "g8"
+        },
+        {
+          "type": "text",
+          "text": " what we had learned in our notebooks. On the way back, everyone was "
+        },
+        {
+          "type": "gap",
+          "gapId": "g9"
+        },
+        {
+          "type": "text",
+          "text": " about the trip, and "
+        },
+        {
+          "type": "gap",
+          "gapId": "g10"
+        },
+        {
+          "type": "text",
+          "text": " wanted to sleep on the bus."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "乘坐（交通工具），过去式",
+          "options": [],
+          "accepted": [
+            "took",
+            "boarded"
+          ],
+          "explanationZh": "叙述上周五乘校车出行，take the bus 的过去式为 took。"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "much 后接比较级（更大）",
+          "options": [],
+          "accepted": [
+            "bigger",
+            "larger"
+          ],
+          "explanationZh": "much ... than it looks 提示用比较级，说明馆内比外观更大。"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "动词三单（涵盖）",
+          "options": [],
+          "accepted": [
+            "covers",
+            "presents"
+          ],
+          "explanationZh": "each floor 为单数主语，一般现在时用 covers，表示涵盖不同主题。"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "定语从句关系副词（在那里）",
+          "options": [],
+          "accepted": [
+            "where"
+          ],
+          "explanationZh": "先行词 the Space Hall 为地点且从句缺状语，用 where 引导。"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "could 后接原形（下棋）",
+          "options": [],
+          "accepted": [
+            "play"
+          ],
+          "explanationZh": "情态动词 could 后接动词原形，play chess 表示下棋。"
+        },
+        {
+          "id": "g6",
+          "label": "第6空",
+          "clue": "过去式（击败）",
+          "options": [],
+          "accepted": [
+            "beat",
+            "defeated"
+          ],
+          "explanationZh": "机器人在对弈中战胜大多数学生，beat/defeated 后接人作宾语。"
+        },
+        {
+          "id": "g7",
+          "label": "第7空",
+          "clue": "时间状语从句连词（当……时）",
+          "options": [],
+          "accepted": [
+            "when"
+          ],
+          "explanationZh": "等我长大时想造这样的机器人，when 引导时间状语从句。"
+        },
+        {
+          "id": "g8",
+          "label": "第8空",
+          "clue": "ask sb to do 结构（写下）",
+          "options": [],
+          "accepted": [
+            "write",
+            "record",
+            "note down"
+          ],
+          "explanationZh": "ask sb to do sth 结构，用 write...in our notebooks 表示记在笔记本上。"
+        },
+        {
+          "id": "g9",
+          "label": "第9空",
+          "clue": "谈论/兴奋",
+          "options": [],
+          "accepted": [
+            "talking",
+            "excited"
+          ],
+          "explanationZh": "回程路上大家兴奋谈论这次旅行，was talking about 或 was excited about。"
+        },
+        {
+          "id": "g10",
+          "label": "第10空",
+          "clue": "不定代词（没有人）",
+          "options": [],
+          "accepted": [
+            "nobody",
+            "no one"
+          ],
+          "explanationZh": "与大家兴奋谈论呼应，车上没有人想睡觉。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "cloze-gen-4",
+      "familyId": "cloze-gen-4",
+      "skillIds": [
+        "cloze.context",
+        "cloze.logic"
+      ],
+      "level": "G1",
+      "section": "cloze",
+      "reviewMode": "recall",
+      "promptZh": "阅读下面短文，掌握其大意，根据每个空格给出的中文提示，在空格处填入恰当的单词或短语（同义表达均可）。",
+      "resourceId": "cloze-gen-res-4",
+      "estimatedSeconds": 600,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "短文记述全班参加镇上河道清理活动的经过，从轻松到疲惫再到收获成就感。",
+        "ruleZh": "活动记叙类完形注意情感起伏（轻松—疲惫—自豪）与固定搭配、逻辑连接词的配合。",
+        "evidence": [
+          {
+            "resourceId": "cloze-gen-res-4",
+            "paragraphId": "p3",
+            "quote": "We picked up plastic bottles, food bags and even an old bicycle wheel."
+          },
+          {
+            "resourceId": "cloze-gen-res-4",
+            "paragraphId": "p5",
+            "quote": "The organizers weighed everything"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "text",
+      "sharedOptions": [],
+      "uniqueOptions": false,
+      "segments": [
+        {
+          "type": "text",
+          "text": "Every spring, our town holds a clean-up day for the river that runs "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": " the park. This year, our class decided to take part "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": " of staying at home.\n\nWe met at the park gate at nine and "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": " into small groups. Each group was given gloves, rubbish bags and a map. My group was responsible for the "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": " near the old bridge, where litter usually collects.\n\nAt first, the work seemed "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": ". The sun was bright, and everyone was in high spirits. We picked up plastic bottles, food bags and even an old bicycle wheel. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g6"
+        },
+        {
+          "type": "text",
+          "text": ", after two hours, our backs began to ache and the bags grew heavier.\n\nJust then, two younger students from another school walked over and asked "
+        },
+        {
+          "type": "gap",
+          "gapId": "g7"
+        },
+        {
+          "type": "text",
+          "text": " they could help. We handed them a pair of spare gloves, and "
+        },
+        {
+          "type": "gap",
+          "gapId": "g8"
+        },
+        {
+          "type": "text",
+          "text": " of us worked together until the bank was clean. Looking at the water, we could "
+        },
+        {
+          "type": "gap",
+          "gapId": "g9"
+        },
+        {
+          "type": "text",
+          "text": " see fish moving under the surface again.\n\nAt noon, all the groups returned with bags "
+        },
+        {
+          "type": "gap",
+          "gapId": "g10"
+        },
+        {
+          "type": "text",
+          "text": " of rubbish. The organizers weighed everything: more than three hundred kilograms in "
+        },
+        {
+          "type": "gap",
+          "gapId": "g11"
+        },
+        {
+          "type": "text",
+          "text": ". 'That is the "
+        },
+        {
+          "type": "gap",
+          "gapId": "g12"
+        },
+        {
+          "type": "text",
+          "text": " of four hundred hands working together,' one of them said with a smile.\n\nOn the way home, we felt tired "
+        },
+        {
+          "type": "gap",
+          "gapId": "g13"
+        },
+        {
+          "type": "text",
+          "text": " proud. Many of us agreed that we would "
+        },
+        {
+          "type": "gap",
+          "gapId": "g14"
+        },
+        {
+          "type": "text",
+          "text": " come back next spring, and that we would never "
+        },
+        {
+          "type": "gap",
+          "gapId": "g15"
+        },
+        {
+          "type": "text",
+          "text": " rubbish into the river ourselves."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "介词（流过）",
+          "options": [],
+          "accepted": [
+            "through",
+            "past",
+            "around",
+            "behind"
+          ],
+          "explanationZh": "河流穿过公园，run through the park 为常见搭配。"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "instead of（而不是）",
+          "options": [],
+          "accepted": [
+            "instead"
+          ],
+          "explanationZh": "take part instead of staying at home 表示参加而不是待在家里。"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "过去式（分成小组）",
+          "options": [],
+          "accepted": [
+            "divided",
+            "split"
+          ],
+          "explanationZh": "我们分成小组，divide into small groups 为固定表达。"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "名词（区域/河岸）",
+          "options": [],
+          "accepted": [
+            "area",
+            "bank",
+            "corner"
+          ],
+          "explanationZh": "负责老桥附近的区域，area/bank/corner 均指具体地点。"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "形容词原级（容易）",
+          "options": [],
+          "accepted": [
+            "easy"
+          ],
+          "explanationZh": "起初工作似乎容易，与后文两小时后背疼形成对比。"
+        },
+        {
+          "id": "g6",
+          "label": "第6空",
+          "clue": "转折副词（句首大写）",
+          "options": [],
+          "accepted": [
+            "however",
+            "still"
+          ],
+          "explanationZh": "前文兴致高，后文疲惫袋重，语义转折用 However。"
+        },
+        {
+          "id": "g7",
+          "label": "第7空",
+          "clue": "宾语从句连词（是否）",
+          "options": [],
+          "accepted": [
+            "if",
+            "whether"
+          ],
+          "explanationZh": "asked if/whether they could help 表示询问是否可以帮忙。"
+        },
+        {
+          "id": "g8",
+          "label": "第8空",
+          "clue": "不定代词（所有人）",
+          "options": [],
+          "accepted": [
+            "all"
+          ],
+          "explanationZh": "两校学生一起干活，all of us worked together。"
+        },
+        {
+          "id": "g9",
+          "label": "第9空",
+          "clue": "副词（清楚地/甚至）",
+          "options": [],
+          "accepted": [
+            "clearly",
+            "even"
+          ],
+          "explanationZh": "河水变清后能清楚地看见鱼，clearly/even 均可衔接。"
+        },
+        {
+          "id": "g10",
+          "label": "第10空",
+          "clue": "full of（装满）",
+          "options": [],
+          "accepted": [
+            "full"
+          ],
+          "explanationZh": "bags full of rubbish 表示装满垃圾的袋子。"
+        },
+        {
+          "id": "g11",
+          "label": "第11空",
+          "clue": "in total（总计）",
+          "options": [],
+          "accepted": [
+            "total"
+          ],
+          "explanationZh": "in total 表示总共，与三百多公斤呼应。"
+        },
+        {
+          "id": "g12",
+          "label": "第12空",
+          "clue": "名词（结果）",
+          "options": [],
+          "accepted": [
+            "result"
+          ],
+          "explanationZh": "这是四百只手共同劳动的结果，the result of。"
+        },
+        {
+          "id": "g13",
+          "label": "第13空",
+          "clue": "连词（但是）",
+          "options": [],
+          "accepted": [
+            "but",
+            "yet"
+          ],
+          "explanationZh": "疲惫但自豪，tired but proud 表示转折。"
+        },
+        {
+          "id": "g14",
+          "label": "第14空",
+          "clue": "副词（一定/乐意）",
+          "options": [],
+          "accepted": [
+            "certainly",
+            "gladly"
+          ],
+          "explanationZh": "would certainly/gladly come back 表示明年春天一定乐意再来。"
+        },
+        {
+          "id": "g15",
+          "label": "第15空",
+          "clue": "动词原形（扔）",
+          "options": [],
+          "accepted": [
+            "drop",
+            "throw"
+          ],
+          "explanationZh": "never drop/throw rubbish into the river 表示再也不往河里扔垃圾。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "cloze-gen-5",
+      "familyId": "cloze-gen-5",
+      "skillIds": [
+        "cloze.context",
+        "cloze.logic"
+      ],
+      "level": "G2",
+      "section": "cloze",
+      "reviewMode": "recall",
+      "promptZh": "阅读下面短文，掌握其大意，根据每个空格给出的中文提示，在空格处填入恰当的单词或短语（同义表达均可）。",
+      "resourceId": "cloze-gen-res-5",
+      "estimatedSeconds": 600,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "短文回忆冯老师用提问与实验代替灌输的物理课，最终教会学生如何思考。",
+        "ruleZh": "夹叙夹议类完形要注意新旧教学方式的对比逻辑，以及 however、instead 等语篇标记词。",
+        "evidence": [
+          {
+            "resourceId": "cloze-gen-res-5",
+            "paragraphId": "p2",
+            "quote": "'A wrong idea you can explain,' he liked to say, 'is worth more than a right one you cannot.'"
+          },
+          {
+            "resourceId": "cloze-gen-res-5",
+            "paragraphId": "p3",
+            "quote": "We were used to teachers who handed us"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "text",
+      "sharedOptions": [],
+      "uniqueOptions": false,
+      "segments": [
+        {
+          "type": "text",
+          "text": "When Mr. Feng took over our physics class, most of us saw the subject as a list of formulas to memorize. Within a month, he had "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": " that idea on its head.\n\nHe rarely began a lesson with definitions. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": ", he would drop an egg onto a pillow, ask why it did not break, and wait "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": " we argued ourselves into an answer. Wrong guesses were "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": "; 'A wrong idea you can explain,' he liked to say, 'is worth more than a right one you cannot.'\n\nAt first this method "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": " many of us. We were used to teachers who handed us "
+        },
+        {
+          "type": "gap",
+          "gapId": "g6"
+        },
+        {
+          "type": "text",
+          "text": " and asked for silence. Some classmates complained that we never finished the textbook on time. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g7"
+        },
+        {
+          "type": "text",
+          "text": ", when the city exam results arrived, our class average was the "
+        },
+        {
+          "type": "gap",
+          "gapId": "g8"
+        },
+        {
+          "type": "text",
+          "text": " in the grade.\n\nMore importantly, we had learned to ask questions. In the weeks that "
+        },
+        {
+          "type": "gap",
+          "gapId": "g9"
+        },
+        {
+          "type": "text",
+          "text": ", my partner and I spent days testing whether the length of a string really "
+        },
+        {
+          "type": "gap",
+          "gapId": "g10"
+        },
+        {
+          "type": "text",
+          "text": " the period of a pendulum. Our conclusion "
+        },
+        {
+          "type": "gap",
+          "gapId": "g11"
+        },
+        {
+          "type": "text",
+          "text": " the textbook by half a page, and Mr. Feng could not have been "
+        },
+        {
+          "type": "gap",
+          "gapId": "g12"
+        },
+        {
+          "type": "text",
+          "text": ".\n\nTwo years have passed, and many formulas have faded from memory. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g13"
+        },
+        {
+          "type": "text",
+          "text": " I still remember the feeling of testing an idea for myself. That, I now understand, was the "
+        },
+        {
+          "type": "gap",
+          "gapId": "g14"
+        },
+        {
+          "type": "text",
+          "text": " lesson Mr. Feng taught us: not what to think, "
+        },
+        {
+          "type": "gap",
+          "gapId": "g15"
+        },
+        {
+          "type": "text",
+          "text": " how to think."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "turn ... on its head（彻底颠覆）",
+          "options": [],
+          "accepted": [
+            "turned"
+          ],
+          "explanationZh": "turn that idea on its head 表示彻底颠覆了这种看法。"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "副词表相反（句首大写）",
+          "options": [],
+          "accepted": [
+            "instead"
+          ],
+          "explanationZh": "前句说很少从定义开始，Instead 引出他实际的做法。"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "连词（直到）",
+          "options": [],
+          "accepted": [
+            "until",
+            "till"
+          ],
+          "explanationZh": "wait until we argued ourselves into an answer 表示等到我们争出答案。"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "形容词/分词（受欢迎）",
+          "options": [],
+          "accepted": [
+            "welcome",
+            "welcomed"
+          ],
+          "explanationZh": "错误的猜想也受欢迎，与后文他欣赏能解释的错误观点一致。"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "过去式（使不安）",
+          "options": [],
+          "accepted": [
+            "troubled",
+            "confused",
+            "worried",
+            "bothered"
+          ],
+          "explanationZh": "这种新方法起初让许多人不安，与后文同学习惯沉默对照。"
+        },
+        {
+          "id": "g6",
+          "label": "第6空",
+          "clue": "名词复数（笔记/答案）",
+          "options": [],
+          "accepted": [
+            "notes",
+            "answers",
+            "handouts"
+          ],
+          "explanationZh": "过去的老师发笔记并要求安静，与冯老师的提问式教学形成对比。"
+        },
+        {
+          "id": "g7",
+          "label": "第7空",
+          "clue": "转折副词（句首大写）",
+          "options": [],
+          "accepted": [
+            "however",
+            "still"
+          ],
+          "explanationZh": "前面说抱怨进度慢，后面说成绩最好，转折用 However。"
+        },
+        {
+          "id": "g8",
+          "label": "第8空",
+          "clue": "最高级（最高）",
+          "options": [],
+          "accepted": [
+            "highest",
+            "best"
+          ],
+          "explanationZh": "the highest average in the grade 表示全班平均分年级最高。"
+        },
+        {
+          "id": "g9",
+          "label": "第9空",
+          "clue": "that followed（接下来的）",
+          "options": [],
+          "accepted": [
+            "followed"
+          ],
+          "explanationZh": "in the weeks that followed 为固定表达，表示在接下来的几周里。"
+        },
+        {
+          "id": "g10",
+          "label": "第10空",
+          "clue": "过去式（影响）",
+          "options": [],
+          "accepted": [
+            "affected",
+            "changed",
+            "influenced",
+            "determined"
+          ],
+          "explanationZh": "检验摆线长度是否真的影响摆动周期，affect/influence 等均可。"
+        },
+        {
+          "id": "g11",
+          "label": "第11空",
+          "clue": "过去式（纠正/与……不符）",
+          "options": [],
+          "accepted": [
+            "corrected",
+            "contradicted",
+            "differed from"
+          ],
+          "explanationZh": "结论纠正了课本上的说法，corrected/contradicted the textbook。"
+        },
+        {
+          "id": "g12",
+          "label": "第12空",
+          "clue": "比较级（更自豪）",
+          "options": [],
+          "accepted": [
+            "prouder",
+            "happier"
+          ],
+          "explanationZh": "could not have been prouder 表示再自豪不过了。"
+        },
+        {
+          "id": "g13",
+          "label": "第13空",
+          "clue": "转折连词（句首大写）",
+          "options": [],
+          "accepted": [
+            "but",
+            "yet"
+          ],
+          "explanationZh": "公式淡忘与仍记得探究感受之间为转折关系。"
+        },
+        {
+          "id": "g14",
+          "label": "第14空",
+          "clue": "形容词（真正的/最重要的）",
+          "options": [],
+          "accepted": [
+            "real",
+            "true",
+            "greatest"
+          ],
+          "explanationZh": "那才是冯老师教给我们的真正一课。"
+        },
+        {
+          "id": "g15",
+          "label": "第15空",
+          "clue": "not ... but ...（不是……而是……）",
+          "options": [],
+          "accepted": [
+            "but"
+          ],
+          "explanationZh": "not what to think, but how to think 表示不是想什么而是怎么想。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "cloze-gen-6",
+      "familyId": "cloze-gen-6",
+      "skillIds": [
+        "cloze.context"
+      ],
+      "level": "G0",
+      "section": "cloze",
+      "reviewMode": "recall",
+      "promptZh": "阅读短文，根据上下文在空白处填入适当的词。",
+      "resourceId": "cloze-gen-res-6",
+      "estimatedSeconds": 420,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "学骑自行车的经历",
+        "ruleZh": "完形：先通读抓主旨，再逐空看搭配与上下文。",
+        "evidence": [
+          {
+            "resourceId": "cloze-gen-res-6",
+            "paragraphId": "p1",
+            "quote": "Last summer my father decided {} teach me to ride "
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "text",
+      "sharedOptions": [],
+      "uniqueOptions": false,
+      "segments": [
+        {
+          "type": "text",
+          "text": "Last summer my father decided "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": "teach me to ride a bike. At first I could "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": "keep my balance, and I fell again and again. My knees "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": ", but I refused to give "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": "."
+        },
+        {
+          "type": "text",
+          "text": "He ran behind me, holding the seat, but one day he quietly let "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": ". Surprisingly, I rode on for nearly fifty metres before I realised I was "
+        },
+        {
+          "type": "gap",
+          "gapId": "g6"
+        },
+        {
+          "type": "text",
+          "text": ". I shouted with joy, and my father waved at "
+        },
+        {
+          "type": "gap",
+          "gapId": "g7"
+        },
+        {
+          "type": "text",
+          "text": "from the far end of the street."
+        },
+        {
+          "type": "text",
+          "text": "That small success gave "
+        },
+        {
+          "type": "gap",
+          "gapId": "g8"
+        },
+        {
+          "type": "text",
+          "text": "confidence. Now I ride to school every day. The road that once seemed "
+        },
+        {
+          "type": "gap",
+          "gapId": "g9"
+        },
+        {
+          "type": "text",
+          "text": "has become my favourite part of the morning, when I pass the bakery and "
+        },
+        {
+          "type": "gap",
+          "gapId": "g10"
+        },
+        {
+          "type": "text",
+          "text": "fresh bread."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "无提示词",
+          "options": [],
+          "accepted": [
+            "to"
+          ],
+          "explanationZh": "decide to do"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "无提示词：情态动词",
+          "options": [],
+          "accepted": [
+            "could"
+          ],
+          "explanationZh": "could not keep"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "填动词过去式",
+          "options": [],
+          "accepted": [
+            "hurt",
+            "ached"
+          ],
+          "explanationZh": "膝盖疼"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "填副词小品词",
+          "options": [],
+          "accepted": [
+            "up"
+          ],
+          "explanationZh": "give up"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "填动词原形",
+          "options": [],
+          "accepted": [
+            "let"
+          ],
+          "explanationZh": "let go"
+        },
+        {
+          "id": "g6",
+          "label": "第6空",
+          "clue": "填形容词",
+          "options": [],
+          "accepted": [
+            "alone"
+          ],
+          "explanationZh": "独自"
+        },
+        {
+          "id": "g7",
+          "label": "第7空",
+          "clue": "填代词",
+          "options": [],
+          "accepted": [
+            "me"
+          ],
+          "explanationZh": "wave at me"
+        },
+        {
+          "id": "g8",
+          "label": "第8空",
+          "clue": "填代词",
+          "options": [],
+          "accepted": [
+            "me"
+          ],
+          "explanationZh": "give me confidence"
+        },
+        {
+          "id": "g9",
+          "label": "第9空",
+          "clue": "填形容词",
+          "options": [],
+          "accepted": [
+            "dangerous",
+            "risky"
+          ],
+          "explanationZh": "看似危险"
+        },
+        {
+          "id": "g10",
+          "label": "第10空",
+          "clue": "填动词原形",
+          "options": [],
+          "accepted": [
+            "smell"
+          ],
+          "explanationZh": "情态动词后原形"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "cloze-gen-7",
+      "familyId": "cloze-gen-7",
+      "skillIds": [
+        "cloze.context"
+      ],
+      "level": "G1",
+      "section": "cloze",
+      "reviewMode": "recall",
+      "promptZh": "阅读短文，根据上下文在空白处填入适当的词。",
+      "resourceId": "cloze-gen-res-7",
+      "estimatedSeconds": 420,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "一场特别的接力赛",
+        "ruleZh": "完形：先通读抓主旨，再逐空看搭配与上下文。",
+        "evidence": [
+          {
+            "resourceId": "cloze-gen-res-7",
+            "paragraphId": "p1",
+            "quote": "Our class entered the school relay race {} one pro"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "text",
+      "sharedOptions": [],
+      "uniqueOptions": false,
+      "segments": [
+        {
+          "type": "text",
+          "text": "Our class entered the school relay race "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": "one problem: nobody could run the last leg fast enough."
+        },
+        {
+          "type": "text",
+          "text": "Then Li Hua, who had "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": "his leg a month before, offered a plan. He could not run, "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": "he knew the race well. He trained the four runners on how to pass the baton "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": ", because a race is often "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": "at the exchanges rather than on speed alone."
+        },
+        {
+          "type": "text",
+          "text": "On the day of the race, our first runner kept "
+        },
+        {
+          "type": "gap",
+          "gapId": "g6"
+        },
+        {
+          "type": "text",
+          "text": "and stayed close to the leaders. The second and third runners "
+        },
+        {
+          "type": "gap",
+          "gapId": "g7"
+        },
+        {
+          "type": "text",
+          "text": "their positions, and when the baton finally reached our slowest runner, he was already in second place."
+        },
+        {
+          "type": "text",
+          "text": "He was slower than the boy beside him, but he held "
+        },
+        {
+          "type": "gap",
+          "gapId": "g8"
+        },
+        {
+          "type": "text",
+          "text": ". In the end we finished second, yet the whole class cheered as "
+        },
+        {
+          "type": "gap",
+          "gapId": "g9"
+        },
+        {
+          "type": "text",
+          "text": "we had won. We learned that a team is strongest when everyone is given a job that "
+        },
+        {
+          "type": "gap",
+          "gapId": "g10"
+        },
+        {
+          "type": "text",
+          "text": "them."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "填介词",
+          "options": [],
+          "accepted": [
+            "with"
+          ],
+          "explanationZh": "with one problem"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "填动词过去分词",
+          "options": [],
+          "accepted": [
+            "hurt",
+            "injured"
+          ],
+          "explanationZh": "had hurt"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "无提示词：连词",
+          "options": [],
+          "accepted": [
+            "but",
+            "yet"
+          ],
+          "explanationZh": "转折"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "填副词",
+          "options": [],
+          "accepted": [
+            "smoothly"
+          ],
+          "explanationZh": "修饰 pass"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "填动词过去分词（被动）",
+          "options": [],
+          "accepted": [
+            "won",
+            "lost"
+          ],
+          "explanationZh": "被动"
+        },
+        {
+          "id": "g6",
+          "label": "第6空",
+          "clue": "填形容词",
+          "options": [],
+          "accepted": [
+            "calm"
+          ],
+          "explanationZh": "kept calm"
+        },
+        {
+          "id": "g7",
+          "label": "第7空",
+          "clue": "填动词过去式",
+          "options": [],
+          "accepted": [
+            "kept",
+            "held"
+          ],
+          "explanationZh": "保持位次"
+        },
+        {
+          "id": "g8",
+          "label": "第8空",
+          "clue": "填副词小品词",
+          "options": [],
+          "accepted": [
+            "on"
+          ],
+          "explanationZh": "hold on"
+        },
+        {
+          "id": "g9",
+          "label": "第9空",
+          "clue": "无提示词：连词",
+          "options": [],
+          "accepted": [
+            "if",
+            "though"
+          ],
+          "explanationZh": "as if"
+        },
+        {
+          "id": "g10",
+          "label": "第10空",
+          "clue": "填动词第三人称单数",
+          "options": [],
+          "accepted": [
+            "suits",
+            "fits"
+          ],
+          "explanationZh": "定语从句"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "cloze-gen-8",
+      "familyId": "cloze-gen-8",
+      "skillIds": [
+        "cloze.context"
+      ],
+      "level": "G2",
+      "section": "cloze",
+      "reviewMode": "recall",
+      "promptZh": "阅读短文，根据上下文在空白处填入适当的词。",
+      "resourceId": "cloze-gen-res-8",
+      "estimatedSeconds": 420,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "科技馆的一次参观",
+        "ruleZh": "完形：先通读抓主旨，再逐空看搭配与上下文。",
+        "evidence": [
+          {
+            "resourceId": "cloze-gen-res-8",
+            "paragraphId": "p1",
+            "quote": "The science museum opened a new hall last month, a"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "text",
+      "sharedOptions": [],
+      "uniqueOptions": false,
+      "segments": [
+        {
+          "type": "text",
+          "text": "The science museum opened a new hall last month, and our teacher took us there "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": "Friday. Unlike the old halls, the new one is built around a single idea: visitors should "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": "the exhibits, not just "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": "at them."
+        },
+        {
+          "type": "text",
+          "text": "In the first area, we pushed levers and turned wheels to see "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": "simple machines change the "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": "of force. In the second, a computer followed our movements and showed how the human body "
+        },
+        {
+          "type": "gap",
+          "gapId": "g6"
+        },
+        {
+          "type": "text",
+          "text": "balance while walking."
+        },
+        {
+          "type": "text",
+          "text": "The most popular exhibit was a model bridge. Visitors "
+        },
+        {
+          "type": "gap",
+          "gapId": "g7"
+        },
+        {
+          "type": "text",
+          "text": "invited to build it again and again, and "
+        },
+        {
+          "type": "gap",
+          "gapId": "g8"
+        },
+        {
+          "type": "text",
+          "text": "time the screen shows "
+        },
+        {
+          "type": "gap",
+          "gapId": "g9"
+        },
+        {
+          "type": "text",
+          "text": "the bridge would fall. Many students tried five "
+        },
+        {
+          "type": "gap",
+          "gapId": "g10"
+        },
+        {
+          "type": "text",
+          "text": "six times before they found the strongest design."
+        },
+        {
+          "type": "text",
+          "text": "On the bus back to school, we argued happily about "
+        },
+        {
+          "type": "gap",
+          "gapId": "g11"
+        },
+        {
+          "type": "text",
+          "text": "bridge had stood longest. Our teacher said that this was exactly "
+        },
+        {
+          "type": "gap",
+          "gapId": "g12"
+        },
+        {
+          "type": "text",
+          "text": "the museum wanted: not to teach us facts, but to make us "
+        },
+        {
+          "type": "gap",
+          "gapId": "g13"
+        },
+        {
+          "type": "text",
+          "text": "questions. Science, she said, begins when you wonder "
+        },
+        {
+          "type": "gap",
+          "gapId": "g14"
+        },
+        {
+          "type": "text",
+          "text": "something happens, not when you copy the answer "
+        },
+        {
+          "type": "gap",
+          "gapId": "g15"
+        },
+        {
+          "type": "text",
+          "text": "a book."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "无提示词：介词",
+          "options": [],
+          "accepted": [
+            "on"
+          ],
+          "explanationZh": "on Friday"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "填动词原形（should 后）",
+          "options": [],
+          "accepted": [
+            "touch",
+            "operate"
+          ],
+          "explanationZh": "should + 原形"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "填动词原形",
+          "options": [],
+          "accepted": [
+            "look",
+            "stare"
+          ],
+          "explanationZh": "look at"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "无提示词：连接词",
+          "options": [],
+          "accepted": [
+            "how"
+          ],
+          "explanationZh": "see how"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "填名词",
+          "options": [],
+          "accepted": [
+            "direction"
+          ],
+          "explanationZh": "力的方向"
+        },
+        {
+          "id": "g6",
+          "label": "第6空",
+          "clue": "填动词第三人称单数",
+          "options": [],
+          "accepted": [
+            "keeps"
+          ],
+          "explanationZh": "keeps balance"
+        },
+        {
+          "id": "g7",
+          "label": "第7空",
+          "clue": "填动词 be 复数现在式",
+          "options": [],
+          "accepted": [
+            "are"
+          ],
+          "explanationZh": "被动"
+        },
+        {
+          "id": "g8",
+          "label": "第8空",
+          "clue": "填形容词/代词",
+          "options": [],
+          "accepted": [
+            "each",
+            "every"
+          ],
+          "explanationZh": "each time"
+        },
+        {
+          "id": "g9",
+          "label": "第9空",
+          "clue": "填连接副词",
+          "options": [],
+          "accepted": [
+            "why",
+            "how"
+          ],
+          "explanationZh": "shows why"
+        },
+        {
+          "id": "g10",
+          "label": "第10空",
+          "clue": "无提示词：连词",
+          "options": [],
+          "accepted": [
+            "or"
+          ],
+          "explanationZh": "five or six"
+        },
+        {
+          "id": "g11",
+          "label": "第11空",
+          "clue": "无提示词：定语从句",
+          "options": [],
+          "accepted": [
+            "whose"
+          ],
+          "explanationZh": "whose bridge"
+        },
+        {
+          "id": "g12",
+          "label": "第12空",
+          "clue": "无提示词：代词",
+          "options": [],
+          "accepted": [
+            "what"
+          ],
+          "explanationZh": "exactly what"
+        },
+        {
+          "id": "g13",
+          "label": "第13空",
+          "clue": "填动词原形",
+          "options": [],
+          "accepted": [
+            "ask"
+          ],
+          "explanationZh": "make us ask"
+        },
+        {
+          "id": "g14",
+          "label": "第14空",
+          "clue": "填连接副词",
+          "options": [],
+          "accepted": [
+            "why",
+            "how"
+          ],
+          "explanationZh": "wonder why"
+        },
+        {
+          "id": "g15",
+          "label": "第15空",
+          "clue": "无提示词：介词",
+          "options": [],
+          "accepted": [
+            "from"
+          ],
+          "explanationZh": "copy from"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    }
+  ],
+  "units": [
+    {
+      "id": "cloze-gen-u1",
+      "titleZh": "完形训练 第1组",
+      "familyIds": [
+        "cloze-gen-1",
+        "cloze-gen-2",
+        "cloze-gen-3",
+        "cloze-gen-4"
+      ],
+      "itemIds": [
+        "cloze-gen-1",
+        "cloze-gen-2",
+        "cloze-gen-3",
+        "cloze-gen-4"
+      ],
+      "prerequisiteSkillIds": []
+    },
+    {
+      "id": "cloze-gen-u2",
+      "titleZh": "完形训练 第2组",
+      "familyIds": [
+        "cloze-gen-5",
+        "cloze-gen-6",
+        "cloze-gen-7",
+        "cloze-gen-8"
+      ],
+      "itemIds": [
+        "cloze-gen-5",
+        "cloze-gen-6",
+        "cloze-gen-7",
+        "cloze-gen-8"
+      ],
+      "prerequisiteSkillIds": []
+    }
+  ]
+}

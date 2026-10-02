@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "cloze-gen",
+  "version": "0.2.0",
+  "titleZh": "高考英语完形填空原创练习包（生成草稿）",
+  "status": "published",
+  "author": "内置生成器草稿",
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-30T00:00:00.000Z",
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sourceIds": [
+    "tool-generated-practice"
+  ],
+  "assetIds": [],
+  "resourceIds": [
+    "cloze-gen-res-1",
+    "cloze-gen-res-2",
+    "cloze-gen-res-3",
+    "cloze-gen-res-4",
+    "cloze-gen-res-5",
+    "cloze-gen-res-6",
+    "cloze-gen-res-7",
+    "cloze-gen-res-8"
+  ],
+  "itemIds": [
+    "cloze-gen-1",
+    "cloze-gen-2",
+    "cloze-gen-3",
+    "cloze-gen-4",
+    "cloze-gen-5",
+    "cloze-gen-6",
+    "cloze-gen-7",
+    "cloze-gen-8"
+  ],
+  "unitIds": [
+    "cloze-gen-u1",
+    "cloze-gen-u2"
+  ]
+}

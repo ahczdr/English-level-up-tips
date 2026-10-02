@@ -1,0 +1,1372 @@
+{
+  "schemaVersion": 1,
+  "id": "gapread-gen",
+  "version": "0.2.0",
+  "titleZh": "高考英语七选五原创练习包（生成草稿）",
+  "status": "published",
+  "author": "内置生成器草稿",
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-30T00:00:00.000Z",
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sources": [
+    {
+      "id": "tool-generated-practice",
+      "kind": "original",
+      "title": "本工具生成的基础练习",
+      "url": null,
+      "rightsNote": "由项目内置生成器编写的原创练习句与题目，非真题转载；逐题独立审核进行中。"
+    }
+  ],
+  "assets": [],
+  "resources": [
+    {
+      "id": "gapread-gen-res-1",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Many students think the secret to good grades is studying for hours without a break. ____ Researchers call this the spacing effect, and it works for almost every subject."
+        },
+        {
+          "id": "p2",
+          "text": "\n\nHere is a simple plan. After class, spend fifteen minutes reviewing the main points. Then wait a day before you look at them again. ____ Each review can then be shorter than the one before, because the material feels more familiar."
+        },
+        {
+          "id": "p3",
+          "text": "\n\nSleep matters as well. ____ While you rest, your brain quietly sorts and stores what you learned during the day."
+        },
+        {
+          "id": "p4",
+          "text": "\n\nFinally, test yourself instead of simply rereading. Close the book and write down everything you remember. ____ That little struggle is exactly what makes memory stronger. The next time homework piles up, do not reach for another energy drink. ____ Divide the work into small pieces, space them out, and protect your sleep."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "gapread-gen-res-2",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Last September, our biology teacher, Ms. Chen, turned a piece of waste ground behind the school into a garden. At first, only a few students joined the project. ____ Soon, however, more than sixty names were on the watering list, and teachers began bringing their classes outside."
+        },
+        {
+          "id": "p2",
+          "text": "\n\nEach class took care of its own bed. We planted lettuce, tomatoes and sunflowers, and kept a diary of their growth. ____ When the first tomatoes turned red, we carried them to the school kitchen, and the cook made a salad for the whole grade."
+        },
+        {
+          "id": "p3",
+          "text": "\n\nThe garden also changed how we study. Facts from the textbook became things we could touch and taste. ____ In geography we measured rainfall and drew charts of it; in English we wrote instructions for planting. ____ One classmate who hardly ever spoke in class turned out to be an insect expert, and we listened to him as carefully as we listen to our teachers."
+        },
+        {
+          "id": "p4",
+          "text": "\n\nIn June we held a small harvest festival beside the flower beds. Parents were invited, and the money from selling vegetables went to the village school library. ____ Ms. Chen says the garden will double in size next autumn, and this time nobody doubts it."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "gapread-gen-res-3",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Every night, whether you remember it or not, your brain tells stories. Most dreams fade within minutes of waking, yet they return night after night. ____ Recent studies now offer some clues."
+        },
+        {
+          "id": "p2",
+          "text": "\n\nOne strong idea links dreams to learning. In an experiment, students who learned a new computer game in the morning improved faster that week if they had dreamed about it. ____ It seems the sleeping brain replays new skills, the way a coach reviews yesterday's match."
+        },
+        {
+          "id": "p3",
+          "text": "\n\nDreams also work with feelings. Volunteers who watched an emotional film before bed showed calmer reactions to it the next morning, and their brain scans revealed why: during dreams, the emotion centres lit up again and again, each time with less intensity. ____ Night after night, this gentle repetition seems to take the sting out of painful memories."
+        },
+        {
+          "id": "p4",
+          "text": "\n\nNot every dream carries a deep message, though. Many are strange mixtures of recent events, put together in silly combinations. ____ A student who spent the day packing for a trip might dream of a school building made of suitcases. To some researchers, such dreams are simply the brain sorting through the day's leftovers."
+        },
+        {
+          "id": "p5",
+          "text": "\n\nWhatever dreams are finally shown to be, they are not useless accidents. ____ So the next time you wake with a strange story in your head, treat it with respect: it may be a small report on how your brain cared for you overnight."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "gapread-gen-res-4",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Every Saturday morning, fourteen-year-old Lin Tao rides his bike to the small railway station in town. He is not there to travel. ____ For two years, he has spent the morning reading news aloud to older passengers whose eyes are weak."
+        },
+        {
+          "id": "p2",
+          "text": "\n\nIt started with one man. Grandpa Wang used to sit alone, holding a paper very close to his eyes. ____ Lin Tao offered to read the sports page, and soon other passengers gathered around to listen."
+        },
+        {
+          "id": "p3",
+          "text": "\n\nNow about ten people join the reading circle each week. Lin Tao chooses stories about health, weather and local news. ____ 'He reads slowly and clearly, and repeats anything we miss,' says Grandpa Wang with a proud smile."
+        },
+        {
+          "id": "p4",
+          "text": "\n\nReading aloud has also changed Lin Tao. ____ His teacher says his writing is full of lively details now, and his confidence in class has grown as well."
+        },
+        {
+          "id": "p5",
+          "text": "\n\nSome passengers bring him eggs or home-grown vegetables, which he politely shares with the listeners. ____ Lin Tao says he will continue until he leaves town for senior high school."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "gapread-gen-res-5",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "When insects attack a plant, the plant does not stay silent. ____ Scientists discovered that the injured plant sends chemicals into the air, warning its neighbours of danger."
+        },
+        {
+          "id": "p2",
+          "text": "\n\nIn one classic experiment, researchers put two groups of plants in the same room and let caterpillars eat the leaves of one group. ____ Days later, however, those healthy plants had produced a bitter substance that made their leaves hard to digest."
+        },
+        {
+          "id": "p3",
+          "text": "\n\nThe chemical message works like a school bell. ____ As soon as a neighbouring plant 'smells' the warning in the air, it begins producing its own bitter chemicals, even though no insect has touched it yet. This early preparation explains why some fields suffer less damage during insect outbreaks than others."
+        },
+        {
+          "id": "p4",
+          "text": "\n\nFarmers are now testing how to use this natural system. Some spray a safe chemical that imitates the warning signal, and the whole field prepares itself for attack. ____ In the future, crops may be protected not by stronger poisons but by better communication."
+        },
+        {
+          "id": "p5",
+          "text": "\n\nThere is still much to learn. Plants have no ears or eyes, yet they clearly sense the world around them. ____ The quiet conversations in a field remind us that even the stillness of nature is full of activity."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "gapread-gen-res-6",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Walking to school is one of the easiest ways to stay healthy. It costs nothing, needs no equipment, and takes only a few minutes more than the bus."
+        },
+        {
+          "id": "p2",
+          "text": "A short walk in the morning wakes up the brain. Scientists found that children who walk to school concentrate better in their first lessons than those who ride in a car."
+        },
+        {
+          "id": "p3",
+          "text": "Walking is also a social time. Walking with a friend or a classmate gives you a few quiet minutes to talk before the busy day begins."
+        },
+        {
+          "id": "p4",
+          "text": "Finally, walking helps the city. Fewer cars near the school gate mean cleaner air and safer streets for everyone."
+        },
+        {
+          "id": "p5",
+          "text": "Start with two or three days a week, and see how you feel after a month."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    }
+  ],
+  "items": [
+    {
+      "id": "gapread-gen-1",
+      "familyId": "gapread-gen-1",
+      "skillIds": [
+        "reading.cohesion"
+      ],
+      "level": "G0",
+      "section": "gap-reading",
+      "reviewMode": "recognition",
+      "promptZh": "从下面七个选项中为五个空格选出最恰当的句子。",
+      "resourceId": "gapread-gen-res-1",
+      "estimatedSeconds": 240,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "短文介绍间隔复习法：短时多次复习、充足睡眠和自我检测比长时间突击更有效。",
+        "ruleZh": "七选五要关注空格前后的指代和逻辑词：本篇依次由破除误区、具体计划、睡眠、自测到收尾建议推进。",
+        "evidence": [
+          {
+            "resourceId": "gapread-gen-res-1",
+            "paragraphId": "p1",
+            "quote": "Many students think the secret to good grades is studying for hours without a break."
+          },
+          {
+            "resourceId": "gapread-gen-res-1",
+            "paragraphId": "p2",
+            "quote": "Then wait a day before you look at them again."
+          },
+          {
+            "resourceId": "gapread-gen-res-1",
+            "paragraphId": "p3",
+            "quote": "While you rest, your brain quietly sorts and stores what you learned during the day."
+          },
+          {
+            "resourceId": "gapread-gen-res-1",
+            "paragraphId": "p4",
+            "quote": "Close the book and write down everything you remember."
+          },
+          {
+            "resourceId": "gapread-gen-res-1",
+            "paragraphId": "p4",
+            "quote": "The next time homework piles up, do not reach for another energy drink."
+          }
+        ],
+        "distractors": [
+          {
+            "optionId": "o6",
+            "reasonZh": "只讲咖啡让人清醒，没有回应怎样安排复习，且与保护睡眠的建议冲突。"
+          },
+          {
+            "optionId": "o7",
+            "reasonZh": "音乐背景与上下文的复习计划、睡眠和自测毫无衔接。"
+          }
+        ]
+      },
+      "kind": "gaps",
+      "inputMode": "options",
+      "sharedOptions": [
+        {
+          "id": "o1",
+          "text": "Short, regular sessions actually help the brain remember far more."
+        },
+        {
+          "id": "o2",
+          "text": "The next day, a ten-minute review will be enough to refresh your memory."
+        },
+        {
+          "id": "o3",
+          "text": "Going to bed at a proper time is part of studying, not a waste of it."
+        },
+        {
+          "id": "o4",
+          "text": "This feels harder than reading the notes again, and you may remember less at first."
+        },
+        {
+          "id": "o5",
+          "text": "A wiser choice is to plan three short reviews across the week."
+        },
+        {
+          "id": "o6",
+          "text": "Drinking coffee late at night can keep you awake for hours."
+        },
+        {
+          "id": "o7",
+          "text": "Some students prefer to study with music playing in the background."
+        }
+      ],
+      "uniqueOptions": true,
+      "segments": [
+        {
+          "type": "text",
+          "text": "Many students think the secret to good grades is studying for hours without a break. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": " Researchers call this the spacing effect, and it works for almost every subject.\n\nHere is a simple plan. After class, spend fifteen minutes reviewing the main points. Then wait a day before you look at them again. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": " Each review can then be shorter than the one before, because the material feels more familiar.\n\nSleep matters as well. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": " While you rest, your brain quietly sorts and stores what you learned during the day.\n\nFinally, test yourself instead of simply rereading. Close the book and write down everything you remember. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": " That little struggle is exactly what makes memory stronger. The next time homework piles up, do not reach for another energy drink. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": " Divide the work into small pieces, space them out, and protect your sleep."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "空后出现 the spacing effect",
+          "options": [],
+          "accepted": [
+            "o1"
+          ],
+          "explanationZh": "空后说研究者称之为间隔效应，说明空前提出与长时间突击相反的观点，对应 o1。"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "前句说等一天再看",
+          "options": [],
+          "accepted": [
+            "o2"
+          ],
+          "explanationZh": "前句说等一天再看笔记，后句说每次复习可以更短，o2 承接第二天的短时复习。"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "段落讲睡眠",
+          "options": [],
+          "accepted": [
+            "o3"
+          ],
+          "explanationZh": "前句说睡眠同样重要，后句说大脑在你休息时整理信息，o3 补充按时睡觉也是学习的一部分。"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "后句说这种挣扎让记忆更牢",
+          "options": [],
+          "accepted": [
+            "o4"
+          ],
+          "explanationZh": "后句说这种小小的挣扎让记忆更牢固，o4 先承认自测更难、起初记得少，衔接自然。"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "结尾给替代建议",
+          "options": [],
+          "accepted": [
+            "o5"
+          ],
+          "explanationZh": "结尾段否定熬夜喝能量饮料，o5 给出每周三次短复习的替代方案，与末句分配任务、保护睡眠呼应。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "gapread-gen-2",
+      "familyId": "gapread-gen-2",
+      "skillIds": [
+        "reading.cohesion"
+      ],
+      "level": "G1",
+      "section": "gap-reading",
+      "reviewMode": "recognition",
+      "promptZh": "从下面七个选项中为五个空格选出最恰当的句子。",
+      "resourceId": "gapread-gen-res-2",
+      "estimatedSeconds": 240,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "短文记叙生物老师把校园荒地改成学生花园，从少数人参与到全班收益，并带来学习方式的变化。",
+        "ruleZh": "叙事类七选五要抓住时间线和情感变化，空格前后的人数、学科、活动等细节是选句的关键线索。",
+        "evidence": [
+          {
+            "resourceId": "gapread-gen-res-2",
+            "paragraphId": "p1",
+            "quote": "At first, only a few students joined the project."
+          },
+          {
+            "resourceId": "gapread-gen-res-2",
+            "paragraphId": "p2",
+            "quote": "When the first tomatoes turned red, we carried them to the school kitchen, and the cook made a salad for the whole grade."
+          },
+          {
+            "resourceId": "gapread-gen-res-2",
+            "paragraphId": "p3",
+            "quote": "Facts from the textbook became things we could touch and taste."
+          },
+          {
+            "resourceId": "gapread-gen-res-2",
+            "paragraphId": "p3",
+            "quote": "One classmate who hardly ever spoke in class turned out to be an insect expert, and we listened to him as carefully as we listen to our teachers."
+          },
+          {
+            "resourceId": "gapread-gen-res-2",
+            "paragraphId": "p4",
+            "quote": "the money from selling vegetables went to the village school library"
+          }
+        ],
+        "distractors": [
+          {
+            "optionId": "o5",
+            "reasonZh": "关闭花园与全文热情扩大花园的走向相反。"
+          },
+          {
+            "optionId": "o7",
+            "reasonZh": "超市蔬菜更好吃与亲手种植收获的自豪感相矛盾。"
+          }
+        ]
+      },
+      "kind": "gaps",
+      "inputMode": "options",
+      "sharedOptions": [
+        {
+          "id": "o1",
+          "text": "Standing there with mud on our shoes, we felt proud of what a piece of waste ground had become."
+        },
+        {
+          "id": "o2",
+          "text": "Word spread quickly, and classmates kept asking how they could help."
+        },
+        {
+          "id": "o3",
+          "text": "There were failures too: a dry week left the soil hard, and a rabbit once ate half of our carrots."
+        },
+        {
+          "id": "o4",
+          "text": "Soon other subjects moved outdoors as well."
+        },
+        {
+          "id": "o5",
+          "text": "The school then decided to close the garden for the winter."
+        },
+        {
+          "id": "o6",
+          "text": "Most importantly, the garden gave quiet students a chance to shine."
+        },
+        {
+          "id": "o7",
+          "text": "The vegetables we bought from the supermarket tasted better."
+        }
+      ],
+      "uniqueOptions": true,
+      "segments": [
+        {
+          "type": "text",
+          "text": "Last September, our biology teacher, Ms. Chen, turned a piece of waste ground behind the school into a garden. At first, only a few students joined the project. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": " Soon, however, more than sixty names were on the watering list, and teachers began bringing their classes outside.\n\nEach class took care of its own bed. We planted lettuce, tomatoes and sunflowers, and kept a diary of their growth. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": " When the first tomatoes turned red, we carried them to the school kitchen, and the cook made a salad for the whole grade.\n\nThe garden also changed how we study. Facts from the textbook became things we could touch and taste. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": " In geography we measured rainfall and drew charts of it; in English we wrote instructions for planting. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": " One classmate who hardly ever spoke in class turned out to be an insect expert, and we listened to him as carefully as we listen to our teachers.\n\nIn June we held a small harvest festival beside the flower beds. Parents were invited, and the money from selling vegetables went to the village school library. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": " Ms. Chen says the garden will double in size next autumn, and this time nobody doubts it."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "人数从少到多的变化",
+          "options": [],
+          "accepted": [
+            "o2"
+          ],
+          "explanationZh": "前句说起初只有少数学生参加，后句说浇水名单超过六十人，o2 消息传开承上启下。"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "种植过程并非一帆风顺",
+          "options": [],
+          "accepted": [
+            "o3"
+          ],
+          "explanationZh": "前句写日常照料，后句写第一批番茄送进厨房，o3 补充过程中的失败再转入收获。"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "后文出现地理、英语课",
+          "options": [],
+          "accepted": [
+            "o4"
+          ],
+          "explanationZh": "前句说课本知识变得可触可尝，后句举例地理和英语课移到室外，o4 概括其他学科也搬到户外。"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "后句写内向同学的表现",
+          "options": [],
+          "accepted": [
+            "o6"
+          ],
+          "explanationZh": "后句写从不发言的同学成了昆虫专家，o6 给安静的学生提供了闪耀机会正是这一例子的概括。"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "结尾情感收束",
+          "options": [],
+          "accepted": [
+            "o1"
+          ],
+          "explanationZh": "前句写义卖收入捐给乡村学校图书馆，后句说明年花园将翻倍，o1 写站在园中的自豪感收束全文。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "gapread-gen-3",
+      "familyId": "gapread-gen-3",
+      "skillIds": [
+        "reading.cohesion"
+      ],
+      "level": "G2",
+      "section": "gap-reading",
+      "reviewMode": "recognition",
+      "promptZh": "从下面七个选项中为五个空格选出最恰当的句子。",
+      "resourceId": "gapread-gen-res-3",
+      "estimatedSeconds": 240,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "短文综述梦的科学：梦与学习记忆、情绪调节有关，也包含大脑对日常信息的重组。",
+        "ruleZh": "说明类七选五要跟随段落主旨：设问引入、学习证据、情绪证据、重组现象、总结建议，注意术语复现。",
+        "evidence": [
+          {
+            "resourceId": "gapread-gen-res-3",
+            "paragraphId": "p1",
+            "quote": "Most dreams fade within minutes of waking, yet they return night after night."
+          },
+          {
+            "resourceId": "gapread-gen-res-3",
+            "paragraphId": "p2",
+            "quote": "In an experiment, students who learned a new computer game in the morning improved faster that week if they had dreamed about it."
+          },
+          {
+            "resourceId": "gapread-gen-res-3",
+            "paragraphId": "p3",
+            "quote": "during dreams, the emotion centres lit up again and again, each time with less intensity"
+          },
+          {
+            "resourceId": "gapread-gen-res-3",
+            "paragraphId": "p4",
+            "quote": "Many are strange mixtures of recent events, put together in silly combinations."
+          },
+          {
+            "resourceId": "gapread-gen-res-3",
+            "paragraphId": "p5",
+            "quote": "they are not useless accidents"
+          }
+        ],
+        "distractors": [
+          {
+            "optionId": "o5",
+            "reasonZh": "奶酪致梦是民间说法，与短文的科学解释和行文结构无关。"
+          },
+          {
+            "optionId": "o7",
+            "reasonZh": "现代机器能完美记录梦与首段多数梦醒来即忘矛盾。"
+          }
+        ]
+      },
+      "kind": "gaps",
+      "inputMode": "options",
+      "sharedOptions": [
+        {
+          "id": "o1",
+          "text": "Dreaming, in other words, may be the brain's way of cooling down the day."
+        },
+        {
+          "id": "o2",
+          "text": "Why would a healthy brain waste so much energy on a show we can hardly remember?"
+        },
+        {
+          "id": "o3",
+          "text": "They reflect real work that keeps our memory and mood in shape."
+        },
+        {
+          "id": "o4",
+          "text": "During deep sleep, the students' brains quietly practised the same movements again."
+        },
+        {
+          "id": "o5",
+          "text": "Eating cheese late at night is widely believed to cause vivid dreams."
+        },
+        {
+          "id": "o6",
+          "text": "The sleeping mind grabs pieces of ordinary life and rebuilds them into something new."
+        },
+        {
+          "id": "o7",
+          "text": "Modern machines can record dreams perfectly."
+        }
+      ],
+      "uniqueOptions": true,
+      "segments": [
+        {
+          "type": "text",
+          "text": "Every night, whether you remember it or not, your brain tells stories. Most dreams fade within minutes of waking, yet they return night after night. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": " Recent studies now offer some clues.\n\nOne strong idea links dreams to learning. In an experiment, students who learned a new computer game in the morning improved faster that week if they had dreamed about it. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": " It seems the sleeping brain replays new skills, the way a coach reviews yesterday's match.\n\nDreams also work with feelings. Volunteers who watched an emotional film before bed showed calmer reactions to it the next morning, and their brain scans revealed why: during dreams, the emotion centres lit up again and again, each time with less intensity. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": " Night after night, this gentle repetition seems to take the sting out of painful memories.\n\nNot every dream carries a deep message, though. Many are strange mixtures of recent events, put together in silly combinations. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": " A student who spent the day packing for a trip might dream of a school building made of suitcases. To some researchers, such dreams are simply the brain sorting through the day's leftovers.\n\nWhatever dreams are finally shown to be, they are not useless accidents. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": " So the next time you wake with a strange story in your head, treat it with respect: it may be a small report on how your brain cared for you overnight."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "设问引出研究线索",
+          "options": [],
+          "accepted": [
+            "o2"
+          ],
+          "explanationZh": "前句说梦醒来即忘却夜夜上演，o2 用疑问句点出矛盾，后句研究提供线索顺势作答。"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "实验结果后的解释",
+          "options": [],
+          "accepted": [
+            "o4"
+          ],
+          "explanationZh": "前句用实验说明做梦的学生进步更快，o4 描述睡眠中大脑重复练习，与后句大脑回放新技能一致。"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "情绪实验的结论",
+          "options": [],
+          "accepted": [
+            "o1"
+          ],
+          "explanationZh": "前句写情绪中枢反复激活但强度递减，o1 用换句话说总结梦为一天降温，后句进一步说明。"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "后句是具体例子",
+          "options": [],
+          "accepted": [
+            "o6"
+          ],
+          "explanationZh": "后句以行李箱拼成教学楼的梦为例，o6 抓住日常生活碎片重组正引出该例子。"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "总结梦的作用",
+          "options": [],
+          "accepted": [
+            "o3"
+          ],
+          "explanationZh": "前句说梦不是无用的意外，后句以所以提出尊重梦，o3 说明梦反映记忆与情绪的真实工作。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "gapread-gen-4",
+      "familyId": "gapread-gen-4",
+      "skillIds": [
+        "reading.cohesion"
+      ],
+      "level": "G0",
+      "section": "gap-reading",
+      "reviewMode": "recognition",
+      "promptZh": "从下面七个选项中为五个空格选出最恰当的句子。",
+      "resourceId": "gapread-gen-res-4",
+      "estimatedSeconds": 240,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "短文讲述初中生林涛两年来每周六在火车站为老年乘客读报的故事，以及这件事给双方带来的改变。",
+        "ruleZh": "人物故事类七选五按起因、经过、影响展开，注意人物话语与前后动作的呼应。",
+        "evidence": [
+          {
+            "resourceId": "gapread-gen-res-4",
+            "paragraphId": "p1",
+            "quote": "He is not there to travel."
+          },
+          {
+            "resourceId": "gapread-gen-res-4",
+            "paragraphId": "p2",
+            "quote": "Grandpa Wang used to sit alone, holding a paper very close to his eyes."
+          },
+          {
+            "resourceId": "gapread-gen-res-4",
+            "paragraphId": "p3",
+            "quote": "Lin Tao chooses stories about health, weather and local news."
+          },
+          {
+            "resourceId": "gapread-gen-res-4",
+            "paragraphId": "p4",
+            "quote": "Reading aloud has also changed Lin Tao."
+          },
+          {
+            "resourceId": "gapread-gen-res-4",
+            "paragraphId": "p5",
+            "quote": "Some passengers bring him eggs or home-grown vegetables"
+          }
+        ],
+        "distractors": [
+          {
+            "optionId": "o3",
+            "reasonZh": "列车班次信息与全文的朗读故事无关。"
+          },
+          {
+            "optionId": "o7",
+            "reasonZh": "短文未提他赚钱，且与结尾继续服务的决心矛盾。"
+          }
+        ]
+      },
+      "kind": "gaps",
+      "inputMode": "options",
+      "sharedOptions": [
+        {
+          "id": "o1",
+          "text": "One Saturday, Lin Tao simply walked over and asked if he could help."
+        },
+        {
+          "id": "o2",
+          "text": "'They give me far more than I give them,' he says."
+        },
+        {
+          "id": "o3",
+          "text": "The slow train to the city now runs twice a day."
+        },
+        {
+          "id": "o4",
+          "text": "Instead, he sets up a small chair in the waiting room and opens a newspaper."
+        },
+        {
+          "id": "o5",
+          "text": "The listeners especially enjoy news about their hometown."
+        },
+        {
+          "id": "o6",
+          "text": "He used to be too shy to answer questions in front of the class."
+        },
+        {
+          "id": "o7",
+          "text": "Lin Tao hopes to buy a faster bicycle with the money he earns."
+        }
+      ],
+      "uniqueOptions": true,
+      "segments": [
+        {
+          "type": "text",
+          "text": "Every Saturday morning, fourteen-year-old Lin Tao rides his bike to the small railway station in town. He is not there to travel. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": " For two years, he has spent the morning reading news aloud to older passengers whose eyes are weak.\n\nIt started with one man. Grandpa Wang used to sit alone, holding a paper very close to his eyes. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": " Lin Tao offered to read the sports page, and soon other passengers gathered around to listen.\n\nNow about ten people join the reading circle each week. Lin Tao chooses stories about health, weather and local news. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": " 'He reads slowly and clearly, and repeats anything we miss,' says Grandpa Wang with a proud smile.\n\nReading aloud has also changed Lin Tao. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": " His teacher says his writing is full of lively details now, and his confidence in class has grown as well.\n\nSome passengers bring him eggs or home-grown vegetables, which he politely shares with the listeners. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": " Lin Tao says he will continue until he leaves town for senior high school."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "不是去坐车，那去干什么",
+          "options": [],
+          "accepted": [
+            "o4"
+          ],
+          "explanationZh": "前句说他不是去坐车，o4 用 Instead 转折说明他真正的安排，与后句坚持两年读报衔接。"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "故事的起因",
+          "options": [],
+          "accepted": [
+            "o1"
+          ],
+          "explanationZh": "前句写王爷爷独自看报吃力，o1 写林涛主动上前询问，自然引出后句主动读体育版。"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "听众多为本地老人",
+          "options": [],
+          "accepted": [
+            "o5"
+          ],
+          "explanationZh": "前句说他挑选健康新闻、天气和本地新闻，o5 听众最爱家乡消息与之呼应，再接引语。"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "读报也改变了他自己",
+          "options": [],
+          "accepted": [
+            "o6"
+          ],
+          "explanationZh": "前句总说朗读也改变了林涛自己，o6 写他过去胆小，后句老师评价写作与自信的变化形成对比。"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "人物自己的话",
+          "options": [],
+          "accepted": [
+            "o2"
+          ],
+          "explanationZh": "前句写乘客送鸡蛋蔬菜，o2 用他自己的话他们给我的更多回应，后句说他将继续坚持。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "gapread-gen-5",
+      "familyId": "gapread-gen-5",
+      "skillIds": [
+        "reading.cohesion"
+      ],
+      "level": "G1",
+      "section": "gap-reading",
+      "reviewMode": "recognition",
+      "promptZh": "从下面七个选项中为五个空格选出最恰当的句子。",
+      "resourceId": "gapread-gen-res-5",
+      "estimatedSeconds": 240,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "短文介绍植物间的化学预警现象：受害植株释放化学物质提醒邻居，科学家与农民正尝试利用这一系统。",
+        "ruleZh": "科普类七选五按现象、实验、机制、应用、展望推进，注意实验中的对比双方与代词指代。",
+        "evidence": [
+          {
+            "resourceId": "gapread-gen-res-5",
+            "paragraphId": "p1",
+            "quote": "When insects attack a plant, the plant does not stay silent."
+          },
+          {
+            "resourceId": "gapread-gen-res-5",
+            "paragraphId": "p2",
+            "quote": "Days later, however, those healthy plants had produced a bitter substance that made their leaves hard to digest."
+          },
+          {
+            "resourceId": "gapread-gen-res-5",
+            "paragraphId": "p3",
+            "quote": "This early preparation explains why some fields suffer less damage during insect outbreaks than others."
+          },
+          {
+            "resourceId": "gapread-gen-res-5",
+            "paragraphId": "p4",
+            "quote": "Some spray a safe chemical that imitates the warning signal, and the whole field prepares itself for attack."
+          },
+          {
+            "resourceId": "gapread-gen-res-5",
+            "paragraphId": "p5",
+            "quote": "Plants have no ears or eyes, yet they clearly sense the world around them."
+          }
+        ],
+        "distractors": [
+          {
+            "optionId": "o3",
+            "reasonZh": "虫害将彻底消失夸大事实，与后文虫害仍会爆发的表述矛盾。"
+          },
+          {
+            "optionId": "o6",
+            "reasonZh": "清晨浇水建议与化学预警的话题无关。"
+          }
+        ]
+      },
+      "kind": "gaps",
+      "inputMode": "options",
+      "sharedOptions": [
+        {
+          "id": "o1",
+          "text": "The plants on the other side of the room were not touched at all."
+        },
+        {
+          "id": "o2",
+          "text": "Nearby plants are able to pick up this warning from the air."
+        },
+        {
+          "id": "o3",
+          "text": "Insects will disappear from a field once the plants warn each other."
+        },
+        {
+          "id": "o4",
+          "text": "Science is only beginning to translate their chemical language."
+        },
+        {
+          "id": "o5",
+          "text": "Early trials show that such fields need far less pesticide."
+        },
+        {
+          "id": "o6",
+          "text": "Gardeners should water their plants early in the morning."
+        },
+        {
+          "id": "o7",
+          "text": "Something surprising happens to the plants growing beside it."
+        }
+      ],
+      "uniqueOptions": true,
+      "segments": [
+        {
+          "type": "text",
+          "text": "When insects attack a plant, the plant does not stay silent. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": " Scientists discovered that the injured plant sends chemicals into the air, warning its neighbours of danger.\n\nIn one classic experiment, researchers put two groups of plants in the same room and let caterpillars eat the leaves of one group. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": " Days later, however, those healthy plants had produced a bitter substance that made their leaves hard to digest.\n\nThe chemical message works like a school bell. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": " As soon as a neighbouring plant 'smells' the warning in the air, it begins producing its own bitter chemicals, even though no insect has touched it yet. This early preparation explains why some fields suffer less damage during insect outbreaks than others.\n\nFarmers are now testing how to use this natural system. Some spray a safe chemical that imitates the warning signal, and the whole field prepares itself for attack. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": " In the future, crops may be protected not by stronger poisons but by better communication.\n\nThere is still much to learn. Plants have no ears or eyes, yet they clearly sense the world around them. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": " The quiet conversations in a field remind us that even the stillness of nature is full of activity."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "受害植株旁边有何变化",
+          "options": [],
+          "accepted": [
+            "o7"
+          ],
+          "explanationZh": "前句说植物不会保持沉默，o7 写旁边植物发生奇怪的事，引出后句科学家发现化学预警。"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "实验中的对照组",
+          "options": [],
+          "accepted": [
+            "o1"
+          ],
+          "explanationZh": "前句写毛虫只吃一组植物，o1 补充另一组毫发无损，与后句 those healthy plants 呼应。"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "铃声比喻之后",
+          "options": [],
+          "accepted": [
+            "o2"
+          ],
+          "explanationZh": "前句把化学信息比作上课铃，o2 写邻近植物能接收空气中的警告，后句进一步描述其反应。"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "试验的效果",
+          "options": [],
+          "accepted": [
+            "o5"
+          ],
+          "explanationZh": "前句写喷洒模拟信号后整块田进入戒备，o5 补充试验田农药用量大减，后句展望未来。"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "仍有待研究",
+          "options": [],
+          "accepted": [
+            "o4"
+          ],
+          "explanationZh": "前句说植物没有耳眼却能感知世界，o4 写科学才刚刚开始翻译它们的化学语言，引出结尾。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "gapread-gen-6",
+      "familyId": "gapread-gen-6",
+      "skillIds": [
+        "reading.cohesion"
+      ],
+      "level": "G1",
+      "section": "gap-reading",
+      "reviewMode": "recognition",
+      "promptZh": "从下面七个选项中为五个空格选出最恰当的句子。",
+      "resourceId": "gapread-gen-res-6",
+      "estimatedSeconds": 240,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "步行上学省钱健脑、增进友谊并改善城市环境，行动建议收尾。",
+        "ruleZh": "七选五：看空格前后句的逻辑与代词呼应。",
+        "evidence": [
+          {
+            "resourceId": "gapread-gen-res-6",
+            "paragraphId": "p1",
+            "quote": "Walking to school is one of the easiest ways to st"
+          },
+          {
+            "resourceId": "gapread-gen-res-6",
+            "paragraphId": "p2",
+            "quote": "A short walk in the morning wakes up the brain. Sc"
+          },
+          {
+            "resourceId": "gapread-gen-res-6",
+            "paragraphId": "p3",
+            "quote": "Walking is also a social time. Walking with a frie"
+          },
+          {
+            "resourceId": "gapread-gen-res-6",
+            "paragraphId": "p4",
+            "quote": "Finally, walking helps the city. Fewer cars near t"
+          },
+          {
+            "resourceId": "gapread-gen-res-6",
+            "paragraphId": "p5",
+            "quote": "Start with two or three days a week, and see how y"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "options",
+      "sharedOptions": [
+        {
+          "id": "o1",
+          "text": "It also saves money that your family would spend on bus tickets."
+        },
+        {
+          "id": "o2",
+          "text": "That is why many teachers support the walking-to-school plan."
+        },
+        {
+          "id": "o3",
+          "text": "These small conversations often make friendships stronger."
+        },
+        {
+          "id": "o4",
+          "text": "Your choice really makes a difference."
+        },
+        {
+          "id": "o5",
+          "text": "Soon the habit will feel natural."
+        },
+        {
+          "id": "o6",
+          "text": "Some students live too far away to walk."
+        },
+        {
+          "id": "o7",
+          "text": "Buses are always faster than walking in the morning."
+        }
+      ],
+      "uniqueOptions": true,
+      "segments": [
+        {
+          "type": "text",
+          "text": "Walking to school is one of the easiest ways to stay healthy. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": " It costs nothing, needs no equipment, and takes only a few minutes more than the bus."
+        },
+        {
+          "type": "text",
+          "text": "A short walk in the morning wakes up the brain. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": " Scientists found that children who walk to school concentrate better in their first lessons than those who ride in a car."
+        },
+        {
+          "type": "text",
+          "text": "Walking is also a social time. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": " Walking with a friend or a classmate gives you a few quiet minutes to talk before the busy day begins."
+        },
+        {
+          "type": "text",
+          "text": "Finally, walking helps the city. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": " Fewer cars near the school gate mean cleaner air and safer streets for everyone."
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": " tart with two or three days a week, and see how you feel after a month."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": null,
+          "options": [],
+          "accepted": [
+            "o1"
+          ],
+          "explanationZh": "依据空格前后句衔接判断。"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": null,
+          "options": [],
+          "accepted": [
+            "o2"
+          ],
+          "explanationZh": "依据空格前后句衔接判断。"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": null,
+          "options": [],
+          "accepted": [
+            "o3"
+          ],
+          "explanationZh": "依据空格前后句衔接判断。"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": null,
+          "options": [],
+          "accepted": [
+            "o4"
+          ],
+          "explanationZh": "依据空格前后句衔接判断。"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": null,
+          "options": [],
+          "accepted": [
+            "o5"
+          ],
+          "explanationZh": "依据空格前后句衔接判断。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    }
+  ],
+  "units": [
+    {
+      "id": "gapread-gen-u1",
+      "titleZh": "七选五训练 第1组",
+      "familyIds": [
+        "gapread-gen-1",
+        "gapread-gen-2",
+        "gapread-gen-3"
+      ],
+      "itemIds": [
+        "gapread-gen-1",
+        "gapread-gen-2",
+        "gapread-gen-3"
+      ],
+      "prerequisiteSkillIds": []
+    },
+    {
+      "id": "gapread-gen-u2",
+      "titleZh": "七选五训练 第2组",
+      "familyIds": [
+        "gapread-gen-4",
+        "gapread-gen-5",
+        "gapread-gen-6"
+      ],
+      "itemIds": [
+        "gapread-gen-4",
+        "gapread-gen-5",
+        "gapread-gen-6"
+      ],
+      "prerequisiteSkillIds": []
+    }
+  ]
+}

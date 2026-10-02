@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "gapread-gen",
+  "version": "0.2.0",
+  "titleZh": "高考英语七选五原创练习包（生成草稿）",
+  "status": "published",
+  "author": "内置生成器草稿",
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-30T00:00:00.000Z",
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sourceIds": [
+    "tool-generated-practice"
+  ],
+  "assetIds": [],
+  "resourceIds": [
+    "gapread-gen-res-1",
+    "gapread-gen-res-2",
+    "gapread-gen-res-3",
+    "gapread-gen-res-4",
+    "gapread-gen-res-5",
+    "gapread-gen-res-6"
+  ],
+  "itemIds": [
+    "gapread-gen-1",
+    "gapread-gen-2",
+    "gapread-gen-3",
+    "gapread-gen-4",
+    "gapread-gen-5",
+    "gapread-gen-6"
+  ],
+  "unitIds": [
+    "gapread-gen-u1",
+    "gapread-gen-u2"
+  ]
+}

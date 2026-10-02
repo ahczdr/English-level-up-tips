@@ -97,6 +97,14 @@
       "path": "content-packs/anhui-gaokao-official-archive/0.2.1/pack.json"
     },
     {
+      "id": "cloze-gen",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 71858,
+      "sha256": "945dfc1699c5eeb036a183f48880bec3fa414e9b225165f4beb95d3d75198481",
+      "path": "content-packs/cloze-gen/0.2.0/pack.json"
+    },
+    {
       "id": "gaokao-listening",
       "version": "1.1.0",
       "status": "published",
@@ -121,12 +129,36 @@
       "path": "content-packs/gaokao-three-years/0.2.0/pack.json"
     },
     {
+      "id": "gapread-gen",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 50285,
+      "sha256": "280bcbeff79e4f42f1452abc03458e3257aec80afd4f64e3964079b0fdd0eacf",
+      "path": "content-packs/gapread-gen/0.2.0/pack.json"
+    },
+    {
+      "id": "grammar-gen",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 82004,
+      "sha256": "6d2506ee43c8ca782388b0e3cd935eea902ba3604df22f9f9b772294f0245d1d",
+      "path": "content-packs/grammar-gen/0.2.0/pack.json"
+    },
+    {
       "id": "listening-gen",
       "version": "0.1.0",
       "status": "published",
       "bytes": 67350,
       "sha256": "08d5898edaa72bc3bf33f522b53b56bd4043d8494fe12db68e8d50ee3188df91",
       "path": "content-packs/listening-gen/0.1.0/pack.json"
+    },
+    {
+      "id": "reading-gen",
+      "version": "0.1.0",
+      "status": "published",
+      "bytes": 70057,
+      "sha256": "ce7efde96a20d834a9cb0c4be2dff98782ad4b02946e0d7dac8e2c52f26c5310",
+      "path": "content-packs/reading-gen/0.1.0/pack.json"
     },
     {
       "id": "sentence-scramble",
@@ -151,6 +183,14 @@
       "bytes": 288066,
       "sha256": "eeba7c4d8d38deba98cdfdcaa03e849ada8721a041a507090b5db9646bd5f822",
       "path": "content-packs/vocab-core-2/0.1.0/pack.json"
+    },
+    {
+      "id": "writing-gen",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 16035,
+      "sha256": "5bc652889d56bb6b3195bc59cf64d45349437be83d8c0ba08a227f8b51f99299",
+      "path": "content-packs/writing-gen/0.2.0/pack.json"
     }
   ]
 }
