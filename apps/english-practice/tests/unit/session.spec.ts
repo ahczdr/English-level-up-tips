@@ -1,3 +1,4 @@
+import { summaryEncouragement } from '../../src/services/sessionFlow'
 import 'fake-indexeddb/auto'
 import { afterEach, describe, expect, it } from 'vitest'
 import samplePack from '../fixtures/sample-pack.json'
@@ -174,4 +175,17 @@ describe('CR4 今日会话同日冻结竞态', () => {
     expect(second.value.session.id).toBe(first.value.session.id)
     expect(await db.sessions.count()).toBe(1)
   })
+})
+
+describe('summaryEncouragement 总结鼓励语', () => {
+  const base = { totalSlots: 5, submittedSlots: 5, skippedSlots: 0, pending: 0 };
+  it('全对且有独立作答给肯定语', () => {
+    expect(summaryEncouragement({ ...base, independentFirst: 4, assistedFirst: 1, failedFirst: 0 })).toContain('保持这个节奏');
+  });
+  it('有错题时点出复习计划兜底', () => {
+    expect(summaryEncouragement({ ...base, independentFirst: 1, assistedFirst: 1, failedFirst: 3 })).toContain('排入复习');
+  });
+  it('空会话给温和引导', () => {
+    expect(summaryEncouragement({ ...base, submittedSlots: 0, skippedSlots: 0, independentFirst: 0, assistedFirst: 0, failedFirst: 0 })).toContain('下次');
+  });
 })

@@ -6,7 +6,7 @@ import { e2eNow } from '../../data/e2e-clock';
 import type { GaokaoDatabase } from '../../data/db';
 import type { WritingVersionBody } from '../../services/writing';
 import { loadPersonalSettings, savePersonalSettings } from '../../services/settings';
-import { summarizeProgress, SELF_EVAL_MIN, type ProgressAttempt, type ProgressInput, type ProgressWritingVersion } from '../../domain/progress';
+import { computeStreak, summarizeProgress, SELF_EVAL_MIN, type ProgressAttempt, type ProgressInput, type ProgressWritingVersion } from '../../domain/progress';
 import { pageToday } from '../../domain/progress';
 import { studyDayFor } from '../../domain/calendar';
 import FeedbackPanel from '../../components/FeedbackPanel.vue';
@@ -161,7 +161,8 @@ const loadState = async (): Promise<void> => {
     rateLine.value = '独立首次正确率 ' + Math.round(summary.objective.rate * 100) + '%（' + summary.objective.correct + '/' + summary.objective.attempts + '）';
     assistedLine.value = '提示后完成 ' + summary.assistedCompletions + ' 题（不计入独立口径）';
     independentLine.value = '独立掌握题目 ' + summary.independentItems + ' 题 · 发现家族 ' + summary.discoveredFamilies + ' 个';
-    studyDayLine.value = '累计学习日 ' + summary.studyDays.length + ' 天' + (summary.todayMarked ? ' · 今日已标记' : '');
+    const streak = computeStreak(summary.studyDays, props.today ?? pageToday(e2eNow(), settings.timeZone));
+    studyDayLine.value = '累计学习日 ' + summary.studyDays.length + ' 天 · 🔥 连续 ' + streak + ' 天' + (summary.todayMarked ? ' · 今日已标记' : '');
     unseenLine.value = '未见题 ' + summary.unseenCount + ' 题';
     nodeLines.value = summary.mapNodes.map((node) => ({ titleZh: node.titleZh, unlocked: node.unlocked, achievementId: node.achievementId }));
     seriesLines.value = summary.series.map((serie) => {

@@ -1328,3 +1328,9 @@ body {
 .review-cta-start:disabled { opacity: 0.6; }
 
 .review-start-message { color: #5b6b81; }
+
+.summary-encourage {
+  margin: 0 0 0.75rem;
+  color: #1c6b33;
+  font-weight: 700;
+}

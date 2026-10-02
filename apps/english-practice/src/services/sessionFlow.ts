@@ -25,6 +25,15 @@ const error = (code: AppErrorCode, messageZh: string): Result<never> => ({
   error: { code, messageZh },
 })
 
+// 总结页鼓励语：按结果构成给一句简短反馈（纯展示，不生成能力结论）
+export const summaryEncouragement = (summary: SessionSummary): string => {
+  if (summary.submittedSlots === 0 && summary.skippedSlots === 0) return '下次从第一题开始就好。';
+  if (summary.failedFirst === 0 && summary.independentFirst > 0) return '漂亮的独立作答，保持这个节奏！';
+  if (summary.independentFirst > 0) return '独立做对的每一题都算数，错题已排入复习计划。';
+  if (summary.assistedFirst > 0) return '提示后完成也是进步，下一轮试着不看提示。';
+  return '完成比完美更重要，明天继续。';
+};
+
 const firstUnfinished = (session: Session): number =>
   session.slots.findIndex((slot) => slot.state === 'unseen' || slot.state === 'answering')
 

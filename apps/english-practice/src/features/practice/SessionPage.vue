@@ -21,7 +21,7 @@ import {
   type Attempt,
 } from '../../services/learning';
 import { allPackRecords } from '../../data/pack-reader';
-import { firstUnfinished, getSessionSummary, setCurrentIndex, type SessionSummary } from '../../services/sessionFlow';
+import { firstUnfinished, getSessionSummary, setCurrentIndex, summaryEncouragement, type SessionSummary } from '../../services/sessionFlow';
 import { clearDraft, loadDraft, saveDraft } from '../../services/drafts';
 import { getPackAssetBytes } from '../../services/content';
 import { startPackDownload } from '../../services/downloads';
@@ -687,6 +687,7 @@ const confirmExit = async (): Promise<void> => {
       <h2 id="summary-title">
         单元结束
       </h2>
+      <p class="summary-encourage" role="status">{{ summaryEncouragement(summary) }}</p>
       <ul class="summary-count">
         <li>独立首次完成 {{ summary.independentFirst }} 题</li>
         <li>提示后完成 {{ summary.assistedFirst }} 题</li>
