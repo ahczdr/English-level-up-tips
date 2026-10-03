@@ -9,6 +9,8 @@ import { fileURLToPath } from "node:url";
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const candidates = [
   process.env.PDF_PYTHON,
+  // 本地约定：uv venv ~/.venvs/pdf312 + 依赖按 requirements-pdf.txt 安装（见 deployment-runbook）
+  join(homedir(), ".venvs", "pdf312", process.platform === "win32" ? "Scripts" : "bin", process.platform === "win32" ? "python.exe" : "python"),
   join(homedir(), ".cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3"),
   "python3",
 ].filter(Boolean);
