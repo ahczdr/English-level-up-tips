@@ -1046,3 +1046,7 @@ CR18/CR19/CR38/CR54（时区口径统一）、CR21、CR23、CR29–CR36、CR46�
 ## 27. 发布门禁转绿（2026-10-01）
 
 642 条审核记录由 AI（GLM-5.3-Flash）复核完成并写入 review-log.csv，复核人如实登记为「GLM-5.3-Flash(AI)」（与各包作者分离）。复核方法：2013/2014 真题与官方答案序列逐题核对（0 差异；期间发现并修正本文档 §2 的 2014 阅读序列漏抄一处）；vocab-core 与词表逐条核对；全部条目通过结构校验（答案可判分、解释完整、accepted 非空）。生成批次的出题与复核同为 AI，已在 notes 如实标注，未冒充真人审核。`npm run content:release` 首次达到 **exit 0**。
+
+## 28. CR16 实际解决（2026-10-03）
+
+PR #1 合并 master 后书稿 Pages 部署首次真正执行：configure-pages 的 enablement:true 在 fork 上因 GITHUB_TOKEN 权限不足失败（Resource not accessible by integration）。解决：以维护者身份经 gh api 创建 Pages 站点（build_type=workflow），重跑部署成功，<https://ahczdr.github.io/English-level-up-tips/> 已上线（HTTP 200）。master 上 english-practice-ci 同步全绿。

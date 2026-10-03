@@ -7,11 +7,14 @@ const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 
 
 // T16：构建 SHA（CI/发布脚本经 BUILD_SHA 注入；缺省 unversioned，页面明示而非伪造）
 const buildSha = process.env.BUILD_SHA ?? 'unversioned'
+// VITE_BASE：GitHub Pages 子路径部署用（默认 '/'，本地与测试不受影响）
+const deployBase = process.env.VITE_BASE ?? '/'
 
 declare const __APP_VERSION__: string
 declare const __BUILD_SHA__: string
 
 export default defineConfig({
+  base: deployBase,
   define: {
     __APP_VERSION__: JSON.stringify(pkg.version),
     __BUILD_SHA__: JSON.stringify(buildSha),
