@@ -36,7 +36,8 @@ export interface InstallPreviewPacksReport {
   messagesZh: string[]
 }
 
-const DEFAULT_CATALOG_URL = '/content-catalog.json'
+// BASE_URL：本地 '/'；Pages 子路径部署时为 '/English-level-up-tips/app/'，目录与素材随 base 走
+const DEFAULT_CATALOG_URL = `${import.meta.env.BASE_URL}content-catalog.json`
 
 const sha256Hex = async (text: string): Promise<string> => {
   const bytes = new TextEncoder().encode(text)
