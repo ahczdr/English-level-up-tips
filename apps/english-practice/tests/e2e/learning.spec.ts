@@ -7,8 +7,7 @@ import { expect, test, type Page } from '@playwright/test'
 
 const prepareContent = async (page: Page): Promise<void> => {
   await page.goto('/')
-  await page.getByRole('button', { name: '开始今日练习', exact: true }).click()
-  await page.getByRole('link', { name: '前往课程列表' }).click()
+  await page.getByRole('button', { name: '选择今日练习内容', exact: true }).click()
   await page.getByRole('button', { name: '准备课程内容' }).click()
   await page.locator('.unit-card').first().waitFor()
 }
@@ -16,25 +15,27 @@ const prepareContent = async (page: Page): Promise<void> => {
 test('touch-first task persists after reload', async ({ page }) => {
   await prepareContent(page)
 
-  await page.goto('/#/today')
-  await page.getByRole('button', { name: '开始今日计划', exact: true }).click()
+  // 今日计划槽位构成随内容包增长而变化（可能是填空/听力题）；
+  // 本测试钉住「选择题型作答持久化」，改从课程页进入固定为选择题型的基础单元
+  await page.locator('.unit-card', { hasText: '校园社团' }).first().click()
+  await page.getByRole('button', { name: '开始练习', exact: true }).click()
   await page.locator('.session-progress').waitFor()
-  // 计划槽位构成随日期变化：点击选项组第一个选项（对错不限，持久化是断言点）
   await page.getByRole('group', { name: '答题选项' }).getByRole('button').first().click()
   await page.getByRole('button', { name: '提交答案', exact: true }).click()
   await expect(page.getByRole('status').first()).toContainText('已保存')
 
   await page.reload()
   await page.locator('.session-progress').waitFor()
-  await expect(page.getByTestId('first-attempt-result')).toContainText(/正确|需订正/)
+  // 持久化断言：重载后进度推进到第 2 题（首题作答已落库）；CR57.g 后标签仅对有作答的当前题显示
+  await expect(page.locator('.session-progress')).toContainText(/第 2 \//)
 })
 
 test('复习跨日：时钟推进后复习队列出现到期项（E2E 构建入口）', async ({ page }) => {
   await prepareContent(page)
 
-  // 完成今日首题（产生复习状态）
-  await page.goto('/#/today')
-  await page.getByRole('button', { name: '开始今日计划', exact: true }).click()
+  // 完成一道选择题型首题（产生复习状态）；入口同上——课程页固定单元，避免计划构成漂移
+  await page.locator('.unit-card', { hasText: '校园社团' }).first().click()
+  await page.getByRole('button', { name: '开始练习', exact: true }).click()
   await page.locator('.session-progress').waitFor()
   await page.getByRole('group', { name: '答题选项' }).getByRole('button').first().click()
   await page.getByRole('button', { name: '提交答案', exact: true }).click()
@@ -62,16 +63,22 @@ test('缓存损坏：作业记录缺失 → 启动对账标待重新下载', asy
   await row.locator('.download-start').click()
   await expect(page.locator('.downloads-message')).toHaveText('音频下载完成，可以离线练习。', { timeout: 15000 })
 
-  // 破坏：删除 downloadJobs 作业记录（模拟缓存丢失）
+  // 破坏：删除 downloadJobs 作业记录（模拟缓存丢失；键随版本号变化，清空全表而非硬编码版本）
   await page.evaluate(async () => {
     const request = indexedDB.open('gaokao-english-v1')
     const db = await new Promise<IDBDatabase>((resolve, reject) => {
       request.onsuccess = () => resolve(request.result)
       request.onerror = () => reject(request.error)
     })
+    const allKeys = await new Promise<IDBValidKey[]>((resolve, reject) => {
+      const read = db.transaction('downloadJobs', 'readonly').objectStore('downloadJobs').getAllKeys()
+      read.onsuccess = () => resolve(read.result)
+      read.onerror = () => reject(read.error)
+    })
     await new Promise<void>((resolve, reject) => {
       const tx = db.transaction('downloadJobs', 'readwrite')
-      tx.objectStore('downloadJobs').delete(['gaokao-listening', '1.0.1'])
+      const store = tx.objectStore('downloadJobs')
+      for (const key of allKeys) store.delete(key)
       tx.oncomplete = () => resolve()
       tx.onerror = () => reject(tx.error)
     })

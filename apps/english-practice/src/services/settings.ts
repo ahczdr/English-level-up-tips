@@ -46,6 +46,17 @@ export async function loadPersonalSettings(db: GaokaoDatabase): Promise<Personal
   }
 }
 
-export async function savePersonalSettings(db: GaokaoDatabase, settings: PersonalSettings): Promise<void> {
+// CR12.6：写入侧与 loadPersonalSettings 的字段校验同口径——类型只约束编译期，
+// 运行时收到缺字段/越界值的对象时归位默认值，避免脏数据经此落库
+export async function savePersonalSettings(db: GaokaoDatabase, input: PersonalSettings): Promise<void> {
+  const settings: PersonalSettings = {
+    profileId: typeof input.profileId === 'string' && input.profileId !== '' ? input.profileId : DEFAULT_PERSONAL_SETTINGS.profileId,
+    grade: isGrade(input.grade) ? input.grade : null,
+    goal: typeof input.goal === 'string' && input.goal.trim() !== '' ? input.goal : null,
+    defaultMinutes: isMinutes(input.defaultMinutes) ? input.defaultMinutes : DEFAULT_PERSONAL_SETTINGS.defaultMinutes,
+    timeZone: typeof input.timeZone === 'string' && input.timeZone !== '' ? input.timeZone : DEFAULT_PERSONAL_SETTINGS.timeZone,
+    sound: typeof input.sound === 'boolean' ? input.sound : DEFAULT_PERSONAL_SETTINGS.sound,
+    animation: typeof input.animation === 'boolean' ? input.animation : DEFAULT_PERSONAL_SETTINGS.animation,
+  }
   await db.settings.put({ id: 'personal', value: settings })
 }

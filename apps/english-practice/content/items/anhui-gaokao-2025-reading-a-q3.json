@@ -1,0 +1,30 @@
+{
+  "id": "anhui-gaokao-2025-reading-a-q3",
+  "familyId": "anhui-gaokao-2025-reading-a",
+  "skillIds": ["reading.inference"],
+  "level": "G2",
+  "section": "reading",
+  "reviewMode": "transfer",
+  "promptZh": "What does Wipke suggest regarding energy transition?",
+  "resourceId": "anhui-gaokao-2025-reading-a",
+  "estimatedSeconds": 55,
+  "sourceIds": ["anhui-gaokao-2025-eol"],
+  "explanation": {
+    "summaryZh": "Wipke 的建议是加快绿色能源的发展，因为未来的需求会继续增长。",
+    "ruleZh": "人物观点题优先寻找引号中的直接引语，再判断选项是否准确概括建议。",
+    "evidence": [{ "resourceId": "anhui-gaokao-2025-reading-a", "paragraphId": "p4", "quote": "We need to speed up the development of green energy" }],
+    "distractors": [
+      { "optionId": "a", "reasonZh": "原文没有建议限制燃料消耗。" },
+      { "optionId": "c", "reasonZh": "原文强调发展绿色能源，而不是泛泛提高能源效率。" },
+      { "optionId": "d", "reasonZh": "原文没有提出降低电价。" }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    { "id": "a", "text": "Limiting fuel consumption." },
+    { "id": "b", "text": "Putting more effort into renewables." },
+    { "id": "c", "text": "Improving energy efficiency." },
+    { "id": "d", "text": "Making electricity more affordable." }
+  ],
+  "answerOptionId": "b"
+}

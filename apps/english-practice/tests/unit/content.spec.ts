@@ -8,9 +8,12 @@ import type { CoursePack, GapsItem, OrderItem } from '../../src/content/types'
 
 const clonePack = (): CoursePack => structuredClone(samplePack) as unknown as CoursePack
 
-it('accepts a valid preview pack but rejects the draft for release', () => {
+it('accepts a valid preview pack, accepts the published sample for release, but rejects drafts', () => {
   expect(validatePack(samplePack, 'preview')).toEqual({ ok: true, errors: [] })
-  const release = validatePack(samplePack, 'release')
+  expect(validatePack(samplePack, 'release')).toEqual({ ok: true, errors: [] })
+  const draft = clonePack()
+  draft.status = 'draft'
+  const release = validatePack(draft, 'release')
   expect(release.ok).toBe(false)
   expect(release.errors.some((item) => item.code === 'RELEASE_GATE')).toBe(true)
 })
@@ -119,7 +122,9 @@ it('rejects HTML content and non-ISO release timestamps', () => {
   release.reviewer = 'reviewer-demo'
   release.reviewedAt = '2026-09-10'
   const releaseResult = validatePack(release, 'release')
-  expect(releaseResult.errors.some((item) => item.code === 'RELEASE_GATE')).toBe(true)
+  // 审核时间格式错误单独分类为 REVIEWED_AT_INVALID（check-content 对其硬失败、不随 RELEASE_GATE 暂缓）
+  expect(releaseResult.errors.some((item) => item.code === 'REVIEWED_AT_INVALID')).toBe(true)
+  expect(releaseResult.errors.some((item) => item.code === 'RELEASE_GATE')).toBe(false)
 })
 
 it('assembles author files without changing array order', () => {
@@ -158,12 +163,14 @@ it('assembles the manifest author files into the demo pack semantics', () => {
     reviewer: string | null
     reviewedAt: string | null
     profileIds: string[]
+    sourceIds: string[]
     resourceIds: string[]
     itemIds: string[]
     unitIds: string[]
     assetIds?: string[]
   }
   const load = (directory: string, id: string) => JSON.parse(readFileSync(path.join(contentRoot, directory, `${id}.json`), 'utf8')) as unknown
+  const sourceCatalog = JSON.parse(readFileSync(path.join(contentRoot, 'sources/catalog.json'), 'utf8')) as CoursePack['sources']
   const pack = assembleCoursePack({
     pack: {
       schemaVersion: 1,
@@ -176,7 +183,9 @@ it('assembles the manifest author files into the demo pack semantics', () => {
       reviewedAt: manifest.reviewedAt,
       profileIds: manifest.profileIds,
     },
-    sources: JSON.parse(readFileSync(path.join(contentRoot, 'sources/catalog.json'), 'utf8')) as CoursePack['sources'],
+    sources: manifest.sourceIds
+      .map((sourceId) => sourceCatalog.find((candidate) => candidate.id === sourceId))
+      .filter((source): source is CoursePack['sources'][number] => source !== undefined),
     // T08 起资产目录含听力样例：与门禁一致按 manifest.assetIds 选取，而不是整目录注入
     assets: (manifest.assetIds ?? [])
       .map((assetId) =>

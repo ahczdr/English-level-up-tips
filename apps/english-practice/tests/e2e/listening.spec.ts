@@ -16,8 +16,7 @@ const stubAudioPlayback = async (page: Page, mode: 'accept' | 'reject') => {
 
 const prepareAndOpenListeningUnit = async (page: Page) => {
   await page.goto('/')
-  await page.getByRole('button', { name: '开始今日练习', exact: true }).click()
-  await page.getByRole('link', { name: '前往课程列表' }).click()
+  await await page.getByRole('button', { name: '选择今日练习内容', exact: true }).click()
   await page.getByRole('button', { name: '准备课程内容' }).click()
   const card = page.locator('.unit-card', { hasText: '听力起步：社团对话' })
   await expect(card).toBeVisible()

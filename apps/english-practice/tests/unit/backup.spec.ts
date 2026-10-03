@@ -111,6 +111,26 @@ describe('exportBackup envelope 与确定性摘要', () => {
 })
 
 describe('validateBackupJson 校验矩阵', () => {
+  it('深层危险原型键仍被拒绝，不受固定深度上限影响', async () => {
+    const db = await openDb()
+    await seedDb(db)
+    const exported = await exportBackup({ db, appVersion: '0.1.0' })
+    if (!exported.ok) throw new Error('export failed')
+    const parsed = JSON.parse(exported.value.json) as { payload: { settings: Array<Record<string, unknown>> } }
+    let nested: unknown = JSON.parse('{"__proto__":{"polluted":true}}')
+    for (let depth = 0; depth < 40; depth += 1) nested = { nested }
+    parsed.payload.settings = [{ id: 'deep-danger', value: nested }, ...parsed.payload.settings]
+    const check = await validateBackupJson({ text: await reseal(parsed) })
+    expect(check).toMatchObject({ ok: false, error: { code: 'INVALID_PAYLOAD' } })
+  })
+
+  it('规范化危险键时不触发原型 setter，且保留 own key 供校验拒绝', () => {
+    const raw = JSON.parse('{"__proto__":{"polluted":true},"safe":1}') as Record<string, unknown>
+    const normalized = canonicalJsonString(raw)
+    expect(normalized).toContain('__proto__')
+    expect(Object.prototype.hasOwnProperty.call(Object.prototype, 'polluted')).toBe(false)
+  })
+
   it('合法备份通过并返回 envelope', async () => {
     const db = await openDb()
     await seedDb(db)
@@ -301,5 +321,58 @@ describe('restoreBackup 单事务恢复', () => {
     expect(attempts).toEqual([])
     const settings = await dbB.settings.toArray()
     expect(settings.map((row) => row.id)).toEqual(['personal'])
+  })
+})
+
+describe('CR46/CR9/CR55 恢复口径', () => {
+  it('旧版备份缺 exposureLog 键时按空表接受，并从 exposures 重建 per-profile 账本', async () => {
+    const source = await openDb()
+    await source.settings.add({ id: 'personal', value: {} })
+    // v1 时代行：会话与曝光都没有 profileId，靠 restore 的回填路径归属
+    await source.sessions.add({ id: 's-legacy', unitId: null, slots: [], currentIndex: 0, revision: 0, state: 'completed', createdAt: '2026-09-12T00:00:00.000Z', updatedAt: '2026-09-12T00:00:00.000Z', studyDay: '2026-09-12' } as never)
+    await source.exposures.add({ packId: 'pk', packVersion: '1.0.0', itemId: 'i1', familyId: 'f1', firstSeenAt: '2026-09-12T00:00:00.000Z', studyDay: '2026-09-12', firstSeenSessionId: 's-legacy' } as never)
+    const exported = await exportBackup({ db: source })
+    if (!exported.ok) throw new Error(exported.error.messageZh)
+    // 模拟旧版 payload：去掉 exposureLog 键并重封摘要
+    const parsed = JSON.parse(exported.value.json) as Record<string, unknown>
+    const payload = parsed.payload as Record<string, unknown>
+    delete payload.exposureLog
+    const legacyJson = await reseal(parsed)
+    const validated = await validateBackupJson({ text: legacyJson })
+    expect(validated.ok).toBe(true)
+    if (!validated.ok) return
+    const target = await openDb()
+    const restored = await restoreBackup({ db: target, envelope: validated.value })
+    expect(restored.ok).toBe(true)
+    if (!restored.ok) return
+    const logRows = await target.exposureLog.toArray()
+    expect(logRows).toHaveLength(1)
+    // 无 profileId 的旧行按所属会话回填：会话也无 profileId → 落默认 profile
+    expect(logRows[0]).toMatchObject({ profileId: 'gaokao-common-training-v1', packId: 'pk', itemId: 'i1', firstSeenSessionId: 's-legacy' })
+  })
+
+  it('恢复后音频按本机保留字节如实标 ready（CR9），不再一律要求重下', async () => {
+    const target = await openDb()
+    // 本机已有该包的字节缓存（downloadJobs 不在备份内，恢复后仍在）
+    const packRow = { id: 'pk-audio', version: '1.0.0', status: 'installed', pack: { id: 'pk-audio', assets: [{ id: 'a1', path: 'assets/a.m4a', mime: 'audio/mp4', bytes: 3, sha256: 'a'.repeat(64) }] }, installedAt: 'x', resourcesReady: false }
+    await target.packs.add(packRow)
+    await target.downloadJobs.put({ packId: 'pk-audio', version: '1.0.0', status: 'ready', createdAt: 'x', updatedAt: 'x', data: { assets: { a1: { sha256: 'a'.repeat(64), data: new ArrayBuffer(3) } } } })
+    const source = await openDb()
+    await source.sessions.add({ id: 's1', profileId: 'p', unitId: null, slots: [], currentIndex: 0, revision: 0, state: 'completed', createdAt: 'x', updatedAt: 'x', studyDay: 'd' })
+    const exported = await exportBackup({ db: source })
+    if (!exported.ok) throw new Error(exported.error.messageZh)
+    // 把音频包塞进备份 payload（模拟用户装过该包后导出）
+    const parsed = JSON.parse(exported.value.json) as Record<string, unknown>
+    const payload = parsed.payload as Record<string, unknown>
+    payload.packs = [packRow]
+    const resealedJson = await reseal(parsed)
+    const validated = await validateBackupJson({ text: resealedJson })
+    if (!validated.ok) throw new Error(validated.error.messageZh)
+    const restored = await restoreBackup({ db: target, envelope: validated.value })
+    expect(restored.ok).toBe(true)
+    if (!restored.ok) return
+    expect(restored.value.audioPacksReadyFromCache).toBe(1)
+    expect(restored.value.audioPacksNeedingDownload).toBe(0)
+    expect((await target.packs.get(['pk-audio', '1.0.0']))?.resourcesReady).toBe(true)
   })
 })

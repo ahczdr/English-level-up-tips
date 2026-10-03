@@ -1,0 +1,16 @@
+{
+  "id": "anhui-gaokao-2014-reading-e-q74",
+  "familyId": "anhui-2014-reading-e",
+  "skillIds": ["reading.inference", "reading.main-idea"],
+  "level": "G1",
+  "section": "reading",
+  "reviewMode": "recognition",
+  "promptZh": "根据文章 E 回答第 74 题。",
+  "resourceId": "anhui-gaokao-2014-reading-e",
+  "estimatedSeconds": 60,
+  "sourceIds": ["anhui-gaokao-2014-official"],
+  "explanation": { "summaryZh": "Ashoka 的理念是普通人都可以通过解决关心的问题来成为改变者，改善社会状况符合这一点。", "ruleZh": "推断题要把抽象理念与文中 Dhaka 案例联系起来。", "evidence": [{ "resourceId": "anhui-gaokao-2014-reading-e", "paragraphId": "p2", "quote": "improve social conditions" }], "distractors": [] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "considers Drayton's concept" }, { "id": "b", "text": "gets permission from Ashoka" }, { "id": "c", "text": "tries to improve social conditions" }, { "id": "d", "text": "is a young, happy and healthy adult" }],
+  "answerOptionId": "c"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "h2-sentence-although",
+  "familyId": "h2-although",
+  "skillIds": ["sentence.core"],
+  "level": "G1",
+  "section": "sentence",
+  "reviewMode": "transfer",
+  "promptZh": "Although it was raining, the players continued the game. Although 表示：",
+  "resourceId": null,
+  "estimatedSeconds": 50,
+  "sourceIds": ["original-demo"],
+  "explanation": { "summaryZh": "下雨是阻碍，但球员仍继续比赛，前后构成让步关系。", "ruleZh": "although 引导让步状语从句，常译为虽然、尽管。", "evidence": [], "distractors": [{ "optionId": "b", "reasonZh": "because 表示原因。" }, { "optionId": "c", "reasonZh": "unless 表示除非。" }] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "虽然、尽管" }, { "id": "b", "text": "因为" }, { "id": "c", "text": "除非" }],
+  "answerOptionId": "a"
+}

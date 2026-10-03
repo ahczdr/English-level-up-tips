@@ -1,0 +1,16 @@
+{
+  "id": "anhui-gaokao-2014-reading-c-q64",
+  "familyId": "anhui-2014-reading-c",
+  "skillIds": ["reading.detail", "reading.inference"],
+  "level": "G1",
+  "section": "reading",
+  "reviewMode": "recognition",
+  "promptZh": "根据文章 C 回答第 64 题。",
+  "resourceId": "anhui-gaokao-2014-reading-c",
+  "estimatedSeconds": 60,
+  "sourceIds": ["anhui-gaokao-2014-official"],
+  "explanation": { "summaryZh": "新博物馆展示不知名收藏家的收藏品，体现普通人的收藏。", "ruleZh": "推断博物馆作用时要抓住 exhibit unknown collectors' objects 的信息。", "evidence": [{ "resourceId": "anhui-gaokao-2014-reading-c", "paragraphId": "p1", "quote": "objects accumulated by unknown collectors" }], "distractors": [] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "By collecting more tangible things." }, { "id": "b", "text": "By showing what ordinary people have collected." }, { "id": "c", "text": "By correcting what museums normally represent." }, { "id": "d", "text": "By accumulating 40 collections two years from now." }],
+  "answerOptionId": "b"
+}

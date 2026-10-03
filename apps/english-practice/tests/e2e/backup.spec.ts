@@ -9,8 +9,7 @@ const makeTempDir = (): string => fs.mkdtempSync(path.join(os.tmpdir(), 't13-bac
 
 const prepareContent = async (page: Page): Promise<void> => {
   await page.goto('/')
-  await page.getByRole('button', { name: '开始今日练习', exact: true }).click()
-  await page.getByRole('link', { name: '前往课程列表' }).click()
+  await await page.getByRole('button', { name: '选择今日练习内容', exact: true }).click()
   await page.getByRole('button', { name: '准备课程内容' }).click()
   await page.locator('.unit-card').first().waitFor()
 }

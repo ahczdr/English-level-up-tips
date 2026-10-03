@@ -1,0 +1,712 @@
+{
+  "schemaVersion": 1,
+  "id": "anhui-gaokao-2013-grammar-a",
+  "version": "0.2.0",
+  "titleZh": "2013 年安徽高考英语单项填空（结构化草稿）",
+  "status": "published",
+  "author": "个人学习工具资料导入",
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-29T00:00:00.000Z",
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sources": [
+    {
+      "id": "anhui-gaokao-2013-official",
+      "kind": "official-reference",
+      "title": "安徽省教育招生考试院：2013年安徽高考英语试题及参考答案",
+      "url": "https://apps.eol.cn/2633/article/248282.html",
+      "rightsNote": "公开历史附件，来自安徽省教育招生考试院历史页面；项目维护者已确认纳入个人学习用途的正式内容包，保留来源出处。"
+    }
+  ],
+  "assets": [
+    {
+      "id": "anhui-gaokao-2013-anhui-gaokao-english-official",
+      "path": "assets/anhui-gaokao/2013-anhui-gaokao-english-official.jpg",
+      "mime": "image/jpeg",
+      "bytes": 790913,
+      "sha256": "2042de51f8d277c569b0524f25c2eca543f7cf165f350707b6aa259d4fe18193"
+    }
+  ],
+  "resources": [],
+  "items": [
+    {
+      "id": "anhui-gaokao-2013-q21",
+      "familyId": "anhui-2013-grammar-cause",
+      "skillIds": [
+        "grammar.clause"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的连词完成句子（2013 年安徽卷第 21 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2013-official"
+      ],
+      "explanation": {
+        "summaryZh": "地球表面约百分之七十一被水覆盖，这是地球从太空看起来是蓝色的原因。",
+        "ruleZh": "because 引导原因状语从句。",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "why"
+        },
+        {
+          "id": "b",
+          "text": "how"
+        },
+        {
+          "id": "c",
+          "text": "because"
+        },
+        {
+          "id": "d",
+          "text": "whether"
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "anhui-gaokao-2013-q22",
+      "familyId": "anhui-2013-phrasal-verb",
+      "skillIds": [
+        "vocab.collocation"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的介词完成短语（2013 年安徽卷第 22 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2013-official"
+      ],
+      "explanation": {
+        "summaryZh": "look for a book 表示寻找一本相关的书。",
+        "ruleZh": "look for 表示寻找，介词 for 不能省略。",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "on"
+        },
+        {
+          "id": "b",
+          "text": "at"
+        },
+        {
+          "id": "c",
+          "text": "for"
+        },
+        {
+          "id": "d",
+          "text": "to"
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "anhui-gaokao-2013-q23",
+      "familyId": "anhui-2013-time-clause",
+      "skillIds": [
+        "grammar.clause"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的连词完成句子（2013 年安徽卷第 23 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2013-official"
+      ],
+      "explanation": {
+        "summaryZh": "有相似兴趣时，交朋友会更容易。",
+        "ruleZh": "when 引导时间状语从句。",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "unless"
+        },
+        {
+          "id": "b",
+          "text": "when"
+        },
+        {
+          "id": "c",
+          "text": "even though"
+        },
+        {
+          "id": "d",
+          "text": "so that"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "anhui-gaokao-2013-q24",
+      "familyId": "anhui-2013-relative-clause",
+      "skillIds": [
+        "grammar.tense",
+        "grammar.clause"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的动词形式完成句子（2013 年安徽卷第 24 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2013-official"
+      ],
+      "explanation": {
+        "summaryZh": "公寓是在上周刊登广告的，使用一般过去时 advertised。",
+        "ruleZh": "明确的过去时间 last week 要求使用一般过去时。",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "advertised"
+        },
+        {
+          "id": "b",
+          "text": "had advertised"
+        },
+        {
+          "id": "c",
+          "text": "are advertising"
+        },
+        {
+          "id": "d",
+          "text": "will advertise"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "anhui-gaokao-2013-q25",
+      "familyId": "anhui-2013-dialogue-service",
+      "skillIds": [
+        "sentence.core"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recognition",
+      "promptZh": "选择恰当的交际表达完成对话（2013 年安徽卷第 25 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2013-official"
+      ],
+      "explanation": {
+        "summaryZh": "服务员询问顾客在店内用餐还是带走，For here or to go 是固定表达。",
+        "ruleZh": "餐饮场景中 For here or to go 用于询问堂食还是外带。",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Anything else"
+        },
+        {
+          "id": "b",
+          "text": "Is that OK"
+        },
+        {
+          "id": "c",
+          "text": "For here or to go"
+        },
+        {
+          "id": "d",
+          "text": "Something to drink"
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "anhui-gaokao-2013-q26",
+      "familyId": "anhui-2013-phrasal-verb-departure",
+      "skillIds": [
+        "vocab.collocation",
+        "grammar.clause"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的短语动词完成句子（2013 年安徽卷第 26 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2013-official"
+      ],
+      "explanation": {
+        "summaryZh": "set off 表示出发，符合踏上人生旅程的语境。",
+        "ruleZh": "set off 可表示出发、启程。",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "give up"
+        },
+        {
+          "id": "b",
+          "text": "settle down"
+        },
+        {
+          "id": "c",
+          "text": "get through"
+        },
+        {
+          "id": "d",
+          "text": "set off"
+        }
+      ],
+      "answerOptionId": "d"
+    },
+    {
+      "id": "anhui-gaokao-2013-q27",
+      "familyId": "anhui-2013-indefinite-pronoun",
+      "skillIds": [
+        "grammar.pronoun",
+        "grammar.agreement"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的代词完成句子（2013 年安徽卷第 27 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2013-official"
+      ],
+      "explanation": {
+        "summaryZh": "项目需要团队合作，如果不能合作，什么也不会实现。",
+        "ruleZh": "nothing 表示没有任何事物，符合 unless 条件句的否定结果。",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Nothing"
+        },
+        {
+          "id": "b",
+          "text": "Anything"
+        },
+        {
+          "id": "c",
+          "text": "Something"
+        },
+        {
+          "id": "d",
+          "text": "Everything"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "anhui-gaokao-2013-q28",
+      "familyId": "anhui-2013-subjunctive-perfect",
+      "skillIds": [
+        "grammar.tense",
+        "grammar.clause"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的动词形式完成句子（2013 年安徽卷第 28 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2013-official"
+      ],
+      "explanation": {
+        "summaryZh": "昨晚没有参加表弟生日聚会，表示与过去事实相反的假设，用 would have gone。",
+        "ruleZh": "对过去事实的虚拟条件结果常用 would have + 过去分词。",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "went"
+        },
+        {
+          "id": "b",
+          "text": "had gone"
+        },
+        {
+          "id": "c",
+          "text": "would go"
+        },
+        {
+          "id": "d",
+          "text": "would have gone"
+        }
+      ],
+      "answerOptionId": "d"
+    },
+    {
+      "id": "anhui-gaokao-2013-q29",
+      "familyId": "anhui-2013-relative-clause",
+      "skillIds": [
+        "grammar.clause"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的关系词完成句子（2013 年安徽卷第 29 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2013-official"
+      ],
+      "explanation": {
+        "summaryZh": "非限制性定语从句修饰前面整个事实，使用 which。",
+        "ruleZh": "which 可引导非限制性定语从句，指代前面整个主句。",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "it"
+        },
+        {
+          "id": "b",
+          "text": "that"
+        },
+        {
+          "id": "c",
+          "text": "what"
+        },
+        {
+          "id": "d",
+          "text": "which"
+        }
+      ],
+      "answerOptionId": "d"
+    },
+    {
+      "id": "anhui-gaokao-2013-q30",
+      "familyId": "anhui-2013-adjective-collocation",
+      "skillIds": [
+        "grammar.word-form",
+        "sentence.core"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的形容词短语完成句子（2013 年安徽卷第 30 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2013-official"
+      ],
+      "explanation": {
+        "summaryZh": "对动物毛皮过敏的人不会去有猫狗的人家，be allergic to 表示对……过敏。",
+        "ruleZh": "be allergic to 是表示过敏的固定搭配。",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "curious about"
+        },
+        {
+          "id": "b",
+          "text": "allergic to"
+        },
+        {
+          "id": "c",
+          "text": "satisfied with"
+        },
+        {
+          "id": "d",
+          "text": "fond of"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "anhui-gaokao-2013-q31",
+      "familyId": "anhui-2013-discourse-addition",
+      "skillIds": [
+        "grammar.clause",
+        "reading.cohesion"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的连接短语完成句子（2013 年安徽卷第 31 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2013-official"
+      ],
+      "explanation": {
+        "summaryZh": "帮助孩子做家务会带来额外结果，即孩子学会照顾自己，What's more 表示而且。",
+        "ruleZh": "What's more 用于补充递进信息。",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "On the contrary"
+        },
+        {
+          "id": "b",
+          "text": "In a word"
+        },
+        {
+          "id": "c",
+          "text": "That is to say"
+        },
+        {
+          "id": "d",
+          "text": "What's more"
+        }
+      ],
+      "answerOptionId": "d"
+    },
+    {
+      "id": "anhui-gaokao-2013-q32",
+      "familyId": "anhui-2013-participle-intro",
+      "skillIds": [
+        "grammar.infinitive"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的非谓语形式完成句子（2013 年安徽卷第 32 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2013-official"
+      ],
+      "explanation": {
+        "summaryZh": "学校是在 20 世纪初创办的，过去分词 Founded 作状语。",
+        "ruleZh": "过去分词短语作状语时，逻辑主语与主句主语一致且表示被动或完成。",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "To found"
+        },
+        {
+          "id": "b",
+          "text": "Founding"
+        },
+        {
+          "id": "c",
+          "text": "Founded"
+        },
+        {
+          "id": "d",
+          "text": "Having founded"
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "anhui-gaokao-2013-q33",
+      "familyId": "anhui-2013-comparison",
+      "skillIds": [
+        "grammar.comparison"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的比较结构完成句子（2013 年安徽卷第 33 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2013-official"
+      ],
+      "explanation": {
+        "summaryZh": "现在的发电厂是原来的两倍大，使用 twice as large as。",
+        "ruleZh": "倍数表达常用 twice as + 形容词 + as。",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "twice as"
+        },
+        {
+          "id": "b",
+          "text": "as twice"
+        },
+        {
+          "id": "c",
+          "text": "twice so"
+        },
+        {
+          "id": "d",
+          "text": "much twice"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "anhui-gaokao-2013-q34",
+      "familyId": "anhui-2013-modal-inference",
+      "skillIds": [
+        "grammar.tense",
+        "reading.inference"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recognition",
+      "promptZh": "选择正确的情态动词完成句子（2013 年安徽卷第 34 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2013-official"
+      ],
+      "explanation": {
+        "summaryZh": "因为说话者掌握很多词汇，所以不可能是词汇导致了问题。",
+        "ruleZh": "couldn't 表示有把握的否定推断。",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "may"
+        },
+        {
+          "id": "b",
+          "text": "couldn't"
+        },
+        {
+          "id": "c",
+          "text": "should"
+        },
+        {
+          "id": "d",
+          "text": "needn't"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "anhui-gaokao-2013-q35",
+      "familyId": "anhui-2013-dialogue-uncertainty",
+      "skillIds": [
+        "sentence.core",
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recognition",
+      "promptZh": "选择恰当的交际表达完成对话（2013 年安徽卷第 35 题）。",
+      "resourceId": null,
+      "estimatedSeconds": 45,
+      "sourceIds": [
+        "anhui-gaokao-2013-official"
+      ],
+      "explanation": {
+        "summaryZh": "面试官似乎对经历感兴趣，但没有索要推荐信，面试结果不能确定。",
+        "ruleZh": "I'm not sure 用于表达不确定。",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Perfect!"
+        },
+        {
+          "id": "b",
+          "text": "I'm not sure."
+        },
+        {
+          "id": "c",
+          "text": "That's right."
+        },
+        {
+          "id": "d",
+          "text": "Couldn't be better."
+        }
+      ],
+      "answerOptionId": "b"
+    }
+  ],
+  "units": [
+    {
+      "id": "anhui-gaokao-2013-grammar-a",
+      "titleZh": "2013 年安徽高考英语：单项填空首批",
+      "familyIds": [
+        "anhui-2013-grammar-cause",
+        "anhui-2013-phrasal-verb",
+        "anhui-2013-time-clause",
+        "anhui-2013-relative-clause",
+        "anhui-2013-dialogue-service",
+        "anhui-2013-phrasal-verb-departure",
+        "anhui-2013-indefinite-pronoun",
+        "anhui-2013-subjunctive-perfect",
+        "anhui-2013-adjective-collocation",
+        "anhui-2013-discourse-addition",
+        "anhui-2013-participle-intro",
+        "anhui-2013-comparison",
+        "anhui-2013-modal-inference",
+        "anhui-2013-dialogue-uncertainty"
+      ],
+      "itemIds": [
+        "anhui-gaokao-2013-q21",
+        "anhui-gaokao-2013-q22",
+        "anhui-gaokao-2013-q23",
+        "anhui-gaokao-2013-q24",
+        "anhui-gaokao-2013-q25",
+        "anhui-gaokao-2013-q26",
+        "anhui-gaokao-2013-q27",
+        "anhui-gaokao-2013-q28",
+        "anhui-gaokao-2013-q29",
+        "anhui-gaokao-2013-q30",
+        "anhui-gaokao-2013-q31",
+        "anhui-gaokao-2013-q32",
+        "anhui-gaokao-2013-q33",
+        "anhui-gaokao-2013-q34",
+        "anhui-gaokao-2013-q35"
+      ],
+      "prerequisiteSkillIds": []
+    }
+  ]
+}

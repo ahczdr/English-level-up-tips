@@ -3,8 +3,7 @@ import { expect, test } from '@playwright/test'
 // T10 今日计划：准备内容后 TodayPage 生成今日计划（复习+新内容），一键开始进入会话
 test('今日计划生成并可一键开始进入会话', async ({ page }) => {
   await page.goto('/')
-  await page.getByRole('button', { name: '开始今日练习', exact: true }).click()
-  await page.getByRole('link', { name: '前往课程列表' }).click()
+  await await page.getByRole('button', { name: '选择今日练习内容', exact: true }).click()
   await page.getByRole('button', { name: '准备课程内容' }).click()
   await page.locator('.unit-card').first().waitFor()
 

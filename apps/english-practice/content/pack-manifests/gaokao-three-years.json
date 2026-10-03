@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "gaokao-three-years",
+  "version": "0.2.0",
+  "titleZh": "高考三年成长题库（首批）",
+  "status": "published",
+  "author": "个人学习工具首批内容",
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-29T00:00:00.000Z",
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sourceIds": [
+    "original-demo"
+  ],
+  "assetIds": [
+    "listening-preview"
+  ],
+  "resourceIds": [
+    "reading-club",
+    "listening-club-audio"
+  ],
+  "itemIds": [
+    "h1-vocab-used-to",
+    "h1-sentence-predicate",
+    "h1-grammar-present",
+    "h1-reading-room",
+    "h2-vocab-participate",
+    "h2-grammar-passive",
+    "h2-sentence-although",
+    "h2-gap-club",
+    "h3-vocab-contribute",
+    "h3-grammar-participle",
+    "h3-writing-invite",
+    "h3-listening-club"
+  ],
+  "unitIds": [
+    "h1-core",
+    "h2-core",
+    "h3-core"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "anhui-gaokao-2014-reading-b-q61",
+  "familyId": "anhui-2014-reading-b",
+  "skillIds": ["reading.detail", "reading.inference"],
+  "level": "G1",
+  "section": "reading",
+  "reviewMode": "recognition",
+  "promptZh": "根据文章 B 回答第 61 题。",
+  "resourceId": "anhui-gaokao-2014-reading-b",
+  "estimatedSeconds": 60,
+  "sourceIds": ["anhui-gaokao-2014-official"],
+  "explanation": { "summaryZh": "Lucy 说明还没有测试足够多的象群，因此需要继续测试。", "ruleZh": "人物信息题要定位人物的直接陈述和研究进展。", "evidence": [{ "resourceId": "anhui-gaokao-2014-reading-b", "paragraphId": "p4", "quote": "She hasn't tested enough groups yet" }], "distractors": [] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "works by herself in Africa" }, { "id": "b", "text": "needs to test more elephant groups" }, { "id": "c", "text": "has stopped elephants eating crops" }, { "id": "d", "text": "has got farmers to set up beehives on their farms" }],
+  "answerOptionId": "b"
+}

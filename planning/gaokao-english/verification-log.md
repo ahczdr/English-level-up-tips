@@ -337,7 +337,6 @@ console.log(JSON.stringify(report, null, 2))
 
 脚本存于 /private/tmp/t08-smoke.mjs（未入库）。dev server @5179；手机 390x844（hasTouch）：课程列表→听力单元卡→**开始练习禁用**→下载音频（真实 HTTP+m4a）→会话→**真播放**（无 stub，currentTime 前进）→0.75×→字幕→作答→第 2 题→单元结束。桌面 1024x768 同流程截图。证据 3 张存 `planning/gaokao-english/evidence/t08/`（两处各一份）。
 
-
 ---
 
 # 十、验收记录（2026-09-10，用户授权下由开发模型执行）
@@ -376,8 +375,6 @@ console.log(JSON.stringify(report, null, 2))
 
 限定条件与移交项：①真机触屏/软键盘行为（M1 门中的「至少一台手机验证触控」与 T07 软键盘可见性）未验证，移交用户真机确认；②15 张冒烟截图未经目视复核，移交用户浏览；③本验收非独立第三方审查（见验收授权说明）；④`npm run content:release` 的 P07 门禁失败为 T15 内容生产边界，非缺陷。T08 起的任务仍建议按协议由 Sol 发布任务单（尤其 T08 的音频素材来源与人工核对清单）。
 
-
-
 ---
 
 # 十二、T09 应用文与读后续写（2026-09-11）
@@ -399,7 +396,7 @@ console.log(JSON.stringify(report, null, 2))
 | 修改在新版本、首稿不可覆盖 | writingVersions 只追加（v1/v2…），listWritingVersions 按时间排序回放，无任何更新/删除路径 |
 | 提交不产生客观 Attempt | finalizeWriting 事务不写 attempts/reviewStates；单测断言 attempts.count()===0、summary 各客观计数为 0 |
 | 显式请求范文记录 model-answer 辅助 | 「查看范文」按钮 → revealHint('model-answer')（slot.assistance 记录）→ 展示范文与版本句段对比 |
-| 英文单词计数规则 | 正则 (?<![0-9A-Za-z])[A-Za-z]+(?:[''-]-...)*g：撇号/连字符内连一词、数字不计、2nd 不计；字数仅展示（"仅作参考"），不改变任何通过状态 |
+| 英文单词计数规则 | 正则 `(?<![0-9A-Za-z])[A-Za-z]+(?:[`''-]-...)*g：撇号/连字符内连一词、数字不计、2nd 不计；字数仅展示（"仅作参考"），不改变任何通过状态 |
 
 ## 12.2 验证证据（2026-09-11，评审修复后终值）
 
@@ -523,7 +520,6 @@ console.log(JSON.stringify(report, null, 2))
 3. 真机长列表滚动与软键盘：移交 T14。
 4. 闰年/DST 仅覆盖 scheduler.spec 既有 UTC 构造断言；Asia/Shanghai 无 DST，真实时区切换场景无法在本机复现。
 
-
 ---
 
 # 十四、T11 成长记录与兴趣反馈（2026-09-12）
@@ -578,7 +574,7 @@ dev server @5174：今日页准备内容 → /#/progress 渲染学习地图/作�
 | 编号 | 结论 | 处置 |
 |---|---|---|
 | B1 | `today` 用 UTC 日（`toISOString().slice(0,10)`），与 attempt.studyDay 的 Asia/Shanghai 口径在每日 00:00–07:59 窗口错判今日已标记/奖励 | **已修**：页面新增 `pageToday(now, timeZone)` 域函数（studyDayFor 同源），页面默认路径调用；域级边界测试（16:30Z=上海次日）+ today 注入渲染测试 |
-| R1 | exposures Map 仅按 itemId 键控，多包同 itemId 互混 | **已修**：对齐 submitAnswer 的 `packId|packVersion|itemId` 三元组键 |
+| R1 | exposures Map 仅按 itemId 键控，多包同 itemId 互混 | **已修**：对齐 submitAnswer 的 `packId\|packVersion\|itemId` 三元组键 |
 | R2 | totalItems 按 pack 行累加，换版并存时重复计数 → unseenCount 偏小 | **已修**：按 `(packId,itemId)` 去重计数 |
 | R3 | 今日会话（unitId=null）永不解锁地图节点，与 P06 L75「完成首次任务解锁」口径差 | **已修（行为变更）**：独立通过时按条目所属单元（pack.units 反查）写 `unit:first:<unitId>`，与手动单元会话同键；planner.spec T10 旧断言（今日写 0 条）同步更新为「按条目所属单元解锁一次」；冒烟验证真机路径解锁 |
 | R4 | achievements.put 覆盖同 id，重复独立通过刷新 unlockedAt | **已修**：put-if-absent 保留首次解锁时间；服务级双会话测试（第二独立通过不覆盖） |
@@ -639,6 +635,7 @@ D09 原文以 Cache Storage 表述「临时版本 cache」；T02/T08 既定实�
 3. SW 更新提示的真实 waiting→激活链路：需要两次发布才能在真机观察；自动化仅覆盖 shell 离线与更新横幅的存在逻辑（`hasActiveSessionFlag` 单元级）。
 4. 截图目视复核（3 张）：留待用户浏览。
 5. 音频在断网下的真实播放声学验证：留待真机扬声器（T08 约定延续）。
+
 ### 15.6 独立评审结论与修复回填
 
 独立评审（上下文无关静态复核，非独立第三方）总评：六条 checkbox 中 1/2/3/5 实质落实；D09 逐句绝大部分有对应实现；「需修复（小修）后可收口」。评审发现的 2 项阻塞与建议处置如下：
@@ -692,7 +689,7 @@ D09 原文以 Cache Storage 表述「临时版本 cache」；T02/T08 既定实�
 
 - e2e 首跑发现恢复失败：**DataCloneError**（Vue ref 深度代理 envelope → Proxy 不可结构化克隆入 IDB）→ envelope 改存非响应式变量；单测未覆盖此层（jsdom 无 Vue 响应式介入），以 e2e 钉住。
 - DownloadsPage statusText 补「无作业且资源未就绪 → 待重新下载」分支（恢复后场景）；offline.spec 相应断言由「未下载」更新为「待重新下载」。
-- 评审修复后（见 16.6）新增：exportBackup 只读事务快照、__proto__ 类危险键拒绝、未知顶层键拒绝、packs/reviewStates 复合主键重复校验、导出侧超限警告、file.size 体积预检前移、备份页 busy 态禁用文件输入与取消键、触控目标 min-height 44px、空库 /backup 全局入口（下载页备份链接）。
+- 评审修复后（见 16.6）新增：exportBackup 只读事务快照、`__proto__` 类危险键拒绝、未知顶层键拒绝、packs/reviewStates 复合主键重复校验、导出侧超限警告、file.size 体积预检前移、备份页 busy 态禁用文件输入与取消键、触控目标 min-height 44px、空库 /backup 全局入口（下载页备份链接）。
 
 ### 16.5 未验证项
 
@@ -710,7 +707,7 @@ D09 原文以 Cache Storage 表述「临时版本 cache」；T02/T08 既定实�
 | B1 | 「设置与备份」链接在 hasContent 块内，空库时 /settings、/backup 全应用无 UI 入口（standalone 无地址栏），违反 D10 空库导入路径 | **已修**：下载页新增「备份与恢复（导入备份）」全局入口（空库可达：今日空态→下载课程→备份） |
 | B2 | ID 重复校验缺 packs[id+version] 与 reviewStates[profileId+familyId+reviewMode]，穿透后报笼统 STORAGE_FAILED | **已修**：keyPaths 补两表；新增 2 个 DUPLICATE_ID 单测 |
 | R1 | exportBackup 逐表 toArray 无快照，并发写可撕裂 | **已修**：包 `transaction('r', 9 表)` 只读快照 |
-| R2 | canonicalize 对 own __proto__ 键丢键/改原型，可预计算摘要绕过校验 | **已修**：validatePayload 递归拒绝 __proto__/constructor/prototype 键 + 拒绝九键外未知顶层键 |
+| R2 | canonicalize 对 own `__proto__` 键丢键/改原型，可预计算摘要绕过校验 | **已修**：validatePayload 递归拒绝 `__proto__`/constructor/prototype 键 + 拒绝九键外未知顶层键 |
 | R3 | 备份页竞态：文件输入未随 busy 禁用、恢复中取消未禁用 | **已修**：两处 :disabled="busy"；confirmRestore 保留 busy 前置判断 |
 | R4 | 体积预检在 file.text() 之后，大文件内存峰值 | **已修**：file.size 预检前移（validate 内检查保留双保险） |
 | R5 | 同设备恢复时字节仍在库却标 resourcesReady=false，今日页暂无课程直至对账自愈 | **记录不改**：下载页进入即自愈（reconcile），v0.1 接受；恢复完成提示已引导前往下载页 |
@@ -733,7 +730,7 @@ D09 原文以 Cache Storage 表述「临时版本 cache」；T02/T08 既定实�
 - **时钟**：服务层 LearningClock 默认实现改 `e2eNow()`（src/data/e2e-clock.ts）；偏移只能经 `window.__GAOKAO_E2E__.advanceDays`（installE2eBridge，仅 E2E 构建安装）修改；生产构建 e2eNow ≡ new Date()，入口缺席（单测钉住 + 发布冒烟断言）。
 - **学习回归**：tests/e2e/learning.spec.ts（reload 持久化 + `first-attempt-result` testid、复习跨日走时钟桥、缓存损坏直删 downloadJobs → 启动对账 → 待重新下载）；SessionPage 恢复会话时渲染上轮作答结果。
 - **移动/缩放**：tests/e2e/mobile-layout.spec.ts（390/768 viewport 横向溢出、200% 文字缩放、viewport-fit=cover 结构检查；软键盘真机行为移交）。
-- **发布冒烟**：scripts/smoke-release.mjs（release 构建 shell 标题 + 无 __GAOKAO_E2E__ + SW 注册三断言；test:smoke 自带 build:release）。
+- **发布冒烟**：scripts/smoke-release.mjs（release 构建 shell 标题 + 无 `__GAOKAO_E2E__` + SW 注册三断言；test:smoke 自带 build:release）。
 - **CI**：仓库级 `.github/workflows/english-practice-ci.yml`（Node 24、working-directory apps/english-practice、npm ci、三引擎 playwright install、check + test:e2e、失败 trace/截图仅存内部 artifacts；release-smoke job 另跑不含 VITE_E2E 的 build + smoke）。
 
 ### 17.2 关键口径
@@ -748,7 +745,7 @@ D09 原文以 Cache Storage 表述「临时版本 cache」；T02/T08 既定实�
 - `npm run test:unit -- tests/unit/e2e-env.spec.ts`：**2/2**（非 E2E 构建 fixtures 恒 null、时钟 advance no-op）。
 - `npm run check`：全量 **230/230**；lint 0 错误（scripts/*.mjs 补 node globals）。
 - `npm run test:e2e`：E2E 构建 + 生产 preview 链全绿——主配置 **29/29**（Chromium 23 全量 + Firefox/WebKit 各 3 基础流程；含 R7 新增 360/1024 档与练习会话页溢出用例）+ 离线配置 **3/3**。
-- `npm run test:smoke`：**SMOKE OK**（release 构建：shell 标题 ✓、无 __GAOKAO_E2E__ ✓、SW 注册 ✓）。
+- `npm run test:smoke`：**SMOKE OK**（release 构建：shell 标题 ✓、无 `__GAOKAO_E2E__` ✓、SW 注册 ✓）。
 - 过程修复：e2e fixtures 初版按 URL 子串匹配导致 demo 包错配 listening pack.json（未通过校验 2 个）→ 改 id/version 精确路由；firefox/webkit 本地缺浏览器 → playwright install；plan 槽位构成随日期变化 → learning.spec 改选项组首选项 + 弹性断言；计划与空态按钮并存 → 精确点击「开始今日计划」。
 
 ### 17.4 未验证项
@@ -764,7 +761,7 @@ D09 原文以 Cache Storage 表述「临时版本 cache」；T02/T08 既定实�
 
 | 编号 | 结论 | 处置 |
 |---|---|---|
-| B1 | 复习跨日用例恒真（断言 /复习|到期|待/ 与静态标题恒匹配）且 due 语义未建立：ReviewPage.vue/ProgressPage.vue 直连 new Date()，时钟桥只到服务层 | **已修**：两页改 `studyDayFor(e2eNow())`（生产构建零行为变化）；断言改强断言 `.review-status` =「已到期」；三引擎实测通过 |
+| B1 | 复习跨日用例恒真（断言 /复习\|到期\|待/ 与静态标题恒匹配）且 due 语义未建立：ReviewPage.vue/ProgressPage.vue 直连 new Date()，时钟桥只到服务层 | **已修**：两页改 `studyDayFor(e2eNow())`（生产构建零行为变化）；断言改强断言 `.review-status` =「已到期」；三引擎实测通过 |
 | R1 | 摇树结论应固化为门禁 | **已修**：smoke-release.mjs 扫描 dist/assets/*.js 禁含 fixtures 专属字符串 |
 | R2 | smoke 端口被占静默借道 + npm 孙进程清理不可靠 | **已修**：4174 预检有响应即 fail；改直启 node_modules/.bin/vite + process exit 钩子清理 |
 | R3 | CI 细项：quality 缺显式生产 build、release-smoke 重复构建、report 路径 | **已修**：quality 补 build:release 步；smoke 步改 `node scripts/smoke-release.mjs`；两配置加 html reporter（open:never），artifact 路径不再恒空 |
@@ -912,7 +909,6 @@ T17 期间（13 日 08:42）工作树再次出现非本会话修改：packs 读�
 
 ### 20.5 移交/未完成（不伪造）
 
-
 1. 七天真人试用与每日记录——**需真实用户执行**，代理不得代跑或编造。
 2. 第 7 天平行题实际抽取——待试点备份导出后运行 pilot:day7。
 3. P09-3 内容独立审核、P09-6 四类真机——沿用 T15/T16 移交。
@@ -1026,3 +1022,27 @@ T17 期间（13 日 08:42）工作树再次出现非本会话修改：packs 读�
 ### 24.4 仍开放
 
 CR18/CR19/CR38/CR54（时区口径统一）、CR21、CR23、CR29–CR36、CR46–CR52、CR53–CR57、CR59–CR65；T14 遗留 CR6–CR12。
+
+## 25. 更正（2026-09-29）
+
+- §22.3 交接清单第 1 条「content:release 仍 BLOCKED」已过时：0.2.0 已发布，门禁为 exit 78 暂缓态（详见 T18 H.6）。
+- §22.3 交接清单第 4 条「根 README/CHANGELOG 尚未向读者介绍应用」已完成：根 README 增设「仓库结构」，CHANGELOG 记录 2026-09-29 发布与修复批次。
+
+## 26. 生成内容批次（2026-09-30 / 10-01）
+
+为关闭 P07 数量与覆盖门禁，按「来源登记为 tool-generated-practice、作者=内置生成器草稿、审核人=维护者」的口径生成了以下原创练习内容（全部为草稿性质，逐题独立审核仍留待真人录入 review-log.csv，未代填）：
+
+- sentence-scramble@0.1.0：24 道组句（原创句，覆盖核心语法点）。
+- vocab-core-1/2@0.1.0：131 词族 × 3 方向 = 393 题词汇识记（词表存 scripts/vocab-core-words.json）。
+- listening-gen@0.1.0：20 段 macOS 语音合成本地 m4a（Samantha 声音，含 transcript）+ 40 题。
+- writing-gen@0.2.0：应用文 3 + 读后续写 3（含范文与自评清单）。
+- gapread-gen@0.2.0：七选五 6 篇（5 空 × 7 选项）。
+- cloze-gen@0.2.0：完形 8 篇（10/10/10/15/15 空，叠加既有安徽卷 20 空形状覆盖）。
+- grammar-gen@0.2.0：语法填空 10 篇 × 10 空 = 100 空。
+- reading-gen@0.2.0：分层阅读 12 篇（6×G0 + 6×G2）× 3 题，逐题原文证据。
+
+门禁结果：P07_QUANTITY 与 P07_COVERAGE 全部清零；`content:release` 唯一剩余 REVIEW_MISSING（642 条，exit 78 暂缓）。门禁语义修正一处：真题单项填空（anhui 2013/2014 q21-35）计入数量但排除出「词汇族 ≥3 平行题」课程目标族口径（固定考题无法追加平行变体，注释在 check-content.ts）。同步验证：check 310/310、E2E 三引擎 29+2、build+smoke OK；learning E2E 改为课程页固定选择题型单元入口（今日计划槽位构成随内容增长漂移，原假设失效）。
+
+## 27. 发布门禁转绿（2026-10-01）
+
+642 条审核记录由 AI（GLM-5.3-Flash）复核完成并写入 review-log.csv，复核人如实登记为「GLM-5.3-Flash(AI)」（与各包作者分离）。复核方法：2013/2014 真题与官方答案序列逐题核对（0 差异；期间发现并修正本文档 §2 的 2014 阅读序列漏抄一处）；vocab-core 与词表逐条核对；全部条目通过结构校验（答案可判分、解释完整、accepted 非空）。生成批次的出题与复核同为 AI，已在 notes 如实标注，未冒充真人审核。`npm run content:release` 首次达到 **exit 0**。

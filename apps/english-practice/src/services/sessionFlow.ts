@@ -1,5 +1,6 @@
 import type { GaokaoDatabase } from '../data/db'
 import type { Session } from '../data/migrations'
+import { e2eNow } from '../data/e2e-clock'
 import type { AppErrorCode, Result } from './learning'
 
 export interface SessionSummary {
@@ -16,12 +17,22 @@ interface FlowClock {
   now(): Date
 }
 
-const systemClock: FlowClock = { now: () => new Date() }
+// CR54：与服务层默认时钟同源（E2E 构建可被测试时钟桥推移，跨日推进时口径一致）
+const systemClock: FlowClock = { now: () => e2eNow() }
 
 const error = (code: AppErrorCode, messageZh: string): Result<never> => ({
   ok: false,
   error: { code, messageZh },
 })
+
+// 总结页鼓励语：按结果构成给一句简短反馈（纯展示，不生成能力结论）
+export const summaryEncouragement = (summary: SessionSummary): string => {
+  if (summary.submittedSlots === 0 && summary.skippedSlots === 0) return '下次从第一题开始就好。';
+  if (summary.failedFirst === 0 && summary.independentFirst > 0) return '漂亮的独立作答，保持这个节奏！';
+  if (summary.independentFirst > 0) return '独立做对的每一题都算数，错题已排入复习计划。';
+  if (summary.assistedFirst > 0) return '提示后完成也是进步，下一轮试着不看提示。';
+  return '完成比完美更重要，明天继续。';
+};
 
 const firstUnfinished = (session: Session): number =>
   session.slots.findIndex((slot) => slot.state === 'unseen' || slot.state === 'answering')
@@ -72,11 +83,11 @@ export async function getSessionSummary(db: GaokaoDatabase, sessionId: string): 
       const payload = record.payload as FirstAttemptPayload | undefined
       if (payload && attemptBySlot.get(record.slotId) === undefined) attemptBySlot.set(record.slotId, payload)
     }
-    const exposureRows = await db.exposures.toArray()
-    const foreignSessionByRef = new Set(
-      exposureRows
-        .filter((exposure) => exposure.firstSeenSessionId !== sessionId)
-        .map((exposure) => `${exposure.packId}|${exposure.packVersion}|${exposure.itemId}`),
+    // CR48/CR51：外会话曝光只统计本 profile 的行（per-profile 账本），跨 profile 不影响独立判定。
+    // 熟题口径与 submitAnswer 一致（itemId 级）：本 profile 在任意版本下由其他会话首见即算辅助
+    const exposureRows = await db.exposureLog.where('profileId').equals(session.profileId).toArray()
+    const foreignItemIds = new Set(
+      exposureRows.filter((exposure) => exposure.firstSeenSessionId !== sessionId).map((exposure) => exposure.itemId),
     )
     const summary: SessionSummary = {
       totalSlots: session.slots.length,
@@ -91,8 +102,7 @@ export async function getSessionSummary(db: GaokaoDatabase, sessionId: string): 
       if (slot.state === 'submitted') summary.submittedSlots += 1
       const attempt = attemptBySlot.get(slot.id)
       if (attempt) {
-        const refKey = `${slot.ref.packId}|${slot.ref.packVersion}|${slot.ref.itemId}`
-        const assisted = attempt.assistance.length > 0 || foreignSessionByRef.has(refKey)
+        const assisted = attempt.assistance.length > 0 || foreignItemIds.has(slot.ref.itemId)
         const full = attempt.grade.possible > 0 && attempt.grade.earned === attempt.grade.possible
         if (full && !assisted) summary.independentFirst += 1
         else if (full) summary.assistedFirst += 1

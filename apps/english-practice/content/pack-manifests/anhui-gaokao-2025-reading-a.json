@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "id": "anhui-gaokao-2025-reading-a",
+  "version": "0.2.0",
+  "titleZh": "2025 年高考英语非听力部分（原题结构化草稿）",
+  "status": "published",
+  "author": "个人学习工具资料导入",
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-29T00:00:00.000Z",
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sourceIds": [
+    "anhui-gaokao-2025-eol"
+  ],
+  "assetIds": [
+    "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p00",
+    "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p01",
+    "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p02",
+    "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p03",
+    "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p04",
+    "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p05",
+    "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p06",
+    "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p07",
+    "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p08",
+    "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p09",
+    "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p10",
+    "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p13",
+    "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p14",
+    "anhui-gaokao-2025-anhui-gaokao-english-new-curriculum-i-official-p15"
+  ],
+  "resourceIds": [
+    "anhui-gaokao-2025-reading-a",
+    "anhui-gaokao-2025-reading-b",
+    "anhui-gaokao-2025-reading-c",
+    "anhui-gaokao-2025-reading-d"
+  ],
+  "itemIds": [
+    "anhui-gaokao-2025-reading-a-q1",
+    "anhui-gaokao-2025-reading-a-q2",
+    "anhui-gaokao-2025-reading-a-q3",
+    "anhui-gaokao-2025-reading-b-q4",
+    "anhui-gaokao-2025-reading-b-q5",
+    "anhui-gaokao-2025-reading-b-q6",
+    "anhui-gaokao-2025-reading-b-q7",
+    "anhui-gaokao-2025-reading-c-q8",
+    "anhui-gaokao-2025-reading-c-q9",
+    "anhui-gaokao-2025-reading-c-q10",
+    "anhui-gaokao-2025-reading-c-q11",
+    "anhui-gaokao-2025-reading-d-q12",
+    "anhui-gaokao-2025-reading-d-q13",
+    "anhui-gaokao-2025-reading-d-q14",
+    "anhui-gaokao-2025-reading-d-q15",
+    "anhui-gaokao-2025-gap-cafe",
+    "anhui-gaokao-2025-cloze-vase",
+    "anhui-gaokao-2025-grammar-go",
+    "anhui-gaokao-2025-writing-email",
+    "anhui-gaokao-2025-writing-continuation"
+  ],
+  "unitIds": [
+    "anhui-gaokao-2025-core"
+  ]
+}

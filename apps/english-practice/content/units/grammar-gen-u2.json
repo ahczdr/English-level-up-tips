@@ -1,0 +1,21 @@
+{
+  "id": "grammar-gen-u2",
+  "titleZh": "语法填空 第2组（文化·社会·校园）",
+  "familyIds": [
+    "grammar-gen-p05",
+    "grammar-gen-p06",
+    "grammar-gen-p07",
+    "grammar-gen-p08",
+    "grammar-gen-p09",
+    "grammar-gen-p10"
+  ],
+  "itemIds": [
+    "grammar-gen-p05",
+    "grammar-gen-p06",
+    "grammar-gen-p07",
+    "grammar-gen-p08",
+    "grammar-gen-p09",
+    "grammar-gen-p10"
+  ],
+  "prerequisiteSkillIds": []
+}

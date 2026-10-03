@@ -2,6 +2,13 @@
 
 Thank you for improving this open-content project. Contributions should make a claim more accurate, a task more executable, a translation more faithful, or the site easier and safer to use.
 
+## Repository Layout
+
+This repository contains two independent projects with separate toolchains:
+
+- The book/guide site at the repository root (VitePress; commands below).
+- `apps/english-practice/` — a standalone Vue 3 practice app with its own lockfile, ESLint and Playwright configs. Run its checks inside that directory (`npm run check`, `npm run test:e2e`); CI lives in `.github/workflows/english-practice-ci.yml`.
+
 ## Before Opening a Pull Request
 
 1. Use Node 24: `nvm use` or your preferred version manager.

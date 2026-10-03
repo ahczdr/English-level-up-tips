@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, toRaw } from 'vue';
 import { db as defaultDb } from '../../data/db';
+import { latestInstalledByPackId } from '../../data/pack-reader';
 import { e2eNow } from '../../data/e2e-clock';
 import type { GaokaoDatabase } from '../../data/db';
 import type { WritingVersionBody } from '../../services/writing';
 import { loadPersonalSettings, savePersonalSettings } from '../../services/settings';
-import { summarizeProgress, SELF_EVAL_MIN, type ProgressAttempt, type ProgressInput, type ProgressWritingVersion } from '../../domain/progress';
+import { computeStreak, summarizeProgress, SELF_EVAL_MIN, type ProgressAttempt, type ProgressInput, type ProgressWritingVersion } from '../../domain/progress';
 import { pageToday } from '../../domain/progress';
+import { studyDayFor } from '../../domain/calendar';
 import FeedbackPanel from '../../components/FeedbackPanel.vue';
 
 const props = defineProps<{
@@ -56,7 +58,9 @@ const loadState = async (): Promise<void> => {
     } catch {
       reducedMotion.value = false;
     }
-    const packs = (await db.value.packs.toArray()).filter((record) => record.status === 'installed' && record.resourcesReady);
+    // 多版本并存时成长统计只按每个包的最新版本（与计划/组合入口同口径），
+    // 避免地图节点重复、未见题虚高与 itemIndex 旧版覆盖新版
+    const packs = latestInstalledByPackId(await db.value.packs.toArray());
     const units: ProgressInput['units'] = [];
     const itemIndex = new Map<string, { kind: ProgressAttempt['kind']; level: ProgressAttempt['level'] }>();
     const countedItems = new Set<string>();
@@ -70,16 +74,36 @@ const loadState = async (): Promise<void> => {
       }
     }
     const totalItems = countedItems.size;
-    // CR2：作答与曝光按当前 profile 过滤，跨 profile 不混算（旧数据无 profileId 字段视为同 profile）
-    const exposures = (await db.value.exposures.toArray()).filter((exposure) => exposure.profileId === undefined || exposure.profileId === settings.profileId);
+    // CR2/CR51：作答与曝光按当前 profile 过滤并走索引查询，跨 profile 不混算
+    const exposures = await db.value.exposureLog.where('profileId').equals(settings.profileId).toArray();
     const exposedItemIds = exposures.map((exposure) => exposure.itemId);
-    // 与 submitAnswer 的曝光键同源：packId|packVersion|itemId（多包同 itemId 不互混）
+    // 与 enterCurrentSlot 的 per-profile 账本同源：packId|packVersion|itemId（多包同 itemId 不互混）
     const firstSeen = new Map(exposures.map((exposure) => [exposure.packId + '|' + exposure.packVersion + '|' + exposure.itemId, exposure.firstSeenSessionId]));
-    const achievementRows = (await db.value.achievements.toArray()).map((record) => ({ id: record.id, unlockedAt: record.unlockedAt }));
-    const attemptRows = (await db.value.attempts.toArray()).filter((record) => record.profileId === undefined || record.profileId === settings.profileId).map((record): ProgressAttempt | null => {
+    const achievementRows = (await db.value.achievements.toArray())
+      .filter((record) => record.profileId === undefined || record.profileId === settings.profileId)
+      .map((record) => ({ id: record.id, unlockedAt: record.unlockedAt }));
+    const attemptRows = (await db.value.attempts.where('profileId').equals(settings.profileId).toArray()).map((record): ProgressAttempt | null => {
       const payload = record.payload as { grade?: { earned: number; possible: number }; assistance?: string[]; ref?: { packId: string; packVersion: string; itemId: string }; phase?: string };
       const item = payload.ref ? itemIndex.get(payload.ref.itemId) : undefined;
-      if (!payload.grade || !payload.ref || !item) return null;
+      if (!payload.grade || !payload.ref) return null;
+      if (!item) {
+        // CR8：课程包已卸载的历史作答保留进统计（不参与题型分组），不再静默缩水
+        return {
+          id: record.id,
+          itemId: payload.ref.itemId,
+          familyId: record.familyId,
+          kind: 'choice',
+          level: 'G0',
+          phase: record.phase === 'correction' ? 'correction' : 'first',
+          studyDay: record.studyDay,
+          createdAt: record.createdAt,
+          gradeEarned: payload.grade.earned,
+          gradePossible: payload.grade.possible,
+          assisted: (payload.assistance ?? []).length > 0,
+          firstSeenSelf: firstSeen.get(payload.ref.packId + '|' + payload.ref.packVersion + '|' + payload.ref.itemId) === record.sessionId,
+          unknownItem: true,
+        };
+      }
       return {
         id: record.id,
         itemId: payload.ref.itemId,
@@ -96,15 +120,19 @@ const loadState = async (): Promise<void> => {
       };
     });
     const validAttempts = attemptRows.filter((row): row is ProgressAttempt => row !== null);
-    // 跨会话合并：版本号按 (sessionId,itemId) 重置，故按 createdAt 排序取初稿/最新，版本数=记录数
-    const grouped = new Map<string, { createdAt: string; versionCount: number; checklistCount: number; firstText: string; latestText: string }>();
+    // 跨会话合并：版本号按 (sessionId,itemId) 重置，故按 createdAt 排序取初稿/最新，版本数=记录数。
+    // 写作版本表本身无 profileId：经所属会话 join 过滤，跨 profile 不混算（与 attempts/exposures 同口径）
+    const profileSessionIds = new Set((await db.value.sessions.toArray()).filter((row) => row.profileId === settings.profileId).map((row) => row.id));
+    const grouped = new Map<string, { createdAt: string; studyDay?: string; versionCount: number; checklistCount: number; firstText: string; latestText: string }>();
     for (const record of await db.value.writingVersions.toArray()) {
+      if (!profileSessionIds.has(record.sessionId)) continue;
       const body = parseVersionBody(record.content);
       const existing = grouped.get(record.itemId);
       const isFirst = existing === undefined || record.createdAt < existing.createdAt;
       const isLatest = existing === undefined || record.createdAt >= existing.createdAt;
       grouped.set(record.itemId, {
         createdAt: isFirst ? record.createdAt : existing!.createdAt,
+        studyDay: isFirst ? record.studyDay : existing!.studyDay,
         versionCount: (existing?.versionCount ?? 0) + 1,
         checklistCount: (existing?.checklistCount ?? 0) + (body?.checklist?.length ?? 0),
         firstText: isFirst ? body?.content ?? '' : existing!.firstText,
@@ -114,6 +142,7 @@ const loadState = async (): Promise<void> => {
     const writingVersions: ProgressWritingVersion[] = [...grouped.entries()].map(([itemId, group]) => ({
       itemId,
       createdAt: group.createdAt,
+      studyDay: group.studyDay ?? studyDayFor(new Date(group.createdAt), settings.timeZone),
       versionCount: group.versionCount,
       checklistCount: group.checklistCount,
       firstText: group.firstText,
@@ -121,6 +150,7 @@ const loadState = async (): Promise<void> => {
     }));
     const summary = summarizeProgress({
       today: props.today ?? pageToday(e2eNow(), settings.timeZone),
+      profileId: settings.profileId,
       attempts: validAttempts,
       totalItems,
       exposedItemIds,
@@ -131,7 +161,8 @@ const loadState = async (): Promise<void> => {
     rateLine.value = '独立首次正确率 ' + Math.round(summary.objective.rate * 100) + '%（' + summary.objective.correct + '/' + summary.objective.attempts + '）';
     assistedLine.value = '提示后完成 ' + summary.assistedCompletions + ' 题（不计入独立口径）';
     independentLine.value = '独立掌握题目 ' + summary.independentItems + ' 题 · 发现家族 ' + summary.discoveredFamilies + ' 个';
-    studyDayLine.value = '累计学习日 ' + summary.studyDays.length + ' 天' + (summary.todayMarked ? ' · 今日已标记' : '');
+    const streak = computeStreak(summary.studyDays, props.today ?? pageToday(e2eNow(), settings.timeZone));
+    studyDayLine.value = '累计学习日 ' + summary.studyDays.length + ' 天 · 🔥 连续 ' + streak + ' 天' + (summary.todayMarked ? ' · 今日已标记' : '');
     unseenLine.value = '未见题 ' + summary.unseenCount + ' 题';
     nodeLines.value = summary.mapNodes.map((node) => ({ titleZh: node.titleZh, unlocked: node.unlocked, achievementId: node.achievementId }));
     seriesLines.value = summary.series.map((serie) => {
@@ -233,7 +264,10 @@ const closeReward = (): void => {
         <li
           v-for="node in nodeLines"
           :key="node.achievementId"
+          class="map-node"
+          :class="node.unlocked ? 'map-node-unlocked' : 'map-node-locked'"
         >
+          <span aria-hidden="true">{{ node.unlocked ? '✅' : '🔒' }}</span>
           {{ node.titleZh }} · {{ node.unlocked ? '已解锁' : '未解锁' }}
         </li>
       </ul>

@@ -1,0 +1,24 @@
+{
+  "id": "anhui-gaokao-2025-writing-email",
+  "familyId": "anhui-gaokao-2025-writing-email",
+  "skillIds": ["writing.task", "writing.organization"],
+  "level": "G2",
+  "section": "application-writing",
+  "reviewMode": "transfer",
+  "promptZh": "假定你是李华，你班的英语报要增设一个栏目。外教 Jenny 提出“Fun at my school”和“Guess who I am”两个选项供大家选择。请给 Jenny 写一封邮件，内容包括：(1)你的选择；(2)说明理由。注意：写作词数应为 80 个左右，请按题目格式作答。",
+  "resourceId": null,
+  "estimatedSeconds": 480,
+  "sourceIds": ["anhui-gaokao-2025-eol"],
+  "explanation": {
+    "summaryZh": "应用文需要明确选择一个栏目，并从增进同学了解、促进友谊和班级氛围等方面说明理由。",
+    "ruleZh": "应用文先完成任务要点，再使用称呼、正文、落款等基本格式组织表达。",
+    "evidence": [],
+    "distractors": []
+  },
+  "kind": "writing",
+  "wordRange": [70, 90],
+  "requirementsZh": ["选择一个栏目", "说明选择理由", "使用邮件格式", "控制在 80 词左右"],
+  "openingSentences": ["Dear Jenny,", "I really like the idea of adding a new column to our English newspaper."],
+  "checklistZh": ["选择明确", "理由至少两点", "格式完整", "语句连贯", "词数符合要求"],
+  "modelAnswer": "Dear Jenny,\n\nI really like the idea of adding a new column to our English newspaper. I’m writing to express that my predilection goes to “Guess who I am”, which capitalizes on an object clause to signal its potential contents.\n\nThe column will serve as a catalyst for closer bonds between students. Redoubling efforts to boost academic performance, we pay little heed to other classmates’ personalities, hobbies, strengths, and even aspirations. Such an inviting column, adopting a “description and guess” approach, must expose everyone to others’ characteristics, thus strengthening mutual understanding. More importantly, more friendships will be forged, since the column enables us to befriend someone on the same wavelength.\n\nThis eye-catching column, I’m firmly convinced, won’t fail to grant the whole class a harmonious atmosphere.\n\nYours,\nLi Hua"
+}

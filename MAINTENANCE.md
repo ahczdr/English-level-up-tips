@@ -15,6 +15,15 @@
 
 新增章节先判断它的读者任务和证据类型，再同步更新 `docs/.vitepress/navigation.mjs`、中英文入口和 frontmatter。不要只把新文章堆进“杂谈”或“扩展”栏目。
 
+## 子项目：english-practice 应用
+
+- `apps/english-practice/` 是独立的高考英语练习 PWA（Vue 3 + Dexie + Workbox），依赖、lockfile、lint 与测试配置均独立于书稿根项目。
+- 应用校验在其目录内运行 `npm run check`（内容门禁 + typecheck + lint + 单测）；E2E 运行 `npm run test:e2e`；发布冒烟运行 `npm run test:smoke`。
+- 应用 CI 见 `.github/workflows/english-practice-ci.yml`：push 仅在 master 分支且路径命中 `apps/english-practice/**` 时触发；根 `deploy.yml` 已忽略 `apps/**` 与 `planning/**`，app 改动不触发全书部署。
+- `BUILD_SHA` 约定：构建与冒烟步骤都注入 `${{ github.sha }}`，本地留空即为 `unversioned`；冒烟脚本会拒绝非 40 位十六进制的污染值。
+- 内容管线：`content/inbox/`（来源留档）→ `content/items|resources|units`（结构化）→ `content/pack-manifests/`（打包清单）→ `npm run content:build` 生成 `public/content-packs/`（仅 pack.json）、共享媒体 `public/content-assets/`（全库去重一份，含落盘摘要复验）与 `public/content-catalog.json`（只保留当前 manifest 版本；同版本内容不可变，改内容必须提升版本号）。
+- 发布门禁：`npm run content:release`；审核缺项与题量/覆盖缺口以 exit 78 暂缓（CI 放行并提示），schema/素材/工具错误仍硬失败。
+
 ## 环境与命令
 
 - 使用 Node.js 24，版本约束见 `.nvmrc`、`.node-version` 和 `package.json`。

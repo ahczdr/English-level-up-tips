@@ -105,24 +105,64 @@ describe('T05 预览内容装载服务', () => {
     const db = openDb()
     const older = structuredClone(pack)
     const newer = structuredClone(pack)
-    newer.version = '0.2.0'
+    older.version = '1.0.2'
+    newer.version = '1.0.10'
     const oldText = packTextOf(older)
     const newText = packTextOf(newer)
     const catalog: ContentCatalog = {
       packs: [
-        entryOf(older, 'content-packs/demo/0.1.0/pack.json'),
-        entryOf(newer, 'content-packs/demo/0.2.0/pack.json'),
+        entryOf(older, 'content-packs/demo/1.0.2/pack.json'),
+        entryOf(newer, 'content-packs/demo/1.0.10/pack.json'),
       ],
     }
     const result = await installPreviewPacks({ db, fetchText: makeFetcher(catalog, new Map([
-      ['/content-packs/demo/0.1.0/pack.json', oldText],
-      ['/content-packs/demo/0.2.0/pack.json', newText],
+      ['/content-packs/demo/1.0.2/pack.json', oldText],
+      ['/content-packs/demo/1.0.10/pack.json', newText],
     ])) })
     expect(result.ok).toBe(true)
     if (!result.ok) throw new Error(result.error.messageZh)
     expect(result.value).toMatchObject({ installed: 1, skippedOldVersion: 1 })
-    expect(await db.packs.get([newer.id, '0.2.0'])).toBeTruthy()
-    expect(await db.packs.get([older.id, '0.1.0'])).toBeFalsy()
+    expect(await db.packs.get([newer.id, '1.0.10'])).toBeTruthy()
+    expect(await db.packs.get([older.id, '1.0.2'])).toBeFalsy()
+  })
+
+  it('草稿状态的课程包不装载且计入 skippedDraft', async () => {
+    const db = openDb()
+    const draft = structuredClone(pack)
+    draft.status = 'draft'
+    const draftText = packTextOf(draft)
+    const draftEntry = { ...entryOf(draft, 'content-packs/demo/0.1.0/pack.json'), status: 'draft' }
+    const catalog: ContentCatalog = { packs: [draftEntry] }
+    const result = await installPreviewPacks({ db, fetchText: makeFetcher(catalog, new Map([
+      ['/content-packs/demo/0.1.0/pack.json', draftText],
+    ])) })
+    expect(result.ok).toBe(true)
+    if (!result.ok) throw new Error(result.error.messageZh)
+    expect(result.value).toMatchObject({ installed: 0, skippedDraft: 1, rejected: 0 })
+    expect(await db.packs.count()).toBe(0)
+  })
+
+  it('同包存在草稿与已发布版本时，仅按已发布版本取最新', async () => {
+    const db = openDb()
+    const draftNewer = structuredClone(pack)
+    draftNewer.version = '2.0.0'
+    draftNewer.status = 'draft'
+    const publishedOlder = structuredClone(pack)
+    publishedOlder.version = '1.0.0'
+    const catalog: ContentCatalog = {
+      packs: [
+        { ...entryOf(draftNewer, 'content-packs/demo/2.0.0/pack.json'), status: 'draft' },
+        entryOf(publishedOlder, 'content-packs/demo/1.0.0/pack.json'),
+      ],
+    }
+    const result = await installPreviewPacks({ db, fetchText: makeFetcher(catalog, new Map([
+      ['/content-packs/demo/1.0.0/pack.json', packTextOf(publishedOlder)],
+    ])) })
+    expect(result.ok).toBe(true)
+    if (!result.ok) throw new Error(result.error.messageZh)
+    expect(result.value).toMatchObject({ installed: 1, skippedDraft: 1 })
+    expect(await db.packs.get([pack.id, '1.0.0'])).toBeTruthy()
+    expect(await db.packs.get([pack.id, '2.0.0'])).toBeFalsy()
   })
 
   it('含音频资产的课程包标记为资源未就绪', async () => {

@@ -1,0 +1,20 @@
+{
+  "id": "h2-gap-club",
+  "familyId": "h2-gap-club",
+  "skillIds": ["reading.cohesion"],
+  "level": "G1",
+  "section": "gap-reading",
+  "reviewMode": "transfer",
+  "promptZh": "根据上下文为短文选择合适的句子。",
+  "resourceId": null,
+  "estimatedSeconds": 75,
+  "sourceIds": ["original-demo"],
+  "explanation": { "summaryZh": "先介绍加入社团，再说明活动内容，信息顺序要连贯。", "ruleZh": "七选五先看空前空后的指代和逻辑连接。", "evidence": [], "distractors": [] },
+  "kind": "gaps",
+  "inputMode": "options",
+  "sharedOptions": [{ "id": "a", "text": "Many students enjoy the club." }, { "id": "b", "text": "It meets every Friday." }, { "id": "c", "text": "The library closes at five." }],
+  "uniqueOptions": false,
+  "segments": [{ "type": "text", "text": "The reading club is popular at our school. " }, { "type": "gap", "gapId": "g1" }, { "type": "text", "text": " Students read stories and share ideas there. " }, { "type": "gap", "gapId": "g2" }],
+  "gaps": [{ "id": "g1", "label": "1", "clue": null, "options": [], "accepted": ["a"], "explanationZh": "前句介绍社团受欢迎，接 Many students 最连贯。" }, { "id": "g2", "label": "2", "clue": null, "options": [], "accepted": ["b"], "explanationZh": "后文的 there 指代社团，先补充活动时间。" }],
+  "policy": { "caseSensitive": false, "allowTerminalPunctuation": true }
+}

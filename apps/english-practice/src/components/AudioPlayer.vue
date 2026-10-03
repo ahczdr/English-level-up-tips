@@ -51,16 +51,18 @@ watch(
 
 watch(() => props.speed, () => applyRate());
 
-const startPlayback = async (): Promise<void> => {
+const startPlayback = async (): Promise<boolean> => {
   const audio = audioRef.value;
-  if (!audio?.play) return;
+  if (!audio?.play) return false;
   try {
     await audio.play();
     playing.value = true;
     errorZh.value = '';
+    return true;
   } catch {
     playing.value = false;
     errorZh.value = '浏览器阻止了音频播放，请点击重试。';
+    return false;
   }
 };
 
@@ -77,8 +79,10 @@ const toggle = (): void => {
 const replay = (): void => {
   const audio = audioRef.value;
   if (audio && typeof audio.currentTime === 'number') audio.currentTime = 0;
-  emit('replay');
-  void startPlayback();
+  // CR12.4：play() 被拒绝（浏览器拦截）时不算一次有效回放，不计入回放次数
+  void startPlayback().then((started) => {
+    if (started) emit('replay');
+  });
 };
 
 const setSpeed = (value: number): void => {

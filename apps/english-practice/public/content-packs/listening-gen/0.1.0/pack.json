@@ -1,0 +1,2246 @@
+{
+  "schemaVersion": 1,
+  "id": "listening-gen",
+  "version": "0.1.0",
+  "titleZh": "听力基础训练（合成语音草稿）",
+  "status": "published",
+  "author": "内置生成器草稿",
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-30T00:00:00.000Z",
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sources": [
+    {
+      "id": "tool-generated-practice",
+      "kind": "original",
+      "title": "本工具生成的基础练习",
+      "url": null,
+      "rightsNote": "由项目内置生成器编写的原创练习句与题目，非真题转载；逐题独立审核进行中。"
+    }
+  ],
+  "assets": [
+    {
+      "id": "listening-gen-bus-change",
+      "path": "assets/listening/generated/bus-change.m4a",
+      "mime": "audio/mp4",
+      "bytes": 74023,
+      "sha256": "ba1d54f7458965087a9f880f89f54e701f4d95da6e32eae979ccae73dfa0ff85"
+    },
+    {
+      "id": "listening-gen-computer-room",
+      "path": "assets/listening/generated/computer-room.m4a",
+      "mime": "audio/mp4",
+      "bytes": 71217,
+      "sha256": "2c28c79638abdbed2c2e6c4304906c224fc44015887e5cd334d88ea040bd1717"
+    },
+    {
+      "id": "listening-gen-cook-class",
+      "path": "assets/listening/generated/cook-class.m4a",
+      "mime": "audio/mp4",
+      "bytes": 78568,
+      "sha256": "2ea2829e51f911cb67ded567c49fdc845f582a441bc8951d24ef6abbf1d94394"
+    },
+    {
+      "id": "listening-gen-exam-week",
+      "path": "assets/listening/generated/exam-week.m4a",
+      "mime": "audio/mp4",
+      "bytes": 75237,
+      "sha256": "813e2478d1d505c5478ff3d0be653d4a65b2d9a585cfb45c567721a8109667a4"
+    },
+    {
+      "id": "listening-gen-exchange-news",
+      "path": "assets/listening/generated/exchange-news.m4a",
+      "mime": "audio/mp4",
+      "bytes": 78737,
+      "sha256": "34adda0aab3db3f41f23b868996a23f2727dcbb1e43422591b7368f55ab79978"
+    },
+    {
+      "id": "listening-gen-homework-tip",
+      "path": "assets/listening/generated/homework-tip.m4a",
+      "mime": "audio/mp4",
+      "bytes": 71834,
+      "sha256": "65744f424a11f6b6da0642e33e78946a1e7b2034924d349e99a9683d63a07e54"
+    },
+    {
+      "id": "listening-gen-job-interview",
+      "path": "assets/listening/generated/job-interview.m4a",
+      "mime": "audio/mp4",
+      "bytes": 77667,
+      "sha256": "ba6837b28ebd332840f13b0649765cb31f80ec216d3fa4ed470351a1a3370ab0"
+    },
+    {
+      "id": "listening-gen-lab-safety",
+      "path": "assets/listening/generated/lab-safety.m4a",
+      "mime": "audio/mp4",
+      "bytes": 78988,
+      "sha256": "c543057fab98f0c694ebec83925e296e224ea81be52ad7a7ca3b7e0370e8ab46"
+    },
+    {
+      "id": "listening-gen-library-rules",
+      "path": "assets/listening/generated/library-rules.m4a",
+      "mime": "audio/mp4",
+      "bytes": 70435,
+      "sha256": "5a5336e07a9772784a845cd683fe16275c253860b77d66fe890cc7855c6057b0"
+    },
+    {
+      "id": "listening-gen-lost-found",
+      "path": "assets/listening/generated/lost-found.m4a",
+      "mime": "audio/mp4",
+      "bytes": 72359,
+      "sha256": "adcbf95661a60b5a49b60012d601ad384939f55342165eb6db8ebc672bd50ed5"
+    },
+    {
+      "id": "listening-gen-museum-trip",
+      "path": "assets/listening/generated/museum-trip.m4a",
+      "mime": "audio/mp4",
+      "bytes": 72142,
+      "sha256": "0f96bd27411e09de22f027843aec479d5b2b81648ef65241babb1bea7119944b"
+    },
+    {
+      "id": "listening-gen-music-club",
+      "path": "assets/listening/generated/music-club.m4a",
+      "mime": "audio/mp4",
+      "bytes": 76374,
+      "sha256": "3bcafbd2ff4195f0c64c6607dda3d46bcd3bdc981baef51306bcb89775818d87"
+    },
+    {
+      "id": "listening-gen-photo-show",
+      "path": "assets/listening/generated/photo-show.m4a",
+      "mime": "audio/mp4",
+      "bytes": 73086,
+      "sha256": "dd21c7aab7daa4fc4aae34c674ef514e3e38f587a06f1635f17c89f02264e033"
+    },
+    {
+      "id": "listening-gen-rain-plan",
+      "path": "assets/listening/generated/rain-plan.m4a",
+      "mime": "audio/mp4",
+      "bytes": 71097,
+      "sha256": "0d70bcfd59c7f7043183e43ca9a88f1fc2a38dc3d2dd73317ee168c2c6a61535"
+    },
+    {
+      "id": "listening-gen-reading-plan",
+      "path": "assets/listening/generated/reading-plan.m4a",
+      "mime": "audio/mp4",
+      "bytes": 73310,
+      "sha256": "206573c67151cdd8d65844d728fbbd474ca2add8836e6700efcad72913fb60fd"
+    },
+    {
+      "id": "listening-gen-sleep-study",
+      "path": "assets/listening/generated/sleep-study.m4a",
+      "mime": "audio/mp4",
+      "bytes": 75455,
+      "sha256": "a7f3d19b236e9d43bc89e6abaf02f55f86c4599a28e04bf0971d2b5879cc5fe8"
+    },
+    {
+      "id": "listening-gen-speech-contest",
+      "path": "assets/listening/generated/speech-contest.m4a",
+      "mime": "audio/mp4",
+      "bytes": 74398,
+      "sha256": "608d591012de87214ece54f1bc97bf1266b19829512a52dd15c4626c633837ae"
+    },
+    {
+      "id": "listening-gen-train-delay",
+      "path": "assets/listening/generated/train-delay.m4a",
+      "mime": "audio/mp4",
+      "bytes": 69530,
+      "sha256": "7ae567a2f41c5bb85dbdcca1284b77466e80065af57c32b1482d704a36ea2048"
+    },
+    {
+      "id": "listening-gen-volunteer-day",
+      "path": "assets/listening/generated/volunteer-day.m4a",
+      "mime": "audio/mp4",
+      "bytes": 74197,
+      "sha256": "54fdf92df9f20419725de0fed8739d4b8046552b9f4d1c50e0b50d6cc005d2ea"
+    },
+    {
+      "id": "listening-gen-weather-warn",
+      "path": "assets/listening/generated/weather-warn.m4a",
+      "mime": "audio/mp4",
+      "bytes": 75215,
+      "sha256": "a0bfece793a36c2cb0f530ab254fd07d58dd32e40435b29f4fe5f3f3be00661d"
+    }
+  ],
+  "resources": [
+    {
+      "id": "listening-gen-bus-change",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Attention please. The number seven bus has changed its route this month. It now stops at the north gate instead of the main gate. Plan five extra minutes for your morning trip."
+        }
+      ],
+      "audioAssetId": "listening-gen-bus-change",
+      "transcript": "Attention please. The number seven bus has changed its route this month. It now stops at the north gate instead of the main gate. Plan five extra minutes for your morning trip."
+    },
+    {
+      "id": "listening-gen-computer-room",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "The computer room reopens today after repairs. Please save your work every ten minutes, and do not install any software without permission from the teacher on duty."
+        }
+      ],
+      "audioAssetId": "listening-gen-computer-room",
+      "transcript": "The computer room reopens today after repairs. Please save your work every ten minutes, and do not install any software without permission from the teacher on duty."
+    },
+    {
+      "id": "listening-gen-cook-class",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Our cooking class this week teaches a simple vegetable soup. Ingredients are provided. Students with food allergies must tell the teacher before Thursday so we can prepare a safe alternative."
+        }
+      ],
+      "audioAssetId": "listening-gen-cook-class",
+      "transcript": "Our cooking class this week teaches a simple vegetable soup. Ingredients are provided. Students with food allergies must tell the teacher before Thursday so we can prepare a safe alternative."
+    },
+    {
+      "id": "listening-gen-exam-week",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Next week is exam week. The study hall will stay open until ten, and quiet rules apply all day. Phones must be switched off and placed in the front basket during each session."
+        }
+      ],
+      "audioAssetId": "listening-gen-exam-week",
+      "transcript": "Next week is exam week. The study hall will stay open until ten, and quiet rules apply all day. Phones must be switched off and placed in the front basket during each session."
+    },
+    {
+      "id": "listening-gen-exchange-news",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Our partner school in Australia will send ten students next month. Each visiting student needs a local buddy. If you want to be a buddy, write a short self-introduction and hand it in by Friday."
+        }
+      ],
+      "audioAssetId": "listening-gen-exchange-news",
+      "transcript": "Our partner school in Australia will send ten students next month. Each visiting student needs a local buddy. If you want to be a buddy, write a short self-introduction and hand it in by Friday."
+    },
+    {
+      "id": "listening-gen-homework-tip",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "A good way to remember new words is to use them the same day. Write one short sentence for each word tonight. Ten minutes of practice beats two hours of silent reading."
+        }
+      ],
+      "audioAssetId": "listening-gen-homework-tip",
+      "transcript": "A good way to remember new words is to use them the same day. Write one short sentence for each word tonight. Ten minutes of practice beats two hours of silent reading."
+    },
+    {
+      "id": "listening-gen-job-interview",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Dear students, our career office offers practice interviews this Friday. Bring a printed copy of your resume. Each session lasts twenty minutes, and sign-up closes on Wednesday evening."
+        }
+      ],
+      "audioAssetId": "listening-gen-job-interview",
+      "transcript": "Dear students, our career office offers practice interviews this Friday. Bring a printed copy of your resume. Each session lasts twenty minutes, and sign-up closes on Wednesday evening."
+    },
+    {
+      "id": "listening-gen-lab-safety",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Before entering the science lab, you must wear safety glasses at all times. Do not taste any material, and report every accident to your teacher immediately, however small it seems."
+        }
+      ],
+      "audioAssetId": "listening-gen-lab-safety",
+      "transcript": "Before entering the science lab, you must wear safety glasses at all times. Do not taste any material, and report every accident to your teacher immediately, however small it seems."
+    },
+    {
+      "id": "listening-gen-library-rules",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "The school library will close at nine tonight. Please return your books before leaving. Students who keep books longer than two weeks will receive a reminder by email."
+        }
+      ],
+      "audioAssetId": "listening-gen-library-rules",
+      "transcript": "The school library will close at nine tonight. Please return your books before leaving. Students who keep books longer than two weeks will receive a reminder by email."
+    },
+    {
+      "id": "listening-gen-lost-found",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "A green schoolbag was found in the reading room yesterday. It contains two textbooks and a water bottle. The owner may collect it at the lost-and-found desk before four o'clock."
+        }
+      ],
+      "audioAssetId": "listening-gen-lost-found",
+      "transcript": "A green schoolbag was found in the reading room yesterday. It contains two textbooks and a water bottle. The owner may collect it at the lost-and-found desk before four o'clock."
+    },
+    {
+      "id": "listening-gen-museum-trip",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "This Saturday the history club visits the city museum. We meet at the school gate at eight forty. Bring your student card, and do not touch the ancient tools on the second floor."
+        }
+      ],
+      "audioAssetId": "listening-gen-museum-trip",
+      "transcript": "This Saturday the history club visits the city museum. We meet at the school gate at eight forty. Bring your student card, and do not touch the ancient tools on the second floor."
+    },
+    {
+      "id": "listening-gen-music-club",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "The music club needs a piano player for the New Year show. Practice takes place every Tuesday after class. If you can play one complete piece, please leave your name at the club door."
+        }
+      ],
+      "audioAssetId": "listening-gen-music-club",
+      "transcript": "The music club needs a piano player for the New Year show. Practice takes place every Tuesday after class. If you can play one complete piece, please leave your name at the club door."
+    },
+    {
+      "id": "listening-gen-photo-show",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "The photo show on the third floor collects pictures of daily school life. Twenty works will be chosen for the wall. Hand in your photo with your name on the back by next Tuesday."
+        }
+      ],
+      "audioAssetId": "listening-gen-photo-show",
+      "transcript": "The photo show on the third floor collects pictures of daily school life. Twenty works will be chosen for the wall. Hand in your photo with your name on the back by next Tuesday."
+    },
+    {
+      "id": "listening-gen-rain-plan",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Because of heavy rain, today's sports meeting moves to next Monday. Class schedules stay unchanged. Athletes should keep their equipment at home until the new date."
+        }
+      ],
+      "audioAssetId": "listening-gen-rain-plan",
+      "transcript": "Because of heavy rain, today's sports meeting moves to next Monday. Class schedules stay unchanged. Athletes should keep their equipment at home until the new date."
+    },
+    {
+      "id": "listening-gen-reading-plan",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "This term's reading plan starts with short stories. Read one story each week and mark two sentences you like. We will discuss your choices in small groups every Friday."
+        }
+      ],
+      "audioAssetId": "listening-gen-reading-plan",
+      "transcript": "This term's reading plan starts with short stories. Read one story each week and mark two sentences you like. We will discuss your choices in small groups every Friday."
+    },
+    {
+      "id": "listening-gen-sleep-study",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Research shows that sleep helps memory. Students who sleep seven hours or more recall vocabulary better than those who study all night. Plan your review, then close the book early."
+        }
+      ],
+      "audioAssetId": "listening-gen-sleep-study",
+      "transcript": "Research shows that sleep helps memory. Students who sleep seven hours or more recall vocabulary better than those who study all night. Plan your review, then close the book early."
+    },
+    {
+      "id": "listening-gen-speech-contest",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "The English speech contest final takes place this Friday afternoon. Six speakers will each talk for three minutes. Audience members should stay seated until all speakers finish."
+        }
+      ],
+      "audioAssetId": "listening-gen-speech-contest",
+      "transcript": "The English speech contest final takes place this Friday afternoon. Six speakers will each talk for three minutes. Audience members should stay seated until all speakers finish."
+    },
+    {
+      "id": "listening-gen-train-delay",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "The morning train to the science camp is delayed by thirty minutes. Please stay in the waiting hall. Our group leader in the red jacket will gather everyone before boarding."
+        }
+      ],
+      "audioAssetId": "listening-gen-train-delay",
+      "transcript": "The morning train to the science camp is delayed by thirty minutes. Please stay in the waiting hall. Our group leader in the red jacket will gather everyone before boarding."
+    },
+    {
+      "id": "listening-gen-volunteer-day",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Saturday is volunteer day. We will clean the riverside path and plant twenty young trees. Wear old clothes and strong shoes. Gloves and tools will be provided at the meeting point."
+        }
+      ],
+      "audioAssetId": "listening-gen-volunteer-day",
+      "transcript": "Saturday is volunteer day. We will clean the riverside path and plant twenty young trees. Wear old clothes and strong shoes. Gloves and tools will be provided at the meeting point."
+    },
+    {
+      "id": "listening-gen-weather-warn",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "A cold wave arrives tonight. Temperatures will drop below zero. Cover the plants on the balcony, dress in warm layers, and allow extra time on icy roads tomorrow morning."
+        }
+      ],
+      "audioAssetId": "listening-gen-weather-warn",
+      "transcript": "A cold wave arrives tonight. Temperatures will drop below zero. Cover the plants on the balcony, dress in warm layers, and allow extra time on icy roads tomorrow morning."
+    }
+  ],
+  "items": [
+    {
+      "id": "listening-gen-library-rules-q1",
+      "familyId": "listen-gen-library-rules",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What must students do before leaving tonight?",
+      "resourceId": "listening-gen-library-rules",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Return their books",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-library-rules",
+            "paragraphId": "p1",
+            "quote": "The school library will close at nine tonight. Please return"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Buy new cards"
+        },
+        {
+          "id": "b",
+          "text": "Return their books"
+        },
+        {
+          "id": "c",
+          "text": "Attend a meeting"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-library-rules-q2",
+      "familyId": "listen-gen-library-rules",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "How are late readers reminded?",
+      "resourceId": "listening-gen-library-rules",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：By email",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-library-rules",
+            "paragraphId": "p1",
+            "quote": "The school library will close at nine tonight. Please return"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "By phone call"
+        },
+        {
+          "id": "b",
+          "text": "By email"
+        },
+        {
+          "id": "c",
+          "text": "By class notice"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-bus-change-q1",
+      "familyId": "listen-gen-bus-change",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "Where does the number seven bus stop now?",
+      "resourceId": "listening-gen-bus-change",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：At the north gate",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-bus-change",
+            "paragraphId": "p1",
+            "quote": "Attention please. The number seven bus has changed its route"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "At the main gate"
+        },
+        {
+          "id": "b",
+          "text": "At the north gate"
+        },
+        {
+          "id": "c",
+          "text": "At the south gate"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-bus-change-q2",
+      "familyId": "listen-gen-bus-change",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "How much extra time should riders plan?",
+      "resourceId": "listening-gen-bus-change",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Five minutes",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-bus-change",
+            "paragraphId": "p1",
+            "quote": "Attention please. The number seven bus has changed its route"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ten minutes"
+        },
+        {
+          "id": "b",
+          "text": "Five minutes"
+        },
+        {
+          "id": "c",
+          "text": "Fifteen minutes"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-lab-safety-q1",
+      "familyId": "listen-gen-lab-safety",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What must be worn in the lab at all times?",
+      "resourceId": "listening-gen-lab-safety",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Safety glasses",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-lab-safety",
+            "paragraphId": "p1",
+            "quote": "Before entering the science lab, you must wear safety glasse"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "White coats"
+        },
+        {
+          "id": "b",
+          "text": "Safety glasses"
+        },
+        {
+          "id": "c",
+          "text": "Gloves"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-lab-safety-q2",
+      "familyId": "listen-gen-lab-safety",
+      "skillIds": [
+        "listening.inference"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What should students do about small accidents?",
+      "resourceId": "listening-gen-lab-safety",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Report every one immediately",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-lab-safety",
+            "paragraphId": "p1",
+            "quote": "Before entering the science lab, you must wear safety glasse"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Fix them quietly"
+        },
+        {
+          "id": "b",
+          "text": "Report every one immediately"
+        },
+        {
+          "id": "c",
+          "text": "Wait until class ends"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-exam-week-q1",
+      "familyId": "listen-gen-exam-week",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "Until when does the study hall stay open?",
+      "resourceId": "listening-gen-exam-week",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Ten o'clock",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-exam-week",
+            "paragraphId": "p1",
+            "quote": "Next week is exam week. The study hall will stay open until "
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Nine o'clock"
+        },
+        {
+          "id": "b",
+          "text": "Ten o'clock"
+        },
+        {
+          "id": "c",
+          "text": "Eleven o'clock"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-exam-week-q2",
+      "familyId": "listen-gen-exam-week",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What must happen to phones during sessions?",
+      "resourceId": "listening-gen-exam-week",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：They are switched off in a basket",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-exam-week",
+            "paragraphId": "p1",
+            "quote": "Next week is exam week. The study hall will stay open until "
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "They may be used quietly"
+        },
+        {
+          "id": "b",
+          "text": "They are switched off in a basket"
+        },
+        {
+          "id": "c",
+          "text": "They stay with their owners"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-job-interview-q1",
+      "familyId": "listen-gen-job-interview",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What should students bring on Friday?",
+      "resourceId": "listening-gen-job-interview",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：A printed resume",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-job-interview",
+            "paragraphId": "p1",
+            "quote": "Dear students, our career office offers practice interviews "
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "A photo album"
+        },
+        {
+          "id": "b",
+          "text": "A printed resume"
+        },
+        {
+          "id": "c",
+          "text": "A school report"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-job-interview-q2",
+      "familyId": "listen-gen-job-interview",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "When does sign-up close?",
+      "resourceId": "listening-gen-job-interview",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Wednesday evening",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-job-interview",
+            "paragraphId": "p1",
+            "quote": "Dear students, our career office offers practice interviews "
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Friday morning"
+        },
+        {
+          "id": "b",
+          "text": "Wednesday evening"
+        },
+        {
+          "id": "c",
+          "text": "Thursday noon"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-rain-plan-q1",
+      "familyId": "listen-gen-rain-plan",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What happens to the sports meeting?",
+      "resourceId": "listening-gen-rain-plan",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：It moves to next Monday",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-rain-plan",
+            "paragraphId": "p1",
+            "quote": "Because of heavy rain, today's sports meeting moves to next "
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "It is cancelled"
+        },
+        {
+          "id": "b",
+          "text": "It moves to next Monday"
+        },
+        {
+          "id": "c",
+          "text": "It moves indoors"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-rain-plan-q2",
+      "familyId": "listen-gen-rain-plan",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What should athletes do with equipment now?",
+      "resourceId": "listening-gen-rain-plan",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Keep it at home",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-rain-plan",
+            "paragraphId": "p1",
+            "quote": "Because of heavy rain, today's sports meeting moves to next "
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Bring it to school"
+        },
+        {
+          "id": "b",
+          "text": "Keep it at home"
+        },
+        {
+          "id": "c",
+          "text": "Give it to the teacher"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-homework-tip-q1",
+      "familyId": "listen-gen-homework-tip",
+      "skillIds": [
+        "listening.inference"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What is the suggested way to remember words?",
+      "resourceId": "listening-gen-homework-tip",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Use them the same day",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-homework-tip",
+            "paragraphId": "p1",
+            "quote": "A good way to remember new words is to use them the same day"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Copy them ten times"
+        },
+        {
+          "id": "b",
+          "text": "Use them the same day"
+        },
+        {
+          "id": "c",
+          "text": "Read them silently for hours"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-homework-tip-q2",
+      "familyId": "listen-gen-homework-tip",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "How long should tonight's practice take?",
+      "resourceId": "listening-gen-homework-tip",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：About ten minutes",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-homework-tip",
+            "paragraphId": "p1",
+            "quote": "A good way to remember new words is to use them the same day"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "About two hours"
+        },
+        {
+          "id": "b",
+          "text": "About ten minutes"
+        },
+        {
+          "id": "c",
+          "text": "The whole evening"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-museum-trip-q1",
+      "familyId": "listen-gen-museum-trip",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "When and where does the group meet?",
+      "resourceId": "listening-gen-museum-trip",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：At the school gate at eight forty",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-museum-trip",
+            "paragraphId": "p1",
+            "quote": "This Saturday the history club visits the city museum. We me"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "At the museum at nine"
+        },
+        {
+          "id": "b",
+          "text": "At the school gate at eight forty"
+        },
+        {
+          "id": "c",
+          "text": "At the club room at eight"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-museum-trip-q2",
+      "familyId": "listen-gen-museum-trip",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What must students not touch?",
+      "resourceId": "listening-gen-museum-trip",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：The ancient tools",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-museum-trip",
+            "paragraphId": "p1",
+            "quote": "This Saturday the history club visits the city museum. We me"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "The photo wall"
+        },
+        {
+          "id": "b",
+          "text": "The ancient tools"
+        },
+        {
+          "id": "c",
+          "text": "The student cards"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-sleep-study-q1",
+      "familyId": "listen-gen-sleep-study",
+      "skillIds": [
+        "listening.inference"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "Who recalls vocabulary better, according to the talk?",
+      "resourceId": "listening-gen-sleep-study",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Students with seven hours of sleep",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-sleep-study",
+            "paragraphId": "p1",
+            "quote": "Research shows that sleep helps memory. Students who sleep s"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Students who study all night"
+        },
+        {
+          "id": "b",
+          "text": "Students with seven hours of sleep"
+        },
+        {
+          "id": "c",
+          "text": "Students who read in bed"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-sleep-study-q2",
+      "familyId": "listen-gen-sleep-study",
+      "skillIds": [
+        "listening.inference"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What does the speaker advise at the end?",
+      "resourceId": "listening-gen-sleep-study",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Close the book early",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-sleep-study",
+            "paragraphId": "p1",
+            "quote": "Research shows that sleep helps memory. Students who sleep s"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Review until midnight"
+        },
+        {
+          "id": "b",
+          "text": "Close the book early"
+        },
+        {
+          "id": "c",
+          "text": "Skip the review"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-speech-contest-q1",
+      "familyId": "listen-gen-speech-contest",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "How long is each talk?",
+      "resourceId": "listening-gen-speech-contest",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Three minutes",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-speech-contest",
+            "paragraphId": "p1",
+            "quote": "The English speech contest final takes place this Friday aft"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Five minutes"
+        },
+        {
+          "id": "b",
+          "text": "Three minutes"
+        },
+        {
+          "id": "c",
+          "text": "Two minutes"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-speech-contest-q2",
+      "familyId": "listen-gen-speech-contest",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What should the audience do during talks?",
+      "resourceId": "listening-gen-speech-contest",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Stay seated until all finish",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-speech-contest",
+            "paragraphId": "p1",
+            "quote": "The English speech contest final takes place this Friday aft"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Leave between speakers"
+        },
+        {
+          "id": "b",
+          "text": "Stay seated until all finish"
+        },
+        {
+          "id": "c",
+          "text": "Ask questions freely"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-lost-found-q1",
+      "familyId": "listen-gen-lost-found",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "Where was the schoolbag found?",
+      "resourceId": "listening-gen-lost-found",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：In the reading room",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-lost-found",
+            "paragraphId": "p1",
+            "quote": "A green schoolbag was found in the reading room yesterday. I"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "In the lab"
+        },
+        {
+          "id": "b",
+          "text": "In the reading room"
+        },
+        {
+          "id": "c",
+          "text": "On the playground"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-lost-found-q2",
+      "familyId": "listen-gen-lost-found",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "By when can the owner collect it?",
+      "resourceId": "listening-gen-lost-found",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Before four o'clock",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-lost-found",
+            "paragraphId": "p1",
+            "quote": "A green schoolbag was found in the reading room yesterday. I"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Before noon"
+        },
+        {
+          "id": "b",
+          "text": "Before four o'clock"
+        },
+        {
+          "id": "c",
+          "text": "Tomorrow morning"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-volunteer-day-q1",
+      "familyId": "listen-gen-volunteer-day",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What will volunteers do on Saturday?",
+      "resourceId": "listening-gen-volunteer-day",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Clean a path and plant trees",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-volunteer-day",
+            "paragraphId": "p1",
+            "quote": "Saturday is volunteer day. We will clean the riverside path "
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Visit a museum"
+        },
+        {
+          "id": "b",
+          "text": "Clean a path and plant trees"
+        },
+        {
+          "id": "c",
+          "text": "Teach children"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-volunteer-day-q2",
+      "familyId": "listen-gen-volunteer-day",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What is provided at the meeting point?",
+      "resourceId": "listening-gen-volunteer-day",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Gloves and tools",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-volunteer-day",
+            "paragraphId": "p1",
+            "quote": "Saturday is volunteer day. We will clean the riverside path "
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Food and drinks"
+        },
+        {
+          "id": "b",
+          "text": "Gloves and tools"
+        },
+        {
+          "id": "c",
+          "text": "Buses and tickets"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-computer-room-q1",
+      "familyId": "listen-gen-computer-room",
+      "skillIds": [
+        "listening.inference"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "Why did the computer room close before?",
+      "resourceId": "listening-gen-computer-room",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：It needed repairs",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-computer-room",
+            "paragraphId": "p1",
+            "quote": "The computer room reopens today after repairs. Please save y"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "It was painted"
+        },
+        {
+          "id": "b",
+          "text": "It needed repairs"
+        },
+        {
+          "id": "c",
+          "text": "It was moved"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-computer-room-q2",
+      "familyId": "listen-gen-computer-room",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "How often should work be saved?",
+      "resourceId": "listening-gen-computer-room",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Every ten minutes",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-computer-room",
+            "paragraphId": "p1",
+            "quote": "The computer room reopens today after repairs. Please save y"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Every hour"
+        },
+        {
+          "id": "b",
+          "text": "Every ten minutes"
+        },
+        {
+          "id": "c",
+          "text": "At the end only"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-cook-class-q1",
+      "familyId": "listen-gen-cook-class",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What dish will the class make?",
+      "resourceId": "listening-gen-cook-class",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：A vegetable soup",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-cook-class",
+            "paragraphId": "p1",
+            "quote": "Our cooking class this week teaches a simple vegetable soup."
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Fried rice"
+        },
+        {
+          "id": "b",
+          "text": "A vegetable soup"
+        },
+        {
+          "id": "c",
+          "text": "Fruit salad"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-cook-class-q2",
+      "familyId": "listen-gen-cook-class",
+      "skillIds": [
+        "listening.inference"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "Why should allergies be reported before Thursday?",
+      "resourceId": "listening-gen-cook-class",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：To prepare a safe alternative",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-cook-class",
+            "paragraphId": "p1",
+            "quote": "Our cooking class this week teaches a simple vegetable soup."
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "To cancel the class"
+        },
+        {
+          "id": "b",
+          "text": "To prepare a safe alternative"
+        },
+        {
+          "id": "c",
+          "text": "To change the recipe book"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-photo-show-q1",
+      "familyId": "listen-gen-photo-show",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What do the chosen photos get?",
+      "resourceId": "listening-gen-photo-show",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：A place on the wall",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-photo-show",
+            "paragraphId": "p1",
+            "quote": "The photo show on the third floor collects pictures of daily"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "A cash prize"
+        },
+        {
+          "id": "b",
+          "text": "A place on the wall"
+        },
+        {
+          "id": "c",
+          "text": "A school stamp"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-photo-show-q2",
+      "familyId": "listen-gen-photo-show",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "When must photos be handed in?",
+      "resourceId": "listening-gen-photo-show",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：By next Tuesday",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-photo-show",
+            "paragraphId": "p1",
+            "quote": "The photo show on the third floor collects pictures of daily"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "By this Friday"
+        },
+        {
+          "id": "b",
+          "text": "By next Tuesday"
+        },
+        {
+          "id": "c",
+          "text": "By month's end"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-train-delay-q1",
+      "familyId": "listen-gen-train-delay",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "How long is the train delayed?",
+      "resourceId": "listening-gen-train-delay",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Thirty minutes",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-train-delay",
+            "paragraphId": "p1",
+            "quote": "The morning train to the science camp is delayed by thirty m"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ten minutes"
+        },
+        {
+          "id": "b",
+          "text": "Thirty minutes"
+        },
+        {
+          "id": "c",
+          "text": "An hour"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-train-delay-q2",
+      "familyId": "listen-gen-train-delay",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "How will the group be gathered?",
+      "resourceId": "listening-gen-train-delay",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：By the leader in the red jacket",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-train-delay",
+            "paragraphId": "p1",
+            "quote": "The morning train to the science camp is delayed by thirty m"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "By a phone message"
+        },
+        {
+          "id": "b",
+          "text": "By the leader in the red jacket"
+        },
+        {
+          "id": "c",
+          "text": "By a loudspeaker"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-reading-plan-q1",
+      "familyId": "listen-gen-reading-plan",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What is read first this term?",
+      "resourceId": "listening-gen-reading-plan",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Short stories",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-reading-plan",
+            "paragraphId": "p1",
+            "quote": "This term's reading plan starts with short stories. Read one"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Long novels"
+        },
+        {
+          "id": "b",
+          "text": "Short stories"
+        },
+        {
+          "id": "c",
+          "text": "News reports"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-reading-plan-q2",
+      "familyId": "listen-gen-reading-plan",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What do readers mark each week?",
+      "resourceId": "listening-gen-reading-plan",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Two sentences they like",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-reading-plan",
+            "paragraphId": "p1",
+            "quote": "This term's reading plan starts with short stories. Read one"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "New words only"
+        },
+        {
+          "id": "b",
+          "text": "Two sentences they like"
+        },
+        {
+          "id": "c",
+          "text": "Page numbers"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-weather-warn-q1",
+      "familyId": "listen-gen-weather-warn",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What will happen tonight?",
+      "resourceId": "listening-gen-weather-warn",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Temperatures drop below zero",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-weather-warn",
+            "paragraphId": "p1",
+            "quote": "A cold wave arrives tonight. Temperatures will drop below ze"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Snow will fall all night"
+        },
+        {
+          "id": "b",
+          "text": "Temperatures drop below zero"
+        },
+        {
+          "id": "c",
+          "text": "The school closes"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-weather-warn-q2",
+      "familyId": "listen-gen-weather-warn",
+      "skillIds": [
+        "listening.inference"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What does the speaker suggest for tomorrow?",
+      "resourceId": "listening-gen-weather-warn",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Allow extra time on icy roads",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-weather-warn",
+            "paragraphId": "p1",
+            "quote": "A cold wave arrives tonight. Temperatures will drop below ze"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Stay home all day"
+        },
+        {
+          "id": "b",
+          "text": "Allow extra time on icy roads"
+        },
+        {
+          "id": "c",
+          "text": "Water the plants at noon"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-music-club-q1",
+      "familyId": "listen-gen-music-club",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "Who is the club looking for?",
+      "resourceId": "listening-gen-music-club",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：A piano player",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-music-club",
+            "paragraphId": "p1",
+            "quote": "The music club needs a piano player for the New Year show. P"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "A drum player"
+        },
+        {
+          "id": "b",
+          "text": "A piano player"
+        },
+        {
+          "id": "c",
+          "text": "A singer"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-music-club-q2",
+      "familyId": "listen-gen-music-club",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G0",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What is required to apply?",
+      "resourceId": "listening-gen-music-club",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：One complete piece",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-music-club",
+            "paragraphId": "p1",
+            "quote": "The music club needs a piano player for the New Year show. P"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "A paid fee"
+        },
+        {
+          "id": "b",
+          "text": "One complete piece"
+        },
+        {
+          "id": "c",
+          "text": "A teacher's letter"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-exchange-news-q1",
+      "familyId": "listen-gen-exchange-news",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "How many students will visit?",
+      "resourceId": "listening-gen-exchange-news",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：Ten",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-exchange-news",
+            "paragraphId": "p1",
+            "quote": "Our partner school in Australia will send ten students next "
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Twenty"
+        },
+        {
+          "id": "b",
+          "text": "Ten"
+        },
+        {
+          "id": "c",
+          "text": "Five"
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "listening-gen-exchange-news-q2",
+      "familyId": "listen-gen-exchange-news",
+      "skillIds": [
+        "listening.detail"
+      ],
+      "level": "G1",
+      "section": "listening",
+      "reviewMode": "recognition",
+      "promptZh": "What does a buddy need to hand in?",
+      "resourceId": "listening-gen-exchange-news",
+      "estimatedSeconds": 60,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "录音提到：A short self-introduction",
+        "ruleZh": "听后定位关键信息并核对选项措辞。",
+        "evidence": [
+          {
+            "resourceId": "listening-gen-exchange-news",
+            "paragraphId": "p1",
+            "quote": "Our partner school in Australia will send ten students next "
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "A photo album"
+        },
+        {
+          "id": "b",
+          "text": "A short self-introduction"
+        },
+        {
+          "id": "c",
+          "text": "A payment receipt"
+        }
+      ],
+      "answerOptionId": "b"
+    }
+  ],
+  "units": [
+    {
+      "id": "listening-gen-u1",
+      "titleZh": "听力基础 第1组",
+      "familyIds": [
+        "listen-gen-library-rules",
+        "listen-gen-bus-change",
+        "listen-gen-lab-safety",
+        "listen-gen-exam-week",
+        "listen-gen-job-interview"
+      ],
+      "itemIds": [
+        "listening-gen-library-rules-q1",
+        "listening-gen-library-rules-q2",
+        "listening-gen-bus-change-q1",
+        "listening-gen-bus-change-q2",
+        "listening-gen-lab-safety-q1",
+        "listening-gen-lab-safety-q2",
+        "listening-gen-exam-week-q1",
+        "listening-gen-exam-week-q2",
+        "listening-gen-job-interview-q1",
+        "listening-gen-job-interview-q2"
+      ],
+      "prerequisiteSkillIds": []
+    },
+    {
+      "id": "listening-gen-u2",
+      "titleZh": "听力基础 第2组",
+      "familyIds": [
+        "listen-gen-rain-plan",
+        "listen-gen-homework-tip",
+        "listen-gen-museum-trip",
+        "listen-gen-sleep-study",
+        "listen-gen-speech-contest"
+      ],
+      "itemIds": [
+        "listening-gen-rain-plan-q1",
+        "listening-gen-rain-plan-q2",
+        "listening-gen-homework-tip-q1",
+        "listening-gen-homework-tip-q2",
+        "listening-gen-museum-trip-q1",
+        "listening-gen-museum-trip-q2",
+        "listening-gen-sleep-study-q1",
+        "listening-gen-sleep-study-q2",
+        "listening-gen-speech-contest-q1",
+        "listening-gen-speech-contest-q2"
+      ],
+      "prerequisiteSkillIds": []
+    },
+    {
+      "id": "listening-gen-u3",
+      "titleZh": "听力基础 第3组",
+      "familyIds": [
+        "listen-gen-lost-found",
+        "listen-gen-volunteer-day",
+        "listen-gen-computer-room",
+        "listen-gen-cook-class",
+        "listen-gen-photo-show"
+      ],
+      "itemIds": [
+        "listening-gen-lost-found-q1",
+        "listening-gen-lost-found-q2",
+        "listening-gen-volunteer-day-q1",
+        "listening-gen-volunteer-day-q2",
+        "listening-gen-computer-room-q1",
+        "listening-gen-computer-room-q2",
+        "listening-gen-cook-class-q1",
+        "listening-gen-cook-class-q2",
+        "listening-gen-photo-show-q1",
+        "listening-gen-photo-show-q2"
+      ],
+      "prerequisiteSkillIds": []
+    },
+    {
+      "id": "listening-gen-u4",
+      "titleZh": "听力基础 第4组",
+      "familyIds": [
+        "listen-gen-train-delay",
+        "listen-gen-reading-plan",
+        "listen-gen-weather-warn",
+        "listen-gen-music-club",
+        "listen-gen-exchange-news"
+      ],
+      "itemIds": [
+        "listening-gen-train-delay-q1",
+        "listening-gen-train-delay-q2",
+        "listening-gen-reading-plan-q1",
+        "listening-gen-reading-plan-q2",
+        "listening-gen-weather-warn-q1",
+        "listening-gen-weather-warn-q2",
+        "listening-gen-music-club-q1",
+        "listening-gen-music-club-q2",
+        "listening-gen-exchange-news-q1",
+        "listening-gen-exchange-news-q2"
+      ],
+      "prerequisiteSkillIds": []
+    }
+  ]
+}

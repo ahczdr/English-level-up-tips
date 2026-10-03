@@ -8,6 +8,9 @@ export default defineConfig({
   testIgnore: /offline\.spec\.ts/,
   outputDir: 'test-results/prod-main',
   reporter: [['html', { open: 'never' }], ['list']],
+  // CR36：CI 上 forbidOnly 钉死 .only 误提交；真实网络+三引擎下偶发失败重试一次，本地不重试
+  forbidOnly: Boolean(process.env.CI),
+  retries: process.env.CI ? 1 : 0,
   use: {
     baseURL: 'http://127.0.0.1:4174',
     trace: 'retain-on-failure',

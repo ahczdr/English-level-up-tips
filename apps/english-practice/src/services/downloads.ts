@@ -146,13 +146,16 @@ export async function reconcileInstalledPacks(input: { db: GaokaoDatabase; now?:
     if (!assetsReady && record.resourcesReady) {
       await input.db.packs.update([record.id, record.version], { resourcesReady: false })
       const nowIso = input.now?.().toISOString() ?? new Date().toISOString()
+      // CR52：合并保留 job.data.assets 中仍存在的字节（与 B1/B2 的「旧版本继续可用」口径一致），
+      // 只缺失的资产留给下次下载补齐，不整体丢弃
+      const preservedAssets = (job?.data as { assets?: Record<string, unknown> } | undefined)?.assets
       await input.db.downloadJobs.put({
         packId: record.id,
         version: record.version,
         status: 'needs-download',
         createdAt: job?.createdAt ?? nowIso,
         updatedAt: nowIso,
-        data: { reason: 'asset-missing' },
+        data: preservedAssets && Object.keys(preservedAssets).length > 0 ? { reason: 'asset-missing', assets: preservedAssets } : { reason: 'asset-missing' },
       })
       report.markedNeedsDownload += 1
     }

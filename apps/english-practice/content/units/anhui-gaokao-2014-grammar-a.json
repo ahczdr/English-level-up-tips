@@ -1,0 +1,39 @@
+{
+  "id": "anhui-gaokao-2014-grammar-a",
+  "titleZh": "2014 年安徽高考英语：单项填空首批",
+  "familyIds": [
+    "anhui-2014-dialogue-confirmation",
+    "anhui-2014-relative-clause",
+    "anhui-2014-past-perfect",
+    "anhui-2014-indefinite-pronoun",
+    "anhui-2014-conjunction-time",
+    "anhui-2014-phrasal-verb",
+    "anhui-2014-adjective-choice",
+    "anhui-2014-phrasal-verb-arrival",
+    "anhui-2014-noun-collocation",
+    "anhui-2014-relative-past-perfect",
+    "anhui-2014-comparative-contrast",
+    "anhui-2014-participle-complement",
+    "anhui-2014-adverbial-connector",
+    "anhui-2014-verb-collocation",
+    "anhui-2014-dialogue-encouragement"
+  ],
+  "itemIds": [
+    "anhui-gaokao-2014-q21",
+    "anhui-gaokao-2014-q22",
+    "anhui-gaokao-2014-q23",
+    "anhui-gaokao-2014-q24",
+    "anhui-gaokao-2014-q25",
+    "anhui-gaokao-2014-q26",
+    "anhui-gaokao-2014-q27",
+    "anhui-gaokao-2014-q28",
+    "anhui-gaokao-2014-q29",
+    "anhui-gaokao-2014-q30",
+    "anhui-gaokao-2014-q31",
+    "anhui-gaokao-2014-q32",
+    "anhui-gaokao-2014-q33",
+    "anhui-gaokao-2014-q34",
+    "anhui-gaokao-2014-q35"
+  ],
+  "prerequisiteSkillIds": []
+}

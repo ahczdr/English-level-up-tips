@@ -33,14 +33,17 @@ const fetchTextByUrl = (bodies: Record<string, string>) => async (url: string): 
 }
 
 const APP_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')
-const PACK_JSON = fs.readFileSync(path.join(APP_ROOT, 'public/content-packs/gaokao-listening/1.0.0/pack.json'), 'utf8')
-const AUDIO_FILE = fs.readFileSync(path.join(APP_ROOT, 'public/content-packs/gaokao-listening/1.0.0/assets/listening-preview.m4a'))
+// 版本号跟随 manifest，避免每次发布版本提升后手工改测试
+const LISTENING_VERSION = (JSON.parse(fs.readFileSync(path.join(APP_ROOT, 'content/pack-manifests/gaokao-listening.json'), 'utf8')) as { version: string }).version
+const LISTENING_BASE = `content-packs/gaokao-listening/${LISTENING_VERSION}`
+const PACK_JSON = fs.readFileSync(path.join(APP_ROOT, 'public', `${LISTENING_BASE}/pack.json`), 'utf8')
+const AUDIO_FILE = fs.readFileSync(path.join(APP_ROOT, 'public', 'content-assets/listening-preview.m4a'))
 const audioArrayBuffer = (): ArrayBuffer => AUDIO_FILE.buffer.slice(AUDIO_FILE.byteOffset, AUDIO_FILE.byteOffset + AUDIO_FILE.byteLength) as ArrayBuffer
 const REAL_AUDIO_BYTES = async (): Promise<ArrayBuffer> => audioArrayBuffer()
 
 const installListeningPack = async (db: GaokaoDatabase): Promise<void> => {
-  const catalog = { packs: [{ id: 'gaokao-listening', version: '1.0.0', status: 'preview', bytes: new TextEncoder().encode(PACK_JSON).length, sha256: await sha256Hex(PACK_JSON), path: 'content-packs/gaokao-listening/1.0.0/pack.json' }] }
-  const installed = await installPreviewPacks({ db, fetchText: fetchTextByUrl({ '/content-catalog.json': JSON.stringify(catalog), '/content-packs/gaokao-listening/1.0.0/pack.json': PACK_JSON }) })
+  const catalog = { packs: [{ id: 'gaokao-listening', version: LISTENING_VERSION, status: 'published', bytes: new TextEncoder().encode(PACK_JSON).length, sha256: await sha256Hex(PACK_JSON), path: `${LISTENING_BASE}/pack.json` }] }
+  const installed = await installPreviewPacks({ db, fetchText: fetchTextByUrl({ '/content-catalog.json': JSON.stringify(catalog), [`/${LISTENING_BASE}/pack.json`]: PACK_JSON }) })
   expect(installed).toMatchObject({ ok: true, value: { installed: 1 } })
 }
 
@@ -64,32 +67,32 @@ describe('startPackDownload 下载状态机', () => {
     const db = await openDb()
     await installListeningPack(db)
     const states: string[] = []
-    const result = await startPackDownload({ db, packId: 'gaokao-listening', version: '1.0.0', fetchBinary: REAL_AUDIO_BYTES, onStateChange: (state) => states.push(state) })
+    const result = await startPackDownload({ db, packId: 'gaokao-listening', version: LISTENING_VERSION, fetchBinary: REAL_AUDIO_BYTES, onStateChange: (state) => states.push(state) })
     expect(result.ok).toBe(true)
     expect(states).toEqual(['downloading', 'verifying'])
-    const job = await db.downloadJobs.get(['gaokao-listening', '1.0.0'])
+    const job = await db.downloadJobs.get(['gaokao-listening', LISTENING_VERSION])
     expect(job?.status).toBe('ready')
-    expect((await db.packs.get(['gaokao-listening', '1.0.0']))?.resourcesReady).toBe(true)
+    expect((await db.packs.get(['gaokao-listening', LISTENING_VERSION]))?.resourcesReady).toBe(true)
   })
 
   it('hash 不匹配 → failed，但旧 ready 字节保留可读（D09 保持旧 ready 版本可用）', async () => {
     const db = await openDb()
     await installListeningPack(db)
-    const first = await startPackDownload({ db, packId: 'gaokao-listening', version: '1.0.0', fetchBinary: REAL_AUDIO_BYTES })
+    const first = await startPackDownload({ db, packId: 'gaokao-listening', version: LISTENING_VERSION, fetchBinary: REAL_AUDIO_BYTES })
     expect(first.ok).toBe(true)
     // 模拟内容被替换：下载到错误字节
-    const second = await startPackDownload({ db, packId: 'gaokao-listening', version: '1.0.0', fetchBinary: async () => new TextEncoder().encode('corrupted').buffer as ArrayBuffer })
+    const second = await startPackDownload({ db, packId: 'gaokao-listening', version: LISTENING_VERSION, fetchBinary: async () => new TextEncoder().encode('corrupted').buffer as ArrayBuffer })
     expect(second.ok).toBe(false)
     expect(second.ok ? null : second.error.code).toBe('ASSET_HASH_MISMATCH')
     // 作业标记 failed 并记录失败资产，但旧 assets 字节保留
-    const job = await db.downloadJobs.get(['gaokao-listening', '1.0.0'])
+    const job = await db.downloadJobs.get(['gaokao-listening', LISTENING_VERSION])
     expect(job?.status).toBe('failed')
     expect((job?.data as { failedAssetId?: string }).failedAssetId).toBe('listening-preview')
     expect((job?.data as { assets?: Record<string, unknown> }).assets?.['listening-preview']).toBeDefined()
     // 旧资源仍可读取，resourcesReady 保持 true（旧版本继续可用）
-    const readable = await getPackAssetBytes({ db, packId: 'gaokao-listening', version: '1.0.0', assetId: 'listening-preview' })
+    const readable = await getPackAssetBytes({ db, packId: 'gaokao-listening', version: LISTENING_VERSION, assetId: 'listening-preview' })
     expect(readable).toMatchObject({ ok: true })
-    expect((await db.packs.get(['gaokao-listening', '1.0.0']))?.resourcesReady).toBe(true)
+    expect((await db.packs.get(['gaokao-listening', LISTENING_VERSION]))?.resourcesReady).toBe(true)
     // 对账不误标 needs-download（字节仍在）
     const report = await reconcileInstalledPacks({ db })
     expect(report).toMatchObject({ checked: 1, markedNeedsDownload: 0 })
@@ -98,10 +101,10 @@ describe('startPackDownload 下载状态机', () => {
   it('网络中断 → failed，可重试到 ready', async () => {
     const db = await openDb()
     await installListeningPack(db)
-    const failed = await startPackDownload({ db, packId: 'gaokao-listening', version: '1.0.0', fetchBinary: async () => { throw new Error('offline') } })
+    const failed = await startPackDownload({ db, packId: 'gaokao-listening', version: LISTENING_VERSION, fetchBinary: async () => { throw new Error('offline') } })
     expect(failed.ok).toBe(false)
     expect(failed.ok ? null : failed.error.code).toBe('DOWNLOAD_FAILED')
-    const retry = await startPackDownload({ db, packId: 'gaokao-listening', version: '1.0.0', fetchBinary: REAL_AUDIO_BYTES })
+    const retry = await startPackDownload({ db, packId: 'gaokao-listening', version: LISTENING_VERSION, fetchBinary: REAL_AUDIO_BYTES })
     expect(retry.ok).toBe(true)
   })
 })
@@ -110,20 +113,20 @@ describe('reconcileInstalledPacks 启动对账', () => {
   it('资源缺失 → needs-download 且 resourcesReady=false；恢复后对账复位', async () => {
     const db = await openDb()
     await installListeningPack(db)
-    await startPackDownload({ db, packId: 'gaokao-listening', version: '1.0.0', fetchBinary: REAL_AUDIO_BYTES })
+    await startPackDownload({ db, packId: 'gaokao-listening', version: LISTENING_VERSION, fetchBinary: REAL_AUDIO_BYTES })
     // 模拟缓存丢失：删除 job 数据
-    await db.downloadJobs.delete(['gaokao-listening', '1.0.0'])
+    await db.downloadJobs.delete(['gaokao-listening', LISTENING_VERSION])
     const report = await reconcileInstalledPacks({ db })
     expect(report.markedNeedsDownload).toBe(1)
-    expect((await db.packs.get(['gaokao-listening', '1.0.0']))?.resourcesReady).toBe(false)
-    const job = await db.downloadJobs.get(['gaokao-listening', '1.0.0'])
+    expect((await db.packs.get(['gaokao-listening', LISTENING_VERSION]))?.resourcesReady).toBe(false)
+    const job = await db.downloadJobs.get(['gaokao-listening', LISTENING_VERSION])
     expect(job?.status).toBe('needs-download')
     // 恢复下载后 job 回到 ready；再模拟历史中断导致就绪标志丢失，对账应复位
-    await startPackDownload({ db, packId: 'gaokao-listening', version: '1.0.0', fetchBinary: REAL_AUDIO_BYTES })
-    await db.packs.update(['gaokao-listening', '1.0.0'], { resourcesReady: false })
+    await startPackDownload({ db, packId: 'gaokao-listening', version: LISTENING_VERSION, fetchBinary: REAL_AUDIO_BYTES })
+    await db.packs.update(['gaokao-listening', LISTENING_VERSION], { resourcesReady: false })
     const restored = await reconcileInstalledPacks({ db })
     expect(restored.restoredReady).toBe(1)
-    expect((await db.packs.get(['gaokao-listening', '1.0.0']))?.resourcesReady).toBe(true)
+    expect((await db.packs.get(['gaokao-listening', LISTENING_VERSION]))?.resourcesReady).toBe(true)
   })
 
   it('就绪包不动；无资产包始终就绪', async () => {
@@ -151,9 +154,9 @@ describe('downloadPackAssets MIME 校验（D09）', () => {
   it('响应 MIME 跨类型 → ASSET_MIME_MISMATCH；同家族音频兼容', async () => {
     const db = await openDb()
     await installListeningPack(db)
-    const wrong = await downloadPackAssets({ db, packId: 'gaokao-listening', version: '1.0.0', fetchResponse: async () => new Response(audioArrayBuffer(), { headers: { 'content-type': 'text/plain' } }) })
+    const wrong = await downloadPackAssets({ db, packId: 'gaokao-listening', version: LISTENING_VERSION, fetchResponse: async () => new Response(audioArrayBuffer(), { headers: { 'content-type': 'text/plain' } }) })
     expect(wrong).toMatchObject({ ok: false, error: { code: 'ASSET_MIME_MISMATCH' } })
-    const right = await downloadPackAssets({ db, packId: 'gaokao-listening', version: '1.0.0', fetchResponse: async () => new Response(audioArrayBuffer(), { headers: { 'content-type': 'audio/x-m4a' } }) })
+    const right = await downloadPackAssets({ db, packId: 'gaokao-listening', version: LISTENING_VERSION, fetchResponse: async () => new Response(audioArrayBuffer(), { headers: { 'content-type': 'audio/x-m4a' } }) })
     expect(right).toMatchObject({ ok: true, value: { assets: 1 } })
   })
 })
@@ -163,12 +166,12 @@ describe('reconcileInstalledPacks 僵尸作业重置（B2）', () => {
     const db = await openDb()
     await installListeningPack(db)
     for (const status of ['downloading', 'verifying']) {
-      await db.downloadJobs.put({ packId: 'gaokao-listening', version: '1.0.0', status, createdAt: new Date().toISOString(), updatedAt: new Date().toISOString(), data: {} })
+      await db.downloadJobs.put({ packId: 'gaokao-listening', version: LISTENING_VERSION, status, createdAt: new Date().toISOString(), updatedAt: new Date().toISOString(), data: {} })
       const report = await reconcileInstalledPacks({ db })
       expect(report.resetStaleJobs).toBe(1)
-      const job = await db.downloadJobs.get(['gaokao-listening', '1.0.0'])
+      const job = await db.downloadJobs.get(['gaokao-listening', LISTENING_VERSION])
       expect(job?.status).toBe('needs-download')
-      expect((await db.packs.get(['gaokao-listening', '1.0.0']))?.resourcesReady).toBe(false)
+      expect((await db.packs.get(['gaokao-listening', LISTENING_VERSION]))?.resourcesReady).toBe(false)
     }
   })
 })
@@ -179,9 +182,9 @@ describe('DB 写入失败（缺口1/2）', () => {
     await installListeningPack(db)
     const original = db.downloadJobs.put.bind(db.downloadJobs)
     db.downloadJobs.put = () => Promise.reject(new Error('QuotaExceededError')) as never
-    const result = await startPackDownload({ db, packId: 'gaokao-listening', version: '1.0.0', fetchBinary: REAL_AUDIO_BYTES })
+    const result = await startPackDownload({ db, packId: 'gaokao-listening', version: LISTENING_VERSION, fetchBinary: REAL_AUDIO_BYTES })
     expect(result).toMatchObject({ ok: false, error: { code: 'STORAGE_FAILED' } })
-    expect((await db.packs.get(['gaokao-listening', '1.0.0']))?.resourcesReady).toBe(false)
+    expect((await db.packs.get(['gaokao-listening', LISTENING_VERSION]))?.resourcesReady).toBe(false)
     db.downloadJobs.put = original as never
   })
 })
@@ -190,9 +193,38 @@ describe('collectDownloadOverview 页面装配', () => {
   it('列出已安装包与作业状态、资产数', async () => {
     const db = await openDb()
     await installListeningPack(db)
-    await startPackDownload({ db, packId: 'gaokao-listening', version: '1.0.0', fetchBinary: REAL_AUDIO_BYTES })
+    await startPackDownload({ db, packId: 'gaokao-listening', version: LISTENING_VERSION, fetchBinary: REAL_AUDIO_BYTES })
     const overview = await collectDownloadOverview({ db })
     expect(overview).toHaveLength(1)
-    expect(overview[0]).toMatchObject({ packId: 'gaokao-listening', version: '1.0.0', resourcesReady: true, assetCount: 1, jobStatus: 'ready' })
+    expect(overview[0]).toMatchObject({ packId: 'gaokao-listening', version: LISTENING_VERSION, resourcesReady: true, assetCount: 1, jobStatus: 'ready' })
+  })
+})
+
+describe('CR52 对账保留已存字节', () => {
+  it('标 needs-download 时保留作业内已有资产字节', async () => {
+    const db = await openDb()
+    await installListeningPack(db)
+    // 构造「resourcesReady=true 但字节缺失」的边缘态：job 里只有一半资产
+    await db.downloadJobs.put({
+      packId: 'gaokao-listening',
+      version: LISTENING_VERSION,
+      status: 'ready',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      data: { assets: { 'listening-preview': { sha256: 'a'.repeat(64), data: new ArrayBuffer(3) } } },
+    })
+    // 让字节校验失败：资产清单里多出一个不存在的资产（直接改 pack）
+    const record = await db.packs.get(['gaokao-listening', LISTENING_VERSION])
+    if (!record) throw new Error('pack missing')
+    const pack = record.pack as { assets: Array<{ id: string; path: string; mime: string; bytes: number; sha256: string }> }
+    pack.assets = [...pack.assets, { id: 'ghost-asset', path: 'assets/ghost.m4a', mime: 'audio/mp4', bytes: 3, sha256: 'b'.repeat(64) }]
+    await db.packs.put(record)
+    await db.packs.update(['gaokao-listening', LISTENING_VERSION], { resourcesReady: true })
+    const report = await reconcileInstalledPacks({ db })
+    expect(report.markedNeedsDownload).toBe(1)
+    const job = await db.downloadJobs.get(['gaokao-listening', LISTENING_VERSION])
+    const preserved = (job?.data as { assets?: Record<string, unknown> }).assets
+    expect(preserved?.['listening-preview']).toBeTruthy()
+    expect((job?.data as { reason?: string }).reason).toBe('asset-missing')
   })
 })

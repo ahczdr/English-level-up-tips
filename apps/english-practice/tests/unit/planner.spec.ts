@@ -5,6 +5,7 @@ import { createRouter, createWebHashHistory, type RouterHistory } from 'vue-rout
 import samplePack from '../fixtures/sample-pack.json'
 import { planToday, suggestLevelUp, type PlanGroup, type PlanTodayInput } from '../../src/domain/planner'
 import { collectLevelUpEvidence, createSession, createTodaySession, enterCurrentSlot, previewTodayPlan, revealHint, submitAnswer } from '../../src/services/learning'
+import { getSessionSummary } from '../../src/services/sessionFlow'
 import type { CoursePack, Item } from '../../src/content/types'
 import { createDatabase, deleteDatabase, type GaokaoDatabase } from '../../src/data/db'
 import TodayPage from '../../src/features/today/TodayPage.vue'
@@ -303,8 +304,11 @@ describe('今日与复习页面', () => {
       data: { stage: 0, dueDay: '2026-09-09', lastAppliedDay: '2026-09-08', lapses: 0 },
     })
     const page = await mountPage(db, '/review')
-    expect(page.text()).toContain('join-context')
+    // CR7：显示学生可读标签（单元名 · 题型 · 模式），不再展示原始 familyId/reviewMode
+    expect(page.text()).toContain('校园社团：协议演示')
+    expect(page.text()).toContain('词汇 · 再认')
     expect(page.text()).toContain('已到期')
+    expect(page.text()).not.toContain('join-context')
   })
 })
 describe('collectLevelUpEvidence P03 证据忠实性', () => {
@@ -395,7 +399,7 @@ describe('createTodaySession 同日冻结与 unitId', () => {
     expect(submitted.ok).toBe(true)
     const unitAchievements = await db.achievements.toArray().then((rows) => rows.filter((row) => row.id.startsWith('unit:first:')))
     expect(unitAchievements).toHaveLength(1)
-    expect(unitAchievements[0]?.id).toBe('unit:first:demo-school-club')
+    expect(unitAchievements[0]?.id).toBe(`unit:first:${profileId}:demo-school-club`)
   })
 })
 
@@ -427,5 +431,135 @@ describe('CR17 熟题未到期不作为新内容重排', () => {
     expect(result.groups).toHaveLength(1)
     expect(result.groups[0]?.kind).toBe('review')
     expect(result.groups[0]?.familiarRetry).toBe(true)
+  })
+})
+
+describe('CR46/CR50 多版本与 per-profile 曝光', () => {
+  it('多版本并存时今日计划只取每个包的最新版本', async () => {
+    const db = await openDb({ withPack: false })
+    const older = structuredClone(pack)
+    older.version = '0.1.0'
+    const newer = structuredClone(pack)
+    newer.version = '0.2.0'
+    await db.packs.bulkAdd([
+      { id: older.id, version: older.version, status: 'installed', pack: older, installedAt: new Date().toISOString(), resourcesReady: true },
+      { id: newer.id, version: newer.version, status: 'installed', pack: newer, installedAt: new Date().toISOString(), resourcesReady: true },
+    ])
+    const preview = await previewTodayPlan({ db, minutes: 25, profileId })
+    expect(preview.ok).toBe(true)
+    if (!preview.ok) return
+    // 同一单元不再跨版本重复成组：候选组只来自 0.2.0（旧版并存会让候选组翻倍）
+    const unitKeys = preview.value.plan.groups.map((candidate) => `${candidate.packId}@${candidate.packVersion}:${candidate.unitId}`)
+    expect(unitKeys.every((key) => key.includes('@0.2.0'))).toBe(true)
+    // 对照：只装 0.1.0 的候选组数与双版本并存时一致（不再翻倍）
+    const single = await openDb({ withPack: false })
+    const onlyOld = structuredClone(pack)
+    onlyOld.version = '0.1.0'
+    await single.packs.add({ id: onlyOld.id, version: onlyOld.version, status: 'installed', pack: onlyOld, installedAt: new Date().toISOString(), resourcesReady: true })
+    const singlePreview = await previewTodayPlan({ db: single, minutes: 25, profileId })
+    expect(singlePreview.ok && singlePreview.value.candidateGroups).toBe(preview.value.candidateGroups)
+  })
+
+  it('跨 profile 曝光互不污染：各自首答独立、各记曝光与成就', async () => {
+    const db = await openDb()
+    const answerFirstSlot = async (profile: string, id: string) => {
+      const created = await createTodaySession({ db, minutes: 5, profileId: profile, idGenerator: () => id })
+      if (!created.ok || created.value.kind !== 'session') throw new Error('expected session')
+      const entered = await enterCurrentSlot(db, created.value.session.id)
+      if (!entered.ok) throw new Error(entered.error.messageZh)
+      const submitted = await submitAnswer(db, { id, sessionId: created.value.session.id, slotId: entered.value.slots[0].id, expectedRevision: entered.value.revision, answer: { kind: 'choice', optionId: 'a' } })
+      if (!submitted.ok) throw new Error(submitted.error.messageZh)
+      return submitted.value
+    }
+    const first = await answerFirstSlot('p-a', 'exp-a')
+    const firstSummary = await getSessionSummary(db, 'exp-a')
+    expect(firstSummary.ok && firstSummary.value.independentFirst).toBe(1)
+    await answerFirstSlot('p-b', 'exp-b')
+    // p-a 见过不再影响 p-b：p-b 首答仍独立
+    const secondSummary = await getSessionSummary(db, 'exp-b')
+    expect(secondSummary.ok && secondSummary.value.independentFirst).toBe(1)
+    const logRows = await db.exposureLog.toArray()
+    expect(logRows.filter((row) => row.itemId === first.ref.itemId && row.profileId === 'p-a')).toHaveLength(1)
+    expect(logRows.filter((row) => row.itemId === first.ref.itemId && row.profileId === 'p-b')).toHaveLength(1)
+    // 第三次作答（同 profile 经手动单元入口再见同题）不再判独立
+    const manual = await createSession({ db, unitId: 'demo-school-club', minutes: 25, profileId: 'p-a', idGenerator: () => 'exp-a2' })
+    if (!manual.ok || manual.value.kind !== 'session') throw new Error('expected session')
+    const reentered = await enterCurrentSlot(db, manual.value.session.id)
+    if (!reentered.ok) throw new Error(reentered.error.messageZh)
+    const third = await submitAnswer(db, { id: 'exp-a2', sessionId: manual.value.session.id, slotId: reentered.value.slots[0].id, expectedRevision: reentered.value.revision, answer: { kind: 'choice', optionId: 'a' } })
+    if (!third.ok) throw new Error(third.error.messageZh)
+    const thirdSummary = await getSessionSummary(db, 'exp-a2')
+    expect(thirdSummary.ok && thirdSummary.value.independentFirst).toBe(0)
+  })
+
+  it('已提交槽位的提示与跳过被拒绝（CR53）', async () => {
+    const db = await openDb()
+    const created = await createTodaySession({ db, minutes: 5, profileId, idGenerator: () => 'guard-1' })
+    if (!created.ok || created.value.kind !== 'session') throw new Error('expected session')
+    const entered = await enterCurrentSlot(db, created.value.session.id)
+    if (!entered.ok) throw new Error(entered.error.messageZh)
+    const slotId = entered.value.slots[0].id
+    const submitted = await submitAnswer(db, { id: 'guard-submit', sessionId: created.value.session.id, slotId, expectedRevision: entered.value.revision, answer: { kind: 'choice', optionId: 'a' } })
+    if (!submitted.ok) throw new Error(submitted.error.messageZh)
+    const hint = await revealHint(db, { sessionId: created.value.session.id, slotId, hint: 'translation', expectedRevision: submitted.value.revision })
+    expect(hint).toMatchObject({ ok: false, error: { code: 'ALREADY_SUBMITTED' } })
+  })
+})
+
+describe('P1 回归：跨版本重做与未就绪最新版', () => {
+  it('同 profile 在旧版本见过、换版后重做不再判独立（版本字典序鲁棒）', async () => {
+    const db = await openDb()
+    const v9 = structuredClone(pack)
+    v9.version = '1.9.0'
+    await db.packs.add({ id: v9.id, version: v9.version, status: 'installed', pack: v9, installedAt: new Date().toISOString(), resourcesReady: true })
+    const firstSession = await createSession({ db, unitId: 'demo-school-club', minutes: 25, profileId, idGenerator: () => 'v9-first' })
+    if (!firstSession.ok || firstSession.value.kind !== 'session') throw new Error('expected session')
+    const firstEnter = await enterCurrentSlot(db, 'v9-first')
+    if (!firstEnter.ok) throw new Error(firstEnter.error.messageZh)
+    await submitAnswer(db, { id: 'v9-a1', sessionId: 'v9-first', slotId: firstEnter.value.slots[0].id, expectedRevision: firstEnter.value.revision, answer: { kind: 'choice', optionId: 'a' } })
+    // 换版：1.10.0（字典序 < 1.9.0），旧行保留给历史会话
+    const v10 = structuredClone(pack)
+    v10.version = '1.10.0'
+    await db.packs.add({ id: v10.id, version: v10.version, status: 'installed', pack: v10, installedAt: new Date().toISOString(), resourcesReady: true })
+    const redo = await createSession({ db, unitId: 'demo-school-club', minutes: 25, profileId, idGenerator: () => 'v10-redo' })
+    if (!redo.ok || redo.value.kind !== 'session') throw new Error('expected session')
+    const redoEnter = await enterCurrentSlot(db, 'v10-redo')
+    if (!redoEnter.ok) throw new Error(redoEnter.error.messageZh)
+    await submitAnswer(db, { id: 'v10-a1', sessionId: 'v10-redo', slotId: redoEnter.value.slots[0].id, expectedRevision: redoEnter.value.revision, answer: { kind: 'choice', optionId: 'a' } })
+    const summary = await getSessionSummary(db, 'v10-redo')
+    expect(summary.ok && summary.value.independentFirst).toBe(0)
+  })
+
+  it('最新版本资源未就绪时计划回落到就绪的旧版本，而不是丢掉整个包', async () => {
+    const db = await openDb({ withPack: false })
+    const older = structuredClone(pack)
+    older.version = '1.0.0'
+    const newer = structuredClone(pack)
+    newer.version = '2.0.0'
+    await db.packs.bulkAdd([
+      { id: older.id, version: older.version, status: 'installed', pack: older, installedAt: new Date().toISOString(), resourcesReady: true },
+      { id: newer.id, version: newer.version, status: 'installed', pack: newer, installedAt: new Date().toISOString(), resourcesReady: false },
+    ])
+    const preview = await previewTodayPlan({ db, minutes: 25, profileId })
+    expect(preview.ok).toBe(true)
+    if (!preview.ok) return
+    const versions = new Set(preview.value.plan.groups.map((candidate) => candidate.packVersion))
+    expect(versions.has('1.0.0')).toBe(true)
+    expect(versions.has('2.0.0')).toBe(false)
+  })
+})
+
+describe('CR7 复习页标签回退', () => {
+  it('家族在已安装包内显示单元名与题型，包外家族回退原始 id', async () => {
+    const db = await openDb()
+    await db.reviewStates.bulkAdd([
+      { profileId, familyId: 'join-context', reviewMode: 'recognition', dueDay: '2026-09-10', updatedAt: '2026-09-08T00:00:00.000Z', data: { stage: 0, dueDay: '2026-09-10', lapses: 0 } },
+      { profileId, familyId: 'ghost-family', reviewMode: 'recall', dueDay: '2026-09-10', updatedAt: '2026-09-08T00:00:00.000Z', data: { stage: 0, dueDay: '2026-09-10', lapses: 0 } },
+    ])
+    const page = await mountPage(db, '/review')
+    // 命中已安装包：单元名 · 题型 · 模式
+    expect(page.text()).toContain('词汇 · 再认')
+    // 未命中（课程包已卸载）：回退原始 familyId，不虚构标签
+    expect(page.text()).toContain('ghost-family')
   })
 })

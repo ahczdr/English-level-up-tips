@@ -1,0 +1,16 @@
+{
+  "id": "h1-vocab-used-to",
+  "familyId": "h1-used-to",
+  "skillIds": ["vocab.context"],
+  "level": "G0",
+  "section": "vocabulary",
+  "reviewMode": "recognition",
+  "promptZh": "在句子中选择 used to 的正确含义。",
+  "resourceId": null,
+  "estimatedSeconds": 45,
+  "sourceIds": ["original-demo"],
+  "explanation": { "summaryZh": "be used to doing 表示习惯于做某事。", "ruleZh": "注意 used to do 与 be used to doing 的区别。", "evidence": [], "distractors": [{ "optionId": "b", "reasonZh": "过去常常做某事后接动词原形。" }, { "optionId": "c", "reasonZh": "被用来做某事通常使用 be used to do。" }] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "习惯于" }, { "id": "b", "text": "过去常常" }, { "id": "c", "text": "被用来" }],
+  "answerOptionId": "a"
+}

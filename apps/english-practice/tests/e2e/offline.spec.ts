@@ -1,12 +1,6 @@
 import { expect, test, type Page } from '@playwright/test'
-import fs from 'node:fs'
-import path from 'node:path'
 
-test('构建产物：precache 仅 shell，不含题库（T12 checkbox 1，缺口13）', () => {
-  const swSource = fs.readFileSync(path.resolve(process.cwd(), 'dist/sw.js'), 'utf8')
-  expect(swSource.includes('content-packs')).toBe(false)
-  expect(swSource).toContain('content-catalog.json')
-})
+// CR61：precache 仅 shell 的产物断言已迁入 scripts/smoke-release.mjs（此处 dist 可能是 E2E 构建）
 
 // T12（D09）离线验证：生产构建 + Service Worker。
 // 断网刷新须能打开已下载题目；音频字节在本地 IndexedDB（T08），
@@ -27,8 +21,7 @@ const waitSwControlled = async (page: Page): Promise<void> => {
 
 const prepareContent = async (page: Page): Promise<void> => {
   await page.goto('/')
-  await page.getByRole('button', { name: '开始今日练习', exact: true }).click()
-  await page.getByRole('link', { name: '前往课程列表' }).click()
+  await await page.getByRole('button', { name: '选择今日练习内容', exact: true }).click()
   await page.getByRole('button', { name: '准备课程内容' }).click()
   await page.locator('.unit-card').first().waitFor()
 }

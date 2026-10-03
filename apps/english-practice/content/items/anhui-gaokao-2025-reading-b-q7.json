@@ -1,0 +1,30 @@
+{
+  "id": "anhui-gaokao-2025-reading-b-q7",
+  "familyId": "anhui-gaokao-2025-reading-b",
+  "skillIds": ["reading.main-idea"],
+  "level": "G2",
+  "section": "reading",
+  "reviewMode": "transfer",
+  "promptZh": "What does the author’s experience show?",
+  "resourceId": "anhui-gaokao-2025-reading-b",
+  "estimatedSeconds": 55,
+  "sourceIds": ["anhui-gaokao-2025-eol"],
+  "explanation": {
+    "summaryZh": "教师通过教学经历也发现了新的认识，说明教学过程同时也是学习过程。",
+    "ruleZh": "主旨概括题要综合首尾和转折后的核心认识，不能只看学生作品数量。",
+    "evidence": [{ "resourceId": "anhui-gaokao-2025-reading-b", "paragraphId": "p4", "quote": "my students demonstrated something more important to me" }],
+    "distractors": [
+      { "optionId": "b", "reasonZh": "文章没有讨论停滞不前。" },
+      { "optionId": "c", "reasonZh": "文章重点不是知识的力量。" },
+      { "optionId": "d", "reasonZh": "练习有帮助，但不是作者在结尾强调的认识。" }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    { "id": "a", "text": "Teaching is learning." },
+    { "id": "b", "text": "Still waters run deep." },
+    { "id": "c", "text": "Knowledge is power." },
+    { "id": "d", "text": "Practice makes perfect." }
+  ],
+  "answerOptionId": "a"
+}

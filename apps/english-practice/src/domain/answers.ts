@@ -39,7 +39,8 @@ function gradeChoice(item: ChoiceItem, answer: Extract<Answer, { kind: 'choice' 
 
 function gradeOrder(item: OrderItem, answer: Extract<Answer, { kind: 'order' }>): Grade {
   const tokenIds = new Set(item.tokens.map((token) => token.id))
-  if (answer.tokenIds.some((tokenId) => !tokenIds.has(tokenId)) || answer.tokenIds.length !== item.tokens.length) invalid('词块不存在或数量不正确')
+  // CR56.a：重复词块视为非法作答（只导致判错，不能误判对）
+  if (answer.tokenIds.some((tokenId) => !tokenIds.has(tokenId)) || answer.tokenIds.length !== item.tokens.length || new Set(answer.tokenIds).size !== answer.tokenIds.length) invalid('词块不存在、重复或数量不正确')
   const correct = item.acceptedOrders.some((order) => order.length === answer.tokenIds.length && order.every((tokenId, index) => tokenId === answer.tokenIds[index]))
   return { earned: correct ? 1 : 0, possible: 1, perGap: { order: correct } }
 }

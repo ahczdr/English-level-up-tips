@@ -1,52 +1,196 @@
 {
   "packs": [
     {
-      "id": "gaokao-demo",
-      "version": "1.0.0",
-      "status": "draft",
-      "bytes": 1746,
-      "sha256": "f7d8754b981634af007bc2ae853b6f4319df29359b6e25c207b7e8869c071654",
-      "path": "content-packs/gaokao-demo/1.0.0/pack.json"
+      "id": "anhui-gaokao-2013-cloze-a",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 21276,
+      "sha256": "02fa298a6d1792d53d2be763bc8bf5f36cbe1a19c2cd13c179caca09da4924c5",
+      "path": "content-packs/anhui-gaokao-2013-cloze-a/0.2.0/pack.json"
     },
     {
-      "id": "gaokao-demo",
-      "version": "1.0.1",
-      "status": "draft",
-      "bytes": 1762,
-      "sha256": "8c7410b0b366be4c76f70620101bd55b4fe6954b419c3f28a9fbbcc84e5ea96b",
-      "path": "content-packs/gaokao-demo/1.0.1/pack.json"
+      "id": "anhui-gaokao-2013-grammar-a",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 18886,
+      "sha256": "cf9f56c3eaf3001b7db422741522e86ab0d2ffa3d614ca4fc879553f1981730d",
+      "path": "content-packs/anhui-gaokao-2013-grammar-a/0.2.0/pack.json"
+    },
+    {
+      "id": "anhui-gaokao-2013-grammar-b",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 10574,
+      "sha256": "a58fa7c16f9eeb093f5cfac013ab83a05541c851566444f3b8f54d5cd10564db",
+      "path": "content-packs/anhui-gaokao-2013-grammar-b/0.2.0/pack.json"
+    },
+    {
+      "id": "anhui-gaokao-2013-reading-a",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 38807,
+      "sha256": "398a4077f5f9ce1368cc6de8f2354431a914cfbc93a47e4e7cf41f224bab3027",
+      "path": "content-packs/anhui-gaokao-2013-reading-a/0.2.0/pack.json"
+    },
+    {
+      "id": "anhui-gaokao-2013-writing-a",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 3170,
+      "sha256": "98b95e60d6af77a8256f9ec0f1b331a35a73692cd2776a7e6e1a1b3fa933e8ce",
+      "path": "content-packs/anhui-gaokao-2013-writing-a/0.2.0/pack.json"
+    },
+    {
+      "id": "anhui-gaokao-2014-cloze-a",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 21634,
+      "sha256": "36f33e6fbac8c9bf250bbc19926f114a88150fd18cc294f90b8b302cee3cc106",
+      "path": "content-packs/anhui-gaokao-2014-cloze-a/0.2.0/pack.json"
+    },
+    {
+      "id": "anhui-gaokao-2014-grammar-a",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 25782,
+      "sha256": "10ec02f1bb74f5051424092917bc9489e798df6cba0c118a74243332ab60c363",
+      "path": "content-packs/anhui-gaokao-2014-grammar-a/0.2.0/pack.json"
+    },
+    {
+      "id": "anhui-gaokao-2014-grammar-b",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 10986,
+      "sha256": "03bd8c09080fed8a4d38184ba8c074409c2d5fabc094d87c2e695a97f748e496",
+      "path": "content-packs/anhui-gaokao-2014-grammar-b/0.2.0/pack.json"
+    },
+    {
+      "id": "anhui-gaokao-2014-reading-a",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 39236,
+      "sha256": "56850e68bdb7244d673059bc57b931c94efba1e227c2fbda21eac7b6516f0ec9",
+      "path": "content-packs/anhui-gaokao-2014-reading-a/0.2.0/pack.json"
+    },
+    {
+      "id": "anhui-gaokao-2014-writing-a",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 3321,
+      "sha256": "504724e9e598af110daa5be7892b2667764e013a68e056dc4bb02caac266ac2a",
+      "path": "content-packs/anhui-gaokao-2014-writing-a/0.2.0/pack.json"
+    },
+    {
+      "id": "anhui-gaokao-2025-reading-a",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 75001,
+      "sha256": "0f805be9ed880d99df4883c687ecd4d1655f576ae7b38a26ec376cad507d8cfe",
+      "path": "content-packs/anhui-gaokao-2025-reading-a/0.2.0/pack.json"
+    },
+    {
+      "id": "anhui-gaokao-official-archive",
+      "version": "0.2.1",
+      "status": "published",
+      "bytes": 10216,
+      "sha256": "f6db3f64a2df43782dcb0d4f38a4894ee48aabf31e66685cdfda374a725f3f1f",
+      "path": "content-packs/anhui-gaokao-official-archive/0.2.1/pack.json"
+    },
+    {
+      "id": "cloze-gen",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 71858,
+      "sha256": "945dfc1699c5eeb036a183f48880bec3fa414e9b225165f4beb95d3d75198481",
+      "path": "content-packs/cloze-gen/0.2.0/pack.json"
+    },
+    {
+      "id": "gaokao-listening",
+      "version": "1.1.0",
+      "status": "published",
+      "bytes": 4750,
+      "sha256": "1cd23de2138a07ecacfe68c4dfc2fee185e5343bfca8f3f5dce4e8862cf43058",
+      "path": "content-packs/gaokao-listening/1.1.0/pack.json"
     },
     {
       "id": "gaokao-protocol-demo",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 17897,
+      "sha256": "9a73cb5f8f051a1114e6ca69a7a0efa8f8ff219700dd46df04eba3e15e734d9f",
+      "path": "content-packs/gaokao-protocol-demo/0.2.0/pack.json"
+    },
+    {
+      "id": "gaokao-three-years",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 18976,
+      "sha256": "8051e9e0ad07af90b42f6e86f1356a449907785a3893e0d5210107f96d7271da",
+      "path": "content-packs/gaokao-three-years/0.2.0/pack.json"
+    },
+    {
+      "id": "gapread-gen",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 50285,
+      "sha256": "280bcbeff79e4f42f1452abc03458e3257aec80afd4f64e3964079b0fdd0eacf",
+      "path": "content-packs/gapread-gen/0.2.0/pack.json"
+    },
+    {
+      "id": "grammar-gen",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 82004,
+      "sha256": "6d2506ee43c8ca782388b0e3cd935eea902ba3604df22f9f9b772294f0245d1d",
+      "path": "content-packs/grammar-gen/0.2.0/pack.json"
+    },
+    {
+      "id": "listening-gen",
       "version": "0.1.0",
-      "status": "draft",
-      "bytes": 16666,
-      "sha256": "212ae1c691fc4087791d74b895c7badc8a443f0bfa79a4837bcf88f28c511b20",
-      "path": "content-packs/gaokao-protocol-demo/0.1.0/pack.json"
+      "status": "published",
+      "bytes": 67350,
+      "sha256": "08d5898edaa72bc3bf33f522b53b56bd4043d8494fe12db68e8d50ee3188df91",
+      "path": "content-packs/listening-gen/0.1.0/pack.json"
     },
     {
-      "id": "gaokao-listening",
-      "version": "1.0.0",
-      "status": "draft",
-      "bytes": 4718,
-      "sha256": "8916e8796db85ab625df453777a066be1da80776b998f321008ca60e49674344",
-      "path": "content-packs/gaokao-listening/1.0.0/pack.json"
+      "id": "reading-gen",
+      "version": "0.1.0",
+      "status": "published",
+      "bytes": 70057,
+      "sha256": "ce7efde96a20d834a9cb0c4be2dff98782ad4b02946e0d7dac8e2c52f26c5310",
+      "path": "content-packs/reading-gen/0.1.0/pack.json"
     },
     {
-      "id": "gaokao-listening",
-      "version": "1.0.1",
-      "status": "draft",
-      "bytes": 4720,
-      "sha256": "c78961985501c134e85ed6d965b14b186c92fd39610ab390b4c00b4b0042e100",
-      "path": "content-packs/gaokao-listening/1.0.1/pack.json"
+      "id": "sentence-scramble",
+      "version": "0.1.0",
+      "status": "published",
+      "bytes": 29255,
+      "sha256": "001b19f33936da89baf067d5a627c920911b15f0d4566d684efa4bf810dcade7",
+      "path": "content-packs/sentence-scramble/0.1.0/pack.json"
     },
     {
-      "id": "gaokao-protocol-demo",
-      "version": "0.1.1",
-      "status": "draft",
-      "bytes": 17867,
-      "sha256": "bf7679a0639e7ce255fd3bae142de9111551cae69eab2d7b3704d98eb32ea2bd",
-      "path": "content-packs/gaokao-protocol-demo/0.1.1/pack.json"
+      "id": "vocab-core-1",
+      "version": "0.1.0",
+      "status": "published",
+      "bytes": 292889,
+      "sha256": "4f8f66a8c529828f4eb2f48ab24ec16f8d9dfdf5dcfb9862412e9ffe96223bec",
+      "path": "content-packs/vocab-core-1/0.1.0/pack.json"
+    },
+    {
+      "id": "vocab-core-2",
+      "version": "0.1.0",
+      "status": "published",
+      "bytes": 288066,
+      "sha256": "eeba7c4d8d38deba98cdfdcaa03e849ada8721a041a507090b5db9646bd5f822",
+      "path": "content-packs/vocab-core-2/0.1.0/pack.json"
+    },
+    {
+      "id": "writing-gen",
+      "version": "0.2.0",
+      "status": "published",
+      "bytes": 16035,
+      "sha256": "5bc652889d56bb6b3195bc59cf64d45349437be83d8c0ba08a227f8b51f99299",
+      "path": "content-packs/writing-gen/0.2.0/pack.json"
     }
   ]
 }

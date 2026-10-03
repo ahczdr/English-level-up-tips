@@ -1,5 +1,6 @@
 // T14：E2E 测试时钟桥。
-// - 服务层默认时钟统一走 e2eNow()（学习/日界逻辑全部经 LearningClock 注入，此为默认实现）。
+// - 服务层默认时钟统一走 e2eNow()（learning/sessionFlow/writing/drafts 全部经此或注入时钟）；
+//   content/downloads 的 now 为注入缝（缺省 new Date()），只落作业时间戳，不参与学习日界。
 // - 偏移只能在 E2E 构建（VITE_E2E=true）中通过 window.__GAOKAO_E2E__.advanceDays 修改；
 //   生产构建该入口不存在，e2eNow() 恒等于 new Date()，行为与注入真实时钟完全一致。
 

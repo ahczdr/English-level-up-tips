@@ -37,7 +37,7 @@ describe('App UI', () => {
     await router.isReady()
 
     const button = wrapper.get('button')
-    expect(button.text()).toBe('开始今日练习')
+    expect(button.text()).toBe('选择今日练习内容')
     expect(button.attributes('type')).toBe('button')
   })
 
@@ -56,9 +56,8 @@ describe('App UI', () => {
     await button.trigger('click')
     await flushPromises()
 
-    const status = wrapper.get('[role="status"]')
-    expect(status.text()).toContain('暂无可用课程')
-    expect(status.text()).toContain('请先准备学习内容')
+    // CR12.1：单一入口总是进入课程页，空态由课程页承接
+    expect(router.currentRoute.value.path).toBe('/learn')
     expect(wrapper.text()).not.toContain('会话')
     expect(wrapper.text()).not.toContain('成绩')
   })
@@ -75,13 +74,13 @@ describe('App UI', () => {
 
     const button = wrapper.get('button')
     await settleToday()
-    await button.trigger('click')
-    await button.trigger('click')
-    await button.trigger('click')
-    await flushPromises()
-
-    expect(wrapper.findAll('[role="status"]')).toHaveLength(1)
-    expect(wrapper.findAll('button')).toHaveLength(1)
+    for (let index = 0; index < 3; index += 1) {
+      await router.push('/today')
+      await router.isReady()
+      await button.trigger('click')
+      await flushPromises()
+      expect(router.currentRoute.value.path).toBe('/learn')
+    }
   })
 })
 

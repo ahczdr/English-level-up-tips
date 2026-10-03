@@ -6,6 +6,7 @@ import type { GaokaoDatabase } from '../../data/db';
 import type { Session } from '../../data/migrations';
 import { loadPersonalSettings } from '../../services/settings';
 import { collectLevelUpEvidence, createTodaySession, previewTodayPlan } from '../../services/learning';
+import { computeStreak } from '../../domain/progress';
 import type { PlanGroup, PlanTodayResult } from '../../domain/planner';
 import AppButton from '../../components/AppButton.vue';
 
@@ -29,8 +30,12 @@ const needsSetup = ref(false);
 const plan = ref<PlanTodayResult | null>(null);
 const planGroups = ref<PlanGroup[]>([]);
 const planToday = ref('');
+const streak = ref(0);
+const doneToday = ref(0);
+const planTotal = ref(0);
 const planMinutes = ref(10);
 const planProfileId = ref('gaokao-common-training-v1');
+const planTimeZone = ref('Asia/Shanghai');
 const starting = ref(false);
 const suggestion = ref<{ kind: 'up' | 'support' | 'hold'; headline: string; detail: string } | null>(null);
 const suggestionDismissed = ref(false);
@@ -45,9 +50,12 @@ const describeGroup = (group: PlanGroup): string => {
 
 const refreshState = async (): Promise<void> => {
   try {
+    // 续练入口只列当前 profile 的会话（切换 profile 不串）
+    const settings = await loadPersonalSettings(db.value);
+    planProfileId.value = settings.profileId;
     const sessions = await db.value.sessions.toArray();
     resumable.value = sessions
-      .filter((session) => session.state === 'active' || session.state === 'paused')
+      .filter((session) => (session.state === 'active' || session.state === 'paused') && session.profileId === settings.profileId)
       .sort((left, right) => (left.updatedAt < right.updatedAt ? 1 : -1))
       .slice(0, 3);
   } catch {
@@ -63,6 +71,7 @@ const refreshState = async (): Promise<void> => {
     const settings = await loadPersonalSettings(db.value);
     planMinutes.value = settings.defaultMinutes;
     planProfileId.value = settings.profileId;
+    planTimeZone.value = settings.timeZone;
   } catch {
     planMinutes.value = 10;
   }
@@ -76,11 +85,23 @@ const refreshState = async (): Promise<void> => {
   suggestion.value = null;
   if (!hasContent.value) return;
   try {
-    const preview = await previewTodayPlan({ db: db.value, minutes: planMinutes.value, profileId: planProfileId.value });
+    const preview = await previewTodayPlan({ db: db.value, minutes: planMinutes.value, profileId: planProfileId.value, timeZone: planTimeZone.value });
     if (preview.ok) {
       plan.value = preview.value.plan;
       planGroups.value = preview.value.plan.groups;
       planToday.value = preview.value.today;
+      // 鼓励卡：连续学习天数 + 今日已完成题数（首次作答按学习日计）
+      const [attemptRows, writingRows] = await Promise.all([
+        db.value.attempts.where('studyDay').equals(preview.value.today).toArray(),
+        db.value.writingVersions.toArray(),
+      ]);
+      const todayDone = attemptRows.filter((row) => row.phase === 'first').length;
+      const allDays = new Set<string>();
+      (await db.value.attempts.toArray()).forEach((row) => allDays.add(row.studyDay));
+      writingRows.forEach((row) => allDays.add(row.studyDay ?? row.createdAt.slice(0, 10)));
+      streak.value = computeStreak([...allDays], preview.value.today);
+      doneToday.value = todayDone;
+      planTotal.value = planGroups.value.reduce((sum, group) => sum + group.items.length, 0);
     }
   } catch {
     plan.value = null;
@@ -131,13 +152,8 @@ const loadState = async (): Promise<void> => {
 onMounted(loadState);
 
 const startTodayPractice = async (): Promise<void> => {
-  // CR24：加载未完成时先等加载结束，再按真实内容状态反馈，不误报「暂无课程」
+  // CR24：加载未完成时先等加载结束再跳转；课程空态由课程页的「准备课程内容」承接（CR12.1 单一入口）
   if (loading.value) await loadState();
-  if (!hasContent.value) {
-    message.value = '暂无可用课程，请先准备学习内容。';
-    return;
-  }
-  await loadState();
   await router.push('/learn');
 };
 
@@ -145,7 +161,7 @@ const startTodayPlan = async (): Promise<void> => {
   if (starting.value) return;
   starting.value = true;
   try {
-    const created = await createTodaySession({ db: db.value, minutes: planMinutes.value, profileId: planProfileId.value });
+    const created = await createTodaySession({ db: db.value, minutes: planMinutes.value, profileId: planProfileId.value, timeZone: planTimeZone.value });
     if (created.ok && created.value.kind === 'empty') {
       // CR17：今日计划全部完成是正常空态，按提示处理而非错误
       message.value = created.value.messageZh;
@@ -212,6 +228,13 @@ const resumePractice = async (session: Session): Promise<void> => {
       aria-label="今日计划"
     >
       <h3>今日计划</h3>
+      <div class="today-encourage" aria-label="学习鼓励">
+        <span class="today-streak">🔥 连续学习 {{ streak }} 天</span>
+        <span v-if="planTotal > 0" class="today-progress-num">今日已完成 {{ doneToday }}/{{ Math.max(planTotal, doneToday) }} 题</span>
+      </div>
+      <div v-if="planTotal > 0" class="today-progress" role="progressbar" :aria-valuenow="doneToday" aria-valuemin="0" :aria-valuemax="planTotal">
+        <div class="today-progress-fill" :style="{ width: Math.min(100, Math.round((doneToday / Math.max(planTotal, doneToday)) * 100)) + '%' }"></div>
+      </div>
       <p
         v-if="plan === null"
         role="status"
@@ -306,12 +329,8 @@ const resumePractice = async (session: Session): Promise<void> => {
         :disabled="loading"
         @click="startTodayPractice"
       >
-        开始今日练习
+        选择今日练习内容
       </AppButton>
-      <router-link
-        to="/learn"
-        class="learn-link"
-      >前往课程列表</router-link>
       <router-link
         to="/downloads"
         class="downloads-link"

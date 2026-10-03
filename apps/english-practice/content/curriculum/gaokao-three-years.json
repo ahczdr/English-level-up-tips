@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "titleZh": "高考英语三年成长路线",
+  "sections": [
+    { "id": "vocabulary", "titleZh": "词汇", "goalZh": "在语境中识别高频词义与搭配" },
+    { "id": "sentence", "titleZh": "句子", "goalZh": "建立基本句型并提升句子理解" },
+    { "id": "grammar", "titleZh": "语法", "goalZh": "掌握时态、从句、非谓语等核心规则" },
+    { "id": "reading", "titleZh": "阅读", "goalZh": "训练定位信息、推断和概括" },
+    { "id": "gap-reading", "titleZh": "七选五", "goalZh": "训练篇章衔接与结构判断" },
+    { "id": "cloze", "titleZh": "完形", "goalZh": "结合上下文选择词义和逻辑" },
+    { "id": "listening", "titleZh": "听力", "goalZh": "抓住主旨、细节和说话意图" },
+    { "id": "application-writing", "titleZh": "应用文写作", "goalZh": "完成通知、邀请、建议信等实用表达" },
+    { "id": "continuation", "titleZh": "读后续写", "goalZh": "保持情节、语言和段落衔接" }
+  ],
+  "years": [
+    {
+      "id": "senior-one",
+      "titleZh": "高一基础",
+      "subtitleZh": "先把句子读懂、词汇用起来",
+      "level": "G0",
+      "units": [
+        { "id": "h1-vocabulary", "titleZh": "校园与日常词汇", "sections": ["vocabulary", "sentence"], "skills": ["vocab.context", "sentence.core"], "targetZh": "掌握 300 个高频词和基本搭配", "status": "draft", "itemCount": 60 },
+        { "id": "h1-grammar", "titleZh": "时态与主谓一致", "sections": ["grammar"], "skills": ["grammar.tense", "grammar.agreement"], "targetZh": "能在短句中判断谓语形式", "status": "draft", "itemCount": 60 },
+        { "id": "h1-reading", "titleZh": "短文定位信息", "sections": ["reading", "listening"], "skills": ["reading.detail", "listening.detail"], "targetZh": "学会回到原文找证据", "status": "draft", "itemCount": 40 }
+      ]
+    },
+    {
+      "id": "senior-two",
+      "titleZh": "高二强化",
+      "subtitleZh": "从看懂句子走向读懂文章",
+      "level": "G1",
+      "units": [
+        { "id": "h2-vocabulary", "titleZh": "熟词生义与搭配", "sections": ["vocabulary", "cloze"], "skills": ["vocab.collocation", "cloze.context"], "targetZh": "在上下文中选择准确词义", "status": "draft", "itemCount": 80 },
+        { "id": "h2-grammar", "titleZh": "从句与非谓语", "sections": ["grammar", "sentence"], "skills": ["grammar.clause", "grammar.infinitive"], "targetZh": "拆解长句并判断结构关系", "status": "draft", "itemCount": 80 },
+        { "id": "h2-reading", "titleZh": "篇章结构与推断", "sections": ["reading", "gap-reading"], "skills": ["reading.inference", "reading.cohesion"], "targetZh": "用段落关系排除干扰项", "status": "draft", "itemCount": 80 },
+        { "id": "h2-writing", "titleZh": "应用文表达", "sections": ["application-writing"], "skills": ["writing.task"], "targetZh": "完成目的明确、格式正确的短文", "status": "draft", "itemCount": 30 }
+      ]
+    },
+    {
+      "id": "senior-three",
+      "titleZh": "高三冲刺",
+      "subtitleZh": "用真题结构练稳定，用错题做复盘",
+      "level": "G2",
+      "units": [
+        { "id": "h3-reading", "titleZh": "高考阅读综合训练", "sections": ["reading", "cloze", "gap-reading"], "skills": ["reading.main-idea", "cloze.logic", "reading.cohesion"], "targetZh": "在限时条件下稳定完成阅读任务", "status": "draft", "itemCount": 120 },
+        { "id": "h3-listening", "titleZh": "听力主旨与细节", "sections": ["listening"], "skills": ["listening.main-idea", "listening.detail"], "targetZh": "先抓场景，再抓数字和意图", "status": "draft", "itemCount": 60 },
+        { "id": "h3-writing", "titleZh": "应用文与读后续写", "sections": ["application-writing", "continuation"], "skills": ["writing.task", "writing.continuation"], "targetZh": "按评分点完成可读、连贯的表达", "status": "draft", "itemCount": 50 }
+      ]
+    }
+  ]
+}

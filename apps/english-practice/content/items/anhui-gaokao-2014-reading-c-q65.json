@@ -1,0 +1,16 @@
+{
+  "id": "anhui-gaokao-2014-reading-c-q65",
+  "familyId": "anhui-2014-reading-c",
+  "skillIds": ["reading.detail", "reading.inference"],
+  "level": "G1",
+  "section": "reading",
+  "reviewMode": "recognition",
+  "promptZh": "根据文章 C 回答第 65 题。",
+  "resourceId": "anhui-gaokao-2014-reading-c",
+  "estimatedSeconds": 60,
+  "sourceIds": ["anhui-gaokao-2014-official"],
+  "explanation": { "summaryZh": "收藏品和收藏者的回答可以揭示收藏者是谁。", "ruleZh": "细节题要结合 reveal 和 tell you who they are 的直接表述。", "evidence": [{ "resourceId": "anhui-gaokao-2014-reading-c", "paragraphId": "p2", "quote": "tell you who they are" }], "distractors": [] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "Who they are." }, { "id": "b", "text": "How old they are." }, { "id": "c", "text": "Where they were born." }, { "id": "d", "text": "Why they might mean to collect." }],
+  "answerOptionId": "a"
+}

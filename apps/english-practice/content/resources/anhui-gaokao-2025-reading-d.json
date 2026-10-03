@@ -1,0 +1,27 @@
+{
+  "id": "anhui-gaokao-2025-reading-d",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "text": "Microplastics have become a common source of pollution across the Earth — they have settled in the deep sea and on the Himalayas, stuck inside volcanic rocks, filled the stomachs of seabirds and even fallen in fresh Antarctic snow. They are even appearing inside humans."
+    },
+    {
+      "id": "p2",
+      "text": "Now, new research suggests that a simple, cheap measure may significantly reduce the level of microplastics in water from your tap (水龙头): boiling and filtering (过滤) it. In a study published Wednesday in Environmental Science & Technology Letters, researchers from China found that boiling tap water for just five minutes — then filtering it after it cools — could remove at least 80 percent of its microplastics."
+    },
+    {
+      "id": "p3",
+      "text": "Crucially, this process relies on the water containing enough calcium carbonate (碳酸钙) to trap the plastics. In the study, boiling hard water containing 300 milligrams of calcium carbonate led to an almost 90 percent drop in plastics. But in samples with less than 60 milligrams of calcium carbonate, boiling reduced the level of plastics by just 25 percent. Additionally, the research didn’t include all types of plastics. The team focused only on three common types — polystyrene, polyethylene and polypropylene — and they didn’t study other chemicals previously found in water such as vinyl chloride."
+    },
+    {
+      "id": "p4",
+      "text": "Still, the findings show a potential path forward for reducing microplastic exposure — a task that’s becoming increasingly difficult. Even bottled water, scientists found earlier this year, contains 10 to 1,000 times more microplastics than originally thought."
+    },
+    {
+      "id": "p5",
+      "text": "Scientists are still trying to determine how harmful microplastics are — but what they do know has raised concerns. The new study suggests boiling tap water could be a tool to limit intake. “The way they demonstrated how microplastics were trapped through the boiling process was nice,” Caroline Gauchette-Lindsay, an environmental engineer of the University of Glasgow in Scotland who was not involved in the research, tells New Scientist. “We should be looking into upgrading drinking water treatment plants so they remove microplastics.”"
+    }
+  ],
+  "audioAssetId": null,
+  "transcript": null
+}

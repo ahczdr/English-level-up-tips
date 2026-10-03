@@ -15,7 +15,7 @@ import {
   type PlannerLevel,
 } from '../domain/planner'
 import type { GaokaoDatabase } from '../data/db'
-import { allPackRecords, findInstalledRecord, verifyInstalledRefs } from '../data/pack-reader'
+import { allPackRecords, findInstalledRecord, latestInstalledByPackId, verifyInstalledRefs } from '../data/pack-reader'
 import type { AttemptRecord, Exposure, Session, Slot } from '../data/migrations'
 
 export type AppErrorCode = 'INVALID_CONTENT' | 'INVALID_ANSWER' | 'NOT_FOUND' | 'STALE_SESSION' | 'CONTENT_MISSING' | 'ALREADY_SUBMITTED' | 'INSUFFICIENT_SPACE' | 'STORAGE_FAILED'
@@ -71,6 +71,7 @@ export interface CreateSessionInput {
   unitId: string | null
   minutes: number
   profileId: string
+  timeZone?: string
   clock?: LearningClock
   idGenerator?: () => string
 }
@@ -82,13 +83,12 @@ export type CreateSessionValue =
 const systemClock: LearningClock = { now: () => e2eNow() }
 const defaultId = () => globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(16).slice(2)}`
 
-const studyDay = (date: Date) => {
-  return studyDayFor(date)
+const studyDay = (date: Date, timeZone = 'Asia/Shanghai') => {
+  return studyDayFor(date, timeZone)
 }
 
 const error = (code: AppErrorCode, messageZh: string): Result<never> => ({ ok: false, error: { code, messageZh } })
 const packValue = (record: { pack: unknown }) => record.pack as CoursePack
-const installed = (record: { status: string; resourcesReady: boolean }) => record.status === 'installed' && record.resourcesReady
 
 const findItem = (pack: CoursePack, itemId: string): Item | undefined => pack.items.find((item) => item.id === itemId)
 const packHasItem = (packValueUnknown: unknown, itemId: string): boolean => {
@@ -96,8 +96,8 @@ const packHasItem = (packValueUnknown: unknown, itemId: string): boolean => {
   return Array.isArray(pack?.items) && pack.items.some((item) => item.id === itemId)
 }
 
-// —— T10 今日规划：按共享材料合并题组（与 createSession 的组合逻辑一致，但独立实现避免回归） ——
-const mergeBySharedResource = (items: Item[]): Item[][] => {
+// —— T10 今日规划：按共享材料合并题组（CR10：单一共享纯函数，createSession 与今日计划同源） ——
+export const mergeBySharedResource = (items: Item[]): Item[][] => {
   const ranges = new Map<string, { start: number; end: number }>()
   items.forEach((item, index) => {
     if (item.resourceId === null) return
@@ -135,15 +135,17 @@ export interface TodayPlanBundle {
 export interface TodayPlanOptions {
   minutes: number
   profileId: string
+  timeZone?: string
   clock?: LearningClock
   seed?: string
 }
 
 const collectTodayPlanBundle = async (db: GaokaoDatabase, options: TodayPlanOptions): Promise<TodayPlanBundle & { input: PlanTodayInput }> => {
   const moment = (options.clock ?? systemClock).now()
-  const today = studyDay(moment)
+  const today = studyDay(moment, options.timeZone)
   const budgetSeconds = Math.max(0, options.minutes) * 60
-  const records = (await allPackRecords(db)).filter((record) => installed(record))
+  // CR46：多版本并存时计划只取每个 packId 的最新版本，同单元不再跨版本重复成组
+  const records = latestInstalledByPackId(await allPackRecords(db))
   const groups: PlanGroup[] = []
   for (const record of records) {
     const pack = packValue(record)
@@ -167,11 +169,11 @@ const collectTodayPlanBundle = async (db: GaokaoDatabase, options: TodayPlanOpti
       }
     }
   }
-  const dueReviews: PlanDueReview[] = (await db.reviewStates.toArray())
-    .filter((record) => record.profileId === options.profileId)
+  // CR51：按索引查询替代全表扫描；曝光读 per-profile 账本（CR46/CR50）
+  const dueReviews: PlanDueReview[] = (await db.reviewStates.where('profileId').equals(options.profileId).toArray())
     .map((record) => ({ familyId: record.familyId, reviewMode: record.reviewMode, dueDay: record.dueDay }))
   // 曝光按 profile 过滤：其他 profile 见过的题对本 profile 仍是新内容（CR2）
-  const exposedItemIds = (await db.exposures.toArray()).filter((exposure) => exposure.profileId === options.profileId).map((exposure) => exposure.itemId)
+  const exposedItemIds = (await db.exposureLog.where('profileId').equals(options.profileId).toArray()).map((exposure) => exposure.itemId)
   const input: PlanTodayInput = {
     today,
     budgetSeconds,
@@ -189,7 +191,7 @@ export interface PreviewTodayPlanInput extends TodayPlanOptions {
 
 export async function previewTodayPlan(options: PreviewTodayPlanInput): Promise<Result<TodayPlanBundle>> {
   try {
-    const today = studyDay((options.clock ?? systemClock).now())
+    const today = studyDay((options.clock ?? systemClock).now(), options.timeZone)
     // 摘要与实际会话同源：已有今日会话时以其 sessionId 为 seed，紧预算下组成一致
     const marker = await options.db.settings.get(`today-session:${options.profileId}:${today}`)
     const seed = marker !== undefined && typeof marker.value === 'string' ? marker.value : (options.seed ?? `preview:${options.profileId}:${today}`)
@@ -204,6 +206,7 @@ export interface CreateTodaySessionInput {
   db: GaokaoDatabase
   minutes: number
   profileId: string
+  timeZone?: string
   clock?: LearningClock
   idGenerator?: () => string
 }
@@ -211,7 +214,7 @@ export interface CreateTodaySessionInput {
 // 今日计划会话：seed=sessionId 冻结抽题；生成后持久化，刷新/重开不重新抽题
 export async function createTodaySession(input: CreateTodaySessionInput): Promise<Result<CreateSessionValue>> {
   try {
-    const probeToday = studyDay((input.clock ?? systemClock).now())
+    const probeToday = studyDay((input.clock ?? systemClock).now(), input.timeZone)
     // 同日冻结：已有进行中/暂停的今日会话则直接复用（刷新或重复点击不重新抽题）
     const markerId = `today-session:${input.profileId}:${probeToday}`
     // CR4：marker 检查 → 建会话 → 写 marker 整体放进同一读写事务，
@@ -226,7 +229,7 @@ export async function createTodaySession(input: CreateTodaySessionInput): Promis
     const early = await reusable()
     if (early !== null) return { ok: true, value: { kind: 'session', session: early } }
     const sessionId = (input.idGenerator ?? defaultId)()
-    const bundle = await collectTodayPlanBundle(input.db, { minutes: input.minutes, profileId: input.profileId, clock: input.clock, seed: sessionId })
+    const bundle = await collectTodayPlanBundle(input.db, { minutes: input.minutes, profileId: input.profileId, timeZone: input.timeZone, clock: input.clock, seed: sessionId })
     if (bundle.candidateGroups === 0) return error('CONTENT_MISSING', '暂无可用课程内容，请先准备学习内容')
     if (bundle.plan.groups.length === 0) {
       // CR17：无到期复习且候选全为熟题时是「今日已完成」的正常空态，不是预算不足
@@ -256,12 +259,17 @@ export async function createTodaySession(input: CreateTodaySessionInput): Promis
       createdAt: moment.toISOString(),
       updatedAt: moment.toISOString(),
       studyDay: bundle.today,
+      timeZone: input.timeZone ?? 'Asia/Shanghai',
     }
     const value = await input.db.transaction('rw', input.db.sessions, input.db.settings, async (): Promise<CreateSessionValue> => {
       const again = await reusable()
       if (again !== null) return { kind: 'session', session: again }
       await input.db.sessions.add(session)
       await input.db.settings.put({ id: markerId, value: session.id })
+      // CR56.b：清理既往学习日的 today-session marker（含其他 profile 的旧行——
+      // marker 是按日复用指针，过期即无效；否则跨 profile 按日累积永不清理）
+      const staleMarkers = (await input.db.settings.where(':id').startsWith('today-session:').toArray()).filter((row) => row.id !== markerId)
+      for (const row of staleMarkers) await input.db.settings.delete(row.id)
       return { kind: 'session', session }
     })
     return { ok: true, value }
@@ -273,11 +281,17 @@ export async function createTodaySession(input: CreateTodaySessionInput): Promis
 // P03 升级建议证据：有效独立首次作答、学习日、家族、正确率与连续首次错误
 export async function collectLevelUpEvidence(db: GaokaoDatabase, profileId: string, currentLevel: PlannerLevel = 'G0'): Promise<Result<{ evidence: LevelUpEvidence; suggestion: ReturnType<typeof suggestLevelUp> }>> {
   try {
-    // CR2：作答与曝光都按 profileId 过滤，跨 profile 不混算
-    const rows = (await db.attempts.toArray()).filter((record) => record.phase === 'first' && record.profileId === profileId)
-    // P03：提示后的正确与熟题重试不参与有效独立首次统计（D06 独立首次三条件）
-    const exposures = (await db.exposures.toArray()).filter((exposure) => exposure.profileId === profileId)
-    const exposureSessions = new Map(exposures.map((exposure) => [`${exposure.packId}|${exposure.packVersion}|${exposure.itemId}`, exposure.firstSeenSessionId]))
+    // CR2：作答与曝光都按 profileId 过滤，跨 profile 不混算；CR51：走索引查询
+    const rows = (await db.attempts.where('profileId').equals(profileId).toArray()).filter((record) => record.phase === 'first')
+    // P03：提示后的正确与熟题重试不参与有效独立首次统计（D06 独立首次三条件）。
+    // 熟题口径与 submitAnswer 一致（itemId 级）：本 profile 在任意版本下由其他会话首见即熟题
+    const exposures = await db.exposureLog.where('profileId').equals(profileId).toArray()
+    const seenSessionsByItem = new Map<string, Set<string>>()
+    for (const exposure of exposures) {
+      const sessions = seenSessionsByItem.get(exposure.itemId) ?? new Set<string>()
+      sessions.add(exposure.firstSeenSessionId)
+      seenSessionsByItem.set(exposure.itemId, sessions)
+    }
     type FirstRow = { gradeEarned: number; gradePossible: number; studyDay: string; familyId: string; createdAt: string }
     const firsts: FirstRow[] = []
     for (const record of rows) {
@@ -285,9 +299,8 @@ export async function collectLevelUpEvidence(db: GaokaoDatabase, profileId: stri
       const grade = payload.grade ?? { earned: 0, possible: 0 }
       if (payload.assistance !== undefined && payload.assistance.length > 0) continue
       if (payload.ref !== undefined) {
-        const key = `${payload.ref.packId}|${payload.ref.packVersion}|${payload.ref.itemId}`
-        const firstSeenSessionId = exposureSessions.get(key)
-        if (firstSeenSessionId !== undefined && firstSeenSessionId !== record.sessionId) continue
+        const seenSessions = seenSessionsByItem.get(payload.ref.itemId)
+        if (seenSessions !== undefined && [...seenSessions].some((sessionId) => sessionId !== record.sessionId)) continue
       }
       firsts.push({ gradeEarned: grade.earned, gradePossible: grade.possible, studyDay: record.studyDay, familyId: record.familyId, createdAt: record.createdAt })
     }
@@ -318,7 +331,8 @@ export async function createSession(input: CreateSessionInput): Promise<Result<C
     if (input.unitId === null) return { ok: true, value: { kind: 'empty', messageZh: '请选择课程' } }
     const records = await allPackRecords(input.db)
     const allWithUnit = records.some((record) => packValue(record).units.some((unit) => unit.id === input.unitId))
-    const record = records.find((candidate) => installed(candidate) && packValue(candidate).units.some((unit) => unit.id === input.unitId))
+    // CR46：多版本并存时组合入口只取最新版本（与今日计划同口径）
+    const record = latestInstalledByPackId(records).find((candidate) => packValue(candidate).units.some((unit) => unit.id === input.unitId))
     if (!record) return allWithUnit ? error('CONTENT_MISSING', '课程内容尚未下载完成，请稍后再试') : error('NOT_FOUND', '未找到指定课程单元')
 
     const pack = packValue(record)
@@ -327,31 +341,7 @@ export async function createSession(input: CreateSessionInput): Promise<Result<C
     const items = unit.itemIds.map((itemId) => findItem(pack, itemId))
     if (items.some((item): item is undefined => !item)) return error('CONTENT_MISSING', '课程条目内容缺失，请重新下载课程包')
 
-    const ranges = new Map<string, { start: number; end: number }>()
-    ;(items as Item[]).forEach((item, index) => {
-      if (item.resourceId === null) return
-      const range = ranges.get(item.resourceId)
-      if (range) range.end = index
-      else ranges.set(item.resourceId, { start: index, end: index })
-    })
-    const mergedRanges: Array<{ start: number; end: number }> = []
-    for (const range of [...ranges.values()].sort((left, right) => left.start - right.start)) {
-      const last = mergedRanges.at(-1)
-      if (last && range.start <= last.end) last.end = Math.max(last.end, range.end)
-      else mergedRanges.push({ ...range })
-    }
-    const groups: Item[][] = []
-    for (let index = 0; index < items.length;) {
-      const item = items[index] as Item
-      const range = mergedRanges.find((candidate) => candidate.start === index)
-      if (range) {
-        groups.push((items as Item[]).slice(index, range.end + 1))
-        index = range.end + 1
-      } else {
-        groups.push([item])
-        index += 1
-      }
-    }
+    const groups = mergeBySharedResource(items as Item[])
     const budget = Math.max(0, input.minutes) * 60
     const chosen: Item[] = []
     let usedSeconds = 0
@@ -383,7 +373,8 @@ export async function createSession(input: CreateSessionInput): Promise<Result<C
       state: 'active',
       createdAt: now.toISOString(),
       updatedAt: now.toISOString(),
-      studyDay: studyDay(now),
+      studyDay: studyDay(now, input.timeZone),
+      timeZone: input.timeZone ?? 'Asia/Shanghai',
     }
     await input.db.sessions.add(session)
     return { ok: true, value: { kind: 'session', session } }
@@ -409,7 +400,7 @@ export async function loadSession(db: GaokaoDatabase, sessionId: string): Promis
 
 export async function enterCurrentSlot(db: GaokaoDatabase, sessionId: string, clock: LearningClock = systemClock): Promise<Result<Session>> {
   try {
-    return await db.transaction('rw', db.sessions, db.exposures, db.packs, async () => {
+    return await db.transaction('rw', db.sessions, db.exposures, db.exposureLog, db.packs, async () => {
       const session = await db.sessions.get(sessionId)
       if (!session) return error('NOT_FOUND', '未找到指定学习记录')
       const slot = session.slots[session.currentIndex]
@@ -427,9 +418,24 @@ export async function enterCurrentSlot(db: GaokaoDatabase, sessionId: string, cl
           familyId: item.familyId,
           profileId: session.profileId,
           firstSeenAt: now.toISOString(),
-          studyDay: studyDay(now),
+          studyDay: studyDay(now, session.timeZone),
           firstSeenSessionId: session.id,
         } satisfies Exposure)
+      }
+      // CR46/CR50：per-profile 账本各记一行（主键含 profileId，跨 profile/跨版本互不覆盖）
+      const logKey = [session.profileId, slot.ref.packId, slot.ref.packVersion, slot.ref.itemId] as const
+      if (!await db.exposureLog.get(logKey)) {
+        const now = clock.now()
+        await db.exposureLog.add({
+          profileId: session.profileId,
+          packId: slot.ref.packId,
+          packVersion: slot.ref.packVersion,
+          itemId: slot.ref.itemId,
+          familyId: item.familyId,
+          firstSeenAt: now.toISOString(),
+          studyDay: studyDay(now, session.timeZone),
+          firstSeenSessionId: session.id,
+        })
       }
       if (slot.state === 'unseen') {
         slot.state = 'answering'
@@ -470,6 +476,10 @@ export async function completeSession(db: GaokaoDatabase, sessionId: string, clo
     return await db.transaction('rw', db.sessions, db.drafts, async () => {
       const session = await db.sessions.get(sessionId)
       if (!session) return error('NOT_FOUND', '未找到指定学习记录')
+      // CR53：存在未处理槽位（unseen/answering）时不允许终结，防止清草稿丢作答
+      if (session.slots.some((slot) => slot.state === 'unseen' || slot.state === 'answering')) {
+        return error('INVALID_CONTENT', '还有未完成的题目，不能结束本次练习')
+      }
       if (session.state !== 'completed') {
         session.state = 'completed'
         session.revision += 1
@@ -538,7 +548,7 @@ const firstAttempt = async (db: GaokaoDatabase, sessionId: string, slotId: strin
 
 export async function submitAnswer(db: GaokaoDatabase, command: SubmitCommand, clock: LearningClock = systemClock): Promise<Result<Attempt>> {
   try {
-    return await db.transaction('rw', [db.sessions, db.attempts, db.reviewStates, db.achievements, db.packs, db.exposures], async () => {
+    return await db.transaction('rw', [db.sessions, db.attempts, db.reviewStates, db.achievements, db.packs, db.exposures, db.exposureLog], async () => {
       const replay = toAttempt(await db.attempts.get(command.id))
       if (replay) return { ok: true, value: replay }
       const context = await readSlotContext(db, command.sessionId, command.slotId)
@@ -546,6 +556,8 @@ export async function submitAnswer(db: GaokaoDatabase, command: SubmitCommand, c
       const { session, slot, item, pack } = context.value
       if (session.revision !== command.expectedRevision) return stale()
       if (await firstAttempt(db, session.id, slot.id)) return error('ALREADY_SUBMITTED', '该题已经提交过首次答案')
+      // CR53：skipSlot 终结的槽位不再接受首次作答（跳过即终结，与 ALREADY_SUBMITTED 语义对称）
+      if (slot.state === 'skipped') return error('ALREADY_SUBMITTED', '该题已跳过，不再接受首次作答')
       if (item.kind === 'writing') return error('INVALID_CONTENT', '写作题不使用客观题判分器')
       let grade: Grade
       try {
@@ -555,15 +567,17 @@ export async function submitAnswer(db: GaokaoDatabase, command: SubmitCommand, c
         throw cause
       }
       const now = clock.now()
-      // T16/R2：per-profile 曝光判定——跨 profile 首答视为独立
-      // T16/R2：曝光行主键不含 profileId（Dexie 不支持跨版本改主键），但独立判定按归属放行：
-      // 曝光属于其他 profile（row.profileId !== 当前 session.profileId）时，本 profile 首答仍算独立，
-      // 与规划/证据侧 per-profile 过滤口径一致；per-profile 曝光行留待多用户版本重建表。
-      const exposure = await db.exposures.get([slot.ref.packId, slot.ref.packVersion, slot.ref.itemId])
-      const independent = (!exposure || exposure.profileId !== session.profileId || exposure.firstSeenSessionId === session.id) && slot.assistance.length === 0
+      // CR46/CR50：独立判定读 per-profile 账本（exposureLog，主键含 profileId）。
+      // 口径（itemId 级，与 planner 一致）：本 profile 在**任意版本**下见过且首见会话不是
+      // 本会话，即不算独立首答——用 some() 而不是取任意一行，避免字典序版本号
+      //（如 1.10.0 < 1.9.0）让 find() 命中本会话行而误判独立。
+      const selfExposures = await db.exposureLog.where('itemId').equals(slot.ref.itemId).toArray()
+      const seenBeforeBySelf = selfExposures.some((row) => row.profileId === session.profileId && row.firstSeenSessionId !== session.id)
+      const independent = !seenBeforeBySelf && slot.assistance.length === 0
       const result = grade.earned === grade.possible && grade.possible > 0 && independent ? 'independent-pass' : 'needs-help'
       const previous = await db.reviewStates.get([session.profileId, item.familyId, item.reviewMode])
-      const review = scheduleReview(asReviewState(previous?.data), result, session.studyDay)
+      const actualStudyDay = studyDay(now, session.timeZone)
+      const review = scheduleReview(asReviewState(previous?.data), result, actualStudyDay)
       const attempt: Attempt = {
         id: command.id,
         sessionId: session.id,
@@ -578,7 +592,7 @@ export async function submitAnswer(db: GaokaoDatabase, command: SubmitCommand, c
         replayCount: slot.replayCount,
         audioSpeed: slot.audioSpeed,
         createdAt: now.toISOString(),
-        studyDay: session.studyDay,
+        studyDay: studyDay(now, session.timeZone),
         revision: session.revision + 1,
       }
       slot.state = 'submitted'
@@ -598,7 +612,8 @@ export async function submitAnswer(db: GaokaoDatabase, command: SubmitCommand, c
         // 手动单元会话用 session.unitId；今日会话（unitId=null）按条目所属单元解锁（P06 首次任务解锁地图节点）
         const unitId = session.unitId ?? pack.units.find((unit) => unit.itemIds.includes(item.id))?.id ?? null
         if (unitId) {
-          const achievementId = `unit:first:${unitId}`
+          // CR49：成就主键含 profileId，跨 profile 不再互相覆盖
+          const achievementId = `unit:first:${session.profileId}:${unitId}`
           // put-if-absent：重复独立通过不覆盖首次解锁时间
           const existing = await db.achievements.get(achievementId)
           if (!existing) {
@@ -646,7 +661,7 @@ export async function correctAnswer(db: GaokaoDatabase, command: SubmitCommand, 
         replayCount: slot.replayCount,
         audioSpeed: slot.audioSpeed,
         createdAt: now.toISOString(),
-        studyDay: session.studyDay,
+        studyDay: studyDay(now, session.timeZone),
         revision: session.revision + 1,
       }
       slot.state = 'submitted'
@@ -668,6 +683,8 @@ export async function revealHint(db: GaokaoDatabase, command: HintCommand, clock
       if (!context.ok) return context
       const { session, slot } = context.value
       if (session.revision !== command.expectedRevision) return stale()
+      // CR53：已终结槽位（submitted/skipped）不再记录提示，避免提示混入订正 attempt 的辅助口径
+      if (slot.state === 'submitted' || slot.state === 'skipped') return error('ALREADY_SUBMITTED', '该题已提交，提示不再变更')
       if (!hintKinds.includes(command.hint as HintKind)) return error('INVALID_ANSWER', '提示类型不在允许范围内')
       if (!slot.assistance.includes(command.hint)) {
         slot.assistance.push(command.hint)
@@ -702,6 +719,8 @@ export async function recordReplay(db: GaokaoDatabase, command: ReplayCommand, c
       if (!context.ok) return context
       const { session, slot } = context.value
       if (session.revision !== command.expectedRevision) return stale()
+      // CR53：已终结槽位不再累计回放（回放次数进入 attempt 底账）
+      if (slot.state === 'submitted' || slot.state === 'skipped') return error('ALREADY_SUBMITTED', '该题已提交，回放不再计入')
       slot.replayCount += 1
       session.revision += 1
       session.updatedAt = clock.now().toISOString()
@@ -720,6 +739,8 @@ export async function setAudioSpeed(db: GaokaoDatabase, command: AudioSpeedComma
       if (!context.ok) return context
       const { session, slot } = context.value
       if (session.revision !== command.expectedRevision) return stale()
+      // CR53：已终结槽位不再变更语速（语速随 attempt 记录）
+      if (slot.state === 'submitted' || slot.state === 'skipped') return error('ALREADY_SUBMITTED', '该题已提交，播放速度不再变更')
       if (command.speed !== 0.75 && command.speed !== 1) return error('INVALID_ANSWER', '不支持的播放速度')
       slot.audioSpeed = command.speed
       session.revision += 1
@@ -739,6 +760,8 @@ export async function skipSlot(db: GaokaoDatabase, command: SessionActionCommand
       if (!context.ok) return context
       const { session, slot } = context.value
       if (session.revision !== command.expectedRevision) return stale()
+      // CR53：跳过是终结态——已提交的槽位不允许再跳过
+      if (slot.state === 'submitted') return error('ALREADY_SUBMITTED', '该题已提交，不能跳过')
       if (slot.state !== 'skipped') {
         slot.state = 'skipped'
         session.revision += 1

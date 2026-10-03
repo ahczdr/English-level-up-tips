@@ -1,5 +1,6 @@
 import type { Answer } from '../domain/answers';
 import type { GaokaoDatabase } from '../data/db';
+import { e2eNow } from '../data/e2e-clock';
 
 export interface DraftInput {
   sessionId: string;
@@ -18,7 +19,7 @@ export async function saveDraft(db: GaokaoDatabase, input: DraftInput): Promise<
   const row = {
     sessionId: input.sessionId,
     itemId: input.itemId,
-    updatedAt: new Date().toISOString(),
+    updatedAt: e2eNow().toISOString(),
     content: JSON.stringify(input.answer),
   };
   await db.drafts.put(row);

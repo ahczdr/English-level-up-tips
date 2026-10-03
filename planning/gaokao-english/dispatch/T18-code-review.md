@@ -206,6 +206,67 @@ P1=CI 阻断/ provenance 污染；P2=真实缺陷或用户可即刻感知；P3=�
 - 本轮两次取消 CI run：`34961339949`（release-smoke 无进展 38 分钟后取消，事后证实为 CR58 挂死）、`34964709335`（smoke 修复推送前被其取代而取消）。
 - 更正旧记录：verification-log §22.2 所记「smoke-release.mjs 本地沙箱挂起」根因实为 CR58 退出 bug；本轮修复后本地前台直跑正常退出。主仓库 vitest 本轮前台直跑亦正常（285/285），此前「主仓库 vitest 挂起」的记录同样可能与命令自动转后台机制有关，待下次遇到再核实。
 
-### H.4 仍开放
+### H.4 后续修复（2026-09-16、2026-09-23）
 
-CR15/CR16（根 CI audit 与 fork Pages，环境决策）、CR18/CR19/CR38/CR54（时区口径统一批次）、CR21（备份加固）、CR23（音频竞态）、CR29–CR36（CI 工程）、CR46–CR52（服务口径收尾）、CR53–CR57/CR59–CR65（P4 池）、CR6–CR12（T14 遗留待办池）。
+2026-09-16 的修复与验证记录：
+
+| 范围 | 内容 |
+| --- | --- |
+| CR18/CR19/CR38 | 复习列表按个人时区计算到期；写作版本持久化会话学习日，成长页优先使用历史保存值，避免修改当前时区后重算历史日期 |
+| CR21 | 备份规范化改用 Object.defineProperty，危险原型键扫描改为无固定深度的显式栈遍历，阻断深层 `__proto__` 绕过 |
+| CR23 | 听力音频加载加入请求代数，旧请求晚返回时丢弃，不再覆盖当前题目音频 |
+| CR30 | 移除 build-packs.ts 的重复 fixture 写入；sync-e2e-fixtures.mjs 按语义版本选择最新包，避免 1.0.10 被误判低于 1.0.2 |
+
+新增回归用例 6 条；npm run check 通过（31 个测试文件、297 个测试，Lint 0 错误）；npm run test:e2e 通过（29 个浏览器测试、3 个离线测试）。
+
+2026-09-23 修复 CR31：移除 release 内容门禁的全局 `continue-on-error`；仅审核缺项与题量/覆盖缺口使用 exit 78 暂缓，内容完整性、格式、素材和工具错误仍阻断 CI；审核时间格式错误单独作为硬错误。当前仓库诊断还发现 `UNKNOWN_SKILL`，因此 release 检查仍正确硬失败；本轮未重跑测试。
+
+### H.5 仍开放
+
+（2026-09-29 更新：见 H.6——开放池已全部收敛，仅剩环境决策与两项刻意保留。）
+
+### H.6 修复收尾（2026-09-29，本地发布分支 codex/gaokao-english-local-release）
+
+内容发布与版权口径（用户决策：取消「暂不进入正式题库」「未经授权不得转载」限制，纳入个人学习用途正式包）：
+
+| 范围 | 内容 |
+| --- | --- |
+| 内容发布 | 15 个 manifest 转 `published`（审核人与作者分离），版本 minor 提升（anhui 包 0.2.0、listening 1.1.0）；inbox README 与 sources catalog 权利说明改写为「维护者确认纳入，保留来源出处」 |
+| 技能映射 | 真题条目的 38 个细粒度 skillIds 映射回 T15 钉死的 26 技能目录（只影响训练归类不影响判分）；UNKNOWN_SKILL/CATALOG_DRIFT 清零，content:release 仅剩 exit 78 暂缓类 |
+| 红灯修复 | content.spec 的 RELEASE_GATE 断言随 REVIEWED_AT_INVALID 错误码分类更新（H.4 遗留红灯转绿） |
+| 目录过滤 | installPreviewPacks 仅装载 `published` 条目并上报 skippedDraft（A3） |
+| 版本堆积 | build-packs 改为每次从当前 manifest 全新构建，不再合并历史目录（CR64 产物侧收敛；35MB→21MB，一包一版本；同版本不可变守卫保留） |
+| semver 收敛 | src 侧唯一实现 `src/domain/semver.ts`，LearnPage/content.ts 复用（sync-e2e-fixtures.mjs 为 Node 侧副本并注明） |
+| curriculum 加固 | zod schema 运行时校验 + 别名表目标存在性进入 check-content 硬失败（CURRICULUM_ALIAS_INVALID） |
+| CR15 | 根依赖 sharp 0.35.5 / markdownlint-cli2 0.23.3，根 CI audit 门禁恢复绿色 |
+| CR16 | deploy.yml configure-pages 加 enablement: true |
+| CR29/CR65 | build:e2e 改为 scripts/build-e2e.mjs（SKIP_GATE=1 跳过重复门禁；VITE_E2E 经 spawn env 注入，去 POSIX 前缀）；smoke 用 process.execPath 直启 vite 入口 |
+| CR32/CR33/CR36 | app CI 加 push 分支过滤与 concurrency；Playwright 浏览器二进制缓存（quality 全集/smoke chromium 两个 key）；双 playwright 配置补 forbidOnly + CI retries |
+| CR34 | tsconfig.node.json 纳入 scripts/**/*.ts 并接入 typecheck（tsc -p tsconfig.node.json） |
+| CR35 | 根 README/MAINTENANCE/CONTRIBUTING 补 app 子项目说明（依赖独立、CI 路径、BUILD_SHA 约定、内容管线） |
+| CR46 | 计划/组合入口按 packId 取最新且资源就绪的版本（pack-reader.latestInstalledByPackId，含 resourcesReady 口径——曾漏 conditions 导致 e2e 会话卡内容校验，已修） |
+| CR47 | pack-reader 写事务内绕过缓存（Dexie.currentTransaction 直读），注释与实际语义对齐 |
+| CR48/CR51 | getSessionSummary 外会话曝光按本 profile 过滤并改走索引；attempts/exposures/reviewStates 全部 .where('profileId') |
+| CR49/CR50 | v3 迁移：exposureLog per-profile 曝光账本（主键含 profileId，含 itemId/profileId 索引）回填 legacy exposures；独立首答、计划曝光、证据、会话摘要全部改读账本；成就主键 `unit:first:<profileId>:<unitId>`（progress 侧兼容旧格式） |
+| CR52 | reconcile 标缺时合并保留 job.data.assets 已存字节 |
+| CR53 | completeSession 拒绝带 unseen/answering 槽位；revealHint/recordReplay/setAudioSpeed/skipSlot 对已终结槽位拒绝；submitAnswer 拒绝 skipped 槽位。**写作 finalize 保留多版本追加**（P09 设计，writing.spec 钉住；T18 原建议不采纳） |
+| CR54 | writing/drafts/sessionFlow 时钟统一走 e2eNow()；e2e-clock 注释如实声明覆盖范围 |
+| CR55 | restoreBackup 回填改集合级 modify；恢复后音频按本机保留字节如实标 ready/需补（CR9 一并修复）；备份纳入 exposureLog 并兼容旧备份（缺键按空表接受后从 exposures 重建） |
+| CR56 | gradeOrder 拒绝重复词块；today-session marker 按 profile 清理既往学习日；写作队列 Map 结算后释放键；getPackAssetBytes 死代码删除 |
+| CR57 | ChoiceTask 去原生按钮叠加 keydown；App.vue updateReady 声明顺序；标题层级统一（Settings h2、Writing h3）；总结读取失败给错误态不再回落末题；sw-update-banner 补 safe-area；index.html color-scheme 对齐 light；div[aria-label] 补 role=group；OrderTask 清空重排；BackupPage formatBytes；FeedbackPanel gapResults computed |
+| CR59 | SW 删除自定义 navigate 分支（hash 路由下与 workbox precache 双 respondWith 竞态），导航由 precacheAndRoute 统一响应 |
+| CR60 | build-packs 启动清扫全部 `.content-stage-*` 残留 |
+| CR61 | precache 仅 shell 断言迁入 smoke-release.mjs（对发布产物执行；offline.spec 相应用例移除，离线套件 3→2） |
+| CR62 | 离线配置 html reporter 输出目录分离（playwright-report-offline/，已入 .gitignore 与 CI artifacts） |
+| CR63 | 根 deploy.yml 对 master push 加 paths-ignore（apps/**、planning/**） |
+| T14 CR6 | 暂停与离开同口径：先落盘全部在途草稿（含写作最后写入）再暂停；choice/order 草稿在当前代码已持久化（T14 行号快照过时），CR44 文案失实随之消解 |
+| T14 CR7 | 复习页显示单元名/题型/模式中文标签（从已安装包反查）+「开始今日计划」行动入口 + 错误态分离 + profileId 索引查询 |
+| T14 CR8 | 已卸载包的历史作答保留进正确率/学习日统计（unknownItem 不参与题型分组），不再静默缩水 |
+| T14 CR10 | mergeBySharedResource 成为单一共享纯函数（createSession 复用）；SessionPage 复用 sessionFlow.firstUnfinished |
+| T14 CR11 | 客观题 STALE 自动重取会话并提示重新提交 |
+| T14 CR12.1 | TodayPage 双入口合并为单一「选择今日练习内容」（保留 CR24 加载守卫，总是进入课程页）；12 个测试文件的入口断言同步更新 |
+| T14 CR12.4 | AudioPlayer play() 被拒时不再计入回放次数 |
+
+刻意保留（非缺陷）：T14 CR12.2 备份内嵌包快照（体积治理待 completed 会话归档策略）、CR12.3 HTML 标签检查的正文误报边界（防线收窄）、CR12.5 放弃会话草稿清理（completed 清理已覆盖主路径）、CR12.6 savePrefs 字段校验一致性、CR57.g firstAttemptLabel（E2E 断言用）。CR16 的 fork Pages 生效仍需远端一次部署验证。
+
+验证（本地）：`npm run check` 306/306（31 文件，typecheck 双工程 + lint 0 错误）；`npm run build:release` + smoke SMOKE OK exit 0（含新 precache 断言）；`npm run test:e2e` 29 主配置 + 2 离线全绿（三引擎）。内容产物与 manifest 重建零漂移。

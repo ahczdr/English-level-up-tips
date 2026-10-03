@@ -1,3 +1,4 @@
+import { summaryEncouragement } from '../../src/services/sessionFlow'
 import 'fake-indexeddb/auto'
 import { afterEach, describe, expect, it } from 'vitest'
 import samplePack from '../fixtures/sample-pack.json'
@@ -120,6 +121,12 @@ describe('T03 learning sessions', () => {
   })
 })
 
+const finishAllSlots = async (db: Awaited<ReturnType<typeof openDbWithPack>>, sessionId: string): Promise<void> => {
+  const session = await db.sessions.get(sessionId)
+  if (!session) return
+  await db.sessions.update(sessionId, { slots: session.slots.map((slot) => ({ ...slot, state: 'submitted' as const })) })
+}
+
 describe('CR1 会话完成态与草稿清理', () => {
   it('completeSession 置 completed、幂等并清除该会话残留草稿', async () => {
     const db = await openDbWithPack()
@@ -127,6 +134,10 @@ describe('CR1 会话完成态与草稿清理', () => {
     if (!created.ok || created.value.kind !== 'session') throw new Error('expected session')
     await enterCurrentSlot(db, 'session-done', clock)
     await db.drafts.put({ sessionId: 'session-done', itemId: 'vocab-join-a', updatedAt: clock.now().toISOString(), content: '{"kind":"gaps","values":{}}' })
+    // CR53：存在 unseen/answering 槽位时 completeSession 被拒绝
+    const blocked = await completeSession(db, 'session-done', clock)
+    expect(blocked.ok).toBe(false)
+    await finishAllSlots(db, 'session-done')
     const done = await completeSession(db, 'session-done', clock)
     expect(done.ok).toBe(true)
     if (!done.ok) return
@@ -145,6 +156,7 @@ describe('CR1 会话完成态与草稿清理', () => {
     const created = await createSession({ db, unitId: 'demo-school-club', minutes: 2, profileId: 'gaokao-common-training-v1', clock, idGenerator: () => 'session-keep' })
     if (!created.ok || created.value.kind !== 'session') throw new Error('expected session')
     await db.drafts.put({ sessionId: 'other-session', itemId: 'vocab-join-a', updatedAt: clock.now().toISOString(), content: '{}' })
+    await finishAllSlots(db, 'session-keep')
     const done = await completeSession(db, 'session-keep', clock)
     expect(done.ok).toBe(true)
     expect(await db.drafts.count()).toBe(1)
@@ -163,4 +175,17 @@ describe('CR4 今日会话同日冻结竞态', () => {
     expect(second.value.session.id).toBe(first.value.session.id)
     expect(await db.sessions.count()).toBe(1)
   })
+})
+
+describe('summaryEncouragement 总结鼓励语', () => {
+  const base = { totalSlots: 5, submittedSlots: 5, skippedSlots: 0, pending: 0 };
+  it('全对且有独立作答给肯定语', () => {
+    expect(summaryEncouragement({ ...base, independentFirst: 4, assistedFirst: 1, failedFirst: 0 })).toContain('保持这个节奏');
+  });
+  it('有错题时点出复习计划兜底', () => {
+    expect(summaryEncouragement({ ...base, independentFirst: 1, assistedFirst: 1, failedFirst: 3 })).toContain('排入复习');
+  });
+  it('空会话给温和引导', () => {
+    expect(summaryEncouragement({ ...base, submittedSlots: 0, skippedSlots: 0, independentFirst: 0, assistedFirst: 0, failedFirst: 0 })).toContain('下次');
+  });
 })

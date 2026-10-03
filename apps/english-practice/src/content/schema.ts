@@ -40,7 +40,7 @@ export const resourceSchema = z.strictObject({
 export const assetSchema = z.strictObject({
   id: idSchema,
   path: z.string().min(1),
-  mime: z.enum(['audio/mpeg', 'audio/mp4', 'image/webp']),
+  mime: z.enum(['audio/mpeg', 'audio/mp4', 'image/webp', 'image/png', 'image/jpeg']),
   bytes: z.number().int().positive(),
   sha256: z.string().regex(/^[0-9a-f]{64}$/),
 })
@@ -181,4 +181,35 @@ export const examProfileSchema = z.strictObject({
   enabledSections: z.array(sectionSchema),
   allowMockExam: z.boolean(),
   scoring: scoringSchema.nullable(),
+})
+
+export const curriculumSectionSchema = z.strictObject({
+  id: sectionSchema,
+  titleZh: z.string().min(1),
+  goalZh: z.string().min(1),
+})
+
+export const curriculumUnitSchema = z.strictObject({
+  id: idSchema,
+  titleZh: z.string().min(1),
+  sections: z.array(sectionSchema).min(1),
+  skills: z.array(z.string().min(1)),
+  targetZh: z.string().min(1),
+  status: statusSchema,
+  itemCount: z.number().int().nonnegative(),
+})
+
+export const curriculumYearSchema = z.strictObject({
+  id: idSchema,
+  titleZh: z.string().min(1),
+  subtitleZh: z.string().min(1),
+  level: levelSchema,
+  units: z.array(curriculumUnitSchema),
+})
+
+export const curriculumSchema = z.strictObject({
+  version: z.number().int().positive(),
+  titleZh: z.string().min(1),
+  sections: z.array(curriculumSectionSchema),
+  years: z.array(curriculumYearSchema).min(1),
 })

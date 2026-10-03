@@ -1,0 +1,7 @@
+{
+  "id": "h1-core",
+  "titleZh": "高一基础：句子与高频词",
+  "familyIds": ["h1-used-to", "h1-predicate", "h1-present", "h1-reading-room"],
+  "itemIds": ["h1-vocab-used-to", "h1-sentence-predicate", "h1-grammar-present", "h1-reading-room"],
+  "prerequisiteSkillIds": []
+}

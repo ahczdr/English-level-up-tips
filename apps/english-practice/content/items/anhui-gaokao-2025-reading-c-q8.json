@@ -1,0 +1,30 @@
+{
+  "id": "anhui-gaokao-2025-reading-c-q8",
+  "familyId": "anhui-gaokao-2025-reading-c",
+  "skillIds": ["reading.detail"],
+  "level": "G2",
+  "section": "reading",
+  "reviewMode": "transfer",
+  "promptZh": "What phenomenon does the author point out in paragraph 1?",
+  "resourceId": "anhui-gaokao-2025-reading-c",
+  "estimatedSeconds": 50,
+  "sourceIds": ["anhui-gaokao-2025-eol"],
+  "explanation": {
+    "summaryZh": "文章指出，儿童步行活动减少，家长因为交通拥挤而更多选择开车送孩子。",
+    "ruleZh": "段落细节题要同时关注研究结论和后面的具体解释。",
+    "evidence": [{ "resourceId": "anhui-gaokao-2025-reading-c", "paragraphId": "p1", "quote": "declines in pedestrian (行人) mobility" }],
+    "distractors": [
+      { "optionId": "a", "reasonZh": "段落没有说汽车经常堵在路上。" },
+      { "optionId": "b", "reasonZh": "段落谈到交通压力，但没有指出事故频繁。" },
+      { "optionId": "d", "reasonZh": "问题不在于行人不遵守规则，而在于步行空间和交通环境。" }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    { "id": "a", "text": "Cars often get stuck on the road." },
+    { "id": "b", "text": "Traffic accidents occur frequently." },
+    { "id": "c", "text": "People walk less and drive more." },
+    { "id": "d", "text": "Pedestrians fail to follow the rules." }
+  ],
+  "answerOptionId": "c"
+}

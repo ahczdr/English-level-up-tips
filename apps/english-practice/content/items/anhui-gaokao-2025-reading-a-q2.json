@@ -1,0 +1,30 @@
+{
+  "id": "anhui-gaokao-2025-reading-a-q2",
+  "familyId": "anhui-gaokao-2025-reading-a",
+  "skillIds": ["reading.detail"],
+  "level": "G2",
+  "section": "reading",
+  "reviewMode": "transfer",
+  "promptZh": "Which mode of transport can go green comparatively easily?",
+  "resourceId": "anhui-gaokao-2025-reading-a",
+  "estimatedSeconds": 45,
+  "sourceIds": ["anhui-gaokao-2025-eol"],
+  "explanation": {
+    "summaryZh": "原文指出，有些火车已经电气化，其他火车也可以用比较简单的方式实现电动化。",
+    "ruleZh": "细节题要回到原文定位比较级或程度副词对应的句子。",
+    "evidence": [{ "resourceId": "anhui-gaokao-2025-reading-a", "paragraphId": "p3", "quote": "others can be made electric in pretty simple ways" }],
+    "distractors": [
+      { "optionId": "a", "reasonZh": "飞机是最难脱碳的领域。" },
+      { "optionId": "b", "reasonZh": "卡车的绿色氢能制造成本高。" },
+      { "optionId": "d", "reasonZh": "船舶需要重新设计发动机。" }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    { "id": "a", "text": "Planes." },
+    { "id": "b", "text": "Trucks." },
+    { "id": "c", "text": "Trains." },
+    { "id": "d", "text": "Ships." }
+  ],
+  "answerOptionId": "c"
+}

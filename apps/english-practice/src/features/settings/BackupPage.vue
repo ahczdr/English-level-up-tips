@@ -56,6 +56,12 @@ const props = defineProps<{ db?: GaokaoDatabase }>();
 
 const busy = ref(false);
 const exportInfo = ref('');
+
+const formatBytes = (bytes: number): string => {
+  if (!Number.isFinite(bytes) || bytes <= 0) return '0 KB';
+  if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(0) + ' KB';
+  return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+};
 const message = ref('');
 // envelope 保存在非响应式变量中：Vue ref 会深度代理对象，Proxy 无法写入 IndexedDB（DataCloneError）
 let pendingEnvelope: BackupEnvelope | null = null;
@@ -87,7 +93,7 @@ const exportBackupFile = async (): Promise<void> => {
     if (result.value.sizeBytes > MAX_BACKUP_BYTES) warning = '；警告：备份体积超过 50 MiB，导入时会被拒绝，请减少本机数据后重试';
     const attemptCount = (result.value.envelope.payload as unknown as Record<string, unknown[]>).attempts.length;
     if (attemptCount > MAX_ATTEMPT_RECORDS) warning += '；警告：作答记录超过 ' + String(MAX_ATTEMPT_RECORDS) + ' 条，导入时会被拒绝';
-    exportInfo.value = '已导出 ' + String(result.value.sizeBytes) + ' 字节（摘要 ' + result.value.envelope.payloadSha256.slice(0, 12) + '…）' + warning;
+    exportInfo.value = '已导出 ' + formatBytes(result.value.sizeBytes) + '（摘要 ' + result.value.envelope.payloadSha256.slice(0, 12) + '…）' + warning;
   } finally {
     busy.value = false;
   }

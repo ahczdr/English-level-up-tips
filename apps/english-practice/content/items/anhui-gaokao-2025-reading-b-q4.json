@@ -1,0 +1,30 @@
+{
+  "id": "anhui-gaokao-2025-reading-b-q4",
+  "familyId": "anhui-gaokao-2025-reading-b",
+  "skillIds": ["reading.detail"],
+  "level": "G2",
+  "section": "reading",
+  "reviewMode": "transfer",
+  "promptZh": "Who are the people mentioned at the beginning of paragraph 1?",
+  "resourceId": "anhui-gaokao-2025-reading-b",
+  "estimatedSeconds": 45,
+  "sourceIds": ["anhui-gaokao-2025-eol"],
+  "explanation": {
+    "summaryZh": "段首列举的是学生创作出来的牛仔、严厉的父亲和现代版朱丽叶，都是虚构人物。",
+    "ruleZh": "人物指代题要区分故事中的角色和现实中的作者、学生。",
+    "evidence": [{ "resourceId": "anhui-gaokao-2025-reading-b", "paragraphId": "p1", "quote": "my students, who’d created these people" }],
+    "distractors": [
+      { "optionId": "a", "reasonZh": "学生是这些人物的创作者，不是题干所指的人物。" },
+      { "optionId": "b", "reasonZh": "段首没有介绍学生家长。" },
+      { "optionId": "c", "reasonZh": "段首人物来自学生作文，不是现实作家。" }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    { "id": "a", "text": "Ninth graders." },
+    { "id": "b", "text": "Students’ parents." },
+    { "id": "c", "text": "Modern writers." },
+    { "id": "d", "text": "Fictional characters." }
+  ],
+  "answerOptionId": "d"
+}

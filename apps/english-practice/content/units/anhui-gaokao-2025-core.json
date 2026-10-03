@@ -1,0 +1,38 @@
+{
+  "id": "anhui-gaokao-2025-core",
+  "titleZh": "2025 年高考英语非听力部分训练",
+  "familyIds": [
+    "anhui-gaokao-2025-reading-a",
+    "anhui-gaokao-2025-reading-b",
+    "anhui-gaokao-2025-reading-c",
+    "anhui-gaokao-2025-reading-d",
+    "anhui-gaokao-2025-gap-cafe",
+    "anhui-gaokao-2025-cloze-vase",
+    "anhui-gaokao-2025-grammar-go",
+    "anhui-gaokao-2025-writing-email",
+    "anhui-gaokao-2025-writing-continuation"
+  ],
+  "itemIds": [
+    "anhui-gaokao-2025-reading-a-q1",
+    "anhui-gaokao-2025-reading-a-q2",
+    "anhui-gaokao-2025-reading-a-q3",
+    "anhui-gaokao-2025-reading-b-q4",
+    "anhui-gaokao-2025-reading-b-q5",
+    "anhui-gaokao-2025-reading-b-q6",
+    "anhui-gaokao-2025-reading-b-q7",
+    "anhui-gaokao-2025-reading-c-q8",
+    "anhui-gaokao-2025-reading-c-q9",
+    "anhui-gaokao-2025-reading-c-q10",
+    "anhui-gaokao-2025-reading-c-q11",
+    "anhui-gaokao-2025-reading-d-q12",
+    "anhui-gaokao-2025-reading-d-q13",
+    "anhui-gaokao-2025-reading-d-q14",
+    "anhui-gaokao-2025-reading-d-q15",
+    "anhui-gaokao-2025-gap-cafe",
+    "anhui-gaokao-2025-cloze-vase",
+    "anhui-gaokao-2025-grammar-go",
+    "anhui-gaokao-2025-writing-email",
+    "anhui-gaokao-2025-writing-continuation"
+  ],
+  "prerequisiteSkillIds": []
+}

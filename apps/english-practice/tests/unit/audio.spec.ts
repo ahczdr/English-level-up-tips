@@ -9,9 +9,11 @@ import TodayPage from '../../src/features/today/TodayPage.vue'
 import OnboardingPage from '../../src/features/onboarding/OnboardingPage.vue'
 import LearnPage from '../../src/features/learn/LearnPage.vue'
 import type { CoursePack } from '../../src/content/types'
+import type { Session } from '../../src/data/migrations'
 import { createDatabase, deleteDatabase, type GaokaoDatabase } from '../../src/data/db'
 import { createSession, recordReplay, setAudioSpeed } from '../../src/services/learning'
 import { downloadPackAssets, getPackAssetBytes } from '../../src/services/content'
+import * as contentService from '../../src/services/content'
 
 const pack = listeningPack as unknown as CoursePack
 const STUB_BYTES = new Uint8Array(8).fill(7)
@@ -253,6 +255,65 @@ describe('AudioPlayer 组件状态机', () => {
 })
 
 describe('SessionPage 听力接入', () => {
+  it('旧音频请求晚返回时不得覆盖当前题目的音频', async () => {
+    const custom = structuredClone(pack)
+    custom.assets = [
+      { ...custom.assets[0]!, id: 'audio-a' },
+      { ...custom.assets[0]!, id: 'audio-b' },
+    ]
+    custom.resources = [
+      { ...custom.resources[0]!, id: 'resource-a', audioAssetId: 'audio-a' },
+      { ...custom.resources[0]!, id: 'resource-b', audioAssetId: 'audio-b' },
+    ]
+    custom.items = [
+      { ...custom.items[0]!, resourceId: 'resource-a' },
+      { ...custom.items[1]!, resourceId: 'resource-b' },
+    ]
+    const db = createDatabase('gaokao-audio-race-' + crypto.randomUUID())
+    await db.open()
+    await db.packs.add({ id: custom.id, version: custom.version, status: 'installed', pack: custom, installedAt: new Date().toISOString(), resourcesReady: true })
+    await db.downloadJobs.add({
+      packId: custom.id,
+      version: custom.version,
+      status: 'ready',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      data: { assets: {
+        'audio-a': { sha256: 'a', data: new Uint8Array([1]).buffer },
+        'audio-b': { sha256: 'b', data: new Uint8Array([2]).buffer },
+      } },
+    })
+    databases.push(db)
+    const deferred = <T,>() => {
+      let resolve!: (value: T) => void
+      const promise = new Promise<T>((next) => { resolve = next })
+      return { promise, resolve }
+    }
+    const first = deferred<Awaited<ReturnType<typeof getPackAssetBytes>>>()
+    const second = deferred<Awaited<ReturnType<typeof getPackAssetBytes>>>()
+    const readSpy = vi.spyOn(contentService, 'getPackAssetBytes').mockImplementation(({ assetId }) => assetId === 'audio-a' ? first.promise : second.promise)
+    const session = await makeSession(db, 'au-race')
+    const router = makeRouter()
+    await router.push('/session/' + session.id)
+    await router.isReady()
+    const wrapper = mount(SessionPage, { props: { db, sessionId: session.id }, global: { plugins: [router] } })
+    wrappers.push(wrapper)
+    for (let round = 0; round < 5; round += 1) {
+      await flushPromises()
+      await new Promise((resolve) => { setTimeout(resolve, 0) })
+    }
+    expect(readSpy).toHaveBeenCalledTimes(1)
+    ;(wrapper.vm as unknown as { item: unknown }).item = custom.items[1]
+    const secondLoad = (wrapper.vm as unknown as { loadAudio: (target: Session, pack: CoursePack) => Promise<void> }).loadAudio(session, custom)
+    await flushPromises()
+    expect(readSpy).toHaveBeenCalledTimes(2)
+    second.resolve({ ok: true, value: { data: new Uint8Array([2]).buffer, mime: 'audio/mp4' } })
+    await secondLoad
+    first.resolve({ ok: true, value: { data: new Uint8Array([1]).buffer, mime: 'audio/mp4' } })
+    await flushPromises()
+    expect(new Uint8Array((wrapper.vm as unknown as { audioBytes: ArrayBuffer }).audioBytes)).toEqual(new Uint8Array([2]))
+  })
+
   it('完整听力流程：播放、字幕显式开启、两次作答、字幕开启后的答对计辅助', async () => {
     const db = await openDb(true)
     await downloadPackAssets({ db, packId: pack.id, version: pack.version, fetchBinary: fetchStubBytes })

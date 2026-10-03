@@ -2,7 +2,7 @@ import 'fake-indexeddb/auto'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { flushPromises, mount } from '@vue/test-utils'
 import { createRouter, createWebHashHistory, type RouterHistory } from 'vue-router'
-import { pageToday, summarizeProgress, weekStart, type ProgressAttempt, type ProgressInput } from '../../src/domain/progress'
+import { computeStreak, pageToday, summarizeProgress, weekStart, type ProgressAttempt, type ProgressInput } from '../../src/domain/progress'
 import { createTodaySession, enterCurrentSlot, submitAnswer } from '../../src/services/learning'
 import ProgressPage from '../../src/features/progress/ProgressPage.vue'
 import FeedbackPanel from '../../src/components/FeedbackPanel.vue'
@@ -37,6 +37,7 @@ const attempt = (overrides: Partial<ProgressAttempt>): ProgressAttempt => ({
 
 const baseInput = (overrides: Partial<ProgressInput> = {}): ProgressInput => ({
   today: '2026-09-09',
+  profileId: 'gaokao-common-training-v1',
   attempts: [],
   totalItems: 8,
   exposedItemIds: [],
@@ -139,7 +140,7 @@ describe('summarizeProgress 成长记录（P06）', () => {
     }))
     expect(summary.mapNodes).toHaveLength(2)
     const node = summary.mapNodes.find((candidate) => candidate.unitId === 'demo-school-club')
-    expect(node?.achievementId).toBe('unit:first:demo-school-club')
+    expect(node?.achievementId).toBe('unit:first:gaokao-common-training-v1:demo-school-club')
     expect(node?.unlocked).toBe(true)
     expect(node?.unlockedAt).toBe('2026-09-08T00:00:00.000Z')
     expect(summary.mapNodes.find((candidate) => candidate.unitId === 'unit-writing')?.unlocked).toBe(false)
@@ -294,6 +295,11 @@ describe('T11 评审修复回归', () => {
     const db = createDatabase('gaokao-progress-' + crypto.randomUUID())
     await db.open()
     await db.settings.put({ id: 'personal', value: { profileId: 'gaokao-common-training-v1', grade: null, goal: null, defaultMinutes: 10, timeZone: 'Asia/Shanghai', sound: true, animation: true } })
+    // 写作版本经所属会话按 profile 过滤（P2 写作 per-profile 化）：先补会话行
+    await db.sessions.bulkAdd([
+      { id: 's1', profileId: 'gaokao-common-training-v1', unitId: null, slots: [], currentIndex: 0, revision: 0, state: 'completed', createdAt: '2026-09-08T00:00:00.000Z', updatedAt: '2026-09-08T00:00:00.000Z', studyDay: '2026-09-08' },
+      { id: 's2', profileId: 'gaokao-common-training-v1', unitId: null, slots: [], currentIndex: 0, revision: 0, state: 'completed', createdAt: '2026-09-09T00:00:00.000Z', updatedAt: '2026-09-09T00:00:00.000Z', studyDay: '2026-09-09' },
+    ])
     await db.writingVersions.bulkAdd([
       { id: 's2:w1:v1', sessionId: 's2', itemId: 'w1', createdAt: '2026-09-09T00:00:00.000Z', content: JSON.stringify({ content: '第二会话初稿', outline: '', checklist: [true], version: 1 }) },
       { id: 's1:w1:v1', sessionId: 's1', itemId: 'w1', createdAt: '2026-09-08T00:00:00.000Z', content: JSON.stringify({ content: '第一会话初稿', outline: '', checklist: [true, false], version: 1 }) },
@@ -303,6 +309,24 @@ describe('T11 评审修复回归', () => {
     expect(page.text()).toContain('共 2 个版本')
     expect(page.text()).toContain('初稿：第一会话初稿')
     expect(page.text()).toContain('修改稿：第二会话初稿')
+  })
+
+  it('成长页使用写作版本保存的学习日，不因当前时区改变历史归属', async () => {
+    const db = createDatabase('gaokao-progress-' + crypto.randomUUID())
+    await db.open()
+    await db.settings.put({ id: 'personal', value: { profileId: 'gaokao-common-training-v1', grade: null, goal: null, defaultMinutes: 10, timeZone: 'UTC', sound: true, animation: false } })
+    await db.sessions.add({ id: 's-tz', profileId: 'gaokao-common-training-v1', unitId: null, slots: [], currentIndex: 0, revision: 0, state: 'completed', createdAt: '2026-09-11T16:30:00.000Z', updatedAt: '2026-09-11T16:30:00.000Z', studyDay: '2026-09-12' })
+    await db.writingVersions.add({
+      id: 's-tz:w1:v1',
+      sessionId: 's-tz',
+      itemId: 'w1',
+      createdAt: '2026-09-11T16:30:00.000Z',
+      studyDay: '2026-09-12',
+      content: JSON.stringify({ content: 'saved', outline: '', checklist: ['完成'], version: 1 }),
+    })
+    databases.push(db)
+    const page = await mountPageWithToday(db, '2026-09-12')
+    expect(page.text()).toContain('今日已标记')
   })
 
   it('今日会话独立通过解锁条目所属单元成就，且首次时间不被覆盖', async () => {
@@ -323,13 +347,57 @@ describe('T11 评审修复回归', () => {
     console.log('FIRST RESULT', JSON.stringify(first))
     expect(first).toMatchObject({ ok: true })
     const achievements = await db.achievements.toArray()
-    expect(achievements.filter((row) => row.id === 'unit:first:demo-school-club')).toHaveLength(1)
-    const unlockedAt = achievements.find((row) => row.id === 'unit:first:demo-school-club')?.unlockedAt
+    expect(achievements.filter((row) => row.id === 'unit:first:p-first:demo-school-club')).toHaveLength(1)
+    const unlockedAt = achievements.find((row) => row.id === 'unit:first:p-first:demo-school-club')?.unlockedAt
     // 第二个条目独立通过：同单元成就不重复、首次时间不被覆盖
     const second = await passSlot('t11-2', 3, 'p-second')
     expect(second).toMatchObject({ ok: true })
     const after = await db.achievements.toArray()
-    expect(after.filter((row) => row.id === 'unit:first:demo-school-club')).toHaveLength(1)
-    expect(after.find((row) => row.id === 'unit:first:demo-school-club')?.unlockedAt).toBe(unlockedAt)
+    expect(after.filter((row) => row.id === 'unit:first:p-first:demo-school-club')).toHaveLength(1)
+    expect(after.find((row) => row.id === 'unit:first:p-first:demo-school-club')?.unlockedAt).toBe(unlockedAt)
+    // CR49：第二个 profile 独立通过同单元时写自己的成就行，不与 p-first 互相覆盖
+    expect(after.some((row) => row.id === 'unit:first:p-second:demo-school-club')).toBe(true)
   })
+})
+
+describe('CR8 回归：未知条目作答保留统计但不进题型分组', () => {
+  it('unknownItem 行计入正确率与学习日，不产生 series 分桶', () => {
+    const knownAttempt: ProgressAttempt = {
+      id: 'a-known', itemId: 'i-known', familyId: 'f-known', kind: 'choice', level: 'G0',
+      phase: 'first', studyDay: '2026-09-09', createdAt: '2026-09-09T00:00:00.000Z',
+      gradeEarned: 1, gradePossible: 1, assisted: false, firstSeenSelf: true,
+    }
+    const unknownAttempt: ProgressAttempt = {
+      ...knownAttempt,
+      id: 'a-unknown', itemId: 'i-gone', familyId: 'f-gone', studyDay: '2026-09-08',
+      createdAt: '2026-09-08T00:00:00.000Z', unknownItem: true,
+    }
+    const summary = summarizeProgress(baseInput({
+      attempts: [knownAttempt, unknownAttempt],
+    }))
+    expect(summary.objective).toEqual({ attempts: 2, correct: 2, rate: 1 })
+    expect(summary.studyDays).toEqual(['2026-09-08', '2026-09-09'])
+    // 已知条目仍产生自己的分桶；未知条目不进 series
+    expect(summary.series).toHaveLength(1)
+    expect(summary.series[0]).toMatchObject({ kind: 'choice', level: 'G0', thisWeek: { attempts: 1, correct: 1 } })
+  })
+})
+
+describe('computeStreak 连续学习天数', () => {
+  const shift = (day: string, delta: number): string => {
+    const d = new Date(Date.UTC(Number(day.slice(0, 4)), Number(day.slice(5, 7)) - 1, Number(day.slice(8, 10))));
+    d.setUTCDate(d.getUTCDate() + delta);
+    return d.toISOString().slice(0, 10);
+  };
+  it('今天有记录：从今天往回连续计数', () => {
+    const today = '2026-10-02';
+    const days = [today, shift(today, -1), shift(today, -2), shift(today, -4)];
+    expect(computeStreak(days, today)).toBe(3);
+  });
+  it('今天还没练：从昨天起算，中断即断', () => {
+    const today = '2026-10-02';
+    const days = [shift(today, -1), shift(today, -2), shift(today, -4)];
+    expect(computeStreak(days, today)).toBe(2);
+    expect(computeStreak([shift(today, -3)], today)).toBe(0);
+  });
 })

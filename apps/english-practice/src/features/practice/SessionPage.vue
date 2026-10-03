@@ -21,7 +21,7 @@ import {
   type Attempt,
 } from '../../services/learning';
 import { allPackRecords } from '../../data/pack-reader';
-import { getSessionSummary, setCurrentIndex, type SessionSummary } from '../../services/sessionFlow';
+import { firstUnfinished, getSessionSummary, setCurrentIndex, summaryEncouragement, type SessionSummary } from '../../services/sessionFlow';
 import { clearDraft, loadDraft, saveDraft } from '../../services/drafts';
 import { getPackAssetBytes } from '../../services/content';
 import { startPackDownload } from '../../services/downloads';
@@ -123,9 +123,6 @@ const canCorrect = computed(
     feedback.value.grade.earned < feedback.value.grade.possible,
 );
 
-const firstUnfinishedIndex = (target: Session): number =>
-  target.slots.findIndex((slot) => slot.state === 'unseen' || slot.state === 'answering');
-
 const showError = (messageZh: string): void => {
   errorMessage.value = messageZh;
   phase.value = 'error';
@@ -173,11 +170,11 @@ const flushPendingDraftSave = async (): Promise<void> => {
 watch(draft, (value) => {
   const target = session.value;
   const currentItem = item.value;
-  if (!target || !currentItem || currentItem.kind !== 'gaps') return;
+  if (!target || !currentItem || currentItem.kind === 'writing') return;
   if (feedback.value !== null) return;
   const slot = target.slots[target.currentIndex];
   if (!slot || slot.state !== 'answering') return;
-  if (!value || value.kind !== 'gaps') return;
+  if (!value || value.kind !== currentItem.kind) return;
   pendingDraftSave = { sessionId: target.id, itemId: currentItem.id, answer: value };
   if (draftSaveTimer !== null) globalThis.clearTimeout(draftSaveTimer);
   draftSaveTimer = globalThis.setTimeout(() => {
@@ -195,11 +192,11 @@ onBeforeUnmount(() => {
 const restoreDraft = async (target: Session): Promise<void> => {
   const slot = target.slots[target.currentIndex];
   const currentItem = item.value;
-  if (!slot || !currentItem || currentItem.kind !== 'gaps') return;
+  if (!slot || !currentItem || currentItem.kind === 'writing') return;
   if (slot.state !== 'answering') return;
   if (feedback.value !== null) return;
   const result = await loadDraft(db.value, { sessionId: target.id, itemId: currentItem.id });
-  if (!result.ok || !result.value || result.value.kind !== 'gaps') return;
+  if (!result.ok || !result.value || result.value.kind !== currentItem.kind) return;
   draft.value = result.value;
 };
 
@@ -215,20 +212,19 @@ const jumpToEvidence = async (evidence: Evidence): Promise<void> => {
   passagePanelRef.value?.scrollToParagraph(evidence.paragraphId);
 };
 
-const refreshSummary = async (): Promise<void> => {
-  const target = session.value;
-  if (!target) return;
-  const result = await getSessionSummary(db.value, target.id);
-  if (result.ok) summary.value = result.value;
-};
-
 // CR1：全部题目完成进入总结前，把会话置为 completed 并清理残留草稿；
 // 失败不阻塞总结展示（状态推进非关键路径）
 const finishSession = async (target: Session): Promise<void> => {
   const completed = await completeSession(db.value, target.id);
   if (completed.ok) session.value = completed.value;
+  const result = await getSessionSummary(db.value, target.id);
+  if (!result.ok) {
+    // CR57.d：总结读取失败给明确错误态，不回落到最后一题视图（否则「下一题」循环）
+    showError('总结读取失败，作答已保存；可从「今日」回看进度');
+    return;
+  }
+  summary.value = result.value;
   phase.value = 'summary';
-  await refreshSummary();
 };
 
 // T08：听力音频状态——bytes 只经 downloadJobs（原始 ArrayBuffer），离开题组由 AudioPlayer 卸载停止
@@ -237,6 +233,7 @@ const audioMime = ref('audio/mp4');
 const audioState = ref<'idle' | 'loading' | 'ready' | 'missing'>('idle');
 const downloading = ref(false);
 const transcriptVisible = ref(false);
+let audioRequestGeneration = 0;
 
 const currentSlot = computed<Session['slots'][number] | null>(
   () => session.value?.slots[session.value.currentIndex] ?? null,
@@ -245,6 +242,7 @@ const currentSlot = computed<Session['slots'][number] | null>(
 const isListening = computed(() => item.value !== null && item.value.section === 'listening');
 
 const loadAudio = async (target: Session, packRecord: CoursePack | null): Promise<void> => {
+  const requestGeneration = ++audioRequestGeneration;
   const slot = target.slots[target.currentIndex];
   const currentItem = item.value;
   if (!slot || !currentItem || currentItem.section !== 'listening' || !packRecord) {
@@ -264,6 +262,7 @@ const loadAudio = async (target: Session, packRecord: CoursePack | null): Promis
   }
   audioState.value = 'loading';
   const result = await getPackAssetBytes({ db: db.value, packId: slot.ref.packId, version: slot.ref.packVersion, assetId });
+  if (requestGeneration !== audioRequestGeneration) return;
   if (!result.ok) {
     audioState.value = 'missing';
     audioBytes.value = null;
@@ -380,7 +379,7 @@ const loadSlotContent = async (target: Session): Promise<void> => {
 
 const enterSlot = async (target: Session): Promise<void> => {
   let working = target;
-  const next = firstUnfinishedIndex(working);
+  const next = firstUnfinished(working);
   if (next === -1) {
     await finishSession(working);
     return;
@@ -429,18 +428,21 @@ onMounted(async () => {
       working = resumed.value;
     }
     session.value = working;
-    // T14（learning.spec）：恢复会话时展示首轮作答结果（reload 持久化断言用）
+    await enterSlot(working);
+    // CR57.g：恢复时展示**当前槽位**的首轮结果（此前取全会话最早 attempt，恢复到中途的用户无从对应）
     try {
-      const attemptRows = await db.value.attempts.where('sessionId').equals(working.id).toArray();
-      const first = attemptRows.slice().sort((a, b) => a.createdAt.localeCompare(b.createdAt))[0];
-      if (first) {
-        const grade = (first.payload as { grade?: { earned?: number; possible?: number } }).grade;
-        firstAttemptLabel.value = grade && typeof grade.earned === 'number' && typeof grade.possible === 'number' && grade.possible > 0 && grade.earned === grade.possible ? '正确' : '需订正';
+      const current = session.value;
+      const slot = current?.slots[current.currentIndex];
+      if (current && slot) {
+        const first = await db.value.attempts.where('[sessionId+slotId+phase]').equals([current.id, slot.id, 'first']).first();
+        if (first) {
+          const grade = (first.payload as { grade?: { earned?: number; possible?: number } }).grade;
+          firstAttemptLabel.value = grade && typeof grade.earned === 'number' && typeof grade.possible === 'number' && grade.possible > 0 && grade.earned === grade.possible ? '正确' : '需订正';
+        }
       }
     } catch {
       firstAttemptLabel.value = '';
     }
-    await enterSlot(working);
   } catch {
     showError('加载学习记录失败，请稍后重试');
   }
@@ -475,6 +477,17 @@ const submit = async (): Promise<void> => {
   };
   const result = mode.value === 'first' ? await submitAnswer(db.value, command) : await correctAnswer(db.value, command);
   if (!result.ok) {
+    // CR11：客观题遇 STALE 自动重取最新会话（与写作路径 resync 一致），不要求用户手动刷新
+    if (result.error.code === 'STALE_SESSION') {
+      const reloaded = await loadSession(db.value, target.id);
+      if (reloaded.ok) {
+        session.value = reloaded.value;
+        commandId.value = null;
+        saveState.value = 'error';
+        saveMessage.value = '页面进度已过期，已同步最新状态，请重新提交';
+        return;
+      }
+    }
     saveState.value = 'error';
     saveMessage.value = result.error.messageZh;
     return;
@@ -528,7 +541,7 @@ const requestHint = async (): Promise<void> => {
 const advanceToNext = async (): Promise<void> => {
   const target = session.value;
   if (!target) return;
-  const next = firstUnfinishedIndex(target);
+  const next = firstUnfinished(target);
   if (next === -1) {
     await finishSession(target);
     return;
@@ -593,13 +606,21 @@ const skipCurrent = async (): Promise<void> => {
 const pause = async (): Promise<void> => {
   const target = session.value;
   if (!target || saveState.value === 'saving') return;
+  // CR6：暂停与离开同口径——先落盘全部在途草稿（客观题防抖增量 + 写作最后写入），
+  // 写作落盘失败则留在本页（WritingPage 会显示重试），不带伤离开
+  const flushed = (await writingRef.value?.flushPending()) ?? true;
+  if (!flushed) {
+    saveState.value = 'error';
+    saveMessage.value = '写作草稿尚未保存成功，请重试后再暂停';
+    return;
+  }
+  await flushPendingDraftSave();
   const result = await pauseSession(db.value, target.id);
   if (!result.ok) {
     saveState.value = 'error';
     saveMessage.value = result.error.messageZh;
     return;
   }
-  await writingRef.value?.flushPending();
   await router.push('/today');
 };
 
@@ -666,6 +687,7 @@ const confirmExit = async (): Promise<void> => {
       <h2 id="summary-title">
         单元结束
       </h2>
+      <p class="summary-encourage" role="status">{{ summaryEncouragement(summary) }}</p>
       <ul class="summary-count">
         <li>独立首次完成 {{ summary.independentFirst }} 题</li>
         <li>提示后完成 {{ summary.assistedFirst }} 题</li>

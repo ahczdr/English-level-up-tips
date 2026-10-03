@@ -1,0 +1,16 @@
+{
+  "id": "anhui-gaokao-2014-reading-c-q67",
+  "familyId": "anhui-2014-reading-c",
+  "skillIds": ["reading.detail", "reading.inference"],
+  "level": "G1",
+  "section": "reading",
+  "reviewMode": "recognition",
+  "promptZh": "根据文章 C 回答第 67 题。",
+  "resourceId": "anhui-gaokao-2014-reading-c",
+  "estimatedSeconds": 60,
+  "sourceIds": ["anhui-gaokao-2014-official"],
+  "explanation": { "summaryZh": "文中收藏者说长大后会停止收藏，因此可能在成年时停止。", "ruleZh": "根据最后一段的 growing-up 线索进行同义转换。", "evidence": [{ "resourceId": "anhui-gaokao-2014-reading-c", "paragraphId": "p3", "quote": "you stop when you grow up" }], "distractors": [] },
+  "kind": "choice",
+  "options": [{ "id": "a", "text": "become adults" }, { "id": "b", "text": "feel happy with life" }, { "id": "c", "text": "are ready for a relationship" }, { "id": "d", "text": "feel life to be uncontrollable" }],
+  "answerOptionId": "a"
+}

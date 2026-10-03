@@ -20,6 +20,8 @@ export interface ProgressAttempt {
   gradePossible: number
   assisted: boolean
   firstSeenSelf: boolean
+  /** CR8：条目所属课程包已卸载时为 true——保留进正确率/学习日统计，但不参与题型分组 */
+  unknownItem?: boolean
 }
 
 export interface ProgressUnit { unitId: string; titleZh: string }
@@ -27,6 +29,7 @@ export interface ProgressAchievement { id: string; unlockedAt: string }
 export interface ProgressWritingVersion {
   itemId: string
   createdAt: string
+  studyDay?: string
   versionCount: number
   checklistCount: number
   firstText: string
@@ -35,6 +38,7 @@ export interface ProgressWritingVersion {
 
 export interface ProgressInput {
   today: string
+  profileId: string
   attempts: ProgressAttempt[]
   totalItems: number
   exposedItemIds: string[]
@@ -85,6 +89,27 @@ export interface ProgressSummary {
 // 页面「今天」：与 attempt.studyDay 同一学习日口径（设置时区），页面默认路径调用
 export const pageToday = (now: Date, timeZone: string): string => studyDayFor(now, timeZone)
 
+// 连续学习天数：从今天（或昨天，今天还没练时）往回数连续有学习记录的天数。
+// 纯函数供今日页鼓励卡使用；days 为去重后的学习日集合。
+export function computeStreak(days: string[], today: string): number {
+  const set = new Set(days)
+  const shift = (day: string, delta: number): string => {
+    const d = new Date(Date.UTC(Number(day.slice(0, 4)), Number(day.slice(5, 7)) - 1, Number(day.slice(8, 10))))
+    d.setUTCDate(d.getUTCDate() + delta)
+    return d.toISOString().slice(0, 10)
+  }
+  let cursor = set.has(today) ? today : shift(today, -1)
+  if (!set.has(cursor)) return 0
+  let streak = 0
+  while (set.has(cursor)) {
+    streak += 1
+    cursor = shift(cursor, -1)
+  }
+  return streak
+}
+
+// 连续学习天数：从今天（或昨天，今天还没练时）往回数连续有学习记录的天数。
+// 纯函数供今日页鼓励卡使用；days 为去重后的学习日集合。
 // 本周自周一起算（学习日为本地时区日字符串，按日历日推算，不做时区换算）
 export function weekStart(today: string): string {
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(today)
@@ -127,26 +152,29 @@ export function summarizeProgress(input: ProgressInput): ProgressSummary {
   // 学习日：有效任务覆盖的学习日（客观/辅助首次作答与写作成品都算完成当日）；漏学不清零，累计保留
   const daySources = [
     ...input.attempts.filter((row) => row.phase === 'first' && row.kind !== 'writing' && row.gradePossible > 0).map((row) => row.studyDay),
-    ...input.writingVersions.map((version) => version.createdAt.slice(0, 10)),
+    ...input.writingVersions.map((version) => version.studyDay ?? version.createdAt.slice(0, 10)),
   ]
   const studyDays = [...new Set(daySources)].sort()
   const todayMarked = studyDays.includes(input.today)
   // 未见题：总条目 - 已曝光
   const unseenCount = Math.max(0, input.totalItems - new Set(input.exposedItemIds).size)
-  // 地图节点：按实际课程单元生成；固定 key unit:first:<unitId>，重复记录取最早解锁时间
+  // 地图节点：按实际课程单元生成；成就主键 unit:first:<profileId>:<unitId>（CR49 per-profile），
+  // 兼容旧格式 unit:first:<unitId>（单 profile 时代的历史数据），重复记录取最早解锁时间
   const firstUnlock = new Map<string, string>()
   for (const achievement of input.achievements) {
     const previous = firstUnlock.get(achievement.id)
     if (previous === undefined || achievement.unlockedAt < previous) firstUnlock.set(achievement.id, achievement.unlockedAt)
   }
   const mapNodes: MapNode[] = input.units.map((unit) => {
-    const achievementId = 'unit:first:' + unit.unitId
-    const unlockedAt = firstUnlock.get(achievementId) ?? null
+    const achievementId = `unit:first:${input.profileId}:${unit.unitId}`
+    const legacyAchievementId = 'unit:first:' + unit.unitId
+    const unlockedAt = firstUnlock.get(achievementId) ?? firstUnlock.get(legacyAchievementId) ?? null
     return { unitId: unit.unitId, titleZh: unit.titleZh, achievementId, unlocked: unlockedAt !== null, unlockedAt }
   })
   // 本周与前期可比较序列：按 题型+层级 分开；不同键绝不合并
   const buckets = new Map<string, ComparableSeries>()
   for (const row of objectiveRows) {
+    if (row.unknownItem) continue
     const key = row.kind + '|' + row.level
     let serie = buckets.get(key)
     if (!serie) {

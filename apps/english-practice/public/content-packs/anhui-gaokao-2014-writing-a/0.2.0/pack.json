@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "anhui-gaokao-2014-writing-a",
+  "version": "0.2.0",
+  "titleZh": "2014 年安徽高考英语书面表达（结构化草稿）",
+  "status": "published",
+  "author": "个人学习工具资料导入",
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-29T00:00:00.000Z",
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sources": [
+    {
+      "id": "anhui-gaokao-2014-official",
+      "kind": "official-reference",
+      "title": "安徽省教育招生考试院：2014年安徽高考英语试题及参考答案",
+      "url": "https://apps.eol.cn/2633/article/54443/10",
+      "rightsNote": "公开历史附件，来自安徽省教育招生考试院历史页面；项目维护者已确认纳入个人学习用途的正式内容包，保留来源出处。"
+    }
+  ],
+  "assets": [
+    {
+      "id": "anhui-gaokao-2014-anhui-gaokao-english-official",
+      "path": "assets/anhui-gaokao/2014-anhui-gaokao-english-official.jpg",
+      "mime": "image/jpeg",
+      "bytes": 790608,
+      "sha256": "51e35e2142e42572d877a0720ba0a4f0055ee1800dd891a262fa606b7760eff0"
+    }
+  ],
+  "resources": [],
+  "items": [
+    {
+      "id": "anhui-gaokao-2014-writing-heart-to-heart",
+      "familyId": "anhui-2014-heart-to-heart",
+      "skillIds": [
+        "writing.task",
+        "writing.organization"
+      ],
+      "level": "G1",
+      "section": "application-writing",
+      "reviewMode": "transfer",
+      "promptZh": "假设你是中学英文报 HEART-TO-HEART 专栏编辑 Jamie，收到署名 Worried 的求助信。对方说自己近日容易发脾气，正常的学习和生活受到影响。请用英文写一封回信：表示理解并给予安慰；提出建议并说明理由。",
+      "resourceId": null,
+      "estimatedSeconds": 600,
+      "sourceIds": [
+        "anhui-gaokao-2014-official"
+      ],
+      "explanation": {
+        "summaryZh": "回信需要回应来信困扰，先表达理解和安慰，再提出具体建议并说明理由。",
+        "ruleZh": "应用文写作要覆盖任务要点，保持书信格式、语气得体、内容连贯，并控制在要求词数附近。",
+        "evidence": [],
+        "distractors": []
+      },
+      "kind": "writing",
+      "wordRange": [
+        110,
+        130
+      ],
+      "requirementsZh": [
+        "表达理解并给予安慰",
+        "提出至少两条可执行建议",
+        "说明建议理由",
+        "使用给定的书信开头和结尾",
+        "正文控制在 120 词左右",
+        "不得出现真实个人相关信息"
+      ],
+      "openingSentences": [
+        "Hi Worried,",
+        "I'm sorry to know that you're having such a bad time at the moment.",
+        "Yours,",
+        "Jamie"
+      ],
+      "checklistZh": [
+        "回应了容易发脾气的困扰",
+        "有安慰和理解",
+        "建议具体且有理由",
+        "书信语气自然",
+        "词数符合要求",
+        "未写入真实个人信息"
+      ],
+      "modelAnswer": ""
+    }
+  ],
+  "units": [
+    {
+      "id": "anhui-gaokao-2014-writing-a",
+      "titleZh": "2014 年安徽高考英语：书面表达",
+      "familyIds": [
+        "anhui-2014-heart-to-heart"
+      ],
+      "itemIds": [
+        "anhui-gaokao-2014-writing-heart-to-heart"
+      ],
+      "prerequisiteSkillIds": []
+    }
+  ]
+}

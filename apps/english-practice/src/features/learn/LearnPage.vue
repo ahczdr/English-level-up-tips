@@ -7,6 +7,8 @@ import type { GaokaoDatabase } from '../../data/db';
 import { createSession } from '../../services/learning';
 import { loadPersonalSettings, type PersonalSettings } from '../../services/settings';
 import { downloadPackAssets, installPreviewPacks } from '../../services/content';
+import { curriculumForUnit, threeYearCurriculum } from '../../domain/curriculum';
+import { compareSemver } from '../../domain/semver';
 import AppButton from '../../components/AppButton.vue';
 
 interface UnitOption {
@@ -41,14 +43,29 @@ const downloadingAudio = ref(false);
 const selectedKey = ref<string | null>(null);
 const minutes = ref<PersonalSettings['defaultMinutes']>(10);
 const profileId = ref('gaokao-common-training-v1');
+const timeZone = ref('Asia/Shanghai');
 const minuteOptions: Array<PersonalSettings['defaultMinutes']> = [5, 10, 15, 25];
 
 const selectedUnit = computed(() => units.value.find((unit) => unit.key === selectedKey.value) ?? null);
+const filterText = ref('');
+const filteredUnits = computed(() => {
+  const q = filterText.value.trim().toLowerCase();
+  if (!q) return units.value;
+  return units.value.filter((u) => (u.unit.titleZh + u.packTitle).toLowerCase().includes(q));
+});
 
 const loadUnits = async (): Promise<void> => {
   loading.value = true;
   try {
-    const records = (await db.value.packs.toArray()).filter((record) => record.status === 'installed');
+    const installedRecords = (await db.value.packs.toArray()).filter((record) => record.status === 'installed');
+    // 旧版本仍需保留给历史会话，但课程入口只展示每个包的最新版本，避免更新后出现重复单元。
+    const latestRecords = new Map<string, (typeof installedRecords)[number]>();
+    for (const record of installedRecords) {
+      const pack = record.pack as CoursePack;
+      const previous = latestRecords.get(pack.id);
+      if (!previous || compareSemver(pack.version, (previous.pack as CoursePack).version) > 0) latestRecords.set(pack.id, record);
+    }
+    const records = [...latestRecords.values()];
     const options: UnitOption[] = [];
     for (const record of records) {
       const pack = record.pack as CoursePack;
@@ -85,6 +102,7 @@ onMounted(async () => {
     const settings = await loadPersonalSettings(db.value);
     minutes.value = settings.defaultMinutes;
     profileId.value = settings.profileId;
+    timeZone.value = settings.timeZone;
   } catch {
     minutes.value = 10;
   }
@@ -110,15 +128,21 @@ const prepareContent = async (): Promise<void> => {
   const result = await installPreviewPacks({ db: db.value });
   if (result.ok) {
     await loadUnits();
+    const counts = `新增安装 ${result.value.installed} 个，已安装 ${result.value.skippedExisting} 个，未通过校验 ${result.value.rejected} 个` +
+      (result.value.skippedDraft > 0 ? `，跳过未审核草稿 ${result.value.skippedDraft} 个` : '');
     if (units.value.length === 0) {
-      status.value = `暂无可用课程：新增安装 ${result.value.installed} 个，已安装 ${result.value.skippedExisting} 个，未通过校验 ${result.value.rejected} 个。`;
+      status.value = `暂无可用课程：${counts}。`;
     } else {
-      status.value = `内容准备完成：新增安装 ${result.value.installed} 个课程包，已安装 ${result.value.skippedExisting} 个，未通过校验 ${result.value.rejected} 个。`;
+      status.value = `内容准备完成：${counts}。`;
     }
   } else {
     status.value = `内容准备失败：${result.error.messageZh}`;
   }
   preparing.value = false;
+};
+
+const checkForUpdates = async (): Promise<void> => {
+  await prepareContent();
 };
 
 const selectUnit = (option: UnitOption): void => {
@@ -158,6 +182,7 @@ const startPractice = async (): Promise<void> => {
       unitId: unit.unit.id,
       minutes: minutes.value,
       profileId: profileId.value,
+      timeZone: timeZone.value,
     });
     if (!result.ok) {
       status.value = result.error.messageZh;
@@ -182,6 +207,41 @@ const startPractice = async (): Promise<void> => {
     <h2 id="learn-title">
       课程
     </h2>
+    <p
+      v-if="units.length > 0"
+      class="learn-count"
+    >
+      共 {{ units.length }} 个单元<template v-if="filterText">，匹配 {{ filteredUnits.length }} 个</template>
+    </p>
+    <input
+      v-if="units.length > 12"
+      v-model="filterText"
+      type="search"
+      class="learn-filter"
+      placeholder="搜索单元或课程名称"
+      aria-label="搜索单元或课程名称"
+    >
+    <section class="curriculum-roadmap" aria-labelledby="curriculum-title">
+      <div class="curriculum-heading">
+        <div>
+          <p class="eyebrow">YOUR 3-YEAR ROUTE</p>
+          <h3 id="curriculum-title">高中三年成长路线</h3>
+        </div>
+        <span class="curriculum-note">先基础，后提速</span>
+      </div>
+      <div class="curriculum-years">
+        <article v-for="year in threeYearCurriculum.years" :key="year.id" class="curriculum-year-card">
+          <div class="curriculum-year-topline">
+            <span class="curriculum-year-title">{{ year.titleZh }}</span>
+            <span class="curriculum-level">{{ year.level }}</span>
+          </div>
+          <p>{{ year.subtitleZh }}</p>
+          <div class="curriculum-unit-chips">
+            <span v-for="unit in year.units" :key="unit.id" class="curriculum-chip">{{ unit.titleZh }}</span>
+          </div>
+        </article>
+      </div>
+    </section>
     <p
       v-if="loading"
       role="status"
@@ -208,7 +268,7 @@ const startPractice = async (): Promise<void> => {
       {{ status }}
     </p>
     <button
-      v-for="option in units"
+      v-for="option in filteredUnits"
       :key="option.key"
       type="button"
       class="unit-card"
@@ -216,6 +276,9 @@ const startPractice = async (): Promise<void> => {
       @click="selectUnit(option)"
     >
       <span class="unit-title">{{ option.unit.titleZh }}</span>
+      <span v-if="curriculumForUnit(option.unit.id)" class="unit-stage">
+        {{ curriculumForUnit(option.unit.id)?.year.titleZh }} · {{ curriculumForUnit(option.unit.id)?.unit.targetZh }}
+      </span>
       <span class="unit-meta">
         {{ option.packTitle }} · 共 {{ option.itemCount }} 题 · 约
         {{ Math.max(1, Math.round(option.totalSeconds / 60)) }} 分钟
@@ -245,6 +308,13 @@ const startPractice = async (): Promise<void> => {
       v-if="units.length > 0"
       class="learn-actions"
     >
+      <AppButton
+        variant="secondary"
+        :disabled="preparing"
+        @click="checkForUpdates"
+      >
+        {{ preparing ? '正在检查…' : '检查课程更新' }}
+      </AppButton>
       <AppButton
         v-if="selectedUnit?.needsDownload"
         :disabled="downloadingAudio"

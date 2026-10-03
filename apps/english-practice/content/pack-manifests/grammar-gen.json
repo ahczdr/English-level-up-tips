@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "grammar-gen",
+  "version": "0.2.0",
+  "titleZh": "语法填空训练（生成草稿）",
+  "status": "published",
+  "author": "内置生成器草稿",
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-30T00:00:00.000Z",
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sourceIds": [
+    "tool-generated-practice"
+  ],
+  "assetIds": [],
+  "resourceIds": [
+    "grammar-gen-p01",
+    "grammar-gen-p02",
+    "grammar-gen-p03",
+    "grammar-gen-p04",
+    "grammar-gen-p05",
+    "grammar-gen-p06",
+    "grammar-gen-p07",
+    "grammar-gen-p08",
+    "grammar-gen-res-p09",
+    "grammar-gen-res-p10"
+  ],
+  "itemIds": [
+    "grammar-gen-p01",
+    "grammar-gen-p02",
+    "grammar-gen-p03",
+    "grammar-gen-p04",
+    "grammar-gen-p05",
+    "grammar-gen-p06",
+    "grammar-gen-p07",
+    "grammar-gen-p08",
+    "grammar-gen-p09",
+    "grammar-gen-p10"
+  ],
+  "unitIds": [
+    "grammar-gen-u1",
+    "grammar-gen-u2"
+  ]
+}

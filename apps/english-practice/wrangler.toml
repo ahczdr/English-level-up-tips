@@ -1,0 +1,4 @@
+# Cloudflare Pages 项目配置（面板创建项目时选择"连接仓库"后会自动读取）
+name = "gaokao-english-practice"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-10-01"

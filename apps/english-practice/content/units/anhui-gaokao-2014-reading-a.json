@@ -1,0 +1,28 @@
+{
+  "id": "anhui-gaokao-2014-reading-a",
+  "titleZh": "2014 年安徽高考英语：阅读理解",
+  "familyIds": ["anhui-2014-reading-a", "anhui-2014-reading-b", "anhui-2014-reading-c", "anhui-2014-reading-d", "anhui-2014-reading-e"],
+  "itemIds": [
+    "anhui-gaokao-2014-reading-a-q56",
+    "anhui-gaokao-2014-reading-a-q57",
+    "anhui-gaokao-2014-reading-a-q58",
+    "anhui-gaokao-2014-reading-a-q59",
+    "anhui-gaokao-2014-reading-b-q60",
+    "anhui-gaokao-2014-reading-b-q61",
+    "anhui-gaokao-2014-reading-b-q62",
+    "anhui-gaokao-2014-reading-b-q63",
+    "anhui-gaokao-2014-reading-c-q64",
+    "anhui-gaokao-2014-reading-c-q65",
+    "anhui-gaokao-2014-reading-c-q66",
+    "anhui-gaokao-2014-reading-c-q67",
+    "anhui-gaokao-2014-reading-d-q68",
+    "anhui-gaokao-2014-reading-d-q69",
+    "anhui-gaokao-2014-reading-d-q70",
+    "anhui-gaokao-2014-reading-d-q71",
+    "anhui-gaokao-2014-reading-e-q72",
+    "anhui-gaokao-2014-reading-e-q73",
+    "anhui-gaokao-2014-reading-e-q74",
+    "anhui-gaokao-2014-reading-e-q75"
+  ],
+  "prerequisiteSkillIds": []
+}

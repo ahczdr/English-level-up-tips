@@ -1,0 +1,2045 @@
+{
+  "schemaVersion": 1,
+  "id": "reading-gen",
+  "version": "0.1.0",
+  "titleZh": "阅读理解训练（生成草稿）",
+  "status": "published",
+  "author": "内置生成器草稿",
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-30T00:00:00.000Z",
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sources": [
+    {
+      "id": "tool-generated-practice",
+      "kind": "original",
+      "title": "本工具生成的基础练习",
+      "url": null,
+      "rightsNote": "由项目内置生成器编写的原创练习句与题目，非真题转载；逐题独立审核进行中。"
+    }
+  ],
+  "assets": [],
+  "resources": [
+    {
+      "id": "reading-gen-m01",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Last September, our school started a Reading Club to help students enjoy books. It meets every Tuesday afternoon in the school library for about an hour. Members choose a book together, read it at home, and then meet to share their ideas."
+        },
+        {
+          "id": "p2",
+          "text": "At first, only eight students joined. The club adviser, Miss Yang, invited some senior students to recommend their favourite books at the school gate. Soon more students became interested, and now the club has over forty members. 'I used to think reading was boring,' says Lin Tao, a club member. 'But when I talk about a story with others, I find more fun in it.' This term, the club plans to invite a local writer to talk about how stories are created."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "reading-gen-m02",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Have you ever seen a fox in a city? In London, foxes are now a common sight. At night, they search dustbins for food and sleep in quiet gardens during the day. Scientists say that city foxes are smaller and braver than wild ones."
+        },
+        {
+          "id": "p2",
+          "text": "Why have so many foxes moved into cities? The main reason is easy food. People throw away a lot of food every day, and foxes quickly learn where to find it. Also, cities are warmer than the countryside in winter, which helps foxes survive the cold. Some people enjoy watching these clever animals, while others complain that foxes make their gardens dirty. Experts advise people not to feed foxes, because food from humans makes them lose their fear and cause more trouble."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "reading-gen-m03",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Every Saturday morning, Maria, a sixteen-year-old student, teaches swimming to children in her neighbourhood for free. She began the class two years ago after she read about a child who nearly drowned in a local river."
+        },
+        {
+          "id": "p2",
+          "text": "At first, only three children came, and some parents worried that a teenager was too young to teach. Maria showed them her lifeguard certificate and invited the parents to watch her lessons by the pool. Now more than twenty children have learned basic swimming skills safely with her help. 'The best moment is when a child swims across the pool for the first time,' Maria says. She plans to train other teenagers as helpers so that the free class can continue even after she goes to university."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "reading-gen-m04",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "At No. 5 Middle School, students in Grade One run for twenty minutes every morning before the first class. The school started the activity three years ago, and many students say it has changed their school life."
+        },
+        {
+          "id": "p2",
+          "text": "'I often felt sleepy in class before,' says Wang Bo, a Grade One student. 'Now running wakes my body up, and I can listen to the teachers better.' Doctors agree that morning exercise improves blood flow to the brain and helps young people sleep at night. However, they also warn that students should not run too fast at the beginning, or their knees may get hurt. Warming up for five minutes and drinking some water after the run are simple but useful rules. The school plans to add a health record for each student to show how daily exercise works."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "reading-gen-m05",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Twelve-year-old Kate hates forgetting things, so she invented a 'talking umbrella'. A small chip inside the handle connects to her phone. When she walks more than fifty metres away from the umbrella, the phone gives a warning sound."
+        },
+        {
+          "id": "p2",
+          "text": "Kate got the idea after she lost three umbrellas in one rainy season. She spent two months learning basic electronics online and built her first model with parts from an old radio. Her invention won first prize at a city science fair, and a company now wants to produce the umbrella. 'Science is not only for adults in labs,' Kate says. 'If you keep asking why, ideas will come to you.' She is now working on a schoolbag that can remind students to take their homework."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "reading-gen-m06",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Every day, people around the world throw away billions of paper coffee cups. Most cups are lined with a thin plastic film, so they cannot be recycled like ordinary paper. They end up in landfills and stay there for many years, polluting the soil."
+        },
+        {
+          "id": "p2",
+          "text": "A cafe owner named Mr. Lee decided to fight this problem. He offers customers a small discount if they bring their own cups. He also places bright green collection boxes outside his cafe, and a factory turns the collected cups into flower pots and park benches. In one year, his cafe has collected more than eighty thousand cups. 'Change starts with small steps,' Mr. Lee says. Now several other cafes in the city are copying his idea."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "reading-gen-m07",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Shadow puppetry, an art with a history of over two thousand years, was once one of the most popular forms of entertainment in China. In the past, travelling performers set up a white cloth screen in village squares after dark. Behind the screen, they moved flat leather figures and sang stories of heroes, ghosts and happy families, while villagers sat around and watched the shadows dance in the lamplight."
+        },
+        {
+          "id": "p2",
+          "text": "Making a single puppet can take a skilled artist several weeks. The leather must be cleaned, carved with fine patterns and painted in bright colours. A good performer also needs years of practice, because each puppet has three sticks, and the hands must move together smoothly to make the figures walk, fight or fly."
+        },
+        {
+          "id": "p3",
+          "text": "Today, however, fewer and fewer young people are willing to learn this slow art, and many famous troupes have closed. To keep it alive, some artists now perform in schools and teach students simple cutting skills. Others put their shows online, where short videos have attracted millions of viewers. 'The shadows are old, but the stage can be new,' one artist says. With fresh ideas and patient hands, this ancient art may continue to light up the dark."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "reading-gen-m08",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Many students believe that reading a text again and again is the best way to learn it. However, a number of studies in psychology suggest a different method: testing yourself. In one famous experiment, two groups of students studied the same passage. One group read it four times, while the other group read it once and then spent the rest of the time answering questions about it. A week later, the second group remembered much more."
+        },
+        {
+          "id": "p2",
+          "text": "Why does testing work so well? Scientists explain that when the brain tries to pull information out, it builds a stronger path to that information, which makes it easier to find later. Rereading, on the other hand, often gives students a false feeling of mastery: the words look familiar, so they believe they have learned them, but familiarity is not real memory."
+        },
+        {
+          "id": "p3",
+          "text": "Teachers now suggest some simple ways to use this method. After finishing a chapter, close the book and write down everything you remember; then check what you missed. You can also explain the lesson to a friend in your own words, or make flashcards and review them over several days instead of cramming all at once. Testing yourself may feel harder than rereading, but that difficulty is exactly what makes the memory last."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "reading-gen-m09",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "In some mountain villages, a visit to the nearest hospital can take hours on winding roads. For patients who need urgent medicine, every minute matters. In recent years, drone delivery has become a surprising answer to this problem. Medical drones fly above the mountains, carrying blood, vaccines and other supplies in small boxes. Guided by satellite navigation, they can reach a village clinic in twenty minutes, a journey that once took two hours by car."
+        },
+        {
+          "id": "p2",
+          "text": "The technology is already changing lives. In one African country, thousands of emergency deliveries are made every month, and the time needed to send blood to hospitals has dropped greatly. Nurses simply send a text message, and the drone sets off within minutes. Local health workers say that mothers giving birth and children with malaria have been the groups helped most."
+        },
+        {
+          "id": "p3",
+          "text": "Still, drone delivery faces challenges. Drones cannot fly in strong winds or heavy rain, and each flight needs trained operators on the ground. Some people also worry about the noise and the safety of low-flying machines. Governments are now writing rules to balance these concerns. Most experts, however, believe the future is clear: as the technology becomes cheaper and safer, drones will quietly become a normal part of health care, bringing help to places that roads cannot easily reach."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "reading-gen-m10",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "As a child, Chen Jin had to cross a shaky wooden bridge on her way to school. On rainy days, the river below rose, and the bridge swayed so much that the children held hands and walked across one by one. 'One day I will build a bridge here,' she told her classmates. Few of them took her words seriously."
+        },
+        {
+          "id": "p2",
+          "text": "Years later, Chen became a bridge engineer. In 2018, she returned to her hometown as the chief designer of a new river bridge. The project was far from easy. The valley's strong winds and sudden floods forced her team to change their design three times. During the hardest months, she lived in a tent near the site and checked every calculation herself. When the bridge finally opened, the schoolchildren crossed it in two minutes on their way to class."
+        },
+        {
+          "id": "p3",
+          "text": "Chen often tells this story at universities. 'A bridge is not just steel and concrete,' she says. 'It is a promise made to a child.' Today, she leads a programme that invites engineering students to build small footbridges in remote villages. For her, every new bridge is a chance to keep an old promise."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "reading-gen-m11",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Sunlight can only reach the top two hundred metres of the ocean. Below that lies the deep sea, a world of darkness, crushing pressure and near-freezing water. For a long time, scientists believed that nothing could live there. Then, in 1977, a research ship sent a small vessel down to the ocean floor near hot springs, and the cameras showed something amazing: whole communities of creatures living around the springs, including giant tube worms as long as a person."
+        },
+        {
+          "id": "p2",
+          "text": "These creatures do not need sunlight at all. Tiny bacteria inside them turn the chemicals from the springs into food, and larger animals feed on the bacteria. Scientists call this a food chain based on chemicals instead of light. The discovery changed how we think about life. If life can exist in such an extreme place on Earth, it may also exist under the ice of distant moons like Europa."
+        },
+        {
+          "id": "p3",
+          "text": "The deep sea remains one of the least explored places on our planet. Many of its creatures have never been named, and some may hold chemicals useful for new medicines. Sadly, deep-sea mining and plastic pollution are already threatening this fragile world. Scientists warn that we should understand the deep sea before we damage it, because once these slow-growing communities are destroyed, they may need centuries to recover."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "reading-gen-m12",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "In many old neighbourhoods, empty corners once served as rubbish dumps. Today, more and more of them are turning green. Residents are turning these small spaces into community gardens, where families can grow vegetables and flowers together. The idea started in big cities where people live in tall buildings without yards of their own, and it has quickly spread to smaller towns."
+        },
+        {
+          "id": "p2",
+          "text": "A community garden does more than provide fresh tomatoes. Gardeners meet almost every day, and neighbours who never said hello before now share seeds, tools and recipes. Older residents teach younger ones how to keep insects away without chemicals, and children learn where their food really comes from. In one garden in Chengdu, a wall was built where residents hang small bags of vegetables for anyone who needs them."
+        },
+        {
+          "id": "p3",
+          "text": "City governments have noticed the change. Some now offer free soil, water pipes and gardening classes to new gardens. Researchers have also found that people who garden report lower stress and get to know more neighbours. Of course, gardens need patient work: weeds grow fast, and summer heat tests everyone's energy. But as one gardener put it, 'We came for the vegetables, but we stayed for the people.'"
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    }
+  ],
+  "items": [
+    {
+      "id": "reading-gen-m01-q1",
+      "familyId": "reading-gen-m01",
+      "skillIds": [
+        "reading.detail"
+      ],
+      "level": "G0",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "When does the Reading Club meet every week? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m01",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "读书社每周二下午在学校图书馆活动一小时。",
+        "ruleZh": "细节题：根据题干关键词回到原文定位对应句，对比选项即可确定答案。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m01",
+            "paragraphId": "p1",
+            "quote": "It meets every Tuesday afternoon in the school library"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Every Monday morning."
+        },
+        {
+          "id": "b",
+          "text": "Every Tuesday afternoon."
+        },
+        {
+          "id": "c",
+          "text": "Every Friday afternoon."
+        },
+        {
+          "id": "d",
+          "text": "Every weekend."
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "reading-gen-m01-q2",
+      "familyId": "reading-gen-m01",
+      "skillIds": [
+        "reading.inference"
+      ],
+      "level": "G0",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What can we learn about Miss Yang? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m01",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "杨老师请高年级同学在校门口推荐好书，是为了吸引更多同学加入读书社。",
+        "ruleZh": "推断题：依据原文信息合理推断，不能脱离原文主观臆断。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m01",
+            "paragraphId": "p2",
+            "quote": "invited some senior students to recommend their favourite books at the school gate"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "She founded the school library."
+        },
+        {
+          "id": "b",
+          "text": "She is a senior student."
+        },
+        {
+          "id": "c",
+          "text": "She thinks reading is boring."
+        },
+        {
+          "id": "d",
+          "text": "She tried to attract more members to the club."
+        }
+      ],
+      "answerOptionId": "d"
+    },
+    {
+      "id": "reading-gen-m01-q3",
+      "familyId": "reading-gen-m01",
+      "skillIds": [
+        "reading.main-idea"
+      ],
+      "level": "G0",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What is the passage mainly about? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m01",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "全文围绕学校读书社的成立、发展和壮大展开。",
+        "ruleZh": "主旨题：抓住首尾段和反复出现的关键词，选择能概括全文大意的选项。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m01",
+            "paragraphId": "p1",
+            "quote": "our school started a Reading Club to help students enjoy books"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "How to write a book."
+        },
+        {
+          "id": "b",
+          "text": "A school reading club and its growth."
+        },
+        {
+          "id": "c",
+          "text": "A famous local writer."
+        },
+        {
+          "id": "d",
+          "text": "The rules of the school library."
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "reading-gen-m02-q1",
+      "familyId": "reading-gen-m02",
+      "skillIds": [
+        "reading.detail"
+      ],
+      "level": "G0",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What does the writer mean by saying foxes are 'a common sight' in London? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m02",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "a common sight 意为“常见的景象”，说明伦敦人经常能见到狐狸。",
+        "ruleZh": "细节题：根据题干关键词回到原文定位对应句，对比选项即可确定答案。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m02",
+            "paragraphId": "p1",
+            "quote": "In London, foxes are now a common sight"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Foxes are kept as pets there."
+        },
+        {
+          "id": "b",
+          "text": "People there often see foxes."
+        },
+        {
+          "id": "c",
+          "text": "Foxes can only be seen in zoos."
+        },
+        {
+          "id": "d",
+          "text": "Foxes there are very large."
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "reading-gen-m02-q2",
+      "familyId": "reading-gen-m02",
+      "skillIds": [
+        "reading.inference"
+      ],
+      "level": "G0",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What is the second paragraph mainly about? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m02",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "第二段以 Why 问句开头，围绕狐狸进城的原因（容易找到食物、城市更温暖）展开。",
+        "ruleZh": "推断题：依据原文信息合理推断，不能脱离原文主观臆断。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m02",
+            "paragraphId": "p2",
+            "quote": "The main reason is easy food."
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Why foxes move into cities."
+        },
+        {
+          "id": "b",
+          "text": "How foxes hunt at night."
+        },
+        {
+          "id": "c",
+          "text": "What foxes eat in winter."
+        },
+        {
+          "id": "d",
+          "text": "Where foxes sleep during the day."
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "reading-gen-m02-q3",
+      "familyId": "reading-gen-m02",
+      "skillIds": [
+        "reading.main-idea"
+      ],
+      "level": "G0",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What do experts advise people to do? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m02",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "专家建议不要投喂狐狸，否则它们会失去怕人的天性并带来更多麻烦。",
+        "ruleZh": "主旨题：抓住首尾段和反复出现的关键词，选择能概括全文大意的选项。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m02",
+            "paragraphId": "p2",
+            "quote": "Experts advise people not to feed foxes"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "To feed foxes in winter."
+        },
+        {
+          "id": "b",
+          "text": "To keep foxes as pets."
+        },
+        {
+          "id": "c",
+          "text": "To drive foxes out of gardens."
+        },
+        {
+          "id": "d",
+          "text": "Not to feed foxes."
+        }
+      ],
+      "answerOptionId": "d"
+    },
+    {
+      "id": "reading-gen-m03-q1",
+      "familyId": "reading-gen-m03",
+      "skillIds": [
+        "reading.detail"
+      ],
+      "level": "G0",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What is the passage mainly about? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m03",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "全文讲述十六岁学生 Maria 免费教社区孩子游泳的故事。",
+        "ruleZh": "细节题：根据题干关键词回到原文定位对应句，对比选项即可确定答案。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m03",
+            "paragraphId": "p1",
+            "quote": "Maria, a sixteen-year-old student, teaches swimming to children in her neighbourhood for free"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "A dangerous river in a neighbourhood."
+        },
+        {
+          "id": "b",
+          "text": "A student who teaches children to swim for free."
+        },
+        {
+          "id": "c",
+          "text": "How to get a lifeguard certificate."
+        },
+        {
+          "id": "d",
+          "text": "Why parents worry about rivers."
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "reading-gen-m03-q2",
+      "familyId": "reading-gen-m03",
+      "skillIds": [
+        "reading.inference"
+      ],
+      "level": "G0",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "Why did Maria start the swimming class? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m03",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "Maria 是在读到一名孩子差点在本地河里溺水的报道后开办免费游泳课的。",
+        "ruleZh": "推断题：依据原文信息合理推断，不能脱离原文主观臆断。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m03",
+            "paragraphId": "p1",
+            "quote": "after she read about a child who nearly drowned in a local river"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "To win a swimming prize."
+        },
+        {
+          "id": "b",
+          "text": "Because her school asked her to."
+        },
+        {
+          "id": "c",
+          "text": "Because a child nearly drowned in a local river."
+        },
+        {
+          "id": "d",
+          "text": "To make money for university."
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "reading-gen-m03-q3",
+      "familyId": "reading-gen-m03",
+      "skillIds": [
+        "reading.main-idea"
+      ],
+      "level": "G0",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What will most probably happen in the future? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m03",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "Maria 打算培训其他青少年做助手，让免费课在她上大学后也能继续，因此课程很可能延续下去。",
+        "ruleZh": "主旨题：抓住首尾段和反复出现的关键词，选择能概括全文大意的选项。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m03",
+            "paragraphId": "p2",
+            "quote": "She plans to train other teenagers as helpers so that the free class can continue"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "The class will stop when Maria leaves."
+        },
+        {
+          "id": "b",
+          "text": "Other teenagers may help continue the class."
+        },
+        {
+          "id": "c",
+          "text": "Maria will charge the children for lessons."
+        },
+        {
+          "id": "d",
+          "text": "The children will forget what they learned."
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "reading-gen-m04-q1",
+      "familyId": "reading-gen-m04",
+      "skillIds": [
+        "reading.detail"
+      ],
+      "level": "G0",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What do students in Grade One do every morning at No. 5 Middle School? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m04",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "五中高一年级学生每天早上第一节课前跑步二十分钟。",
+        "ruleZh": "细节题：根据题干关键词回到原文定位对应句，对比选项即可确定答案。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m04",
+            "paragraphId": "p1",
+            "quote": "students in Grade One run for twenty minutes every morning"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "They run for twenty minutes."
+        },
+        {
+          "id": "b",
+          "text": "They swim for half an hour."
+        },
+        {
+          "id": "c",
+          "text": "They play basketball before class."
+        },
+        {
+          "id": "d",
+          "text": "They take a health test."
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "reading-gen-m04-q2",
+      "familyId": "reading-gen-m04",
+      "skillIds": [
+        "reading.inference"
+      ],
+      "level": "G0",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "Why does Wang Bo mention his classes? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m04",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "王博说自己以前上课犯困，现在跑步让身体醒来、听课更专心，是为了说明跑步带来的好处。",
+        "ruleZh": "推断题：依据原文信息合理推断，不能脱离原文主观臆断。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m04",
+            "paragraphId": "p2",
+            "quote": "Now running wakes my body up, and I can listen to the teachers better."
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "To show that running helps him focus."
+        },
+        {
+          "id": "b",
+          "text": "To complain about too much homework."
+        },
+        {
+          "id": "c",
+          "text": "To prove that his teachers like him."
+        },
+        {
+          "id": "d",
+          "text": "To explain why he is often late."
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "reading-gen-m04-q3",
+      "familyId": "reading-gen-m04",
+      "skillIds": [
+        "reading.main-idea"
+      ],
+      "level": "G0",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What is the passage mainly about? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m04",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "全文介绍五中的晨跑活动、学生的感受以及医生的建议，核心是这项活动及其好处。",
+        "ruleZh": "主旨题：抓住首尾段和反复出现的关键词，选择能概括全文大意的选项。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m04",
+            "paragraphId": "p1",
+            "quote": "The school started the activity three years ago, and many students say it has changed their school life."
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "How to become a good runner."
+        },
+        {
+          "id": "b",
+          "text": "The danger of running too fast."
+        },
+        {
+          "id": "c",
+          "text": "A school's morning running activity and its benefits."
+        },
+        {
+          "id": "d",
+          "text": "Doctors' advice on sleeping well."
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "reading-gen-m05-q1",
+      "familyId": "reading-gen-m05",
+      "skillIds": [
+        "reading.detail"
+      ],
+      "level": "G0",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What do we know about Kate from the passage? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m05",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "Kate 自己动手学习电子知识、花两个月做出发明并继续改进，说明她富有创造力又肯下功夫。",
+        "ruleZh": "细节题：根据题干关键词回到原文定位对应句，对比选项即可确定答案。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m05",
+            "paragraphId": "p2",
+            "quote": "She spent two months learning basic electronics online"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "She works for a big company."
+        },
+        {
+          "id": "b",
+          "text": "She is a creative and hard-working student."
+        },
+        {
+          "id": "c",
+          "text": "She often forgets her homework."
+        },
+        {
+          "id": "d",
+          "text": "She teaches electronics online."
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "reading-gen-m05-q2",
+      "familyId": "reading-gen-m05",
+      "skillIds": [
+        "reading.inference"
+      ],
+      "level": "G0",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What does the passage mainly talk about? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m05",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "全文围绕 Kate 的“会说话的雨伞”这一实用发明的由来和影响展开。",
+        "ruleZh": "推断题：依据原文信息合理推断，不能脱离原文主观臆断。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m05",
+            "paragraphId": "p1",
+            "quote": "she invented a 'talking umbrella'"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "A rainy season in Kate's city."
+        },
+        {
+          "id": "b",
+          "text": "A science fair for companies."
+        },
+        {
+          "id": "c",
+          "text": "A student's useful invention."
+        },
+        {
+          "id": "d",
+          "text": "How to build a radio."
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "reading-gen-m05-q3",
+      "familyId": "reading-gen-m05",
+      "skillIds": [
+        "reading.main-idea"
+      ],
+      "level": "G0",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What will happen when Kate leaves her umbrella behind? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m05",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "当 Kate 离雨伞超过五十米时，手机会发出警示音。",
+        "ruleZh": "主旨题：抓住首尾段和反复出现的关键词，选择能概括全文大意的选项。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m05",
+            "paragraphId": "p1",
+            "quote": "the phone gives a warning sound"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "The umbrella will call her teacher."
+        },
+        {
+          "id": "b",
+          "text": "Nothing will happen."
+        },
+        {
+          "id": "c",
+          "text": "The umbrella will hide itself."
+        },
+        {
+          "id": "d",
+          "text": "Her phone will make a warning sound."
+        }
+      ],
+      "answerOptionId": "d"
+    },
+    {
+      "id": "reading-gen-m06-q1",
+      "familyId": "reading-gen-m06",
+      "skillIds": [
+        "reading.detail"
+      ],
+      "level": "G0",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What is the passage mainly about? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m06",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "全文讲述咖啡馆老板 Lee 先生回收再利用纸杯的行动及影响。",
+        "ruleZh": "细节题：根据题干关键词回到原文定位对应句，对比选项即可确定答案。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m06",
+            "paragraphId": "p2",
+            "quote": "A cafe owner named Mr. Lee decided to fight this problem."
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "How coffee is made."
+        },
+        {
+          "id": "b",
+          "text": "Why paper cups are expensive."
+        },
+        {
+          "id": "c",
+          "text": "How to open a small cafe."
+        },
+        {
+          "id": "d",
+          "text": "A cafe owner's action to reuse paper cups."
+        }
+      ],
+      "answerOptionId": "d"
+    },
+    {
+      "id": "reading-gen-m06-q2",
+      "familyId": "reading-gen-m06",
+      "skillIds": [
+        "reading.inference"
+      ],
+      "level": "G0",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "Why can't most paper cups be recycled like ordinary paper? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m06",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "大多数纸杯内壁有一层薄塑料膜，所以无法像普通纸一样回收。",
+        "ruleZh": "推断题：依据原文信息合理推断，不能脱离原文主观臆断。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m06",
+            "paragraphId": "p1",
+            "quote": "Most cups are lined with a thin plastic film"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Because they are lined with a thin plastic film."
+        },
+        {
+          "id": "b",
+          "text": "Because they are too dirty."
+        },
+        {
+          "id": "c",
+          "text": "Because they are too heavy."
+        },
+        {
+          "id": "d",
+          "text": "Because they are made of glass."
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "reading-gen-m06-q3",
+      "familyId": "reading-gen-m06",
+      "skillIds": [
+        "reading.main-idea"
+      ],
+      "level": "G0",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What will probably happen in the city? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m06",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "其他几家咖啡馆正在效仿 Lee 先生的做法，因此回收纸杯的咖啡馆很可能越来越多。",
+        "ruleZh": "主旨题：抓住首尾段和反复出现的关键词，选择能概括全文大意的选项。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m06",
+            "paragraphId": "p2",
+            "quote": "several other cafes in the city are copying his idea"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "The factory will close soon."
+        },
+        {
+          "id": "b",
+          "text": "More cafes will collect used cups."
+        },
+        {
+          "id": "c",
+          "text": "Coffee will become cheaper."
+        },
+        {
+          "id": "d",
+          "text": "Landfills will get bigger and bigger."
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "reading-gen-m07-q1",
+      "familyId": "reading-gen-m07",
+      "skillIds": [
+        "reading.detail"
+      ],
+      "level": "G2",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What did travelling performers do in the past? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m07",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "过去流动艺人在天黑后于乡村广场支起白布幕，在幕后操纵皮影演唱故事。",
+        "ruleZh": "细节题：根据题干关键词回到原文定位对应句，对比选项即可确定答案。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m07",
+            "paragraphId": "p1",
+            "quote": "travelling performers set up a white cloth screen in village squares after dark"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "They carved stone statues in villages."
+        },
+        {
+          "id": "b",
+          "text": "They performed shadow plays on white cloth screens at night."
+        },
+        {
+          "id": "c",
+          "text": "They taught villagers to make leather."
+        },
+        {
+          "id": "d",
+          "text": "They sang in big theatres."
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "reading-gen-m07-q2",
+      "familyId": "reading-gen-m07",
+      "skillIds": [
+        "reading.inference"
+      ],
+      "level": "G2",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What can we infer about shadow puppetry today? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m07",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "艺人进校园教学、把演出搬上网并吸引数百万观众，说明这门老艺术正通过新途径找到新观众。",
+        "ruleZh": "推断题：依据原文信息合理推断，不能脱离原文主观臆断。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m07",
+            "paragraphId": "p3",
+            "quote": "short videos have attracted millions of viewers"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "It has completely disappeared."
+        },
+        {
+          "id": "b",
+          "text": "It is only popular in villages."
+        },
+        {
+          "id": "c",
+          "text": "It is finding new audiences through new ways."
+        },
+        {
+          "id": "d",
+          "text": "Young people refuse to watch its videos."
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "reading-gen-m07-q3",
+      "familyId": "reading-gen-m07",
+      "skillIds": [
+        "reading.main-idea"
+      ],
+      "level": "G2",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "Which sentence best summarizes the passage? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m07",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "全文介绍皮影戏的辉煌、传承困境和新的传承方式，主旨是“老艺术用新办法求生”。",
+        "ruleZh": "主旨题：抓住首尾段和反复出现的关键词，选择能概括全文大意的选项。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m07",
+            "paragraphId": "p3",
+            "quote": "With fresh ideas and patient hands, this ancient art may continue to light up the dark."
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Shadow puppetry is dying out quickly."
+        },
+        {
+          "id": "b",
+          "text": "Making leather puppets takes weeks."
+        },
+        {
+          "id": "c",
+          "text": "Online videos are better than live shows."
+        },
+        {
+          "id": "d",
+          "text": "An old art is fighting to survive with new methods."
+        }
+      ],
+      "answerOptionId": "d"
+    },
+    {
+      "id": "reading-gen-m08-q1",
+      "familyId": "reading-gen-m08",
+      "skillIds": [
+        "reading.detail"
+      ],
+      "level": "G2",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What can we infer from the experiment in Paragraph 1? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m08",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "只读一遍但答题的组一周后记得更多，说明读完后的自我测试有助于记忆。",
+        "ruleZh": "细节题：根据题干关键词回到原文定位对应句，对比选项即可确定答案。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m08",
+            "paragraphId": "p1",
+            "quote": "the other group read it once and then spent the rest of the time answering questions about it. A week later, the second group remembered much more."
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Reading more times always leads to better memory."
+        },
+        {
+          "id": "b",
+          "text": "Answering questions after reading improves memory."
+        },
+        {
+          "id": "c",
+          "text": "The students in the second group were cleverer."
+        },
+        {
+          "id": "d",
+          "text": "The passage used in the experiment was too easy."
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "reading-gen-m08-q2",
+      "familyId": "reading-gen-m08",
+      "skillIds": [
+        "reading.inference"
+      ],
+      "level": "G2",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What is the main idea of Paragraph 2? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m08",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "第二段解释自我测试有效的原因：提取信息会在大脑中建立更牢固的路径。",
+        "ruleZh": "推断题：依据原文信息合理推断，不能脱离原文主观臆断。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m08",
+            "paragraphId": "p2",
+            "quote": "when the brain tries to pull information out, it builds a stronger path to that information"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Why self-testing strengthens memory."
+        },
+        {
+          "id": "b",
+          "text": "How to design a famous experiment."
+        },
+        {
+          "id": "c",
+          "text": "Why students dislike exams."
+        },
+        {
+          "id": "d",
+          "text": "How words become familiar to us."
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "reading-gen-m08-q3",
+      "familyId": "reading-gen-m08",
+      "skillIds": [
+        "reading.main-idea"
+      ],
+      "level": "G2",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "Which of the following do teachers suggest? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m08",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "老师建议用自己的话向朋友讲解所学内容，这是文中给出的方法之一。",
+        "ruleZh": "主旨题：抓住首尾段和反复出现的关键词，选择能概括全文大意的选项。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m08",
+            "paragraphId": "p3",
+            "quote": "You can also explain the lesson to a friend in your own words"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Rereading a text at least four times."
+        },
+        {
+          "id": "b",
+          "text": "Cramming everything the night before."
+        },
+        {
+          "id": "c",
+          "text": "Explaining a lesson to a friend in your own words."
+        },
+        {
+          "id": "d",
+          "text": "Avoiding questions that feel difficult."
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "reading-gen-m09-q1",
+      "familyId": "reading-gen-m09",
+      "skillIds": [
+        "reading.detail"
+      ],
+      "level": "G2",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What is the passage mainly about? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m09",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "全文介绍无人机运送医疗物资的现状、成效、挑战与前景。",
+        "ruleZh": "细节题：根据题干关键词回到原文定位对应句，对比选项即可确定答案。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m09",
+            "paragraphId": "p1",
+            "quote": "drone delivery has become a surprising answer to this problem"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "The beauty of mountain villages."
+        },
+        {
+          "id": "b",
+          "text": "Drone delivery of medical supplies and its future."
+        },
+        {
+          "id": "c",
+          "text": "The rules of flying drones for fun."
+        },
+        {
+          "id": "d",
+          "text": "Why mountain roads are dangerous."
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "reading-gen-m09-q2",
+      "familyId": "reading-gen-m09",
+      "skillIds": [
+        "reading.inference"
+      ],
+      "level": "G2",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "How long does it take a drone to reach a village clinic? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m09",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "在卫星导航引导下，无人机二十分钟即可抵达村诊所，而汽车过去要两小时。",
+        "ruleZh": "推断题：依据原文信息合理推断，不能脱离原文主观臆断。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m09",
+            "paragraphId": "p1",
+            "quote": "they can reach a village clinic in twenty minutes"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "About twenty minutes."
+        },
+        {
+          "id": "b",
+          "text": "Two hours."
+        },
+        {
+          "id": "c",
+          "text": "A whole day."
+        },
+        {
+          "id": "d",
+          "text": "Several days."
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "reading-gen-m09-q3",
+      "familyId": "reading-gen-m09",
+      "skillIds": [
+        "reading.main-idea"
+      ],
+      "level": "G2",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What do most experts think of drone delivery? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m09",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "多数专家认为随着技术更便宜、更安全，无人机将成为医疗保健的常规部分。",
+        "ruleZh": "主旨题：抓住首尾段和反复出现的关键词，选择能概括全文大意的选项。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m09",
+            "paragraphId": "p3",
+            "quote": "drones will quietly become a normal part of health care"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "It should be stopped because of the noise."
+        },
+        {
+          "id": "b",
+          "text": "It works only in fine weather."
+        },
+        {
+          "id": "c",
+          "text": "It is too expensive to develop."
+        },
+        {
+          "id": "d",
+          "text": "It will become a normal part of health care."
+        }
+      ],
+      "answerOptionId": "d"
+    },
+    {
+      "id": "reading-gen-m10-q1",
+      "familyId": "reading-gen-m10",
+      "skillIds": [
+        "reading.detail"
+      ],
+      "level": "G2",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "Why did young Chen Jin promise to build a bridge? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m10",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "上学的木桥摇摇晃晃、雨天河水上涨，孩子们只能手拉手慢慢过桥，因此她许下修桥的心愿。",
+        "ruleZh": "细节题：根据题干关键词回到原文定位对应句，对比选项即可确定答案。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m10",
+            "paragraphId": "p1",
+            "quote": "had to cross a shaky wooden bridge on her way to school"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Her classmates asked her to."
+        },
+        {
+          "id": "b",
+          "text": "Her old wooden bridge was dangerous."
+        },
+        {
+          "id": "c",
+          "text": "She wanted to win a prize."
+        },
+        {
+          "id": "d",
+          "text": "Her school was too far away."
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "reading-gen-m10-q2",
+      "familyId": "reading-gen-m10",
+      "skillIds": [
+        "reading.inference"
+      ],
+      "level": "G2",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What does Chen Jin mean by 'It is a promise made to a child'? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m10",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "她小时候许过修桥的诺言，如今作为总工程师实现它，说明工作让童年梦想成真。",
+        "ruleZh": "推断题：依据原文信息合理推断，不能脱离原文主观臆断。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m10",
+            "paragraphId": "p1",
+            "quote": "'One day I will build a bridge here,' she told her classmates."
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Bridges should only be built for children."
+        },
+        {
+          "id": "b",
+          "text": "Children should learn to design bridges."
+        },
+        {
+          "id": "c",
+          "text": "Her work turns her childhood dream into reality."
+        },
+        {
+          "id": "d",
+          "text": "Promises are more important than bridges."
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "reading-gen-m10-q3",
+      "familyId": "reading-gen-m10",
+      "skillIds": [
+        "reading.main-idea"
+      ],
+      "level": "G2",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What is the best title for the passage? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m10",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "全文以童年诺言开始、以守住诺言结束，“守住童年的诺言”最能概括全文。",
+        "ruleZh": "主旨题：抓住首尾段和反复出现的关键词，选择能概括全文大意的选项。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m10",
+            "paragraphId": "p3",
+            "quote": "every new bridge is a chance to keep an old promise"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Dangerous Rivers in the Mountains"
+        },
+        {
+          "id": "b",
+          "text": "How to Become an Engineer"
+        },
+        {
+          "id": "c",
+          "text": "A Tent near the Building Site"
+        },
+        {
+          "id": "d",
+          "text": "Keeping a Childhood Promise"
+        }
+      ],
+      "answerOptionId": "d"
+    },
+    {
+      "id": "reading-gen-m11-q1",
+      "familyId": "reading-gen-m11",
+      "skillIds": [
+        "reading.detail"
+      ],
+      "level": "G2",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "Why does the writer mention moons like Europa? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m11",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "作者由深海生命推及冰层之下的遥远卫星，说明生命也可能存在于其他极端环境。",
+        "ruleZh": "细节题：根据题干关键词回到原文定位对应句，对比选项即可确定答案。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m11",
+            "paragraphId": "p2",
+            "quote": "If life can exist in such an extreme place on Earth, it may also exist under the ice of distant moons like Europa."
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "To describe a plan to travel to Europa."
+        },
+        {
+          "id": "b",
+          "text": "To prove that the deep sea is dangerous."
+        },
+        {
+          "id": "c",
+          "text": "To show that life may exist in extreme places elsewhere."
+        },
+        {
+          "id": "d",
+          "text": "To explain how deep-sea springs form."
+        }
+      ],
+      "answerOptionId": "c"
+    },
+    {
+      "id": "reading-gen-m11-q2",
+      "familyId": "reading-gen-m11",
+      "skillIds": [
+        "reading.inference"
+      ],
+      "level": "G2",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What is the passage mainly about? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m11",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "全文介绍深海生命的发现、独特的食物链、对生命认识的意义以及保护深海的重要性。",
+        "ruleZh": "推断题：依据原文信息合理推断，不能脱离原文主观臆断。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m11",
+            "paragraphId": "p3",
+            "quote": "The deep sea remains one of the least explored places on our planet."
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "How research ships are built."
+        },
+        {
+          "id": "b",
+          "text": "The food chain of small fish."
+        },
+        {
+          "id": "c",
+          "text": "The history of space travel."
+        },
+        {
+          "id": "d",
+          "text": "Life in the deep sea and why it matters."
+        }
+      ],
+      "answerOptionId": "d"
+    },
+    {
+      "id": "reading-gen-m11-q3",
+      "familyId": "reading-gen-m11",
+      "skillIds": [
+        "reading.main-idea"
+      ],
+      "level": "G2",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What feeds the creatures living around the hot springs? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m11",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "生物体内的微小细菌把热泉中的化学物质转化为食物，成为这条食物链的基础。",
+        "ruleZh": "主旨题：抓住首尾段和反复出现的关键词，选择能概括全文大意的选项。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m11",
+            "paragraphId": "p2",
+            "quote": "Tiny bacteria inside them turn the chemicals from the springs into food"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sunlight from the surface."
+        },
+        {
+          "id": "b",
+          "text": "Tiny bacteria that turn chemicals into food."
+        },
+        {
+          "id": "c",
+          "text": "Leaves that fall into the sea."
+        },
+        {
+          "id": "d",
+          "text": "Food dropped by research ships."
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "reading-gen-m12-q1",
+      "familyId": "reading-gen-m12",
+      "skillIds": [
+        "reading.detail"
+      ],
+      "level": "G2",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What does the passage mainly talk about? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m12",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "全文介绍社区花园的兴起及其给邻里带来的蔬果、交流与减压等好处。",
+        "ruleZh": "细节题：根据题干关键词回到原文定位对应句，对比选项即可确定答案。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m12",
+            "paragraphId": "p1",
+            "quote": "Residents are turning these small spaces into community gardens"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "How to grow better tomatoes."
+        },
+        {
+          "id": "b",
+          "text": "Community gardens and what they bring to neighbourhoods."
+        },
+        {
+          "id": "c",
+          "text": "The rubbish problems of big cities."
+        },
+        {
+          "id": "d",
+          "text": "Why governments build tall buildings."
+        }
+      ],
+      "answerOptionId": "b"
+    },
+    {
+      "id": "reading-gen-m12-q2",
+      "familyId": "reading-gen-m12",
+      "skillIds": [
+        "reading.inference"
+      ],
+      "level": "G2",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "In the Chengdu garden, what was the wall built for? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m12",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "成都某花园里砌墙是为了挂上装有蔬菜的小袋子，供有需要的人取用。",
+        "ruleZh": "推断题：依据原文信息合理推断，不能脱离原文主观臆断。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m12",
+            "paragraphId": "p2",
+            "quote": "a wall was built where residents hang small bags of vegetables for anyone who needs them"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "To hang bags of vegetables for anyone who needs them."
+        },
+        {
+          "id": "b",
+          "text": "To keep insects out of the garden."
+        },
+        {
+          "id": "c",
+          "text": "To stop children entering the garden."
+        },
+        {
+          "id": "d",
+          "text": "To paint pictures on it."
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "reading-gen-m12-q3",
+      "familyId": "reading-gen-m12",
+      "skillIds": [
+        "reading.main-idea"
+      ],
+      "level": "G2",
+      "section": "reading",
+      "reviewMode": "recognition",
+      "promptZh": "What does 'We came for the vegetables, but we stayed for the people' suggest? 根据短文内容，选择最佳答案。",
+      "resourceId": "reading-gen-m12",
+      "estimatedSeconds": 90,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "这句话说明人们最初为蔬菜而来，留下来的真正原因是邻里之间建立的深厚情谊。",
+        "ruleZh": "主旨题：抓住首尾段和反复出现的关键词，选择能概括全文大意的选项。",
+        "evidence": [
+          {
+            "resourceId": "reading-gen-m12",
+            "paragraphId": "p3",
+            "quote": "'We came for the vegetables, but we stayed for the people.'"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "Vegetables in gardens taste bad."
+        },
+        {
+          "id": "b",
+          "text": "The best part of the garden is the human connection."
+        },
+        {
+          "id": "c",
+          "text": "Gardeners should grow fewer vegetables."
+        },
+        {
+          "id": "d",
+          "text": "People leave gardens very quickly."
+        }
+      ],
+      "answerOptionId": "b"
+    }
+  ],
+  "units": [
+    {
+      "id": "reading-gen-u1",
+      "titleZh": "阅读理解 第1组（基础·校园与自然）",
+      "familyIds": [
+        "reading-gen-m01",
+        "reading-gen-m02",
+        "reading-gen-m03"
+      ],
+      "itemIds": [
+        "reading-gen-m01-q1",
+        "reading-gen-m01-q2",
+        "reading-gen-m01-q3",
+        "reading-gen-m02-q1",
+        "reading-gen-m02-q2",
+        "reading-gen-m02-q3",
+        "reading-gen-m03-q1",
+        "reading-gen-m03-q2",
+        "reading-gen-m03-q3"
+      ],
+      "prerequisiteSkillIds": []
+    },
+    {
+      "id": "reading-gen-u2",
+      "titleZh": "阅读理解 第2组（基础·健康与生活）",
+      "familyIds": [
+        "reading-gen-m04",
+        "reading-gen-m05",
+        "reading-gen-m06"
+      ],
+      "itemIds": [
+        "reading-gen-m04-q1",
+        "reading-gen-m04-q2",
+        "reading-gen-m04-q3",
+        "reading-gen-m05-q1",
+        "reading-gen-m05-q2",
+        "reading-gen-m05-q3",
+        "reading-gen-m06-q1",
+        "reading-gen-m06-q2",
+        "reading-gen-m06-q3"
+      ],
+      "prerequisiteSkillIds": []
+    },
+    {
+      "id": "reading-gen-u3",
+      "titleZh": "阅读理解 第3组（提高·文化与学习）",
+      "familyIds": [
+        "reading-gen-m07",
+        "reading-gen-m08",
+        "reading-gen-m09"
+      ],
+      "itemIds": [
+        "reading-gen-m07-q1",
+        "reading-gen-m07-q2",
+        "reading-gen-m07-q3",
+        "reading-gen-m08-q1",
+        "reading-gen-m08-q2",
+        "reading-gen-m08-q3",
+        "reading-gen-m09-q1",
+        "reading-gen-m09-q2",
+        "reading-gen-m09-q3"
+      ],
+      "prerequisiteSkillIds": []
+    },
+    {
+      "id": "reading-gen-u4",
+      "titleZh": "阅读理解 第4组（提高·人物与社区）",
+      "familyIds": [
+        "reading-gen-m10",
+        "reading-gen-m11",
+        "reading-gen-m12"
+      ],
+      "itemIds": [
+        "reading-gen-m10-q1",
+        "reading-gen-m10-q2",
+        "reading-gen-m10-q3",
+        "reading-gen-m11-q1",
+        "reading-gen-m11-q2",
+        "reading-gen-m11-q3",
+        "reading-gen-m12-q1",
+        "reading-gen-m12-q2",
+        "reading-gen-m12-q3"
+      ],
+      "prerequisiteSkillIds": []
+    }
+  ]
+}

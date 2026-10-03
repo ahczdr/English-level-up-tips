@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "id": "anhui-gaokao-2013-grammar-b",
+  "version": "0.2.0",
+  "titleZh": "2013 年安徽高考英语语篇填空（结构化草稿）",
+  "status": "published",
+  "author": "个人学习工具资料导入",
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-29T00:00:00.000Z",
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sources": [
+    {
+      "id": "anhui-gaokao-2013-official",
+      "kind": "official-reference",
+      "title": "安徽省教育招生考试院：2013年安徽高考英语试题及参考答案",
+      "url": "https://apps.eol.cn/2633/article/248282.html",
+      "rightsNote": "公开历史附件，来自安徽省教育招生考试院历史页面；项目维护者已确认纳入个人学习用途的正式内容包，保留来源出处。"
+    }
+  ],
+  "assets": [
+    {
+      "id": "anhui-gaokao-2013-anhui-gaokao-english-official",
+      "path": "assets/anhui-gaokao/2013-anhui-gaokao-english-official.jpg",
+      "mime": "image/jpeg",
+      "bytes": 790913,
+      "sha256": "2042de51f8d277c569b0524f25c2eca543f7cf165f350707b6aa259d4fe18193"
+    }
+  ],
+  "resources": [
+    {
+      "id": "anhui-gaokao-2013-grammar-happiness",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Aristotle once wrote that happiness is a state of activity. In other words, whether you're seeking life-long satisfaction or a few moments of good cheer, you've got to move forward. We've interviewed the experts and found five steps to take toward a sunny mood. Over a 30-year period, University of Illinois researchers asked nearly 120,000 people how income, education, political participation, volunteer activities and close relationships affected their happiness. Reported Newsweek's Sharon Begley on the findings, The highest levels of happiness are found with the most stable and satisfying relationships. Singing aloud, talking to a stranger, raising your hand; all may increase a feeling of happiness, according to a study from Wake Forest University. Participants followed the development of their moods for two weeks and reported feeling happier when they were more outgoing and less happy when reserved or withdrawn. The editors of Forbes.com gave $5 or $20 to 46 strangers by chance. Half the group was told to spend the money on themselves, while the other half was told to spend it on others. Those who'd shared the wealth felt much happier at the end of the day than those who'd spent it on themselves. There was no difference in happiness between those who spent $5 or $20, suggesting that it's not how much money you spend, but how you spend it, that inspires the spirit. Studies from the Positive Psychology Center showed that discouraged people who wrote down three good things that happened to them each day for six months reported an improved attitude. Drinking water really can help keep you cheerful. A small 2012 study from the University of Connecticut suggested that even slight dehydration affected the moods of its female participants."
+        },
+        {
+          "id": "p2",
+          "text": "Steps for Happiness. You will move (77) ____ in the course of finding happiness. Some (79) ____ toward happiness. The findings of (78) ____. Value your relationships: the (80) ____ happiness lies in the most stable and satisfying relationships. (81) ____ yourself: you can gain happiness by singing aloud or talking to others. Spend money on others: your spirit will be inspired by (82) ____ the wealth. (83) ____ on the positive: your attitude would be improved when you fix your attention on good things. Drink water: if a woman takes in enough water, her (84) ____ of happiness may remain. Happiness can be found if all (85) ____ have been done."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    }
+  ],
+  "items": [
+    {
+      "id": "anhui-gaokao-2013-grammar-happiness",
+      "familyId": "anhui-2013-happiness-summary",
+      "skillIds": [
+        "grammar.word-form",
+        "reading.main-idea",
+        "vocab.collocation"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recall",
+      "promptZh": "阅读短文，根据文章内容在表格空白处填入适当的单词（2013 年安徽卷第 76-85 题）。",
+      "resourceId": "anhui-gaokao-2013-grammar-happiness",
+      "estimatedSeconds": 360,
+      "sourceIds": [
+        "anhui-gaokao-2013-official"
+      ],
+      "explanation": {
+        "summaryZh": "文章从稳定关系、主动交流、分享财富、关注积极事物和饮水五个方面概括获得幸福的方法。",
+        "ruleZh": "语篇填空需要结合文章信息、固定搭配、词性和表格结构；答案页列出的同义或词形变体应作为可接受答案。",
+        "evidence": [
+          {
+            "resourceId": "anhui-gaokao-2013-grammar-happiness",
+            "paragraphId": "p1",
+            "quote": "five steps to take toward a sunny mood"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "text",
+      "sharedOptions": [],
+      "uniqueOptions": false,
+      "segments": [
+        {
+          "type": "gap",
+          "gapId": "g76"
+        },
+        {
+          "type": "text",
+          "text": " for Happiness. You will move "
+        },
+        {
+          "type": "gap",
+          "gapId": "g77"
+        },
+        {
+          "type": "text",
+          "text": " in the course of finding happiness. The findings of "
+        },
+        {
+          "type": "gap",
+          "gapId": "g78"
+        },
+        {
+          "type": "text",
+          "text": " show some "
+        },
+        {
+          "type": "gap",
+          "gapId": "g79"
+        },
+        {
+          "type": "text",
+          "text": " toward happiness. The "
+        },
+        {
+          "type": "gap",
+          "gapId": "g80"
+        },
+        {
+          "type": "text",
+          "text": " happiness lies in the most stable and satisfying relationships. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g81"
+        },
+        {
+          "type": "text",
+          "text": " yourself: you can gain happiness by singing aloud or talking to others. Your spirit will be inspired by "
+        },
+        {
+          "type": "gap",
+          "gapId": "g82"
+        },
+        {
+          "type": "text",
+          "text": " the wealth. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g83"
+        },
+        {
+          "type": "text",
+          "text": " on the positive: your attitude would be improved when you fix your attention on good things. If a woman takes in enough water, her "
+        },
+        {
+          "type": "gap",
+          "gapId": "g84"
+        },
+        {
+          "type": "text",
+          "text": " of happiness may remain. Happiness can be found if all "
+        },
+        {
+          "type": "gap",
+          "gapId": "g85"
+        },
+        {
+          "type": "text",
+          "text": " have been done."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g76",
+          "label": "76",
+          "clue": null,
+          "options": [],
+          "accepted": [
+            "looking",
+            "searching",
+            "seeking"
+          ],
+          "explanationZh": "表格标题概括寻找幸福的方法，Looking、Searching、Seeking 都可作标题核心词。"
+        },
+        {
+          "id": "g77",
+          "label": "77",
+          "clue": null,
+          "options": [],
+          "accepted": [
+            "forward",
+            "ahead",
+            "on"
+          ],
+          "explanationZh": "move forward/ahead/on 都表示继续向前，符合原文 move forward。"
+        },
+        {
+          "id": "g78",
+          "label": "78",
+          "clue": null,
+          "options": [],
+          "accepted": [
+            "experts",
+            "researchers"
+          ],
+          "explanationZh": "文章采访专家并引用研究者的发现，experts 和 researchers 均为答案页接受形式。"
+        },
+        {
+          "id": "g79",
+          "label": "79",
+          "clue": null,
+          "options": [],
+          "accepted": [
+            "steps",
+            "ways"
+          ],
+          "explanationZh": "文章开头提出 five steps，steps 和 ways 都能概括通往幸福的方法。"
+        },
+        {
+          "id": "g80",
+          "label": "80",
+          "clue": null,
+          "options": [],
+          "accepted": [
+            "greatest"
+          ],
+          "explanationZh": "最高程度的幸福出现在最稳定、最令人满意的关系中，用 greatest。"
+        },
+        {
+          "id": "g81",
+          "label": "81",
+          "clue": null,
+          "options": [],
+          "accepted": [
+            "express"
+          ],
+          "explanationZh": "唱歌或与人交谈属于表达自己，Express yourself 是固定表达。"
+        },
+        {
+          "id": "g82",
+          "label": "82",
+          "clue": null,
+          "options": [],
+          "accepted": [
+            "sharing"
+          ],
+          "explanationZh": "分享财富能使精神受到鼓舞，by 后接动名词 sharing。"
+        },
+        {
+          "id": "g83",
+          "label": "83",
+          "clue": null,
+          "options": [],
+          "accepted": [
+            "focus",
+            "concentrate"
+          ],
+          "explanationZh": "fix attention on 的同义表达是 focus/concentrate on the positive。"
+        },
+        {
+          "id": "g84",
+          "label": "84",
+          "clue": null,
+          "options": [],
+          "accepted": [
+            "feeling",
+            "mood",
+            "sense"
+          ],
+          "explanationZh": "feeling、mood、sense 都可表示幸福感，答案页列出这些变体。"
+        },
+        {
+          "id": "g85",
+          "label": "85",
+          "clue": null,
+          "options": [],
+          "accepted": [
+            "these",
+            "those"
+          ],
+          "explanationZh": "指代前文列出的五个步骤，these 或 those 均可。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    }
+  ],
+  "units": [
+    {
+      "id": "anhui-gaokao-2013-grammar-b",
+      "titleZh": "2013 年安徽高考英语：语篇填空",
+      "familyIds": [
+        "anhui-2013-happiness-summary"
+      ],
+      "itemIds": [
+        "anhui-gaokao-2013-grammar-happiness"
+      ],
+      "prerequisiteSkillIds": []
+    }
+  ]
+}

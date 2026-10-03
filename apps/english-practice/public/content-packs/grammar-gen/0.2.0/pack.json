@@ -1,0 +1,2540 @@
+{
+  "schemaVersion": 1,
+  "id": "grammar-gen",
+  "version": "0.2.0",
+  "titleZh": "语法填空训练（生成草稿）",
+  "status": "published",
+  "author": "内置生成器草稿",
+  "reviewer": "ahczdr",
+  "reviewedAt": "2026-09-30T00:00:00.000Z",
+  "profileIds": [
+    "gaokao-common-training-v1"
+  ],
+  "sources": [
+    {
+      "id": "tool-generated-practice",
+      "kind": "original",
+      "title": "本工具生成的基础练习",
+      "url": null,
+      "rightsNote": "由项目内置生成器编写的原创练习句与题目，非真题转载；逐题独立审核进行中。"
+    }
+  ],
+  "assets": [],
+  "resources": [
+    {
+      "id": "grammar-gen-p01",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Li Hua is a senior high school student who ____ (dream) of becoming a doctor. Last summer, he ____ (spend) three weeks volunteering at a hospital near his home. Every morning he arrived at seven and helped the nurses carry medicine to the wards. At first he felt nervous because he had never worked in ____ hospital before, but soon the staff treated him like a real member of the team. He learned to calm patients down by talking with ____ (they) about their families and hobbies. One elderly woman said that Li Hua's smile made her feel much ____ (warm) than any medicine did. On the last day, the head nurse praised him for being patient and hard-working. Li Hua says this experience taught him ____ important lesson: even small acts of kindness can change ____ (someone) day. He has now made up his mind ____ (study) medicine at university. He believes his dream will come true ____ he keeps working hard, and his parents are proud of ____ (he) for choosing such a meaningful goal."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "grammar-gen-p02",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "A robot librarian came to our school last month, and it has quickly become the most popular 'staff member' on campus. Students call it Xiaozhi. Every morning, before classes begin, the robot walks along the shelves ____ checks whether the books ____ (put) in the right order. If a book is missing, it sends a message to the librarian's computer at once. The robot can also answer simple questions, and many students enjoy ____ (chat) with it while they wait. According to the head librarian, the machine was bought ____ (make) the library more friendly, not to replace workers, and it ____ (work) alongside them for years to come. Still, some younger students believe the robot is much ____ (clever) than any other machine in the school. Scientists predict that robots like Xiaozhi ____ (appear) in most school libraries in ten years. Our class once asked Xiaozhi ____ it could feel tired, and it replied that it needed rest only when its battery ran low, ____ made everyone laugh. Now, whenever we enter the library, we greet the robot first, ____ (smile) at it as if it were an old friend."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "grammar-gen-p03",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "For years, the river that runs through our town was badly polluted. Plastic bags floated on the water, and the fish ____ (die) one after another. Last spring, a group of middle school students decided ____ (do) something about it. They began by picking up rubbish along the banks every weekend. At first, some people laughed at ____ (they), but the students never gave up. They also wrote to the local government, ____ (ask) for more dustbins and warning signs near the water. To everyone's surprise, the town replied ____ (quick) and set up a volunteer team ____ name was 'Blue River'. Now, two years later, the river is much ____ (clean) than before, and birds have returned to the banks. People can walk or even fish there, ____ it is still not perfectly clean. Last month, a newspaper reporter said the students' effort was worth ____ (praise). 'We have learned ____ even small actions can change the place we live in,' one student said proudly."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "grammar-gen-p04",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Doctors say that teenagers need at least eight ____ (hour) of sleep every night. However, a recent survey ____ (show) that most high school students sleep less than seven hours. Many of them stay up late playing games or ____ (chat) with friends online. Lack of sleep makes ____ hard for students to focus in class, and it can also make them feel sad or angry easily. Scientists have found that the more tired you are, the ____ (little) you remember the next day. So what should we do? First, go to bed at the same time every night, ____ on weekends. Second, put your phone away at least an hour ____ you go to bed, because the bright screen keeps your brain awake. Third, a short nap at noon ____ (be) helpful, but keep it under thirty minutes, or you may feel sleepier in the afternoon. Remember, good sleep is just ____ important as good food and exercise. Start tonight, and in a week you ____ (find) yourself full of energy."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "grammar-gen-p05",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Paper-cutting, one of China's oldest folk arts, has a history of more than 1,500 years. In the past, almost every girl in northern China ____ (teach) how to cut paper, and mothers passed the skill down from generation ____ generation. During Spring Festival, red paper-cuts with the character 'Xi' or pictures of fish are put on windows ____ (express) good wishes for the new year. Red is the ____ (much) popular color because it stands for happiness and luck in Chinese culture. However, fewer and fewer young people are learning the craft today, ____ worries many older artists. In Hebei Province, a seventy-year-old artist named Mrs. Zhang ____ (spend) nearly sixty years cutting paper, and her works ____ (show) in museums both at home and abroad. She now offers free classes every Saturday morning so ____ more children can get close to the art. 'I want my scissors ____ (keep) singing,' she says with a laugh. 'Paper is simple, but it carries our history.' With patient hands like ____ (she), this old art will surely live on for another thousand years."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "grammar-gen-p06",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Ten years ago, ____ took almost a whole day to travel from Beijing to Shanghai by train. Today, the high-speed railway ____ (cover) the same distance in about four and a half hours. So far, more than 40,000 kilometers of high-speed lines ____ (build) across the country, and trains now run at a speed of 350 kilometers ____ hour. Passengers can buy tickets ____ (easy) through an app and enter the station with a scan of their faces instead of waiting in long queues. The railway has also brought ____ (visit) and business to smaller cities along the lines. A fruit farmer in Anhui said his peaches used to go bad ____ they reached the city market, but now they ____ (sell) to customers hundreds of kilometers away within hours instead of two days. To make future travel even better, engineers are testing ____ (fast) trains that may run at 600 kilometers per hour, and experts believe greater ____ (convenient) will make more people choose trains over planes."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "grammar-gen-p07",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Last Friday afternoon, our school held its yearly basketball final against Sunshine School. When the match began, the playground ____ (crowd) with excited students. Neither team ____ (score) in the first five minutes, and the game was full of tension and excitement. Halfway through the second half, our best player fell and hurt his knee ____ (bad), so the coach had no choice but ____ (take) him off. At that moment, almost everyone in the crowd thought we ____ (lose) the match. However, the youngest player, ____ had joined the team only a month before, stepped forward calmly. He shot the ball from far away, and to everyone's ____ (surprised), it went in. Then, in the very last minute of the game, he scored again, ____ (make) the final score 58 to 57. The moment the whistle sounded, the whole class rushed onto the playground, ____ (cheer) at the top of their voices. Our headmaster said afterwards that the players had shown us ____ real teamwork means."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "grammar-gen-p08",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Miss Gao ____ (teach) English at our school for fifteen years, but she still prepares every class with fresh ideas and often stays late marking papers. ____ she has taught some lessons many times, her classes are never boring; ____, she always finds new ways to make us think. Last term, she started an English corner after class, where students practice ____ (speak) by describing pictures, telling stories and acting out short dialogues in English. She often says that making mistakes is an important part of ____ (learn), so nobody should be afraid of them. Although she checks our homework ____ (careful) than any other teacher, she never blames us. When we make the same mistake again, she simply explains it one ____ (many) time with a smile. Thanks to her help, my spoken English ____ (improve) a lot since last September, and I am no longer afraid of opening my mouth. Under her influence, I have fallen in love with English, ____ I once hated most. I believe I ____ (remember) her for a long time."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "grammar-gen-res-p09",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Last winter, a small library {} (open) in our neighbourhood. It {} set up by retired teachers who wanted to help children after school. The rooms were old, {} the volunteers painted them bright and warm."
+        },
+        {
+          "id": "p2",
+          "text": "The library is small, but it has more than two thousand books. Children can read there {} (quiet), and volunteers answer questions {} they meet difficult words. Every book has a card {} shows who read it last."
+        },
+        {
+          "id": "p3",
+          "text": "Now the library opens every evening. It has become a place {} families spend time together instead of {} alone at home. Many parents say that their children have {} (become) more interested in reading, and they are thankful {} the teachers' kindness."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    },
+    {
+      "id": "grammar-gen-res-p10",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "text": "Scientists say that {} (walk) for thirty minutes a day is one of the simplest ways to stay healthy. You do not need special equipment, and it is {} (complete) free of charge. You can do it almost {} ."
+        },
+        {
+          "id": "p2",
+          "text": "Walking lowers the risk of heart disease, {} helps people sleep {} (well), and even improves memory. For students, a short walk before study can improve {} (concentrate)."
+        },
+        {
+          "id": "p3",
+          "text": "Walking also gives you time to think, {} many writers choose to walk when they plan their work."
+        },
+        {
+          "id": "p4",
+          "text": "Doctors suggest that we should walk {} we can: take the stairs instead of the lift, and get off the bus one stop early. Small changes, repeated daily, make a big {} (different) over time. The key is to start today, {} tomorrow you will find a reason to wait."
+        }
+      ],
+      "audioAssetId": null,
+      "transcript": null
+    }
+  ],
+  "items": [
+    {
+      "id": "grammar-gen-p01",
+      "familyId": "grammar-gen-p01",
+      "skillIds": [
+        "grammar.tense",
+        "grammar.word-form",
+        "grammar.pronoun",
+        "grammar.article"
+      ],
+      "level": "G0",
+      "section": "grammar",
+      "reviewMode": "recall",
+      "promptZh": "阅读短文，在空白处填入 1 个适当的单词或括号内单词的正确形式。",
+      "resourceId": "grammar-gen-p01",
+      "estimatedSeconds": 300,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "短文讲述高中生李华暑假在医院做志愿者的经历，这段经历坚定了他学医的梦想。",
+        "ruleZh": "语法填空要先看句子结构与时间状语：过去时间用过去式，比较结构用比较级，介词后用代词宾格，冠词看读音，括号内提示词按句法要求变形。",
+        "evidence": [
+          {
+            "resourceId": "grammar-gen-p01",
+            "paragraphId": "p1",
+            "quote": "Last summer, he ____ (spend) three weeks volunteering at a hospital near his home"
+          },
+          {
+            "resourceId": "grammar-gen-p01",
+            "paragraphId": "p1",
+            "quote": "One elderly woman said that Li Hua's smile made her feel much"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "text",
+      "sharedOptions": [],
+      "uniqueOptions": false,
+      "segments": [
+        {
+          "type": "text",
+          "text": "Li Hua is a senior high school student who "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": " (dream) of becoming a doctor. Last summer, he "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": " (spend) three weeks volunteering at a hospital near his home. Every morning he arrived at seven and helped the nurses carry medicine to the wards. At first he felt nervous because he had never worked in "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": " hospital before, but soon the staff treated him like a real member of the team. He learned to calm patients down by talking with "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": " (they) about their families and hobbies. One elderly woman said that Li Hua's smile made her feel much "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": " (warm) than any medicine did. On the last day, the head nurse praised him for being patient and hard-working. Li Hua says this experience taught him "
+        },
+        {
+          "type": "gap",
+          "gapId": "g6"
+        },
+        {
+          "type": "text",
+          "text": " important lesson: even small acts of kindness can change "
+        },
+        {
+          "type": "gap",
+          "gapId": "g7"
+        },
+        {
+          "type": "text",
+          "text": " (someone) day. He has now made up his mind "
+        },
+        {
+          "type": "gap",
+          "gapId": "g8"
+        },
+        {
+          "type": "text",
+          "text": " (study) medicine at university. He believes his dream will come true "
+        },
+        {
+          "type": "gap",
+          "gapId": "g9"
+        },
+        {
+          "type": "text",
+          "text": " he keeps working hard, and his parents are proud of "
+        },
+        {
+          "type": "gap",
+          "gapId": "g10"
+        },
+        {
+          "type": "text",
+          "text": " (he) for choosing such a meaningful goal."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "dreams"
+          ],
+          "explanationZh": "who 指代 a senior high school student，从句描述现在的身份与理想，主语为第三人称单数，故填 dreams。"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "spent"
+          ],
+          "explanationZh": "Last summer 是明确的过去时间，谓语动词用过去式 spent。"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "填冠词",
+          "options": [],
+          "accepted": [
+            "a"
+          ],
+          "explanationZh": "hospital 是可数名词单数，此处泛指“一家医院”，且以辅音音素开头，填 a。"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "用括号内代词的适当形式",
+          "options": [],
+          "accepted": [
+            "them"
+          ],
+          "explanationZh": "介词 with 后接人称代词宾格，填 them。"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "用括号内形容词的适当形式",
+          "options": [],
+          "accepted": [
+            "warmer"
+          ],
+          "explanationZh": "由 much 和后面的 than 可知用比较级，填 warmer。"
+        },
+        {
+          "id": "g6",
+          "label": "第6空",
+          "clue": "填冠词",
+          "options": [],
+          "accepted": [
+            "an"
+          ],
+          "explanationZh": "important 以元音音素开头，表示“一堂重要的课”用 an。"
+        },
+        {
+          "id": "g7",
+          "label": "第7空",
+          "clue": "用括号内词的适当形式",
+          "options": [],
+          "accepted": [
+            "someone's"
+          ],
+          "explanationZh": "空后是名词 day，需要所有格形式 someone's，表示“某个人的（一天）”。"
+        },
+        {
+          "id": "g8",
+          "label": "第8空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "to study"
+          ],
+          "explanationZh": "make up one's mind to do sth 表示“下决心做某事”，填 to study。"
+        },
+        {
+          "id": "g9",
+          "label": "第9空",
+          "clue": "填连词",
+          "options": [],
+          "accepted": [
+            "if"
+          ],
+          "explanationZh": "句意为“如果他一直努力，梦想就会实现”，条件状语从句填 if。"
+        },
+        {
+          "id": "g10",
+          "label": "第10空",
+          "clue": "用括号内代词的适当形式",
+          "options": [],
+          "accepted": [
+            "him"
+          ],
+          "explanationZh": "介词 of 后接人称代词宾格，填 him。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "grammar-gen-p02",
+      "familyId": "grammar-gen-p02",
+      "skillIds": [
+        "grammar.tense",
+        "grammar.infinitive",
+        "grammar.comparison",
+        "grammar.clause"
+      ],
+      "level": "G0",
+      "section": "grammar",
+      "reviewMode": "recall",
+      "promptZh": "阅读短文，在空白处填入 1 个适当的单词或括号内单词的正确形式。",
+      "resourceId": "grammar-gen-p02",
+      "estimatedSeconds": 300,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "短文介绍校园里的机器人图书管理员“小智”：它整理书架、回答问题，深受师生喜爱。",
+        "ruleZh": "注意并列谓语用 and 连接，enjoy doing 后接动名词，目的状语用 to do，将来时间配 will，非限制性定语从句用 which。",
+        "evidence": [
+          {
+            "resourceId": "grammar-gen-p02",
+            "paragraphId": "p1",
+            "quote": "it sends a message to the librarian's computer at once"
+          },
+          {
+            "resourceId": "grammar-gen-p02",
+            "paragraphId": "p1",
+            "quote": "we greet the robot first"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "text",
+      "sharedOptions": [],
+      "uniqueOptions": false,
+      "segments": [
+        {
+          "type": "text",
+          "text": "A robot librarian came to our school last month, and it has quickly become the most popular 'staff member' on campus. Students call it Xiaozhi. Every morning, before classes begin, the robot walks along the shelves "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": " checks whether the books "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": " (put) in the right order. If a book is missing, it sends a message to the librarian's computer at once. The robot can also answer simple questions, and many students enjoy "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": " (chat) with it while they wait. According to the head librarian, the machine was bought "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": " (make) the library more friendly, not to replace workers, and it "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": " (work) alongside them for years to come. Still, some younger students believe the robot is much "
+        },
+        {
+          "type": "gap",
+          "gapId": "g6"
+        },
+        {
+          "type": "text",
+          "text": " (clever) than any other machine in the school. Scientists predict that robots like Xiaozhi "
+        },
+        {
+          "type": "gap",
+          "gapId": "g7"
+        },
+        {
+          "type": "text",
+          "text": " (appear) in most school libraries in ten years. Our class once asked Xiaozhi "
+        },
+        {
+          "type": "gap",
+          "gapId": "g8"
+        },
+        {
+          "type": "text",
+          "text": " it could feel tired, and it replied that it needed rest only when its battery ran low, "
+        },
+        {
+          "type": "gap",
+          "gapId": "g9"
+        },
+        {
+          "type": "text",
+          "text": " made everyone laugh. Now, whenever we enter the library, we greet the robot first, "
+        },
+        {
+          "type": "gap",
+          "gapId": "g10"
+        },
+        {
+          "type": "text",
+          "text": " (smile) at it as if it were an old friend."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "填连词",
+          "options": [],
+          "accepted": [
+            "and"
+          ],
+          "explanationZh": "walks 与 checks 是主语 the robot 的两个并列谓语，填 and。"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "are put",
+            "have been put"
+          ],
+          "explanationZh": "books 与 put 之间是被动关系，描述经常性情况，填 are put（用 have been put 也可以）。"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "chatting"
+          ],
+          "explanationZh": "enjoy 后接动名词作宾语，填 chatting。"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "to make"
+          ],
+          "explanationZh": "此处用动词不定式作目的状语，表示“为了让图书馆更友好”，填 to make。"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "will work"
+          ],
+          "explanationZh": "for years to come 表示“在未来的许多年里”，用一般将来时 will work。"
+        },
+        {
+          "id": "g6",
+          "label": "第6空",
+          "clue": "用括号内形容词的适当形式",
+          "options": [],
+          "accepted": [
+            "cleverer",
+            "more clever"
+          ],
+          "explanationZh": "由 than 可知用比较级，clever 的比较级为 cleverer 或 more clever。"
+        },
+        {
+          "id": "g7",
+          "label": "第7空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "will appear"
+          ],
+          "explanationZh": "in ten years 表示将来时间，用 will appear。"
+        },
+        {
+          "id": "g8",
+          "label": "第8空",
+          "clue": "填连词",
+          "options": [],
+          "accepted": [
+            "whether",
+            "if"
+          ],
+          "explanationZh": "宾语从句表示“是否”，填 whether 或 if。"
+        },
+        {
+          "id": "g9",
+          "label": "第9空",
+          "clue": "填连词",
+          "options": [],
+          "accepted": [
+            "which"
+          ],
+          "explanationZh": "非限制性定语从句指代前面整件事并在从句中作主语，填 which。"
+        },
+        {
+          "id": "g10",
+          "label": "第10空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "smiling"
+          ],
+          "explanationZh": "主语 we 与 smile 是主动关系，用现在分词作伴随状语，填 smiling。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "grammar-gen-p03",
+      "familyId": "grammar-gen-p03",
+      "skillIds": [
+        "grammar.tense",
+        "grammar.word-form",
+        "grammar.clause",
+        "grammar.pronoun"
+      ],
+      "level": "G0",
+      "section": "grammar",
+      "reviewMode": "recall",
+      "promptZh": "阅读短文，在空白处填入 1 个适当的单词或括号内单词的正确形式。",
+      "resourceId": "grammar-gen-p03",
+      "estimatedSeconds": 300,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "短文讲述中学生清理小镇河流、成立“蓝河”志愿队并让河水变清的故事。",
+        "ruleZh": "抓住 decide to do、worth doing 等固定搭配；分词作状语用 asking；定语从句 whose 表示“它的”；比较级由 than 提示。",
+        "evidence": [
+          {
+            "resourceId": "grammar-gen-p03",
+            "paragraphId": "p1",
+            "quote": "To everyone's surprise, the town replied"
+          },
+          {
+            "resourceId": "grammar-gen-p03",
+            "paragraphId": "p1",
+            "quote": "and birds have returned to the banks"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "text",
+      "sharedOptions": [],
+      "uniqueOptions": false,
+      "segments": [
+        {
+          "type": "text",
+          "text": "For years, the river that runs through our town was badly polluted. Plastic bags floated on the water, and the fish "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": " (die) one after another. Last spring, a group of middle school students decided "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": " (do) something about it. They began by picking up rubbish along the banks every weekend. At first, some people laughed at "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": " (they), but the students never gave up. They also wrote to the local government, "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": " (ask) for more dustbins and warning signs near the water. To everyone's surprise, the town replied "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": " (quick) and set up a volunteer team "
+        },
+        {
+          "type": "gap",
+          "gapId": "g6"
+        },
+        {
+          "type": "text",
+          "text": " name was 'Blue River'. Now, two years later, the river is much "
+        },
+        {
+          "type": "gap",
+          "gapId": "g7"
+        },
+        {
+          "type": "text",
+          "text": " (clean) than before, and birds have returned to the banks. People can walk or even fish there, "
+        },
+        {
+          "type": "gap",
+          "gapId": "g8"
+        },
+        {
+          "type": "text",
+          "text": " it is still not perfectly clean. Last month, a newspaper reporter said the students' effort was worth "
+        },
+        {
+          "type": "gap",
+          "gapId": "g9"
+        },
+        {
+          "type": "text",
+          "text": " (praise). 'We have learned "
+        },
+        {
+          "type": "gap",
+          "gapId": "g10"
+        },
+        {
+          "type": "text",
+          "text": " even small actions can change the place we live in,' one student said proudly."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "were dying",
+            "died"
+          ],
+          "explanationZh": "描述过去陆续发生的情况，填 were dying（过去进行时）或 died 均可。"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "to do"
+          ],
+          "explanationZh": "decide to do sth 表示“决定做某事”，填 to do。"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "用括号内代词的适当形式",
+          "options": [],
+          "accepted": [
+            "them"
+          ],
+          "explanationZh": "介词 at 后接人称代词宾格，填 them。"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "asking"
+          ],
+          "explanationZh": "主语 they 与 ask 是主动关系，用现在分词作伴随状语，填 asking。"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "用括号内形容词的适当形式",
+          "options": [],
+          "accepted": [
+            "quickly"
+          ],
+          "explanationZh": "修饰动词 replied 用副词 quickly。"
+        },
+        {
+          "id": "g6",
+          "label": "第6空",
+          "clue": "填连词",
+          "options": [],
+          "accepted": [
+            "whose"
+          ],
+          "explanationZh": "定语从句中先行词是 team，空后是名词 name，用 whose 表示“它的名字”。"
+        },
+        {
+          "id": "g7",
+          "label": "第7空",
+          "clue": "用括号内形容词的适当形式",
+          "options": [],
+          "accepted": [
+            "cleaner"
+          ],
+          "explanationZh": "由 much 与比较含义可知用比较级 cleaner。"
+        },
+        {
+          "id": "g8",
+          "label": "第8空",
+          "clue": "填连词",
+          "options": [],
+          "accepted": [
+            "though",
+            "although"
+          ],
+          "explanationZh": "前后句意转折：人们可以散步垂钓，尽管河水还没有完全变干净，填 though 或 although。"
+        },
+        {
+          "id": "g9",
+          "label": "第9空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "praising"
+          ],
+          "explanationZh": "be worth doing 表示“值得做”，填 praising。"
+        },
+        {
+          "id": "g10",
+          "label": "第10空",
+          "clue": "填连词",
+          "options": [],
+          "accepted": [
+            "that"
+          ],
+          "explanationZh": "learned 后的宾语从句是陈述句，用 that 引导。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "grammar-gen-p04",
+      "familyId": "grammar-gen-p04",
+      "skillIds": [
+        "grammar.tense",
+        "grammar.comparison",
+        "grammar.word-form",
+        "grammar.agreement"
+      ],
+      "level": "G0",
+      "section": "grammar",
+      "reviewMode": "recall",
+      "promptZh": "阅读短文，在空白处填入 1 个适当的单词或括号内单词的正确形式。",
+      "resourceId": "grammar-gen-p04",
+      "estimatedSeconds": 300,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "短文说明中学生睡眠不足的现象，并给出规律作息、远离手机和适当午休三条建议。",
+        "ruleZh": "注意形式宾语 it、the more...the less... 比较结构、as...as 同级比较，以及“祈使句 + and + 将来时”的句型。",
+        "evidence": [
+          {
+            "resourceId": "grammar-gen-p04",
+            "paragraphId": "p1",
+            "quote": "Lack of sleep makes ____ hard for students to focus in class"
+          },
+          {
+            "resourceId": "grammar-gen-p04",
+            "paragraphId": "p1",
+            "quote": "because the bright screen keeps your brain awake"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "text",
+      "sharedOptions": [],
+      "uniqueOptions": false,
+      "segments": [
+        {
+          "type": "text",
+          "text": "Doctors say that teenagers need at least eight "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": " (hour) of sleep every night. However, a recent survey "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": " (show) that most high school students sleep less than seven hours. Many of them stay up late playing games or "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": " (chat) with friends online. Lack of sleep makes "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": " hard for students to focus in class, and it can also make them feel sad or angry easily. Scientists have found that the more tired you are, the "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": " (little) you remember the next day. So what should we do? First, go to bed at the same time every night, "
+        },
+        {
+          "type": "gap",
+          "gapId": "g6"
+        },
+        {
+          "type": "text",
+          "text": " on weekends. Second, put your phone away at least an hour "
+        },
+        {
+          "type": "gap",
+          "gapId": "g7"
+        },
+        {
+          "type": "text",
+          "text": " you go to bed, because the bright screen keeps your brain awake. Third, a short nap at noon "
+        },
+        {
+          "type": "gap",
+          "gapId": "g8"
+        },
+        {
+          "type": "text",
+          "text": " (be) helpful, but keep it under thirty minutes, or you may feel sleepier in the afternoon. Remember, good sleep is just "
+        },
+        {
+          "type": "gap",
+          "gapId": "g9"
+        },
+        {
+          "type": "text",
+          "text": " important as good food and exercise. Start tonight, and in a week you "
+        },
+        {
+          "type": "gap",
+          "gapId": "g10"
+        },
+        {
+          "type": "text",
+          "text": " (find) yourself full of energy."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "用括号内名词的适当形式",
+          "options": [],
+          "accepted": [
+            "hours"
+          ],
+          "explanationZh": "eight 后接可数名词复数，填 hours。"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "showed",
+            "has shown"
+          ],
+          "explanationZh": "a recent survey 作主语，谓语用过去式 showed 或现在完成时 has shown 均可。"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "chatting"
+          ],
+          "explanationZh": "or 连接与 playing 并列的动名词，填 chatting。"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "填代词",
+          "options": [],
+          "accepted": [
+            "it"
+          ],
+          "explanationZh": "makes it hard for sb to do sth 中，it 作形式宾语，真正的宾语是后面的不定式。"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "用括号内词的适当形式",
+          "options": [],
+          "accepted": [
+            "less"
+          ],
+          "explanationZh": "“the more..., the less...”是固定比较结构，填 less。"
+        },
+        {
+          "id": "g6",
+          "label": "第6空",
+          "clue": "填副词",
+          "options": [],
+          "accepted": [
+            "even"
+          ],
+          "explanationZh": "表示“即使在周末也要按时睡觉”，填 even。"
+        },
+        {
+          "id": "g7",
+          "label": "第7空",
+          "clue": "填连词",
+          "options": [],
+          "accepted": [
+            "before"
+          ],
+          "explanationZh": "表示“在上床睡觉至少一小时之前收起手机”，填 before。"
+        },
+        {
+          "id": "g8",
+          "label": "第8空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "is"
+          ],
+          "explanationZh": "主语 a short nap 为单数概念，一般现在时填 is。"
+        },
+        {
+          "id": "g9",
+          "label": "第9空",
+          "clue": "填连词",
+          "options": [],
+          "accepted": [
+            "as"
+          ],
+          "explanationZh": "as...as 表示“和……一样”，填 as。"
+        },
+        {
+          "id": "g10",
+          "label": "第10空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "will find"
+          ],
+          "explanationZh": "“祈使句 + and + 陈述句”中陈述句用一般将来时，in a week 也提示将来，填 will find。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "grammar-gen-p05",
+      "familyId": "grammar-gen-p05",
+      "skillIds": [
+        "grammar.tense",
+        "grammar.word-form",
+        "grammar.clause",
+        "grammar.infinitive"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recall",
+      "promptZh": "阅读短文，在空白处填入 1 个适当的单词或括号内单词的正确形式。",
+      "resourceId": "grammar-gen-p05",
+      "estimatedSeconds": 300,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "短文介绍中国民间艺术剪纸的历史与传承困境，以及张奶奶六十年的坚守。",
+        "ruleZh": "被动语态 was taught、have been shown，so that 目的从句，to one's surprise 类固定搭配和名词性物主代词 hers 是本题考点。",
+        "evidence": [
+          {
+            "resourceId": "grammar-gen-p05",
+            "paragraphId": "p1",
+            "quote": "Paper-cutting, one of China's oldest folk arts, has a history of more than 1,500 years"
+          },
+          {
+            "resourceId": "grammar-gen-p05",
+            "paragraphId": "p1",
+            "quote": "With patient hands like ____ (she), this old art will surely live on"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "text",
+      "sharedOptions": [],
+      "uniqueOptions": false,
+      "segments": [
+        {
+          "type": "text",
+          "text": "Paper-cutting, one of China's oldest folk arts, has a history of more than 1,500 years. In the past, almost every girl in northern China "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": " (teach) how to cut paper, and mothers passed the skill down from generation "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": " generation. During Spring Festival, red paper-cuts with the character 'Xi' or pictures of fish are put on windows "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": " (express) good wishes for the new year. Red is the "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": " (much) popular color because it stands for happiness and luck in Chinese culture. However, fewer and fewer young people are learning the craft today, "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": " worries many older artists. In Hebei Province, a seventy-year-old artist named Mrs. Zhang "
+        },
+        {
+          "type": "gap",
+          "gapId": "g6"
+        },
+        {
+          "type": "text",
+          "text": " (spend) nearly sixty years cutting paper, and her works "
+        },
+        {
+          "type": "gap",
+          "gapId": "g7"
+        },
+        {
+          "type": "text",
+          "text": " (show) in museums both at home and abroad. She now offers free classes every Saturday morning so "
+        },
+        {
+          "type": "gap",
+          "gapId": "g8"
+        },
+        {
+          "type": "text",
+          "text": " more children can get close to the art. 'I want my scissors "
+        },
+        {
+          "type": "gap",
+          "gapId": "g9"
+        },
+        {
+          "type": "text",
+          "text": " (keep) singing,' she says with a laugh. 'Paper is simple, but it carries our history.' With patient hands like "
+        },
+        {
+          "type": "gap",
+          "gapId": "g10"
+        },
+        {
+          "type": "text",
+          "text": " (she), this old art will surely live on for another thousand years."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "was taught"
+          ],
+          "explanationZh": "主语 every girl 与 teach 是被动关系，In the past 提示过去时，填 was taught。"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "填介词",
+          "options": [],
+          "accepted": [
+            "to"
+          ],
+          "explanationZh": "from generation to generation 为固定短语，表示“一代接一代”，填 to。"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "to express"
+          ],
+          "explanationZh": "此处用动词不定式作目的状语，填 to express。"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "用括号内副词的适当形式",
+          "options": [],
+          "accepted": [
+            "most"
+          ],
+          "explanationZh": "the most popular 表示“最受欢迎的”，三者以上比较用最高级，填 most。"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "填连词",
+          "options": [],
+          "accepted": [
+            "which"
+          ],
+          "explanationZh": "非限制性定语从句指代前面整件事并作从句主语，填 which。"
+        },
+        {
+          "id": "g6",
+          "label": "第6空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "has spent"
+          ],
+          "explanationZh": "nearly sixty years 与“至今仍在”的语境提示现在完成时，填 has spent。"
+        },
+        {
+          "id": "g7",
+          "label": "第7空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "have been shown",
+            "have been displayed"
+          ],
+          "explanationZh": "works 与 show 是被动关系，强调至今的影响，填 have been shown（或 have been displayed）。"
+        },
+        {
+          "id": "g8",
+          "label": "第8空",
+          "clue": "填连词",
+          "options": [],
+          "accepted": [
+            "that"
+          ],
+          "explanationZh": "so that 引导目的状语从句，so 已给出，填 that。"
+        },
+        {
+          "id": "g9",
+          "label": "第9空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "to keep"
+          ],
+          "explanationZh": "want sth to do sth 表示“希望某物做某事”，填 to keep。"
+        },
+        {
+          "id": "g10",
+          "label": "第10空",
+          "clue": "用括号内代词的适当形式",
+          "options": [],
+          "accepted": [
+            "hers"
+          ],
+          "explanationZh": "介词 like 后比较的对象是“她的手”，用名词性物主代词 hers。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "grammar-gen-p06",
+      "familyId": "grammar-gen-p06",
+      "skillIds": [
+        "grammar.tense",
+        "grammar.word-form",
+        "grammar.comparison",
+        "grammar.pronoun"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recall",
+      "promptZh": "阅读短文，在空白处填入 1 个适当的单词或括号内单词的正确形式。",
+      "resourceId": "grammar-gen-p06",
+      "estimatedSeconds": 300,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "短文介绍中国高铁的发展速度及其给人们出行和小城市带来的变化。",
+        "ruleZh": "Today 配一般现在时；So far 配现在完成时被动语态；per/an hour 表速度；形容词、动词需按词形转换规则变形。",
+        "evidence": [
+          {
+            "resourceId": "grammar-gen-p06",
+            "paragraphId": "p1",
+            "quote": "Today, the high-speed railway ____ (cover) the same distance in about four and a half hours"
+          },
+          {
+            "resourceId": "grammar-gen-p06",
+            "paragraphId": "p1",
+            "quote": "A fruit farmer in Anhui said his peaches used to go bad"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "text",
+      "sharedOptions": [],
+      "uniqueOptions": false,
+      "segments": [
+        {
+          "type": "text",
+          "text": "Ten years ago, "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": " took almost a whole day to travel from Beijing to Shanghai by train. Today, the high-speed railway "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": " (cover) the same distance in about four and a half hours. So far, more than 40,000 kilometers of high-speed lines "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": " (build) across the country, and trains now run at a speed of 350 kilometers "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": " hour. Passengers can buy tickets "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": " (easy) through an app and enter the station with a scan of their faces instead of waiting in long queues. The railway has also brought "
+        },
+        {
+          "type": "gap",
+          "gapId": "g6"
+        },
+        {
+          "type": "text",
+          "text": " (visit) and business to smaller cities along the lines. A fruit farmer in Anhui said his peaches used to go bad "
+        },
+        {
+          "type": "gap",
+          "gapId": "g7"
+        },
+        {
+          "type": "text",
+          "text": " they reached the city market, but now they "
+        },
+        {
+          "type": "gap",
+          "gapId": "g8"
+        },
+        {
+          "type": "text",
+          "text": " (sell) to customers hundreds of kilometers away within hours instead of two days. To make future travel even better, engineers are testing "
+        },
+        {
+          "type": "gap",
+          "gapId": "g9"
+        },
+        {
+          "type": "text",
+          "text": " (fast) trains that may run at 600 kilometers per hour, and experts believe greater "
+        },
+        {
+          "type": "gap",
+          "gapId": "g10"
+        },
+        {
+          "type": "text",
+          "text": " (convenient) will make more people choose trains over planes."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "填代词",
+          "options": [],
+          "accepted": [
+            "it"
+          ],
+          "explanationZh": "“it takes/took + 时间 + to do sth”句型中 it 作形式主语，填 it。"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "covers"
+          ],
+          "explanationZh": "Today 与一般现在时连用，主语 the railway 为第三人称单数，填 covers。"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "have been built"
+          ],
+          "explanationZh": "So far 常与现在完成时连用，lines 与 build 是被动关系，填 have been built。"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "填介词或冠词",
+          "options": [],
+          "accepted": [
+            "per",
+            "an"
+          ],
+          "explanationZh": "表示速度“每小时 350 公里”，填 per 或 an（an hour）。"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "用括号内副词的适当形式",
+          "options": [],
+          "accepted": [
+            "easily"
+          ],
+          "explanationZh": "修饰动词 buy 用副词 easily。"
+        },
+        {
+          "id": "g6",
+          "label": "第6空",
+          "clue": "用括号内名词的适当形式",
+          "options": [],
+          "accepted": [
+            "visitors"
+          ],
+          "explanationZh": "brought 后接名词作宾语，表示“游客”且不止一人，填 visitors。"
+        },
+        {
+          "id": "g7",
+          "label": "第7空",
+          "clue": "填连词",
+          "options": [],
+          "accepted": [
+            "before"
+          ],
+          "explanationZh": "句意为“桃子在运到城里市场之前就变质了”，填 before。"
+        },
+        {
+          "id": "g8",
+          "label": "第8空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "are sold"
+          ],
+          "explanationZh": "they 指代 peaches，与 sell 是被动关系，一般现在时填 are sold。"
+        },
+        {
+          "id": "g9",
+          "label": "第9空",
+          "clue": "用括号内形容词的适当形式",
+          "options": [],
+          "accepted": [
+            "faster"
+          ],
+          "explanationZh": "与现有列车相比速度更快，用比较级 faster。"
+        },
+        {
+          "id": "g10",
+          "label": "第10空",
+          "clue": "用括号内词的适当形式",
+          "options": [],
+          "accepted": [
+            "convenience"
+          ],
+          "explanationZh": "形容词 great 后接名词作 believe 后从句的主语，convenient 的名词形式为 convenience。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "grammar-gen-p07",
+      "familyId": "grammar-gen-p07",
+      "skillIds": [
+        "grammar.tense",
+        "grammar.word-form",
+        "grammar.clause"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recall",
+      "promptZh": "阅读短文，在空白处填入 1 个适当的单词或括号内单词的正确形式。",
+      "resourceId": "grammar-gen-p07",
+      "estimatedSeconds": 300,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "短文描写学校篮球决赛中，替补的小队员临危受命、连得关键分数反败为胜的过程。",
+        "ruleZh": "was crowded with、would lose 过去将来时、to one's surprise、making 结果状语和 what 引导的宾语从句是本题考点。",
+        "evidence": [
+          {
+            "resourceId": "grammar-gen-p07",
+            "paragraphId": "p1",
+            "quote": "the coach had no choice but ____ (take) him off"
+          },
+          {
+            "resourceId": "grammar-gen-p07",
+            "paragraphId": "p1",
+            "quote": "The moment the whistle sounded, the whole class rushed onto the playground"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "text",
+      "sharedOptions": [],
+      "uniqueOptions": false,
+      "segments": [
+        {
+          "type": "text",
+          "text": "Last Friday afternoon, our school held its yearly basketball final against Sunshine School. When the match began, the playground "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": " (crowd) with excited students. Neither team "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": " (score) in the first five minutes, and the game was full of tension and excitement. Halfway through the second half, our best player fell and hurt his knee "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": " (bad), so the coach had no choice but "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": " (take) him off. At that moment, almost everyone in the crowd thought we "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": " (lose) the match. However, the youngest player, "
+        },
+        {
+          "type": "gap",
+          "gapId": "g6"
+        },
+        {
+          "type": "text",
+          "text": " had joined the team only a month before, stepped forward calmly. He shot the ball from far away, and to everyone's "
+        },
+        {
+          "type": "gap",
+          "gapId": "g7"
+        },
+        {
+          "type": "text",
+          "text": " (surprised), it went in. Then, in the very last minute of the game, he scored again, "
+        },
+        {
+          "type": "gap",
+          "gapId": "g8"
+        },
+        {
+          "type": "text",
+          "text": " (make) the final score 58 to 57. The moment the whistle sounded, the whole class rushed onto the playground, "
+        },
+        {
+          "type": "gap",
+          "gapId": "g9"
+        },
+        {
+          "type": "text",
+          "text": " (cheer) at the top of their voices. Our headmaster said afterwards that the players had shown us "
+        },
+        {
+          "type": "gap",
+          "gapId": "g10"
+        },
+        {
+          "type": "text",
+          "text": " real teamwork means."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "用括号内词的适当形式",
+          "options": [],
+          "accepted": [
+            "was crowded"
+          ],
+          "explanationZh": "be crowded with 表示“挤满”，主语 the playground 为过去时单数，填 was crowded。"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "scored"
+          ],
+          "explanationZh": "描述过去进行的比赛，用过去式 scored。"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "用括号内副词的适当形式",
+          "options": [],
+          "accepted": [
+            "badly"
+          ],
+          "explanationZh": "修饰动词 hurt 用副词 badly。"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "to take"
+          ],
+          "explanationZh": "have no choice but to do sth 表示“别无选择只能做某事”，填 to take。"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "would lose"
+          ],
+          "explanationZh": "主句 thought 是过去时，从句表示“将会输”，用过去将来时 would lose。"
+        },
+        {
+          "id": "g6",
+          "label": "第6空",
+          "clue": "填连词",
+          "options": [],
+          "accepted": [
+            "who"
+          ],
+          "explanationZh": "非限制性定语从句修饰 the youngest player，从句缺主语，填 who。"
+        },
+        {
+          "id": "g7",
+          "label": "第7空",
+          "clue": "用括号内词的适当形式",
+          "options": [],
+          "accepted": [
+            "surprise"
+          ],
+          "explanationZh": "to one's surprise 为固定短语，填名词 surprise。"
+        },
+        {
+          "id": "g8",
+          "label": "第8空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "making"
+          ],
+          "explanationZh": "现在分词作结果状语，表示自然而然的结果，填 making。"
+        },
+        {
+          "id": "g9",
+          "label": "第9空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "cheering"
+          ],
+          "explanationZh": "主语 class 与 cheer 是主动关系，用现在分词作伴随状语，填 cheering。"
+        },
+        {
+          "id": "g10",
+          "label": "第10空",
+          "clue": "填连词",
+          "options": [],
+          "accepted": [
+            "what"
+          ],
+          "explanationZh": "宾语从句中 means 缺宾语，表示“……的东西”，填 what。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "grammar-gen-p08",
+      "familyId": "grammar-gen-p08",
+      "skillIds": [
+        "grammar.tense",
+        "grammar.comparison",
+        "grammar.clause",
+        "grammar.word-form"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recall",
+      "promptZh": "阅读短文，在空白处填入 1 个适当的单词或括号内单词的正确形式。",
+      "resourceId": "grammar-gen-p08",
+      "estimatedSeconds": 300,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "短文赞美英语高老师十五年如一日用新点子教英语，帮助学生不怕犯错、爱上英语。",
+        "ruleZh": "for/since 时间状语配完成时，although 引导让步从句，more carefully 为副词比较级，which 引导非限制性定语从句。",
+        "evidence": [
+          {
+            "resourceId": "grammar-gen-p08",
+            "paragraphId": "p1",
+            "quote": "my spoken English ____ (improve) a lot since last September"
+          },
+          {
+            "resourceId": "grammar-gen-p08",
+            "paragraphId": "p1",
+            "quote": "Although she checks our homework ____ (careful) than any other teacher, she never blames us"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "text",
+      "sharedOptions": [],
+      "uniqueOptions": false,
+      "segments": [
+        {
+          "type": "text",
+          "text": "Miss Gao "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": " (teach) English at our school for fifteen years, but she still prepares every class with fresh ideas and often stays late marking papers. "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": " she has taught some lessons many times, her classes are never boring; "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": ", she always finds new ways to make us think. Last term, she started an English corner after class, where students practice "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": " (speak) by describing pictures, telling stories and acting out short dialogues in English. She often says that making mistakes is an important part of "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": " (learn), so nobody should be afraid of them. Although she checks our homework "
+        },
+        {
+          "type": "gap",
+          "gapId": "g6"
+        },
+        {
+          "type": "text",
+          "text": " (careful) than any other teacher, she never blames us. When we make the same mistake again, she simply explains it one "
+        },
+        {
+          "type": "gap",
+          "gapId": "g7"
+        },
+        {
+          "type": "text",
+          "text": " (many) time with a smile. Thanks to her help, my spoken English "
+        },
+        {
+          "type": "gap",
+          "gapId": "g8"
+        },
+        {
+          "type": "text",
+          "text": " (improve) a lot since last September, and I am no longer afraid of opening my mouth. Under her influence, I have fallen in love with English, "
+        },
+        {
+          "type": "gap",
+          "gapId": "g9"
+        },
+        {
+          "type": "text",
+          "text": " I once hated most. I believe I "
+        },
+        {
+          "type": "gap",
+          "gapId": "g10"
+        },
+        {
+          "type": "text",
+          "text": " (remember) her for a long time."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "has taught",
+            "has been teaching"
+          ],
+          "explanationZh": "for fifteen years 与现在完成时连用，填 has taught 或 has been teaching。"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "填连词",
+          "options": [],
+          "accepted": [
+            "although",
+            "even though",
+            "though"
+          ],
+          "explanationZh": "引导让步状语从句表示“尽管”，填 Although/Even though/Though。"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "填副词",
+          "options": [],
+          "accepted": [
+            "instead",
+            "however"
+          ],
+          "explanationZh": "分号后表示“相反/然而”，填 instead 或 however。"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "speaking"
+          ],
+          "explanationZh": "practice doing sth 表示“练习做某事”，填 speaking。"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "learning"
+          ],
+          "explanationZh": "介词 of 后接动名词，填 learning。"
+        },
+        {
+          "id": "g6",
+          "label": "第6空",
+          "clue": "用括号内副词的适当形式",
+          "options": [],
+          "accepted": [
+            "more carefully"
+          ],
+          "explanationZh": "由 than any other teacher 可知用副词比较级 more carefully。"
+        },
+        {
+          "id": "g7",
+          "label": "第7空",
+          "clue": "用括号内词的适当形式",
+          "options": [],
+          "accepted": [
+            "more"
+          ],
+          "explanationZh": "one more time 表示“再一次”，填 more。"
+        },
+        {
+          "id": "g8",
+          "label": "第8空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "has improved"
+          ],
+          "explanationZh": "since last September 与现在完成时连用，填 has improved。"
+        },
+        {
+          "id": "g9",
+          "label": "第9空",
+          "clue": "填连词",
+          "options": [],
+          "accepted": [
+            "which"
+          ],
+          "explanationZh": "非限制性定语从句指代 English，从句中 hated 缺宾语，填 which。"
+        },
+        {
+          "id": "g10",
+          "label": "第10空",
+          "clue": "用括号内动词的适当形式",
+          "options": [],
+          "accepted": [
+            "will remember"
+          ],
+          "explanationZh": "表示将来的信念，用一般将来时 will remember。"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "grammar-gen-p09",
+      "familyId": "grammar-gen-p09",
+      "skillIds": [
+        "grammar.tense",
+        "grammar.clause"
+      ],
+      "level": "G0",
+      "section": "grammar",
+      "reviewMode": "recall",
+      "promptZh": "阅读短文，在空白处填入 1 个适当的单词或括号内单词的正确形式。",
+      "resourceId": "grammar-gen-res-p09",
+      "estimatedSeconds": 300,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语法填空：先通读确定时态主线，再逐空判断词性与从句结构。",
+        "ruleZh": "括号给词考词形转换，无词处多考功能词。",
+        "evidence": [
+          {
+            "resourceId": "grammar-gen-res-p09",
+            "paragraphId": "p1",
+            "quote": "Last winter, a small library {} (open) in our neig"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "text",
+      "sharedOptions": [],
+      "uniqueOptions": false,
+      "segments": [
+        {
+          "type": "text",
+          "text": "Last winter, a small library "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": "(open) in our neighbourhood. It "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": "set up by retired teachers who wanted to help children after school. The rooms were old, "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": "the volunteers painted them bright and warm."
+        },
+        {
+          "type": "text",
+          "text": "The library is small, but it has more than two thousand books. Children can read there "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": "(quiet), and volunteers answer questions "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": "they meet difficult words. Every book has a card "
+        },
+        {
+          "type": "gap",
+          "gapId": "g6"
+        },
+        {
+          "type": "text",
+          "text": "shows who read it last."
+        },
+        {
+          "type": "text",
+          "text": "Now the library opens every evening. It has become a place "
+        },
+        {
+          "type": "gap",
+          "gapId": "g7"
+        },
+        {
+          "type": "text",
+          "text": "families spend time together instead of "
+        },
+        {
+          "type": "gap",
+          "gapId": "g8"
+        },
+        {
+          "type": "text",
+          "text": "alone at home. Many parents say that their children have "
+        },
+        {
+          "type": "gap",
+          "gapId": "g9"
+        },
+        {
+          "type": "text",
+          "text": "(become) more interested in reading, and they are thankful "
+        },
+        {
+          "type": "gap",
+          "gapId": "g10"
+        },
+        {
+          "type": "text",
+          "text": "the teachers' kindness."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "括号给词 open：时态",
+          "options": [],
+          "accepted": [
+            "opened"
+          ],
+          "explanationZh": "一般过去时"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "无提示词：被动语态",
+          "options": [],
+          "accepted": [
+            "was"
+          ],
+          "explanationZh": "was set up"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "无提示词：连词",
+          "options": [],
+          "accepted": [
+            "but",
+            "yet"
+          ],
+          "explanationZh": "转折"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "括号给词 quiet：副词",
+          "options": [],
+          "accepted": [
+            "quietly"
+          ],
+          "explanationZh": "修饰 read"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "无提示词：时间连词",
+          "options": [],
+          "accepted": [
+            "when",
+            "whenever"
+          ],
+          "explanationZh": "时间状语从句"
+        },
+        {
+          "id": "g6",
+          "label": "第6空",
+          "clue": "无提示词：定语从句",
+          "options": [],
+          "accepted": [
+            "that",
+            "which"
+          ],
+          "explanationZh": "先行词 card"
+        },
+        {
+          "id": "g7",
+          "label": "第7空",
+          "clue": "无提示词：关系副词",
+          "options": [],
+          "accepted": [
+            "where"
+          ],
+          "explanationZh": "地点从句"
+        },
+        {
+          "id": "g8",
+          "label": "第8空",
+          "clue": "填动名词",
+          "options": [],
+          "accepted": [
+            "sitting"
+          ],
+          "explanationZh": "instead of + 动名词"
+        },
+        {
+          "id": "g9",
+          "label": "第9空",
+          "clue": "括号给词 become：过去分词",
+          "options": [],
+          "accepted": [
+            "become"
+          ],
+          "explanationZh": "have become"
+        },
+        {
+          "id": "g10",
+          "label": "第10空",
+          "clue": "无提示词：介词",
+          "options": [],
+          "accepted": [
+            "for"
+          ],
+          "explanationZh": "thankful for"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    },
+    {
+      "id": "grammar-gen-p10",
+      "familyId": "grammar-gen-p10",
+      "skillIds": [
+        "grammar.tense",
+        "grammar.clause"
+      ],
+      "level": "G1",
+      "section": "grammar",
+      "reviewMode": "recall",
+      "promptZh": "阅读短文，在空白处填入 1 个适当的单词或括号内单词的正确形式。",
+      "resourceId": "grammar-gen-res-p10",
+      "estimatedSeconds": 300,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语法填空：先通读确定时态主线，再逐空判断词性与从句结构。",
+        "ruleZh": "括号给词考词形转换，无词处多考功能词。",
+        "evidence": [
+          {
+            "resourceId": "grammar-gen-res-p10",
+            "paragraphId": "p1",
+            "quote": "Scientists say that {} (walk) for thirty minutes a"
+          }
+        ],
+        "distractors": []
+      },
+      "kind": "gaps",
+      "inputMode": "text",
+      "sharedOptions": [],
+      "uniqueOptions": false,
+      "segments": [
+        {
+          "type": "text",
+          "text": "Scientists say that "
+        },
+        {
+          "type": "gap",
+          "gapId": "g1"
+        },
+        {
+          "type": "text",
+          "text": "(walk) for thirty minutes a day is one of the simplest ways to stay healthy. You do not need special equipment, and it is "
+        },
+        {
+          "type": "gap",
+          "gapId": "g2"
+        },
+        {
+          "type": "text",
+          "text": "(complete) free of charge. You can do it almost "
+        },
+        {
+          "type": "gap",
+          "gapId": "g3"
+        },
+        {
+          "type": "text",
+          "text": "."
+        },
+        {
+          "type": "text",
+          "text": "Walking lowers the risk of heart disease, "
+        },
+        {
+          "type": "gap",
+          "gapId": "g4"
+        },
+        {
+          "type": "text",
+          "text": "helps people sleep "
+        },
+        {
+          "type": "gap",
+          "gapId": "g5"
+        },
+        {
+          "type": "text",
+          "text": "(well), and even improves memory. For students, a short walk before study can improve "
+        },
+        {
+          "type": "gap",
+          "gapId": "g6"
+        },
+        {
+          "type": "text",
+          "text": "(concentrate)."
+        },
+        {
+          "type": "text",
+          "text": "Walking also gives you time to think, "
+        },
+        {
+          "type": "gap",
+          "gapId": "g7"
+        },
+        {
+          "type": "text",
+          "text": "many writers choose to walk when they plan their work."
+        },
+        {
+          "type": "text",
+          "text": "Doctors suggest that we should walk "
+        },
+        {
+          "type": "gap",
+          "gapId": "g8"
+        },
+        {
+          "type": "text",
+          "text": "we can: take the stairs instead of the lift, and get off the bus one stop early. Small changes, repeated daily, make a big "
+        },
+        {
+          "type": "gap",
+          "gapId": "g9"
+        },
+        {
+          "type": "text",
+          "text": "(different) over time. The key is to start today, "
+        },
+        {
+          "type": "gap",
+          "gapId": "g10"
+        },
+        {
+          "type": "text",
+          "text": "tomorrow you will find a reason to wait."
+        }
+      ],
+      "gaps": [
+        {
+          "id": "g1",
+          "label": "第1空",
+          "clue": "括号给词 walk：非谓语作主语",
+          "options": [],
+          "accepted": [
+            "walking"
+          ],
+          "explanationZh": "动名词作主语"
+        },
+        {
+          "id": "g2",
+          "label": "第2空",
+          "clue": "括号给词 complete：副词",
+          "options": [],
+          "accepted": [
+            "completely"
+          ],
+          "explanationZh": "修饰 free"
+        },
+        {
+          "id": "g3",
+          "label": "第3空",
+          "clue": "无提示词：副词",
+          "options": [],
+          "accepted": [
+            "anywhere"
+          ],
+          "explanationZh": "almost anywhere"
+        },
+        {
+          "id": "g4",
+          "label": "第4空",
+          "clue": "无提示词：关系代词",
+          "options": [],
+          "accepted": [
+            "which"
+          ],
+          "explanationZh": "非限定性定语从句"
+        },
+        {
+          "id": "g5",
+          "label": "第5空",
+          "clue": "括号给词 well：比较级",
+          "options": [],
+          "accepted": [
+            "better"
+          ],
+          "explanationZh": "隐含比较"
+        },
+        {
+          "id": "g6",
+          "label": "第6空",
+          "clue": "括号给词 concentrate：名词",
+          "options": [],
+          "accepted": [
+            "concentration"
+          ],
+          "explanationZh": "improve + 名词"
+        },
+        {
+          "id": "g7",
+          "label": "第7空",
+          "clue": "无提示词：连词",
+          "options": [],
+          "accepted": [
+            "so",
+            "and"
+          ],
+          "explanationZh": "因果"
+        },
+        {
+          "id": "g8",
+          "label": "第8空",
+          "clue": "无提示词：从句引导词",
+          "options": [],
+          "accepted": [
+            "wherever",
+            "where"
+          ],
+          "explanationZh": "地点从句"
+        },
+        {
+          "id": "g9",
+          "label": "第9空",
+          "clue": "括号给词 different：名词",
+          "options": [],
+          "accepted": [
+            "difference"
+          ],
+          "explanationZh": "make a difference"
+        },
+        {
+          "id": "g10",
+          "label": "第10空",
+          "clue": "无提示词：连词",
+          "options": [],
+          "accepted": [
+            "or",
+            "otherwise"
+          ],
+          "explanationZh": "否则"
+        }
+      ],
+      "policy": {
+        "caseSensitive": false,
+        "allowTerminalPunctuation": true
+      }
+    }
+  ],
+  "units": [
+    {
+      "id": "grammar-gen-u1",
+      "titleZh": "语法填空 第1组（人物·科技·环境·健康）",
+      "familyIds": [
+        "grammar-gen-p01",
+        "grammar-gen-p02",
+        "grammar-gen-p03",
+        "grammar-gen-p04"
+      ],
+      "itemIds": [
+        "grammar-gen-p01",
+        "grammar-gen-p02",
+        "grammar-gen-p03",
+        "grammar-gen-p04"
+      ],
+      "prerequisiteSkillIds": []
+    },
+    {
+      "id": "grammar-gen-u2",
+      "titleZh": "语法填空 第2组（文化·社会·校园）",
+      "familyIds": [
+        "grammar-gen-p05",
+        "grammar-gen-p06",
+        "grammar-gen-p07",
+        "grammar-gen-p08",
+        "grammar-gen-p09",
+        "grammar-gen-p10"
+      ],
+      "itemIds": [
+        "grammar-gen-p05",
+        "grammar-gen-p06",
+        "grammar-gen-p07",
+        "grammar-gen-p08",
+        "grammar-gen-p09",
+        "grammar-gen-p10"
+      ],
+      "prerequisiteSkillIds": []
+    }
+  ]
+}

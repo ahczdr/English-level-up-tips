@@ -1,0 +1,30 @@
+{
+  "id": "anhui-gaokao-2025-reading-d-q15",
+  "familyId": "anhui-gaokao-2025-reading-d",
+  "skillIds": ["reading.main-idea"],
+  "level": "G2",
+  "section": "reading",
+  "reviewMode": "transfer",
+  "promptZh": "What is Gauchette-Lindsay’s suggestion about?",
+  "resourceId": "anhui-gaokao-2025-reading-d",
+  "estimatedSeconds": 50,
+  "sourceIds": ["anhui-gaokao-2025-eol"],
+  "explanation": {
+    "summaryZh": "她建议升级饮用水处理厂，使其能够去除微塑料，这是研究发现的潜在应用方向。",
+    "ruleZh": "人物观点题要定位直接引语，并区分研究方法、后续研究和实际应用。",
+    "evidence": [{ "resourceId": "anhui-gaokao-2025-reading-d", "paragraphId": "p5", "quote": "upgrading drinking water treatment plants so they remove microplastics" }],
+    "distractors": [
+      { "optionId": "a", "reasonZh": "她没有建议更换研究方法。" },
+      { "optionId": "b", "reasonZh": "她提出的是处理设施的应用改进，不是抽象的后续研究方向。" },
+      { "optionId": "c", "reasonZh": "她没有要求增加研究人员。" }
+    ]
+  },
+  "kind": "choice",
+  "options": [
+    { "id": "a", "text": "Choice of new research methods." },
+    { "id": "b", "text": "Possible direction for further study." },
+    { "id": "c", "text": "Need to involve more researchers." },
+    { "id": "d", "text": "Potential application of the findings." }
+  ],
+  "answerOptionId": "d"
+}

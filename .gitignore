@@ -8,6 +8,7 @@ outputs/
 output/pdf/
 tmp/
 playwright-report/
+playwright-report-offline/
 test-results/
 
 # local env files
