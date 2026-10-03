@@ -1050,3 +1050,10 @@ CR18/CR19/CR38/CR54（时区口径统一）、CR21、CR23、CR29–CR36、CR46�
 ## 28. CR16 实际解决（2026-10-03）
 
 PR #1 合并 master 后书稿 Pages 部署首次真正执行：configure-pages 的 enablement:true 在 fork 上因 GITHUB_TOKEN 权限不足失败（Resource not accessible by integration）。解决：以维护者身份经 gh api 创建 Pages 站点（build_type=workflow），重跑部署成功，<https://ahczdr.github.io/English-level-up-tips/> 已上线（HTTP 200）。master 上 english-practice-ci 同步全绿。
+
+## 29. 应用正式上线（2026-10-03）
+
+- 路线变更：Cloudflare 需注册新账号，改用已启用的 GitHub Pages——应用以 `/app/` 子路径随书稿同站发布（vite base 由 VITE_BASE 驱动，deploy workflow 构建应用后拷入站点产物；PR #2）。
+- 首次上线发现子路径下内容目录 404（DEFAULT_CATALOG_URL 硬编码绝对路径）：改为跟随 import.meta.env.BASE_URL（PR #3）；旧 SW 缓存导致的回归经清除后确认为新包正常。
+- 线上验收（浏览器实测）：<https://ahczdr.github.io/English-level-up-tips/app/> 渲染正常、SW 注册接管、装载 41 个单元、线上会话作答判分全链路通过、练习页导航隐藏。PR #1-#3 全部合并，master CI 全绿。
+- 待真机：按 device-matrix.md 在手机上验证添加到主屏幕与离线行为。

@@ -832,6 +832,7 @@ const confirmExit = async (): Promise<void> => {
               v-model="draft"
               :item="item"
               :disabled="taskDisabled"
+              :reveal-answer="feedback !== null"
             />
             <OrderTask
               v-else-if="item.kind === 'order'"
