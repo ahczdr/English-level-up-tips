@@ -1346,3 +1346,17 @@ body {
 }
 
 .learn-count { color: #5b6b81; margin: 0 0 0.5rem; }
+
+/* 判分后揭示：正确项绿、错选红（学生一眼看清答案） */
+.choice-option-answer {
+  border-color: #4caf7d !important;
+  background: #e8f6ec !important;
+  color: #1c6b33 !important;
+  font-weight: 700;
+}
+
+.choice-option-wrong {
+  border-color: #d98a8a !important;
+  background: #fbeaea !important;
+  color: #9d3434 !important;
+}

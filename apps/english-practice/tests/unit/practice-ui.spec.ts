@@ -724,3 +724,20 @@ describe('TodayPage 今日页', () => {
     expect(router.currentRoute.value.path).toBe('/session/ui-11')
   })
 })
+
+describe('ChoiceTask 判分揭示（学生向 UI）', () => {
+  it('revealAnswer 时正确项标绿、错选标红，未揭示时不加状态类', async () => {
+    const item = itemById<ChoiceItem>('vocab-join-a');
+    const reveal = mountTask(ChoiceTask, { item, revealAnswer: true });
+    wrappers.push(reveal);
+    await reveal.setProps({ modelValue: { kind: 'choice', optionId: 'c' } });
+    const classes = () => [...reveal.findAll('.choice-option')].map(b => b.classes().join(' '));
+    expect(classes()[0]).toContain('choice-option-answer');
+    expect(classes()[2]).toContain('choice-option-wrong');
+    reveal.unmount();
+    const noReveal = mountTask(ChoiceTask, { item });
+    wrappers.push(noReveal);
+    await noReveal.setProps({ modelValue: { kind: 'choice', optionId: 'c' } });
+    expect([...noReveal.findAll('.choice-option')].some(b => b.classes().some(c => c.includes('choice-option-answer')))).toBe(false);
+  });
+})

@@ -6,6 +6,8 @@ const props = defineProps<{
   item: ChoiceItem;
   modelValue: Answer | null;
   disabled?: boolean;
+  /** 判分后揭示答案：正确项标绿、错选标红（订正重答阶段不传） */
+  revealAnswer?: boolean;
 }>();
 
 const emit = defineEmits<{
@@ -14,6 +16,13 @@ const emit = defineEmits<{
 
 const isSelected = (optionId: string): boolean =>
   props.modelValue?.kind === 'choice' && props.modelValue.optionId === optionId;
+
+const optionState = (optionId: string): string => {
+  if (!props.revealAnswer) return '';
+  if (optionId === props.item.answerOptionId) return 'choice-option-answer';
+  if (isSelected(optionId)) return 'choice-option-wrong';
+  return '';
+};
 
 const select = (optionId: string): void => {
   if (props.disabled) return;
@@ -32,11 +41,18 @@ const select = (optionId: string): void => {
       :key="option.id"
       type="button"
       class="choice-option"
+      :class="optionState(option.id)"
       :aria-pressed="isSelected(option.id)"
       :disabled="disabled"
       @click="select(option.id)"
     >
-      {{ option.text }}
+      {{ option.text }}<span
+        v-if="revealAnswer && option.id === item.answerOptionId"
+        aria-hidden="true"
+      > ✓</span><span
+        v-else-if="revealAnswer && isSelected(option.id)"
+        aria-hidden="true"
+      > ✗</span>
     </button>
   </div>
 </template>
