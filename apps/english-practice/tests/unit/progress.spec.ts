@@ -401,3 +401,17 @@ describe('computeStreak 连续学习天数', () => {
     expect(computeStreak([shift(today, -3)], today)).toBe(0);
   });
 })
+
+describe('学习地图黄标联动（有到期复习的单元）', () => {
+  it('单元家族命中到期复习时标记 hasDue，其余保持解锁/锁定态', () => {
+    const summary = summarizeProgress(baseInput({
+      units: [
+        { unitId: 'unit-due', titleZh: '有到期', familyIds: ['f-due'] as never } as never,
+        { unitId: 'demo-school-club', titleZh: '校园社团' },
+      ],
+      dueFamilies: ['f-due'],
+    }))
+    const due = summary.mapNodes.find((node) => node.unitId === 'unit-due')
+    expect(due?.hasDue).toBe(true)
+  })
+})
