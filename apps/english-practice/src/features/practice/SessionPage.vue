@@ -840,6 +840,7 @@ const confirmExit = async (): Promise<void> => {
               v-model="draft"
               :item="item"
               :disabled="taskDisabled"
+              :reveal-answer="feedback !== null"
             />
             <GapTask
               v-else-if="item.kind === 'gaps'"

@@ -1360,3 +1360,9 @@ body {
   background: #fbeaea !important;
   color: #9d3434 !important;
 }
+
+.order-reveal {
+  margin: 0.5rem 0 0;
+  color: #1c6b33;
+  font-weight: 700;
+}

@@ -7,6 +7,8 @@ const props = defineProps<{
   item: OrderItem;
   modelValue: Answer | null;
   disabled?: boolean;
+  /** 判分后揭示正确顺序（订正重答阶段不传） */
+  revealAnswer?: boolean;
 }>();
 
 const emit = defineEmits<{
@@ -23,6 +25,12 @@ const poolTokens = computed(() =>
 
 const tokenText = (tokenId: string): string =>
   props.item.tokens.find((token) => token.id === tokenId)?.text ?? tokenId;
+
+const revealText = computed(() =>
+  props.revealAnswer
+    ? (props.item.acceptedOrders[0] ?? []).map((tokenId) => tokenText(tokenId)).join(' ')
+    : '',
+);
 
 const emitIds = (ids: string[]): void => {
   emit('update:modelValue', { kind: 'order', tokenIds: ids });
@@ -115,5 +123,12 @@ const clearAll = (): void => {
     >
       清空重排
     </button>
+    <p
+      v-if="revealAnswer"
+      class="order-reveal"
+      role="status"
+    >
+      正确顺序：{{ revealText }}
+    </p>
   </div>
 </template>

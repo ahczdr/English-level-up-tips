@@ -741,3 +741,16 @@ describe('ChoiceTask 判分揭示（学生向 UI）', () => {
     expect([...noReveal.findAll('.choice-option')].some(b => b.classes().some(c => c.includes('choice-option-answer')))).toBe(false);
   });
 })
+
+describe('OrderTask 判分揭示（学生向 UI）', () => {
+  it('revealAnswer 时显示正确顺序文本，未揭示时不显示', async () => {
+    const item = itemById<OrderItem>(pack.items.find(i => i.kind === 'order')!.id);
+    const reveal = mountTask(OrderTask, { item, revealAnswer: true });
+    wrappers.push(reveal);
+    expect(reveal.find('.order-reveal').text()).toContain(item.acceptedOrders[0].map(id => item.tokens.find(t => t.id === id)!.text).join(' '));
+    reveal.unmount();
+    const noReveal = mountTask(OrderTask, { item });
+    wrappers.push(noReveal);
+    expect(noReveal.find('.order-reveal').exists()).toBe(false);
+  });
+})
