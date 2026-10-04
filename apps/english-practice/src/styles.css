@@ -1366,3 +1366,22 @@ body {
   color: #1c6b33;
   font-weight: 700;
 }
+
+.learn-group {
+  margin-bottom: 0.9rem;
+  border: 1px solid #e2e8f2;
+  border-radius: 0.75rem;
+  background: #ffffff;
+}
+
+.learn-group-title {
+  cursor: pointer;
+  padding: 0.65rem 0.9rem;
+  font-weight: 700;
+  color: #1f4e8c;
+  user-select: none;
+}
+
+.learn-group[open] .learn-group-title { border-bottom: 1px solid #eef2f7; }
+
+.learn-group .unit-card { margin: 0.6rem 0.75rem; width: auto; }

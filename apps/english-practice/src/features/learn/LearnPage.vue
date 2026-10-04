@@ -53,6 +53,15 @@ const filteredUnits = computed(() => {
   if (!q) return units.value;
   return units.value.filter((u) => (u.unit.titleZh + u.packTitle).toLowerCase().includes(q));
 });
+// 按课程包分组展示：同课程聚成一节，滚动更少
+const groupedUnits = computed(() => {
+  const map = new Map<string, typeof filteredUnits.value>();
+  for (const unit of filteredUnits.value) {
+    if (!map.has(unit.packTitle)) map.set(unit.packTitle, []);
+    map.get(unit.packTitle)!.push(unit);
+  }
+  return [...map.entries()];
+});
 
 const loadUnits = async (): Promise<void> => {
   loading.value = true;
@@ -267,27 +276,37 @@ const startPractice = async (): Promise<void> => {
     >
       {{ status }}
     </p>
-    <button
-      v-for="option in filteredUnits"
-      :key="option.key"
-      type="button"
-      class="unit-card"
-      :aria-pressed="selectedKey === option.key"
-      @click="selectUnit(option)"
+    <details
+      v-for="[packTitle, groupUnits] in groupedUnits"
+      :key="packTitle"
+      class="learn-group"
+      open
     >
-      <span class="unit-title">{{ option.unit.titleZh }}</span>
-      <span v-if="curriculumForUnit(option.unit.id)" class="unit-stage">
-        {{ curriculumForUnit(option.unit.id)?.year.titleZh }} · {{ curriculumForUnit(option.unit.id)?.unit.targetZh }}
-      </span>
-      <span class="unit-meta">
-        {{ option.packTitle }} · 共 {{ option.itemCount }} 题 · 约
-        {{ Math.max(1, Math.round(option.totalSeconds / 60)) }} 分钟
-      </span>
-      <span
-        v-if="option.draft"
-        class="draft-badge"
-      >预览内容 · 未审核</span>
-    </button>
+      <summary class="learn-group-title">
+        {{ packTitle }}（{{ groupUnits.length }} 个单元）
+      </summary>
+      <button
+        v-for="option in groupUnits"
+        :key="option.key"
+        type="button"
+        class="unit-card"
+        :aria-pressed="selectedKey === option.key"
+        @click="selectUnit(option)"
+      >
+        <span class="unit-title">{{ option.unit.titleZh }}</span>
+        <span v-if="curriculumForUnit(option.unit.id)" class="unit-stage">
+          {{ curriculumForUnit(option.unit.id)?.year.titleZh }} · {{ curriculumForUnit(option.unit.id)?.unit.targetZh }}
+        </span>
+        <span class="unit-meta">
+          共 {{ option.itemCount }} 题 · 约
+          {{ Math.max(1, Math.round(option.totalSeconds / 60)) }} 分钟
+        </span>
+        <span
+          v-if="option.draft"
+          class="draft-badge"
+        >预览内容 · 未审核</span>
+      </button>
+    </details>
     <fieldset
       v-if="units.length > 0"
       class="duration-field"
