@@ -1385,3 +1385,9 @@ body {
 .learn-group[open] .learn-group-title { border-bottom: 1px solid #eef2f7; }
 
 .learn-group .unit-card { margin: 0.6rem 0.75rem; width: auto; }
+
+.progress-map .map-node-due {
+  background: #fff7e0;
+  border-color: #ecc94b;
+  color: #8a6d1a;
+}

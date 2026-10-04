@@ -24,7 +24,7 @@ export interface ProgressAttempt {
   unknownItem?: boolean
 }
 
-export interface ProgressUnit { unitId: string; titleZh: string }
+export interface ProgressUnit { unitId: string; titleZh: string; familyIds?: string[] }
 export interface ProgressAchievement { id: string; unlockedAt: string }
 export interface ProgressWritingVersion {
   itemId: string
@@ -40,6 +40,8 @@ export interface ProgressInput {
   today: string
   profileId: string
   attempts: ProgressAttempt[]
+  /** CR7 配套：今天已到期的复习家族（页面按 profileId + dueDay<=today 过滤后传入） */
+  dueFamilies?: string[]
   totalItems: number
   exposedItemIds: string[]
   units: ProgressUnit[]
@@ -54,6 +56,8 @@ export interface MapNode {
   achievementId: string
   unlocked: boolean
   unlockedAt: string | null
+  /** 该单元存在到期复习（学习地图黄标联动） */
+  hasDue?: boolean
 }
 export interface Bucket { attempts: number; correct: number }
 export interface ComparableSeries {
@@ -169,7 +173,9 @@ export function summarizeProgress(input: ProgressInput): ProgressSummary {
     const achievementId = `unit:first:${input.profileId}:${unit.unitId}`
     const legacyAchievementId = 'unit:first:' + unit.unitId
     const unlockedAt = firstUnlock.get(achievementId) ?? firstUnlock.get(legacyAchievementId) ?? null
-    return { unitId: unit.unitId, titleZh: unit.titleZh, achievementId, unlocked: unlockedAt !== null, unlockedAt }
+    const familyIds = (unit as unknown as { familyIds?: string[] }).familyIds ?? []
+    const hasDue = familyIds.some((f) => (input.dueFamilies ?? []).includes(f))
+    return { unitId: unit.unitId, titleZh: unit.titleZh, achievementId, unlocked: unlockedAt !== null, unlockedAt, hasDue }
   })
   // 本周与前期可比较序列：按 题型+层级 分开；不同键绝不合并
   const buckets = new Map<string, ComparableSeries>()

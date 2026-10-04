@@ -29,7 +29,7 @@ const soundEnabled = ref(true);
 const rewardVisible = ref(false);
 const reducedMotion = ref(false);
 const summaryText = ref<string[]>([]);
-const nodeLines = ref<Array<{ titleZh: string; unlocked: boolean; achievementId: string }>>([]);
+const nodeLines = ref<Array<{ titleZh: string; unlocked: boolean; hasDue: boolean; achievementId: string }>>([]);
 const seriesLines = ref<string[]>([]);
 const cards = ref<Array<{ itemId: string; firstText: string; latestText: string; versionCount: number; checklistCount: number }>>([]);
 const selfEvalLine = ref('');
@@ -65,8 +65,8 @@ const loadState = async (): Promise<void> => {
     const itemIndex = new Map<string, { kind: ProgressAttempt['kind']; level: ProgressAttempt['level'] }>();
     const countedItems = new Set<string>();
     for (const record of packs) {
-      const pack = record.pack as { id: string; units: Array<{ id: string; titleZh: string; itemIds: string[] }>; items: Array<{ id: string; kind: string; level: string }> };
-      for (const unit of pack.units) units.push({ unitId: unit.id, titleZh: unit.titleZh });
+      const pack = record.pack as { id: string; units: Array<{ id: string; titleZh: string; itemIds: string[]; familyIds: string[] }>; items: Array<{ id: string; kind: string; level: string }> };
+      for (const unit of pack.units) units.push({ unitId: unit.id, titleZh: unit.titleZh, familyIds: unit.familyIds });
       for (const item of pack.items) {
         itemIndex.set(item.id, { kind: item.kind as ProgressAttempt['kind'], level: item.level as ProgressAttempt['level'] });
         // 换版过渡期同一 (packId,itemId) 只计一次，避免未见题被重复条目稀释
@@ -148,9 +148,13 @@ const loadState = async (): Promise<void> => {
       firstText: group.firstText,
       latestText: group.latestText,
     }));
+    const dueFamilies = (await db.value.reviewStates.where('profileId').equals(settings.profileId).toArray())
+      .filter((row) => row.dueDay <= (props.today ?? pageToday(e2eNow(), settings.timeZone)))
+      .map((row) => row.familyId);
     const summary = summarizeProgress({
       today: props.today ?? pageToday(e2eNow(), settings.timeZone),
       profileId: settings.profileId,
+      dueFamilies,
       attempts: validAttempts,
       totalItems,
       exposedItemIds,
@@ -164,7 +168,7 @@ const loadState = async (): Promise<void> => {
     const streak = computeStreak(summary.studyDays, props.today ?? pageToday(e2eNow(), settings.timeZone));
     studyDayLine.value = '累计学习日 ' + summary.studyDays.length + ' 天 · 🔥 连续 ' + streak + ' 天' + (summary.todayMarked ? ' · 今日已标记' : '');
     unseenLine.value = '未见题 ' + summary.unseenCount + ' 题';
-    nodeLines.value = summary.mapNodes.map((node) => ({ titleZh: node.titleZh, unlocked: node.unlocked, achievementId: node.achievementId }));
+    nodeLines.value = summary.mapNodes.map((node) => ({ titleZh: node.titleZh, unlocked: node.unlocked, hasDue: node.hasDue === true, achievementId: node.achievementId }));
     seriesLines.value = summary.series.map((serie) => {
       const label = serie.kind + ' · ' + serie.level;
       return label + '：本周 ' + serie.thisWeek.correct + '/' + serie.thisWeek.attempts + '，前期 ' + serie.earlier.correct + '/' + serie.earlier.attempts;
@@ -265,10 +269,10 @@ const closeReward = (): void => {
           v-for="node in nodeLines"
           :key="node.achievementId"
           class="map-node"
-          :class="node.unlocked ? 'map-node-unlocked' : 'map-node-locked'"
+          :class="node.hasDue ? 'map-node-due' : node.unlocked ? 'map-node-unlocked' : 'map-node-locked'"
         >
-          <span aria-hidden="true">{{ node.unlocked ? '✅' : '🔒' }}</span>
-          {{ node.titleZh }} · {{ node.unlocked ? '已解锁' : '未解锁' }}
+          <span aria-hidden="true">{{ node.hasDue ? '🔁' : node.unlocked ? '✅' : '🔒' }}</span>
+          {{ node.titleZh }} · {{ node.hasDue ? '有到期复习' : node.unlocked ? '已解锁' : '未解锁' }}
         </li>
       </ul>
 
