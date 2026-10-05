@@ -368,6 +368,11 @@ const resumePractice = async (session: Session): Promise<void> => {
         选择今日练习内容
       </AppButton>
       <router-link
+        v-if="autoRecommend && hasContent && plan !== null && planGroups.length === 0 && !plan.needsLongerSession"
+        to="/learn"
+        class="learn-link"
+      >今日计划已完成 · 自由练习（自选单元）</router-link>
+      <router-link
         to="/downloads"
         class="downloads-link"
       >下载课程</router-link>

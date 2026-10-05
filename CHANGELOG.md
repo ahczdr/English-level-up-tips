@@ -4,6 +4,23 @@ All notable project-level changes are documented here. Content pages retain thei
 
 ## Unreleased
 
+### 2026-10-04 auto-recommend mode and student UX
+
+#### Added
+
+- Auto-recommend mode (default on): the today page opens with a single
+  开始今日练习 action that creates or resumes today's session straight away;
+  a settings toggle restores the manual course-list flow.
+- Choice/order tasks reveal the correct answer after grading; the learning
+  map highlights units with due reviews; course page groups and filters 41
+  units; today page shows streak days and a completion progress bar.
+
+#### Fixed
+
+- Subpath deployment: content catalog requests now follow the vite base URL,
+  and PDF manifests are generated with the pinned pypdf so the CI freshness
+  gate matches local builds.
+
 ### 2026-09-29 english-practice local release hardening
 
 #### Changed
