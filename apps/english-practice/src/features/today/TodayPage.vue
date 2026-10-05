@@ -158,6 +158,12 @@ const startAutoSession = async (): Promise<void> => {
   if (starting.value) return;
   starting.value = true;
   try {
+    // 有未完成会话时直接续接（按钮文案也承诺了「继续练习」）
+    const resume = resumable.value[0];
+    if (resume) {
+      await router.push(`/session/${resume.id}`);
+      return;
+    }
     const created = await createTodaySession({ db: db.value, minutes: planMinutes.value, profileId: planProfileId.value, timeZone: planTimeZone.value });
     if (!created.ok) {
       message.value = created.error.messageZh;
