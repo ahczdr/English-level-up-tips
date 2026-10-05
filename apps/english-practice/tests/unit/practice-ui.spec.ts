@@ -695,8 +695,22 @@ describe('TodayPage 今日页', () => {
     expect(router.currentRoute.value.path).toBe('/learn')
   })
 
-  it('有课程时选择今日练习内容进入课程页', async () => {
+  it('自动推荐模式（默认开）：有课程时一键进入今日会话', async () => {
     const db = await openDb()
+    const router = makeRouter()
+    await router.push('/today')
+    await router.isReady()
+    const wrapper = mount(TodayPage, { props: { db }, global: { plugins: [router] } })
+    wrappers.push(wrapper)
+    await settle()
+    await clickButton(wrapper, '开始今日练习')
+    await settle()
+    expect(router.currentRoute.value.path).toMatch(/^\/session\//)
+  })
+
+  it('关闭自动推荐后回退：主按钮进入课程页', async () => {
+    const db = await openDb()
+    await db.settings.put({ id: 'personal', value: { profileId: 'gaokao-common-training-v1', grade: null, goal: null, defaultMinutes: 10, timeZone: 'Asia/Shanghai', sound: true, animation: true, autoRecommend: false } })
     const router = makeRouter()
     await router.push('/today')
     await router.isReady()

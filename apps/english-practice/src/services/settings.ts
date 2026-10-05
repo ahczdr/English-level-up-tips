@@ -10,6 +10,8 @@ export interface PersonalSettings {
   timeZone: string
   sound: boolean
   animation: boolean
+  /** 自动推荐模式：打开应用直接进入今日推荐练习，不需要挑选课程 */
+  autoRecommend: boolean
 }
 
 export const DEFAULT_PERSONAL_SETTINGS: PersonalSettings = {
@@ -20,6 +22,7 @@ export const DEFAULT_PERSONAL_SETTINGS: PersonalSettings = {
   timeZone: 'Asia/Shanghai',
   sound: true,
   animation: true,
+  autoRecommend: true,
 }
 
 const isGrade = (value: unknown): value is GradeLevel =>
@@ -40,6 +43,7 @@ export async function loadPersonalSettings(db: GaokaoDatabase): Promise<Personal
       timeZone: typeof value.timeZone === 'string' && value.timeZone !== '' ? value.timeZone : DEFAULT_PERSONAL_SETTINGS.timeZone,
       sound: typeof value.sound === 'boolean' ? value.sound : DEFAULT_PERSONAL_SETTINGS.sound,
       animation: typeof value.animation === 'boolean' ? value.animation : DEFAULT_PERSONAL_SETTINGS.animation,
+      autoRecommend: typeof value.autoRecommend === 'boolean' ? value.autoRecommend : DEFAULT_PERSONAL_SETTINGS.autoRecommend,
     }
   } catch {
     return DEFAULT_PERSONAL_SETTINGS
@@ -57,6 +61,7 @@ export async function savePersonalSettings(db: GaokaoDatabase, input: PersonalSe
     timeZone: typeof input.timeZone === 'string' && input.timeZone !== '' ? input.timeZone : DEFAULT_PERSONAL_SETTINGS.timeZone,
     sound: typeof input.sound === 'boolean' ? input.sound : DEFAULT_PERSONAL_SETTINGS.sound,
     animation: typeof input.animation === 'boolean' ? input.animation : DEFAULT_PERSONAL_SETTINGS.animation,
+    autoRecommend: typeof input.autoRecommend === 'boolean' ? input.autoRecommend : DEFAULT_PERSONAL_SETTINGS.autoRecommend,
   }
   await db.settings.put({ id: 'personal', value: settings })
 }
