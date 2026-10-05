@@ -37,6 +37,7 @@ const planMinutes = ref(10);
 const planProfileId = ref('gaokao-common-training-v1');
 const planTimeZone = ref('Asia/Shanghai');
 const starting = ref(false);
+const autoRecommend = ref(true);
 const suggestion = ref<{ kind: 'up' | 'support' | 'hold'; headline: string; detail: string } | null>(null);
 const suggestionDismissed = ref(false);
 
@@ -72,6 +73,7 @@ const refreshState = async (): Promise<void> => {
     planMinutes.value = settings.defaultMinutes;
     planProfileId.value = settings.profileId;
     planTimeZone.value = settings.timeZone;
+    autoRecommend.value = settings.autoRecommend !== false;
   } catch {
     planMinutes.value = 10;
   }
@@ -150,6 +152,26 @@ const loadState = async (): Promise<void> => {
 };
 
 onMounted(loadState);
+
+// 自动推荐模式：一键创建/续接今日会话（同日冻结保证刷新重开不重复），进入后即练
+const startAutoSession = async (): Promise<void> => {
+  if (starting.value) return;
+  starting.value = true;
+  try {
+    const created = await createTodaySession({ db: db.value, minutes: planMinutes.value, profileId: planProfileId.value, timeZone: planTimeZone.value });
+    if (!created.ok) {
+      message.value = created.error.messageZh;
+      return;
+    }
+    if (created.value.kind === 'empty') {
+      message.value = created.value.messageZh;
+      return;
+    }
+    await router.push(`/session/${created.value.session.id}`);
+  } finally {
+    starting.value = false;
+  }
+};
 
 const startTodayPractice = async (): Promise<void> => {
   // CR24：加载未完成时先等加载结束再跳转；课程空态由课程页的「准备课程内容」承接（CR12.1 单一入口）
@@ -326,6 +348,14 @@ const resumePractice = async (session: Session): Promise<void> => {
 
     <div class="today-actions">
       <AppButton
+        v-if="autoRecommend && hasContent"
+        :disabled="loading || starting"
+        @click="startAutoSession"
+      >
+        {{ starting ? '正在准备…' : (resumable.length > 0 ? '继续练习' : '开始今日练习') }}
+      </AppButton>
+      <AppButton
+        v-else
         :disabled="loading"
         @click="startTodayPractice"
       >

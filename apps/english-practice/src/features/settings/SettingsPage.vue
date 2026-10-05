@@ -38,6 +38,10 @@
         <input v-model="soundEnabled" type="checkbox" @change="savePrefs" />
       </label>
       <label class="settings-row">
+        <span>自动推荐模式（打开即进入今日练习）</span>
+        <input v-model="autoRecommend" type="checkbox" @change="savePrefs" />
+      </label>
+      <label class="settings-row">
         <span>学习日时区</span>
         <select v-model="timeZone" @change="savePrefs">
           <option value="Asia/Shanghai">Asia/Shanghai（北京时间）</option>
@@ -98,6 +102,7 @@ const goal = ref('');
 const minutes = ref<PersonalSettings['defaultMinutes']>(10);
 const minuteOptions: Array<PersonalSettings['defaultMinutes']> = [5, 10, 15, 25];
 const soundEnabled = ref(true);
+const autoRecommend = ref(true);
 const timeZone = ref('Asia/Shanghai');
 const clearStep = ref(0);
 const message = ref('');
@@ -147,6 +152,7 @@ const savePrefs = async (): Promise<void> => {
       goal: goal.value.trim() === '' ? null : goal.value.trim(),
       defaultMinutes: minutes.value,
       sound: soundEnabled.value,
+      autoRecommend: autoRecommend.value,
       timeZone: timeZone.value,
     });
     message.value = '偏好已保存';
