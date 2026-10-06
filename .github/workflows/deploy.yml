@@ -7,6 +7,11 @@ on:
     paths-ignore:
       - 'apps/**'
       - 'planning/**'
+  # 应用合并进 master 后自动上线（CI 全绿后才触发 workflow_run，无需手动 dispatch）
+  workflow_run:
+    workflows: [CI, english-practice-ci]
+    types: [completed]
+    branches: [master]
   workflow_dispatch:
 
 permissions:
