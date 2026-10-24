@@ -170,19 +170,19 @@
     },
     {
       "id": "vocab-core-1",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "status": "published",
-      "bytes": 292889,
-      "sha256": "4f8f66a8c529828f4eb2f48ab24ec16f8d9dfdf5dcfb9862412e9ffe96223bec",
-      "path": "content-packs/vocab-core-1/0.1.0/pack.json"
+      "bytes": 390113,
+      "sha256": "b767a6c7f8acc6294cbe6dd5f48e002c208f2cee1641bf127578eca711cdc89e",
+      "path": "content-packs/vocab-core-1/0.2.0/pack.json"
     },
     {
       "id": "vocab-core-2",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "status": "published",
-      "bytes": 288066,
-      "sha256": "eeba7c4d8d38deba98cdfdcaa03e849ada8721a041a507090b5db9646bd5f822",
-      "path": "content-packs/vocab-core-2/0.1.0/pack.json"
+      "bytes": 383658,
+      "sha256": "cee531be1467fd647b47a3817f3bcc8395403eb42e5a598b2727c5e20485bae2",
+      "path": "content-packs/vocab-core-2/0.2.0/pack.json"
     },
     {
       "id": "writing-gen",

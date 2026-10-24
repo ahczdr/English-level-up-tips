@@ -641,3 +641,527 @@ writing-gen,0.2.0,writing-gen-app-3,内置生成器草稿,GLM-5.3-Flash(AI),2026
 writing-gen,0.2.0,writing-gen-cont-1,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-01T00:00:00.000Z,pass,AI复核答案要点、结构与解析完整；出题与复核同为AI已如实标注
 writing-gen,0.2.0,writing-gen-cont-2,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-01T00:00:00.000Z,pass,AI复核答案要点、结构与解析完整；出题与复核同为AI已如实标注
 writing-gen,0.2.0,writing-gen-cont-3,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-01T00:00:00.000Z,pass,AI复核答案要点、结构与解析完整；出题与复核同为AI已如实标注
+vocab-core-1,0.2.0,vocab-core-achieve-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-analyze-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-announce-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-anxious-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-apparent-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-appreciate-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-approach-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-argue-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-assess-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-assume-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-attempt-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-attract-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-available-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-aware-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-balance-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-benefit-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-burden-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-capable-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-challenge-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-character-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-circumstance-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-collaborate-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-commit-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-compete-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-complex-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-concentrate-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-confident-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-consequence-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-contribute-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-convince-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-critical-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-curious-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-decline-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-dedicate-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-demonstrate-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-determine-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-develop-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-distinguish-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-diverse-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-efficient-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-emphasize-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-encounter-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-enhance-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-establish-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-evaluate-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-evidence-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-exaggerate-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-examine-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-excellent-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-expand-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-experience-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-experiment-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-explain-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-explore-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-expose-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-familiar-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-fascinate-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-flexible-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-focus-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-frequent-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-frustrate-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-generate-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-grateful-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-guarantee-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-hesitate-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-identify-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-ignore-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-illustrate-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-imagine-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-imply-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-impress-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-indicate-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-individual-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-influence-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-inform-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-inspire-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-interfere-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-interpret-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-introduce-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-involve-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-justify-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-maintain-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-negotiate-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-neglect-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-obtain-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-occupy-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-occur-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-opportunity-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-organize-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-overcome-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-participate-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-perform-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-persuade-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-possess-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-predict-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-prefer-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-prevent-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-prioritize-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-promote-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-pursue-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-realize-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-recognize-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-recommend-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-reflect-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-refuse-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-regret-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-reject-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-relevant-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-rely-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-remind-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-represent-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-require-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-resolve-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-respond-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-responsible-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-restrict-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-reveal-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-sacrifice-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-satisfy-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-significant-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-strategy-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-struggle-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-sufficient-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-support-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-surround-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-survive-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-sustain-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-tolerate-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-transform-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-undertake-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-2,0.2.0,vocab-core-volunteer-ctx,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,语境句答案由句子构造锁定（AI 复核）；选项同词性且无重复
+vocab-core-1,0.2.0,vocab-core-achieve-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-achieve-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-achieve-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-analyze-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-analyze-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-analyze-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-announce-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-announce-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-announce-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-anxious-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-anxious-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-anxious-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-apparent-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-apparent-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-apparent-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-appreciate-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-appreciate-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-appreciate-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-approach-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-approach-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-approach-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-argue-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-argue-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-argue-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-assess-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-assess-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-assess-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-assume-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-assume-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-assume-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-attempt-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-attempt-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-attempt-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-attract-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-attract-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-attract-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-available-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-available-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-available-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-aware-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-aware-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-aware-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-balance-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-balance-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-balance-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-benefit-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-benefit-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-benefit-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-burden-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-burden-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-burden-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-capable-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-capable-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-capable-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-challenge-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-challenge-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-challenge-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-character-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-character-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-character-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-circumstance-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-circumstance-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-circumstance-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-collaborate-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-collaborate-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-collaborate-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-commit-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-commit-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-commit-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-compete-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-compete-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-compete-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-complex-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-complex-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-complex-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-concentrate-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-concentrate-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-concentrate-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-confident-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-confident-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-confident-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-consequence-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-consequence-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-consequence-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-contribute-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-contribute-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-contribute-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-convince-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-convince-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-convince-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-critical-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-critical-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-critical-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-curious-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-curious-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-curious-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-decline-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-decline-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-decline-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-dedicate-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-dedicate-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-dedicate-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-demonstrate-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-demonstrate-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-demonstrate-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-determine-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-determine-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-determine-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-develop-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-develop-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-develop-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-distinguish-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-distinguish-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-distinguish-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-diverse-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-diverse-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-diverse-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-efficient-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-efficient-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-efficient-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-emphasize-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-emphasize-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-emphasize-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-encounter-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-encounter-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-encounter-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-enhance-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-enhance-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-enhance-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-establish-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-establish-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-establish-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-evaluate-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-evaluate-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-evaluate-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-evidence-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-evidence-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-evidence-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-exaggerate-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-exaggerate-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-exaggerate-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-examine-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-examine-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-examine-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-excellent-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-excellent-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-excellent-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-expand-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-expand-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-expand-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-experience-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-experience-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-experience-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-experiment-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-experiment-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-experiment-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-explain-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-explain-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-explain-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-explore-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-explore-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-explore-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-expose-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-expose-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-expose-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-familiar-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-familiar-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-familiar-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-fascinate-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-fascinate-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-fascinate-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-flexible-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-flexible-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-flexible-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-focus-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-focus-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-focus-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-frequent-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-frequent-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-frequent-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-frustrate-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-frustrate-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-frustrate-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-generate-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-generate-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-generate-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-grateful-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-grateful-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-grateful-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-guarantee-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-guarantee-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-guarantee-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-hesitate-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-hesitate-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-hesitate-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-identify-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-identify-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-1,0.2.0,vocab-core-identify-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-ignore-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-ignore-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-ignore-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-illustrate-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-illustrate-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-illustrate-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-imagine-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-imagine-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-imagine-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-imply-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-imply-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-imply-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-impress-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-impress-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-impress-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-indicate-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-indicate-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-indicate-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-individual-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-individual-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-individual-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-influence-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-influence-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-influence-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-inform-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-inform-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-inform-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-inspire-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-inspire-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-inspire-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-interfere-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-interfere-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-interfere-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-interpret-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-interpret-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-interpret-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-introduce-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-introduce-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-introduce-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-involve-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-involve-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-involve-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-justify-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-justify-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-justify-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-maintain-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-maintain-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-maintain-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-negotiate-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-negotiate-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-negotiate-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-neglect-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-neglect-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-neglect-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-obtain-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-obtain-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-obtain-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-occupy-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-occupy-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-occupy-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-occur-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-occur-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-occur-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-opportunity-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-opportunity-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-opportunity-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-organize-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-organize-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-organize-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-overcome-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-overcome-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-overcome-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-participate-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-participate-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-participate-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-perform-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-perform-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-perform-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-persuade-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-persuade-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-persuade-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-possess-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-possess-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-possess-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-predict-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-predict-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-predict-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-prefer-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-prefer-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-prefer-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-prevent-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-prevent-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-prevent-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-prioritize-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-prioritize-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-prioritize-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-promote-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-promote-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-promote-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-pursue-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-pursue-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-pursue-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-realize-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-realize-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-realize-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-recognize-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-recognize-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-recognize-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-recommend-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-recommend-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-recommend-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-reflect-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-reflect-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-reflect-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-refuse-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-refuse-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-refuse-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-regret-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-regret-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-regret-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-reject-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-reject-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-reject-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-relevant-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-relevant-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-relevant-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-rely-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-rely-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-rely-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-remind-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-remind-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-remind-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-represent-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-represent-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-represent-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-require-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-require-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-require-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-resolve-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-resolve-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-resolve-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-respond-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-respond-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-respond-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-responsible-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-responsible-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-responsible-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-restrict-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-restrict-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-restrict-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-reveal-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-reveal-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-reveal-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-sacrifice-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-sacrifice-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-sacrifice-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-satisfy-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-satisfy-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-satisfy-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-significant-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-significant-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-significant-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-strategy-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-strategy-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-strategy-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-struggle-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-struggle-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-struggle-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-sufficient-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-sufficient-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-sufficient-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-support-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-support-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-support-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-surround-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-surround-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-surround-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-survive-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-survive-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-survive-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-sustain-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-sustain-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-sustain-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-tolerate-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-tolerate-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-tolerate-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-transform-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-transform-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-transform-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-undertake-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-undertake-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-undertake-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-volunteer-zh,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-volunteer-en,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移
+vocab-core-2,0.2.0,vocab-core-volunteer-def,内置生成器草稿,GLM-5.3-Flash(AI),2026-10-24T00:00:00.000Z,pass,题目内容与 0.1.0 已复核版本逐字一致（AI 复核确认无变更），仅包版本迁移

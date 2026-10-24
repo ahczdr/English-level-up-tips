@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "vocab-core-1",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "titleZh": "词汇核心训练 1（生成草稿）",
   "status": "published",
   "author": "内置生成器草稿",
@@ -3653,6 +3653,1216 @@
       "answerOptionId": "a"
     },
     {
+      "id": "vocab-core-achieve-ctx",
+      "familyId": "vocab-core-achieve",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "With steady effort, you will finally ______ your goal. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「achieve」：v. 达到；实现",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "achieve"
+        },
+        {
+          "id": "b",
+          "text": "imply"
+        },
+        {
+          "id": "c",
+          "text": "prevent"
+        },
+        {
+          "id": "d",
+          "text": "support"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-analyze-ctx",
+      "familyId": "vocab-core-analyze",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Scientists ______ the water sample to find what caused the illness. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「analyze」：v. 分析",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "analyze"
+        },
+        {
+          "id": "b",
+          "text": "reflect"
+        },
+        {
+          "id": "c",
+          "text": "decline"
+        },
+        {
+          "id": "d",
+          "text": "realize"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-announce-ctx",
+      "familyId": "vocab-core-announce",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "The school will ______ the results on Friday morning. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「announce」：v. 宣布；通告",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "announce"
+        },
+        {
+          "id": "b",
+          "text": "concentrate"
+        },
+        {
+          "id": "c",
+          "text": "occupy"
+        },
+        {
+          "id": "d",
+          "text": "negotiate"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-anxious-ctx",
+      "familyId": "vocab-core-anxious",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "She felt ______ about the exam and could not sleep. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「anxious」：adj. 焦虑的；渴望的",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "anxious"
+        },
+        {
+          "id": "b",
+          "text": "frequent"
+        },
+        {
+          "id": "c",
+          "text": "confident"
+        },
+        {
+          "id": "d",
+          "text": "significant"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-apparent-ctx",
+      "familyId": "vocab-core-apparent",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "It was ______ to everyone that he had practiced a lot. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「apparent」：adj. 明显的；显然的",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "apparent"
+        },
+        {
+          "id": "b",
+          "text": "critical"
+        },
+        {
+          "id": "c",
+          "text": "responsible"
+        },
+        {
+          "id": "d",
+          "text": "excellent"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-appreciate-ctx",
+      "familyId": "vocab-core-appreciate",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "I really ______ your help with my homework. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「appreciate」：v. 感激；欣赏",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "appreciate"
+        },
+        {
+          "id": "b",
+          "text": "contribute"
+        },
+        {
+          "id": "c",
+          "text": "support"
+        },
+        {
+          "id": "d",
+          "text": "achieve"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-approach-ctx",
+      "familyId": "vocab-core-approach",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "The train will slowly ______ the station in two minutes. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「approach」：n./v. 方法；接近",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "approach"
+        },
+        {
+          "id": "b",
+          "text": "benefit"
+        },
+        {
+          "id": "c",
+          "text": "sacrifice"
+        },
+        {
+          "id": "d",
+          "text": "evidence"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-argue-ctx",
+      "familyId": "vocab-core-argue",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "They often ______ about which team is the best. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「argue」：v. 争论；主张",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "argue"
+        },
+        {
+          "id": "b",
+          "text": "regret"
+        },
+        {
+          "id": "c",
+          "text": "rely"
+        },
+        {
+          "id": "d",
+          "text": "participate"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-assess-ctx",
+      "familyId": "vocab-core-assess",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Teachers ______ each student's progress every term. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「assess」：v. 评估；评定",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "assess"
+        },
+        {
+          "id": "b",
+          "text": "convince"
+        },
+        {
+          "id": "c",
+          "text": "exaggerate"
+        },
+        {
+          "id": "d",
+          "text": "impress"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-assume-ctx",
+      "familyId": "vocab-core-assume",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Let us ______ the answer is correct and check it again. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「assume」：v. 假定；承担",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "assume"
+        },
+        {
+          "id": "b",
+          "text": "inform"
+        },
+        {
+          "id": "c",
+          "text": "prioritize"
+        },
+        {
+          "id": "d",
+          "text": "exaggerate"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-attempt-ctx",
+      "familyId": "vocab-core-attempt",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Do not ______ to fix the machine by yourself. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「attempt」：n./v. 尝试；努力",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "attempt"
+        },
+        {
+          "id": "b",
+          "text": "consequence"
+        },
+        {
+          "id": "c",
+          "text": "volunteer"
+        },
+        {
+          "id": "d",
+          "text": "benefit"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-attract-ctx",
+      "familyId": "vocab-core-attract",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Bright colors can ______ bees to the flowers. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「attract」：v. 吸引",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "attract"
+        },
+        {
+          "id": "b",
+          "text": "decline"
+        },
+        {
+          "id": "c",
+          "text": "occur"
+        },
+        {
+          "id": "d",
+          "text": "reveal"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-available-ctx",
+      "familyId": "vocab-core-available",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "The teacher is ______ after class if you have questions. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「available」：adj. 可获得的；有空的",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "available"
+        },
+        {
+          "id": "b",
+          "text": "curious"
+        },
+        {
+          "id": "c",
+          "text": "efficient"
+        },
+        {
+          "id": "d",
+          "text": "diverse"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-aware-ctx",
+      "familyId": "vocab-core-aware",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Are you ______ of how much time you spend on your phone? 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「aware」：adj. 意识到的",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "aware"
+        },
+        {
+          "id": "b",
+          "text": "anxious"
+        },
+        {
+          "id": "c",
+          "text": "apparent"
+        },
+        {
+          "id": "d",
+          "text": "curious"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-balance-ctx",
+      "familyId": "vocab-core-balance",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "It is hard to ______ study and rest during exam week. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「balance」：n./v. 平衡",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "balance"
+        },
+        {
+          "id": "b",
+          "text": "influence"
+        },
+        {
+          "id": "c",
+          "text": "attempt"
+        },
+        {
+          "id": "d",
+          "text": "opportunity"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-benefit-ctx",
+      "familyId": "vocab-core-benefit",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Morning exercise can ______ your health in many ways. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「benefit」：n./v. 好处；有益于",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "benefit"
+        },
+        {
+          "id": "b",
+          "text": "experience"
+        },
+        {
+          "id": "c",
+          "text": "experiment"
+        },
+        {
+          "id": "d",
+          "text": "burden"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-burden-ctx",
+      "familyId": "vocab-core-burden",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Too much homework can become a heavy ______ for students. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「burden」：n. 负担",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "burden"
+        },
+        {
+          "id": "b",
+          "text": "circumstance"
+        },
+        {
+          "id": "c",
+          "text": "balance"
+        },
+        {
+          "id": "d",
+          "text": "experiment"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-capable-ctx",
+      "familyId": "vocab-core-capable",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "She is ______ of finishing the whole project alone. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「capable」：adj. 有能力的",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "capable"
+        },
+        {
+          "id": "b",
+          "text": "excellent"
+        },
+        {
+          "id": "c",
+          "text": "curious"
+        },
+        {
+          "id": "d",
+          "text": "aware"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-challenge-ctx",
+      "familyId": "vocab-core-challenge",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Learning a new language is a real ______ for most people. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「challenge」：n./v. 挑战；质疑",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "challenge"
+        },
+        {
+          "id": "b",
+          "text": "approach"
+        },
+        {
+          "id": "c",
+          "text": "benefit"
+        },
+        {
+          "id": "d",
+          "text": "consequence"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-character-ctx",
+      "familyId": "vocab-core-character",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Honesty is an important part of good ______. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「character」：n. 性格；角色",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "character"
+        },
+        {
+          "id": "b",
+          "text": "sacrifice"
+        },
+        {
+          "id": "c",
+          "text": "influence"
+        },
+        {
+          "id": "d",
+          "text": "burden"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-circumstance-ctx",
+      "familyId": "vocab-core-circumstance",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "You should consider every ______ before making the choice. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「circumstance」：n. 环境；情况",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "circumstance"
+        },
+        {
+          "id": "b",
+          "text": "individual"
+        },
+        {
+          "id": "c",
+          "text": "burden"
+        },
+        {
+          "id": "d",
+          "text": "approach"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-collaborate-ctx",
+      "familyId": "vocab-core-collaborate",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "The two classes will ______ on a science project. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「collaborate」：v. 合作",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "collaborate"
+        },
+        {
+          "id": "b",
+          "text": "introduce"
+        },
+        {
+          "id": "c",
+          "text": "assess"
+        },
+        {
+          "id": "d",
+          "text": "argue"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
       "id": "vocab-core-commit-zh",
       "familyId": "vocab-core-commit",
       "skillIds": [
@@ -7278,6 +8488,1216 @@
         {
           "id": "d",
           "text": "confident"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-commit-ctx",
+      "familyId": "vocab-core-commit",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Once you ______ to a plan, stick to it. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「commit」：v. 承诺；犯（错）",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "commit"
+        },
+        {
+          "id": "b",
+          "text": "require"
+        },
+        {
+          "id": "c",
+          "text": "interpret"
+        },
+        {
+          "id": "d",
+          "text": "resolve"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-compete-ctx",
+      "familyId": "vocab-core-compete",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Thirty teams will ______ for the prize next week. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「compete」：v. 竞争",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "compete"
+        },
+        {
+          "id": "b",
+          "text": "develop"
+        },
+        {
+          "id": "c",
+          "text": "survive"
+        },
+        {
+          "id": "d",
+          "text": "predict"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-complex-ctx",
+      "familyId": "vocab-core-complex",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "The instructions look ______, but the task is quite simple. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「complex」：adj. 复杂的",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "complex"
+        },
+        {
+          "id": "b",
+          "text": "sufficient"
+        },
+        {
+          "id": "c",
+          "text": "diverse"
+        },
+        {
+          "id": "d",
+          "text": "relevant"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-concentrate-ctx",
+      "familyId": "vocab-core-concentrate",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Close the door so you can ______ on your reading. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「concentrate」：v. 集中；专注",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "concentrate"
+        },
+        {
+          "id": "b",
+          "text": "resolve"
+        },
+        {
+          "id": "c",
+          "text": "represent"
+        },
+        {
+          "id": "d",
+          "text": "explore"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-confident-ctx",
+      "familyId": "vocab-core-confident",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Enough practice makes you feel ______ before a test. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「confident」：adj. 自信的",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "confident"
+        },
+        {
+          "id": "b",
+          "text": "capable"
+        },
+        {
+          "id": "c",
+          "text": "familiar"
+        },
+        {
+          "id": "d",
+          "text": "frequent"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-consequence-ctx",
+      "familyId": "vocab-core-consequence",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Every choice we make has its own ______. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「consequence」：n. 后果；结果",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "consequence"
+        },
+        {
+          "id": "b",
+          "text": "circumstance"
+        },
+        {
+          "id": "c",
+          "text": "volunteer"
+        },
+        {
+          "id": "d",
+          "text": "balance"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-contribute-ctx",
+      "familyId": "vocab-core-contribute",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Each student can ______ one idea to the discussion. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「contribute」：v. 贡献；捐助",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "contribute"
+        },
+        {
+          "id": "b",
+          "text": "respond"
+        },
+        {
+          "id": "c",
+          "text": "determine"
+        },
+        {
+          "id": "d",
+          "text": "recognize"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-convince-ctx",
+      "familyId": "vocab-core-convince",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "The photo did not ______ me that the story was true. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「convince」：v. 说服；使确信",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "convince"
+        },
+        {
+          "id": "b",
+          "text": "emphasize"
+        },
+        {
+          "id": "c",
+          "text": "overcome"
+        },
+        {
+          "id": "d",
+          "text": "neglect"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-critical-ctx",
+      "familyId": "vocab-core-critical",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Reading plays a ______ role in language learning. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「critical」：adj. 批评的；关键的",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "critical"
+        },
+        {
+          "id": "b",
+          "text": "grateful"
+        },
+        {
+          "id": "c",
+          "text": "significant"
+        },
+        {
+          "id": "d",
+          "text": "efficient"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-curious-ctx",
+      "familyId": "vocab-core-curious",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Children are naturally ______ about the world around them. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「curious」：adj. 好奇的",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "curious"
+        },
+        {
+          "id": "b",
+          "text": "critical"
+        },
+        {
+          "id": "c",
+          "text": "efficient"
+        },
+        {
+          "id": "d",
+          "text": "diverse"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-decline-ctx",
+      "familyId": "vocab-core-decline",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "The number of wild birds began to ______ last year. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「decline」：v./n. 下降；婉拒",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "decline"
+        },
+        {
+          "id": "b",
+          "text": "encounter"
+        },
+        {
+          "id": "c",
+          "text": "sustain"
+        },
+        {
+          "id": "d",
+          "text": "analyze"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-dedicate-ctx",
+      "familyId": "vocab-core-dedicate",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "She chose to ______ her weekends to volunteering. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「dedicate」：v. 奉献；致力于",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "dedicate"
+        },
+        {
+          "id": "b",
+          "text": "negotiate"
+        },
+        {
+          "id": "c",
+          "text": "ignore"
+        },
+        {
+          "id": "d",
+          "text": "remind"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-demonstrate-ctx",
+      "familyId": "vocab-core-demonstrate",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "The teacher will ______ the experiment twice. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「demonstrate」：v. 展示；证明",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "demonstrate"
+        },
+        {
+          "id": "b",
+          "text": "reveal"
+        },
+        {
+          "id": "c",
+          "text": "require"
+        },
+        {
+          "id": "d",
+          "text": "perform"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-determine-ctx",
+      "familyId": "vocab-core-determine",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Only you can ______ your own future. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「determine」：v. 决定；确定",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "determine"
+        },
+        {
+          "id": "b",
+          "text": "enhance"
+        },
+        {
+          "id": "c",
+          "text": "explain"
+        },
+        {
+          "id": "d",
+          "text": "indicate"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-develop-ctx",
+      "familyId": "vocab-core-develop",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Reading widely helps you ______ a larger vocabulary. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「develop」：v. 发展；开发",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "develop"
+        },
+        {
+          "id": "b",
+          "text": "neglect"
+        },
+        {
+          "id": "c",
+          "text": "realize"
+        },
+        {
+          "id": "d",
+          "text": "examine"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-distinguish-ctx",
+      "familyId": "vocab-core-distinguish",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Can you ______ the twins from each other? 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「distinguish」：v. 区分；辨别",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "distinguish"
+        },
+        {
+          "id": "b",
+          "text": "satisfy"
+        },
+        {
+          "id": "c",
+          "text": "determine"
+        },
+        {
+          "id": "d",
+          "text": "collaborate"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-diverse-ctx",
+      "familyId": "vocab-core-diverse",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "The club welcomes students from ______ backgrounds. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「diverse」：adj. 多样的",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "diverse"
+        },
+        {
+          "id": "b",
+          "text": "relevant"
+        },
+        {
+          "id": "c",
+          "text": "excellent"
+        },
+        {
+          "id": "d",
+          "text": "apparent"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-efficient-ctx",
+      "familyId": "vocab-core-efficient",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Taking notes is an ______ way to review. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「efficient」：adj. 高效的",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "efficient"
+        },
+        {
+          "id": "b",
+          "text": "curious"
+        },
+        {
+          "id": "c",
+          "text": "available"
+        },
+        {
+          "id": "d",
+          "text": "anxious"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-emphasize-ctx",
+      "familyId": "vocab-core-emphasize",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "The coach always likes to ______ the importance of rest. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「emphasize」：v. 强调",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "emphasize"
+        },
+        {
+          "id": "b",
+          "text": "struggle"
+        },
+        {
+          "id": "c",
+          "text": "involve"
+        },
+        {
+          "id": "d",
+          "text": "justify"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-encounter-ctx",
+      "familyId": "vocab-core-encounter",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "You may ______ new words when you read faster. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「encounter」：v./n. 遭遇；邂逅",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "encounter"
+        },
+        {
+          "id": "b",
+          "text": "evaluate"
+        },
+        {
+          "id": "c",
+          "text": "tolerate"
+        },
+        {
+          "id": "d",
+          "text": "frustrate"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-enhance-ctx",
+      "familyId": "vocab-core-enhance",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Good sleep can ______ your memory before an exam. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「enhance」：v. 提高；增强",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "enhance"
+        },
+        {
+          "id": "b",
+          "text": "occupy"
+        },
+        {
+          "id": "c",
+          "text": "illustrate"
+        },
+        {
+          "id": "d",
+          "text": "dedicate"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-establish-ctx",
+      "familyId": "vocab-core-establish",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "The school will ______ a new reading room this year. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「establish」：v. 建立；确立",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "establish"
+        },
+        {
+          "id": "b",
+          "text": "support"
+        },
+        {
+          "id": "c",
+          "text": "resolve"
+        },
+        {
+          "id": "d",
+          "text": "transform"
         }
       ],
       "answerOptionId": "a"
@@ -10911,6 +13331,1216 @@
         }
       ],
       "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-evaluate-ctx",
+      "familyId": "vocab-core-evaluate",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "We will ______ the plan again after one month. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「evaluate」：v. 评价；估计",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "evaluate"
+        },
+        {
+          "id": "b",
+          "text": "exaggerate"
+        },
+        {
+          "id": "c",
+          "text": "explore"
+        },
+        {
+          "id": "d",
+          "text": "regret"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-evidence-ctx",
+      "familyId": "vocab-core-evidence",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "The police searched for ______ at the scene of the accident. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「evidence」：n. 证据",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "evidence"
+        },
+        {
+          "id": "b",
+          "text": "burden"
+        },
+        {
+          "id": "c",
+          "text": "consequence"
+        },
+        {
+          "id": "d",
+          "text": "experience"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-exaggerate-ctx",
+      "familyId": "vocab-core-exaggerate",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Do not ______ the difficulty; the task is quite simple. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「exaggerate」：v. 夸大",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "exaggerate"
+        },
+        {
+          "id": "b",
+          "text": "surround"
+        },
+        {
+          "id": "c",
+          "text": "develop"
+        },
+        {
+          "id": "d",
+          "text": "imagine"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-examine-ctx",
+      "familyId": "vocab-core-examine",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "The doctor will ______ your eyes again next week. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「examine」：v. 检查；考查",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "examine"
+        },
+        {
+          "id": "b",
+          "text": "exaggerate"
+        },
+        {
+          "id": "c",
+          "text": "perform"
+        },
+        {
+          "id": "d",
+          "text": "enhance"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-excellent-ctx",
+      "familyId": "vocab-core-excellent",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Her pronunciation is ______ after years of practice. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「excellent」：adj. 极好的",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "excellent"
+        },
+        {
+          "id": "b",
+          "text": "available"
+        },
+        {
+          "id": "c",
+          "text": "confident"
+        },
+        {
+          "id": "d",
+          "text": "efficient"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-expand-ctx",
+      "familyId": "vocab-core-expand",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "The city plans to ______ the subway line to the airport. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「expand」：v. 扩大；膨胀",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "expand"
+        },
+        {
+          "id": "b",
+          "text": "survive"
+        },
+        {
+          "id": "c",
+          "text": "justify"
+        },
+        {
+          "id": "d",
+          "text": "respond"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-experience-ctx",
+      "familyId": "vocab-core-experience",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Travel gives you ______ that books alone cannot. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「experience」：n./v. 经验；经历",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "experience"
+        },
+        {
+          "id": "b",
+          "text": "character"
+        },
+        {
+          "id": "c",
+          "text": "balance"
+        },
+        {
+          "id": "d",
+          "text": "experiment"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-experiment-ctx",
+      "familyId": "vocab-core-experiment",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "The students repeated the ______ to check the result. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「experiment」：n. 实验",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "experiment"
+        },
+        {
+          "id": "b",
+          "text": "benefit"
+        },
+        {
+          "id": "c",
+          "text": "individual"
+        },
+        {
+          "id": "d",
+          "text": "approach"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-explain-ctx",
+      "familyId": "vocab-core-explain",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Please ______ the rule with one simple example. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「explain」：v. 解释；说明",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "explain"
+        },
+        {
+          "id": "b",
+          "text": "sustain"
+        },
+        {
+          "id": "c",
+          "text": "respond"
+        },
+        {
+          "id": "d",
+          "text": "expose"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-explore-ctx",
+      "familyId": "vocab-core-explore",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "We will ______ the old town on foot this weekend. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「explore」：v. 探索；考察",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "explore"
+        },
+        {
+          "id": "b",
+          "text": "expand"
+        },
+        {
+          "id": "c",
+          "text": "expose"
+        },
+        {
+          "id": "d",
+          "text": "contribute"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-expose-ctx",
+      "familyId": "vocab-core-expose",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "News reports should never ______ private information. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「expose」：v. 暴露；揭露",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "expose"
+        },
+        {
+          "id": "b",
+          "text": "participate"
+        },
+        {
+          "id": "c",
+          "text": "recommend"
+        },
+        {
+          "id": "d",
+          "text": "survive"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-familiar-ctx",
+      "familyId": "vocab-core-familiar",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "The song sounds ______ to everyone in the room. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「familiar」：adj. 熟悉的",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "familiar"
+        },
+        {
+          "id": "b",
+          "text": "efficient"
+        },
+        {
+          "id": "c",
+          "text": "critical"
+        },
+        {
+          "id": "d",
+          "text": "aware"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-fascinate-ctx",
+      "familyId": "vocab-core-fascinate",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Space stories never fail to ______ young readers. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「fascinate」：v. 使着迷",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "fascinate"
+        },
+        {
+          "id": "b",
+          "text": "explain"
+        },
+        {
+          "id": "c",
+          "text": "persuade"
+        },
+        {
+          "id": "d",
+          "text": "obtain"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-flexible-ctx",
+      "familyId": "vocab-core-flexible",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "A ______ schedule helps you balance study and rest. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「flexible」：adj. 灵活的",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "flexible"
+        },
+        {
+          "id": "b",
+          "text": "relevant"
+        },
+        {
+          "id": "c",
+          "text": "efficient"
+        },
+        {
+          "id": "d",
+          "text": "apparent"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-focus-ctx",
+      "familyId": "vocab-core-focus",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Turn off your phone and ______ on the task. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「focus」：v./n. 集中；焦点",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "focus"
+        },
+        {
+          "id": "b",
+          "text": "transform"
+        },
+        {
+          "id": "c",
+          "text": "maintain"
+        },
+        {
+          "id": "d",
+          "text": "distinguish"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-frequent-ctx",
+      "familyId": "vocab-core-frequent",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Bus 7 is the most ______ line in this city. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「frequent」：adj. 频繁的",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "frequent"
+        },
+        {
+          "id": "b",
+          "text": "apparent"
+        },
+        {
+          "id": "c",
+          "text": "flexible"
+        },
+        {
+          "id": "d",
+          "text": "sufficient"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-frustrate-ctx",
+      "familyId": "vocab-core-frustrate",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Slow progress may ______ you at first, but keep going. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「frustrate」：v. 使沮丧；挫败",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "frustrate"
+        },
+        {
+          "id": "b",
+          "text": "persuade"
+        },
+        {
+          "id": "c",
+          "text": "imply"
+        },
+        {
+          "id": "d",
+          "text": "represent"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-generate-ctx",
+      "familyId": "vocab-core-generate",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Wind can ______ clean electricity for the village. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「generate」：v. 产生；引起",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "generate"
+        },
+        {
+          "id": "b",
+          "text": "undertake"
+        },
+        {
+          "id": "c",
+          "text": "restrict"
+        },
+        {
+          "id": "d",
+          "text": "persuade"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-grateful-ctx",
+      "familyId": "vocab-core-grateful",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "I am deeply ______ for your support during that term. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「grateful」：adj. 感激的",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "grateful"
+        },
+        {
+          "id": "b",
+          "text": "sufficient"
+        },
+        {
+          "id": "c",
+          "text": "curious"
+        },
+        {
+          "id": "d",
+          "text": "relevant"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-guarantee-ctx",
+      "familyId": "vocab-core-guarantee",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G0",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "No one can ______ that the weather will stay fine. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「guarantee」：v./n. 保证",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "guarantee"
+        },
+        {
+          "id": "b",
+          "text": "possess"
+        },
+        {
+          "id": "c",
+          "text": "reflect"
+        },
+        {
+          "id": "d",
+          "text": "examine"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-hesitate-ctx",
+      "familyId": "vocab-core-hesitate",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G1",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Do not ______ to ask when you need help. 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「hesitate」：v. 犹豫",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "hesitate"
+        },
+        {
+          "id": "b",
+          "text": "achieve"
+        },
+        {
+          "id": "c",
+          "text": "emphasize"
+        },
+        {
+          "id": "d",
+          "text": "commit"
+        }
+      ],
+      "answerOptionId": "a"
+    },
+    {
+      "id": "vocab-core-identify-ctx",
+      "familyId": "vocab-core-identify",
+      "skillIds": [
+        "vocab.context"
+      ],
+      "level": "G2",
+      "section": "vocabulary",
+      "reviewMode": "recall",
+      "promptZh": "Can you ______ the plant in this photo? 选择填入空格的最佳单词。",
+      "resourceId": null,
+      "estimatedSeconds": 40,
+      "sourceIds": [
+        "tool-generated-practice"
+      ],
+      "explanation": {
+        "summaryZh": "语境应填「identify」：v. 识别；鉴定",
+        "ruleZh": "语境运用：先读全句抓语义与搭配，再核对词性是否贴合空格。",
+        "evidence": [],
+        "distractors": [
+          {
+            "optionId": "b",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "c",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          },
+          {
+            "optionId": "d",
+            "reasonZh": "干扰项：与句义或搭配不符"
+          }
+        ]
+      },
+      "kind": "choice",
+      "options": [
+        {
+          "id": "a",
+          "text": "identify"
+        },
+        {
+          "id": "b",
+          "text": "fascinate"
+        },
+        {
+          "id": "c",
+          "text": "possess"
+        },
+        {
+          "id": "d",
+          "text": "struggle"
+        }
+      ],
+      "answerOptionId": "a"
     }
   ],
   "units": [
@@ -11007,7 +14637,29 @@
         "vocab-core-challenge-def",
         "vocab-core-character-def",
         "vocab-core-circumstance-def",
-        "vocab-core-collaborate-def"
+        "vocab-core-collaborate-def",
+        "vocab-core-achieve-ctx",
+        "vocab-core-analyze-ctx",
+        "vocab-core-announce-ctx",
+        "vocab-core-anxious-ctx",
+        "vocab-core-apparent-ctx",
+        "vocab-core-appreciate-ctx",
+        "vocab-core-approach-ctx",
+        "vocab-core-argue-ctx",
+        "vocab-core-assess-ctx",
+        "vocab-core-assume-ctx",
+        "vocab-core-attempt-ctx",
+        "vocab-core-attract-ctx",
+        "vocab-core-available-ctx",
+        "vocab-core-aware-ctx",
+        "vocab-core-balance-ctx",
+        "vocab-core-benefit-ctx",
+        "vocab-core-burden-ctx",
+        "vocab-core-capable-ctx",
+        "vocab-core-challenge-ctx",
+        "vocab-core-character-ctx",
+        "vocab-core-circumstance-ctx",
+        "vocab-core-collaborate-ctx"
       ],
       "prerequisiteSkillIds": []
     },
@@ -11104,7 +14756,29 @@
         "vocab-core-emphasize-def",
         "vocab-core-encounter-def",
         "vocab-core-enhance-def",
-        "vocab-core-establish-def"
+        "vocab-core-establish-def",
+        "vocab-core-commit-ctx",
+        "vocab-core-compete-ctx",
+        "vocab-core-complex-ctx",
+        "vocab-core-concentrate-ctx",
+        "vocab-core-confident-ctx",
+        "vocab-core-consequence-ctx",
+        "vocab-core-contribute-ctx",
+        "vocab-core-convince-ctx",
+        "vocab-core-critical-ctx",
+        "vocab-core-curious-ctx",
+        "vocab-core-decline-ctx",
+        "vocab-core-dedicate-ctx",
+        "vocab-core-demonstrate-ctx",
+        "vocab-core-determine-ctx",
+        "vocab-core-develop-ctx",
+        "vocab-core-distinguish-ctx",
+        "vocab-core-diverse-ctx",
+        "vocab-core-efficient-ctx",
+        "vocab-core-emphasize-ctx",
+        "vocab-core-encounter-ctx",
+        "vocab-core-enhance-ctx",
+        "vocab-core-establish-ctx"
       ],
       "prerequisiteSkillIds": []
     },
@@ -11201,7 +14875,29 @@
         "vocab-core-grateful-def",
         "vocab-core-guarantee-def",
         "vocab-core-hesitate-def",
-        "vocab-core-identify-def"
+        "vocab-core-identify-def",
+        "vocab-core-evaluate-ctx",
+        "vocab-core-evidence-ctx",
+        "vocab-core-exaggerate-ctx",
+        "vocab-core-examine-ctx",
+        "vocab-core-excellent-ctx",
+        "vocab-core-expand-ctx",
+        "vocab-core-experience-ctx",
+        "vocab-core-experiment-ctx",
+        "vocab-core-explain-ctx",
+        "vocab-core-explore-ctx",
+        "vocab-core-expose-ctx",
+        "vocab-core-familiar-ctx",
+        "vocab-core-fascinate-ctx",
+        "vocab-core-flexible-ctx",
+        "vocab-core-focus-ctx",
+        "vocab-core-frequent-ctx",
+        "vocab-core-frustrate-ctx",
+        "vocab-core-generate-ctx",
+        "vocab-core-grateful-ctx",
+        "vocab-core-guarantee-ctx",
+        "vocab-core-hesitate-ctx",
+        "vocab-core-identify-ctx"
       ],
       "prerequisiteSkillIds": []
     }
