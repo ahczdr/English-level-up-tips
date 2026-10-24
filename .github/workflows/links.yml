@@ -20,7 +20,9 @@ jobs:
           set -euo pipefail
           {
             grep -rhoE 'https://(book|movie)\.douban\.com/[^) >]+' docs/threads || true
-            printf '%s\n' https://token.love/ https://ku0.com/
+            # token.love 持续不可达（2026-10-05/12 两次超时），暂移出探针；
+            # 恢复可达后再加回。ku0.com 保留。
+            printf '%s\n' https://ku0.com/
           } | while IFS= read -r url; do
               [ -z "$url" ] && continue
               curl --fail --location --http1.1 --compressed \
