@@ -768,3 +768,35 @@ describe('OrderTask 判分揭示（学生向 UI）', () => {
     expect(noReveal.find('.order-reveal').exists()).toBe(false);
   });
 })
+
+describe('今日页复习到期指路（自动模式空计划）', () => {
+  it('所有内容已学完且到期复习家族不在已装包内时，指路复习列表', async () => {
+    const db = await openDb()
+    // 全部条目已曝光（CR17 排除）且无到期复习 → 今日计划为空
+    for (const item of pack.items) {
+      await db.exposureLog.add({
+        profileId: 'gaokao-common-training-v1', packId: pack.id, packVersion: pack.version,
+        itemId: item.id, familyId: item.familyId, firstSeenAt: '2026-10-01T00:00:00.000Z',
+        studyDay: '2026-10-01', firstSeenSessionId: 'seed',
+      })
+    }
+    // 唯一到期复习属于未安装的家族 → 计划排除后为空，但学生需要知道去哪复习
+    await db.reviewStates.add({
+      profileId: 'gaokao-common-training-v1',
+      familyId: 'ghost-family',
+      reviewMode: 'recognition',
+      dueDay: '2026-10-01',
+      updatedAt: '2026-10-01T00:00:00.000Z',
+      data: { stage: 1, dueDay: '2026-10-01', lapses: 0 },
+    })
+    const router = makeRouter()
+    await router.push('/today')
+    await router.isReady()
+    const wrapper = mount(TodayPage, { props: { db }, global: { plugins: [router] } })
+    wrappers.push(wrapper)
+    await settle()
+    await settle()
+    expect(wrapper.text()).toContain('1 个家族的复习已到期')
+    expect(wrapper.find('.today-due-hint .learn-link').exists()).toBe(true)
+  })
+})
