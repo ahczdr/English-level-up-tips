@@ -38,6 +38,7 @@ const planProfileId = ref('gaokao-common-training-v1');
 const planTimeZone = ref('Asia/Shanghai');
 const starting = ref(false);
 const autoRecommend = ref(true);
+const dueCount = ref(0);
 const suggestion = ref<{ kind: 'up' | 'support' | 'hold'; headline: string; detail: string } | null>(null);
 const suggestionDismissed = ref(false);
 
@@ -92,6 +93,11 @@ const refreshState = async (): Promise<void> => {
       plan.value = preview.value.plan;
       planGroups.value = preview.value.plan.groups;
       planToday.value = preview.value.today;
+      // 今日计划为空时统计到期复习数，给学生指路（去复习列表）
+      if (planGroups.value.length === 0) {
+        dueCount.value = (await db.value.reviewStates.where('profileId').equals(planProfileId.value).toArray())
+          .filter((row) => row.dueDay <= preview.value.today).length;
+      }
       // 鼓励卡：连续学习天数 + 今日已完成题数（首次作答按学习日计）
       const [attemptRows, writingRows] = await Promise.all([
         db.value.attempts.where('studyDay').equals(preview.value.today).toArray(),
@@ -300,6 +306,17 @@ const resumePractice = async (session: Session): Promise<void> => {
           role="status"
         >
           今日没有可安排的任务；当前内容与时长不匹配时需补充平行材料。
+        </p>
+        <p
+          v-if="dueCount > 0"
+          class="today-due-hint"
+          role="status"
+        >
+          {{ dueCount }} 个家族的复习已到期——
+          <router-link
+            class="learn-link"
+            to="/review"
+          >去复习列表</router-link>
         </p>
       </template>
       <p>
