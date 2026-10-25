@@ -6,10 +6,11 @@ import { e2eNow } from '../../data/e2e-clock';
 import type { GaokaoDatabase } from '../../data/db';
 import type { WritingVersionBody } from '../../services/writing';
 import { loadPersonalSettings, savePersonalSettings } from '../../services/settings';
-import { computeStreak, summarizeProgress, SELF_EVAL_MIN, type ProgressAttempt, type ProgressInput, type ProgressWritingVersion } from '../../domain/progress';
+import { computeStreak, summarizeProgress, SELF_EVAL_MIN, weekStart, type ProgressAttempt, type ProgressInput, type ProgressWritingVersion } from '../../domain/progress';
 import { pageToday } from '../../domain/progress';
 import { studyDayFor } from '../../domain/calendar';
 import FeedbackPanel from '../../components/FeedbackPanel.vue';
+import { collectMistakes } from '../../services/mistakes';
 
 const props = defineProps<{
   db?: GaokaoDatabase;
@@ -38,6 +39,7 @@ const unseenLine = ref('');
 const rateLine = ref('');
 const assistedLine = ref('');
 const independentLine = ref('');
+const mistakeLine = ref('');
 
 const parseVersionBody = (raw: string): WritingVersionBody | null => {
   try {
@@ -162,6 +164,16 @@ const loadState = async (): Promise<void> => {
       achievements: achievementRows,
       writingVersions,
     });
+    const today0 = props.today ?? pageToday(e2eNow(), settings.timeZone)
+    const mistakeRows = await collectMistakes(db.value, settings.profileId)
+    const weekBegin = weekStart(today0)
+    const wrongThisWeek = mistakeRows.filter((row) => row.lastStudyDay >= weekBegin && !row.corrected).length
+    const correctedThisWeek = mistakeRows.filter((row) => row.corrected && row.lastStudyDay >= weekBegin).length
+    if (mistakeRows.length > 0) {
+      mistakeLine.value = '错题本 ' + mistakeRows.length + ' 题 · 本周新错 ' + wrongThisWeek + ' 题 · 本周订正 ' + correctedThisWeek + ' 题'
+    } else {
+      mistakeLine.value = ''
+    }
     rateLine.value = '独立首次正确率 ' + Math.round(summary.objective.rate * 100) + '%（' + summary.objective.correct + '/' + summary.objective.attempts + '）';
     assistedLine.value = '提示后完成 ' + summary.assistedCompletions + ' 题（不计入独立口径）';
     independentLine.value = '独立掌握题目 ' + summary.independentItems + ' 题 · 发现家族 ' + summary.discoveredFamilies + ' 个';
@@ -184,6 +196,7 @@ const loadState = async (): Promise<void> => {
       ? '自评样本 ' + summary.selfEvalSamples + '（已达样本阈值，仅作自评参考）'
       : '自评样本 ' + summary.selfEvalSamples + '/' + SELF_EVAL_MIN + '，暂不算正式能力等级';
     summaryText.value = [rateLine.value, assistedLine.value, independentLine.value, studyDayLine.value, unseenLine.value];
+    if (mistakeLine.value !== '') summaryText.value.push(mistakeLine.value);
     rewardVisible.value = animationEnabled.value && !reducedMotion.value && summary.todayMarked;
   } catch {
     message.value = '成长记录读取失败，请稍后再试';
