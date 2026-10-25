@@ -1409,3 +1409,40 @@ body {
 }
 .review-row-action:disabled { opacity: 0.55; }
 
+.mistake-filter { display: flex; gap: 0.4rem; margin-bottom: 0.6rem; }
+
+.mistake-filter-option {
+  min-height: 40px;
+  padding: 0.2rem 0.85rem;
+  border: 1px solid #c9d4e2;
+  border-radius: 999px;
+  background: #fff;
+  color: #5b6b81;
+  font-size: 0.9rem;
+}
+
+.mistake-filter-option[aria-pressed='true'] {
+  background: #1f4e8c;
+  border-color: #1f4e8c;
+  color: #fff;
+  font-weight: 700;
+}
+
+.bottom-nav-item { position: relative; }
+
+.bottom-nav-badge {
+  position: absolute;
+  top: 4px;
+  right: calc(50% - 2.1rem);
+  min-width: 1.15rem;
+  height: 1.15rem;
+  padding: 0 0.28rem;
+  border-radius: 999px;
+  background: #d64545;
+  color: #fff;
+  font-size: 0.72rem;
+  line-height: 1.15rem;
+  font-weight: 700;
+  text-align: center;
+}
+

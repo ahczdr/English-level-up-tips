@@ -40,6 +40,12 @@ const SECTION_LABELS: Record<string, string> = {
 
 const rows = ref<ReviewRow[]>([]);
 const mistakes = ref<MistakeRow[]>([]);
+const mistakeFilter = ref<'open' | 'done' | 'all'>('open');
+const filteredMistakes = computed(() => {
+  if (mistakeFilter.value === 'open') return mistakes.value.filter((row) => !row.corrected)
+  if (mistakeFilter.value === 'done') return mistakes.value.filter((row) => row.corrected)
+  return mistakes.value
+});
 const practicingKey = ref('');
 const loading = ref(true);
 const loadFailed = ref(false);
@@ -256,18 +262,43 @@ onMounted(loadState);
       <h3 id="mistake-title">
         错题本（{{ mistakes.length }}）
       </h3>
+      <div
+        v-if="mistakes.length > 0"
+        class="mistake-filter"
+        role="group"
+        aria-label="错题过滤"
+      >
+        <button
+          v-for="option in [
+            { key: 'open', label: '待订正' },
+            { key: 'done', label: '已订正' },
+            { key: 'all', label: '全部' },
+          ]"
+          :key="option.key"
+          type="button"
+          class="mistake-filter-option"
+          :aria-pressed="mistakeFilter === option.key"
+          @click="mistakeFilter = option.key as typeof mistakeFilter"
+        >{{ option.label }}</button>
+      </div>
       <p
         v-if="mistakes.length === 0"
         role="status"
       >
         还没有做错的题——保持住！
       </p>
+      <p
+        v-else-if="filteredMistakes.length === 0"
+        role="status"
+      >
+        {{ mistakeFilter === 'open' ? '没有待订正的错题——全部清掉了！' : mistakeFilter === 'done' ? '还没有已订正的记录。' : '' }}
+      </p>
       <ul
         v-else
         class="review-list"
       >
         <li
-          v-for="row in mistakes"
+          v-for="row in filteredMistakes"
           :key="row.itemId"
           class="review-row mistake-row"
         >
