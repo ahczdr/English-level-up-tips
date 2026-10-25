@@ -7,7 +7,9 @@ import type { CoursePack } from '../../content/types';
 import { studyDayFor } from '../../domain/calendar';
 import { useRouter } from 'vue-router';
 import { loadPersonalSettings } from '../../services/settings';
-import { createTodaySession } from '../../services/learning';
+import { createSession, createTodaySession } from '../../services/learning';
+import { collectMistakes, type MistakeRow } from '../../services/mistakes';
+import { sectionTitle } from '../../domain/curriculum';
 
 const props = defineProps<{
   db?: GaokaoDatabase;
@@ -37,6 +39,8 @@ const SECTION_LABELS: Record<string, string> = {
 };
 
 const rows = ref<ReviewRow[]>([]);
+const mistakes = ref<MistakeRow[]>([]);
+const practicingKey = ref('');
 const loading = ref(true);
 const loadFailed = ref(false);
 
@@ -61,6 +65,32 @@ const buildFamilyLabels = async (): Promise<Map<string, { labelZh: string; secti
   }
   return labels;
 };
+
+const practiceMistake = async (row: MistakeRow): Promise<void> => {
+  if (practicingKey.value !== '') return
+  practicingKey.value = row.itemId
+  try {
+    const settings = await loadPersonalSettings(db.value)
+    const created = await createSession({
+      db: db.value,
+      unitId: row.unitId,
+      minutes: settings.defaultMinutes,
+      profileId: settings.profileId,
+      timeZone: settings.timeZone,
+    })
+    if (!created.ok) {
+      startMessage.value = created.error.messageZh
+      return
+    }
+    if (created.value.kind === 'empty') {
+      startMessage.value = created.value.messageZh
+      return
+    }
+    await router.push(`/session/${created.value.session.id}`)
+  } finally {
+    practicingKey.value = ''
+  }
+}
 
 const loadState = async (): Promise<void> => {
   loading.value = true;
@@ -90,6 +120,11 @@ const loadState = async (): Promise<void> => {
         };
       })
       .sort((left, right) => (left.dueDay === right.dueDay ? 0 : left.dueDay < right.dueDay ? -1 : 1));
+    try {
+      mistakes.value = await collectMistakes(db.value, settings.profileId)
+    } catch {
+      mistakes.value = []
+    }
   } catch {
     // CR39：读取失败与空态分开呈现
     rows.value = [];
@@ -213,6 +248,45 @@ onMounted(loadState);
         </li>
       </ul>
     </template>
+    <section
+      v-if="!loading && !loadFailed"
+      class="mistake-section"
+      aria-labelledby="mistake-title"
+    >
+      <h3 id="mistake-title">
+        错题本（{{ mistakes.length }}）
+      </h3>
+      <p
+        v-if="mistakes.length === 0"
+        role="status"
+      >
+        还没有做错的题——保持住！
+      </p>
+      <ul
+        v-else
+        class="review-list"
+      >
+        <li
+          v-for="row in mistakes"
+          :key="row.itemId"
+          class="review-row mistake-row"
+        >
+          <span class="review-family">{{ row.unitTitleZh }}</span>
+          <span class="review-mode">{{ sectionTitle(row.section) }}</span>
+          <span class="review-due">{{ row.lastStudyDay }}</span>
+          <span
+            class="review-status"
+            :class="{ corrected: row.corrected }"
+          >{{ row.corrected ? '已订正' : '待订正' }}</span>
+          <button
+            type="button"
+            class="review-row-action"
+            :disabled="practicingKey !== ''"
+            @click="practiceMistake(row)"
+          >{{ practicingKey === row.itemId ? '进入中…' : '去重练' }}</button>
+        </li>
+      </ul>
+    </section>
     <p>
       <router-link to="/today">返回今日</router-link>
     </p>
