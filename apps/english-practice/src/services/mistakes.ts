@@ -80,3 +80,30 @@ export async function collectMistakes(db: GaokaoDatabase, profileId: string): Pr
   }
   return result.sort((left, right) => (left.lastStudyDay === right.lastStudyDay ? left.itemId.localeCompare(right.itemId) : left.lastStudyDay < right.lastStudyDay ? 1 : -1))
 }
+
+export interface MistakeGroup {
+  key: string
+  unitId: string
+  unitTitleZh: string
+  packId: string
+  packVersion: string
+  rows: MistakeRow[]
+  openCount: number
+}
+
+// 错题按单元分组（组内按最近做错日期倒序），供错题本分组渲染与「只练错题」
+export function groupMistakesByUnit(rows: MistakeRow[]): MistakeGroup[] {
+  const map = new Map<string, MistakeGroup>()
+  for (const row of rows) {
+    const key = `${row.packId}@${row.packVersion}:${row.unitId}`
+    let group = map.get(key)
+    if (!group) {
+      group = { key, unitId: row.unitId, unitTitleZh: row.unitTitleZh, packId: row.packId, packVersion: row.packVersion, rows: [], openCount: 0 }
+      map.set(key, group)
+    }
+    group.rows.push(row)
+    if (!row.corrected) group.openCount += 1
+  }
+  return [...map.values()].sort((left, right) => right.openCount - left.openCount || (left.unitTitleZh < right.unitTitleZh ? -1 : 1))
+}
+
