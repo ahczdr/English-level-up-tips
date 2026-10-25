@@ -48,7 +48,7 @@
           <option value="UTC">UTC</option>
         </select>
       </label>
-      <p class="settings-note">学习日按北京时间零点划分（时区设置当前仅影响成长页显示，口径统一将在后续版本完成）。</p>
+      <p class="settings-note">学习日按所选时区零点划分，影响今日计划、复习到期与成长统计。</p>
     </div>
 
     <div class="settings-block">

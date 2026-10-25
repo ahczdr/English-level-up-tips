@@ -39,6 +39,7 @@ it('复习列表按个人时区判断到期状态', async () => {
   const page = mount(ReviewPage, { props: { db }, global: { plugins: [router] } })
   await flushPromises()
   await flushPromises()
+  await flushPromises()
   expect(page.text()).toContain('未到期')
   expect(page.text()).not.toContain('已到期')
   page.unmount()
