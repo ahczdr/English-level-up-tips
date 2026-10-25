@@ -8,7 +8,7 @@ import { studyDayFor } from '../../domain/calendar';
 import { useRouter } from 'vue-router';
 import { loadPersonalSettings } from '../../services/settings';
 import { createSession, createTodaySession } from '../../services/learning';
-import { collectMistakes, type MistakeRow } from '../../services/mistakes';
+import { collectMistakes, groupMistakesByUnit, type MistakeRow } from '../../services/mistakes';
 import { sectionTitle } from '../../domain/curriculum';
 
 const props = defineProps<{
@@ -46,6 +46,7 @@ const filteredMistakes = computed(() => {
   if (mistakeFilter.value === 'done') return mistakes.value.filter((row) => row.corrected)
   return mistakes.value
 });
+const mistakeGroups = computed(() => groupMistakesByUnit(filteredMistakes.value));
 const practicingKey = ref('');
 const loading = ref(true);
 const loadFailed = ref(false);
@@ -72,17 +73,19 @@ const buildFamilyLabels = async (): Promise<Map<string, { labelZh: string; secti
   return labels;
 };
 
-const practiceMistake = async (row: MistakeRow): Promise<void> => {
+const practiceMistakeUnit = async (group: { unitId: string; packId: string; rows: MistakeRow[]; openCount: number; unitTitleZh: string }): Promise<void> => {
   if (practicingKey.value !== '') return
-  practicingKey.value = row.itemId
+  practicingKey.value = group.unitId
   try {
     const settings = await loadPersonalSettings(db.value)
+    const openIds = group.rows.filter((row) => !row.corrected).map((row) => row.itemId)
     const created = await createSession({
       db: db.value,
-      unitId: row.unitId,
+      unitId: group.unitId,
       minutes: settings.defaultMinutes,
       profileId: settings.profileId,
       timeZone: settings.timeZone,
+      itemIds: openIds.length > 0 ? openIds : undefined,
     })
     if (!created.ok) {
       startMessage.value = created.error.messageZh
@@ -293,30 +296,35 @@ onMounted(loadState);
       >
         {{ mistakeFilter === 'open' ? '没有待订正的错题——全部清掉了！' : mistakeFilter === 'done' ? '还没有已订正的记录。' : '' }}
       </p>
-      <ul
-        v-else
-        class="review-list"
+      <div
+        v-for="group in mistakeGroups"
+        :key="group.key"
+        class="mistake-group"
       >
-        <li
-          v-for="row in filteredMistakes"
-          :key="row.itemId"
-          class="review-row mistake-row"
-        >
-          <span class="review-family">{{ row.unitTitleZh }}</span>
-          <span class="review-mode">{{ sectionTitle(row.section) }}</span>
-          <span class="review-due">{{ row.lastStudyDay }}</span>
-          <span
-            class="review-status"
-            :class="{ corrected: row.corrected }"
-          >{{ row.corrected ? '已订正' : '待订正' }}</span>
+        <div class="mistake-group-head">
+          <span class="mistake-group-title">{{ group.unitTitleZh }}</span>
           <button
             type="button"
             class="review-row-action"
             :disabled="practicingKey !== ''"
-            @click="practiceMistake(row)"
-          >{{ practicingKey === row.itemId ? '进入中…' : '去重练' }}</button>
-        </li>
-      </ul>
+            @click="practiceMistakeUnit(group)"
+          >{{ practicingKey === group.unitId ? '进入中…' : group.openCount > 0 ? `只练错题（${group.openCount}）` : '练整个单元' }}</button>
+        </div>
+        <ul class="review-list">
+          <li
+            v-for="row in group.rows"
+            :key="row.itemId"
+            class="review-row mistake-row"
+          >
+            <span class="review-mode">{{ sectionTitle(row.section) }}</span>
+            <span class="review-due">{{ row.lastStudyDay }}</span>
+            <span
+              class="review-status"
+              :class="{ corrected: row.corrected }"
+            >{{ row.corrected ? '已订正' : '待订正' }}</span>
+          </li>
+        </ul>
+      </div>
     </section>
     <p>
       <router-link to="/today">返回今日</router-link>

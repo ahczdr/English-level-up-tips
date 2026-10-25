@@ -74,6 +74,8 @@ export interface CreateSessionInput {
   timeZone?: string
   clock?: LearningClock
   idGenerator?: () => string
+  /** 可选：只练单元内指定题目（错题重练）；省略则练整个单元 */
+  itemIds?: string[]
 }
 
 export type CreateSessionValue =
@@ -352,10 +354,17 @@ export async function createSession(input: CreateSessionInput): Promise<Result<C
       usedSeconds += groupSeconds
     }
     if (chosen.length === 0) return error('INSUFFICIENT_SPACE', '当前时长不足以容纳完整学习材料组')
+    // 错题重练：过滤到指定题目子集（保持单元原顺序）；一个不剩则视为无效请求
+    let selected: Item[] = chosen as Item[]
+    if (input.itemIds !== undefined) {
+      const wanted = new Set(input.itemIds)
+      selected = selected.filter((item) => wanted.has(item.id))
+      if (selected.length === 0) return error('NOT_FOUND', '指定的题目不在该课程单元中')
+    }
 
     const now = (input.clock ?? systemClock).now()
     const sessionId = (input.idGenerator ?? defaultId)()
-    const slots: Slot[] = chosen.map((item, index) => ({
+    const slots: Slot[] = selected.map((item, index) => ({
       id: `${sessionId}:${index}`,
       ref: { packId: pack.id, packVersion: pack.version, itemId: item.id },
       state: 'unseen',
